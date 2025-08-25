@@ -13,66 +13,51 @@
    (</>
     (/ (sound '|| 0) (sound '|| "uso¥Nurse14.uso") (sound '|| 1))
     (/ (nop@))))
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
-  (image-file "b:¥gpc¥Ns1_550.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥Ns1_550.gpc") (image-mem 1 3)
   (if (</>
        (// (? (= G 1)) (nop@))
        (//
         (? (= G 2))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_551.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_556.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_558.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_559.gpc")
-        (image-mem 1 3))
+        (image-file "b:¥gpc¥Ns1_551.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_556.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_558.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_559.gpc") (image-mem 1 3))
        (//
         (? (= G 3))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_552.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_556.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_561.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_559.gpc")
-        (image-mem 1 3))
+        (image-file "b:¥gpc¥Ns1_552.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_556.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_561.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_559.gpc") (image-mem 1 3))
        (//
         (? (= G 4))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_553.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_558.gpc")
-        (image-mem 1 3))
+        (image-file "b:¥gpc¥Ns1_553.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_558.gpc") (image-mem 1 3))
        (//
         (? (= G 5))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_554.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_556.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_558.gpc")
-        (image-mem 1 3))
+        (image-file "b:¥gpc¥Ns1_554.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_556.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_558.gpc") (image-mem 1 3))
        (//
         (? (= G 6))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_555.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_557.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_560.gpc")
-        (image-mem 1 3))))
+        (image-file "b:¥gpc¥Ns1_555.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_557.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_560.gpc") (image-mem 1 3))))
   (branch-reg
    333
    (</>
     (/
      (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-     (image-file "gpc¥face_w00.gpc")
-     (image-mem 0 0)
+     (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
      (exec-mem 2816 "GET 20 71 320 8 64")
      (exec-mem 2816 "ACCESS 0")
      (set-reg 333 #t))
@@ -145,8 +130,7 @@
         (sound '|| "uso¥Nurse10.uso")
         (sound '|| 1)
         (exec-mem 19456 2 8 4 103 75 8 40 103 40 0 20)
-        (image-file "b:¥gpc¥ns1_575.gpc")
-        (image-mem 1 3)
+        (image-file "b:¥gpc¥ns1_575.gpc") (image-mem 1 3)
         (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 20)
         (proc 11)
         (text "エヘヘヘヘッ、ここから先は行かせないよッ！")
@@ -186,25 +170,18 @@
         (mes-load? "mes¥action1.mes")
         (branch-var Q (</> (/ (nop@)) (/ (nop@) (set-reg 701 #t)) (/ (nop@))))
         (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-        (image-file "gpc¥face_w00.gpc")
-        (image-mem 0 0)
+        (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
         (exec-mem 2816 "GET 20 71 320 8 64")
         (exec-mem 2816 "ACCESS 0")
         (sound '|| 0)
         (sound '|| "uso¥Nurse14.uso")
         (sound '|| 1)
-        (image-file "gpc¥Aflame01.gpc")
-        (image-mem 1 3)
-        (image-file "b:¥gpc¥Ns1_550.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_551.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_556.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_558.gpc")
-        (image-mem 1 0)
-        (image-file "b:¥gpc¥Ns1_559.gpc")
-        (image-mem 1 3)
+        (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+        (image-file "b:¥gpc¥Ns1_550.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_551.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_556.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_558.gpc") (image-mem 1 0)
+        (image-file "b:¥gpc¥Ns1_559.gpc") (image-mem 1 3)
         (exec-mem 17920 0 1)
         (exec-mem 6656 8)
         (exec-mem 2816 "GET 1 5 23 10 96")
@@ -220,14 +197,16 @@
         (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1"))))
   (if (</> (// (? (= 666 #t)) (nop@) (set-reg 666 #f)) (// (proc 13))))
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -245,7 +224,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text-color 7)
    (branch-random
@@ -258,11 +240,10 @@
      (/ (text "俺はダンジョンは大大大キライだ！！" 'br) (text "特に３Ｄのダンジョンは大大大大大キライだ！！"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text-color 7)
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (text "ここは、城の１Ｆだ。"))
@@ -273,7 +254,7 @@
      (/ (text "ここは、城の６Ｆだ。"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (branch-random
     (</>
@@ -321,7 +302,7 @@
       (proc 15)
       (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1"))))
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (branch-random
     (</>
@@ -370,13 +351,13 @@
       (proc 15)
       (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1"))))
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 1 "どの部屋に入りますか？　扉をクリックして下さい。")
    (proc 15)
    (exec-mem 18944 65535 382 286)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 11 "［ナーシア］" 'br)))
@@ -412,8 +393,7 @@
          (seg-call))))
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 18 49 18 49 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (proc 12) (set-reg 990 #f) (mes-jump "b:¥mes¥Ns15_16B.mes"))
@@ -466,8 +446,7 @@
          (seg-call))))
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 34 45 34 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (proc 12) (set-reg 990 #f) (mes-jump "b:¥mes¥Ns15_16A.mes"))
@@ -509,8 +488,7 @@
          (seg-call))))
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 55 45 55 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (proc 12) (set-reg 990 #f) (mes-jump "b:¥mes¥Ns15_16C.mes"))
@@ -587,8 +565,7 @@
          (seg-call))))
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 76 45 76 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (proc 12) (set-reg 990 #f) (mes-jump "b:¥mes¥Ns15_16A.mes"))
@@ -636,8 +613,7 @@
          (seg-call))))
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 92 49 92 49 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
-   (branch-var
-    F
+   (branch-var F
     (</>
      (/ (nop@))
      (/ (proc 12) (set-reg 990 #f) (mes-jump "b:¥mes¥Ns15_16A.mes"))
@@ -676,18 +652,12 @@
       (repeat
        2
        (<>
-        (exec-mem 1280 9 10 11 10)
-        (delay 6)
-        (exec-mem 1280 9 10 11 11)
-        (delay 6)
-        (exec-mem 1280 9 10 10 11)
-        (delay 6)
-        (exec-mem 1280 9 11 10 11)
-        (delay 6)
-        (exec-mem 1280 9 11 10 10)
-        (delay 6)
-        (exec-mem 1280 9 11 11 10)
-        (delay 6)))
+        (exec-mem 1280 9 10 11 10) (delay 6)
+        (exec-mem 1280 9 10 11 11) (delay 6)
+        (exec-mem 1280 9 10 10 11) (delay 6)
+        (exec-mem 1280 9 11 10 11) (delay 6)
+        (exec-mem 1280 9 11 10 10) (delay 6)
+        (exec-mem 1280 9 11 11 10) (delay 6)))
       (exec-mem 1280 9 11 10 10)
       (text #:col 7 "俺達はバリヤーの中に吸い込まれた。")
       (proc 15)))))

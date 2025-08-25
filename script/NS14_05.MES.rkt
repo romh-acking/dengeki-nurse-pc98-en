@@ -5,25 +5,20 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_452.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_452.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_453.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_453.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 8 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V128E0M0")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_415.gpc,TEMP")
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_415.gpc,GPC")
-  (image-mem 1 3)
-  (branch-reg
-   990
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_415.gpc,GPC") (image-mem 1 3)
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -33,6 +28,9 @@
      (set-reg 990 #f))))
   ((cmd 193) 0 "b:¥gpa¥Ns1-453.gpa")
   ((cmd 194) 0 ".ｱ..ｲ..ｳ")
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -55,14 +53,16 @@
   (text "こうなっちまったんだから‥‥‥‥")
   (proc 15)
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -138,7 +138,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "Ｆ１のコックピットは狭い‥‥" 'br)
    (text "俺の体はきららと密着している‥‥")
@@ -175,7 +178,7 @@
    (proc 15)
    (proc 19)
    (set-reg 69 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (proc 1)
    (text "見ないでよォ！！")
@@ -241,7 +244,7 @@
    (exec-mem 2816 "VIEW 27 23 51 167,PUT 9 27 23,FREE 9")
    (proc 19)
    (set-reg 62 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 1)
    (text "早く止めてよォ！")
@@ -265,7 +268,7 @@
    (text "絶対見ないでって言ったのにィ‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "くっ‥‥きゅうくつで体が動かせない‥‥")
    (proc 15)
@@ -305,8 +308,7 @@
    (exec-mem 6656 1 0 1 8 0)
    (text #:col 1 "キキキキキキィィィィィイイイイイイイ！！")
    (exec-mem 17920 1 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_415.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_415.gpc,GPC") (image-mem 0 0)
    (exec-mem 17920 0 1)
    (proc 15)
    (text #:col 7 "激しいスピンを起こしてマシンは止まった。")
@@ -333,7 +335,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_06.mes"))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 1)
    (text "あぁあんっ！　やだぁっ！！")
@@ -343,7 +345,7 @@
    (text "非常事態だ！　多少のことはガマンしろっ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

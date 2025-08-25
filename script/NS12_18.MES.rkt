@@ -7,18 +7,15 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_239.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_239.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_240.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_240.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 8 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
@@ -26,8 +23,7 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_237.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_241.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_243.gpc,TEMP")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -35,8 +31,10 @@
      (sound '|| "uso¥Nurse10.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_236.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_236.gpc") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -84,8 +82,7 @@
   (text "ズキュ〜〜〜ン！！")
   (proc 15)
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_237.gpc,GPC")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_237.gpc,GPC") (image-mem 1 3)
   (sound '|| 0)
   (sound '|se | 20)
   (proc 0)
@@ -107,14 +104,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -165,7 +164,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "つまらないことを考えているヒマはない！" 'br)
    (text "この状況は、絶体絶命、危機一髪、究極のピンチだ！！")
@@ -192,7 +194,7 @@
    (text "困った‥‥困った‥‥困った‥‥困った‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (exec-mem 2816 "GET 7 17 93 42 237")
    (exec-mem 2816 "VIEW 17 93 42 237,PUT 6 17 93")
@@ -222,7 +224,7 @@
    (exec-mem 2816 "VIEW 17 93 42 237,PUT 7 17 93,FREE 7")
    (proc 19)
    (set-reg 123 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 0)
    (text "ちょっとォ、手を放しなさいよォ！" 'br)
@@ -252,7 +254,7 @@
    (proc 15)
    (proc 19)
    (set-reg 119 #t))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "残念だが、きららのお尻を触ることはできない‥‥")
    (proc 15)
@@ -287,8 +289,7 @@
    (text "むぎゅ‥‥‥‥‥‥‥‥‥‥")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_241.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_241.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|se | 20)
    (exec-mem 6656 1 0 1 3 0)
@@ -315,10 +316,8 @@
    (exec-mem 10752 "EXIT")
    (set-var U 6)
    (mes-load? "mes¥action1.mes")
-   (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3)
-   (image-file "b:¥gpc¥ns1_243.gpc")
-   (image-mem 1 3)
+   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+   (image-file "b:¥gpc¥ns1_243.gpc") (image-mem 1 3)
    (sound '|| 0)
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 1)
@@ -352,12 +351,12 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_19.mes"))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "動いたりしたら、下に落ちてしまうぞ‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［ゴルゴ３１］" 'br)))

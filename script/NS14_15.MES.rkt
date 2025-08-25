@@ -12,20 +12,16 @@
   (exec-mem 1280 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_445.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_445.gpc") (image-mem 0 0)
   (exec-mem 1280 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_447.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_447.gpc") (image-mem 0 0)
   (exec-mem 1280 "GET 8 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 1280 "GET 20 71 320 8 64")
   (exec-mem 1280 "ACCESS 0")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -42,8 +38,10 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_444.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_445.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_446.gpc,TEMP")
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -60,14 +58,16 @@
   (text "これでは優勝はちょっと難しいでしょうね‥‥")
   (proc 15)
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -153,7 +153,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "やはり‥‥常識的に考えて茂久里の優勝は無理か‥‥" 'br)
    (text "残念だ‥‥ホントにホントに残念だ‥‥‥")
@@ -196,7 +199,7 @@
    (proc 15)
    (proc 19)
    (set-reg 180 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "眼下にコースが一望できる。" 'br)
    (text "さすがはオフィシャルルームだけのことはある。")
@@ -219,8 +222,7 @@
  (seg (? (= T 1) (= O 3))
    (proc 18)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (text #:col 7 "俺はきららの胸を見た。")
    (proc 15)
@@ -232,18 +234,15 @@
    (text "やだっ！　何見てるのよ！！")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
-   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 19)
    (set-reg 178 #t))
  (seg (? (= T 1) (= O 4))
    (proc 18)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (text #:col 7 "俺はきららの目を見た。")
    (proc 15)
@@ -255,8 +254,7 @@
    (exec-mem 1280 "SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 1)
-   (exec-mem 10752 "COPY> chang¥Tea_01.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 10752 "COPY> chang¥Tea_01.gpc,GPC") (image-mem 1 0)
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 7424 0 0 79 399)
    (text-frame 11 336 68 384)
@@ -268,17 +266,13 @@
    (text "　ＯＮ！")
    (exec-mem 17920 2 0)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")
-   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
-   (image-mem 1 0)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC") (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 3)
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 7424 0 0 79 399)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC") (image-mem 0 0)
    (exec-mem 1280 "ACCESS 0")
    (text-frame 3 324 52 379)
    (sound '|| 0)
@@ -312,7 +306,7 @@
    (text "どう料理しようか考えてでもいるんだろうか？")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "まったく、残念です‥‥‥‥‥‥")
@@ -347,8 +341,7 @@
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC")
-   (image-mem 1)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 1)
    (text "キャァァアッ！！" 'br)
@@ -356,14 +349,11 @@
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
-   (image-mem 0 0)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 0 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 0)
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 7424 21 40 44 303)
    (text-frame 3 324 52 379)
@@ -404,7 +394,7 @@
    (text "その可愛らしい胸からメスを入れてあげましょうか！")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "さっきから妙に腹が痛い‥‥")
    (proc 15)
@@ -472,10 +462,8 @@
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
-   (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3)
-   (image-file "b:¥gpc¥ns1_448.gpc")
-   (image-mem 1 3)
+   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+   (image-file "b:¥gpc¥ns1_448.gpc") (image-mem 1 3)
    (text-frame 3 324 52 379)
    ((cmd 209) 1 2)
    (proc 0)
@@ -531,7 +519,7 @@
    (text-reset 15)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_16.mes"))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "今ここに来たばかりだ。" 'br)
    (text "どこにも行く必要はないぞ。")
@@ -544,7 +532,7 @@
    (text "この部屋からは出られないわよッ！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［超電導ナース］" 'br)))

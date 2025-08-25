@@ -6,22 +6,20 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_143.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_143.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 3 0 0 17 136")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥ns1_k04.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k04a.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_142.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k04a.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_142.gpc") (image-mem 1 3)
   (sound '|se | 26)
   ((cmd 209) 1 2)
   ((cmd 204) 128 135)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
@@ -48,14 +46,16 @@
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -105,7 +105,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "なぜ？　どうして？　ホワーット？" 'br)
    (text "これはどういうことなんだあ？？")
@@ -130,7 +133,7 @@
    (proc 15)
    (proc 19)
    (set-reg 135 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "俺は怪獣の首のあたりを見た。")
    (proc 15)
@@ -146,7 +149,7 @@
    (text "マニアが見たら、思わず盗みたくなるかもしれない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 5)
    (text "これは‥ラジゴじゃな。")
@@ -270,7 +273,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (proc 5)
    (text "こらっ！　近づくな！！" 'br)
@@ -294,7 +297,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 5)
    (text "おいっ！　どこへ行くんだ？！")
@@ -356,7 +359,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥Ns11_18.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

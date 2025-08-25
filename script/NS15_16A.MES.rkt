@@ -3,30 +3,24 @@
  (seg*
   (load-mem "dat¥icondat.dat" 33024)
   (define-proc 10 (<> (text #:col 11 "［ナーシア］" 'br)))
-  (image-file "b:¥gpc¥Ns1_562.gpc")
-  (image-mem 1 3)
-  (branch-var
-   F
+  (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+  (branch-var F
    (</>
     (/ (nop@))
     (/ (nop@))
     (/ (nop@))
     (/
-     (branch-var
-      R
+     (branch-var R
       (</>
        (/ (nop@))
        (/ (nop@))
        (/ (nop@))
        (/
-        (branch-reg
-         500
+        (branch-reg 500
          (</>
           (/
-           (image-file "b:¥gpc¥Ns1_562.gpc")
-           (image-mem 1 3)
-           (image-file "b:¥gpc¥Ns1_565.gpc")
-           (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_565.gpc") (image-mem 1 3)
            (proc 13)
            (exec-mem 2816 "GET 1 5 23 10 96")
            (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -82,10 +76,8 @@
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")
            (sound '|| 1)
-           (image-file "b:¥gpc¥Ns1_562.gpc")
-           (image-mem 1 3)
-           (image-file "b:¥gpc¥Ns1_576.gpc")
-           (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_576.gpc") (image-mem 1 3)
            (proc 13)
            (text-frame 3 324 52 379)
            (text-reset 15)
@@ -132,8 +124,7 @@
            (set-var U 5)
            (sound '|| 2)
            (mes-load? "mes¥action1.mes")
-           (branch-var
-            Q
+           (branch-var Q
             (</>
              (/ (nop@))
              (/
@@ -144,17 +135,12 @@
               (sound '|| 0)
               (sound '|| "uso¥Nurse14.uso")
               (sound '|| 1)
-              (image-file "gpc¥Aflame01.gpc")
-              (image-mem 1 3)
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 1 3)
-              (image-file "b:¥gpc¥Ns1_566.gpc")
-              (image-mem 1 0)
-              (image-file "b:¥gpc¥Ns1_567.gpc")
-              (image-mem 1 0)
+              (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 1 3)
+              (image-file "b:¥gpc¥Ns1_566.gpc") (image-mem 1 0)
+              (image-file "b:¥gpc¥Ns1_567.gpc") (image-mem 1 0)
               (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "GET 20 71 320 8 64")
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 17920 0 1)
@@ -188,13 +174,11 @@
               (text #:col 7 "俺はコントローラーを手にいれた。")
               (proc 15)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 6656 10 23 45 295)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (set-reg 804 #t)
               (set-reg 501 #t)
@@ -204,24 +188,20 @@
              (/ (nop@)))))
           (/ (nop@))))))))
     (/
-     (branch-var
-      R
+     (branch-var R
       (</>
        (/ (nop@))
        (/ (nop@))
        (/ (nop@))
        (/
-        (branch-reg
-         502
+        (branch-reg 502
          (</>
           (/
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")
            (sound '|| 1)
-           (image-file "b:¥gpc¥Ns1_562.gpc")
-           (image-mem 1 3)
-           (image-file "b:¥gpc¥Ns1_574.gpc")
-           (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_574.gpc") (image-mem 1 3)
            (proc 13)
            (text-frame 3 324 52 379)
            (text-reset 15)
@@ -254,8 +234,7 @@
            (set-var U 3)
            (sound '|| 2)
            (mes-load? "mes¥action1.mes")
-           (branch-var
-            Q
+           (branch-var Q
             (</>
              (/ (nop@))
              (/
@@ -266,17 +245,12 @@
               (sound '|| 0)
               (sound '|| "uso¥Nurse14.uso")
               (sound '|| 1)
-              (image-file "gpc¥Aflame01.gpc")
-              (image-mem 1 3)
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 1 3)
-              (image-file "b:¥gpc¥Ns1_566.gpc")
-              (image-mem 1 0)
-              (image-file "b:¥gpc¥Ns1_568.gpc")
-              (image-mem 1 0)
+              (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 1 3)
+              (image-file "b:¥gpc¥Ns1_566.gpc") (image-mem 1 0)
+              (image-file "b:¥gpc¥Ns1_568.gpc") (image-mem 1 0)
               (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "GET 20 71 320 8 64")
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 17920 0 1)
@@ -303,13 +277,11 @@
               (text #:col 7 "俺はエレクトロスの紋章を手にいれた。")
               (proc 15)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 6656 10 23 45 295)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (set-reg 805 #t)
               (set-reg 502 #t)
@@ -321,8 +293,7 @@
        (/ (nop@)))))
     (/ (nop@))
     (/
-     (branch-var
-      R
+     (branch-var R
       (</>
        (/ (nop@))
        (/ (nop@))
@@ -330,17 +301,14 @@
        (/ (nop@))
        (/ (nop@))
        (/
-        (branch-reg
-         503
+        (branch-reg 503
          (</>
           (/
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")
            (sound '|| 1)
-           (image-file "b:¥gpc¥Ns1_562.gpc")
-           (image-mem 1 3)
-           (image-file "b:¥gpc¥Ns1_573.gpc")
-           (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+           (image-file "b:¥gpc¥Ns1_573.gpc") (image-mem 1 3)
            (proc 13)
            (text-frame 3 324 52 379)
            (text-reset 15)
@@ -380,8 +348,7 @@
            (set-var U 2)
            (sound '|| 2)
            (mes-load? "mes¥action1.mes")
-           (branch-var
-            Q
+           (branch-var Q
             (</>
              (/ (nop@))
              (/
@@ -392,18 +359,13 @@
               (sound '|| 0)
               (sound '|| "uso¥Nurse14.uso")
               (sound '|| 1)
-              (image-file "gpc¥Aflame01.gpc")
-              (image-mem 1 3)
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 1 3)
+              (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 1 3)
               (exec-mem 2816 "GET 17 10 23 35 273")
-              (image-file "b:¥gpc¥Ns1_566.gpc")
-              (image-mem 1 0)
-              (image-file "b:¥gpc¥Ns1_569.gpc")
-              (image-mem 1 0)
+              (image-file "b:¥gpc¥Ns1_566.gpc") (image-mem 1 0)
+              (image-file "b:¥gpc¥Ns1_569.gpc") (image-mem 1 0)
               (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "GET 20 71 320 8 64")
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 17920 0 1)
@@ -435,13 +397,11 @@
               (text #:col 7 "俺は、きららの部屋の鍵に似た鍵を手に入れた。")
               (proc 15)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> b:¥gpc¥ns1_562.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (exec-mem 6656 10 23 45 295)
               (exec-mem 2816 "SHOW 0,ACCESS 1")
-              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
-              (image-mem 0 0)
+              (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
               (exec-mem 2816 "ACCESS 0")
               (set-reg 803 #t)
               (set-reg 674 #t)
@@ -451,18 +411,23 @@
           (/ (nop@)))))
        (/ (nop@)))))))
   (if (</> (// (? (= 666 #t)) (nop@) (set-reg 666 #f)) (// (proc 13))))
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (branch-reg 674 (</> (/ (nop@)) (/ (proc 13) (set-reg 674 #f))))
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -478,20 +443,23 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (nop@)
    (proc 18)
    (text #:col 7 "どこもかしこも同じような部屋ばっかりだ！！" 'br)
    (text "だから、ダンジョンは好きになれない！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (nop@)
    (proc 18)
    (text #:col 7 "この部屋には何もないようだ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (nop@)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
@@ -504,7 +472,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (nop@)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
@@ -530,7 +498,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (nop@)
    (proc 18)
    (text-frame 3 324 52 379)
@@ -546,8 +514,7 @@
     (</>
      (/ (text #:col 4 '|34368| "は　　　い" '|34368|))
      (/ (text #:col 4 '|34368| "い　い　え" '|34368|))))
-   (branch-var
-    S
+   (branch-var S
     (</>
      (/
       (set-var S 0)
@@ -562,7 +529,7 @@
       (text-reset 15)
       (exec-mem 18944 65535 528 33))))
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (exec-mem 2816 "GET 1 40 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

@@ -8,11 +8,9 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_519.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_519.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 15 113 25 303")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
@@ -21,8 +19,10 @@
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M64")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_518.gpc,TEMP")
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_518.gpc,GPC")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_518.gpc,GPC") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 204) 50 54)
@@ -32,14 +32,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -82,7 +84,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "きららの奴、泣いてたな‥‥‥" 'br)
    (text "少し言いすぎたかもしれないな‥‥‥‥")
@@ -99,7 +104,7 @@
    (proc 15)
    (proc 19)
    (set-reg 106 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "何だか、雲の形がきららに見える‥‥" 'br)
    (text "雲は風に流されて、どんどん遠くへ飛んでゆく‥‥")
@@ -112,7 +117,7 @@
    (text "洗濯物がバタバタと風に揺れている。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (text #:col 7 "誰もいない‥‥" 'br)
    (text "出るのは、ため息ばかりだ‥‥")
@@ -124,7 +129,7 @@
    (text #:col 7 "お母さん‥‥いや、光子さんはもういない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "俺は煙草を吸おうとして、ポケットをさぐった。")
    (proc 15)
@@ -139,7 +144,7 @@
    (text "何だか胸がキュンと痛かったからだ‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "あまり、人に会いたくない‥‥" 'br)
    (text "もう少し、ここにいよう‥‥")
@@ -302,7 +307,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns15_10.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［雪小路］" 'br)))

@@ -8,11 +8,9 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_418.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_418.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
@@ -21,8 +19,7 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_407.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_417.gpc,TEMP")
   (exec-mem 10752 "LOAD> gpc¥face_w00.gpc,TEMP")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -30,12 +27,13 @@
      (sound '|| "uso¥Nurse08.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC")
-  (image-mem 1 3)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_417.gpc,GPC")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_417.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   ((cmd 204) 92 106)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -55,14 +53,16 @@
   (proc 15)
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -213,7 +213,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "茂久里の奴、俺達を笑かそうとしているのか？")
    (proc 15)
@@ -291,7 +294,7 @@
    (proc 15)
    (proc 19)
    (set-reg 106 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "うぷぷぷぷぷぷ‥‥い、いかん笑ってはいかん‥‥")
    (proc 15)
@@ -344,7 +347,7 @@
    (proc 15)
    (proc 19)
    (set-reg 104 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 11)
    (text "ん？　僕の顔がどうかしたのかい‥‥？")
@@ -594,17 +597,13 @@
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC")
-   (image-mem 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_407.gpc,GPC")
-   (image-mem 1 0)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_417.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 1)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_407.gpc,GPC") (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_417.gpc,GPC") (image-mem 1 0)
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 6656 32 40 42 300)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (text-frame 3 324 52 379)
    (proc 12)
@@ -712,19 +711,19 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_08.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (proc 10)
    (text "あのねえ‥‥シートを外したら困るんだけどな‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "待て！" 'br)
    (text "茂久里の面白い顔の写真を撮ってからだ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 3 "［中嶋納］" 'br)))

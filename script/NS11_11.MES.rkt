@@ -6,19 +6,19 @@
   (define-proc 10 (<> (text #:col 1 "［エコー］" 'br)))
   (sound '|| 0)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   ((cmd 193) 0 "b:¥gpa¥Ns1-125.gpa")
   ((cmd 193) 1 "b:¥gpa¥Ns1-125.gpa")
-  ((cmd 194)
-   0
-   "...........................ｴ..ｳ.ｲ.ｱ.ｲ..ｳ.ｴ............ｳ.ｲ.ｱ.ｲ..ｳ.ｴ...............")
+  ((cmd 194) 0 "...........................ｴ..ｳ.ｲ.ｱ.ｲ..ｳ.ｴ............ｳ.ｲ.ｱ.ｲ..ｳ.ｴ...............")
   ((cmd 194) 1 "....ｱ...ｲ...ｳ...ｴ")
   ((cmd 209) 1 2)
   ((cmd 204) 88 96)
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "ぐ〜すか、ぴ〜すか、すぴぴぴぴ‥‥")
@@ -28,10 +28,8 @@
   (text #:col 7 "んんんんん‥‥んっ‥？")
   (proc 15)
   (image-file "gpc¥ns1_k05.gpc")
-  (exec-mem 6656 4 7168)
-  (image-mem 1)
-  (image-file "b:¥gpc¥ns1_125.gpc")
-  (image-mem 1 0)
+  (exec-mem 6656 4 7168) (image-mem 1)
+  (image-file "b:¥gpc¥ns1_125.gpc") (image-mem 1 0)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 2)
   (text "こ・こ・は？")
@@ -41,14 +39,16 @@
   ((cmd 197) 0 7)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -125,7 +125,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "俺は、なんでここにいるんだろう‥‥？？" 'br)
    (text "いったい何をしてたんだろう‥‥？？")
@@ -200,7 +203,7 @@
    (text #:col 7 "ともかく、別棟に様子を見に行かねば！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "ここは、どうやら廊下みたいだ‥‥" 'br)
    (text "辺りには誰もいないみたいだな‥‥")
@@ -221,7 +224,7 @@
    (proc 15)
    (proc 19)
    (set-reg 93 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "お〜〜〜〜〜い！！")
@@ -230,7 +233,7 @@
    (text "オ〜〜〜〜〜イ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "何にもする気にならない‥‥" 'br)
    (text "変な所で寝たせいで体中が痛いぞ‥‥")
@@ -255,7 +258,7 @@
    (proc 15)
    (proc 19)
    (set-reg 94 #t))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "俺は低血圧なので、寝起きがひじょ〜に悪い。" 'br)
    (text "もう少し、すっきりするまで動くのはやめよう。")
@@ -280,7 +283,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_12.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 1 "［エコー］" 'br)))

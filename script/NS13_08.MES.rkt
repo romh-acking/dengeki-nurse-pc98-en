@@ -5,17 +5,18 @@
   (define-proc 11 (<> (text #:col 3 "［マジェンタ］" 'br)))
   (define-proc 12 (<> (text #:col 5 "［コロンビア］" 'br)))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso")
   (sound '|| 1)
-  (image-file "b:¥gpc¥Ns1_315.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥Ns1_315.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 52 62)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "俺ときららは、屋敷に入った。")
@@ -28,14 +29,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 23)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -98,7 +101,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "やれやれ、助かった‥‥" 'br)
    (text "それにしても、ツイてたなあ。")
@@ -129,7 +135,7 @@
    (proc 15)
    (proc 19)
    (set-reg 62 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "う〜む、立派な屋敷だ。" 'br)
    (text "それに、表のジャングルと不似合いな所が、" 'br)
@@ -147,7 +153,7 @@
    (proc 15)
    (proc 19)
    (set-reg 60 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 10)
    (text "ほ〜ほ〜、それは大変でしたね。")
@@ -319,7 +325,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns13_09.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "ぐびぐびぐびぐびぐび‥‥")
    (proc 15)
@@ -327,7 +333,7 @@
    (text "うまい！　カリフォルニア米の吟醸酒だ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 11)
    (text "どちらへ、いらっしゃるんですか？")
@@ -340,7 +346,7 @@
    (text "もう少しここにいて下さいな。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 8 "［ジョニー］" 'br)))

@@ -8,22 +8,21 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_432.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_432.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 18 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
   (exec-mem 10752 "LOAD> gpc¥face_w00.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_430.gpc,TEMP")
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_430.gpc,GPC")
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥ns1_431.gpc")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_430.gpc,GPC") (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_431.gpc") (image-mem 1 3)
   ((cmd 204) 127 136)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -39,14 +38,16 @@
   (sound '|| "uso¥Nurse10.uso")
   (sound '|| 1)
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -129,7 +130,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "くっそ〜何て無茶なことしやがるんだ！！")
    (proc 15)
@@ -174,7 +178,7 @@
    (proc 15)
    (proc 19)
    (set-reg 136 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "どうやら４人とも無傷のようだ。" 'br)
    (text "さすがはＦ１マシン！　世界に誇る安全設計！！")
@@ -206,7 +210,7 @@
    (text "俺ときららとマンセルの３人がにらみあっている。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "きららっ！　大丈夫か？")
@@ -384,13 +388,11 @@
    (proc 15)
    (exec-mem 2816 "VIEW 40 198 50 294,PUT 1 40 198,FREE 1")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_430.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_430.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 6656 25 30 46 303)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (proc 10)
    (text "お〜っと！　黒煙の中からセナが出てきたあ！" 'br)
@@ -510,7 +512,7 @@
    (set-reg 760 #t)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_12.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "俺はマシンの具合いを確かめた。")
    (proc 15)
@@ -519,7 +521,7 @@
    (text "これで優勝できるとは思えない‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (exec-mem 2816 "GET 1 40 198 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -537,7 +539,7 @@
    (text "マンセルのケツを一発はたいてからだ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 1 "［アナウンサー］" 'br)))

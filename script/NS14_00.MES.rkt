@@ -5,8 +5,7 @@
   (define-proc 10 (<> (text #:col 11 "［クロコ］" 'br)))
   (text-frame 0 0 79 399)
   (text-reset 15)
-  (image-file "gpc¥Seki10.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥Seki10.gpc") (image-mem 1 3)
   (sound '|| 0)
   (sound '|| "uso¥Nurse01a.uso")
   (sound '|| 1)
@@ -15,21 +14,20 @@
   (delay 150 0)
   ((cmd 209) 0 5)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k10.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_401.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k10.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_401.gpc") (image-mem 1 3)
   (exec-mem 18944 1 19200)
   ((cmd 204) 0 799)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -45,14 +43,16 @@
   (set-var C 4)
   (proc 19)
   (exec-mem 18944 65535 528 23)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -117,7 +117,10 @@
      (/ (nop@))
      (/ (nop@))))
    (exec-mem 24576 3)))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "Ａランチはうまい！" 'br)
    (text "どうしてこんなにうまいんだろう？" 'br)
@@ -160,7 +163,7 @@
    (proc 15)
    (proc 19)
    (set-reg 16 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "ここは、電天堂病院の職員食堂だ。" 'br)
    (text "俺はＡランチ、きららは相変わらずＢランチ、" 'br)
@@ -170,7 +173,7 @@
    (text "バナナは栄養価の高い健康食品だ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 40 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -407,7 +410,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_01.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "サササッ！！")
    (proc 15)
@@ -423,13 +426,13 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "まだ食べ終わっていない。" 'br)
    (text "食べ物をソマツにすると目がつぶれるらしい。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 11 "［クロコ］" 'br)))

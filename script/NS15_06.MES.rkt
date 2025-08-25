@@ -6,11 +6,9 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_508.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_508.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
@@ -21,10 +19,11 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse15.uso")
   (sound '|| 1)
-  (image-file "gpc¥ns1_k04.gpc")
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥ns1_507.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_507.gpc") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 204) 24 40)
@@ -44,14 +43,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -168,7 +169,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "俺は医学生の頃、" 'br)
    (text "半年ばかりドイツの大学病院に研修に出ていた。" 'br)
@@ -215,7 +219,7 @@
    (proc 15)
    (proc 19)
    (set-reg 39 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "俺はナーシアの顔を見た。" 'br)
    (text "透けるような金色の髪が日差しに揺れ、" 'br)
@@ -295,13 +299,11 @@
    (sound '|| "uso¥Nurse07.uso")
    (sound '|| 1)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_509.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_509.gpc,GPC") (image-mem 1 0)
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_510.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_510.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
@@ -317,16 +319,13 @@
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 0)
-   (image-file "gpc¥face_w00.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (text-frame 0 0 79 399)
    (text-reset 0)
-   (image-file "b:¥gpc¥ns1_512.gpc")
-   (image-mem 0 0)
+   (image-file "b:¥gpc¥ns1_512.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 10 0 0 24 144")
-   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC")
-   (image-mem 0 0)
+   (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (proc 15)
    (proc 19)
@@ -352,7 +351,7 @@
    (text "もしかして、きららだろうか？")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "元気になってさ、またドイツを案内してよ。")
@@ -455,7 +454,7 @@
    (proc 15)
    (proc 19)
    (set-reg 40 #t))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "ナーシアのお尻を触ったりしてはいけない。" 'br)
    (text "ナーシアは、まだまだ子供なのだ。")
@@ -480,8 +479,7 @@
    (text "ついでだから、ケチョンケチョンにやっつけてやるわ！")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_511.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_511.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 10)
    (text "きゃぁぁあああ！！")
@@ -554,7 +552,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns15_07.mes"))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "久しぶりにナーシアに会ったんだ。" 'br)
    (text "ゆっくり話をしたいぞ。")
@@ -566,7 +564,7 @@
    (text "どこへ行くつもりなの！？")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 11 "［ナーシア］" 'br)))

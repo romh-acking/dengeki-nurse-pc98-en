@@ -2,30 +2,23 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "b:¥gpc¥ns1_121.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_121.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_119.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_119.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 4 0 0 17 136")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_120.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_120.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 5 7 4 9 117")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   ((cmd 193) 0 "b:¥gpa¥Ns1-121.gpa")
-  (image-file "gpc¥ns1_k04.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k04a.gpc")
-  (image-mem 1 0)
-  (branch-reg
-   990
+  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k04a.gpc") (image-mem 1 0)
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -33,12 +26,13 @@
      (sound '|| "uso¥Nurse08.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_118.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_117.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_118.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_117.gpc") (image-mem 1 3)
   ((cmd 204) 53 65)
   ((cmd 209) 1 2)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
@@ -50,14 +44,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -176,7 +172,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "弘法も筆のあやまり、猿も木から落ちる。" 'br)
    (text "スーパードクターの俺にも、たまには誤診もある‥‥")
@@ -219,7 +218,7 @@
    (proc 15)
    (proc 19)
    (set-reg 64 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "大臣の病室から連れてきたナースが、" 'br)
    (text "困ったような顔をして俺を見ている。")
@@ -309,7 +308,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "とにかく博士は疲れすぎですよ。" 'br)
@@ -504,7 +503,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "カチャカチャカチャカチャ‥‥")
    (proc 15)
@@ -654,13 +653,13 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_07.mes"))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "もう少しここにいた方がいい。" 'br)
    (text "どうせ、もうすぐ夜が明けてしまう。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

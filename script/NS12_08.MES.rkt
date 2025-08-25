@@ -4,17 +4,14 @@
   (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (text #:col 8 "［亜奇子］" 'br)))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "b:¥gpc¥ns1_218.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_218.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 14 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "GET 2 30 0 10 96")
   (exec-mem 2816 "GET 4 50 0 10 96")
   (exec-mem 2816 "ACCESS 0")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -22,10 +19,12 @@
      (sound '|| "uso¥Nurse09.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_217.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_217.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 55 60)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 10)
@@ -37,14 +36,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -80,7 +81,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "妙に静かだな‥‥" 'br)
    (text "俺の高校時代は授業中でもうるさかったぞ。" 'br)
@@ -95,7 +99,7 @@
    (proc 15)
    (proc 19)
    (set-reg 60 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "特におかしい所はないみたいだな‥‥")
    (proc 15)
@@ -114,7 +118,7 @@
    (proc 15)
    (proc 19)
    (set-reg 55 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 4 5 23")
@@ -196,7 +200,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_09.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "すりすりすりすりすり‥‥")
    (proc 15)
@@ -211,7 +215,7 @@
    (text "セーラー服から伸びる自分の脚が可愛くて‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 10)
    (text "どこへ行くんですかっ？")
@@ -223,7 +227,7 @@
    (text "休み時間までガマンしなさいっ！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 8 "［亜奇子］" 'br)))

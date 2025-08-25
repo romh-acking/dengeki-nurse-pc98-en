@@ -7,19 +7,17 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_517.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_517.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥ns1_k07a.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k09.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_516.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k09.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_516.gpc") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 204) 43 49)
@@ -35,14 +33,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -103,7 +103,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "何となぐさめられようと、すべての責任は俺にある‥‥ナーシアは無事なんだろうか‥‥")
    (proc 15)
@@ -132,7 +135,7 @@
    (proc 15)
    (proc 19)
    (set-reg 49 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "雪小路さんは、" 'br)
    (text "来た時と変わりなく落ち着いたようすだ。" 'br)
@@ -230,7 +233,7 @@
    (text "きららの姿はどこにもない‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "ナーシアは、大丈夫なんでしょうか‥‥")
@@ -320,19 +323,19 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns15_09.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "つまらないことを、やっている場合ではない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 5)
    (text "そんなに、あわてるな。" 'br)
    (text "こういう時は、冷静に行動するのじゃ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［雪小路］" 'br)))

@@ -6,22 +6,17 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_113.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_113.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 3 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_114.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_114.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 4 0 0 20 128")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "b:¥gpc¥ns1_108.gpc")
-  (image-mem 1 3)
-  (branch-reg
-   990
+  (image-file "b:¥gpc¥ns1_108.gpc") (image-mem 1 3)
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -41,6 +36,9 @@
   (exec-mem 10752 "LOAD> gpc¥ns1_k04.gpc,TEMP")
   (text-frame 4 16 51 303)
   (text-reset 15)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -59,8 +57,7 @@
   (text "い〜かげんに処分したいんだけど、" 'br)
   (text "保存してなきゃいけないキマリになってるんだ。")
   (proc 15)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC")
-  (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 5)
   (text "どこで見つけたんじゃ？")
@@ -73,14 +70,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -267,7 +266,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "“東京名物　雷おこし”は、なかなかうまい。")
    (proc 15)
@@ -321,7 +323,7 @@
    (text #:col 7 "考えてる場合じゃない！！　盲腸は万病の元だ！")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "俺は箱の中を見た。")
    (proc 15)
@@ -382,7 +384,7 @@
    (text #:col 7 "見てる場合じゃないぞ！　とっととオペだ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "このペンダントが、どうかしたんですか？")
@@ -409,8 +411,7 @@
    (text "今、やってる研究とも関係あるからのう‥‥")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_109.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_109.gpc,GPC") (image-mem 1 3)
    (sound '|| 0)
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 1)
@@ -449,8 +450,7 @@
    (text "その能力を奴らに目をつけられ‥‥")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 5)
    (text "奴らというのは黒十字団という世界的犯罪組織じゃ。" 'br)
@@ -480,8 +480,7 @@
    (text "コマンドナースとして奴らからスカウトされたのじゃ。")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 5)
    (text "巨額の契約金が積まれたが光子さんは断わり続けた。" 'br)
@@ -506,8 +505,7 @@
    (text "そして、そのペンダントは、" 'br)
    (text "稲妻太郎君と光子さんの愛の証なのじゃ。")
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 15)
    (sound '|| 0)
@@ -616,14 +614,10 @@
    (text-frame 0 0 79 399)
    (text-reset 1)
    (exec-mem 10752 "COPY> gpc¥ns1_k04.gpc,GPC")
-   (exec-mem 6656 2 7168)
-   (image-mem 1 3 16 16)
-   (exec-mem 10752 "COPY> gpc¥ns1_k04a.gpc,GPC")
-   (image-mem 1 0 36 16)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_107.gpc,GPC")
-   (image-mem 1 0 24 137)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_106.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 6656 2 7168) (image-mem 1 3 16 16)
+   (exec-mem 10752 "COPY> gpc¥ns1_k04a.gpc,GPC") (image-mem 1 0 36 16)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_107.gpc,GPC") (image-mem 1 0 24 137)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_106.gpc,GPC") (image-mem 1 0)
    (sound '|| 0)
    ((cmd 209) 1 2)
    (text-frame 16 324 66 379)
@@ -635,10 +629,8 @@
    ((cmd 209) 0 2)
    (text-frame 0 0 79 399)
    (text-reset 1)
-   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")
-   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC") (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
    (sound '|| 3)
    ((cmd 209) 1 2)
    (proc 19)
@@ -700,7 +692,7 @@
    (text "うううううう‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "カンカンカンカン！" 'br)
    (text #:col 7 "雷おこしの箱は、いい音がするなあ。")
@@ -797,7 +789,7 @@
    (text "違うっ！　ここは病院だぁ！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "いいかげん、もう帰りたいんだけど、" 'br)
    (text "きっと許してはもらえないだろうな‥‥")
@@ -829,7 +821,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_03.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

@@ -8,12 +8,10 @@
   (define-proc 13 (<> (text #:col 8 "［ともよ］" 'br)))
   (define-proc 14 (<> (text #:col 5 "［声］" 'br)))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -21,10 +19,12 @@
      (sound '|| "uso¥Nurse10.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_126.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_126.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 117 120)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "別棟の前についた。" 'br)
@@ -36,14 +36,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -87,7 +89,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "まいったな‥‥" 'br)
    (text "こうしている間に、大臣が処置されるかもしれない‥‥")
@@ -100,7 +105,7 @@
    (proc 15)
    (proc 19)
    (set-reg 120 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "特に変わったようすはないよな‥‥" 'br)
    (text "窓ガラスに血ノリが飛び散ったりとかしてないし‥‥")
@@ -181,8 +186,7 @@
    (text-color 7)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (image-file "b:¥gpc¥NS1_138.gpc")
-   (image-mem 1)
+   (image-file "b:¥gpc¥NS1_138.gpc") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
    (sound '|se | 20)
@@ -207,7 +211,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_15.mes"))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -344,7 +348,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "ガチャガチャガチャ！！")
    (proc 15)
@@ -370,7 +374,7 @@
    (text "いや‥‥手が勝手に‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "別棟は鍵がかかってて入れないぞ‥‥")
    (proc 15)
@@ -381,7 +385,7 @@
    (text "俺はス×イダーマンじゃないからなあ‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［女］" 'br)))

@@ -4,10 +4,8 @@
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
-  (branch-reg
-   990
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -18,26 +16,29 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (image-file "gpc¥ns1_k05.gpc")
-  (exec-mem 6656 4 7168)
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥ns1_116.gpc")
-  (image-mem 1 3)
+  (exec-mem 6656 4 7168) (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_116.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   (set-reg 52 #f)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 1 "どたどたばたばたどたどたばたばた‥‥‥")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -56,7 +57,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "廊下を走ってはいけない。" 'br)
    (text "それは、社会生活に於ける基本的な約束だ。")
@@ -66,7 +70,7 @@
    (text "きたえておかねばならない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "俺はチラリと振りかえって、彼女を見た。")
    (proc 15)
@@ -74,7 +78,7 @@
    (text "オペが終わったらデートに誘ってみようかな。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "僕はオペの用意をする。" 'br)
@@ -108,19 +112,19 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_06.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "俺は彼女の手をギュッと握りしめた。" 'br)
    (text "彼女の手はとても柔らかかった。")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "どたどたばたばた‥‥‥" 'br)
    (text "移動中である！")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

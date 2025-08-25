@@ -6,27 +6,25 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥Ns1_310.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥Ns1_310.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 4 160 48 82")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥Ns1_311.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥Ns1_311.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 8 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse12.uso")
   (sound '|| 1)
-  (image-file "gpc¥Aflame01.gpc")
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥Ns1_309.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+  (image-file "b:¥gpc¥Ns1_309.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 31 37)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "俺達は、ゴムボートに乗って沖に出た。")
@@ -54,14 +52,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 23)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -105,7 +105,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "海は楽しい所だが、恐ろしい所でもある。" 'br)
    (text "波が荒くならないうちに、戻った方がいいな。")
@@ -121,7 +124,7 @@
    (proc 15)
    (proc 19)
    (set-reg 36 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "きららとクロコちゃんが、楽しそうに泳いでいる。" 'br)
    (text "しかし、空には黒い雲がひろがって来ている‥‥")
@@ -180,7 +183,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns13_06.mes"))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "何か、雲が出てきましたね。")
@@ -301,7 +304,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "バシャッ！！")
    (proc 15)
@@ -329,13 +332,13 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "結構、沖まで出ている。" 'br)
    (text "きららとクロコちゃんを置いて帰るわけにはいかない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 11 "［クロコ］" 'br)))

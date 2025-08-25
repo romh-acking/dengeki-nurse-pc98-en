@@ -9,44 +9,34 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_136.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_136.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_135.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_135.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 8 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_134.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_134.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_k06.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_k06.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 12 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:gpc¥ns1_153.gpc")
-  (image-mem 0 0)
+  (image-file "b:gpc¥ns1_153.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 16 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_130.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_130.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 18 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥aflame01.gpc")
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥ns1_128.gpc")
-  (image-mem 1 3)
-  (branch-reg
-   990
+  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_128.gpc") (image-mem 1 3)
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -64,20 +54,25 @@
   ((cmd 193) 1 "b:¥gpa¥Ns1-130.gpa")
   ((cmd 209) 1 2)
   ((cmd 204) 104 116)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "俺は診察室に女を連れてきて、ベッドに寝かせた。")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -252,7 +247,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "いきなり、脱いで下さいと言う医者はいない。" 'br)
    (text "とりあえず、問診から始めるのが正しい診察方法だ。")
@@ -296,7 +294,7 @@
    (text #:col 7 "秋葉原博士、あなどりがたし！")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "さっきは暗くてよくわからなかったけど、" 'br)
    (text "明るい所で見ると、美人だけど少しキツイ顔だなあ。")
@@ -336,7 +334,7 @@
    (proc 15)
    (proc 19)
    (set-reg 112 #t))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "どの辺りが苦しいですか？")
@@ -354,8 +352,7 @@
    (proc 10)
    (text "は‥‥はい‥‥‥‥")
    (proc 15)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_129.gpc,GPC")
-   (image-mem 1 0)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_129.gpc,GPC") (image-mem 1 0)
    (proc 19)
    (set-reg 109 #t))
  (seg (? (= T 2) (= O 2))
@@ -380,10 +377,8 @@
    (proc 10)
    (text "ギロチンの恐怖を味わうがいいわっ！！")
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC")
-   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_132.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC") (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_132.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    ((cmd 193) 0 "b:¥gpa¥ns1-134.gpa")
    (proc 15)
@@ -517,8 +512,7 @@
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 0)
-   (image-file "gpc¥face_w00.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 10752 "INIT")
@@ -528,12 +522,9 @@
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
-   (image-file "gpc¥aflame01.gpc")
-   (image-mem 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC")
-   (image-mem 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_137.gpc,GPC")
-   (image-mem 1 0)
+   (image-file "gpc¥aflame01.gpc") (image-mem 1)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC") (image-mem 1)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_137.gpc,GPC") (image-mem 1 0)
    (exec-mem 6656 8)
    (text-frame 3 324 52 379)
    (text-reset 15)
@@ -571,7 +562,7 @@
    (proc 15)
    (proc 19)
    (set-reg 116 #t))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "ぴくぴくぴくぴく‥‥")
    (proc 15)
@@ -592,9 +583,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 24 28 167,PUT 18 5 24,FREE 18")
    ((cmd 194) 0 ".ｱ..ｲ..ｳ..ｲ..ｱ..ｲ..ｳ..ｲ..ｱ..ｳ..ｲ..ｱ.")
-   ((cmd 194)
-    1
-    "......................................................................ｱ......ｲ..‾ｱｴ..ｵ..ｶ..ｷ..ｶ..")
+   ((cmd 194)  1 "......................................................................ｱ......ｲ..‾ｱｴ..ｵ..ｶ..ｷ..ｶ..")
    (sound '|| 0)
    ((cmd 195) 0 2)
    ((cmd 195) 1 1)
@@ -649,8 +638,7 @@
    (proc 11)
    (text "誰だっ！！")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (image-file "b:¥gpc¥Ns1_133.gpc")
-   (image-mem 0 0)
+   (image-file "b:¥gpc¥Ns1_133.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
@@ -702,7 +690,7 @@
    (text "そんなに拍手されると‥何か照れちゃうな‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "病人を放ったらかして、帰るなんてことはできないぞ。")
    (proc 15)
@@ -744,7 +732,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_14.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 5 "［女］" 'br)))

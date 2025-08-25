@@ -2,12 +2,10 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -15,10 +13,12 @@
      (sound '|| "uso¥Nurse12.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_307.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_307.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 23 30)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 1)
@@ -33,14 +33,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 23)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -119,7 +121,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "カ、カニなんて、捕まえてんじゃねえ！")
    (proc 15)
@@ -168,7 +173,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns13_04.mes"))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "きららが、カニを捕まえて笑っている‥‥‥‥")
    (proc 15)
@@ -202,7 +207,7 @@
    (text #:col 7 "きららは、ニコニコと笑って楽しそうだ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
    (text "そんなモン捕まえて喜んでるなよ‥‥" 'br)
@@ -332,7 +337,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 1 "バシャッ！！")
    (proc 15)
@@ -348,7 +353,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text-color 7)
    (branch-random
@@ -358,7 +363,7 @@
      (/ (text "おでんを食べに行くには、まだ早いようだ。"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

@@ -4,16 +4,17 @@
   (load-mem "dat¥icondat.dat" 33024)
   (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (text #:col 11 "［ナーシア］" 'br)))
-  (image-file "b:¥gpc¥Ns1_562.gpc")
-  (image-mem 1 3)
-  (image-file "b:¥gpc¥Ns1_564.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
+  (image-file "b:¥gpc¥Ns1_564.gpc") (image-mem 1 3)
   (proc 13)
   (exec-mem 2816 "GET 1 40 23 10 96")
   (exec-mem 2816 "SHOW 0,ACCESS 1")
   (exec-mem 2816 "GET 2 10 288 10 96")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 10)
@@ -21,14 +22,16 @@
   (proc 15)
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -44,21 +47,24 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (nop@)
    (proc 18)
    (text #:col 7 "あまり使いたくないワープ装置だ‥‥" 'br)
    (text "宇宙の果てにワープしてしまいそうだぞ‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (nop@)
    (proc 18)
    (text #:col 7 "う〜む‥‥何と言ったらよいのやら‥‥‥‥" 'br)
    (text "超未来的なワープ装置とでも言うべきか‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (nop@)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
@@ -74,7 +80,7 @@
    (text "うむ、パンダだ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (nop@)
    (proc 18)
    (text #:col 7 "俺はパンダの頭をなでてやった。")
@@ -82,7 +88,7 @@
    (text #:col 7 "動物愛護の心は忘れてはいけない。")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (nop@)
    (proc 18)
    (text-frame 3 324 52 379)
@@ -98,8 +104,7 @@
     (</>
      (/ (text #:col 4 '|34368| "ワープする" '|34368|))
      (/ (text #:col 4 '|34368| "部屋を出る" '|34368|))))
-   (branch-var
-    S
+   (branch-var S
     (</>
      (/
       (text-frame 3 324 52 379)
@@ -167,7 +172,7 @@
       (set-reg 990 #f)
       (mes-jump "b:¥mes¥Ns15_16.mes"))))
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (exec-mem 2816 "GET 1 40 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

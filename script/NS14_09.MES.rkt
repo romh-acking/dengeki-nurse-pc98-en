@@ -7,22 +7,18 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_425.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_425.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 6 16 93 24 210")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_426.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_426.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 8 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M64")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_404.gpc,TEMP")
-  (branch-reg
-   990
+  (branch-reg 990
    (</>
     (/ (nop@))
     (/
@@ -30,12 +26,12 @@
      (sound '|| "uso¥Nurse13.uso")
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "b:¥gpc¥ns1_419.gpc")
-  (image-mem 1 3)
+  (image-file "b:¥gpc¥ns1_419.gpc") (image-mem 1 3)
   ((cmd 193) 0 "b:¥gpa¥Ns1-419.gpa")
-  ((cmd 194)
-   0
-   ".ｱ..........ｲ..............ｳ..............ｴ.......................ｵ.")
+  ((cmd 194) 0 ".ｱ..........ｲ..............ｳ..............ｴ.......................ｵ.")
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -70,8 +66,7 @@
   (proc 15)
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC")
-  (image-mem 1)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 1)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 10)
   (text "なかなかいい走りをしているなあ。" 'br)

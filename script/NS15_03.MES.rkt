@@ -3,19 +3,18 @@
  (seg*
   (define-proc 10 (<> (text #:col 11 "［クロコ］" 'br)))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k10.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_504.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k10.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_504.gpc") (image-mem 1 3)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
@@ -25,14 +24,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/
       (if (</>
@@ -78,7 +79,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "俺は電話から帰って来たところだ。" 'br)
    (text "電話の内容を博士に伝えなければいけない。")
@@ -107,7 +111,7 @@
    (proc 15)
    (proc 19)
    (set-reg 20 #t))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "きららは、まだＢランチを食べている。" 'br)
    (text "今だにハシの使い方がヘタクソだ。")
@@ -116,7 +120,7 @@
    (text "なんで、わざわざ食堂に居るんだろう？？")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 40 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -318,20 +322,20 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns15_04.mes"))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "何だか、きららはキゲンが悪そうだ。" 'br)
    (text "ここで、お尻を触ったりしたら、" 'br)
    (text "プラズマフラッシュをくらわされかねないぞ。")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "今、戻って来た所だ。" 'br)
    (text "さっさと食事をすませよう。")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (define-proc 10 (<> (text #:col 11 "［クロコ］" 'br)))

@@ -9,8 +9,7 @@
         (? (= 705 #f))
         (nop@)
         ((cmd 204) 550 565)
-        (image-file "b:¥gpc¥Ns1_571.gpc")
-        (image-mem 1 3)
+        (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
         (exec-mem 2816 "GET 11 8 145 4 30")
         (exec-mem 2816 "GET 12 8 81 4 30")
         (text-frame 8 81 12 111)
@@ -59,8 +58,7 @@
        (//
         (? (= 705 #t) (= 806 #f) (= D 0))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_571.gpc")
-        (image-mem 1 3)
+        (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
         (exec-mem 2816 "GET 11 8 145 4 30")
         (exec-mem 2816 "GET 12 8 81 4 30")
         (text-frame 8 81 12 111)
@@ -100,8 +98,7 @@
        (//
         (? (= 705 #t) (= 806 #t) (= D 0))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_571.gpc")
-        (image-mem 1 3)
+        (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
         (exec-mem 2816 "GET 11 8 145 4 30")
         (exec-mem 2816 "GET 12 8 81 4 30")
         (text-frame 8 81 12 111)
@@ -149,8 +146,7 @@
        (//
         (? (= 705 #t) (= 806 #t))
         (nop@)
-        (image-file "b:¥gpc¥Ns1_571.gpc")
-        (image-mem 1 3)
+        (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
         (text-frame 8 81 12 111)
         (text-reset 1)
         (proc 13)
@@ -170,14 +166,16 @@
         (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1"))
        (//)))
   (proc 19)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -193,7 +191,10 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text-color 7)
    (if (</>
@@ -204,7 +205,7 @@
         (// (text "ゲームだと、何度入ってもコインがあるんだが‥‥"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text-color 7)
    (if (</>
@@ -216,7 +217,7 @@
         (// (text "コインはもうないようだ。"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -240,10 +241,9 @@
          (text "緊張感のない奴だなァ‥‥‥"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
-   (branch-var
-    C
+   (branch-var C
     (</>
      (/ (set-reg 806 #f))
      (/ (nop@))
@@ -278,8 +278,7 @@
        (</>
         (/ (text #:col 4 "　" '|34368|) (text "取るぞ！" '|34368|) (text "　"))
         (/ (text #:col 4 '|34368| "取らんわい！" '|34368|))))
-      (branch-var
-       S
+      (branch-var S
        (</>
         (/
          (text-frame 3 324 52 379)
@@ -287,53 +286,22 @@
          (proc 2)
          (text "コインをたくさん集めると１ｕｐするかもしれんぞ！")
          (proc 15)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 16 17 20 47,PUT 11 16 17")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 24 17 28 47,PUT 11 24 17")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 32 17 36 47,PUT 11 32 17")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 40 17 44 47,PUT 11 40 17")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 16 81 20 111,PUT 11 16 81")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 24 81 28 111,PUT 11 24 81")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 32 81 36 111,PUT 11 32 81")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 40 81 44 111,PUT 11 40 81")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 16 145 20 175,PUT 11 16 145")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 24 145 28 175,PUT 11 24 145")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 32 145 36 175,PUT 11 32 145")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 40 145 44 175,PUT 11 40 145")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 16 209 20 239,PUT 11 16 209")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 24 209 28 239,PUT 11 24 209")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 32 209 36 239,PUT 11 32 209")
-         (delay 30)
-         (sound '|se | 25)
-         (exec-mem 2816 "VIEW 40 209 44 239,PUT 11 40 209")
+         (sound '|se | 25) (exec-mem 2816 "VIEW 16 17 20 47,PUT 11 16 17") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 24 17 28 47,PUT 11 24 17") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 32 17 36 47,PUT 11 32 17") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 40 17 44 47,PUT 11 40 17") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 16 81 20 111,PUT 11 16 81") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 24 81 28 111,PUT 11 24 81") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 32 81 36 111,PUT 11 32 81") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 40 81 44 111,PUT 11 40 81") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 16 145 20 175,PUT 11 16 145") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 24 145 28 175,PUT 11 24 145") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 32 145 36 175,PUT 11 32 145") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 40 145 44 175,PUT 11 40 145") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 16 209 20 239,PUT 11 16 209") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 24 209 28 239,PUT 11 24 209") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 32 209 36 239,PUT 11 32 209") (delay 30)
+         (sound '|se | 25) (exec-mem 2816 "VIEW 40 209 44 239,PUT 11 40 209")
          (set-var D 15)
          (proc 2)
          (text "わははははは、何だかしらんが妙に嬉しいぞ！！")
@@ -358,7 +326,7 @@
       (proc 15)
       (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1"))))
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (nop@)
    (proc 18)
    (text-frame 3 324 52 379)
@@ -374,8 +342,7 @@
     (</>
      (/ (text #:col 4 '|34368| "は　　　い" '|34368|))
      (/ (text #:col 4 '|34368| "い　い　え" '|34368|))))
-   (branch-var
-    S
+   (branch-var S
     (</>
      (/
       (exec-mem 19456 2 8 4 103 75 55 45 55 45 0 20)
@@ -393,7 +360,7 @@
       (text-reset 15)
       (exec-mem 18944 65535 528 33))))
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (exec-mem 2816 "GET 1 40 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

@@ -4,11 +4,9 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_514.gpc")
-  (image-mem 0 0)
+  (image-file "b:¥gpc¥ns1_514.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
@@ -17,11 +15,12 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse11.uso")
   (sound '|| 1)
-  (image-file "gpc¥ns1_k04.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
   (exec-mem 2816 "GET 9 0 0 24 144")
-  (image-file "b:¥gpc¥ns1_513.gpc")
-  (image-mem 1 3 16 93)
+  (image-file "b:¥gpc¥ns1_513.gpc") (image-mem 1 3 16 93)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 204) 24 40)
@@ -31,14 +30,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/
@@ -62,12 +63,15 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "ナーシア‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "ナーシアの指から抜けた指輪が、" 'br)
    (text "俺の手の中で光っている‥‥" 'br)
@@ -169,8 +173,7 @@
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_515.gpc,GPC")
-   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_515.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 1)
    (text "たんちのバカァ〜〜〜ッ！！")
@@ -195,26 +198,26 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns15_08.mes"))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (text #:col 7 "ブラックナースは、いずこともなく消えた‥‥" 'br)
    (text "そして‥‥ナーシアも消えてしまった‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "俺は指輪を握りしめた‥‥" 'br)
    (text "やりきれない気持ちがこみ上げてきた‥‥")
    (proc 15)
    (proc 19)
    (set-reg 42 #t))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (text #:col 7 "俺は窓辺に行き、表を見た。" 'br)
    (text "ナーシアの姿もブラックナースの姿も見えない‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)

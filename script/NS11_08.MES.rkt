@@ -2,22 +2,21 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥aflame01.gpc")
-  (image-mem 1 3)
-  (image-file "gpc¥ns1_k02.gpc")
-  (image-mem 1 0)
-  (image-file "b:¥gpc¥ns1_105.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k02.gpc") (image-mem 1 0)
+  (image-file "b:¥gpc¥ns1_105.gpc") (image-mem 1 3)
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso")
   (sound '|| 1)
   ((cmd 204) 66 68)
   (set-reg 144 #f)
   ((cmd 209) 1 2)
+
+; 	Intro begins here...
+
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 7 "博士はきららを、" 'br)
@@ -31,14 +30,16 @@
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
+  
+; 	Dialogue trees defined here...
+
   (loop
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
-   (branch-var
-    Z
+   (branch-var Z
     (</>
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
@@ -66,14 +67,17 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))))
- (seg (? (= T 0) (= O 0))
+
+; 	Text starts here...
+
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text #:col 7 "だめだ‥‥思考回路が働かない‥‥‥" 'br)
    (text "博士ときららを二人っきりにするのは心配だけど、" 'br)
    (text "睡魔には勝てない‥‥家に帰って寝たい‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text #:col 7 "いかん‥‥‥目がショボショボしてきた‥‥" 'br)
    (text "結局、徹夜してしまったからなあ‥‥")
@@ -84,7 +88,7 @@
    (text "もう、病院が店開きしてる時間じゃないか！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))
+ (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 5)
    (text "うむむ‥‥やはり、そうであったか。")
@@ -136,7 +140,7 @@
    (proc 15)
    (proc 19)
    (set-reg 68 #t))
- (seg (? (= T 3) (= O 0))
+ (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text #:col 7 "ぐぅぐぅぐうぅすぴぴぴぴ‥‥")
    (proc 15)
@@ -144,7 +148,7 @@
    (text "こらっ！　こんな所で寝るんじゃない！！")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))
+ (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
    (proc 2)
    (text "いいかげん眠いし、今日は夜勤だから帰りますよ〜。")
@@ -170,7 +174,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_09.mes"))
- (seg (? (= T 5) (= O 0))
+ (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
    (proc 19)
