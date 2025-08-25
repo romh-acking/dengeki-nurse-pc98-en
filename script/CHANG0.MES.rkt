@@ -10,8 +10,7 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 1)
-  (image-file "chang¥Tea_01.gpc")
-  (image-mem 1 3)
+  (image-file "chang¥Tea_01.gpc") (image-mem 1 3)
   (exec-mem 2816 "ACCESS 0,EXIT")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -34,12 +33,10 @@
   (exec-mem 17920 1 1)
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "gpc¥Anime-Fr.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥Anime-Fr.gpc") (image-mem 0 0)
   (exec-mem 17920 0 1)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "chang¥c101.gpc")
-  (image-mem 0 0)
+  (image-file "chang¥c101.gpc") (image-mem 0 0)
   (exec-mem 2816 "ACCESS 0,EXIT")
   (exec-mem 19456 16 16 63 303 0 1 12 24)
   (load-mem "cmd¥tmaskh.tcm" 19456)
@@ -67,25 +64,15 @@
   (text-reset 0)
   (text #:col 4 'br)
   (text "ＣＨＡＲＧＥＤ　ＰＯＷＥＲ　ＲＡＴＥ．．１２０\n")
-  (exec-mem
-   28672
-   1
-   0
-   "A......A......A......A.......A......A......A........A...A...A........A...A......A.......A......A......A.....A..")
+  (exec-mem 28672 1 0 "A......A......A......A.......A......A......A........A...A...A........A...A......A.......A......A......A.....A..")
   (exec-mem 28672 1 1 "A..A....A....A...A....A....A.........A.....A......")
-  (exec-mem
-   28672
-   1
-   2
-   "A.........A....A........A...........A......A..A.........................A....")
+  (exec-mem 28672 1 2 "A.........A....A........A...........A......A..A.........................A....")
   (exec-mem 28672 1 3 "A.......A...AAA..A................A")
-  (image-file "gpc¥Anime-Fr.gpc")
-  (image-mem 1 1)
+  (image-file "gpc¥Anime-Fr.gpc") (image-mem 1 1)
   (image-file "chang¥01.gpc")
   (exec-mem 256 0)
   (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (image-file "gpc¥Anime-Fr.gpc")
-  (image-mem 1 0)
+  (image-file "gpc¥Anime-Fr.gpc") (image-mem 1 0)
   (exec-mem 2816 "ACCESS 0,EXIT")
   (text-frame 15 321 64 383)
   (text-reset 0)
@@ -111,9 +98,7 @@
   (text #:col 4 "　　ココロの病も、カラダの病も、まっかせなさい！" 'br)
   (text "　　　　　　　　無敵看護婦、")
   (text #:col 4 "電撃ナース！")
-  ((cmd 194)
-   1
-   "..ｺ.ｻ..ｼ.ｻ.ｼ..ｷ.ｻ.ｸ.‾ｺｹ.‾ｻｸ.ｺ.‾ｷｻ.ｺ.ｻ.ｼ.ｻ.‾ｼｸ.ｺ.‾ｻｹ.‾ｼｸ.‾ｻｷ.ｺ.ｻ..ｼ.ｻ.ｺ..ｻ.ｺ.ｻ..ｼ.ｻ.ｺ..ｱ..ｲ..ｳ..ｴ..ｵ..ｱ.ｶ.ｱ")
+  ((cmd 194) 1 "..ｺ.ｻ..ｼ.ｻ.ｼ..ｷ.ｻ.ｸ.‾ｺｹ.‾ｻｸ.ｺ.‾ｷｻ.ｺ.ｻ.ｼ.ｻ.‾ｼｸ.ｺ.‾ｻｹ.‾ｼｸ.‾ｻｷ.ｺ.ｻ..ｼ.ｻ.ｺ..ｻ.ｺ.ｻ..ｼ.ｻ.ｺ..ｱ..ｲ..ｳ..ｴ..ｵ..ｱ.ｶ.ｱ")
   ((cmd 195) 1 1)
   (delay 210 0)
   ((cmd 196) 1 0)

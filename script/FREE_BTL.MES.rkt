@@ -9,8 +9,7 @@
   (loop
    (text-frame 0 0 79 399)
    (text-reset 9)
-   (image-file "Gpc¥ComBat.gpc")
-   (image-mem 1 3)
+   (image-file "Gpc¥ComBat.gpc") (image-mem 1 3)
    (text-frame 20 324 69 399)
    (text-reset 9)
    (text #:col 4 "　戦いたい相手の顔を左クリックして下さい。" 'br)
@@ -20,8 +19,7 @@
    (text "〔ＥＳＣキー〕")
    ((cmd 209) 1 2)
    ((cmd 182) Q 2)
-   (branch-var
-    Q
+   (branch-var Q
     (</>
      (/ ((cmd 209) 0 2) (mes-jump "mes¥Ns_Menu.mes"))
      (/ (set-var U 1))
@@ -41,12 +39,10 @@
      (/ (set-var U 15))))
    (exec-mem 17920 1 1)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-   (image-file "gpc¥face_w00.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (exec-mem 2816 "ACCESS 0")
-   (image-file "gpc¥sflame.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥sflame.gpc") (image-mem 0 0)
    (text-frame 26 256 53 335)
    (text-reset 15)
    (text-frame 6 320 19 384)
@@ -56,8 +52,7 @@
    (sound '|| 2)
    (sound '|| 0)
    (exec-mem 9216 0 35664)
-   (branch-var
-    T
+   (branch-var T
     (</>
      (/
       (sound '|| 2)
@@ -80,16 +75,14 @@
      (/ ((cmd 206) 1 2) (image-file "b:¥act_gpc¥d1enmfda.gpc") (image-mem 1 0))
      (/
       ((cmd 206) 1 3)
-      (image-file "b:¥act_gpc¥d1enmfea.gpc")
-      (image-mem 1 0))))
+      (image-file "b:¥act_gpc¥d1enmfea.gpc") (image-mem 1 0))))
    (exec-mem 17920 0 1)
    (exec-mem 2816 "VIEW 27 264 35 328,PUT 20 27 264,FREE 20,EXIT")
    (text-frame 35 289 52 313)
    (text-reset 15)
    (text #:col 1 "読み込み中で〜す！")
    (exec-mem 6656 8)
-   (branch-var
-    T
+   (branch-var T
     (</>
      (/ (nop@))
      (/ (sound '|| "uso¥nurse05.uso") (sound '|| 1))

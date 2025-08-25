@@ -18,15 +18,12 @@
          (set-reg 990 #f))
         (// (nop@) (set-reg 990 #t))))
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-   (image-file "gpc¥Waku1.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥Waku1.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 10 56 16 22 160")
-   (image-file "gpc¥Waku2.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥Waku2.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 12 1 313 54 78")
    (exec-mem 2816 "ACCESS 0")
-   (image-file "gpc¥Ns0506B.GPC")
-   (image-mem 1 3)
+   (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
    (exec-mem 2816 "VIEW 56 16 77 175,PUT 10 56 16")
    ((cmd 209) 1 3)
    (loop
@@ -54,8 +51,7 @@
        (text "　"))
       (/ (text #:col 1 '|34368| "おまけモード" '|34368|))))
     (sound '|| 0)
-    (branch-var
-     S
+    (branch-var S
      (</>
       (/
        (set-var T 0)
@@ -78,8 +74,7 @@
          (/ (text #:col 1 "　マニュアル補足　"))
          (/ (text #:col 1 "　ネットについて　"))
          (/ (text #:col 1 "　　キャンセル　　"))))
-       (branch-var
-        S
+       (branch-var S
         (</>
          (/ ((cmd 209) 0 2) (set-reg 200 #t) (mes-jump "mes¥Oshirase.mes"))
          (/ ((cmd 209) 0 2) (set-reg 201 #t) (mes-jump "mes¥Oshirase.mes"))
@@ -152,33 +147,27 @@
           (text-frame 16 346 52 360)
           (text "コマンドを選択してねッ！")
           (text-frame 3 324 52 379)))
-       (branch-var
-        S
+       (branch-var S
         (</>
          (/
           ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc")
-          (image-mem 1 3)
+          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 0))
          (/
           ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc")
-          (image-mem 1 3)
+          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 1))
          (/
           ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc")
-          (image-mem 1 3)
+          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 2))
          (/
           ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc")
-          (image-mem 1 3)
+          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 3))
          (/
           ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc")
-          (image-mem 1 3)
+          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 4))
          (/ (nop@)))))
       (/
@@ -219,8 +208,7 @@
                 (text "　"))
                (/ (text #:col 1 "　　物語の選択　　"))
                (/ (text #:col 1 "　　キャンセル　　"))))
-             (branch-var
-              S
+             (branch-var S
               (</>
                (/
                 (text-color 4)
@@ -249,8 +237,7 @@
                    (text "開発日記" '|34368|)
                    (text "　"))
                   (/ (text #:col 1 "　キャンセル　"))))
-                (branch-var
-                 S
+                (branch-var S
                  (</>
                   (/
                    ((cmd 209) 0 2)
@@ -338,8 +325,7 @@
                    (text-frame 16 346 52 360)
                    (text "コマンドを選択してねッ！")
                    (text-frame 3 324 52 379)))
-                (branch-var
-                 S
+                (branch-var S
                  (</>
                   (/
                    ((cmd 209) 0 2)

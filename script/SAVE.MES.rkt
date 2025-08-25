@@ -64,8 +64,7 @@
    (text-color 4)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (branch-var
-    S
+   (branch-var S
     (</>
      (/
       (set-reg 1000 #f)
@@ -133,8 +132,7 @@
       (proc 13)
       ((cmd 211) 0 1)
       (proc 10)
-      (branch-var
-       S
+      (branch-var S
        (</>
         (/
          (text-frame 3 324 52 379)
@@ -146,10 +144,8 @@
         (/
          (sound '|| 2)
          ((cmd 209) 0 2)
-         (image-file "gpc¥Ns0506B.GPC")
-         (image-mem 1 3)
-         (image-file "gpc¥Waku2.GPC")
-         (image-mem 1 3)
+         (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
+         (image-file "gpc¥Waku2.GPC") (image-mem 1 3)
          ((cmd 209) 1 2)
          (text-frame 3 332 52 379)
          (text #:col 4 "　　　　　　　　　お疲れさまッ！" 'br)

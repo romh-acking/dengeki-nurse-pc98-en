@@ -11,12 +11,10 @@
    (exec-mem 6656 7)
    (exec-mem 17920 0 1)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-   (image-file "gpc¥face_w00.gpc")
-   (image-mem 0 0)
+   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (exec-mem 2816 "ACCESS 0")
-   (image-file "gpc¥sflame.gpc")
-   (image-mem 1 3)
+   (image-file "gpc¥sflame.gpc") (image-mem 1 3)
    (text-frame 26 256 53 335)
    (text-reset 15)
    (text-frame 6 320 19 384)
@@ -26,8 +24,7 @@
    (sound '|| 2)
    (sound '|| 0)
    (exec-mem 9216 0 35664)
-   (branch-var
-    T
+   (branch-var T
     (</>
      (/ (nop@))
      (/ (image-file "act_gpc¥d1enmf0a.gpc") (image-mem 1 0))
@@ -50,8 +47,7 @@
    (text-reset 15)
    (text #:col 1 "読み込み中で〜す！")
    (exec-mem 6656 8)
-   (branch-var
-    T
+   (branch-var T
     (</>
      (/ (nop@))
      (/ (sound '|| "uso¥nurse05.uso") (sound '|| 1))
@@ -70,8 +66,7 @@
      (/ (sound '|| "uso¥nurse06.uso") (sound '|| 1))
      (/ (sound '|| "uso¥nurse07.uso") (sound '|| 1))))
    (exec-mem 9216 1 "T" "Q")
-   (branch-var
-    Q
+   (branch-var Q
     (</>
      (/ (nop@))
      (/
@@ -87,8 +82,7 @@
       (sound '|| 0)
       (text-frame 0 0 79 399)
       (text-reset 0)
-      (image-file "gpc¥gameover.gpc")
-      (image-mem 1 3)
+      (image-file "gpc¥gameover.gpc") (image-mem 1 3)
       ((cmd 193) 0 "gpa¥gameover.gpa")
       ((cmd 194) 0 "...ｱ...ｲ")
       ((cmd 195) 0 65535)
@@ -113,8 +107,7 @@
       (menu1 33 356 33 372 (</> (/ (text "　は　　　い　")) (/ (text "　い　い　え　"))))
       (text-frame 12 334 67 389)
       (text-reset 0)
-      (branch-var
-       S
+      (branch-var S
        (</>
         (/
          (text "　　　　　　　よくぞいった　でんげきナース！！" 'br)
@@ -139,8 +132,7 @@
          (menu1 33 356 33 372 (</> (/ (text "　い　い　え　")) (/ (text "　は　　　い　"))))
          (text-frame 12 334 67 389)
          (text-reset 0)
-         (branch-var
-          S
+         (branch-var S
           (</>
            (/
             (text "　　　　　　そうか‥‥ならばしかたがあるまい。" 'br)
@@ -270,10 +262,8 @@
             ((cmd 209) 0 2)
             (sound '|| 2)
             ((cmd 197) 0 16)
-            (image-file "gpc¥Ns0506B.GPC")
-            (image-mem 1 3)
-            (image-file "gpc¥Waku2.GPC")
-            (image-mem 1 3)
+            (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
+            (image-file "gpc¥Waku2.GPC") (image-mem 1 3)
             ((cmd 209) 1 2)
             (text-frame 3 332 52 379)
             (text #:col 4 "　　　　　　　　　お疲れさまッ！" 'br)
