@@ -1,3 +1,9 @@
+; Dengeki Nurse English Translation - NS_MENU.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Main menu.
+; The Omake (Bonus) Mode is only accessible after completing the game.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg (? (= R 0))
@@ -26,31 +32,29 @@
    (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
    (exec-mem 2816 "VIEW 56 16 77 175,PUT 10 56 16")
    ((cmd 209) 1 3)
+
+; 	Main menu options (text box is 14 half-width characters wide)
+
    (loop
     (set-var T 0)
     (text-frame 58 24 75 168)
     (text-reset 15)
     (menu1
-     60
-     40
-     60
-     70
-     60
-     100
-     60
-     130
-     60
-     160
+     60 40
+     60 70
+     60 100
+     60 130
+     60 160
      (</>
-      (/ (text #:col 1 "　" '|34368|) (text "お知らせ" '|34368|) (text "　"))
-      (/ (text #:col 1 "　" '|34368|) (text "最初から" '|34368|) (text "　"))
-      (/
-       (set-reg 990 #t)
-       (text #:col 1 "　" '|34368|)
-       (text "続きから" '|34368|)
-       (text "　"))
-      (/ (text #:col 1 '|34368| "おまけモード" '|34368|))))
+      (/ (text-color 1) (str " Information  "))
+      (/ (text-color 1) (str "   New Game   "))
+      (/ (set-reg 990 #t)
+         (text-color 1) (str "   Continue   "))
+      (/ (text-color 1) (str "  Bonus Mode  "))))
     (sound '|| 0)
+
+; 	Info menu options (18 wide)
+
     (branch-var S
      (</>
       (/
@@ -59,27 +63,25 @@
        (text-reset 15)
        (text-frame 57 24 76 168)
        (menu1
-        58
-        42
-        58
-        72
-        58
-        102
-        58
-        132
-        58
-        162
+        58 42
+        58 72
+        58 102
+        58 132
+        58 162
         (</>
-         (/ (text #:col 1 '|34368| "ＨＤインストール" '|34368|))
-         (/ (text #:col 1 "　マニュアル補足　"))
-         (/ (text #:col 1 "　ネットについて　"))
-         (/ (text #:col 1 "　　キャンセル　　"))))
+         (/ (text-color 1) (str "Hard Disk Installs"))
+         (/ (text-color 1) (str "Supplementary Info"))
+         (/ (text-color 1) (str "   Join our BBS   "))
+         (/ (text-color 1) (str "      Cancel      "))))
        (branch-var S
         (</>
          (/ ((cmd 209) 0 2) (set-reg 200 #t) (mes-jump "mes¥Oshirase.mes"))
          (/ ((cmd 209) 0 2) (set-reg 201 #t) (mes-jump "mes¥Oshirase.mes"))
          (/ ((cmd 209) 0 2) (set-reg 202 #t) (mes-jump "mes¥Oshirase.mes"))
          (/ (nop@)))))
+
+; 	Start new game
+
       (/
        ((cmd 209) 0 3)
        (define-proc 15
@@ -98,37 +100,34 @@
          (<>
           (text-color 4)
           (text-frame 16 346 52 360)
-          (text "コマンドを選択してねッ！")
+          (str "Please select a command!")
           (text-frame 3 324 52 379)))
        (set-var U 1)
        (text-frame 3 324 52 379)
        (text-reset 15)
        ((cmd 206) 1 1)
        (mes-jump "b:¥mes¥NS11_00.mes"))
+
+; 	Continue existing game (14 wide)
+
       (/
        (set-var T 0)
        (text-frame 58 24 75 168)
        (text-reset 15)
        (menu1
-        60
-        33
-        60
-        55
-        60
-        78
-        60
-        100
-        60
-        122
-        60
-        144
+        60 33
+        60 55
+        60 78
+        60 100
+        60 122
+        60 144
         (</>
-         (/ (set-reg 1000 #t) (text #:col 1 "　カルテ　１　"))
-         (/ (set-reg 1001 #t) (text #:col 1 "　カルテ　２　"))
-         (/ (set-reg 1002 #t) (text #:col 1 "　カルテ　３　"))
-         (/ (set-reg 1003 #t) (text #:col 1 "　カルテ　４　"))
-         (/ (set-reg 1004 #t) (text #:col 1 "　カルテ　５　"))
-         (/ (text #:col 1 "　キャンセル　"))))
+         (/ (set-reg 1000 #t) (text-color 1) (str "   Karte ") (text "１　" '|34368|))
+         (/ (set-reg 1001 #t) (text-color 1) (str "   Karte ") (text "２　" '|34368|))
+         (/ (set-reg 1002 #t) (text-color 1) (str "   Karte ") (text "３　" '|34368|))
+         (/ (set-reg 1003 #t) (text-color 1) (str "   Karte ") (text "４　" '|34368|))
+         (/ (set-reg 1004 #t) (text-color 1) (str "   Karte ") (text "５　" '|34368|))
+         (/                   (text-color 1) (str "    Cancel    "))))
        (define-proc 15
          (<>
           (text-color 4)
@@ -145,7 +144,7 @@
          (<>
           (text-color 4)
           (text-frame 16 346 52 360)
-          (text "コマンドを選択してねッ！")
+          (str "Please select a command!")
           (text-frame 3 324 52 379)))
        (branch-var S
         (</>
@@ -170,6 +169,9 @@
           (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
           (flag-load 4))
          (/ (nop@)))))
+
+; 	Bonus mode options (18 wide)
+
       (/
        (if (</>
             (//
@@ -186,58 +188,45 @@
              (text-frame 57 24 76 168)
              (set-var T 0)
              (menu1
-              58
-              39
-              58
-              64
-              58
-              89
-              58
-              114
-              58
-              139
+              58 39
+              58 64
+              58 89
+              58 114
+              58 139
               (</>
-               (/
-                (text #:col 1 "　" '|34368|)
-                (text "フリーバトル" '|34368|)
-                (text "　"))
-               (/ (text #:col 1 "　スタッフの部屋　"))
-               (/
-                (text #:col 1 "　" '|34368|)
-                (text "きららの部屋" '|34368|)
-                (text "　"))
-               (/ (text #:col 1 "　　物語の選択　　"))
-               (/ (text #:col 1 "　　キャンセル　　"))))
+               (/ (text-color 1) (str "    Free Battle   "))
+               (/ (text-color 1) (str "    Staff Room    "))
+               (/ (text-color 1) (str "   Kirara's Room  "))
+               (/ (text-color 1) (str "  Episode Select  "))
+               (/ (text-color 1) (str "      Cancel      "))))
              (branch-var S
               (</>
+
+; 	Free Battle
+
                (/
                 (text-color 4)
                 ((cmd 209) 0 2)
                 (exec-mem 2816 "EXIT")
                 (mes-jump "mes¥Free_Btl.mes"))
+
+; 	Staff Room (18 wide, formerly 14)
+
                (/
                 (text-frame 58 24 75 168)
                 (text-reset 15)
                 (text-frame 57 24 76 168)
                 (set-var T 0)
                 (menu1
-                 60
-                 39
-                 60
-                 64
-                 60
-                 89
+                 58 39
+                 58 64
+                 58 89
                  (</>
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "電撃放談" '|34368|)
-                   (text "　"))
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "開発日記" '|34368|)
-                   (text "　"))
-                  (/ (text #:col 1 "　キャンセル　"))))
-                (branch-var S
+                  (/ (text-color 1) (str "Dengeki Speakeasy "))
+                  (/ (text-color 1) (str "Development Diary "))
+                  (/ (text-color 1) (str "      Cancel      "))))
+                (branch-var
+                 S
                  (</>
                   (/
                    ((cmd 209) 0 2)
@@ -250,6 +239,9 @@
                    ((cmd 206) 1 4)
                    (mes-jump "b:¥mes¥Nikki.mes"))
                   (/ (nop@)))))
+
+; 	Kirara's Room
+
                (/
                 (branch-reg
                  1006
@@ -268,45 +260,27 @@
                    (exec-mem 2816 "EXIT")
                    ((cmd 206) 1 3)
                    (mes-jump "b:¥mes¥K_Room.mes")))))
+
+; 	Episode Select (14 wide)
+
                (/
                 (set-var T 0)
                 (text-frame 58 24 75 168)
                 (text-reset 15)
                 (menu1
-                 60
-                 33
-                 60
-                 55
-                 60
-                 78
-                 60
-                 100
-                 60
-                 122
-                 60
-                 144
+                 60 33
+                 60 55
+                 60 78
+                 60 100
+                 60 122
+                 60 144
                  (</>
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "１　　話" '|34368|)
-                   (text "　"))
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "２　　話" '|34368|)
-                   (text "　"))
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "３　　話" '|34368|)
-                   (text "　"))
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "４　　話" '|34368|)
-                   (text "　"))
-                  (/
-                   (text #:col 1 "　" '|34368|)
-                   (text "５　　話" '|34368|)
-                   (text "　"))
-                  (/ (text #:col 1 "　キャンセル　"))))
+                  (/ (text-color 1) (str "  Episode ") (text "１　"))
+                  (/ (text-color 1) (str "  Episode ") (text "２　"))
+                  (/ (text-color 1) (str "  Episode ") (text "３　"))
+                  (/ (text-color 1) (str "  Episode ") (text "４　"))
+                  (/ (text-color 1) (str "  Episode ") (text "５　"))
+                  (/ (text-color 1) (str "    Cancel    "))))
                 (define-proc 15
                   (<>
                    (text-color 4)
@@ -323,9 +297,10 @@
                   (<>
                    (text-color 4)
                    (text-frame 16 346 52 360)
-                   (text "コマンドを選択してねッ！")
+                   (str "Please select a command!")
                    (text-frame 3 324 52 379)))
-                (branch-var S
+                (branch-var
+                 S
                  (</>
                   (/
                    ((cmd 209) 0 2)
@@ -349,6 +324,9 @@
                    (mes-jump "b:¥mes¥Ns15_00.mes"))
                   (/ (nop@)))))
                (/ (nop@)))))
+
+; 	(When Bonus Mode hasn't been unlocked yet)
+
             (//
              (text-color 4)
              (text-frame 3 330 52 379)

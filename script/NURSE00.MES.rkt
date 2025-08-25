@@ -1,3 +1,7 @@
+; Dengeki Nurse English Translation - NURSE00.MES
+; Edited and commented by trentsignia
+; --Description:--
+; Game intro and start-up.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -493,14 +497,14 @@
   (load-mem "cmd¥ExitOffH.tcm" 32848)
   (load-mem "dat¥icondat.dat" 33024)
   (load-mem "cmd¥blnkcsrh.tcm" 34128)
-  (define-proc 0 (<> (text #:col 4 "［電撃ナース］" 'br)))
-  (define-proc 1 (<> (text #:col 4 "［きらら］" 'br)))
-  (define-proc 2 (<> (text #:col 7 "［たんち］" 'br)))
-  (define-proc 3 (<> (text #:col 4 "［００７４］" 'br)))
-  (define-proc 4 (<> (text #:col 4 "［看護婦］" 'br)))
-  (define-proc 5 (<> (text #:col 8 "［秋葉原博士］" 'br)))
-  (define-proc 6 (<> (text #:col 5 "［婦長］" 'br)))
-  (define-proc 7 (<> (text #:col 1 "［ブラックナース］" 'br)))
+  (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
+  (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
+  (define-proc 2 (<> (text-color 7) (str "Tanchi: ")))
+  (define-proc 3 (<> (text-color 4) (str "0074: ")))
+  (define-proc 4 (<> (text-color 4) (str "Nurse: ")))
+  (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
+  (define-proc 6 (<> (text-color 5) (str "Head Nurse: ")))
+  (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
   (define-proc 15
     (<>
      (text-color 4)
@@ -517,7 +521,7 @@
     (<>
      (text-color 4)
      (text-frame 16 346 52 360)
-     (text "コマンドを選択してねッ！")
+     (text "Please select a command!")
      (text-frame 3 324 52 379)))
   (define-proc 18
     (<> (text-frame 5 320 39 382) (text-reset 15) (text-frame 3 324 52 379)))

@@ -1,3 +1,9 @@
+; Dengeki Nurse English Translation - K_ROOM.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Kirara's Room; accessible from the Omake mode.
+; Essentially a gallery to view the game CGs and opening/ending/transformation sequences, as well as listen to the game's soundtrack.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg (? (= 791 #f))
@@ -53,6 +59,9 @@
       (text "せっかく遊びに来てくれたのにネ。")
       (proc 16))
      (/ (nop@) (set-reg 787 #f))))
+
+; 	Menu options (20 half-width characters wide)
+
    (loop
     (proc 1)
     (text "さあ、何をして遊びましょうか？")
@@ -60,29 +69,26 @@
     (text-frame 56 239 77 373)
     (text-reset 15)
     (menu1
-     57
-     248
-     57
-     270
-     57
-     290
-     57
-     315
-     57
-     337
-     57
-     359
+     57 248
+     57 270
+     57 293
+     57 315
+     57 337
+     57 359
      (</>
-      (/ (text #:col 4 "　" '|34368|) (text "アルバムを見る" '|34368|) (text "　"))
-      (/ (text #:col 4 "　　" '|34368|) (text "ＣＤを聞く" '|34368|) (text "　　"))
-      (/ (text #:col 4 "　　" '|34368|) (text "変身を見る" '|34368|) (text "　　"))
-      (/ (text #:col 4 '|34368| "エンディングを見る" '|34368|))
-      (/ (text #:col 4 '|34368| "オープニングを見る" '|34368|))
-      (/ (text #:col 4 "　" '|34368|) (text "　部屋を出る" '|34368|) (text "　　"))))
+      (/ (text-color 4) (text "　　") (str "Browse Album") (text "　　"))
+      (/ (text-color 4) (text "　　") (str " Play ") (text "ＣＤ　　　"))
+      (/ (text-color 4) (text "　　") (str "Watch Henshin ") (text "　"))
+      (/ (text-color 4) (text "　　") (str "Watch Ending") (text "　　"))
+      (/ (text-color 4) (text "　　") (str "Watch Opening ") (text "　"))
+      (/ (text-color 4) (text "　　") (str " Leave Room ") (text "　　"))))
     (sound '|| 0)
     (exec-mem 2816 "VIEW 54 226 80 397,OVER 1,PUT 19 54 226")
     (branch-var S
      (</>
+
+; 	Browse album (20 wide)
+
       (/
        (text-frame 3 324 52 379)
        (text-reset 15)
@@ -103,28 +109,19 @@
         (text-frame 56 239 77 375)
         (text-reset 15)
         (menu1
-         57
-         248
-         57
-         270
-         57
-         292
-         57
-         314
-         57
-         336
-         57
-         358
+         57 248
+         57 270
+         57 292
+         57 314
+         57 336
+         57 358
          (</>
-          (/ (text #:col 4 "　第１話のアルバム　"))
-          (/ (text #:col 4 "　第２話のアルバム　"))
-          (/ (text #:col 4 "　第３話のアルバム　"))
-          (/ (text #:col 4 "　第４話のアルバム　"))
-          (/ (text #:col 4 "　第５話のアルバム　"))
-          (/
-           (text #:col 4 "　" '|34368|)
-           (text "見るのをやめる" '|34368|)
-           (text "　"))))
+          (/ (text-color 4) (str " Episode 1's Album") (text "　"))
+          (/ (text-color 4) (str " Episode 2's Album") (text "　"))
+          (/ (text-color 4) (str " Episode 3's Album") (text "　"))
+          (/ (text-color 4) (str " Episode 4's Album") (text "　"))
+          (/ (text-color 4) (str " Episode 5's Album") (text "　"))
+          (/ (text-color 4) (text "　") (str " Stop Browsing") (text "　　"))))
         (exec-mem 2816 "VIEW 54 226 80 397,OVER 1,PUT 19 54 226")
         (text-frame 3 324 52 379)
         (text-reset 15)
@@ -690,6 +687,9 @@
            (exec-mem 2816 "EXIT")
            (set-reg 787 #t)
            (mes-jump "b:¥mes¥K_Room.mes"))))))
+
+; 	Play CD (42 wide)
+
       (/
        (exec-mem 2816 "SHOW 0,ACCESS 1")
        (image-file "b:¥gpc¥Heya.gpc") (image-mem 0 0)
@@ -717,82 +717,39 @@
         (text-frame 7 30 53 300)
         (text-reset 15)
         (menu1
-         10
-         30
-         10
-         47
-         10
-         65
-         10
-         83
-         10
-         101
-         10
-         119
-         10
-         137
-         10
-         155
-         10
-         173
-         10
-         191
-         10
-         209
-         10
-         227
-         10
-         245
-         10
-         263
-         10
-         281
-         10
-         298
+         10 30
+         10 47
+         10 65
+         10 83
+         10 101
+         10 119
+         10 137
+         10 155
+         10 173
+         10 191
+         10 209
+         10 227
+         10 245
+         10 263
+         10 281
+         10 298
          (</>
-          (/
-           (text #:col 4 "　　　　　" '|34368|)
-           (text "恋のプラズマ１００\n" '|34368|)
-           (text "　　　　　"))
-          (/
-           (text #:col 4 "　　" '|34368|)
-           (text "ＳＴＡＲ　ＤＵＳＴ　ＬＯＶＥＲＳ" '|34368|)
-           (text "　　"))
-          (/ (text #:col 4 "　　　　　　ＤＲＵＧ−ＯＮ　Ｑ　　　　　　"))
-          (/
-           (text #:col 4 "　　　　　　" '|34368|)
-           (text "黒十字団のテーマ" '|34368|)
-           (text "　　　　　　"))
-          (/ (text #:col 4 "　　ＷＡＬＫ　ＤＯＮ’Ｔ　ＢＡＴＴＬＥ　　"))
-          (/
-           (text #:col 4 "　　　" '|34368|)
-           (text "ＰＩＰＥ　ＬＩＮＥＲ　１１９" '|34368|)
-           (text "　　　"))
-          (/ (text #:col 4 '|34368| "黒衣の天使達−ＢＬＡＣＫ　ＡＮＧＥＬＳ−" '|34368|))
-          (/ (text #:col 4 "　　　　　　恋のホスピタリティ　　　　　　"))
-          (/
-           (text #:col 4 "　　　　　" '|34368|)
-           (text "ドライヴィング救急車" '|34368|)
-           (text "　　　　　"))
-          (/ (text #:col 4 "　　　　　　電撃ナースＳＯＳ！　　　　　　"))
-          (/
-           (text #:col 4 "　　　　　" '|34368|)
-           (text "悲しきナースキャップ" '|34368|)
-           (text "　　　　　"))
-          (/
-           (text #:col 4 "　　　　　" '|34368|)
-           (text "真夏のブギウギ大作戦" '|34368|)
-           (text "　　　　　"))
-          (/
-           (text #:col 4 "　　　　" '|34368|)
-           (text "ファルース−ＦＡＬＳＥ−" '|34368|)
-           (text "　　　　"))
-          (/
-           (text #:col 4 "　　　　　　　" '|34368|)
-           (text "稲妻の潜入者" '|34368|)
-           (text "　　　　　　　"))
-          (/ (text #:col 4 "　　　　　　　星空のナーシア　　　　　　　"))
-          (/ (text #:col 4 "　　　　　　　　キャンセル　　　　　　　　"))))
+          (/ (text-color 4) (text "　　　　　") (str " Love Plasma ") (text "１００\n　　　　　" '|34368|))
+          (/ (text-color 4) (text '|34368| "　　ＳＴＡＲ　ＤＵＳＴ　ＬＯＶＥＲＳ　　" '|34368|))
+          (/ (text-color 4) (text          "　　　　　　ＤＲＵＧ−ＯＮ　Ｑ　　　　　　"))
+          (/ (text-color 4) (text "　　　　　") (str " Theme of Black Cross ") (text "　　　　　"))
+          (/ (text-color 4) (text          "　　ＷＡＬＫ　ＤＯＮ’Ｔ　ＢＡＴＴＬＥ　　"))
+          (/ (text-color 4) (text '|34368| "　　　ＰＩＰＥ　ＬＩＮＥＲ　１１９　　　" '|34368|))
+          (/ (text-color 4) (text '|34368| "　　　　ＢＬＡＣＫ　ＡＮＧＥＬＳ　　　　" '|34368|))
+          (/ (text-color 4) (text "　　　　　　") (str " Love Hospitality ") (text "　　　　　　"))
+          (/ (text-color 4) (text "　　　　　　") (str "Driving Ambulance ") (text "　　　　　　"))
+          (/ (text-color 4) (text "　　　　　") (str "Dengeki Nurse ") (text "ＳＯＳ！　　　　　"))
+          (/ (text-color 4) (text "　　　　　") (str "Nurse Cap in the Blue ") (text "　　　　　"))
+          (/ (text-color 4) (text "　　") (str "Midsummer Boogie-Woogie Operation ") (text "　　"))
+          (/ (text-color 4) (text "　　　　　　　　ＦＡＬＳＥ　　　　　　　　"))
+          (/ (text-color 4) (text "　　　　　") (str "Lightning Infiltrator ") (text "　　　　　"))
+          (/ (text-color 4) (text "　　　　") (str " Nursia in the Starlight") (text "　　　　　"))
+          (/ (text-color 4) (text '|34368| "　　　　　　　Ｃａｎｃｅｌ　　　　　　　" '|34368|))))
         (branch-reg
          791
          (</>
@@ -801,7 +758,8 @@
            (set-reg 791 #t))
           (/ (nop@))))
         (sound '|| 0)
-        (branch-var S
+        (branch-var
+         S
          (</>
           (/ (sound '|| "uso¥Nurse01b.uso"))
           (/ (sound '|| "uso¥Nurse02.uso"))

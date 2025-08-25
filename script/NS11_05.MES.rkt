@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_05.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Tanchi has dragged the nurse out to the hallway, and they are now en route to see Dr. Akiba.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -21,11 +26,12 @@
   ((cmd 209) 1 2)
   (set-reg 52 #f)
 
-; 	Intro begins here...
+; 	Intro starts here...
 
   (text-frame 3 324 52 379)
   (text-reset 15)
-  (text #:col 1 "どたどたばたばたどたどたばたばた‥‥‥")
+  (text-color 1)
+  (str "Tromp, tromp, tromp...")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
@@ -58,51 +64,56 @@
      (/ (nop@))
      (/ (nop@))))))
 
-; 	Text starts here...
+; 	Text continues here...
 
  (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
-   (text #:col 7 "廊下を走ってはいけない。" 'br)
-   (text "それは、社会生活に於ける基本的な約束だ。")
+   (text-color 7)
+   (str "You shouldn't run in the hallway. That's supposed" 'br)
+   (str "to be common sense.")
    (proc 15)
-   (text #:col 7 "しかし、生命にかかわる時は走ってもよい。" 'br)
-   (text "ゆえに、ドクターやナースは常に足腰を" 'br)
-   (text "きたえておかねばならない。")
+   (text-color 7)
+   (str "But when lives are on the line, you gotta sprint!" 'br)
+   (str "This is why docs and nurses need to keep their" 'br)
+   (str "legs and hips in shape!")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
-   (text #:col 7 "俺はチラリと振りかえって、彼女を見た。")
+   (text-color 7)
+   (str "I take a glance back at her.")
    (proc 15)
-   (text #:col 7 "なかなかに可愛い‥‥俺の好みのタイプだ。" 'br)
-   (text "オペが終わったらデートに誘ってみようかな。")
+   (text-color 7)
+   (str "She's super cute... Just my type. Maybe I'll ask" 'br)
+   (str "her out on a date after the surgery.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))						; Talk
    (proc 18)
    (proc 2)
-   (text "僕はオペの用意をする。" 'br)
-   (text "君は処置を済ませておいてくれ！")
+           (str "I'll prepare for the surgery! You handle" 'br)
+   (str "the initial procedure!")
    (proc 15)
    (proc 4)
-   (text "し、処置ですか‥‥‥？")
+          (str "P-Procedure...!?")
    (proc 15)
    (proc 19)
    (set-reg 52 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
-   (text "虫垂炎だ！　処置の仕方は解るね？")
+           (str "Appendicitis! You know the procedure," 'br)
+   (str "right?")
    (proc 15)
-   (text "〔とんだ邪魔が入ったわ‥" 'br)
-   (text "　一日で片付けて後はバカンスと思ってたけど‥" 'br)
-   (text "　仕方ない‥‥私の正体を知られちゃ困るし‥‥‥〕")
+   (str "(Talk about getting derailed, I thought I'd wrap" 'br)
+   (str "this within the day and go on vacation... But I" 'br)
+   (str "can't blow my cover!)")
    (proc 15)
    (proc 2)
-   (text "何か言ったかい？")
+           (str "What were you saying there?")
    (proc 15)
    (proc 4)
-   (text "い、いえ。頑張ります！")
+          (str "Just, uh, I'll do my best!")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379)
@@ -114,14 +125,14 @@
    (mes-jump "b:¥mes¥ns11_06.mes"))
  (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
-   (text #:col 7 "俺は彼女の手をギュッと握りしめた。" 'br)
-   (text "彼女の手はとても柔らかかった。")
+   (text-color 7)
+   (str "I grip her hand tightly. Her hand is super soft...")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))						; Move
    (proc 18)
-   (text #:col 7 "どたどたばたばた‥‥‥" 'br)
-   (text "移動中である！")
+   (text-color 7)
+   (str "Tromp, tromp, tromp... We're on the move!")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))						; Save
