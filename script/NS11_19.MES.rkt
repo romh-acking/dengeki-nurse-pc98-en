@@ -74,7 +74,7 @@
      (/ (nop@))))
    (exec-mem 24576 3)))
 
-; 	Text starts here...
+; 	Text continues here...
 
  (seg (? (= T 0) (= O 0))						; Think
    (proc 18)

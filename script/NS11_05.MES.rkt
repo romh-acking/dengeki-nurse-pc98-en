@@ -26,7 +26,7 @@
   ((cmd 209) 1 2)
   (set-reg 52 #f)
 
-; 	Intro starts here...
+; 	Intro begins here...
 
   (text-frame 3 324 52 379)
   (text-reset 15)

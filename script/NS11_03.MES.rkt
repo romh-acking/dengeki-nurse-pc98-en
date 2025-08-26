@@ -20,7 +20,7 @@
   ((cmd 209) 1 2)
   ((cmd 204) 43 45)
 
-; 	Intro starts here...
+; 	Intro begins here...
 
   (text-frame 3 324 52 379)
   (text-reset 15)

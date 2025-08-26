@@ -42,7 +42,7 @@
   (text-frame 4 16 51 303)
   (text-reset 15)
 
-; 	Intro starts here...
+; 	Intro begins here...
 
   (text-frame 3 324 52 379)
   (text-reset 15)

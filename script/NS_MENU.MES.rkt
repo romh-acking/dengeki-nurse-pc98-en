@@ -225,8 +225,7 @@
                   (/ (text-color 1) (str "Dengeki Speakeasy "))
                   (/ (text-color 1) (str "Development Diary "))
                   (/ (text-color 1) (str "      Cancel      "))))
-                (branch-var
-                 S
+                (branch-var S
                  (</>
                   (/
                    ((cmd 209) 0 2)
@@ -243,8 +242,7 @@
 ; 	Kirara's Room
 
                (/
-                (branch-reg
-                 1006
+                (branch-reg 1006
                  (</>
                   (/
                    (text-color 4)
@@ -299,8 +297,7 @@
                    (text-frame 16 346 52 360)
                    (str "Please select a command!")
                    (text-frame 3 324 52 379)))
-                (branch-var
-                 S
+                (branch-var S
                  (</>
                   (/
                    ((cmd 209) 0 2)

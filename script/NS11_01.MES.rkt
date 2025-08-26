@@ -30,7 +30,7 @@
   (exec-mem 10752 "COPY> gpc¥ns1_k03.gpc,GPC") (image-mem 1 0)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_104.gpc,GPC") (image-mem 1 0)
 
-; 	Intro starts here... (Text box width: 50 characters)
+; 	Intro begins here... (Text box width: 50 characters)
 
   (text-frame 3 324 52 379)
   (text-reset 15)
@@ -212,7 +212,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Look
+ (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text-color 7)
    (str "I wanna go home... What time is it, anyway? Damn," 'br)
@@ -274,7 +274,7 @@
    (str "me repeat: I hate scary shit!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Think
+ (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text-color 7)
    (str "The doctor's noodling with the control panel, and" 'br)
@@ -518,14 +518,9 @@
    (proc 5)
    (branch-random
     (</>
-     (/
-      (str "Hey! The experiment isn't over yet! We" 'br)
-      (str "have 1 million volts to discharge!"))
-     (/
-      (str "Where do you think you're going!? This" 'br)
-      (str "isn't time for a potty break!"))
-     (/
-      (str "Hey! Quit stomping around!"))))
+     (/ (str "Hey! The experiment isn't over yet! We" 'br "have 1 million volts to discharge!"))
+     (/ (str "Where do you think you're going!? This" 'br "isn't time for a potty break!"))
+     (/ (str "Hey! Quit stomping around!"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))						; Move
