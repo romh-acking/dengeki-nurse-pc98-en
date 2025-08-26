@@ -146,7 +146,7 @@
    (str "ask for her name and number.")
    (proc 15)
    (text-color 7)
-   (str "Of course, I'm gonna ask!")
+   (str "And of course I'm gonna ask!")
    (proc 15)
    (proc 19)
    (set-reg 71 #t))
@@ -161,7 +161,7 @@
    (proc 18)
    (text-color 7)
    (str "Uh, naughty places, huh...? The movie theatre," 'br)
-   (str "shoe store, toy store...")
+   (str "shoe store, toy store... It could be anywhere!")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))						; Look
@@ -275,7 +275,8 @@
    (branch-index
     (</>
      (/
-      (str "Eeek! Don't touch my butt out of nowhere!")
+      (str "Eeek! Don't touch my butt out of" 'br)
+      (str "nowhere!")
       (proc 15)
       (proc 2)
       (str "But... I didn't touch you!"))
@@ -285,11 +286,11 @@
       (proc 2)
       (text "揉んでないってば！！"))
      (/
-      (str "Eeeeek! You can't just whip that out and" 'br)
-      (str "put it in there!!!")
+      (str "Eeeeek! You can't just whip that out" 'br)
+      (str "and put it in there!!!")
       (proc 15)
       (proc 2)
-      (str "But... I'm not doing anything!!!"))))
+      (str "But... I'm not doing anything!"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))						; Move
