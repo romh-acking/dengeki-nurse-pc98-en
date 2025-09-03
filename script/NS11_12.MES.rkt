@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_12.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Tanchi makes his way to the annex where the minister is being held.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

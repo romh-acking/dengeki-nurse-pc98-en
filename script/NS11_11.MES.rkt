@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_11.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Tanchi awakens alone in the hallway, disoriented and confused.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

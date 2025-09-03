@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_09.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; On the way out of the hospital Tanchi runs into two unfamiliar nurses.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Dr. Akiba is experimenting on Kirara, and Tanchi is pooped.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

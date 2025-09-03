@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_10.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Tanchi takes the two nurses to a naughty place to do naughty things...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
