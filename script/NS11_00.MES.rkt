@@ -49,7 +49,7 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (text #:col 15 'br)
-  (text "　　　　　　−") (str "The Black Cross Lair") (text "−")
+  (text "　　　　　　−") (str "The Black Cross Society") (text "−")
   ((cmd 195) 0 65535)
   (proc 16)
   (exec-mem 2816 "VIEW 50 154 63 242,OVER 1,PUT 8 50 154,FREE 8")

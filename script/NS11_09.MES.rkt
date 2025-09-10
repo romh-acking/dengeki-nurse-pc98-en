@@ -194,7 +194,7 @@
            (str "Hello hello!")
    (proc 15)
    (proc 10)
-                (str "...'Ello 'ello!")
+                (str "Hi hi!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 1))
@@ -234,7 +234,7 @@
    (str "of games do you like?")
    (proc 15)
    (proc 12)
-          (str "いちばん面白かったのわぁ『あⅢ〔笑〕』ですわ〜。")
+          (str "Well, I had a lot of fun with “AⅢ”! (LOL)") ; the "lol" is part of the original script, i swear
    (proc 15)
    (proc 2)
            (str "What about you?")
@@ -286,10 +286,10 @@
       (proc 2)
       (str "But... I didn't touch you!"))
      (/
-      (text "あふ〜ん！　胸なんか揉んじゃだめですぅ〜！！")
+      (str "No, no! No groping my chest!")
       (proc 15)
       (proc 2)
-      (text "揉んでないってば！！"))
+      (text "But... But I'm not!!!"))
      (/
       (str "Eeeeek! You can't just whip that out" 'br)
       (str "and put it in there!!!")

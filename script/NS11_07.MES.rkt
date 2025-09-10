@@ -20,7 +20,7 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (text-color 15)
-  (text "　　　　　　−") (str "The Black Cross Lair") (text "−")
+  (text "　　　　　　−") (str "The Black Cross Society") (text "−")
   ((cmd 209) 1 2)
   ((cmd 195) 0 65535)
   (proc 16)

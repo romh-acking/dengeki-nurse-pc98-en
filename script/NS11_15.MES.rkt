@@ -164,7 +164,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 12)
-          (str "Sweetie, can you give me a moment so I can" 'br)
+          (str "Oh daddy, won't you give me a moment to" 'br)
    (str "take care of that gabby little girl?")
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
