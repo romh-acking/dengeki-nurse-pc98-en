@@ -234,7 +234,7 @@
    (str "of games do you like?")
    (proc 15)
    (proc 12)
-          (str "Well, I had a lot of fun with “AⅢ”! (LOL)") ; the "lol" is part of the original script, i swear
+          (str "Well,“AⅢ”was a lot of fun! (LOL)") ; the "lol" is part of the original script, i swear
    (proc 15)
    (proc 2)
            (str "What about you?")
