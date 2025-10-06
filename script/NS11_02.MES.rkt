@@ -281,7 +281,7 @@
  (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text-color 7)
-   (str "It's") (text "“") (str "Tokyo's Specialty, Kaminari Okoshi.”I love" 'br)
+   (str "It's") (text "“") (str "Tokyo's Specialty, Kaminari Okoshi.") (text "”") (str "I love" 'br)
    (str "this crap!")
    (proc 15)
    (proc 19))
@@ -743,7 +743,8 @@
    (proc 5)
               (str "Back to the la") (text "−") (str "Urk!")
    (exec-mem 2816 "VIEW 27 115 50 258,PUT 3 27 115,FREE 3")
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5) <- FMT
    (proc 15)
    (text-color 7)
    (str "The doc grabs his guts and drops like a rock!")
