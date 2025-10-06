@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS11_21.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Epilogue. And so, Dengeki Nurse is in business!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -34,7 +39,7 @@
           (str "Oh boy, I hope she's hot!")
   (proc 15)
   (proc 5)
-             (str "Please, enter..")
+             (str "Please, enter...")
   (proc 15)
   (exec-mem 10752 "COPY> gpc¥ns1_k08.gpc,TEMP") (image-mem 1 0)
   (proc 5)
@@ -70,7 +75,8 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
   (proc 1)
-          (str "Something must have spooked him... Hee hee!")
+          (str "Something must have spooked him... Hee" 'br)
+   (str "hee!")
   (proc 15)
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
   (text-color 7)
@@ -80,7 +86,7 @@
   (sound '|| 0)
   (sound '|se | 21)
   (text #:col 1 'br)
-  (text "　　　　") (str "Episode 1:“Dengeki Nurse's Debut”")
+  (text "　　　　") (str "Episode 1:") (text "“") (str "Dengeki Nurse's Debut") (text "” 'br)
   (text "　　　　　　　　　　　　　　　　　　　　　") (str " The End")
   (exec-mem 19456 2 8 4 103 75 88 30 96 38 0 20)
   (delay 150 0)

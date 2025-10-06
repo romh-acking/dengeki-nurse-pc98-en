@@ -355,6 +355,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

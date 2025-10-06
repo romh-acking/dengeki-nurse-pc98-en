@@ -133,7 +133,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
-           (str "What do you mean,“Huh?”Let's go!")
+           (str "What do you mean,") (text "“") (str "Huh?") (text "”") (str "Let's go!")
    (proc 15)
    (proc 4)
           (str "But... But I...")
@@ -199,6 +199,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

@@ -88,7 +88,7 @@
   (str "Minister's gonna get Operated on...")
    (proc 15)
    (text-color 7)
-   (str "Ahhhh... If only Takenchan-man were here right" 'br)
+   (str "Ahhhh... If only Takechan-man were here right" 'br)
   (str "now.")
    (proc 15)
    (proc 19)
@@ -199,8 +199,7 @@
  (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
    (text-color 1)
-   (str "BANG BANG BANG!" 'br)
-   (str "TAK! THUD! THUMP!")
+   (str "BANG BANG BANG! TAK! THUD! THUMP!")
    (proc 15)
    (text-color 7)
    (str "No good... The door isn't moving.")
@@ -217,6 +216,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

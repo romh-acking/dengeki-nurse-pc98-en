@@ -13,7 +13,8 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso")
+  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+; (sound '|| "Nurse08.fmt") <- FMT
   (sound '|| 1)
   (set-reg 990 #f)
   (exec-mem 10752 "INIT")
@@ -224,8 +225,8 @@
    (proc 15)
    (text-color 7)
    (str "In case you're curious, the tapes I rented were:" 'br)
-   (str "“A Bodycon Nurse in the Wet Examination Room”" 'br)
-   (str "“High School Nurse vs. The Muscle Demon”")
+   (text "“") (str "A Bodycon Nurse in the Wet Examination Room") (text "”" 'br)
+   (text "“") (str "High School Nurse vs. The Muscle Demon") (text "”")
    (proc 15)
    (text-color 7)
    (str "White coats are so hot, they get a guy's libido" 'br)
@@ -444,6 +445,7 @@
    (exec-mem 10752 "COPY> gpc¥ns1_k02.gpc,GPC") (image-mem 1 0)
    (exec-mem 10752 "COPY> gpc¥ns1_k03.gpc,GPC") (image-mem 1 0)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_104.gpc,GPC") (image-mem 1 3)
+;  (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
    (sound '|| 3)
    ((cmd 209) 1 2)
    (proc 19)
@@ -560,6 +562,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

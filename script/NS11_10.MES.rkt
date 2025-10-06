@@ -199,7 +199,7 @@
    (proc 18)
    (proc 12)
           (str "Ooh, doctor... Why don't you open wide and" 'br)
-   (str "say“Ahh?”")
+   (str "say") (text "“") (str "Ahh?") (text "”")
    (proc 15)
    (proc 2)
            (str "Hmm, why should I?")
@@ -372,7 +372,7 @@
    (proc 18)
    (text-color 7)
    (str "Why would I want to move!? Come on! If I could," 'br)
-   (str "I'd disable that“Move”command entirely!")
+   (str "I'd disable that") (text "“") (str "Move") (text "”") (str "command entirely!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 1))
@@ -384,6 +384,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
    (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
    (proc 19)

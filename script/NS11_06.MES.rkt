@@ -475,7 +475,7 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 2)
            (str "I...I won't allow that to happen!!! To go" 'br)
-   (str "and“treat”such a cutie like her... Unthinkable!")
+   (str "and") (text "“") (str "treat") (text "”") (str "such a cutie like her... Unthinkable!")
    (proc 15)
    (proc 5)
               (str "So how about it, Tanchi? Will you help" 'br)
@@ -701,6 +701,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

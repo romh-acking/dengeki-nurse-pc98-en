@@ -10,12 +10,12 @@
   (define-proc 11 (<> (text-color 15) (str "Black Nurse: ")))
   (text-frame 0 0 79 399)
   (text-reset 15)
-  (image-file "gpc¥Seki10.gpc") (image-mem 1 3)
-  (sound '|| 0)
-  (sound '|| "uso¥Nurse01a.uso")
-  (sound '|| 1)
+  (image-file "gpc¥Seki10.gpc")
+  (image-mem 1 3) (sound '|| 0) (sound '|| "uso¥Nurse01a.uso") (sound '|| 1) ; <- PC-98
+; (image-mem 0) (sound '|se | "NRS_ADV.SE") (sound '|| 100) <- FMT
   ((cmd 209) 1 5)
   (exec-file "APPEARH.CMD b:¥gpc¥1WA.gpc,14,105,66,247,4,1,1")
+; (sound '|se | 5) <- FMT
   (delay 150 0)
   ((cmd 209) 0 5)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -32,8 +32,8 @@
   (image-file "gpc¥ns1_k01.gpc") (image-mem 0 0)
   (image-file "b:¥gpc¥ns1_102.gpc") (image-mem 1 0)
   (exec-mem 2816 "ACCESS 0")
-  (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| 0) (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt") <- FMT
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 0)

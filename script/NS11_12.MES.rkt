@@ -256,9 +256,9 @@
    (str "I carry the woman on my back to the exam room.")
    (proc 15)
    (text-color 7)
-   (str "“This Midsummer's Night," 'br)
+   (text "“") (str "This Midsummer's Night," 'br)
    (text "　　　") (str "I find pressed against my back" 'br)
-   (text "　　　　　　　") (str " the finest round breasts.”−Tanchi")
+   (text "　　　　　　　") (str " the finest round breasts.") (text "”−") (str "Tanchi")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379)
@@ -271,6 +271,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 10 (<> (text-color 5) (str "Lady: ")))
    (proc 19)
    (set-var B 1)

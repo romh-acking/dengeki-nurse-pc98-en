@@ -26,7 +26,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso")
+     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;    (sound '|| "Nurse08.fmt") <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 10752 "INIT")
@@ -280,7 +281,7 @@
  (seg (? (= T 0) (= O 0))						; Think
    (proc 18)
    (text-color 7)
-   (str "It's“Tokyo's Specialty, Kaminari Okoshi.”I love" 'br)
+   (str "It's") (text "“") (str "Tokyo's Specialty, Kaminari Okoshi.”I love" 'br)
    (str "this crap!")
    (proc 15)
    (proc 19))
@@ -351,9 +352,9 @@
    (str "flower designs.")
    (proc 15)
    (text-color 7)
-   (str "“To my beloved Taro... Your steely eyes when you" 'br)
+   (text "“") (str "To my beloved Taro... Your steely eyes when you" 'br)
    (str "  hold a syringe, the way you masterfully handle" 'br)
-   (str "  your scalpel... How I love it all.”")
+   (str "  your scalpel... How I love it all.") (text "”")
    (proc 15)
    (text-color 7)
    (str "Oh, what the hell is this... Are these all love" 'br)
@@ -448,7 +449,8 @@
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_109.gpc,GPC") (image-mem 1 3)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse11.uso")
+   (sound '|| "uso¥Nurse11.uso") ; <- PC-98
+;  (sound '|| "Nurse11.fmt") <- FMT
    (sound '|| 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 5)
@@ -564,7 +566,8 @@
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse08.uso")
+   (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;  (sound '|| "Nurse08.fmt") <- FMT
    (sound '|| 1)
    (proc 19)
    (set-reg 25 #t))
@@ -702,6 +705,7 @@
    (text-reset 1)
    (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC") (image-mem 1 3)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
+;  (sound '|| "Nurse08.fmt") <- FMT
    (sound '|| 3)
    ((cmd 209) 1 2)
    (proc 19)
@@ -737,7 +741,7 @@
            (str "Are you for real!?")
    (proc 15)
    (proc 5)
-              (str "Back to the la−Urk!")
+              (str "Back to the la") (text "−") (str "Urk!")
    (exec-mem 2816 "VIEW 27 115 50 258,PUT 3 27 115,FREE 3")
    (sound '|se | 26)
    (proc 15)
@@ -813,7 +817,7 @@
    (str "Rustle rustle rustle..." 'br)
    (text-color 7)
    (str "Undeterred by the agonizing paper cut, I continue.")
-   (str "−OW!")
+   (text "−") (str "OW!")
    (proc 15)
    (text-color 7)
    (str "My finger falls victim to another old sheet of" 'br)
@@ -922,6 +926,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

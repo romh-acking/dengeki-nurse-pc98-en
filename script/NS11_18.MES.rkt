@@ -38,7 +38,7 @@
             (str "F-Forgive me! Please!")
   (proc 16)
   (proc 11)
-                    (str "Now where should I inject these?")
+                    (str "Now where should I inject these?" 'br)
   (str "Your heart? Your gut? I'll leave the decision to" 'br)
   (str "you!")
   (proc 16)

@@ -159,7 +159,7 @@
    (proc 18)
    (text-color 7)
    (str "Whew, watching these two is making me forget how" 'br)
-   (str "to“Think”entirely...")
+   (str "to") (text "“") (str "Think") (text "”") (str "entirely...")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 3))
@@ -234,7 +234,7 @@
    (str "of games do you like?")
    (proc 15)
    (proc 12)
-          (str "Well,“AⅢ”was a lot of fun! (LOL)") ; the "lol" is part of the original script, i swear
+          (str "Well,") (text "“") (str "A") (text "Ⅲ”") (str "was a lot of fun! (LOL)") ; the "lol" is part of the original script, i swear
    (proc 15)
    (proc 2)
            (str "What about you?")
@@ -329,6 +329,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 10 (<> (text-color 11) (str "Right Nurse: ")))
    (define-proc 11 (<> (text-color 8) (str "Left Nurse: ")))
    (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
