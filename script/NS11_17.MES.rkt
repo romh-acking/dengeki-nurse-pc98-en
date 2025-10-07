@@ -39,7 +39,7 @@
   (proc 15)
   (exec-mem 2816 "GET 1 5 23 10 96")
   (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 40 0 10 96")
+  (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
   (sound '|| 0)
@@ -188,7 +188,7 @@
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 50 0 10 96")
+   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -201,7 +201,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -214,7 +214,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 50 0 10 96")
+   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -232,7 +232,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96")
+   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -245,7 +245,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -258,7 +258,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -271,7 +271,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -284,7 +284,7 @@
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -308,7 +308,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96")
+   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -332,7 +332,7 @@
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96")
+   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -348,7 +348,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 0 0 10 96")
+   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)

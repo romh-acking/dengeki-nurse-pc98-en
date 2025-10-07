@@ -393,7 +393,7 @@
    (proc 18)
    (sound '|se | 26)
    (proc 10)
-         (str "おとなしく眠っていればよかったものを‥‥")
+         (str "I should have just stayed asleep...")
    (proc 15)
    (proc 2)
            (str "What in the") (text "−") (str "!?")
