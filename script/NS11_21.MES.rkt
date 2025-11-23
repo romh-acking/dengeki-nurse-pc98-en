@@ -86,7 +86,7 @@
   (sound '|| 0)
   (sound '|se | 21)
   (text #:col 1 'br)
-  (text "　　　　") (str "Episode 1:") (text "“") (str "Dengeki Nurse's Debut") (text "” 'br)
+  (text "　　　　") (str "Episode 1:") (text "“") (str "Dengeki Nurse's Debut") (text "”" 'br)
   (text "　　　　　　　　　　　　　　　　　　　　　") (str " The End")
   (exec-mem 19456 2 8 4 103 75 88 30 96 38 0 20)
   (delay 150 0)
