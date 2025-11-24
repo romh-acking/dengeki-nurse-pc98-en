@@ -230,7 +230,7 @@
   (text "　　　　") (str " Production／Work" 'br)
   (text 'br)
   (str " (C)1992 ") (text "有限会社アイデス") (str " (IDES' CO,LTD.)")			; PC-98
-  (str " (C)1992 ") (text "カクテルソフト　") (str "(COCKTAIL SOFT)")
+  (str " (C)1992 ") (text "カクテルソフト　") (str " (COCKTAIL SOFT)")
   ((cmd 195) 0 65535)
 ; (delay 400 0)
 ; (exec-mem 17920 1 1)
