@@ -150,7 +150,7 @@
  (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (text-color 7)
-   (str "This is the Dentendo Staff cafeteria. I'm having" 'br)
+   (str "This is the Dentendo staff cafeteria. I'm having" 'br)
    (str "the A lunch, Kirara is doing B, and the professor" 'br)
    (str "is eating katsudon.")
    (proc 15)
