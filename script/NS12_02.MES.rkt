@@ -134,7 +134,7 @@
    (str "What...could...it...possibly...be?")
    (proc 15)
    (text-color 7)
-   (str "Oh-ho! I see...")
+   (str "Oh, wow...")
    (proc 15)
    (text-color 7)
    (str "Why, the disciplinary committee is doing skirt" 'br)
