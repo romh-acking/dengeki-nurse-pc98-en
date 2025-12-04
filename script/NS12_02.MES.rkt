@@ -247,7 +247,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting ; Shouting
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
