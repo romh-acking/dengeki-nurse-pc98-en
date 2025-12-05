@@ -151,7 +151,7 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "俺はセーラー服の群れを見た。")
+   (str "It's a sea of girls in sailor uniforms.")
    (proc 15)
    (text-color 7)
    (str "Sailor uniforms are where a man's heart belongs!" 'br)
