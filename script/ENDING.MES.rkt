@@ -152,7 +152,7 @@
   (text-reset 14)
   ((cmd 195) 0 65535)
   (delay 150 0)
-  (text-frame 16 168 58 336)
+  (text-frame 16 168 54 344)
   (text "　　主題歌「恋のプラズマ１００\n」" 'br)
   (text "　　　　　作詞　葛西みなみ" 'br)
   (text "　　　　　作曲　金森直幹" 'br)
@@ -164,7 +164,7 @@
   (str "Vocals/Performer: CHIKA & Akiragumi")
   ((cmd 195) 0 65535)
   (delay 200 0)
-  (text-frame 16 168 58 336)
+  (text-frame 16 168 54 344)
   (text-reset 14)
   ((cmd 195) 0 65535)
   (text-frame 11 68 36 184)
@@ -172,7 +172,7 @@
   (text "　　　　　協力" 'br)
   (text "　　　") (str " Cooperation" 'br)
   (text 'br)
-  (text "　　　") (text "ゆ　　　") (str " Yu" 'br)				; PC-98
+  (text "　　　") (text "ゆ　　　　　") (str "Yu" 'br)				; PC-98
   (text "　" '|34368| "ペペ藤岡　") (str "Pepe Fujioka")			; PC-98
 ; (text "　　　　　" '|34368| "ゆ" 'br)				  FMT
 ; (text "　　　　　" '|34368| "Yu")					  FMT

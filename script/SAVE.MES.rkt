@@ -3,26 +3,23 @@
  (seg*
   (define-proc 10
     (<>
-     (menu1
-      22
-      345
-      22
-      361
-      (</> (/ (text #:col 4 "　い　い　え　")) (/ (text #:col 4 "　は　　　い　"))))))
+     (menu1 22 345 22 361
+      (</>
+       (/ (text-color 4) (text "　　Ｙｅｓ　　"))
+       (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
   (define-proc 11
     (<>
-     (menu1
-      22
-      345
-      22
-      361
-      (</> (/ (text #:col 4 "　は　　　い　")) (/ (text #:col 4 "　い　い　え　"))))))
-  (define-proc 12 (<> (text "の内容がセーブされてるけど、書き換るゥ？")))
+     (menu1 22 345 22 361
+      (</>
+       (/ (text-color 4) (text "　　Ｙｅｓ　　"))
+       (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
+  (define-proc 12
+    (<> (text "の内容がセーブされてるけど、書き換るゥ？")))
   (define-proc 13
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
-     (text #:col 1 "　　　　　　　　ゲームを終わりますか？")))
+     (text-color 1) (text "　　　　　　　　ゲームを終わりますか？")))
   (define-proc 14
     (<>
      (text-frame 3 324 52 379)
@@ -36,30 +33,18 @@
    ((cmd 211) 1 3)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (text #:col 1 "　　　　　どのカルテにセーブするの？")
+   (text-color 1) (text "　　　　　どのカルテにセーブするの？")
    (menu1
-    4
-    345
-    16
-    345
-    28
-    345
-    4
-    361
-    16
-    361
-    28
-    361
-    40
-    361
+    4 345  16 345  28 345
+    4 361  16 361  28 361  40 361
     (</>
-     (/ (text #:col 4 "　カルテ１　"))
-     (/ (text #:col 4 "　カルテ２　"))
-     (/ (text #:col 4 "　カルテ３　"))
-     (/ (text #:col 4 "　カルテ４　"))
-     (/ (text #:col 4 "　カルテ５　"))
-     (/ (text #:col 4 '|34368| "キャンセル" '|34368|))
-     (/ (text #:col 4 '|34368| "ゲーム終了" '|34368|))))
+     (/ (text #:col 4 "　") (str "Karte ") (text "１　"))
+     (/ (text #:col 4 "　") (str "Karte ") (text "２　"))
+     (/ (text #:col 4 "　") (str "Karte ") (text "３　"))
+     (/ (text #:col 4 "　") (str "Karte ") (text "４　"))
+     (/ (text #:col 4 "　") (str "Karte ") (text "５　"))
+     (/ (text #:col 4 "　") (str " Cancel ") (text "　"))
+     (/ (text #:col 4 "　") (str "Game End") (text "　"))))
    (set-var |[| 0)
    (text-color 4)
    (text-frame 3 324 52 379)
@@ -138,8 +123,7 @@
          (text-frame 3 324 52 379)
          (text-reset 15)
          (exec-mem 18944 65535 528 23)
-         (branch-reg
-          700
+         (branch-reg 700
           (</> (/ (nop@)) (/ (set-reg 991 #t) (set-reg 333 #t)))))
         (/
          (sound '|| 2)
@@ -148,7 +132,8 @@
          (image-file "gpc¥Waku2.GPC") (image-mem 1 3)
          ((cmd 209) 1 2)
          (text-frame 3 332 52 379)
-         (text #:col 4 "　　　　　　　　　お疲れさまッ！" 'br)
+         (text-color 4)
+         (text "　　　　　　　　　お疲れさまッ！" 'br)
          (text "　　　　　ディスクを抜いて電源を切ってネ。")
          (sound '|| 0)
          (loop)))))))
