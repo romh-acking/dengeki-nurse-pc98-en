@@ -3,6 +3,8 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Kirara crawls into the air vent, with Tanchi close behind. Oh, he's real close behind all right...
+; -----Notes:-----
+; There are two additional hotspots in this scene that can be triggered by poking at Kirara's anus and clitoris. Yes.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -105,7 +107,7 @@
  (seg (? (= T 1) (= O 0))						; Look
    (proc 18)
    (proc 2)
-           (str "Hmm, there are cobwebs in there...")
+           (str "Hmm, it's all cobwebbed in there...")
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -136,7 +138,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 2)
-           (str "It's there, on the wall...")
+           (str "Yeah, it's right there on the wall...")
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -305,7 +307,7 @@
    (proc 19)
    (set-var B 2)
    (set-var C 2))
- (seg (? (= T 7) (= O 0))
+ (seg (? (= T 7) (= O 0))						; Anus (336, 96)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -317,7 +319,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 8) (= O 0))
+ (seg (? (= T 8) (= O 0))						; Clitoris (300, 140)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

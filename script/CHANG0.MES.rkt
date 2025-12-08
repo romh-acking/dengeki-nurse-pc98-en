@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - CHANG0.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; The Dengeki Nurse transformation sequence.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -20,12 +25,12 @@
   (exec-mem 6656 10 16 76 256)
   (text-frame 15 321 64 383)
   (text-reset 0)
-  (text "　　　　　　　　　　チャージ")
+  (text "　　　　　　　　　　") (str "Charge ")
   (exec-mem 17920 2 0)
   ((cmd 194) 0 ".ｱ..ｲ..ｳ..ｴ..ｵ.ｱ.ｲ.ｳ.ｴ.ｵ.ｶ.ｱ.ｶ.ｱ.ｶ.ｱｶｱｶｱｶｱｶｱｶｱｶｱｶｱｶｱｶｱ")
   ((cmd 195) 0 1)
   (delay 100 0)
-  (text "　ＯＮ！")
+  (text "ＯＮ！")
   (exec-mem 17920 2 0)
   ((cmd 194) 0 "ｶｱ")
   ((cmd 195) 0 7)
@@ -77,7 +82,7 @@
   (text-frame 15 321 64 383)
   (text-reset 0)
   (text #:col 4 'br)
-  (text "　　　　　　　　プラズマフラ〜ッシュ！")
+  (text "　　　　　　　　　　") (str "Plasma Charge!")
   (delay 100 0)
   (text-frame 15 321 64 383)
   (text-reset 0)
@@ -95,9 +100,11 @@
   ((cmd 193) 1 "chang¥40B.gpa")
   (text-frame 15 321 64 383)
   (text-reset 0)
-  (text #:col 4 "　　ココロの病も、カラダの病も、まっかせなさい！" 'br)
-  (text "　　　　　　　　無敵看護婦、")
-  (text #:col 4 "電撃ナース！")
+  (text-color 4)
+  (text "　　") (str "I vaniquish all ill, body and mind!" 'br)
+  (text "　　　　") (str "The invincible physician, ")
+  (text-color 4)
+  (str "Dengeki Nurse!")
   ((cmd 194) 1 "..ｺ.ｻ..ｼ.ｻ.ｼ..ｷ.ｻ.ｸ.‾ｺｹ.‾ｻｸ.ｺ.‾ｷｻ.ｺ.ｻ.ｼ.ｻ.‾ｼｸ.ｺ.‾ｻｹ.‾ｼｸ.‾ｻｷ.ｺ.ｻ..ｼ.ｻ.ｺ..ｻ.ｺ.ｻ..ｼ.ｻ.ｺ..ｱ..ｲ..ｳ..ｴ..ｵ..ｱ.ｶ.ｱ")
   ((cmd 195) 1 1)
   (delay 210 0)

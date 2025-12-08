@@ -50,7 +50,7 @@
                (str "Kill her for me.")
   (proc 16)
   (proc 10)
-            (str "Hey, I never land my shots, remember? I'm" 'br)
+            (str "Hey, I never land my shots, remember? I'm")
   (str "quite proud of that.")
   (proc 16)
   (proc 11)
