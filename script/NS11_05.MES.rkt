@@ -15,7 +15,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso")
+     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;    (sound '|| "Nurse08.fmt") <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 2816 "GET 20 71 320 8 64")

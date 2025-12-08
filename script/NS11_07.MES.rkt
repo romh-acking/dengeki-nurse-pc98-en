@@ -9,7 +9,8 @@
   (define-proc 10 (<> (text-color 6) (str "Guillotine Nurse: ")))
   (define-proc 11 (<> (text-color 15) (str "Black Nurse: ")))
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt") <- FMT
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 1)

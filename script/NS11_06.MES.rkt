@@ -28,7 +28,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso")
+     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;    (sound '|| "Nurse08.fmt") <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_118.gpc") (image-mem 1 0)
@@ -212,7 +213,7 @@
  (seg (? (= T 0) (= O 3))						; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
    (text-color 7)
-   (str "So she's Kirara Inazuma... KIRARA, ＫＩＲＡＲＡ," 'br)
+   (str "So she's Kirara Inazuma... KIRARA, ") (text "ＫＩＲＡＲＡ") (str "," 'br)
    (str "what a nice name...")
    (proc 15)
    (proc 19))
@@ -279,7 +280,8 @@
    (str "half-heart pendant!")
    (proc 15)
    (sound '|| 0)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5) <- FMT
    (proc 2)
            (str "Ahhh! Ahhh! Ahhh! Ahhh!")
    (proc 15)
@@ -580,7 +582,8 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (exec-mem 2816 "VIEW 41 165 59 285,OVER 1,PUT 5 41 165,FREE 5")
    (sound '|| 0)
-   (sound '|| "uso¥Nurse11.uso")
+   (sound '|| "uso¥Nurse11.uso") ; <- PC-98
+;  (sound '|| "Nurse11.fmt") <- FMT
    (sound '|| 1)
    (proc 1)
            (text "ＬＯＶＥ　ＴＡＲＯ　ａｎｄ　ＭＩＴＳＵＫＯ") (str "...")
@@ -657,7 +660,8 @@
    (exec-mem 2816 "GET 7 5 23 35 169")
    (exec-mem 2816 "VIEW 5 23 35 169,PUT 6 5 23,FREE 6")
    (sound '|| 0)
-   (sound '|se | 20)
+   (sound '|se | 20) ; <- PC-98
+;  (sound '|se | 9) <- FMT
    (text-color 1)
    (str "ZZZZZZZZZZZZZZAP!")
    ((cmd 195) 0 2)
