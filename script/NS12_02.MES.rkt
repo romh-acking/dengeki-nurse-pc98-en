@@ -314,6 +314,7 @@
  (seg (? (= T 5) (= O 0))						; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 10 (<> (text-color 5) (str "Discipliner: ")))
    (define-proc 11 (<> (text-color 3) (str "Girl 1: ")))
    (define-proc 12 (<> (text-color 1) (str "Girl 2: ")))
