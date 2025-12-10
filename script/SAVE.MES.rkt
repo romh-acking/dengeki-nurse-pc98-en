@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - SAVE.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; The Save system.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -14,18 +19,19 @@
        (/ (text-color 4) (text "　　Ｙｅｓ　　"))
        (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
   (define-proc 12
-    (<> (text "の内容がセーブされてるけど、書き換るゥ？")))
+    (<> (str "Do you want to overwrite existing data?")))
   (define-proc 13
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
-     (text-color 1) (text "　　　　　　　　ゲームを終わりますか？")))
+     (text-color 1)
+     (str "Are you sure you want to end the game?")))
   (define-proc 14
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
      (text 'br)
-     (text "　　　　　　　　セーブが終わったよッ！")
+     (text "　　　　　　　　　　") (str "Save complete!")
      (proc 15)))
   (loop
    (set-var T 0)
@@ -33,16 +39,17 @@
    ((cmd 211) 1 3)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (text-color 1) (text "　　　　　どのカルテにセーブするの？")
+   (text-color 1)
+   (text "　　") (str "Which Carte would you like to save to?")
    (menu1
     4 345  16 345  28 345
     4 361  16 361  28 361  40 361
     (</>
-     (/ (text #:col 4 "　") (str "Karte ") (text "１　"))
-     (/ (text #:col 4 "　") (str "Karte ") (text "２　"))
-     (/ (text #:col 4 "　") (str "Karte ") (text "３　"))
-     (/ (text #:col 4 "　") (str "Karte ") (text "４　"))
-     (/ (text #:col 4 "　") (str "Karte ") (text "５　"))
+     (/ (text #:col 4 "　") (str "Carte ") (text "１　"))
+     (/ (text #:col 4 "　") (str "Carte ") (text "２　"))
+     (/ (text #:col 4 "　") (str "Carte ") (text "３　"))
+     (/ (text #:col 4 "　") (str "Carte ") (text "４　"))
+     (/ (text #:col 4 "　") (str "Carte ") (text "５　"))
      (/ (text #:col 4 "　") (str " Cancel ") (text "　"))
      (/ (text #:col 4 "　") (str "Game End") (text "　"))))
    (set-var |[| 0)
@@ -133,8 +140,8 @@
          ((cmd 209) 1 2)
          (text-frame 3 332 52 379)
          (text-color 4)
-         (text "　　　　　　　　　お疲れさまッ！" 'br)
-         (text "　　　　　ディスクを抜いて電源を切ってネ。")
+         (text "　　　　　　　　") (str "Thanks for playing!")
+         (str "You can now eject the disk and turn off the power.")
          (sound '|| 0)
          (loop)))))))
    (exec-mem 18944 65535 528 23)
