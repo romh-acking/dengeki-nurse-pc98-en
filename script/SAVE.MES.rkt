@@ -52,7 +52,14 @@
      (/ (text #:col 4 "　") (str "Carte ") (text "５　"))
      (/ (text #:col 4 "　") (str " Cancel ") (text "　"))
      (/ (text #:col 4 "　") (str "Game End") (text "　"))))
-   (set-var |[| 0)
+
+;	The following line decompiled as (set-var |[| 0), which the compiler doesn't accept as valid.
+; 	I've changed it arbitrarily to R to get it to compile, but the value has to be changed back in a hex editor (from 10 to A0).
+
+   (set-var R 0)
+
+;	Back to regularly scheduled programming...
+
    (text-color 4)
    (text-frame 3 324 52 379)
    (text-reset 15)

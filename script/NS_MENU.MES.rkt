@@ -1,4 +1,5 @@
-; Dengeki Nurse English Translation - NS_MENU.MES
+; Dengeki Nurse (PC-98) - NS_MENU.MES
+; English Translation
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
@@ -122,11 +123,11 @@
         60 122
         60 144
         (</>
-         (/ (set-reg 1000 #t) (text-color 1) (str "   Karte ") (text "１　" '|34368|))
-         (/ (set-reg 1001 #t) (text-color 1) (str "   Karte ") (text "２　" '|34368|))
-         (/ (set-reg 1002 #t) (text-color 1) (str "   Karte ") (text "３　" '|34368|))
-         (/ (set-reg 1003 #t) (text-color 1) (str "   Karte ") (text "４　" '|34368|))
-         (/ (set-reg 1004 #t) (text-color 1) (str "   Karte ") (text "５　" '|34368|))
+         (/ (set-reg 1000 #t) (text-color 1) (str "   Carte ") (text "１　" '|34368|))
+         (/ (set-reg 1001 #t) (text-color 1) (str "   Carte ") (text "２　" '|34368|))
+         (/ (set-reg 1002 #t) (text-color 1) (str "   Carte ") (text "３　" '|34368|))
+         (/ (set-reg 1003 #t) (text-color 1) (str "   Carte ") (text "４　" '|34368|))
+         (/ (set-reg 1004 #t) (text-color 1) (str "   Carte ") (text "５　" '|34368|))
          (/                   (text-color 1) (str "    Cancel    "))))
        (define-proc 15
          (<>
@@ -195,7 +196,7 @@
               58 139
               (</>
                (/ (text-color 1) (str "    Free Battle   "))
-               (/ (text-color 1) (str "    Staff Room    "))
+               (/ (text-color 1) (str "     Staff Box    "))
                (/ (text-color 1) (str "   Kirara's Room  "))
                (/ (text-color 1) (str "  Episode Select  "))
                (/ (text-color 1) (str "      Cancel      "))))
@@ -210,7 +211,7 @@
                 (exec-mem 2816 "EXIT")
                 (mes-jump "mes¥Free_Btl.mes"))
 
-; 	Staff Room (18 wide, formerly 14)
+; 	Staff Box (18 wide, formerly 14)
 
                (/
                 (text-frame 58 24 75 168)

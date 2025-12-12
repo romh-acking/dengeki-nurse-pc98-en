@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; Epilogue. And so, Dengeki Nurse is in business!
+; Episode 2 Epilogue. And so, Dengeki Nurse is in business!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -26,7 +26,7 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text #:col 1 'br)
-  (text "　　　　　　　　") (str " −The Next Day−")
+  (text "　　　　　　　　") (str " ") (text "−") (str "The Next Day") (text "−")
   (proc 15)
   (proc 2)
           (str "Yes, Doctor? You needed me?")

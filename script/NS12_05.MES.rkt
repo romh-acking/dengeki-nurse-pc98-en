@@ -75,7 +75,7 @@
   (sound '|| 0)
   (sound '|se | 25)
   (proc 10)
-            (str "And ")(text "ＦＩＲＥ〜〜〜〜！！")
+            (str "And ") (text "ＦＩＲＥ〜〜〜〜！！")
   (proc 16)
   (exec-mem 19456 2 32 4 127 75 111 20 111 20 0 20)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_207.gpc,GPC")
@@ -83,7 +83,7 @@
   ((cmd 198) 32 4 127 75 8)
   (text-color 15)
   (str "Pew pew pew pew..." 'br)
-  (str "Brap brap brap brap...")
+  (str "Brap brap brap brap, humm...")
   (sound '|se | 25)
   (repeat 10
    (<>
@@ -91,7 +91,7 @@
     (exec-mem 1280 13 12 15 12) (delay 1)
     (exec-mem 1280 13 12 15 11) (delay 1)
     (exec-mem 1280 13 12 15 10) (delay 1)
-    (exec-mem 1280 13 12 15 9) (delay 1)
+    (exec-mem 1280 13 12 15 9)  (delay 1)
     (exec-mem 1280 13 12 15 10) (delay 1)
     (exec-mem 1280 13 12 15 11) (delay 1)
     (exec-mem 1280 13 12 15 12) (delay 1)
