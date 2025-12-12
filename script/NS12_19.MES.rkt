@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; Episode 1 Epilogue. So ends another wacky episode of Dengeki Nurse!
+; Episode 2 Epilogue. So ends another wacky episode of Dengeki Nurse!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

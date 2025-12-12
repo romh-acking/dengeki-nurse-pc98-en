@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; Episode 2 Epilogue. And so, Dengeki Nurse is in business!
+; Episode 1 Epilogue. And so, Dengeki Nurse is in business!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

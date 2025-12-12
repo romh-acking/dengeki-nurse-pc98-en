@@ -19,19 +19,19 @@
        (/ (text-color 4) (text "　　Ｙｅｓ　　"))
        (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
   (define-proc 12
-    (<> (str "Do you want to overwrite existing data?")))
+    (<> (str "Do you want to overwrite existing data?"))) ; This line appears to be unused
   (define-proc 13
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
      (text-color 1)
-     (str "Are you sure you want to end the game?")))
+     (text "　　　") (str "Are you sure you want to end the game?")))
   (define-proc 14
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
      (text 'br)
-     (text "　　　　　　　　　　") (str "Save complete!")
+     (text "　　　　　　　　　") (str "Save complete!")
      (proc 15)))
   (loop
    (set-var T 0)
@@ -40,7 +40,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (text-color 1)
-   (text "　　") (str "Which Carte would you like to save to?")
+   (text "　　　") (str "Which Carte would you like to save to?")
    (menu1
     4 345  16 345  28 345
     4 361  16 361  28 361  40 361
@@ -127,18 +127,15 @@
       (flag-save 4)
       (proc 14))
      (/ (nop@))
+
+; 	Game End
+
      (/
       (proc 13)
       ((cmd 211) 0 1)
       (proc 10)
       (branch-var S
        (</>
-        (/
-         (text-frame 3 324 52 379)
-         (text-reset 15)
-         (exec-mem 18944 65535 528 23)
-         (branch-reg 700
-          (</> (/ (nop@)) (/ (set-reg 991 #t) (set-reg 333 #t)))))
         (/
          (sound '|| 2)
          ((cmd 209) 0 2)
@@ -147,10 +144,16 @@
          ((cmd 209) 1 2)
          (text-frame 3 332 52 379)
          (text-color 4)
-         (text "　　　　　　　　") (str "Thanks for playing!")
+         (text "　　　　　　　　") (str "Thanks for playing!" 'br)
          (str "You can now eject the disk and turn off the power.")
          (sound '|| 0)
-         (loop)))))))
+         (loop))
+        (/
+         (text-frame 3 324 52 379)
+         (text-reset 15)
+         (exec-mem 18944 65535 528 23)
+         (branch-reg 700
+          (</> (/ (nop@)) (/ (set-reg 991 #t) (set-reg 333 #t))))))))))
    (exec-mem 18944 65535 528 23)
    (if (</>
         (// (? (= C 1)) (nop@) (set-var B 1))
