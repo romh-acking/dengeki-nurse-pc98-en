@@ -282,7 +282,7 @@
    (branch-index
     (</>
      (/
-      (str "Right Nurse: Eeek! Don't touch my butt out of" 'br)
+      (str "Eeek! Don't touch my butt out of" 'br)
       (str "nowhere!")
       (proc 15)
       (proc 2)
