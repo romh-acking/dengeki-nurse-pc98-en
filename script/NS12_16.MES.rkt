@@ -39,7 +39,7 @@
             (str "Stop that! Stop perching behind me!")
   (proc 16)
   (proc 10)
-            (str "Hm, will my M16 taste blood for the first")
+            (str "...So, will my M16 taste blood for the" 'br)
   (str "first time tonight? What an evening of occasion.")
   (proc 16)
   (proc 10)

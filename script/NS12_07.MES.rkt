@@ -570,7 +570,7 @@
     (</>
      (/
       (proc 11)
-              (text "あの‥‥私のお尻に手があたってるんですけど‥‥")
+              (str "Uhh... Your hand is touching my butt...")
       (proc 15))
      (/
       (proc 10)

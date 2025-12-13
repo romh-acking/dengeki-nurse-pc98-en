@@ -278,11 +278,11 @@
    (set-reg 72 #t))
  (seg (? (= T 3) (= O 0))						; Action
    (proc 18)
-   (branch-reg 73 (</> (/ (proc 10)) (/ (proc 12))))
+   (branch-reg 73 (</> (/ (proc 10)) (/ (proc 12)))) ; This is supposed to check if Ayako has been introduced and display the name accordingly, but right now it seems a bit bugged
    (branch-index
     (</>
      (/
-      (str "Eeek! Don't touch my butt out of" 'br)
+      (str "Right Nurse: Eeek! Don't touch my butt out of" 'br)
       (str "nowhere!")
       (proc 15)
       (proc 2)
