@@ -121,32 +121,29 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 120 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (//
-            (? (= 119 #t) (= 120 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (//
-            (? (= 118 #t) (= 119 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 120 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 119 #t) (= 120 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 118 #t) (= 119 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (//
-            (? (= 121 #t) (= 120 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 121 #t) (= 120 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 122 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 118 #t) (= 122 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 122 #t))            (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 118 #t) (= 122 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/
       (if (</>
-           (// (? (= 123 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 123 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save

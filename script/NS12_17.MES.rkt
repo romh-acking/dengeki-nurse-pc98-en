@@ -10,14 +10,8 @@
   (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
   (define-proc 11 (<> (text-color 5) (str "Cleaning Lady: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (text-frame 0 0 79 399)
-  (text-reset 0)
-  (image-file "b:¥gpc¥ns1_232.gpc") (image-mem 0 0 0 0)
-  (exec-mem 2816 "GET 10 0 0 48 303")
-  (text-frame 0 0 79 399)
-  (text-reset 0)
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_232.gpc") (image-mem 0 0 0 0) (exec-mem 2816 "GET 10 0 0 48 303")
+  (text-frame 0 0 79 399) (text-reset 0) (image-file "gpc¥face_w00.gpc")   (image-mem 0 0)     (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
@@ -27,7 +21,7 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse10.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_231.gpc") (image-mem 1 3)
 
 ; 	Intro begins here...
@@ -59,18 +53,20 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
+; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+; Talk
      (/
       (if (</>
-           (//
-            (? (= 115 #t) (= 116 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 115 #t) (= 116 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/
       (if (</>
-           (// (? (= 117 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save

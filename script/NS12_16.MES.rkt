@@ -9,7 +9,7 @@
   (load-mem "cmd¥cappear.tcm" 6656)
   (load-mem "cmd¥gpcph.tcm" 9472)
   (load-mem "dat¥ns1_k01p.dat" 9984)
-  (define-proc 10 (<> (text-color 2) (str "Golgo 31: ")))
+  (define-proc 10 (<> (text-color 2)  (str "Golgo 31: ")))
   (define-proc 11 (<> (text-color 15) (str "Crow: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
