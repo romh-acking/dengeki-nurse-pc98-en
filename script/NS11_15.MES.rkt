@@ -6,9 +6,9 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (text-color 3) (str "Minister: ")))
+  (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-  (define-proc 13 (<> (text-color 8) (str "Tomoyo: "))) ; Unused
+  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: "))) ; <--- Unused
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
@@ -41,7 +41,7 @@
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
-; 	Dialogue trees defined here...
+; 	Dialogue trees (or lack thereof) defined here...
 
   (loop
    (exec-mem 24576 1 1 0)
@@ -182,10 +182,8 @@
    (set-var U 2)
    (sound '|| 2)
    (mes-load? "mes¥action1.mes")
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 311 #t)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_16.mes"))
@@ -214,9 +212,9 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 3) (str "Minister: ")))
+   (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
    (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
+   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

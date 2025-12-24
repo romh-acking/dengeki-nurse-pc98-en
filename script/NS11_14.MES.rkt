@@ -7,11 +7,11 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥quakeh.tcm" 6656)
-  (define-proc 10 (<> (text-color 5) (str "Lady: ")))
-  (define-proc 11 (<> (text-color 5) (str "Guillotine Nurse: ")))
+  (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
+  (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-  (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
-  (define-proc 14 (<> (text-color 5) (str "Voice: ")))
+  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+  (define-proc 14 (<> (text-color 5)  (str "Voice: ")))
 
 ; ^ All of these aren't used in this file, don't know why they're defined in the first place
 
@@ -54,40 +54,37 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 117 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 117 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 118 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 118 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 118 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (//
-            (? (= 120 #t) (= 118 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 117 #t) (= 120 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (// (? (= 119 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 118 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 120 #t) (= 118 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 117 #t) (= 120 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 119 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 117 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/
       (if (</>
-           (// (? (= 117 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 117 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -218,10 +215,8 @@
    (str "tight!")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_15.mes"))
@@ -412,11 +407,11 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5) (str "Lady: ")))
-   (define-proc 11 (<> (text-color 5) (str "Guillotine Nurse: ")))
+   (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
+   (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
    (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
-   (define-proc 14 (<> (text-color 5) (str "Voice: ")))
+   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+   (define-proc 14 (<> (text-color 5)  (str "Voice: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

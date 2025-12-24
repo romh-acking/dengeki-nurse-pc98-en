@@ -4,7 +4,7 @@
 ; --Description:--
 ; Kirara crawls into the air vent, with Tanchi close behind. Oh, he's real close behind all right...
 ; -----Notes:-----
-; There are two additional hotspots in this scene that can be triggered by poking at Kirara's anus and clitoris. Yes.
+; There are two additional hotspots in this scene that can be triggered by poking at Kirara's poophole and cooch. Yes.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -43,44 +43,39 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 74 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 74 #t))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (//
-            (? (= 76 #t) (= 77 #t))
-            (nop@)
-            (set-var T 1)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 75 #t) (= 74 #t))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 76 #t) (= 77 #t))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
+           (// (? (= 75 #t) (= 74 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 80 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 78 #t) (= 79 #t) (= 80 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 80 #t))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 78 #t) (= 79 #t) (= 80 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 74 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 74 #t))                     (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
+; Poophole
      (/ (nop@) (set-var T 7) (set-var O 0) (seg-call))
+; Cooch
      (/ (nop@) (set-var T 8) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -242,10 +237,8 @@
   (str "Committee room!")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_11.mes"))
@@ -307,7 +300,7 @@
    (proc 19)
    (set-var B 2)
    (set-var C 2))
- (seg (? (= T 7) (= O 0))						; Anus (336, 96)
+ (seg (? (= T 7) (= O 0))						; Butthole (336, 96)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -319,7 +312,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 8) (= O 0))						; Clitoris (300, 140)
+ (seg (? (= T 8) (= O 0))						; Cooch (300, 140)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

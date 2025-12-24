@@ -7,15 +7,13 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "b:¥gpc¥ns1_146.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 3 0 0 32 144")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (image-file "b:¥gpc¥ns1_146.gpc") (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 32 144")
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse10.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_145.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 136 137)
@@ -55,20 +53,22 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
+; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+; Talk
      (/
       (if (</>
-           (//
-            (? (= 136 #t) (= 137 #t) (= 200 #t) (= 201 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 136 #t) (= 137 #t) (= 200 #t) (= 201 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -189,10 +189,8 @@
    (text "ＢＬＡＡＡＡＡＡＡＡＡＭ！")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥Ns11_20.mes"))

@@ -7,29 +7,25 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "b:¥gpc¥ns1_121.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 6 0 0 24 144")
+  (image-file "b:¥gpc¥ns1_121.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_119.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 4 0 0 17 136")
+  (image-file "b:¥gpc¥ns1_119.gpc") (image-mem 0 0) (exec-mem 2816 "GET 4 0 0 17 136")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_120.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 5 7 4 9 117")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (image-file "b:¥gpc¥ns1_120.gpc") (image-mem 0 0) (exec-mem 2816 "GET 5 7 4 9 117")
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   ((cmd 193) 0 "b:¥gpa¥Ns1-121.gpa")
-  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
-  (image-file "gpc¥ns1_k04a.gpc") (image-mem 1 0)
+  (image-file "gpc¥ns1_k04.gpc")    (image-mem 1 3)
+  (image-file "gpc¥ns1_k04a.gpc")   (image-mem 1 0)
   (branch-reg 990
    (</>
     (/ (nop@))
     (/
      (sound '|| 0)
      (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt") <- FMT
+;    (sound '|| "Nurse08.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_118.gpc") (image-mem 1 0)
@@ -63,114 +59,46 @@
    (branch-var Z
     (</>
      (/
+; Think
       (if (</>
-           (// (? (= 57 #t)) (nop@) (set-var T 0) (set-var O 5) (seg-call))
-           (//
-            (? (= 56 #t) (= 57 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 55 #t) (= 56 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 54 #t) (= 55 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 53 #t) (= 54 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 57 #t))                     (nop@) (set-var T 0) (set-var O 5) (seg-call))
+           (// (? (= 56 #t) (= 57 #f))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 55 #t) (= 56 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 54 #t) (= 55 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 53 #t) (= 54 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 57 #t)) (nop@) (set-var T 1) (set-var O 6) (seg-call))
-           (//
-            (? (= 56 #t) (= 57 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 5)
-            (seg-call))
-           (//
-            (? (= 55 #t) (= 56 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 60 #t) (= 55 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 59 #t) (= 60 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 58 #t) (= 59 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 57 #t))                     (nop@) (set-var T 1) (set-var O 6) (seg-call))
+           (// (? (= 56 #t) (= 57 #f))           (nop@) (set-var T 1) (set-var O 5) (seg-call))
+           (// (? (= 55 #t) (= 56 #f))           (nop@) (set-var T 1) (set-var O 4) (seg-call))
+           (// (? (= 60 #t) (= 55 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
+           (// (? (= 59 #t) (= 60 #f))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
+           (// (? (= 58 #t) (= 59 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 57 #t)) (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (//
-            (? (= 56 #t) (= 57 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 5)
-            (seg-call))
-           (//
-            (? (= 55 #t) (= 56 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 54 #t) (= 63 #t) (= 55 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (// (? (= 60 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 61 #t) (= 62 #t) (= 60 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 57 #t))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 56 #t) (= 57 #f))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 55 #t) (= 56 #f))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 54 #t) (= 63 #t) (= 55 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 60 #t))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 61 #t) (= 62 #t) (= 60 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 64 #t)) (nop@) (set-var T 3) (set-var O 3) (seg-call))
-           (//
-            (? (= 56 #t) (= 65 #f))
-            (nop@)
-            (set-var T 3)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 55 #t) (= 56 #f))
-            (nop@)
-            (set-var T 3)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 64 #t))                     (nop@) (set-var T 3) (set-var O 3) (seg-call))
+           (// (? (= 56 #t) (= 65 #f))           (nop@) (set-var T 3) (set-var O 2) (seg-call))
+           (// (? (= 55 #t) (= 56 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -583,7 +511,7 @@
    (exec-mem 2816 "VIEW 41 165 59 285,OVER 1,PUT 5 41 165,FREE 5")
    (sound '|| 0)
    (sound '|| "uso¥Nurse11.uso") ; <- PC-98
-;  (sound '|| "Nurse11.fmt") <- FMT
+;  (sound '|| "Nurse11.fmt")       <- FMT
    (sound '|| 1)
    (proc 1)
            (text "ＬＯＶＥ　ＴＡＲＯ　ａｎｄ　ＭＩＴＳＵＫＯ") (str "...")
@@ -661,7 +589,7 @@
    (exec-mem 2816 "VIEW 5 23 35 169,PUT 6 5 23,FREE 6")
    (sound '|| 0)
    (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 9) <- FMT
+;  (sound '|se | 9)    <- FMT
    (text-color 1)
    (str "ZZZZZZZZZZZZZZAP!")
    ((cmd 195) 0 2)
@@ -688,10 +616,8 @@
    (str "to follow.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_07.mes"))

@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "dat¥icondat.dat" 33024)
-  (define-proc 10 (<> (text-color 5) (str "Asuka: ")))
+  (define-proc 10 (<> (text-color 5)  (str "Asuka: ")))
   (define-proc 11 (<> (text-color 11) (str "Momoko: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
@@ -44,75 +44,37 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 83 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (//
-            (? (= 82 #t) (= 83 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 81 #t) (= 82 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 83 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 82 #t) (= 83 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 81 #t) (= 82 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 85 #t)) (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (//
-            (? (= 84 #t) (= 85 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 83 #t) (= 84 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 81 #t) (= 83 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 85 #t))           (nop@) (set-var T 1) (set-var O 4) (seg-call))
+           (// (? (= 84 #t) (= 85 #f)) (nop@) (set-var T 1) (set-var O 3) (seg-call))
+           (// (? (= 83 #t) (= 84 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
+           (// (? (= 81 #t) (= 83 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 84 #t)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (//
-            (? (= 83 #t) (= 84 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 88 #t) (= 83 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 81 #t) (= 88 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 86 #t) (= 87 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 84 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 83 #t) (= 84 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 88 #t) (= 83 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 81 #t) (= 88 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 86 #t) (= 87 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -275,10 +237,8 @@
            (str "Okay then, let's move!")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-reg 990 #f)
@@ -400,7 +360,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5) (str "Asuka: ")))
+   (define-proc 10 (<> (text-color 5)  (str "Asuka: ")))
    (define-proc 11 (<> (text-color 11) (str "Momoko: ")))
    (proc 19)
    (set-var B 2)

@@ -7,9 +7,9 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 11) (str "Right Nurse: ")))
-  (define-proc 11 (<> (text-color 8) (str "Left Nurse: ")))
+  (define-proc 11 (<> (text-color 8)  (str "Left Nurse: ")))
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-  (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
+  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
@@ -20,10 +20,10 @@
     (/
      (sound '|| 0)
      (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt") <- FMT
+;    (sound '|| "Nurse08.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
-  (image-file "gpc¥ns1_k05.gpc") (image-mem 1)
+  (image-file "gpc¥ns1_k05.gpc")    (image-mem 1)
   (image-file "b:¥gpc¥ns1_123.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 69 75)
@@ -77,54 +77,36 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 72 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (//
-            (? (= 71 #t) (= 72 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 69 #t) (= 70 #t) (= 71 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 72 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 71 #t) (= 72 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 69 #t) (= 70 #t) (= 71 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 73 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 73 #t))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 75 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (//
-            (? (= 73 #t) (= 75 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 74 #t) (= 73 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 71 #t) (= 74 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 75 #t))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 73 #t) (= 75 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 74 #t) (= 73 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 71 #t) (= 74 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/
       (if (</>
-           (// (? (= 72 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 72 #t))                     (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -185,8 +167,7 @@
    (str "game.")
    (proc 15)
    (text-color 7)
-   (str "Man, I wonder if a sequel is coming out? I'm their") ; <- PC-98
-   (str "No. 1 fan, I'm sure I can will it into existence!") ; <- PC-98
+   (str "Man, I wonder if a sequel is coming out? I'm their" "No. 1 fan, I'm sure I can will it into existence!") ; <- PC-98
 ;  (str "") <- FMT (to be translated)
    (proc 15)
    (proc 19))
@@ -321,10 +302,8 @@
    (proc 15)
    ((cmd 209) 0 2)
    ((cmd 197) 0 16)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_10.mes"))
@@ -333,9 +312,9 @@
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 10 (<> (text-color 11) (str "Right Nurse: ")))
-   (define-proc 11 (<> (text-color 8) (str "Left Nurse: ")))
+   (define-proc 11 (<> (text-color 8)  (str "Left Nurse: ")))
    (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8) (str "Tomoyo: ")))
+   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

@@ -15,10 +15,8 @@
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 0)
-  (image-file "gpc¥ns1_k08.gpc") (image-mem 1 3)
-  (branch-reg
-   311
-   (</> (/ ((cmd 209) 1 3)) (/ (exec-mem 6656 8) (set-reg 311 #f))))
+  (image-file "gpc¥ns1_k08.gpc")  (image-mem 1 3)
+  (branch-reg 311 (</> (/ ((cmd 209) 1 3)) (/ (exec-mem 6656 8) (set-reg 311 #f))))
   ((cmd 204) 121 127)
 
 ; 	Intro begins here...
@@ -59,44 +57,28 @@
     (</>
      (/
       (if (</>
-           (// (? (= 123 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (//
-            (? (= 122 #t) (= 123 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 121 #t) (= 122 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 123 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 122 #t) (= 123 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 121 #t) (= 122 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
      (/
       (if (</>
-           (// (? (= 123 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (//
-            (? (= 125 #t) (= 123 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 122 #t) (= 125 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (// (? (= 124 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 123 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 125 #t) (= 123 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 122 #t) (= 125 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 124 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
      (/
       (if (</>
-           (// (? (= 127 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 127 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -344,10 +326,8 @@
    (str "room where the Minister's sleeping.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-reg 990 #f)

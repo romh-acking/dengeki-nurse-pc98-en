@@ -15,7 +15,7 @@
   (image-file "b:¥gpc¥ns1_105.gpc") (image-mem 1 3)
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt") <- FMT
+; (sound '|| "Nurse08.fmt")       <- FMT
   (sound '|| 1)
   ((cmd 204) 66 68)
   (set-reg 144 #f)
@@ -51,24 +51,26 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
+; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+; Talk
      (/
       (if (</>
-           (//
-            (? (= 66 #t) (= 67 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (// (? (= 144 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 66 #t) (= 67 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 144 #t))          (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/
       (if (</>
            (// (? (= 68 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (//               (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -186,10 +188,8 @@
               (str "Don't take any detours! Off with you!")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_09.mes"))

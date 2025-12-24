@@ -46,33 +46,30 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 34 #t)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (//
-            (? (= 33 #t) (= 34 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 34 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 33 #t) (= 34 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 35 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 35 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 37 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 36 #t) (= 37 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 37 #t))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 36 #t) (= 37 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -257,10 +254,8 @@
    (proc 15)
    ((cmd 209) 0 2)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-reg 990 #f)

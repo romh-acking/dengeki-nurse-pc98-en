@@ -64,18 +64,18 @@
      (/
       (if (</>
            (//
-            (? (= 115 #t) (= 116 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
+            (? (= 115 #t) (= 116 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
            (// (? (= 117 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -210,10 +210,8 @@
    ((cmd 209) 0 2)
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥NS12_18.mes"))
  (seg (? (= T 4) (= O 0))						; Move

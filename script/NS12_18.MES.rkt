@@ -80,7 +80,7 @@
   (proc 15)
   (proc 10)
             (str "I hold no grudge against you, but this" 'br)
-  (str "is business. Good luck.. May you dream sweetly in" 'br)
+  (str "is business. Good luck... May you dream sweetly in")
   (str "your grave.")
   (proc 15)
   (text-color 1)
@@ -125,43 +125,33 @@
       (if (</>
            (// (? (= 120 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
            (//
-            (? (= 119 #t) (= 120 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
+            (? (= 119 #t) (= 120 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (//
-            (? (= 118 #t) (= 119 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
+            (? (= 118 #t) (= 119 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
            (//
-            (? (= 121 #t) (= 120 #t))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
+            (? (= 121 #t) (= 120 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
            (// (? (= 122 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (//
-            (? (= 118 #t) (= 122 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
+            (? (= 118 #t) (= 122 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
            (// (? (= 123 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -361,10 +351,8 @@
    (str "meet again...")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_19.mes"))

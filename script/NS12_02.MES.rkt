@@ -17,7 +17,7 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse09.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_204.gpc") (image-mem 1 3)
 
 ; 	Intro begins here...
@@ -42,42 +42,34 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 16 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 16 #t))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 16 #t)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (//
-            (? (= 17 #t) (= 16 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 16 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
+           (// (? (= 17 #t) (= 16 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 21 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (//
-            (? (= 20 #t) (= 21 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 18 #t) (= 19 #t) (= 20 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 21 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 20 #t) (= 21 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 18 #t) (= 19 #t) (= 20 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 16 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 16 #t))                     (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -263,10 +255,8 @@
    (str "chase after her.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-reg 990 #f)

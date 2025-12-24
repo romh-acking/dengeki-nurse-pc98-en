@@ -11,8 +11,8 @@
   (text-frame 0 0 79 399)
   (text-reset 15)
   (image-file "gpc¥Seki10.gpc")
-  (image-mem 1 3) (sound '|| 0) (sound '|| "uso¥Nurse01a.uso") (sound '|| 1) ; <- PC-98
-; (image-mem 0) (sound '|se | "NRS_ADV.SE") (sound '|| 100) <- FMT
+  (image-mem 1 3) (sound '|| 0) (sound '|| "uso¥Nurse01a.uso") (sound '|| 1)   ; <- PC-98
+; (image-mem 0)                 (sound '|se | "NRS_ADV.SE")    (sound '|| 100)   <- FMT
   ((cmd 209) 1 5)
   (exec-file "APPEARH.CMD b:¥gpc¥1WA.gpc,14,105,66,247,4,1,1")
 ; (sound '|se | 5) <- FMT
@@ -33,7 +33,7 @@
   (image-file "b:¥gpc¥ns1_102.gpc") (image-mem 1 0)
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0) (sound '|| "uso¥Nurse04.uso") ; <- PC-98
-; (sound '|| "Nurse04.fmt") <- FMT
+; (sound '|| "Nurse04.fmt")                     <- FMT
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -44,7 +44,7 @@
   ((cmd 209) 1 3)
   ((cmd 204) 0 799)
 
-; 	Text starts here... (Text box width: 51 characters)
+; 	Text starts here...
 
   (text-frame 16 324 66 379)
   (text-reset 1)

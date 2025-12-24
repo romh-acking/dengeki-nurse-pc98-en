@@ -23,8 +23,8 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso")
   (sound '|| 1)
-  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-  (image-file "gpc¥ns1_k10.gpc") (image-mem 1 0)
+  (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
+  (image-file "gpc¥ns1_k10.gpc")    (image-mem 1 0)
   (image-file "b:¥gpc¥ns1_201.gpc") (image-mem 1 3)
   (exec-mem 18944 1 19200)
   ((cmd 204) 0 799)
@@ -57,51 +57,33 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 11 #t)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (//
-            (? (= 10 #t) (= 11 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 11 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 11 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 11 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 15 #t)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (//
-            (? (= 11 #t) (= 15 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 13 #t) (= 11 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 10 #t) (= 13 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 12 #t) (= 10 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 13 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 10 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 12 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -360,10 +342,8 @@
    (str "she's not a bad kid.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-reg 990 #f)

@@ -3,6 +3,14 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Tanchi lazes around in the lab of Dr. Akiba at the hospital's lab.
+; -----Notes:-----
+; Welcome to Dengeki Nurse. Some general info about the formatting in this game:
+; - The main game's text box width is 50 characters (e.g. this script), and 51 characters in cutscenes (e.g. the previous script).
+; - Full-width is used for double quotation marks, em dashes and occassionally for sound effects and flavour in general. In all instances, they are enclosed in text identifiers.
+;   - It's a pain to read, I know, but the FM Towns engine refuses to read full-width characters in str identifiers unfortunately.
+; - You might notice some "PC-98" and "FMT" annotations; these indicate the differences between the PC-98 and FM Towns version scripts. In general:
+;   - Different music files are called, "uso¥Nurse##.uso" on PC-98 and "Nurse##.fmt" in FM Towns
+;   - Different sound effect IDs are called between versions
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -14,7 +22,7 @@
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt") <- FMT
+; (sound '|| "Nurse08.fmt")       <- FMT
   (sound '|| 1)
   (set-reg 990 #f)
   (exec-mem 10752 "INIT")
@@ -26,12 +34,12 @@
   (exec-mem 10752 "LOAD> gpc¥ns1_k03.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_104.gpc,TEMP")
   (exec-mem 10752 "LOAD> gpc¥aflame01.gpc,TEMP")
-  (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC") (image-mem 1)
-  (exec-mem 10752 "COPY> gpc¥ns1_k02.gpc,GPC") (image-mem 1 0)
-  (exec-mem 10752 "COPY> gpc¥ns1_k03.gpc,GPC") (image-mem 1 0)
+  (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1)
+  (exec-mem 10752 "COPY> gpc¥ns1_k02.gpc,GPC")    (image-mem 1 0)
+  (exec-mem 10752 "COPY> gpc¥ns1_k03.gpc,GPC")    (image-mem 1 0)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_104.gpc,GPC") (image-mem 1 0)
 
-; 	Intro begins here... (Text box width: 50 characters)
+; 	Intro begins here...
 
   (text-frame 3 324 52 379)
   (text-reset 15)
@@ -100,108 +108,45 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 15 #t)) (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (//
-            (? (= 14 #t) (= 15 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 13 #t) (= 14 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 10 #t) (= 11 #t) (= 12 #t) (= 13 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 15 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 14 #t) (= 15 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 13 #t) (= 14 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 10 #t) (= 11 #t) (= 12 #t) (= 13 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 19 #t)) (nop@) (set-var T 1) (set-var O 5) (seg-call))
-           (//
-            (? (= 18 #t) (= 19 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 17 #t) (= 18 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 16 #t) (= 17 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 12 #t) (= 16 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 19 #t))                               (nop@) (set-var T 1) (set-var O 5) (seg-call))
+           (// (? (= 18 #t) (= 19 #f))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))
+           (// (? (= 17 #t) (= 18 #f))                     (nop@) (set-var T 1) (set-var O 3) (seg-call))
+           (// (? (= 16 #t) (= 17 #f))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
+           (// (? (= 12 #t) (= 16 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 15 #t)) (nop@) (set-var T 2) (set-var O 8) (seg-call))
-           (//
-            (? (= 23 #t) (= 15 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 7)
-            (seg-call))
-           (//
-            (? (= 19 #t) (= 23 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 6)
-            (seg-call))
-           (//
-            (? (= 22 #t) (= 19 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 5)
-            (seg-call))
-           (//
-            (? (= 14 #t) (= 22 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
-           (//
-            (? (= 21 #t) (= 14 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 3)
-            (seg-call))
-           (//
-            (? (= 13 #t) (= 21 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 20 #t) (= 13 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 15 #t))                               (nop@) (set-var T 2) (set-var O 8) (seg-call))
+           (// (? (= 23 #t) (= 15 #f))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))
+           (// (? (= 19 #t) (= 23 #f))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 22 #t) (= 19 #f))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 14 #t) (= 22 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 21 #t) (= 14 #f))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 13 #t) (= 21 #f))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 20 #t) (= 13 #f))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/
       (if (</>
-           (// (? (= 15 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 15 #t))                               (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                                             (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -551,10 +496,8 @@
    (str "choice in the matter. Let's go to the archives.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)

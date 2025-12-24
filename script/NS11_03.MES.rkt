@@ -10,7 +10,7 @@
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso") <- PC-98
-; (sound '|| "Nurse08.fmt") <- FMT
+; (sound '|| "Nurse08.fmt")     <- FMT
   (sound '|| 1)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
@@ -48,25 +48,27 @@
    (branch-var Z
     (</>
      (/
+; Think
       (if (</>
-           (//
-            (? (= 43 #t) (= 44 #t))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 43 #t) (= 44 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 44 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 44 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/ (nop@) (set-var T 2) (set-var O 0) (seg-call))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/
       (if (</>
-           (// (? (= 45 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 45 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -162,10 +164,8 @@
    (str "305.")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_04.mes"))

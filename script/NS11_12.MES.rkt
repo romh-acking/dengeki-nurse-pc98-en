@@ -54,45 +54,37 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 99 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (//
-            (? (= 98 #t) (= 99 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
-           (//
-            (? (= 97 #t) (= 98 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 99 #t))             (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 98 #t) (= 99 #f))   (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 97 #t) (= 98 #f))   (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 100 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 100 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 102 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 101 #t) (= 102 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 102 #t))            (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 101 #t) (= 102 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 97 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 97 #t))             (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/
       (if (</>
-           (// (? (= 103 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 103 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -261,10 +253,8 @@
    (text "　　　　　　　") (str " the finest round breasts.") (text "”−") (str "Tanchi")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_13.mes"))

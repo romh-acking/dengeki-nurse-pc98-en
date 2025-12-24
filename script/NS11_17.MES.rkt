@@ -11,13 +11,11 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥ns1_143.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 3 0 0 17 136")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (image-file "b:¥gpc¥ns1_143.gpc") (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 17 136")
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥ns1_k04.gpc") (image-mem 1 3)
-  (image-file "gpc¥ns1_k04a.gpc") (image-mem 1 0)
+  (image-file "gpc¥ns1_k04.gpc")    (image-mem 1 3)
+  (image-file "gpc¥ns1_k04a.gpc")   (image-mem 1 0)
   (image-file "b:¥gpc¥ns1_142.gpc") (image-mem 1 3)
   (sound '|se | 26)
   ((cmd 209) 1 2)
@@ -63,45 +61,37 @@
    (branch-var Z
     (</>
      (/
+; Think
       (if (</>
-           (// (? (= 129 #t)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (//
-            (? (= 128 #t) (= 129 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 129 #t))                                  (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 128 #t) (= 129 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (// (? (= 128 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 128 #t))                                  (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 128 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (//
-            (? (= 131 #t) (= 132 #t) (= 133 #t) (= 134 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
-           (// (? (= 130 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 128 #t))                                  (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 131 #t) (= 132 #t) (= 133 #t) (= 134 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 130 #t))                                  (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
-           (// (? (= 128 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 128 #t))                                  (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/
       (if (</>
-           (// (? (= 135 #t)) (nop@) (set-var T 4) (set-var O 2) (seg-call))
-           (//
-            (? (= 128 #t) (= 135 #f))
-            (nop@)
-            (set-var T 4)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 135 #t))                                  (nop@) (set-var T 4) (set-var O 2) (seg-call))
+           (// (? (= 128 #t) (= 135 #f))                       (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                                                 (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -372,10 +362,8 @@
    (proc 15)
    (sound '|| 2)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥Ns11_18.mes"))

@@ -6,18 +6,21 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (text-color 6) (str "Guillotine Nurse: ")))
+  (define-proc 10 (<> (text-color 6)  (str "Guillotine Nurse: ")))
   (define-proc 11 (<> (text-color 15) (str "Black Nurse: ")))
   (sound '|| 0)
   (sound '|| "uso¥Nurse04.uso") ; <- PC-98
-; (sound '|| "Nurse04.fmt") <- FMT
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 1)
-  (image-file "gpc¥ns1_k01.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k01.gpc")    (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_122.gpc") (image-mem 1 3)
   ((cmd 193) 0 "gpa¥Ns1-K01.gpa")
   ((cmd 194) 0 ".ｱ.ｲ..ｳ...ｴ.....ｵ.......ｴ.....ｳ...ｲ..ｱ........")
+
+; 	Text starts here...
+
   (text-frame 16 324 66 379)
   (text-reset 1)
   (text-color 15)
@@ -83,10 +86,8 @@
   (proc 16)
   ((cmd 209) 0 2)
   ((cmd 197) 0 16)
-  (text-frame 3 324 52 379)
-  (text-reset 15)
-  (text-frame 4 16 51 303)
-  (text-reset 15)
+  (text-frame 3 324 52 379) (text-reset 15)
+  (text-frame 4 16 51 303)  (text-reset 15)
   (sound '|| 2)
   (set-reg 990 #f)
   (mes-jump "b:¥mes¥ns11_08.mes")))

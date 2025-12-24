@@ -9,11 +9,9 @@
   (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "b:¥gpc¥ns1_218.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 14 0 0 24 144")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
-  (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
+  (image-file "b:¥gpc¥ns1_218.gpc") (image-mem 0 0) (exec-mem 2816 "GET 14 0 0 24 144")
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
+  (exec-mem 2816 "GET 2 30 0 10 96")
   (exec-mem 2816 "GET 4 50 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (branch-reg 990
@@ -52,32 +50,29 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 55 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 55 #t))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
-           (//
-            (? (= 56 #t) (= 57 #t))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 56 #t) (= 57 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
-           (// (? (= 60 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (//
-            (? (= 58 #t) (= 59 #t) (= 60 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
-           (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 60 #t))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 58 #t) (= 59 #t) (= 60 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -205,10 +200,8 @@
    (str "can figure out what this Reflection Cell is!")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_09.mes"))

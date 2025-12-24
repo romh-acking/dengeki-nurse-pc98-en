@@ -6,7 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (text-color 2) (str "Golgo 31: ")))
+  (define-proc 10 (<> (text-color 2)  (str "Golgo 31: ")))
   (define-proc 11 (<> (text-color 15) (str "Black Nurse: ")))
   (sound '|| 0)
   (sound '|| "uso¥Nurse09.uso")
