@@ -9,8 +9,8 @@
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") <- PC-98
-; (sound '|| "Nurse08.fmt")     <- FMT
+  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+; (sound '|| "Nurse08.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
