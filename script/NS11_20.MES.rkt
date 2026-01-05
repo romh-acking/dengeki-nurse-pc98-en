@@ -100,7 +100,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "I didn't come here to watch a splatter flick!")
@@ -147,7 +147,7 @@
    (str "I'll need to piss her off even more!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "Guillotine Nurse has got a scalpel up against the" 'br)
@@ -179,7 +179,7 @@
    (str "glancing at her chest...")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 11)
                      (str "Heh! If you behave, I'll let you")
@@ -292,7 +292,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_21.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Clatter...")
@@ -304,7 +304,7 @@
            (str "Yes... Er, I'm sorry...")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 11)
                      (str "Where do you think you're" 'br)
@@ -317,7 +317,7 @@
                      (str "Permission DENIED!")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

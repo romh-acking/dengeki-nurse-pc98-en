@@ -103,7 +103,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Why!? How!? What!??!? What in heaven's name...?")
@@ -131,7 +131,7 @@
    (proc 15)
    (proc 19)
    (set-reg 135 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I look at the monster's neck.")
@@ -151,7 +151,7 @@
    (str "fanboy might be tempted to lift it...")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 5)
              (str "That's... Allizdog, isn't it.")
@@ -282,7 +282,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 5)
              (str "Hey, don't get so clingy! You might" 'br)
@@ -306,7 +306,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 5)
              (str "Hey, where are you going?")
@@ -367,7 +367,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥Ns11_18.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

@@ -111,7 +111,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "These school rules are causing problems... But" 'br)
@@ -194,7 +194,7 @@
    (proc 15)
    (proc 19)
    (set-reg 32 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "Those two girls just had their skirts flipped" 'br)
@@ -299,7 +299,7 @@
    (str "Kirara!")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 8 5 23")
@@ -519,7 +519,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_04.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
    (str "I'm a young doctor, high school girls adore me. To")
@@ -527,7 +527,7 @@
    (str "would be inappropriate.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "Hrm, I should be hurrying to get ready for the" 'br)
@@ -538,7 +538,7 @@
    (str "heart to this place...")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

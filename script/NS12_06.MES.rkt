@@ -113,7 +113,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "What's going on here? Wasn't she just shyly" 'br)
@@ -162,7 +162,7 @@
    (proc 15)
    (proc 19)
    (set-reg 46 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "A bunch of naked high school girls attacking..." 'br)
@@ -203,7 +203,7 @@
    (str "Momoko looks kinda clueless.")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "What is going on here!?")
@@ -385,7 +385,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_07.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
                  (str "Ahhhhh! So gooood!")
@@ -427,7 +427,7 @@
           (str "Hands off my breasts!")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
                  (str "Don't gooooo! Get to it alreaaaaady!")
@@ -449,7 +449,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 41 23 51 120,PUT 1 41 23,FREE 1")
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

@@ -103,7 +103,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Why would a school ever have a room like this!?")
@@ -149,7 +149,7 @@
    (str "We need to procure an escape route!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I look around the Reflection Cell.")
@@ -232,7 +232,7 @@
    (proc 15)
    (proc 19)
    (set-reg 73 #t))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Hmm... The two of us alone, locked in a" 'br)
@@ -323,7 +323,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Rustle rustle rustle...")
@@ -414,7 +414,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_10.mes"))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "I move closer to Kirara.")
@@ -453,7 +453,7 @@
            (str "...")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

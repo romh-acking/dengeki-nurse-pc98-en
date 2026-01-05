@@ -110,7 +110,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Hey, even masters make mistakes, and monkeys fall" 'br)
@@ -119,14 +119,14 @@
    (proc 15)
    (proc 19)
    (set-reg 53 #t))
- (seg (? (= T 0) (= O 1))						; #2
+ (seg (? (= T 0) (= O 1))												; #2
    (proc 18)
    (text-color 7)
    (str "What a bummer. If the doc had been interred for a" 'br)
    (str "week, I coulda watched all my movie rentals.")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 2))						; (After blabbering about the nurse's pendant)
+ (seg (? (= T 0) (= O 2))												; (After blabbering about the nurse's pendant)
    (proc 18)
    (text-color 7)
    (str "Just like I thought, this pendant held my fate! I" 'br)
@@ -138,20 +138,20 @@
    (proc 15)
    (proc 19)
    (set-reg 63 #t))
- (seg (? (= T 0) (= O 3))						; (After Dr. Akiba calls out Kirara's name)
+ (seg (? (= T 0) (= O 3))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
    (text-color 7)
    (str "So she's Kirara Inazuma... KIRARA, ") (text "ＫＩＲＡＲＡ") (str "," 'br)
    (str "what a nice name...")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 4))						; (After Kirara reveals she is part of Black Cross)
+ (seg (? (= T 0) (= O 4))												; (After Kirara reveals she is part of Black Cross)
    (proc 18)
    (text-color 7)
    (str "So that's fate, huh... Well, then...")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 5))						; (After Dr. Akiba and Tanchi resolve to protect Kirara)
+ (seg (? (= T 0) (= O 5))												; (After Dr. Akiba and Tanchi resolve to protect Kirara)
    (proc 18)
    (text-color 7)
    (str "All right... I, Denpa Tanchi, will protect Kirara" 'br)
@@ -159,7 +159,7 @@
    (proc 15)
    (proc 19)
    (set-reg 64 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "The nurse I brought from the Minister's room is" 'br)
@@ -167,7 +167,7 @@
    (proc 15)
    (proc 19)
    (set-reg 62 #t))
- (seg (? (= T 1) (= O 1))						; (After Dr. Akiba calls out the nurse)
+ (seg (? (= T 1) (= O 1))												; (After Dr. Akiba calls out the nurse)
    (proc 18)
    (text-color 7)
    (str "I stare intently at her face. I'm not familiar" 'br)
@@ -183,7 +183,7 @@
    (proc 15)
    (proc 19)
    (set-reg 59 #t))
- (seg (? (= T 1) (= O 2))						; #2
+ (seg (? (= T 1) (= O 2))												; #2
    (proc 18)
    (text-color 7)
    (str "My eyes scan her from bottom to top.")
@@ -218,14 +218,14 @@
    (proc 15)
    (proc 19)
    (set-reg 60 #t))
- (seg (? (= T 1) (= O 3))						; #3
+ (seg (? (= T 1) (= O 3))												; #3
    (proc 18)
    (text-color 7)
    (str "The pendant on her chest sparkles brightly," 'br)
    (str "catching my eye, hinting at a brilliant fate...")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 4))						; (After Dr. Akiba calls out Kirara's name)
+ (seg (? (= T 1) (= O 4))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
    (text-color 7)
    (str "Hey, what's wrong? What's with the sudden look?" 'br)
@@ -233,7 +233,7 @@
    (proc 15)
    (proc 19)
    (set-reg 65 #t))
- (seg (? (= T 1) (= O 5))						; 
+ (seg (? (= T 1) (= O 5))												; 
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -247,7 +247,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 1) (= O 6))						; 
+ (seg (? (= T 1) (= O 6))												; 
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -260,7 +260,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Anyhoo, Doc, you must be exhausted. Why" 'br)
@@ -272,7 +272,7 @@
    (proc 15)
    (proc 19)
    (set-reg 61 #t))
- (seg (? (= T 2) (= O 1))						; #2
+ (seg (? (= T 2) (= O 1))												; #2
    (proc 18)
    (proc 2)
            (str "And I'm sorry for inconvienencing you," 'br)
@@ -289,7 +289,7 @@
    (proc 15)
    (proc 19)
    (set-reg 58 #t))
- (seg (? (= T 2) (= O 2))						; (After noticing the nurse's pendant)
+ (seg (? (= T 2) (= O 2))												; (After noticing the nurse's pendant)
    (proc 18)
    (proc 2)
            (str "That... That pendant...!?")
@@ -302,7 +302,7 @@
    (proc 15)
    (proc 19)
    (set-reg 54 #t))
- (seg (? (= T 2) (= O 3))						; (After thinking about the pendant)
+ (seg (? (= T 2) (= O 3))												; (After thinking about the pendant)
    (proc 18)
    (proc 2)
            (str "You and I are destined to be together!" 'br)
@@ -330,7 +330,7 @@
    (proc 15)
    (proc 19)
    (set-reg 55 #t))
- (seg (? (= T 2) (= O 4))						; #2
+ (seg (? (= T 2) (= O 4))												; #2
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -342,7 +342,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 2) (= O 5))						; (After Kirara reveals she is part of Black Cross)
+ (seg (? (= T 2) (= O 5))												; (After Kirara reveals she is part of Black Cross)
    (proc 18)
    (proc 2)
            (str "Kirara, why are you here?")
@@ -448,7 +448,7 @@
    (proc 15)
    (proc 19)
    (set-reg 57 #t))
- (seg (? (= T 2) (= O 6))						; #2
+ (seg (? (= T 2) (= O 6))												; #2
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -461,7 +461,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Clatter, clatter, clatter...")
@@ -475,7 +475,7 @@
    (str "appendectomy...")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 1))						; (After Dr. Akiba calls out Kirara's name)
+ (seg (? (= T 3) (= O 1))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -565,7 +565,7 @@
    (proc 15)
    (proc 19)
    (set-reg 56 #t))
- (seg (? (= T 3) (= O 2))						; 
+ (seg (? (= T 3) (= O 2))												; 
    (proc 18)
    (text-color 1)
    (str "Shake shake shake!")
@@ -574,7 +574,7 @@
               (str "Hey! Stop rocking the bed, you lunatic!")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 3))						; (After looking at a still sad Kirara)
+ (seg (? (= T 3) (= O 3))												; (After looking at a still sad Kirara)
    (proc 18)
    (text-color 7)
    (str "I place my hand on Kirara's slender shoulder and" 'br)
@@ -621,14 +621,14 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_07.mes"))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "Well, might as well stick it out. The sun's gonna" 'br)
    (str "rise any minute now, anyway.")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

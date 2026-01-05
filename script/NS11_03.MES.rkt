@@ -80,7 +80,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Ahh, I shoulda had the head nurse call instead. I" 'br)
@@ -92,7 +92,7 @@
    (proc 15)
    (proc 19)
    (set-reg 43 #t))
- (seg (? (= T 0) (= O 1))						; (After looking at the room signs)
+ (seg (? (= T 0) (= O 1))												; (After looking at the room signs)
    (proc 18)
    (text-color 7)
    (str "Let's think it through here... In our hospital," 'br)
@@ -103,7 +103,7 @@
    (proc 15)
    (proc 19)
    (set-reg 45 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I look at the sign in front of the room. These" 'br)
@@ -120,14 +120,14 @@
    (proc 15)
    (proc 19)
    (set-reg 44 #t))
- (seg (? (= T 1) (= O 1))						; #2
+ (seg (? (= T 1) (= O 1))												; #2
    (proc 18)
    (text-color 7)
    (str "Even though it's nighttime, the hallway's bright." 'br)
    (str "That makes it less scary. I'll take that.")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Excuse me, which room is the Minister in?")
@@ -139,14 +139,14 @@
    (str "Damn, nobody's here...")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
    (str "Best not to make a fuss in the hallway, this being")
    (str "a hospital and all.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "I can't just wander around the hospital blindly! A")
@@ -157,7 +157,7 @@
    (str "undead.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 1))						; (After figuring out where to move)
+ (seg (? (= T 4) (= O 1))												; (After figuring out where to move)
    (proc 18)
    (text-color 7)
    (str "With some trepidation, I decided to go to Room" 'br)
@@ -169,7 +169,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_04.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

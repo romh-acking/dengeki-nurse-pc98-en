@@ -160,7 +160,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "There's no time to mess around! Things are looking")
@@ -190,7 +190,7 @@
    (str "This is bad, this is bad, this is bad...")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (exec-mem 2816 "GET 7 17 93 42 237")
    (exec-mem 2816 "VIEW 17 93 42 237,PUT 6 17 93")
@@ -221,7 +221,7 @@
    (exec-mem 2816 "VIEW 17 93 42 237,PUT 7 17 93,FREE 7")
    (proc 19)
    (set-reg 123 #t))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 0)
                   (str "Hey, let go of my legs! I can't" 'br)
@@ -253,7 +253,7 @@
    (proc 15)
    (proc 19)
    (set-reg 119 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
    (str "There's no way I can touch Kirara's butt from" 'br)
@@ -353,13 +353,13 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_19.mes"))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "But if I move, I'll fall!!!")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

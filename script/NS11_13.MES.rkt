@@ -123,7 +123,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Hmm, no decent doctor tells a patient to strip" 'br)
@@ -179,7 +179,7 @@
    (str "Man, you can't underestimate Doc Akiba!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I couldn't see it before in the dark, but in the" 'br)
@@ -227,7 +227,7 @@
    (proc 15)
    (proc 19)
    (set-reg 112 #t))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Where exactly does it hurt, now...?")
@@ -468,7 +468,7 @@
    (proc 15)
    (proc 19)
    (set-reg 116 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Twitch, twitch...")
@@ -609,7 +609,7 @@
    (str "embarrassing.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "I can't just abandon a patient and go home!")
@@ -655,7 +655,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_14.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

@@ -99,7 +99,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "There's always something exciting about peeking" 'br)
@@ -122,7 +122,7 @@
    (str "fast as we can!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (proc 2)
            (str "Hmm, she's wearing a kimono...in summer?" 'br)
@@ -242,7 +242,7 @@
           (str "............")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Whew, it looks like she hasn't had a" 'br)
@@ -302,7 +302,7 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19)
    (set-reg 103 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Rustle rustle rustle...")
@@ -330,7 +330,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 15 120")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 8 5 23")
@@ -423,7 +423,7 @@
    (mes-load? "mes¥action1.mes")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_15.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

@@ -89,7 +89,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Eesh, we survived by the skin of our teeth there.")
@@ -143,7 +143,7 @@
    (proc 15)
    (proc 19)
    (set-reg 114 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "This is Akiko's room in the Cybernetic High School")
@@ -178,7 +178,7 @@
    (str "starting to sniffle...")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Ms. Akiko, are you okay?")
@@ -348,7 +348,7 @@
    (sound '|| 2)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns12_16.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
           (str "I'm sorry... Please don't open the drawer" 'br)
@@ -359,7 +359,7 @@
    (str "pretty modest though, just by the way.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "No need to rush, now that the fight's over. Maybe" 'br)
@@ -367,7 +367,7 @@
    (str "tea.")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

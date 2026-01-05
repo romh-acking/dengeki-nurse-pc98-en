@@ -90,14 +90,14 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Hot damn, she's a cutie! Surgery will be fun with" 'br)
    (str "her around!")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 1))						; (After talking to the nurse)
+ (seg (? (= T 0) (= O 1))												; (After talking to the nurse)
    (proc 18)
    (text-color 7)
    (str "I said it's an emergency, why's she dragging her" 'br)
@@ -105,7 +105,7 @@
    (proc 15)
    (proc 19)
    (set-reg 50 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "The minister's asleep in his bed. I don't know his")
@@ -122,7 +122,7 @@
    (str "you'd be startled too.")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Hey! This is an emergency! We gotta get to")
@@ -143,7 +143,7 @@
    (proc 15)
    (proc 19)
    (set-reg 49 #t))
- (seg (? (= T 2) (= O 2))						; #2
+ (seg (? (= T 2) (= O 2))												; #2
    (proc 18)
    (proc 2)
            (str "He's just faking, ignore him! Every second")
@@ -154,14 +154,14 @@
    (proc 15)
    (proc 19)
    (set-reg 46 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 4)
           (str "So, uh... What is wrong, exactly...? And" 'br)
    (str "why are you jumping around like that...?")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 1))						; (After thinking about the situation)
+ (seg (? (= T 3) (= O 1))												; (After thinking about the situation)
    (proc 18)
    (text-color 7)
    (str "I grab the nurse's hand!")
@@ -174,7 +174,7 @@
    (proc 15)
    (proc 19)
    (set-reg 51 #t))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
            (str "Follow me! There's no time!")
@@ -186,7 +186,7 @@
            (str "What are you doing? Come with me!")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 1))						; (After grabbing the nurse's hand)
+ (seg (? (= T 4) (= O 1))												; (After grabbing the nurse's hand)
    (proc 18)
    (text-color 7)
    (str "I grab her hand and dash through the door.")
@@ -197,7 +197,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_05.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

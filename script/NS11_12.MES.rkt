@@ -96,7 +96,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Why would someone be collapsed in front of a" 'br)
@@ -126,7 +126,7 @@
    (proc 15)
    (proc 19)
    (set-reg 102 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I look at the woman lying on the ground.")
@@ -146,7 +146,7 @@
    (proc 15)
    (proc 19)
    (set-reg 99 #t))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "What's wrong?")
@@ -192,7 +192,7 @@
    (proc 15)
    (proc 19)
    (set-reg 103 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
    (str "BONK! I collapse to the ground.")
@@ -224,7 +224,7 @@
       (str "Aaaah... No... Not there...!"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "I seriously have to check the annex, but... When" 'br)
@@ -258,7 +258,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_13.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

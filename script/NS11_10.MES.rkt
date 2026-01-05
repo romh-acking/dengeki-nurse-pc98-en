@@ -100,7 +100,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Get all that trivial stuff out of your head! In a" 'br)
@@ -114,7 +114,7 @@
    (str "I'm legitimately sleepy, but I can't sleep here...")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "Good god, Ayako's rack is massive! And Tomoyo's" 'br)
@@ -142,7 +142,7 @@
    (str "Aghh... My vision's starting to blur...")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 12)
           (str "Ooh, doctor... Why don't you open wide and" 'br)
@@ -215,7 +215,7 @@
    (proc 15)
    (proc 19)
    (set-reg 76 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Grope, grope...")
@@ -313,7 +313,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_11.mes"))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "Why would I want to move!? Come on! If I could," 'br)
@@ -326,7 +326,7 @@
    (str "So sleepy...but... It'd be a shame to go home now...")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

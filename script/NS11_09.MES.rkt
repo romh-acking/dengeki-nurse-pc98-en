@@ -118,7 +118,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "Oh my god, what luck meeting such cute girls first")
@@ -152,7 +152,7 @@
    (str "shoe store, toy store... It could be anywhere!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "I don't know these two, but they're both pretty" 'br)
@@ -171,7 +171,7 @@
 ;  (str "") <- FMT (to be translated)
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Hello hello!")
@@ -257,7 +257,7 @@
    (proc 15)
    (proc 19)
    (set-reg 72 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (branch-reg 73 (</> (/ (proc 10)) (/ (proc 12)))) ; This is supposed to check if Ayako has been introduced and display the name accordingly, but right now it seems a bit bugged
    (branch-index
@@ -281,7 +281,7 @@
       (str "But... I'm not doing anything!"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
    (str "It's literally impossible to walk away from girls" 'br)
@@ -307,7 +307,7 @@
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_10.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

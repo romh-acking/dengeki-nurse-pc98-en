@@ -83,7 +83,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "I can't let Kirara go up against that pervy creep" 'br)
@@ -91,7 +91,7 @@
    (proc 15)
    (proc 19)
    (set-reg 116 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "Akiko clings to me, her eyes moist... She's super" 'br)
@@ -99,7 +99,7 @@
    (str "desire!!!")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 10)
            (str "Come on, let's have some fun!")
@@ -127,7 +127,7 @@
    (proc 15)
    (proc 19)
    (set-reg 117 #t))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
    (str "Struggle struggle!!!")
@@ -210,13 +210,13 @@
    (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥NS12_18.mes"))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
            (str "Nooo, Don't goooo!")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT

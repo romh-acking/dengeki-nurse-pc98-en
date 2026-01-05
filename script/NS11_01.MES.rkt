@@ -158,7 +158,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
    (str "I wanna go home... What time is it, anyway? Damn," 'br)
@@ -180,7 +180,7 @@
    (proc 15)
    (proc 19)
    (set-reg 10 #t))
- (seg (? (= T 0) (= O 1))						; (After first talking to Dr. Akiba)
+ (seg (? (= T 0) (= O 1))												; (After first talking to Dr. Akiba)
    (proc 18)
    (text-color 7)
    (str "Anyway, I don't get this experiment Doc Akiba's" 'br)
@@ -198,14 +198,14 @@
    (proc 15)
    (proc 19)
    (set-reg 20 #t))
- (seg (? (= T 0) (= O 2))						; (When Dr. Akiba refuses to explain the experiment)
+ (seg (? (= T 0) (= O 2))												; (When Dr. Akiba refuses to explain the experiment)
    (proc 18)
    (text-color 7)
    (str "The more you clam up, the more I wanna know. Truly")
    (str "one of the great mysteries of our psyche.")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 3))						; (After Dr. Akiba first reveals what the experiment is about)
+ (seg (? (= T 0) (= O 3))												; (After Dr. Akiba first reveals what the experiment is about)
    (proc 18)
    (text-color 7)
    (str "A terrible foe? I can't stand scary stuff! I'd" 'br)
@@ -213,14 +213,14 @@
    (str "those kind of things, if it's not too much to ask.")
    (proc 15)
    (proc 19))
- (seg (? (= T 0) (= O 4))						; (After Dr. Akiba insists on going to the Archives)
+ (seg (? (= T 0) (= O 4))												; (After Dr. Akiba insists on going to the Archives)
    (proc 18)
    (text-color 7)
    (str "The archives at midnight are scary as hell... Let" 'br)
    (str "me repeat: I hate scary shit!")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
    (str "The doctor's noodling with the control panel, and" 'br)
@@ -229,7 +229,7 @@
    (proc 15)
    (proc 19)
    (set-reg 12 #t))
- (seg (? (= T 1) (= O 1))						; #2
+ (seg (? (= T 1) (= O 1))												; #2
    (proc 18)
    (text-color 7)
    (str "You know, the doctor's head reminds me of" 'br)
@@ -243,7 +243,7 @@
    (proc 15)
    (proc 19)
    (set-reg 16 #t))
- (seg (? (= T 1) (= O 2))						; #3
+ (seg (? (= T 1) (= O 2))												; #3
    (proc 18)
    (text-color 7)
    (str "Looking at his head makes me wanna play a certain" 'br)
@@ -251,7 +251,7 @@
    (str "and go home.")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 3))						; (When Dr. Akiba starts going "hmm?")
+ (seg (? (= T 1) (= O 3))												; (When Dr. Akiba starts going "hmm?")
    (proc 18)
    (text-color 7)
    (str "Now the doctor's...checking out my chest. What's" 'br)
@@ -260,7 +260,7 @@
    (proc 15)
    (proc 19)
    (set-reg 18 #t))
- (seg (? (= T 1) (= O 4))						; #2
+ (seg (? (= T 1) (= O 4))												; #2
    (proc 18)
    (text-color 7)
    (str "Looking down at my chest, there's no Color Timer" 'br)
@@ -272,14 +272,14 @@
    (proc 15)
    (proc 19)
    (set-reg 19 #t))
- (seg (? (= T 1) (= O 5))						; #3
+ (seg (? (= T 1) (= O 5))												; #3
    (proc 18)
    (text-color 7)
    (str "The doctor's got a serious look on his face. He" 'br)
    (str "still looks like a Slime, though.")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
            (str "Doc... How long are you gonna keep at this")
@@ -290,7 +290,7 @@
    (proc 15)
    (proc 19)
    (set-reg 11 #t))
- (seg (? (= T 2) (= O 1))						; (When Tanchi decides to ask about the experiment)
+ (seg (? (= T 2) (= O 1))												; (When Tanchi decides to ask about the experiment)
    (proc 18)
    (proc 2)
            (str "By the way... What's the goal of this" 'br)
@@ -307,7 +307,7 @@
    (proc 15)
    (proc 19)
    (set-reg 13 #t))
- (seg (? (= T 2) (= O 2))						; #2
+ (seg (? (= T 2) (= O 2))												; #2
    (proc 18)
    (proc 2)
            (str "What's with the secrecy!?")
@@ -317,7 +317,7 @@
    (proc 15)
    (proc 19)
    (set-reg 21 #t))
- (seg (? (= T 2) (= O 3))						; #3
+ (seg (? (= T 2) (= O 3))												; #3
    (proc 18)
    (proc 2)
            (str "Come on, man, just tell me!")
@@ -398,7 +398,7 @@
 
 ; 	And back to the main scene.
 
- (seg (? (= T 2) (= O 4))						; #4
+ (seg (? (= T 2) (= O 4))												; #4
    (proc 18)
    (proc 2)
            (str "How terrible is this foe, exactly?")
@@ -408,14 +408,14 @@
    (proc 15)
    (proc 19)
    (set-reg 22 #t))
- (seg (? (= T 2) (= O 5))						; #5
+ (seg (? (= T 2) (= O 5))												; #5
    (proc 18)
    (proc 5)
               (str "Hmmmmmmmmmmmm?")
    (proc 15)
    (proc 19)
    (set-reg 17 #t))
- (seg (? (= T 2) (= O 6))						; (After Tanchi looks down at his own chest)
+ (seg (? (= T 2) (= O 6))												; (After Tanchi looks down at his own chest)
    (proc 18)
    (proc 5)
               (str "Tanchi, where'd you get that pendant?")
@@ -437,7 +437,7 @@
    (proc 15)
    (proc 19)
    (set-reg 23 #t))
- (seg (? (= T 2) (= O 7))						; #2
+ (seg (? (= T 2) (= O 7))												; #2
    (proc 18)
    (proc 5)
               (str "Where exactly in the archives you found")
@@ -453,14 +453,14 @@
    (proc 15)
    (proc 19)
    (set-reg 15 #t))
- (seg (? (= T 2) (= O 8))						; #3
+ (seg (? (= T 2) (= O 8))												; #3
    (proc 18)
    (proc 5)
               (str "What're you waiting for? To the" 'br)
    (str "archives!")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 5)
    (branch-random
@@ -470,7 +470,7 @@
      (/ (str "Hey! Quit stomping around!"))))
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 5)
               (str "Hey, the experiment isn't over yet!" 'br)
@@ -489,7 +489,7 @@
               (str "Be patient for once!")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 1))						; (When Dr. Akiba insists on going to the Archives)
+ (seg (? (= T 4) (= O 1))												; (When Dr. Akiba insists on going to the Archives)
    (proc 18)
    (proc 2)
            (str "Fine, fine... It's not like I've got any" 'br)
@@ -502,7 +502,7 @@
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns11_02.mes"))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
