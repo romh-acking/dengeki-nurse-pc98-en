@@ -25,10 +25,8 @@
          (set-reg 990 #f))
         (// (nop@) (set-reg 990 #t))))
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-   (image-file "gpc¥Waku1.gpc") (image-mem 0 0)
-   (exec-mem 2816 "GET 10 56 16 22 160")
-   (image-file "gpc¥Waku2.gpc") (image-mem 0 0)
-   (exec-mem 2816 "GET 12 1 313 54 78")
+   (image-file "gpc¥Waku1.gpc") (image-mem 0 0) (exec-mem 2816 "GET 10 56 16 22 160")
+   (image-file "gpc¥Waku2.gpc") (image-mem 0 0) (exec-mem 2816 "GET 12 1 313 54 78")
    (exec-mem 2816 "ACCESS 0")
    (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
    (exec-mem 2816 "VIEW 56 16 77 175,PUT 10 56 16")
@@ -149,26 +147,11 @@
           (text-frame 3 324 52 379)))
        (branch-var S
         (</>
-         (/
-          ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-          (flag-load 0))
-         (/
-          ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-          (flag-load 1))
-         (/
-          ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-          (flag-load 2))
-         (/
-          ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-          (flag-load 3))
-         (/
-          ((cmd 209) 0 3)
-          (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-          (flag-load 4))
+         (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 0))
+         (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 1))
+         (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 2))
+         (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 3))
+         (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 4))
          (/ (nop@)))))
 
 ; 	Bonus mode options (18 wide)
@@ -228,16 +211,8 @@
                   (/ (text-color 1) (str "      Cancel      "))))
                 (branch-var S
                  (</>
-                  (/
-                   ((cmd 209) 0 2)
-                   (exec-mem 2816 "EXIT")
-                   ((cmd 206) 1 4)
-                   (mes-jump "b:¥mes¥Taidan.mes"))
-                  (/
-                   ((cmd 209) 0 2)
-                   (exec-mem 2816 "EXIT")
-                   ((cmd 206) 1 4)
-                   (mes-jump "b:¥mes¥Nikki.mes"))
+                  (/ ((cmd 209) 0 2) (exec-mem 2816 "EXIT") ((cmd 206) 1 4) (mes-jump "b:¥mes¥Taidan.mes"))
+                  (/ ((cmd 209) 0 2) (exec-mem 2816 "EXIT") ((cmd 206) 1 4) (mes-jump "b:¥mes¥Nikki.mes"))
                   (/ (nop@)))))
 
 ; 	Kirara's Room
@@ -300,26 +275,11 @@
                    (text-frame 3 324 52 379)))
                 (branch-var S
                  (</>
-                  (/
-                   ((cmd 209) 0 2)
-                   ((cmd 206) 1 1)
-                   (mes-jump "b:¥mes¥Ns11_00.mes"))
-                  (/
-                   ((cmd 209) 0 2)
-                   ((cmd 206) 1 2)
-                   (mes-jump "b:¥mes¥Ns12_00.mes"))
-                  (/
-                   ((cmd 209) 0 2)
-                   ((cmd 206) 1 3)
-                   (mes-jump "b:¥mes¥Ns13_00.mes"))
-                  (/
-                   ((cmd 209) 0 2)
-                   ((cmd 206) 1 4)
-                   (mes-jump "b:¥mes¥Ns14_00.mes"))
-                  (/
-                   ((cmd 209) 0 2)
-                   ((cmd 206) 1 3)
-                   (mes-jump "b:¥mes¥Ns15_00.mes"))
+                  (/ ((cmd 209) 0 2) ((cmd 206) 1 1) (mes-jump "b:¥mes¥Ns11_00.mes"))
+                  (/ ((cmd 209) 0 2) ((cmd 206) 1 2) (mes-jump "b:¥mes¥Ns12_00.mes"))
+                  (/ ((cmd 209) 0 2) ((cmd 206) 1 3) (mes-jump "b:¥mes¥Ns13_00.mes"))
+                  (/ ((cmd 209) 0 2) ((cmd 206) 1 4) (mes-jump "b:¥mes¥Ns14_00.mes"))
+                  (/ ((cmd 209) 0 2) ((cmd 206) 1 3) (mes-jump "b:¥mes¥Ns15_00.mes"))
                   (/ (nop@)))))
                (/ (nop@)))))
 
