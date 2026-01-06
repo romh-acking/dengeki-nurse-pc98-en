@@ -25,6 +25,8 @@
     (/
      (sound '|| 0)
      (sound '|| "uso¥Nurse10.uso")
+     (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+;    (sound '|| "Nurse10.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_126.gpc") (image-mem 1 3)
@@ -199,13 +201,15 @@
    (image-file "b:¥gpc¥NS1_138.gpc") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
-   (sound '|se | 20)
+   (sound '|se | 20) ; <- PC-98
+;  (sound '|se | 6)    <- FMT
    (exec-mem 6656 1 0 1 3 0)
    (text-color 1)
    (str "CrrrrraAAAAASH!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso")
+   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+;  (sound '|| "Nurse10.fmt")       <- FMT
    (sound '|| 3)
    (proc 2)
            (str "OWWWW! Why would you do that!?")

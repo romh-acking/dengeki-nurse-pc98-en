@@ -6,12 +6,14 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+; (branch-reg 940 (</> (/ <- FMT
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "b:¥gpc¥ns1_146.gpc") (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 32 144")
   (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso")
+  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+; (sound '|| "Nurse10.fmt")       <- FMT
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_145.gpc") (image-mem 1 3)
@@ -42,11 +44,13 @@
           (str "Aw, nuts! The door's locked!")
   (proc 15)
   (proc 19)
-  (exec-mem 18944 65535 528 23)
+  (exec-mem 18944 65535 528 23) ;             <- PC-98
+; (exec-mem 18944 65535 528 23)) (/ (nop@)))) <- FMT
   
 ; 	Dialogue trees defined here...
 
   (loop
+;  (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 2) (seg-call)))) <- FMT
    (exec-mem 24576 1 1 0)
    (text-color 1)
    (text-frame 3 324 52 379)
@@ -134,15 +138,23 @@
    ((cmd 209) 0 2)
    (sound '|| 0)
    (mes-load? "mes¥chang0.mes")
+
+; 	The following is split into its own segment in the FMT version...
+
+;  (set-var K 1)
+;  (mes-jump "mes¥chang0.mes"))
+;(seg (? (= T 2) (= O 2))
+;  (nop@)
+;  (set-reg 940 #f)
    (load-mem "cmd¥quakeh.tcm" 6656)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 0)
-   (image-file "b:¥gpc¥ns1_146.gpc") (image-mem 0 0)
-   (exec-mem 2816 "GET 3 0 0 32 144")
-   (image-file "b:¥gpc¥ns1_146Z.gpc") (image-mem 0 0)
-   (exec-mem 2816 "ACCESS 0")
-   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
+   (image-file "b:¥gpc¥ns1_146.gpc")  (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 32 144")
+   (image-file "b:¥gpc¥ns1_146Z.gpc") (image-mem 0 0) (exec-mem 2816 "ACCESS 0")
+   (image-file "gpc¥aflame01.gpc")
+   (image-mem 1 3) ; <- PC-98
+;  (image-mem 0)     <- FMT
    (image-file "b:¥gpc¥ns1_145.gpc") (image-mem 1 3)
    ((cmd 193) 0 "b:¥gpa¥ns1-146.gpa")
    (text-frame 3 324 52 379)
@@ -151,25 +163,10 @@
    (proc 2)
            (str "Hey, don't do anything reckless now...")
    (proc 15)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 5 0 0 32 144")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 13 100 45 244,PUT 5 13 100,FREE 5")
-   (delay 20)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 7 33 0 32 144")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 13 100 45 244,PUT 7 13 100,FREE 7")
-   (delay 5)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 9 0 144 32 144")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 13 100 45 244,PUT 9 13 100,FREE 9")
-   (delay 5)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 11 33 144 32 144")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 13 100 45 244,PUT 11 13 100,FREE 11")
+   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 5 0 0 32 144")     (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 5 13 100,FREE 5")   (delay 20)
+   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 7 33 0 32 144")    (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 7 13 100,FREE 7")   (delay 5)
+   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 9 0 144 32 144")   (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 9 13 100,FREE 9")   (delay 5)
+   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 11 33 144 32 144") (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 11 13 100,FREE 11")
    (proc 0)
                   (str "Leave this to a professional! I'm" 'br)
    (str "just gonna flatten it! ...Lightly!")
@@ -178,13 +175,15 @@
    ((cmd 194) 0 "............ｱ...ｲ..ｳ..ｴ..ｵ..ｶ..ｷ")
    ((cmd 195) 0 1)
    (sound '|| 0)
-   (sound '|se | 20)
+   (sound '|se | 20) ; <- PC-98
+;  (sound '|se | 3)    <- FMT
    (delay 80 0)
    (exec-mem 6656 1 0 1 3 0)
    (text-frame 3 324 52 379)
    (text-reset 15)
    (sound '|| 0)
-   (sound '|se | 24)
+   (sound '|se | 24) ; <- PC-98
+;  (sound '|se | 6)    <- FMT
    (text-color 1)
    (text "ＢＬＡＡＡＡＡＡＡＡＡＭ！")
    (proc 15)
@@ -193,6 +192,7 @@
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
+;  (set-reg 941 #f) <- FMT
    (mes-jump "b:¥mes¥Ns11_20.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)

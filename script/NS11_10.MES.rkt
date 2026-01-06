@@ -18,7 +18,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso")
+     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;    (sound '|| "Nurse08.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_124.gpc") (image-mem 1 3)

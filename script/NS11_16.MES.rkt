@@ -11,12 +11,17 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso")
+  (sound '|| "uso¥Nurse08.uso") ;           <- PC-98
+; (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 0)
   (image-file "gpc¥ns1_k08.gpc")  (image-mem 1 3)
-  (branch-reg 311 (</> (/ ((cmd 209) 1 3)) (/ (exec-mem 6656 8) (set-reg 311 #f))))
+  (branch-reg 311
+   (</>
+    (/ ((cmd 209) 1 3))
+    (/ (exec-mem 6656 8) (set-reg 311 #f)))) ;                   <- PC-98
+;   (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f)))) <- FMT
   ((cmd 204) 121 127)
 
 ; 	Intro begins here...

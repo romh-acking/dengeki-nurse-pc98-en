@@ -45,11 +45,11 @@
      60 130
      60 160
      (</>
-      (/ (text-color 1) (str " Information  "))
-      (/ (text-color 1) (str "   New Game   "))
+      (/ (text-color 1) (str " Information") (text "　"))
+      (/ (text #:col 1 "　") (str " New Game ") (text "　"))
       (/ (set-reg 990 #t)
-         (text-color 1) (str "   Continue   "))
-      (/ (text-color 1) (str "  Bonus Mode  "))))
+         (text #:col 1 "　") (str " Continue ") (text "　"))
+      (/ (text #:col 1 "　") (str "Bonus Mode") (text "　"))))
     (sound '|| 0)
 
 ; 	Info menu options (18 wide)
@@ -70,8 +70,8 @@
         (</>
          (/ (text-color 1) (str "Hard Disk Installs"))
          (/ (text-color 1) (str "Supplementary Info"))
-         (/ (text-color 1) (str "   Join our BBS   "))
-         (/ (text-color 1) (str "      Cancel      "))))
+         (/ (text #:col 1 "　") (str " Join our BBS ") (text "　"))
+         (/ (text #:col 1 "　　　") (str "Cancel") (text "　　　"))))
        (branch-var S
         (</>
          (/ ((cmd 209) 0 2) (set-reg 200 #t) (mes-jump "mes¥Oshirase.mes"))
@@ -121,12 +121,12 @@
         60 122
         60 144
         (</>
-         (/ (set-reg 1000 #t) (text-color 1) (str "   Carte ") (text "１　" '|34368|))
-         (/ (set-reg 1001 #t) (text-color 1) (str "   Carte ") (text "２　" '|34368|))
-         (/ (set-reg 1002 #t) (text-color 1) (str "   Carte ") (text "３　" '|34368|))
-         (/ (set-reg 1003 #t) (text-color 1) (str "   Carte ") (text "４　" '|34368|))
-         (/ (set-reg 1004 #t) (text-color 1) (str "   Carte ") (text "５　" '|34368|))
-         (/                   (text-color 1) (str "    Cancel    "))))
+         (/ (set-reg 1000 #t) (text #:col 1 "　") (str " Carte ") (text "１　" '|34368|))
+         (/ (set-reg 1001 #t) (text #:col 1 "　") (str " Carte ") (text "２　" '|34368|))
+         (/ (set-reg 1002 #t) (text #:col 1 "　") (str " Carte ") (text "３　" '|34368|))
+         (/ (set-reg 1003 #t) (text #:col 1 "　") (str " Carte ") (text "４　" '|34368|))
+         (/ (set-reg 1004 #t) (text #:col 1 "　") (str " Carte ") (text "５　" '|34368|))
+         (/                   (text #:col 1 "　　") (str "Cancel") (text "　　"))))
        (define-proc 15
          (<>
           (text-color 4)
@@ -178,11 +178,11 @@
               58 114
               58 139
               (</>
-               (/ (text-color 1) (str "    Free Battle   "))
-               (/ (text-color 1) (str "     Staff Box    "))
-               (/ (text-color 1) (str "   Kirara's Room  "))
-               (/ (text-color 1) (str "  Episode Select  "))
-               (/ (text-color 1) (str "      Cancel      "))))
+               (/ (text #:col 1 "　　") (str "Free Battle ") (text "　"))
+               (/ (text #:col 1 "　　") (str " Staff Box") (text "　　"))
+               (/ (text #:col 1 "　") (str " Kirara's Room") (text "　"))
+               (/ (text #:col 1 "　") (str "Episode Select") (text "　"))
+               (/ (text #:col 1 "　　　") (str "Cancel") (text "　　　"))))
              (branch-var S
               (</>
 
@@ -208,7 +208,7 @@
                  (</>
                   (/ (text-color 1) (str "Dengeki Speakeasy "))
                   (/ (text-color 1) (str "Development Diary "))
-                  (/ (text-color 1) (str "      Cancel      "))))
+                  (/ (text #:col 1 "　　　") (str "Cancel") (text "　　　"))))
                 (branch-var S
                  (</>
                   (/ ((cmd 209) 0 2) (exec-mem 2816 "EXIT") ((cmd 206) 1 4) (mes-jump "b:¥mes¥Taidan.mes"))
@@ -249,12 +249,12 @@
                  60 122
                  60 144
                  (</>
-                  (/ (text-color 1) (str "  Episode ") (text "１　"))
-                  (/ (text-color 1) (str "  Episode ") (text "２　"))
-                  (/ (text-color 1) (str "  Episode ") (text "３　"))
-                  (/ (text-color 1) (str "  Episode ") (text "４　"))
-                  (/ (text-color 1) (str "  Episode ") (text "５　"))
-                  (/ (text-color 1) (str "    Cancel    "))))
+                  (/ (text #:col 1 "　") (str "Episode ") (text "１　"))
+                  (/ (text #:col 1 "　") (str "Episode ") (text "２　"))
+                  (/ (text #:col 1 "　") (str "Episode ") (text "３　"))
+                  (/ (text #:col 1 "　") (str "Episode ") (text "４　"))
+                  (/ (text #:col 1 "　") (str "Episode ") (text "５　"))
+                  (/ (text #:col 1 "　　") (str "Cancel") (text "　　"))))
                 (define-proc 15
                   (<>
                    (text-color 4)

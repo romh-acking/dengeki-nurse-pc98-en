@@ -17,7 +17,8 @@
   (image-file "gpc¥ns1_k04.gpc")    (image-mem 1 3)
   (image-file "gpc¥ns1_k04a.gpc")   (image-mem 1 0)
   (image-file "b:¥gpc¥ns1_142.gpc") (image-mem 1 3)
-  (sound '|se | 26)
+  (sound '|se | 26) ; <- PC-98
+; (sound '|se | 5)    <- FMT
   ((cmd 209) 1 2)
   ((cmd 204) 128 135)
 
@@ -41,7 +42,8 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso")
+  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+; (sound '|| "Nurse10.fmt")       <- FMT
   (sound '|| 1)
   (proc 1)
           (str "It's Allizdog!")

@@ -11,6 +11,7 @@
   (define-proc 12 (<> (text-color 11) (str "Ayako: "))) ; <--- Unused
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
   (define-proc 14 (<> (text-color 5)  (str "Voice: "))) ; <--- Unused
+; (branch-reg 941 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_136.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_135.gpc") (image-mem 0 0) (exec-mem 2816 "GET 8 0 0 24 144")
@@ -26,7 +27,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso")
+     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+;    (sound '|| "Nurse08.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 10752 "INIT")
@@ -48,11 +50,13 @@
    (str "I lay the woman on a bed in the exam room.")
   (proc 15)
   (proc 19)
-  (exec-mem 18944 65535 528 33)
+  (exec-mem 18944 65535 528 33) ; <- PC-98
+; (exec-mem 18944 65535 528 33)) (/ (nop@)))) <- FMT
   
 ; 	Dialogue trees defined here...
 
   (loop
+;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 9) (seg-call)))) <- FMT
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -258,7 +262,8 @@
  (seg (? (= T 2) (= O 3))
    (exec-mem 2816 "VIEW 27 152 50 295,PUT 16 27 152,FREE 16")
    (proc 18)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5)    <- FMT
    (proc 10)
          (str "I should have just stayed asleep...")
    (proc 15)
@@ -266,7 +271,8 @@
            (str "What in the") (text "−") (str "!?")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse04.uso")
+   (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+;  (sound '|| "Nurse04.fmt")       <- FMT
    (sound '|| 1)
    (proc 10)
          (str "Taste the unholy terror of the guillotine!")
@@ -336,12 +342,14 @@
    (proc 15)
    ((cmd 196) 0 0)
    (sound '|| 0)
-   (sound '|se | 20)
+   (sound '|se | 20) ; <- PC-98
+;  (sound '|se | 7)    <- FMT
    (text-color 1)
    (str "ZZZZZZZZZORCH!")
    (proc 15)
    (sound '|| 0)
-   (sound '|se | 24)
+   (sound '|se | 24) ; <- PC-98
+;  (sound '|se | 6)    <- FMT
    (text-color 1)
    (str "BAM! KABOOOOOOOM!")
    (proc 15)
@@ -352,7 +360,8 @@
    (exec-mem 2816 "GET 7 27 152 50 295")
    (exec-mem 2816 "VIEW 27 152 50 295,OVER 1,PUT 8 27 152,FREE 8")
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso")
+   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+;  (sound '|| "Nurse10.fmt")       <- FMT
    (sound '|| 3)
    (proc 2)
            (str "Whoa! The guillotine came off!")
@@ -412,8 +421,13 @@
    (sound '|| 2)
    (exec-mem 2816 "EXIT")
    (set-var U 1)
+;  (set-reg 988 #f) <- FMT
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes")
+   (mes-load? "mes¥action1.mes") ; <- PC-98
+;  (mes-load? "mes¥action1.mes"))  <- FMT
+
+; 	The post-battle stuff here is moved into its own dialogue tree in the FMT version (see below).
+
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 0)
@@ -424,9 +438,7 @@
    (exec-mem 10752 "MODE V128E0M-128")
    (exec-mem 10752 "LOAD> b:¥gpc¥ns1_131.gpc,TEMP")
    (exec-mem 10752 "LOAD> b:¥gpc¥ns1_137.gpc,TEMP")
-   (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso")
-   (sound '|| 1)
+   (sound '|| 0) (sound '|| "uso¥Nurse10.uso") (sound '|| 1)
    (image-file "gpc¥aflame01.gpc") (image-mem 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC") (image-mem 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_137.gpc,GPC") (image-mem 1 0)
@@ -442,6 +454,9 @@
    (proc 15)
    (proc 19)
    (set-reg 108 #t))
+
+; 	Regularly-scheduled programming follows...
+
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
@@ -468,6 +483,36 @@
    (proc 15)
    (proc 19)
    (set-reg 116 #t))
+;(seg (? (= T 2) (= O 9))
+;  (nop@)
+;  (set-reg 941 #f)
+;  (set-reg 311 #f)
+;  (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
+;  (text-frame 0 0 79 399)
+;  (text-reset 0)
+;  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+;  (exec-mem 2816 "GET 20 71 320 8 64")
+;  (exec-mem 2816 "ACCESS 0")
+;  (exec-mem 10752 "INIT")
+;  (exec-mem 10752 "MODE V128E0M-128")
+;  (exec-mem 10752 "LOAD> b:¥gpc¥ns1_131.gpc,TEMP")
+;  (exec-mem 10752 "LOAD> b:¥gpc¥ns1_137.gpc,TEMP")
+;  (sound '|| 0) (sound '|| "Nurse10.fmt") (sound '|| 1)
+;  (image-file "gpc¥aflame01.gpc") (image-mem 0 0)
+;  (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC") (image-mem 1 0)
+;  (exec-mem 10752 "COPY> b:¥gpc¥ns1_137.gpc,GPC") (image-mem 1 0)
+;  (exec-mem 17920 0 1)
+;  (text-frame 3 324 52 379)
+;  (text-reset 15)
+;  (proc 0)
+;                 (str "Phew... That was too close for" 'br)
+;  (str "comfort.")
+;  (proc 15)
+;  (proc 2)
+;          (str "You saved my ass!")
+;  (proc 15)
+;  (proc 19)
+;  (set-reg 108 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
@@ -555,9 +600,11 @@
    (image-file "b:¥gpc¥Ns1_133.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso")
+   (sound '|| "uso¥Nurse10.uso") ;           <- PC-98
+;  (sound '|| "Nurse10.fmt") (sound '|| 100) <- FMT
    (sound '|| 1)
-   (exec-mem 28672 4 16 51 303 1 1 12 24)
+   (exec-mem 28672 4 16 51 303 1 1 12 24) ; <- PC-98
+;  (exec-mem 28672 4 16 51 303 1 1 4 72)    <- FMT
    (proc 15)
    (proc 11)
                      (str "!!! Who... Who dares!?")

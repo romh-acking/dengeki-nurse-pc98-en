@@ -18,7 +18,8 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse10.uso")
+     (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+;    (sound '|| "Nurse10.fmt")       <- FMT
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_139.gpc") (image-mem 1 3)
@@ -180,8 +181,13 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (exec-mem 2816 "EXIT")
    (set-var U 2)
+;  (set-reg 988 #f) ; <- FMT
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes")
+   (mes-load? "mes¥action1.mes") ; <- PC-98
+;  (mes-jump "mes¥action02.mes"))  <- FMT
+
+; 	Post-battle chunk following... relocated in FMT version
+
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 311 #t)

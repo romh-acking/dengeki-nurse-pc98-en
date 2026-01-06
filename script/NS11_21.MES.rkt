@@ -16,7 +16,8 @@
   (exec-mem 10752 "MODE V0E0M64")
   (exec-mem 10752 "LOAD> gpc¥ns1_k08.gpc,TEMP")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso")
+  (sound '|| "uso¥Nurse08.uso") ;           <- PC-98
+; (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
   (sound '|| 1)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 3)
   ((cmd 209) 1 4)
@@ -85,9 +86,11 @@
   (proc 15)
 
 ; 	Episode 1 End Animation
+; 		(I'm genuinely surprised the scripting for this wasn't significantly changed for the FMT version)
 
   (sound '|| 0)
-  (sound '|se | 21)
+  (sound '|se | 21) ; <- PC-98
+; (sound '|se | 0)    <- FMT
   (text #:col 1 'br)
   (text "　　　　") (str "Episode 1:") (text "“") (str "Dengeki Nurse's Debut") (text "”" 'br)
   (text "　　　　　　　　　　　　　　　　　　　　　") (str " The End")
@@ -101,7 +104,8 @@
   (delay 100 0)
   ((cmd 209) 1 4)
   (sound '|| 0)
-  (sound '|se | 22)
+  (sound '|se | 22) ; <- PC-98
+; (sound '|se | 1)    <- FMT
   (exec-mem 1280 13 12 15 13)
   (exec-mem 2816 "VIEW 0 0 10 80,PUT 10 0 0")        (delay 2)
   (exec-mem 2816 "VIEW 10 0 20 80,PUT 10 10 0")      (delay 2)
