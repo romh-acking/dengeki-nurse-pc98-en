@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS13_01.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Black Nurse summons another hired gun for her pettiest scheme yet.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS13_00.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; At the cafeteria again. Kirara fights for worker's rights.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -53,6 +58,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 11 #t))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
