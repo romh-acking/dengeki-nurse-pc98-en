@@ -62,7 +62,7 @@
            (// (? (= 26 #t))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
            (// (? (= 25 #t) (= 26 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 27 #t) (= 25 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
@@ -71,7 +71,7 @@
            (// (? (= 29 #t) (= 30 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 24 #t) (= 29 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (// (? (= 28 #t) (= 24 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move

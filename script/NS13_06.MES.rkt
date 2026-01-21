@@ -57,7 +57,7 @@
       (if (</>
            (// (? (= 42 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 40 #t) (= 42 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
@@ -66,7 +66,7 @@
            (// (? (= 41 #t) (= 45 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 44 #t) (= 41 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (// (? (= 43 #t) (= 44 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -115,7 +115,7 @@
    (proc 15)
    (text-color 7)
    (str "There's no need to worry! Knowing Doc Akiba and" 'br)
-   (str "Croco, they're probably having hot pot together!" 'br)
+   (str "Croco, they're probably having hotpot together!" 'br)
    (str "Yeah... Yeah, that's got to be it.")
    (proc 15)
    (proc 19)

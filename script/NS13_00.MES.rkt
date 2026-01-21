@@ -74,7 +74,7 @@
            (// (? (= 14 #t) (= 11 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 10 #t) (= 14 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (// (? (= 12 #t) (= 13 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -109,7 +109,8 @@
    (str "patients can get sick on holidays...")
    (proc 15)
    (text-color 7)
-   (str "Still... It'd be nice to go out and have some summer fun.")
+   (str "Still... It'd be nice to go out and have some" 'br)
+   (str "summer fun.")
    (proc 15)
    (proc 19)
    (set-reg 14 #t))
@@ -365,8 +366,8 @@
    (str "eating.")
    (proc 15)
    (text-color 7)
-   (str "Big mistake. Medically speaking, post-meal" 'br)
-   (str "exercise is bad for the body!")
+   (str "Big mistake, medically speaking post-meal exercise")
+   (str "is bad for the body!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move

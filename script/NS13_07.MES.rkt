@@ -55,14 +55,14 @@
       (if (</>
            (// (? (= 48 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 46 #t) (= 48 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
            (// (? (= 48 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 51 #t) (= 48 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (// (? (= 49 #t) (= 50 #t) (= 51 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -90,7 +90,8 @@
  (seg (? (= T 0) (= O 1))
    (proc 18)
    (text-color 7)
-   (text "“") (str "What if we can't find our way back") (text "”") (str "you ask?")
+   (str "You're probably wondering right about now,")(text "“") (str "What" 'br)
+   (str "if we can't find our way back?") (text "”")
    (proc 15)
    (text-color 7)
    (str "There's no need to worry about that. Judging by" 'br)
@@ -142,7 +143,7 @@
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
    (text-color 7)
    (proc 2)
-           (str "Thank goodness! This island isn't deserted" 'br)
+           (str "Thank goodness! This island isn't deserted")
    (str "after all!")
    (proc 15)
    (proc 1)
@@ -160,7 +161,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
-           (str "What an incredible place... How far did we" 'br)
+           (str "What an incredible place... How far did we")
    (str "get swept away?")
    (proc 15)
    (proc 1)
@@ -183,7 +184,8 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
-           (str "I told you, we're fine! Stop worrying so much.")
+           (str "I told you, we're fine! Stop worrying so" 'br)
+   (str "much.")
    (proc 15)
    (proc 1)
            (str "I'm not really worried, I'm just concerned")

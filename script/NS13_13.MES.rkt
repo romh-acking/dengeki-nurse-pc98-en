@@ -51,65 +51,43 @@
       (if (</>
            (// (? (= 108 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
            (//
-            (? (= 107 #t) (= 108 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
+            (? (= 107 #t) (= 108 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (//
-            (? (= 105 #t) (= 106 #t) (= 107 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
+            (? (= 105 #t) (= 106 #t) (= 107 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
            (// (? (= 108 #t)) (nop@) (set-var T 1) (set-var O 3) (seg-call))
            (//
-            (? (= 107 #t) (= 108 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 2)
-            (seg-call))
+            (? (= 107 #t) (= 108 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (//
-            (? (= 109 #t) (= 107 #f))
-            (nop@)
-            (set-var T 1)
-            (set-var O 1)
-            (seg-call))
+            (? (= 109 #t) (= 107 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
            (//
-            (? (= 111 #t) (= 112 #t))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
+            (? (= 111 #t) (= 112 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
            (// (? (= 108 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (//
-            (? (= 107 #t) (= 108 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
+            (? (= 107 #t) (= 108 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (//
-            (? (= 110 #t) (= 107 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
+            (? (= 110 #t) (= 107 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/
       (if (</>
            (// (? (= 108 #t)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+; Move
      (/
       (if (</>
            (// (? (= 108 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -121,7 +99,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text #:col 7 "きららの奴、ずいぶんスピードを出してるなあ‥‥" 'br)
    (text "ジェットスキーは結構、危ないんだがな‥‥")
@@ -147,7 +125,7 @@
    (proc 15)
    (proc 19)
    (set-reg 112 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text #:col 7 "海は広いぞ大きいぞ！")
    (proc 15)
@@ -167,7 +145,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -209,7 +187,7 @@
    (text "め、目の前で刃物をチラつかせないでくれ‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
    (text "きらら！" 'br)
@@ -217,7 +195,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 40 0 10 96")
+   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -234,7 +212,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96")
+   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -272,7 +250,7 @@
    (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -314,7 +292,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 40 0 10 96")
+   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -345,7 +323,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 70 0 10 96")
+   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -364,7 +342,7 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96")
+   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 0)
@@ -403,7 +381,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96")
+   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (sound '|| 0)
@@ -426,13 +404,11 @@
    (exec-mem 2816 "EXIT")
    (set-var U 10)
    (mes-load? "mes¥action1.mes")
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns13_14.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text #:col 7 "海の上だ‥‥お尻は触れない‥‥‥‥")
    (proc 15)
@@ -449,7 +425,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text #:col 7 "波をけちらし、移動中だ！！")
    (proc 15)
@@ -466,9 +442,10 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 10 (<> (text #:col 8 "［ジョニー］" 'br)))
    (define-proc 11 (<> (text #:col 3 "［マジェンタ］" 'br)))
    (proc 19)

@@ -72,9 +72,9 @@
 ; Unused
      (/ (nop@))
 ; Poophole
-     (/ (nop@) (set-var T 7) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 7) (set-var O 0) (seg-call)))))
 ; Cooch
-     (/ (nop@) (set-var T 8) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 8) (set-var O 0) (seg-call)))))
 ; Unused
      (/ (nop@))
      (/ (nop@))

@@ -93,54 +93,36 @@
       (if (</>
            (// (? (= 66 #t)) (nop@) (set-var T 0) (set-var O 4) (seg-call))
            (//
-            (? (= 65 #t) (= 66 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 3)
-            (seg-call))
+            (? (= 65 #t) (= 66 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
            (//
-            (? (= 64 #t) (= 65 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 2)
-            (seg-call))
+            (? (= 64 #t) (= 65 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (//
-            (? (= 63 #t) (= 64 #f))
-            (nop@)
-            (set-var T 0)
-            (set-var O 1)
-            (seg-call))
+            (? (= 63 #t) (= 64 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
      (/
       (if (</>
            (// (? (= 65 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
      (/
       (if (</>
            (// (? (= 72 #t)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
            (//
-            (? (= 69 #t) (= 70 #t) (= 71 #t) (= 72 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 4)
-            (seg-call))
+            (? (= 69 #t) (= 70 #t) (= 71 #t) (= 72 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
            (// (? (= 65 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (//
-            (? (= 68 #t) (= 65 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 2)
-            (seg-call))
+            (? (= 68 #t) (= 65 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (//
-            (? (= 67 #t) (= 68 #f))
-            (nop@)
-            (set-var T 2)
-            (set-var O 1)
-            (seg-call))
+            (? (= 67 #t) (= 68 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
            (// (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
+; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -152,7 +134,7 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text #:col 7 "で、で、で、で、で、でででで‥‥")
    (proc 15)
@@ -185,7 +167,7 @@
    (proc 15)
    (proc 19)
    (set-reg 72 #t))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text #:col 7 "マ、マジェンタさんだよな‥‥")
    (proc 15)
@@ -199,7 +181,7 @@
    (proc 15)
    (proc 19)
    (set-reg 71 #t))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
    (text "き、君はっ！？")
@@ -369,29 +351,28 @@
    (text "どきやがれ〜っ！！")
    (proc 15)
    ((cmd 209) 0 2)
-   (text-frame 3 324 52 379)
-   (text-reset 15)
-   (text-frame 4 16 51 303)
-   (text-reset 15)
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns13_10.mes"))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text #:col 7 "は、はは‥‥" 'br)
    (text "ヘタなことはしない方がいいな‥‥‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 11)
    (text "ダメ〜ん！　あなたを離さないわ‥‥")
    (proc 15)
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
    (define-proc 11 (<> (text #:col 3 "［マジェンタ］" 'br)))
    (define-proc 12 (<> (text #:col 5 "［コロンビア］" 'br)))
    (proc 19)
