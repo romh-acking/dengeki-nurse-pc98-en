@@ -111,7 +111,7 @@
    (proc 18)
    (text-color 7)
    (str "Now that I think about it, I don't see Doc Akiba" 'br)
-   (str "or Kuroko... Where did those two go to slack off?")
+   (str "or Croco... Where did those two go to slack off?")
    (proc 15)
    (proc 19)
    (set-reg 27 #t))
@@ -283,7 +283,7 @@
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
-           (str "Y-yeah... I was busy, so I didn't have" 'br)
+           (str "Y-Yeah... I was busy, so I didn't have" 'br)
    (str "time to go buy one...")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
@@ -298,7 +298,7 @@
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
            (str "Hey, put a sock in it! I'm pretty self-" 'br)
-   (str "conscious about my chest size!")
+   (str "conscious about my chest size, you know!")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 19)
@@ -337,12 +337,9 @@
    (text-color 7)
    (branch-random
     (</>
-     (/
-      (text "かき氷を食べに行くには、まだ早いようだ。"))
-     (/
-      (text "焼きソバを食べに行くには、まだ早いようだ。"))
-     (/
-      (text "おでんを食べに行くには、まだ早いようだ。"))))
+     (/ (text "かき氷を食べに行くには、まだ早いようだ。"))
+     (/ (text "焼きソバを食べに行くには、まだ早いようだ。"))
+     (/ (text "おでんを食べに行くには、まだ早いようだ。"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
