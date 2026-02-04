@@ -2,39 +2,18 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; The game's staff roll. Plays when beating the game, and accessible from the Omake mode that is unlocked afterwards.
+; -----Notes:-----
+; I've modified the text frames to accomodate displaying the Japanese and English text side-by-side.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
   (flag-save 5) ; <- PC-98
 ; (set-reg 889 #f) (branch-reg 1005 (</> (/ (flag-save 5)) (/ (nop@)))) <- FMT
-  (define-proc 10
-    (<>
-     ((cmd 195) 0 65535)
-     ((cmd 195) 1 65535)
-     (delay 270 0)
-     (text-frame 18 239 60 356)
-     (text-reset 1)))
-  (define-proc 11
-    (<>
-     ((cmd 195) 0 65535)
-     (delay 270 0)
-     (text-frame 11 68 48 184)
-     (text-reset 14)
-     (text-frame 28 220 59 316)))
-  (define-proc 12
-    (<>
-     ((cmd 195) 0 65535)
-     (delay 270 0)
-     (text-frame 28 220 59 316)
-     (text-reset 14)
-     (text-frame 11 68 48 184)))
-  (define-proc 13
-    (<>
-     ((cmd 195) 0 65535)
-     (delay 270 0)
-     (text-frame 30 200 70 390)
-     (exec-mem 2816 "VIEW 30 200 66 390,PUT 5 30 200")))
+  (define-proc 10 (<> ((cmd 195) 0 65535) ((cmd 195) 1 65535) (delay 270 0) (text-frame 18 239 60 356) (text-reset 1)))
+  (define-proc 11 (<> ((cmd 195) 0 65535)                     (delay 270 0) (text-frame 11 68 48 184)  (text-reset 14) (text-frame 28 220 59 316)))
+  (define-proc 12 (<> ((cmd 195) 0 65535)                     (delay 270 0) (text-frame 28 220 59 316) (text-reset 14) (text-frame 11 68 48 184)))
+  (define-proc 13 (<> ((cmd 195) 0 65535)                     (delay 270 0) (text-frame 30 200 70 390) (exec-mem 2816 "VIEW 30 200 66 390,PUT 5 30 200")))
   (sound '|| 0)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M128")
@@ -60,24 +39,24 @@
   ((cmd 195) 1 65535)
   (delay 380 0)
 
-; 	Credits start here; I've moved the text box up and left by 16 pixels to accomodate the TL
+; 	Credits start here
 ; 	(32 half-width characters wide)
 
   (text-frame 18 239 60 356)
   (text-reset 1)
-  (text "　　　　　　　企画・監修" 'br "　　　　")     (str " Planning") (text "／") (str "Supervision" 'br) (text 'br)
-  (text "　　　　　　電撃プロジェクト" 'br "　　　　　　") (str "Dengeki Project" 'br)
+  (text "　　　　　　　企画・監修" 'br "　　　　")                (str " Planning") (text "／") (str "Supervision" 'br) (text 'br)
+  (text "　　　　　　電撃プロジェクト" 'br "　　　　　　")            (str "Dengeki Project" 'br)
   (proc 10)
-  (text "　　　シナリオ・ゲームデザイン" 'br "　　　") (str " Scenario") (text "／") (str "Game Design" 'br) (text 'br)
-  (text "　　　　　　葛西　みなみ" 'br "　　　　　　") (str "Minami Kasai" 'br)
+  (text "　　　シナリオ・ゲームデザイン" 'br "　　　")              (str " Scenario") (text "／") (str "Game Design" 'br) (text 'br)
+  (text "　　　　　　葛西　みなみ" 'br "　　　　　　")              (str "Minami Kasai" 'br)
   (proc 10)
-  (text "　" '|34368| "作画監督・キャラクターデザイン" 'br) (str "Animation Director") (text "／") (str "Character Design" 'br) (text 'br)
-  (text "　　　　　　亜久都　まお" 'br "　　　　　　　")       (str " Mao Act" 'br)
+  (text "　" '|34368| "作画監督・キャラクターデザイン" 'br)       (str "Animation Director") (text "／") (str "Character Design" 'br) (text 'br)
+  (text "　　　　　　亜久都　まお" 'br "　　　　　　　")             (str " Mao Act" 'br)
   (proc 10)
-  (text "　　　　　　システム監修" 'br "　　　　")             (str " System Supervision" 'br) (text 'br)
-  (text "　　　　　　" '|34368| "岡地　常義" 'br "　　　　　") (str "Tsuneyoshi Okachi" 'br)
+  (text "　　　　　　システム監修" 'br "　　　　")                (str " System Supervision" 'br) (text 'br)
+  (text "　　　　　　" '|34368| "岡地　常義" 'br "　　　　　")    (str "Tsuneyoshi Okachi" 'br)
   (proc 10)
-  (text "　　　　　シナリオプログラム" 'br "　　　　　") (str " Scenario Program" 'br) (text 'br)
+  (text "　　　　　シナリオプログラム" 'br "　　　　　")             (str " Scenario Program" 'br) (text 'br)
   (text "　　　　　　　中谷　由司" 'br)
   (proc 10)
   (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br) ; <- PC-98
@@ -87,15 +66,15 @@
   (proc 10)
 
 ; FMT:
-; (text "　　　　ＴＯＷＮＳ版プログラム" 'br "　　　　　") (str "TOWNS Ver. Program" 'br) (text 'br)
-; (text "　　　　　　　ぺぺ　藤岡" 'br "　　　　　　")   (str " Pepe Fujioka")
+; (text "　　　　ＴＯＷＮＳ版プログラム" 'br "　　　　　")            (str "TOWNS Ver. Program" 'br) (text 'br)
+; (text "　　　　　　　ぺぺ　藤岡" 'br "　　　　　　")              (str " Pepe Fujioka")
 ; (proc 10)
 
-  (text "　　　　　　ＣＧエディター" 'br "　　　　　　　") (str "CG Editor" 'br) (text 'br)
-  (text "　　　　　　　松本　規之" 'br "　　　　　")    (str "Noriyuki Matsumoto" 'br)
+  (text "　　　　　　ＣＧエディター" 'br "　　　　　　　")            (str "CG Editor" 'br) (text 'br)
+  (text "　　　　　　　松本　規之" 'br "　　　　　")               (str "Noriyuki Matsumoto" 'br)
   (proc 10)
-  (text "　　　　　　ＣＧエディター" 'br "　　　　　　　") (str "CG Editor" 'br) (text 'br)
-  (text "　　　　　　　末武　潤二" 'br "　　　　　　")   (str "Junji Suetake" 'br)
+  (text "　　　　　　ＣＧエディター" 'br "　　　　　　　")            (str "CG Editor" 'br) (text 'br)
+  (text "　　　　　　　末武　潤二" 'br "　　　　　　")              (str "Junji Suetake" 'br)
   (proc 10)
   ((cmd 197) 1 16)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -113,29 +92,29 @@
 
   (text-frame 11 68 36 184)
   (text-reset 14)
-  (text "　　　　　　作曲・編曲" 'br "　　　　")  (str "Composer") (text "／") (str "Arranger" 'br)
-  (text "　　　　　　金森　直幹" 'br "　　　　　") (str "Naoki Kanamori")
+  (text "　　　　　　作曲・編曲" 'br "　　　　")               (str "Composer") (text "／") (str "Arranger" 'br)
+  (text "　　　　　　金森　直幹" 'br "　　　　　")              (str "Naoki Kanamori")
   (proc 11)
-  (text "　　　　　　" "音楽監修" 'br "　　　") (str " Music Supervision" 'br) (text 'br)
-  (text "　　亜希羅　　　　　　")             (str "Akira" 'br)
-  (text "〔有〕ＭＵＳＥ　　")               (str "MUSE Co., Ltd.")
+  (text "　　　　　　" "音楽監修" 'br "　　　")              (str " Music Supervision" 'br) (text 'br)
+  (text "　　亜希羅　　　　　　")                          (str "Akira" 'br)
+  (text "〔有〕ＭＵＳＥ　　")                            (str "MUSE Co., Ltd.")
   (proc 12)
   ((cmd 195) 0 65535)
   (delay 300 0)
-  (text "　　　　　　テストプレイ" 'br "　　　　　　") (str " Test Play" 'br) (text 'br)
-  (text "　　大須賀　守弘　　")                (str " Morihiro Osuga" 'br)
-  (text "　　" '|34368| "小林　和彦　　")     (str "Kazuhiko Kobayashi")
+  (text "　　　　　　テストプレイ" 'br "　　　　　　")            (str " Test Play" 'br) (text 'br)
+  (text "　　大須賀　守弘　　")                           (str " Morihiro Osuga" 'br)
+  (text "　　" '|34368| "小林　和彦　　")                (str "Kazuhiko Kobayashi")
   (proc 11)
   (text "　　　　　" '|34368| "テストプレイ" 'br "　　　　　　") (str "Test Play" 'br) (text 'br)
   (text "　　"    '|34368| "広木　徳雄　")              (str " Norio Hiroki" 'br)
   (text "　　"    '|34368| "平間　知之　")              (str "Tomoyuki Hirama")
   (proc 12)
-  (text "　　　　　　テストプレイ" 'br "　　　　　　") (str " Test Play" 'br) (text 'br)
-  (text "　　相原　剣二　　")                 (str "Kenji Aihara" 'br)
-  (text "　　坂本　憲一　")                  (str "Kenichi Sakamoto")
+  (text "　　　　　　テストプレイ" 'br "　　　　　　")            (str " Test Play" 'br) (text 'br)
+  (text "　　相原　剣二　　")                            (str "Kenji Aihara" 'br)
+  (text "　　坂本　憲一　")                             (str "Kenichi Sakamoto")
   (proc 11)
-  (text "　　　　　アドワーク" 'br "　　　　　") (str " Ad Work" 'br) (text 'br)
-  (text "　　大沢　竜彦　")              (str "Tatsuhiko Osawa" 'br)
+  (text "　　　　　アドワーク" 'br "　　　　　")               (str " Ad Work" 'br) (text 'br)
+  (text "　　大沢　竜彦　")                             (str "Tatsuhiko Osawa" 'br)
   (text "　　塚田　誠")
   ((cmd 195) 0 65535)
   (delay 150 0)
@@ -149,10 +128,10 @@
   (text "　　　　作曲　金森直幹" 'br)
   (text "　歌と演奏　ＣＨＩＫＡ＆亜希羅組" 'br)
   (text 'br)
-  (text "　") (str "Theme Song") (text "“") (str "Love Plasma 100") (text "\n”" 'br)
+  (text "　")   (str "Theme Song") (text "“") (str "Love Plasma 100") (text "\n”" 'br)
   (text "　　　") (str "Lyricist: Minami Kasai" 'br)
   (text "　　　") (str "Composer: Naoki Kanamori" 'br)
-  (str "Vocals/Performer: CHIKA & Akiragumi")
+               (str "Vocals/Performer: CHIKA & Akiragumi")
   ((cmd 195) 0 65535)
   (delay 200 0)
   (text-frame 16 168 54 344)
@@ -182,14 +161,13 @@
 ; 	Credits continue...
 
   (text-frame 30 200 70 390)
-  (text "　　　　　　" '|34368| "協力" 'br)
-  (text "　　　　　") (str "Cooperation" 'br) (text 'br)
+  (text "　　　　　　" '|34368| "協力" 'br "　　　　　")      (str "Cooperation" 'br) (text 'br)
   (text "　　　　　Ｔ・Ａ・Ｎ" 'br)
   (text "　　　　　ＦＵＲＵＭＩ")
   (proc 13)
-  (text "　　　　　　" '|34368| "協力" 'br "　　　　　") (str "Cooperation" 'br) (text 'br)
-  (text "　") (text "西陣ターボＲ　")               (str "Nishijin Turbo-R" 'br)
-  (text "　" '|34368| "梅野　貴和　　")             (str "Takakazu Umeno")
+  (text "　　　　　　" '|34368| "協力" 'br "　　　　　")      (str "Cooperation" 'br) (text 'br)
+  (text "　") (text "西陣ターボＲ　")                    (str "Nishijin Turbo-R" 'br)
+  (text "　" '|34368| "梅野　貴和　　")                  (str "Takakazu Umeno")
   (proc 13)
   (text "　　ＳＰＥＣＩＡＬ　ＴＨＡＮＫＳ" 'br) (text 'br)
   (text "　ＨＡＲＡＨＯＲＥ　ＨＩＲＯＨＡＲＡ")
@@ -197,8 +175,8 @@
   (text "　　ＳＰＥＣＩＡＬ　ＴＨＡＮＫＳ" 'br) (text 'br)
   (text "　　　　　　　ＳＨＯＷ")
   (proc 13)
-  (text "　　　　プロデューサー" 'br "　　　　　")  (str " Producer" 'br) (text 'br)
-  (text "　　　　　田所　広成" 'br "　　　")     (str " Hironari Tadokoro")
+  (text "　　　　プロデューサー" 'br "　　　　　")               (str " Producer" 'br) (text 'br)
+  (text "　　　　　田所　広成" 'br "　　　")                  (str " Hironari Tadokoro")
   ((cmd 195) 0 65535)
   (proc 13)
   (text "　　エグゼクティブプロデューサー" 'br "　　　　")           (str " Executive Producer" 'br) (text 'br)
@@ -211,7 +189,7 @@
   (delay 200)
   (text "　　　　　　制作・著作" 'br "　　　　")     (str " Production／Work" 'br) (text 'br)
   (str " (C)1992 ") (text "有限会社アイデス") (str " (IDES' CO,LTD.)") ; <- PC-98
-  (str " (C)1992 ") (text "カクテルソフト　")   (str " (COCKTAIL SOFT)")
+  (str " (C)1992 ") (text "カクテルソフト　") (str " (COCKTAIL SOFT)")
   ((cmd 195) 0 65535)
 
 ; FMT:

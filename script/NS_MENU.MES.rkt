@@ -12,18 +12,8 @@
    ((cmd 204) 1000 1006)
    ((cmd 199) 6)
    (if (</>
-        (//
-         (?
-          (= 1000 #f)
-          (= 1001 #f)
-          (= 1002 #f)
-          (= 1003 #f)
-          (= 1004 #f)
-          (= 1005 #f)
-          (= 1006 #f))
-         (nop@)
-         (set-reg 990 #f))
-        (// (nop@) (set-reg 990 #t))))
+        (// (? (= 1000 #f) (= 1001 #f) (= 1002 #f) (= 1003 #f) (= 1004 #f) (= 1005 #f) (= 1006 #f)) (nop@) (set-reg 990 #f))
+        (//                                                                                         (nop@) (set-reg 990 #t))))
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (image-file "gpc¥Waku1.gpc") (image-mem 0 0) (exec-mem 2816 "GET 10 56 16 22 160")
    (image-file "gpc¥Waku2.gpc") (image-mem 0 0) (exec-mem 2816 "GET 12 1 313 54 78")
@@ -45,11 +35,10 @@
      60 130
      60 160
      (</>
-      (/ (text-color 1) (str " Information") (text "　"))
-      (/ (text #:col 1 "　") (str " New Game ") (text "　"))
-      (/ (set-reg 990 #t)
-         (text #:col 1 "　") (str " Continue ") (text "　"))
-      (/ (text #:col 1 "　") (str "Bonus Mode") (text "　"))))
+      (/                  (text-color 1)     (str " Information") (text "　"))
+      (/                  (text #:col 1 "　") (str " New Game ")   (text "　"))
+      (/ (set-reg 990 #t) (text #:col 1 "　") (str " Continue ")   (text "　"))
+      (/                  (text #:col 1 "　") (str "Bonus Mode")   (text "　"))))
     (sound '|| 0)
 
 ; 	Info menu options (18 wide)
@@ -68,10 +57,10 @@
         58 132
         58 162
         (</>
-         (/ (text-color 1) (str "Hard Disk Installs"))
-         (/ (text-color 1) (str "Supplementary Info"))
-         (/ (text #:col 1 "　") (str " Join our BBS ") (text "　"))
-         (/ (text #:col 1 "　　　") (str "Cancel") (text "　　　"))))
+         (/ (text-color 1)       (str "Hard Disk Installs"))
+         (/ (text-color 1)       (str "Supplementary Info"))
+         (/ (text #:col 1 "　")   (str " Join our BBS ") (text "　"))
+         (/ (text #:col 1 "　　　") (str "Cancel")         (text "　　　"))))
        (branch-var S
         (</>
          (/ ((cmd 209) 0 2) (set-reg 200 #t) (mes-jump "mes¥Oshirase.mes"))
@@ -83,24 +72,9 @@
 
       (/
        ((cmd 209) 0 3)
-       (define-proc 15
-         (<>
-          (text-color 4)
-          (exec-mem 34128 0 6 "■" 66 376 0 0 0)
-          (text-frame 3 324 52 379)
-          (text-reset 15)))
-       (define-proc 16
-         (<>
-          (text-color 4)
-          (exec-mem 34128 0 6 "▽" 70 376 0 0 1)
-          (text-frame 16 324 66 379)
-          (text-reset 1)))
-       (define-proc 17
-         (<>
-          (text-color 4)
-          (text-frame 16 346 52 360)
-          (str "Please select a command!")
-          (text-frame 3 324 52 379)))
+       (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
+       (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))
+       (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
        (set-var U 1)
        (text-frame 3 324 52 379)
        (text-reset 15)
@@ -121,30 +95,15 @@
         60 122
         60 144
         (</>
-         (/ (set-reg 1000 #t) (text #:col 1 "　") (str " Carte ") (text "１　" '|34368|))
-         (/ (set-reg 1001 #t) (text #:col 1 "　") (str " Carte ") (text "２　" '|34368|))
-         (/ (set-reg 1002 #t) (text #:col 1 "　") (str " Carte ") (text "３　" '|34368|))
-         (/ (set-reg 1003 #t) (text #:col 1 "　") (str " Carte ") (text "４　" '|34368|))
-         (/ (set-reg 1004 #t) (text #:col 1 "　") (str " Carte ") (text "５　" '|34368|))
-         (/                   (text #:col 1 "　　") (str "Cancel") (text "　　"))))
-       (define-proc 15
-         (<>
-          (text-color 4)
-          (exec-mem 34128 0 6 "■" 66 376 0 0 0)
-          (text-frame 3 324 52 379)
-          (text-reset 15)))
-       (define-proc 16
-         (<>
-          (text-color 4)
-          (exec-mem 34128 0 6 "▽" 70 376 0 0 1)
-          (text-frame 16 324 66 379)
-          (text-reset 1)))
-       (define-proc 17
-         (<>
-          (text-color 4)
-          (text-frame 16 346 52 360)
-          (str "Please select a command!")
-          (text-frame 3 324 52 379)))
+         (/ (set-reg 1000 #t) (text #:col 1 "　")  (str " Carte ") (text "１　" '|34368|))
+         (/ (set-reg 1001 #t) (text #:col 1 "　")  (str " Carte ") (text "２　" '|34368|))
+         (/ (set-reg 1002 #t) (text #:col 1 "　")  (str " Carte ") (text "３　" '|34368|))
+         (/ (set-reg 1003 #t) (text #:col 1 "　")  (str " Carte ") (text "４　" '|34368|))
+         (/ (set-reg 1004 #t) (text #:col 1 "　")  (str " Carte ") (text "５　" '|34368|))
+         (/                   (text #:col 1 "　　") (str "Cancel")  (text "　　"))))
+       (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
+       (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))
+       (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
        (branch-var S
         (</>
          (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 0))
@@ -159,13 +118,7 @@
       (/
        (if (</>
             (//
-             (?
-              (= 1005 #t)
-              (= 896 #t)
-              (= 897 #t)
-              (= 898 #t)
-              (= 899 #t)
-              (= 900 #t))
+             (? (= 1005 #t) (= 896 #t) (= 897 #t) (= 898 #t) (= 899 #t) (= 900 #t))
              (nop@)
              (text-frame 58 24 75 168)
              (text-reset 15)
@@ -178,11 +131,11 @@
               58 114
               58 139
               (</>
-               (/ (text #:col 1 "　　") (str "Free Battle ") (text "　"))
-               (/ (text #:col 1 "　　") (str " Staff Box") (text "　　"))
-               (/ (text #:col 1 "　") (str " Kirara's Room") (text "　"))
-               (/ (text #:col 1 "　") (str "Episode Select") (text "　"))
-               (/ (text #:col 1 "　　　") (str "Cancel") (text "　　　"))))
+               (/ (text #:col 1 "　　")  (str "Free Battle ")   (text "　"))
+               (/ (text #:col 1 "　　")  (str " Staff Box")     (text "　　"))
+               (/ (text #:col 1 "　")   (str " Kirara's Room") (text "　"))
+               (/ (text #:col 1 "　")   (str "Episode Select") (text "　"))
+               (/ (text #:col 1 "　　　") (str "Cancel")         (text "　　　"))))
              (branch-var S
               (</>
 

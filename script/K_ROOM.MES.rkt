@@ -29,12 +29,7 @@
    (exec-mem 2816 "GET 20 54 226 26 171")
    (define-proc 10 (<> (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 15)))
    (define-proc 11 (<> (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 15)))
-   (define-proc 16
-     (<>
-      (text-color 4)
-      (exec-mem 34128 0 6 "▽" 51 366 0 0 15)
-      (text-frame 3 324 52 379)
-      (text-reset 15)))
+   (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 51 366 0 0 15) (text-frame 3 324 52 379) (text-reset 15)))
    (image-file "b:¥gpc¥Heya.gpc") (image-mem 1 3)
    (image-file "b:¥gpc¥Kirara.gpc") (image-mem 1 3)
    (exec-mem 2816 "GET 19 54 226 26 171")
@@ -76,12 +71,12 @@
      57 337
      57 359
      (</>
-      (/ (text #:col 4 "　　") (str "Browse Album") (text "　　"))
-      (/ (text #:col 4 "　　") (str " Play ") (text "ＣＤ　　　"))
+      (/ (text #:col 4 "　　") (str "Browse Album")   (text "　　"))
+      (/ (text #:col 4 "　　") (str " Play ")         (text "ＣＤ　　　"))
       (/ (text #:col 4 "　　") (str "Watch Henshin ") (text "　"))
-      (/ (text #:col 4 "　　") (str "Watch Ending") (text "　　"))
+      (/ (text #:col 4 "　　") (str "Watch Ending")   (text "　　"))
       (/ (text #:col 4 "　　") (str "Watch Opening ") (text "　"))
-      (/ (text #:col 4 "　　") (str " Leave Room ") (text "　　"))))
+      (/ (text #:col 4 "　　") (str " Leave Room ")   (text "　　"))))
     (sound '|| 0)
     (exec-mem 2816 "VIEW 54 226 80 397,OVER 1,PUT 19 54 226")
     (branch-var S
