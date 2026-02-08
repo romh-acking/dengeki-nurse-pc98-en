@@ -335,11 +335,13 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
+   (str "It seems too early to go get ")
    (branch-random
     (</>
-     (/ (text "かき氷を食べに行くには、まだ早いようだ。"))
-     (/ (text "焼きソバを食べに行くには、まだ早いようだ。"))
-     (/ (text "おでんを食べに行くには、まだ早いようだ。"))))
+     (/ (str "shaved ice"))
+     (/ (str "yakisoba"))
+     (/ (str "oden"))))
+   (str ".")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

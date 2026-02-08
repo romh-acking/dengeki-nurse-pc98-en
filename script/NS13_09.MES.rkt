@@ -149,8 +149,9 @@
  (seg (? (= T 0) (= O 2))
    (proc 18)
    (text-color 7)
-   (str "Woah, woah... This is kinda bad... If someone" 'br)
-   (str "comes in, how do I explain this...?") ; First part is a placeholder line
+   (str "S-s-so...that's what's going on, but... This is" 'br)
+   (str "kinda bad... If someone comes in, how do I explain")
+   (str "this...?")
    (proc 15)
    (proc 19)
    (set-reg 68 #t))
