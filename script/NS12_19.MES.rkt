@@ -50,7 +50,7 @@
   (str "where's Tanchi-kun?")
   (proc 15)
   (proc 10)
-         (str "Haven't seen him all morning, Croco!")
+         (str "Haven't seen him all morning, Wani!")
   (proc 15)
   (proc 1)
           (str "Now that you mention it, I wonder if" 'br)

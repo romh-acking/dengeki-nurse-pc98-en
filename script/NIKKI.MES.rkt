@@ -116,7 +116,9 @@
   (text "　　　　　　　　　　") (str "January: At the office" 'br)
   (text 'br)
   (str "I had a fierce argument with Mao-chan." 'br)
+  (text 'br)
   (str "Mao:") (text "“") (str "Minami-san, your ideas are way too vulgar!") (text "”" 'br)
+  (text 'br)
   (str "I was devasated that a young guy would say that to me..." 'br)
   (proc 16)
 

@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
 
-; 	Cocktail Soft logo animation
+; 	Initial startup and Cocktail Soft logo animation
 
   ((cmd 206) 0 0)
   ((cmd 206) 1 1)
@@ -23,17 +23,25 @@
   (exec-file "Metn.ovl")
   (sound '|| 0)
 
-; 	Opening sequence begins here...
+; 	Dengeki Project splash screen
 
   (image-file "b:¥gpc¥D-PRO-5.gpc")
   (text-frame 0 0 79 399)
-  (text-reset 10) (image-mem 0 3)
+  (text-reset 10)
+  (image-mem 0 3)
   ((cmd 209) 1 3)
+
+; 	Opening sequence programs loaded to memory here...
+
   (load-mem "cmd¥nrsdemo.tcm" 256)
   (load-mem "cmd¥palch.tcm" 4864)
   (load-mem "cmd¥picbankh.tcm" 5504)
   (load-mem "cmd¥nrsopen.tcm" 5760)
   (load-mem "cmd¥acte.tcm" 32768)
+
+; 	Dengeki Nurse logo here...
+; 	(It's really long because the palette animation is defined frame-by-excruciating-frame. See OPENNING.MES of DOTB2 for a less daunting demonstration)
+
   (exec-mem 5760 0)
   (exec-mem 256 0 0 "b:¥open¥title.wsb" 1)
   (exec-mem 256 1 0 "....................")
@@ -432,36 +440,41 @@
   (wait 80)
   (exec-mem 256 3 0)
   (delay 100 0)
+
+; 	Opening sequence set up and loaded here
+
   ((cmd 209) 0 3)
   (exec-mem 32768 "INIT,SHOW 0,EXIT")
   (image-file "b:¥open¥nsop_13.gpc")
   (exec-mem 5504 0 0)
   (image-file "b:¥open¥nsop_06.gpc")
   (sound '|se | "b:¥uso¥nurse.se")
-  (sound '|| "uso¥nurse01b.uso") (image-mem 0 1)
+  (sound '|| "uso¥nurse01b.uso")
+  (image-mem 0 1)
   ((cmd 209) 1 2)
-  (exec-mem 5760 1)
+  (exec-mem 5760 1) ; This is where the program is actually run
   ((cmd 209) 0 2)
 
 ; 	Main game loaded here, beginning with loading all the commands into memory...
 
-  (load-mem "cmd¥picbankh.tcm" 256)
-  (load-mem "cmd¥palch.tcm" 1280)
-  (load-mem "cmd¥acte.tcm" 2816)
-  (load-mem "cmd¥quakeh.tcm" 6656)
-  (load-mem "cmd¥buff.tcm" 10752)
-  (load-mem "cmd¥whiteh.tcm" 17920)
-  (load-mem "cmd¥mousecsr.tcm" 18944)
-  (load-mem "dat¥nurcsr.dat" 19200)
-  (load-mem "cmd¥tmaskh.tcm" 19456)
-  (load-mem "cmd¥icon2h.tcm" 24576)
-  (load-mem "cmd¥scrh.tcm" 28672)
-  (load-mem "cmd¥ChgFonth.tcm" 32768)
-  (load-mem "cmd¥ExitOffH.tcm" 32848)
-  (load-mem "dat¥icondat.dat" 33024)
-  (load-mem "cmd¥blnkcsrh.tcm" 34128)
+  (load-mem "cmd¥picbankh.tcm" 256)   ; 
+  (load-mem "cmd¥palch.tcm" 1280)     ; Palette change
+  (load-mem "cmd¥acte.tcm" 2816)      ; Graphics overlay
+  (load-mem "cmd¥quakeh.tcm" 6656)    ; Screen shake/crossfade
+  (load-mem "cmd¥buff.tcm" 10752)     ; Screen buffer
+  (load-mem "cmd¥whiteh.tcm" 17920)   ; Screen fade to white/black
+  (load-mem "cmd¥mousecsr.tcm" 18944) ; Mouse cursor
+  (load-mem "dat¥nurcsr.dat" 19200)   ; Cursor graphic
+  (load-mem "cmd¥tmaskh.tcm" 19456)   ; Screen wipe/iris shot
+  (load-mem "cmd¥icon2h.tcm" 24576)   ; 
+  (load-mem "cmd¥scrh.tcm" 28672)     ; Screen scroll
+  (load-mem "cmd¥ChgFonth.tcm" 32768) ; Font thickness
+  (load-mem "cmd¥ExitOffH.tcm" 32848) ; 
+  (load-mem "dat¥icondat.dat" 33024)  ; 
+  (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink character
 
 ; 	...And then defining the main character names...
+; 	(10 to 14 are reserved for per-script character names; 8 and 9 are unused)
 
   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
   (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
