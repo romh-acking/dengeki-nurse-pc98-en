@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS13_12.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Our hero (and Tanchi) make it out to a beach, where a lone surfer yearns...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -40,6 +45,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 100 #t))            (nop@) (set-var T 0) (set-var O 2) (seg-call))
@@ -119,7 +125,8 @@
    (str "beach bum.")
    (proc 15)
    (proc 10)
-                (str "It's coming... It's definitely coming...")
+                (str "It's coming... It's definitely" 'br)
+   (str "coming...")
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -142,7 +149,7 @@
    (str "The woman gazes out to the ocean.")
    (proc 15)
    (text-color 7)
-   (str "A once-in-19-years perfect wave?")
+   (str "A perfect wave that comes once every 19 years?")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk

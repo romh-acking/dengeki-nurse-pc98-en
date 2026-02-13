@@ -120,6 +120,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 76 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))
@@ -168,7 +169,7 @@
  (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
-   (str "Now why... Why is Kirara with Johnny...?")
+   (str "Now why...why is Kirara with Johnny...?")
    (proc 15)
    (text-color 7)
    (str "It doesn't matter... I just need to explain to her")
@@ -216,7 +217,7 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "Kirara and Johnny are together... But why?")
+   (str "Kirara and Johnny are together...but why?")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 1))
@@ -271,7 +272,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 0 96 10 96")
+   (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -288,7 +289,7 @@
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 0 96 10 96")
+   (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
@@ -364,7 +365,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
-           (str "How do I get myself into these situations...")
+           (str "How do I end up in these situations...")
    (proc 15)
    (proc 10)
            (str "If you even have a drop of samurai blood," 'br)
@@ -536,7 +537,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 2)
-           (str "Yeah...Yeah, I'll believe you.")
+           (str "Yeah... Yeah, I'll believe you.")
    (proc 15)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -743,7 +744,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
-   (str "Where do you think YOU'RE going...")
+   (str "Where do you think YOU'RE going?")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

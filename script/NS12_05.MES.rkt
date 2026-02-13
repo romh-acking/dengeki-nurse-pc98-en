@@ -20,7 +20,8 @@
   (exec-mem 2816 "GET 8 47 22 65 150")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
@@ -31,6 +32,9 @@
   (text-reset 1)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_208.gpc,GPC") (image-mem 1 3 16 16)
   ((cmd 209) 1 2)
+
+; 	Text begins here...
+
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
@@ -74,7 +78,8 @@
   (str "left...")
   (proc 16)
   (sound '|| 0)
-  (sound '|se | 25)
+  (sound '|se | 25) ; <- PC-98
+; (sound '|se | 4)    <- FMT
   (proc 10)
             (str "And ") (text "ＦＩＲＥ〜〜〜〜！！")
   (proc 16)
@@ -85,7 +90,8 @@
   (text-color 15)
   (str "Pew pew pew pew..." 'br)
   (str "Brap brap brap brap, humm...")
-  (sound '|se | 25)
+  (sound '|se | 25) ; <- PC-98
+; (sound '|se | 4)    <- FMT
   (repeat 10
    (<>
     (exec-mem 1280 13 12 15 13) (delay 1)

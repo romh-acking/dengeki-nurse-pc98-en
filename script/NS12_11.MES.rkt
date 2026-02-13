@@ -14,7 +14,8 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_221.gpc") (image-mem 1 3)
 

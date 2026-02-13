@@ -14,7 +14,8 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse14.uso")
+  (sound '|| "uso¥Nurse14.uso") ; <- PC-98
+; (sound '|| "Nurse14.fmt")       <- FMT
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_220.gpc") (image-mem 1 3)
 
@@ -224,7 +225,8 @@
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (sound '|| 0)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5)    <- FMT
    (proc 1)
            (str "Ah!")
    (proc 15)
@@ -300,7 +302,7 @@
    (proc 19)
    (set-var B 2)
    (set-var C 2))
- (seg (? (= T 7) (= O 0))												; Butthole (336, 96)
+ (seg (? (= T 7) (= O 0))												; Poophole (336, 96)
    (proc 18)
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")

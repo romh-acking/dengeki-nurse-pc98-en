@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; Her first scheme foiled, Black Nurse calls upon another villian to carry out her dastardly will...
+; Her first scheme foiled, Black Nurse calls upon another villain to carry out her dastardly will...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -14,7 +14,8 @@
   (image-file "b:¥gpc¥ns1_203.gpc") (image-mem 1 0)
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 0)

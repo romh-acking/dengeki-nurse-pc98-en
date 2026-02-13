@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS13_14.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Episode 3 epilogue. Another hilarious episode of Dengeki Nurse to the end.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -11,7 +16,7 @@
   (sound '|| 0)
   (sound '|| "uso¥Nurse12.uso")
   (sound '|| 1)
-  (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
+  (image-file "gpc¥Aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥Ns1_338.gpc") (image-mem 1 3)
   (exec-mem 17920 0 1)
   (exec-mem 6656 8)

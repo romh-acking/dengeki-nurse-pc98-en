@@ -57,7 +57,7 @@
   (text "　　　　　　" '|34368| "岡地　常義" 'br "　　　　　")    (str "Tsuneyoshi Okachi")
   (proc 10)
   (text "　　　　　シナリオプログラム" 'br "　　　　　")             (str " Scenario Program" 'br 'br)
-  (text "　　　　　　　中谷　由司" 'br "　　　　　　")             (str "Yuji Nakatani")
+  (text "　　　　　　　中谷　由司" 'br "　　　　　　")             (str " Yuji Nakatani")
   (proc 10)
   (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br) ; <- PC-98
 ; (text "　　　　　" '|34368| "９８版プログラム" 'br "　　　　　　") (str "98 Ver. Program" 'br) <- FMT

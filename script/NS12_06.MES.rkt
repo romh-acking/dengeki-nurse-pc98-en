@@ -22,7 +22,8 @@
   (exec-mem 2816 "GET 10 40 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse09.uso")
+  (sound '|| "uso¥Nurse09.uso") ; <- PC-98
+; (sound '|| "Nurse09.fmt")       <- FMT
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_211.gpc") (image-mem 1 3)
@@ -231,13 +232,15 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 12 5 23,FREE 12")
    (sound '|| 0)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5)    <- FMT
    (proc 12)
          (str "What is the meaning of this disgraceful" 'br)
    (str "scene!?")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse14.uso")
+   (sound '|| "uso¥Nurse14.uso") ; <- PC-98
+;  (sound '|| "Nurse14.fmt")       <- FMT
    (sound '|| 3)
    (proc 19)
    (set-reg 38 #t))
@@ -315,7 +318,8 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 152 51 296,PUT 14 27 152,FREE 14")
    (sound '|| 0)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5)    <- FMT
    (proc 2)
            (str "Gack! It's those two from this morning!")
    (proc 15)
@@ -326,7 +330,8 @@
    (str "Momoko: Hehehe!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse14.uso")
+   (sound '|| "uso¥Nurse14.uso") ; <- PC-98
+;  (sound '|| "Nurse14.fmt")       <- FMT
    (sound '|| 3)
    (proc 13)
           (str "Discipline Committee! Take the students" 'br)

@@ -22,7 +22,8 @@
   (exec-mem 2816 "GET 12 60 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso")
+  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
+; (sound '|| "Nurse08.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V128E0M0")
@@ -177,7 +178,8 @@
    (exec-mem 2816 "GET 1 5 23 15 120")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 8 5 23")
    (sound '|| 0)
-   (sound '|se | 26)
+   (sound '|se | 26) ; <- PC-98
+;  (sound '|se | 5)    <- FMT
    (proc 2)
    (text "！！！！！！！！！！！！！！" 'br)
    (proc 0)
@@ -228,7 +230,8 @@
    (str "pass peacefully from acute uremia!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso")
+   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+;  (sound '|| "Nurse10.fmt")       <- FMT
    (sound '|| 1)
    (proc 19)
    (set-reg 95 #t))
@@ -419,10 +422,11 @@
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-var U 5)
+;  (set-reg 988 #f)                                    <- FMT
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes")
-   (set-reg 990 #f)
-   (mes-jump "b:¥mes¥ns12_15.mes"))
+   (mes-load? "mes¥action1.mes") ;                     <- PC-98
+;  (mes-jump "mes¥action05.mes"))                      <- FMT
+   (set-reg 990 #f) (mes-jump "b:¥mes¥ns12_15.mes")) ; <- PC-98
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")

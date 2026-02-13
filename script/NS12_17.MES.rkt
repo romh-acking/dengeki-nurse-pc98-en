@@ -19,7 +19,8 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_234.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_235.gpc,TEMP")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso")
+  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
+  (sound '|| "Nurse10.fmt")       <- FMT
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_231.gpc") (image-mem 1 3)

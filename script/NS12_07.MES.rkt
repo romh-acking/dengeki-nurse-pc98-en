@@ -20,7 +20,8 @@
   (exec-mem 2816 "GET 14 60 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse09.uso")
+  (sound '|| "uso¥Nurse09.uso") ; <- PC-98
+; (sound '|| "Nurse09.fmt")       <- FMT
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_213.gpc") (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_214.gpc") (image-mem 1 3)
@@ -442,7 +443,8 @@
    (image-file "b:¥gpc¥ns1_213.gpc") (image-mem 1)
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
-   (sound '|se | 22)
+   (sound '|se | 22) ; <- PC-98
+;  (sound '|se | 1)    <- FMT
    (proc 2)
            (str "Byobyobyooooing!")
    (proc 15)
@@ -452,7 +454,8 @@
            (str "Gorgeousss!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse09.uso")
+   (sound '|| "uso¥Nurse09.uso") ; <- PC-98
+;  (sound '|| "Nurse09.fmt")       <- FMT
    (sound '|| 3)
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
    (proc 11)

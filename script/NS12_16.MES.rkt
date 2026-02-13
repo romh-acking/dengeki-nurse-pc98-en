@@ -18,7 +18,8 @@
   (exec-mem 2816 "GET 3 0 0 24 144")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
@@ -114,7 +115,8 @@
   (str "Pew pew pew pew..." 'br)
   (str "Brap brap brap brap, humm...")
   (sound '|| 0)
-  (sound '|se | 25)
+  (sound '|se | 25) ; <- PC-98
+; (sound '|se | 4)    <- FMT
   (repeat 10
    (<>
     (exec-mem 1280 13 12 15 13) (delay 1)

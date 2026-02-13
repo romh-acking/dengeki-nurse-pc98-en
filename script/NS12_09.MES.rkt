@@ -34,7 +34,8 @@
   (str "reflecting!")
   (proc 15)
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso")
+  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
+; (sound '|| "Nurse04.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_219.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
