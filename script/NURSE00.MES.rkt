@@ -18,7 +18,8 @@
   ((cmd 209) 0 0)
   (image-file "b:¥gpc¥cocktail.gpc")
   (sound '|| "uso¥cocktail.uso")
-  ((cmd 209) 0 0) (image-mem 0)
+  ((cmd 209) 0 0)
+  (image-mem 0)
   (sound '|| 1)
   (exec-file "Metn.ovl")
   (sound '|| 0)
@@ -487,30 +488,30 @@
 
 ; 	...And finally animations or text to be displayed while waiting for player input after a line.
 
-  (define-proc 15
+  (define-proc 15							; Continuing an in-game dialogue
     (<>
      (text-color 4)
      (exec-mem 34128 0 6 "■" 66 376 0 0 0)
      (text-frame 3 324 52 379)
      (text-reset 15)))
-  (define-proc 16
+  (define-proc 16							; Continuing a cutscene dialogue
     (<>
      (text-color 4)
      (exec-mem 34128 0 6 "▽" 70 376 0 0 1)
      (text-frame 16 324 66 379)
      (text-reset 1)))
-  (define-proc 17
+  (define-proc 17							; Waiting for player input between dialogues (text component only)
     (<>
      (text-color 4)
      (text-frame 16 346 52 360)
      (text "Please select a command!")
      (text-frame 3 324 52 379)))
-  (define-proc 18
+  (define-proc 18							; Setting up text boxes for dialogue
     (<>
      (text-frame 5 320 39 382)
      (text-reset 15)
      (text-frame 3 324 52 379)))
-  (define-proc 19
+  (define-proc 19							; Waiting for player input between dialogues (prints graphic, then text as defined in proc 17)
     (<>
      (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320")
      (proc 17)))
