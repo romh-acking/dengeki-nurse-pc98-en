@@ -24,6 +24,9 @@
   (image-file "b:¥gpc¥ns1_402.gpc") (image-mem 1 3)
   ((cmd 193) 0 "gpa¥Ns1-K01.gpa")
   ((cmd 194) 0 ".ｱ.ｲ..ｳ...ｴ.....ｵ.......ｴ.....ｳ...ｲ..ｱ........")
+
+; 	Text begins here...
+
   (text-frame 16 324 66 379)
   (text-reset 1)
   ((cmd 209) 1 2)
@@ -51,7 +54,7 @@
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
-               (str "This year's GP is set to be unusually")
+               (str "This year's GP is set to be unusually" 'br)
   (str "fierce.")
   ((cmd 195) 0 65535)
   (proc 16)
@@ -60,12 +63,12 @@
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
-               (str "It appears the world champion will be")
+               (str "It appears the world champion will be" 'br)
   (str "decided at this GP...")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
-                  (str "And does this, pray tell have" 'br)
+                  (str "And does this, pray tell, have" 'br)
   (str "anything to do with the Black Cross troops...?")
   ((cmd 195) 0 65535)
   (proc 16)
@@ -79,12 +82,18 @@
   (proc 16)
   (proc 11)
                (str "Behind the grand prix, there is a" 'br)
-  (str "considerable of dirty money.")
+  (str "considerable amount of dirty money.")
+
+; 	Moguri appears on screen
+
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 197) 0 16)
   (exec-mem 1280 13 12 15 13)
   (exec-mem 6656 28 20 52 160)
+
+; 	Text continues...
+
   (proc 11)
                (str "This man, Moguri Suzuki, is the GP's" 'br)
   (str "star.")

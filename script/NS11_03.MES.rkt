@@ -13,11 +13,13 @@
 ; (sound '|| "Nurse08.fmt")       <- FMT
   (sound '|| 1)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc")
+  (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (image-file "gpc¥ns1_k05.gpc")
-  (exec-mem 6656 4 7168) (image-mem 1 3)
+  (exec-mem 6656 4 7168)
+  (image-mem 1 3)
   ((cmd 209) 1 2)
   ((cmd 204) 43 45)
 
@@ -50,13 +52,13 @@
      (/
 ; Think
       (if (</>
-           (// (? (= 43 #t) (= 44 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 43 #t) (= 44 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 45 #t)
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 43 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 44 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 44 #t)
 ; Talk
      (/ (nop@) (set-var T 2) (set-var O 0) (seg-call))
 ; Action

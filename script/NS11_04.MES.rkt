@@ -7,7 +7,8 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc")
+  (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (branch-reg 990
@@ -53,23 +54,23 @@
      (/
 ; Think
       (if (</>
-           (// (? (= 46 #t))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 46 #t))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 50 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 47 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 47 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 49 #t))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 48 #t) (= 49 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 49 #t))           (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 46 #t)
+           (// (? (= 48 #t) (= 49 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 49 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 48 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 50 #t))           (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 50 #t))           (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 51 #t)
            (//                         (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/

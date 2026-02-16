@@ -7,11 +7,9 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
-  (exec-mem 2816 "ACCESS 0")
-  (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
-  (image-file "gpc¥ns1_k02.gpc") (image-mem 1 0)
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64") (exec-mem 2816 "ACCESS 0")
+  (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
+  (image-file "gpc¥ns1_k02.gpc")    (image-mem 1 0)
   (image-file "b:¥gpc¥ns1_105.gpc") (image-mem 1 3)
   (sound '|| 0)
   (sound '|| "uso¥Nurse08.uso") ; <- PC-98
@@ -58,16 +56,16 @@
 ; Talk
      (/
       (if (</>
-           (// (? (= 66 #t) (= 67 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 144 #t))          (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 66 #t) (= 67 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 68 #t)
+           (// (? (= 144 #t))          (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 66 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 144 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
      (/
       (if (</>
-           (// (? (= 68 #t)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (//               (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 68 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                         (nop@) (set-var T 4) (set-var O 0) (seg-call))))) ; (set-reg 67 #t)
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
 ; Unused

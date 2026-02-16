@@ -11,7 +11,8 @@
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc")
+  (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (branch-reg 990
