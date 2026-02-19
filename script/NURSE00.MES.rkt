@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
 
-; 	Initial startup and Cocktail Soft logo animation
+; 	Initial startup
 
   ((cmd 206) 0 0)
   ((cmd 206) 1 1)
@@ -16,6 +16,9 @@
   (text-reset 0)
   ((cmd 204) 0 999)
   ((cmd 209) 0 0)
+
+; 	Cocktail Soft logo animation
+
   (image-file "b:¥gpc¥cocktail.gpc")
   (sound '|| "uso¥cocktail.uso")
   ((cmd 209) 0 0)
@@ -34,11 +37,11 @@
 
 ; 	Opening sequence programs loaded to memory here...
 
-  (load-mem "cmd¥nrsdemo.tcm" 256)
-  (load-mem "cmd¥palch.tcm" 4864)
-  (load-mem "cmd¥picbankh.tcm" 5504)
-  (load-mem "cmd¥nrsopen.tcm" 5760)
-  (load-mem "cmd¥acte.tcm" 32768)
+  (load-mem "cmd¥nrsdemo.tcm" 256)   ; Logo animation
+  (load-mem "cmd¥palch.tcm" 4864)    ; Palette change
+  (load-mem "cmd¥picbankh.tcm" 5504) ; 
+  (load-mem "cmd¥nrsopen.tcm" 5760)  ; Opening program
+  (load-mem "cmd¥acte.tcm" 32768)    ; Graphics overlay
 
 ; 	Dengeki Nurse logo here...
 ; 	(It's really long because the palette animation is defined frame-by-excruciating-frame. See OPENNING.MES of DOTB2 for a less daunting demonstration)
@@ -456,25 +459,25 @@
   (exec-mem 5760 1) ; This is where the program is actually run
   ((cmd 209) 0 2)
 
-; 	Main game loaded here, beginning with loading all the commands into memory...
+; 	The main game set up here, beginning with loading commands into memory...
 
-  (load-mem "cmd¥picbankh.tcm" 256)   ; 
+  (load-mem "cmd¥picbankh.tcm" 256)   ; (Used in CHANG0.MES)
   (load-mem "cmd¥palch.tcm" 1280)     ; Palette change
   (load-mem "cmd¥acte.tcm" 2816)      ; Graphics overlay
-  (load-mem "cmd¥quakeh.tcm" 6656)    ; Screen shake/crossfade
+  (load-mem "cmd¥quakeh.tcm" 6656)    ; Screen shake/dissolve
   (load-mem "cmd¥buff.tcm" 10752)     ; Screen buffer
   (load-mem "cmd¥whiteh.tcm" 17920)   ; Screen fade to white/black
   (load-mem "cmd¥mousecsr.tcm" 18944) ; Mouse cursor
   (load-mem "dat¥nurcsr.dat" 19200)   ; Cursor graphic
   (load-mem "cmd¥tmaskh.tcm" 19456)   ; Screen wipe/iris shot
-  (load-mem "cmd¥icon2h.tcm" 24576)   ; 
+  (load-mem "cmd¥icon2h.tcm" 24576)   ; Icon display (used to highlight hotspots)
   (load-mem "cmd¥scrh.tcm" 28672)     ; Screen scroll
-  (load-mem "cmd¥ChgFonth.tcm" 32768) ; Font thickness
-  (load-mem "cmd¥ExitOffH.tcm" 32848) ; 
-  (load-mem "dat¥icondat.dat" 33024)  ; 
+  (load-mem "cmd¥ChgFonth.tcm" 32768) ; Font thickness (0: 1px; 1: 2px)
+  (load-mem "cmd¥ExitOffH.tcm" 32848) ; (Used in CHANG0.MES)
+  (load-mem "dat¥icondat.dat" 33024)  ; Icon data
   (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink character
 
-; 	...And then defining the main character names...
+; 	And then the processes are defined, first for character names...
 ; 	(10 to 14 are reserved for per-script character names; 8 and 9 are unused)
 
   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
@@ -486,7 +489,7 @@
   (define-proc 6 (<> (text-color 5) (str "Head Nurse: ")))
   (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
 
-; 	...And finally animations or text to be displayed while waiting for player input after a line.
+; 	...And then for animations or text to be displayed while waiting for player input after a line.
 
   (define-proc 15							; Continuing an in-game dialogue
     (<>

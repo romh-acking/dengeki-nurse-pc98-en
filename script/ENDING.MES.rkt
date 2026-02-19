@@ -59,9 +59,8 @@
   (text "　　　　　シナリオプログラム" 'br "　　　　　")             (str " Scenario Program" 'br 'br)
   (text "　　　　　　　中谷　由司" 'br "　　　　　　")             (str " Yuji Nakatani")
   (proc 10)
-  (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br) ; <- PC-98
-; (text "　　　　　" '|34368| "９８版プログラム" 'br "　　　　　　") (str "98 Ver. Program" 'br) <- FMT
-  (text 'br)
+  (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br 'br) ;         <- PC-98
+; (text "　　　　　" '|34368| "９８版プログラム" 'br "　　　　　　") (str "98 Ver. Program" 'br 'br)   <- FMT
   (text "　　　　　　　　佳　邦" 'br "　　　　　　　")              (str " Yoshikuni")
   (proc 10)
 
@@ -80,7 +79,8 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 4)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_End2.gpc,GPC") (image-mem 1 3)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_End2.gpc,GPC")
+  (image-mem 1 3)
   (exec-mem 10752 "COPY> b:¥gpa¥ns1-End2.gpa,GPA0") ; <- PC-98
 ; ((cmd 193) 0 "ns1-End2.gpa")                        <- FMT
   (exec-mem 2816 "ACCESS 0")
@@ -161,7 +161,8 @@
 ; 	Credits continue...
 
   (text-frame 30 200 70 390)
-  (text "　　　　　　" '|34368| "協力" 'br "　　　　　")      (str "Cooperation" 'br 'br)
+  (text "　　　　　　" '|34368| "協力" 'br "　　　　　")
+  (str "Cooperation" 'br 'br)
   (text "　　　　　Ｔ・Ａ・Ｎ" 'br)
   (text "　　　　　ＦＵＲＵＭＩ")
   (proc 13)

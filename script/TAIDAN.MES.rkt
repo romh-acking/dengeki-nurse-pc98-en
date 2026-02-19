@@ -6,32 +6,42 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
   (define-proc 10 (<> (text-color 4)  (str "Minami:" 'br)))
   (define-proc 11 (<> (text-color 10) (str "Mao:" 'br)))
-  (define-proc 15
+
+  (define-proc 15							; Add line to current screen
     (<>
      (text-color 15)
      (exec-mem 34128 0 6 "▽" 37 353 0 0 1)
      (text 'br)
      (text 'br)))
-  (define-proc 16
+
+  (define-proc 16							; Clear screen and add line to empty one
     (<>
      (text-color 15)
      (exec-mem 34128 0 6 "▽" 37 353 0 0 1)
      (text-frame 13 50 71 361)
      (text-reset 1)))
+
   (sound '|| 0)
-  (sound '|| "uso¥nurse11.uso")
+  (sound '|| "uso¥nurse11.uso") ; <- PC-98
+; (sound '|| "nurse11.fmt")       <- FMT
   (sound '|| 1)
+
   (text-frame 0 0 79 399)    (text-reset 1)
   (text-frame 14 142 65 279) (text-reset 1)
-  (text-frame 13 5 71 361)   ((cmd 209) 1 2)
+  (text-frame 13 5 71 361)
+  ((cmd 209) 1 2)
 
-; 	Text begins here... (59 half-width characters)
+; 	Header printed here
 
   (text #:col 15 'br)
   (text "　　　　　　　−") (str "Dengeki Speakeasy") (text "−") 
   (text 'br)
+
+; 	Text begins here... (59 half-width characters)
+
   (text-frame 13 50 71 361)
   (proc 10)
   (str "Hi everyone, it's me, Minami!!")
@@ -43,6 +53,7 @@
   (str "Minami & Mao:" 'br)
   (str "Thanks for playing all the way to the end!")
   (proc 16)
+
   (proc 10)
   (str "Hey, doesn't this music sound kinda somber?")
   (proc 15)
@@ -56,6 +67,7 @@
   (str "Is this foreshadowing how Dengeki Nurse will flop and" 'br)
   (str "we'll fall into obscurity?")
   (proc 16)
+
   (proc 10)
   (str "Hmm... A conspiracy!!")
   (proc 15)
@@ -70,6 +82,7 @@
   (str "Ah, I thought") (text "“") (str "Finally, we get to make something like" 'br)
   (str "this!") (text "”")
   (proc 16)
+
   (proc 10)
   (str "Right, right! But not a lot of people could grasp what we" 'br)
   (str "were going for at first.")
@@ -85,6 +98,7 @@
   (str "The moment I heard the title, I started thinking about a" 'br)
   (str "transforming-heroine story.")
   (proc 16)
+
   (proc 10)
   (str "And now that it's out, how do you feel?")
   (proc 15)
@@ -100,6 +114,7 @@
   (str "There are always gonna be people who can't accept that" 'br)
   (str "particular vibe.")
   (proc 16)
+
   (proc 10)
   (str "Well, that's fine, no point worrying about it. So what was" 'br)
   (str "the hardest part of working on the game?")
@@ -114,8 +129,9 @@
   (str "40 for the transformation screens, 100 for the battles, 20" 'br)
   (str "for the opening, about 50 for each episode, and then...")
   (proc 16)
- (text-color 4)
-  (str "Minami: (") (text "←") (str "The one who ordered all that artwork)")
+
+  (text-color 4)
+  (str "Minami: (") (text "←") (str "The one who ordered all that artwork)" 'br)
   (str "Hahahahaha... Well... Well, good job... I mean... it's good")
   (str "you got all that experience, right?")
   (proc 15)
@@ -131,6 +147,7 @@
   (str "ripoff, that a game that's over in 30 minutes is" 'br)
   (str "unacceptable, and other mean things...")
   (proc 16)
+
   (proc 10)
   (str "Mao-chan, you get way too nervous about that kind of stuff.")
   (str "People are always gonna complain, so just let them.")
@@ -146,6 +163,7 @@
   (proc 10)
   (str "That's the Japanese way!")
   (proc 16)
+
   (proc 11)
   (str "If you imitate something and can't surpass the original," 'br)
   (str "you'll just get torn to shreds...")
@@ -161,6 +179,7 @@
   (str "Anyway, let people say whatever they want! Games are" 'br)
   (str "supposed to be fun, right?")
   (proc 16)
+
   (proc 11)
   (str "You know, this whole topic is starting to sound like a big" 'br)
   (str "excuse.")
@@ -176,6 +195,7 @@
   (str "Of course not! At the time of this talk, the dungeon is" 'br)
   (str "still bugged!")
   (proc 16)
+
   (proc 11)
   (str "Ahh! Spoiler! You said there was a dungeon!")
   (proc 15)
@@ -190,6 +210,7 @@
   (str "Let me think... Probably the half-assed battle system I" 'br)
   (str "tossed together.")
   (proc 16)
+
   (proc 11)
   (str "I think it wound up being surprisingly fun.")
   (proc 15)
@@ -203,6 +224,7 @@
   (proc 10)
   (str "You think it's retro?")
   (proc 16)
+
   (proc 11)
   (str "These days, everyone seems to use muted mid-tone colors.")
   (proc 15)
@@ -217,6 +239,7 @@
   (str "Yeah, and I like how the window graphics pop up, that's" 'br)
   (str "really manga and anime-like.")
   (proc 16)
+
   (proc 10)
   (str "Especially the part where she fires the bazooka!")
   (proc 15)
@@ -231,6 +254,7 @@
   (str "Let me think. Probably all the things we couldn't do" 'br)
   (str "because of hardware limitations.")
   (proc 16)
+
   (proc 11)
   (str "Especially the transformation sequence. There was still" 'br)
   (str "stuff I wanted to do that the hardware couldn't handle.")
@@ -247,6 +271,7 @@
   (str "Hmm... My biggest regret is just how bad my own drawings" 'br)
   (str "are!")
   (proc 16)
+
   (proc 10)
   (str "Yes, yes, reflect on your mistakes.")
   (proc 15)
@@ -260,6 +285,7 @@
   (proc 11)
   (str "Like trailers.")
   (proc 16)
+
   (proc 10)
   (str "Exactly! Let's show the preview right here!")
   (proc 15)
@@ -271,11 +297,13 @@
   (str "Nurse 2") (text "”") (str "trailer, let's roll it!")
   (proc 16)
 
+
 ; 	Fade to... surprise Dengeki Nurse 2 trailer?!?!
 
   ((cmd 209) 0 5)
   (sound '|| 0)
-  (sound '|| "uso¥nurse04.uso")
+  (sound '|| "uso¥nurse04.uso") ; <- PC-98
+; (sound '|| "nurse04.fmt")       <- FMT
   (sound '|| 1)
   (define-proc 16
     (<>
@@ -343,6 +371,7 @@
   (proc 15)
   (text "　　　　　　") (str "Or maybe...............")
   (proc 16)
+
   (str "Depending on the passionate fan mail that touches our" 'br)
   (str "president's heart...")
   (proc 15)
@@ -351,12 +380,14 @@
   (str "Minami and Mao want to take a break for a while!")
   (proc 15)
   (sound '|| 0)
-  (sound '|| "uso¥nurse08.USO")
+  (sound '|| "uso¥nurse08.uso") ; <- PC-98
+; (sound '|| "nurse08.fmt")       <- FMT
   (sound '|| 1)
   (proc 11)
   (str "Clap clap clap clap clap clap!!!" 'br)
   (str "(Applause for the previous line)")
   (proc 16)
+
   (proc 10)
   (str "Huh? The music suddenly perked up?")
   (proc 15)
@@ -369,6 +400,7 @@
   (proc 11)
   (str "Hmmmmmm. I'd want to make a rival for Dengeki Nurse.")
   (proc 16)
+
   (proc 10)
   (str "Yeah, that would be good, maybe a romantic rival fighting" 'br)
   (str "over Tanchi.")
@@ -382,6 +414,7 @@
   (proc 11)
   (str "Either way, I'd like to expand the animation aspect.")
   (proc 16)
+
   (proc 10)
   (str "Right. This time it wasn't about doing as much animation as")
   (str "we could, but more like experimenting on whether we could" 'br)
@@ -397,13 +430,14 @@
   (proc 11)
   (str "Well, Minami-san, you are bad at action games!")
   (proc 16)
+
   (proc 10)
   (str "Oh, can it! You're one to talk, you kept getting your ass" 'br)
   (str "kicked in Dengeki Combat!")
   (proc 15)
   (proc 11)
   (str "It's fine! I learned a secret technique so I can win now." 'br)
-  (text "↑") (str " ") (text "↑") (str " ") (text "↓") (str " ") (text "↓") (str " ") (text "←") (str " ") (text "→") (str " ") (text "←") (str " ") (text "→") (str " ...")
+  (text "↑" '|34368| "↑" '|34368| "↓" '|34368| "↓" '|34368| "←" '|34368| "→" '|34368| "←" '|34368| "→") (str " ...")
   (proc 15)
   (proc 10)
   (str "Noooo! That's privileged top-secret company information!")
@@ -412,6 +446,7 @@
   (str "Anyway, I hope people laugh at the cool backgrounds during" 'br)
   (str "battles.")
   (proc 16)
+
   (proc 10)
   (str "Those backgrounds made the graphics hard to compress, you" 'br)
   (str "know!")
@@ -427,6 +462,7 @@
   (str "Still, the fact that we got the battles to run with that" 'br)
   (str "many images loaded in RAM is pretty impressive.")
   (proc 16)
+
   (proc 10)
   (str "We owe a lot to our programmer Kuni-chan, who even synced" 'br)
   (str "the lyrics for us.")
@@ -442,6 +478,7 @@
   (proc 11)
   (str "For real?")
   (proc 16)
+
   (proc 10)
   (str "Well, imagine telling people who usually play prog rock or" 'br)
   (str "jazz,") (text "“") (str "OK, do an anime theme song!") (text "”")
@@ -457,6 +494,7 @@
   (str "Would you typically use that for a Ventures-style sound? I" 'br)
   (str "wish they had gone with a Mosrite...")
   (proc 16)
+
   (proc 11)
   (str "I don't really get it, but...sounds like a real struggle.")
   (proc 15)
@@ -472,6 +510,7 @@
   (str "illustrations anyway." 'br)
   (str "(Excuses! Excuses! Excuses!)")
   (proc 16)
+
   (proc 10)
   (str "Well, I think it turned out well. And ") (text "ＣＨＩＫＡ") (str "-chan's" 'br)
   (str "vocals were super cute.")
@@ -487,6 +526,7 @@
   (proc 11)
   (str "But now I gotta know! Tell me, tell me!")
   (proc 16)
+
   (proc 10)
   (str "No, and spoil the player's fun?")
   (proc 15)
@@ -499,6 +539,7 @@
   (proc 11)
   (str "Go on...")
   (proc 16)
+
   (proc 10)
   (str "Somewhere in Episode 2, if you click a certain spot, a" 'br)
   (str "slightly dirty message pops up. That's it.")
@@ -513,6 +554,7 @@
   (str "Haha... The location bothered me, so I wanted to ask you" 'br)
   (str "about it.")
   (proc 16)
+
   (proc 10)
   (str "I know nothing! Naka-chan (programmer Nakatani) made the" 'br)
   (str "call!")
@@ -528,6 +570,7 @@
   (str "I don't know! (Blushing) You're the one who knows about" 'br)
   (str "that stuff!")
   (proc 16)
+
   (proc 11)
   (str "No, I don't have enough experience.")
   (proc 15)
@@ -542,6 +585,7 @@
   (str "Please send us your impressions! And photos, if you" 'br)
   (str "cosplay! Send your doujinshi, too (even if it's R-rated)!")
   (proc 16)
+
   (proc 10)
   (str "Please buy Kera Kera Boshi!" 'br)
   (str "(Scheduled for release October 30, 1992)")
@@ -558,6 +602,7 @@
   (str "Thanks to you, we managed to finish it! So make sure you" 'br)
   (str "all buy two copies!")
   (proc 16)
+
   (proc 10)
   (str "Yuriko-chan, Shiori-chan, Yuu-chan! Sorry I couldn't hang" 'br)
   (str "out during summer vacation!")
@@ -574,6 +619,7 @@
   (str "Seriously, though, truly great work, everyone! But... If" 'br)
   (str "possible, let's die again making number 2!")
   (proc 16)
+
   (proc 10)
   (str "I'm truly grateful to all the staff. I think this game was" 'br)
   (str "made through everyone's combined effort!")
@@ -589,6 +635,8 @@
   (str "Minami & Mao:" 'br)
   (str "Thank you very much!!!")
   (proc 16)
+
   ((cmd 209) 0 2)
   (sound '|| 2)
-  (mes-jump "mes¥Ns_Menu.mes")))
+  (mes-jump "mes¥Ns_Menu.mes"))) ; <- PC-98
+; (mes-jump "StaffBox.mes")))      <- FMT

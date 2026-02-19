@@ -1,6 +1,15 @@
+; Dengeki Nurse English Translation - OSHIRASE.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Information section.
+; There are three subsections which are selected in MS_MENU via the setting of a flag.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
+; 	Process 16 is temporarily modified to accomodate this section's text box.
+
   (define-proc 16
     (<>
      (text-color 4)
@@ -9,148 +18,205 @@
      ((cmd 209) 0 2)
      (text-frame 0 0 79 399)
      (text-reset 1)))
+
+; 	Then the initial text box is drawn, and...
+
   (text-frame 0 0 79 399)
   (text-reset 1)
   (exec-mem 1280 0 0 0 0)
   (text-color 15)
+
+; 	Text begins here... (80 half-width characters)
+
   (if (</>
+
+; 		Hard Disk Installs (PC-98 only)
+
        (//
         (? (= 200 #t))
         (nop@)
         (set-reg 200 #f)
+
         (text 'br)
-        (text "　　　　　《ＰＣ９８０１シリーズ　ハードディスクを使用する場合》" 'br)
-        (text "　●インストール" 'br)
-        (text "　　１．ハードディスクを立ち上げて下さい。" 'br)
-        (text "　　２．インストールするドライブに７メガバイト程度の空き容量があることを確認" 'br)
-        (text "　　　　して下さい。" 'br)
-        (text "　　２．フロッピーディスクドライブ１にＡディスクを入れて下さい。" 'br)
-        (text "　　３．カレントドライブをＡディスクを入れたドライブに移動して下さい。" 'br)
-        (text "　　４．Ｓ＞ＩＮＳＴＨ　Ｓ：　Ｄ：　を実行して下さい。" 'br)
-        (text "　　　　　　Ｓ＝フロッピーディスクドライブのドライブ番号" 'br)
-        (text "　　　　　　Ｄ＝ハードディスクのドライブ番号" 'br)
-        (text "　　５．画面の指示に従ってディスクを入れ替えて下さい。" 'br)
+        (text "　　　　　　　　《") (str "Directions for using a hard disk on PC-9801") (text "》" 'br)
+        (text "　●") (str " Installation" 'br)
+        (text "　　１") (str ". Boot into the hard disk." 'br)
+        (text "　　２") (str ". Ensure that it has approximately 7MB of free space for installation." 'br)
+        (text "　　３") (str ". Insert Disk A into Floppy Disk Drive 1." 'br)
+        (text "　　４") (str ". Change your current directory to the drive containing Disk A." 'br)
+        (text "　　５") (str ". Execute ") (text "Ｓ＞ＩＮＳＴＨ　Ｓ：　Ｄ：") (str ", where:" 'br)
+        (text "　　　　　　Ｓ＝") (str " Floppy Disk Drive" 'br)
+        (text "　　　　　　Ｄ＝") (str " Hard Disk Drive" 'br)
+        (text "　　６") (str ". Follow the on-screen instructions, and swap disks when prompted." 'br)
         (text 'br)
-        (text "　●起動" 'br)
-        (text "　　１．ハードディスクを立ち上げて下さい。" 'br)
-        (text "　　２．フロッピーディスクドライブ１にＡディスクを入れて下さい。" 'br)
-        (text "　　３．カレントドライブをインストールしたドライブに移動して下さい。" 'br)
-        (text "　　４．＞ＮＵＲＳＥ　を実行して下さい。" 'br)
+        (text "　●") (str " Startup" 'br)
+        (text "　　１") (str ". Boot into the hard disk." 'br)
+        (text "　　２") (str ". Insert Disk A into Floppy Disk Drive 1." 'br)
+        (text "　　３") (str ". Change your current directory to the drive you installed the game to." 'br)
+        (text "　　４") (str ". Execute ") (text "＞ＮＵＲＳＥ") (str ".")
+
         ((cmd 209) 1 2)
         (proc 16)
+
         (text 'br)
-        (text "　●ご注意！！　　「電撃ナース」は、本体メモリーを、た〜くさん使用しています。" 'br)
-        (text "　　各種デバイスドライバー、ちょっとした常駐物が１つでもあると、" 'br)
-        (text "　　おそらく、正常な動作はしないでしょう。" 'br)
-        (text "　　すべて外してプレーンな状態で使用して下さい。" 'br)
+        (text "　●") (str " Warning! Dengeki Nurse uses a lot of system memory." 'br)
         (text 'br)
-        (text "　　また、ＣＯＮＦＩＧ．ＳＹＳで設定された、ＦＩＬＥＳとＢＵＦＦＥＲＳの値" 'br)
-        (text "　　が適切でない場合、アニメーションの実行速度が遅くなったりします。" 'br)
-        (text "　　当社のテストでは、" 'br)
+        (text "　　") (str "If you have any device drivers or TSRs present, it might not function" 'br)
+        (text "　　") (str "correctly. Please remove all of them from memory before running the game." 'br)
+        (text 'br)
+        (text "　　") (str "Also, if the FILES and BUFFERS values are set in CONFIG.SYS incorrectly," 'br)
+        (text "　　") (str "animations may run slowly." 'br)
+        (text 'br)
+        (text "　　") (str "From our testing, these settings seem to work best:" 'br)
+        (text 'br)
         (text "　　　　　　　　　　　ＦＩＬＥＳ　　＝１０" 'br)
         (text "　　　　　　　　　　　ＢＵＦＦＥＲＳ＝２０" 'br)
-        (text "　　が適切ではないかということになっております。" 'br)
         (text 'br)
-        (text "　　しかしまあ、もっとも簡単な方法はＣＯＮＦＩＧ．ＳＹＳをとっぱらうのがいい" 'br)
-        (text "　　という話もあります‥‥")
+        (text "　　") (str "However, the easiest solution might just be to clear CONFIG.SYS..." 'br)
+
         ((cmd 209) 1 2)
         (proc 16)
+
         (text 'br)
-        (text "　●終了" 'br)
-        (text "　　ゲームを中断して、ＤＯＳに戻りたい時はＳＴＯＰキーを押して下さい。" 'br)
-        (text "　　〔これはハードディスク上だけでの機能です。〕" 'br)
+        (text "　●") (str " Exiting the game" 'br)
         (text 'br)
-        (text "　　ただし、やたらな所でＳＴＯＰすると、メモリー上に常駐物が残る可能性が" 'br)
-        (text "　　あります！" 'br)
-        (text "　　その状態で他のアプリケーション等を起動した場合、" 'br)
-        (text "　　正常に動作しなくなるのでは！？　と考えられます‥‥" 'br)
+        (text "　　") (str "You can end the game and return to DOS at any time by pressing the STOP" 'br)
+        (text "　　") (str "key. (Only when playing from the hard disk)" 'br)
         (text 'br)
-        (text "　　終了画面〔ＳＡＶＥコマンド〕にしてから、ＳＴＯＰキーならば、問題はない" 'br)
-        (text "　　はずです。")
+        (text "　　") (str "However, depending on when you quit, game data might remain in memory..." 'br)
+        (text "　　") (str "If you launch any other games after that, they might not work correctly!" 'br)
+        (text 'br)
+        (text "　　") (str "You shouldn't have any problems if you press the STOP key on the exit" 'br)
+        (text "　　") (str "screen (accessible from the SAVE menu).")
+
         ((cmd 209) 1 2)
         (proc 16)
+
         (text 'br)
-        (text "　●お断わり" 'br)
-        (text "　　ハードディスクへのインストールは、あくまでもオマケ的なものです。" 'br)
-        (text "　　特に「電撃ナース」の場合はインストールに際して、たいへん危険を伴う状況が" 'br)
-        (text "　　考えられます。" 'br)
-        (text "　　そんなわけですので、充分な知識のある方以外は《絶対》行わないで下さい。" 'br)
-        (text "　　ここまで、念を押してますので、インストールに際して、ハードディスク内の" 'br)
-        (text "　　データ、ハードディスク本体に障害が発生しましても、" 'br)
-        (text "　　当社では一切関知いたしませんので宜しくお願いします。" 'br)
+        (text "　●") (str " Disclaimer" 'br)
         (text 'br)
-        (text "　　　　　インストールに関する質問は一切受け付けていません。" 'br)
+        (text "　　") (str "Hard disk installation is a bonus feature. The process can be dangerous," 'br)
+        (text "　　") (str "especially with Dengeki Nurse." 'br)
+        (text 'br)
+        (text "　　") (str "So don't attempt it unless you know what you're doing!" 'br)
+        (text 'br)
+        (text "　　") (str "We are not responsible for any damage that might occur to your hard disk" 'br)
+        (text "　　") (str "or its data during installation. Thank you for your understanding." 'br)
+        (text 'br)
+        (text "　　") (str "We are unable to provide any technical support regarding installation." 'br)
+
         ((cmd 209) 1 2)
         (proc 16))
+
+; 		Supplementary Info
+
        (//
+; PC-98:
         (? (= 201 #t))
         (nop@)
         (set-reg 201 #f)
+; FMT:
+;       (? (= 200 #t))
+;       (nop@)
+;       (set-reg 200 #f)
+
         (text 'br)
-        (text "　●ＳＡＤシステムの楽しみ方" 'br)
-        (text "　　「電撃ナース」は、カクテルソフトの秘密兵器ＳＡＤシステムを搭載しています。" 'br)
+        (text "　●") (str " How to enjoy the ") (text "ＳＡＤ") (str " System" 'br)
         (text 'br)
-        (text "　　ＳＡＤシステムは、" 'br)
-        (text "　　　Ｓｕｇｏｉ　Ａｎｉｍｅｇａ　Ｄｅｋｉｃｈａｔｔａ　Ｓｙｓｔｅｍといい、" 'br)
-        (text "　　フル画面のアニメーションを大量かつ高速で実現したものです。" 'br)
+        (text "　　") (str "Dengeki Nurse is equipped with Cocktail Soft's secret weapon!" 'br)
         (text 'br)
-        (text "　　しかし、残念ながらＶ３０マシン〔Ｖｍ・ＵＶ・Ｄｏ等‥‥ＶＸの１０Ｍも少し" 'br)
-        (text "　　遅いか‥‥〕では、その威力を充分に発揮できませんでした〔最大限の努力はし" 'br)
-        (text "　　ました‥‥〕。" 'br)
-        (text "　　上記のマシンをお使いのみなさま、お友達でＲＸ以降のマシンをお持ちの方が" 'br)
-        (text "　　いらっしゃいましたら、ぜひ１度そちらで遊んでみて下さい。" 'br)
+        (text "　　") (str "The ") (text "Ｓｕｇｏｉ　Ａｎｉｍｅｇａ　Ｄｅｋｉｃｈａｔｔａ　Ｓｙｓｔｅｍ") (str " is" 'br)
+        (text "　　") (str "capable of running spectacular full-screen animation at high speeds!" 'br)
+        (text 'br)
+
+; This section only appears on PC-98:
+        (text "　　") (str "Unfortunately, its full potential could not be realized on a V30 machine" 'br)
+        (text "　　") (str "(VM, UV, DO, etc., even the VX clocked at 10MHz is a bit slow), despite" 'br)
+        (text "　　") (str "our best efforts." 'br)
+        (text 'br)
+        (text "　　") (str "If you're using one of the above systems, and have a friend with an RX" 'br)
+        (text "　　") (str "or later system, please try it out on their machines." 'br)
+
         ((cmd 209) 1 2)
         (proc 16)
+
         (text 'br)
-        (text "　●電撃の呪文" 'br)
-        (text "　　あなたは、ゲーム中に「電撃の呪文」に遭遇するかもしれません。" 'br)
-        (text "　　呪文をメモしてもかまいませんが、" 'br)
-        (text "　　　　　　特に意味はない！！　ので、深く考えないで下さい。" 'br)
-        (text "　●音楽について" 'br)
-        (text "　　「電撃ナース」の音楽は、外部スピーカーに接続した時に最良の音質となるよう" 'br)
-        (text "　　調整されています。外部スピーカーで楽しんでいただくことをお勧めします。" 'br)
+        (text "　●") (str " Regarding the Imperial Scrolls of Honor..." 'br)
         (text 'br)
-        (text "　　　接続方法" 'br)
-        (text "　　　パソコン本体裏のＬＩＮＥ−ＯＵＴ端子から、" 'br)
-        (text "　　　お手持ちのオーディオ機器のＡＵＸ−ＩＮ端子へと接続して下さい。")
+        (text "　　") (str "It's a sham! It can't even hold 256 bytes' worth of save data." 'br)
+        (text 'br)
+        (text "　　") (str "Make sure you save your game before going into battle!" 'br)
+        (text 'br)
+        (text 'br)
+        (text "　●") (str " About the Music" 'br)
+        (text 'br)
+        (text "　　") (str "The music in Dengeki Nurse is best enjoyed via external speakers. We" 'br)
+        (text "　　") (str "recommend listening through them!" 'br)
+        (text 'br)
+        (text "　　　") (str "(How to Connect)" 'br)
+        (text "　　　") (str "Connect the LINE-OUT jack on the back of your computer to the AUX-IN" 'br)
+        (text "　　　") (str "jack on your audio device.")
         ((cmd 209) 1 2)
         (proc 16)
+
+; This section only appears on PC-98:
         (text 'br)
-        (text "　●マウスについて" 'br)
-        (text "　　当社でテストプレイ中に、マウスを１回しかクリックしていないのに、" 'br)
-        (text "　　メッセージが先へ進んでしまうという現象が起こりました。" 'br)
-        (text "　　３日３晩、完徹〔完全徹夜という業界用語‥‥〕で調査した結果‥‥" 'br)
-        (text "　　《マウスが腐っている！！》という結論に達しました‥‥" 'br)
-        (text "　　みなさん方は当社のテストプレイ程、マウスを酷使しないとは思いますが‥‥" 'br)
-        (text "　　おやっ？　と思ったらマウスを疑ってみて下さい。" 'br)
-        (text "　　マウスは消耗品ですので、腐らない内に買い換えましょう。" 'br)
-        (text "　　　　　　　　　　　　　　　　　　　　〔マウス会社のまわし者か‥‥‥‥〕")
+        (text "　●") (str " Regarding the Mouse" 'br)
+        (text 'br)
+        (text "　　") (str "While playtesting, we encountered an issue where messages would advance" 'br)
+        (text "　　") (str "three times, even though the mouse was clicked once." 'br)
+        (text 'br)
+        (text "　　") (str "After three days and nights of continuous sleep (industry term for all-" 'br)
+        (text "　　") (str "nighter), we came to the conclusion that the mouse was the problem!" 'br)
+        (text 'br)
+        (text "　　") (str "We understand that you probably don't beat up your mouse as much as we" 'br)
+        (text "　　") (str "do during playtests, but..." 'br)
+        (text 'br)
+        (text "　　") (str "If something seems fishy...take a look at your mouse. These things are" 'br)
+        (text "　　") (str "consumables, after all, so be sure to replace them before they go bad." 'br)
+        (text 'br)
+        (text "　　") (str "(Maybe I'm a shill for mouse companies...)")
         ((cmd 209) 1 2)
-        (proc 16))
+        (proc 16)) ; <- If you remove this for the FMT version, don't forget to add the closing bracket to the last screen!
+
+; 		Join our BBS
+
        (//
+; PC-98:
         (? (= 202 #t))
         (nop@)
         (set-reg 202 #f)
+; FMT:
+;       (? (= 201 #t))
+;       (nop@)
+;       (set-reg 201 #f)
+
         (text 'br)
-        (text "　カクテルソフトとフェアリーテールでは、このたびユーザーのみなさまの声を、" 'br)
-        (text "　より密接に聞き取り、コミュニケーションをはかるため、パソコン通信のネット" 'br)
-        (text "　を開局いたしました。" 'br)
-        (text "　とりあえずは実験的運営ですので、会費は無料です〔電話代は払ってね〕。" 'br)
-        (text "　新作情報や、ＣＧコーナー等の他にユーザーサポートと通信販売も併設します。" 'br)
-        (text "　バーゲン品の限定放出等、特典が盛りだくさんです。" 'br)
-        (text "　もちろん「電撃ナース」のボードも作ってもらおうと思ってますので、ぜひぜひ" 'br)
-        (text "　アクセスしてみて下さい。" 'br)
+        (text "　　") (str "We at Cocktail Soft and Fairytale have recently launched a computer-based" 'br)
+        (text "　") (str "BBS to stay in touch with our users and communicate with them. Since this an" 'br)
+        (text "　") (str "experimental program, membership is free (aside from phone call charges)." 'br)
         (text 'br)
-        (text "　　代表番号　０３−５２７２−１７５６" 'br)
-        (text "　　当面は２回線で運営。近日中に４回線になる予定です。" 'br)
+        (text "　　") (str "In addition to new release info and a graphics corner, we can offer" 'br)
+        (text "　") (str "support and mail order. There will also be perks like limited-time bargains." 'br)
+        (text "　") (str "We'll have a Dengeki Nurse message board, of course, so please check it out!" 'br) ; <- PC-98
+;       (text "　") (str "" 'br)                                                                               <- FMT (to be translated)
         (text 'br)
-        (text "　　ちなみにシスオペ〔みなさんが困った時、やさしく救ってくれる人〕は、" 'br)
-        (text "　　「きゃんきゃんバニー　プルミエール」を書いた美少女ライターの" 'br)
-        (text "　　ＮＡＮＡＫＯ〔ＩＤだよん、メールちょうだいね。〕ちゃんがやります。" 'br)
-        (text "　　彼女も細腕〔嘘だ！　と誰かの声‥‥〕を振り回して気合い充分ですので、" 'br)
-        (text "　　みなさんよろしくお願いします。")
+        (text "　　") (str "Phone Number: ") (text "＊＊−＊＊＊＊−＊＊＊＊" 'br) (str " (No longer in operation)")
+        (text "　　") (str "For now we're operating two lines, but plan to increase that to four soon." 'br) ;  <- PC-98
+;       (text "　　") (str "We're currently operating four lines." 'br)                                         <- FMT
+        (text 'br)
+        (text "　　") (str "By the way, our sysop (to find if you need help) will be NANAKO (that's" 'br) ;     <- PC-98
+        (text "　") (str "her ID, send a mail over), the cute girl who penned Can Can Bunny Premiere!" 'br) ;  <- PC-98
+;       (text "　　") (str "By the way, our sysop (person to find if you need help) is NANAKO, the" 'br)        <- FMT
+;       (text "　") (str "cute girl who penned Can Can Bunny Premiere!" 'br)                                   <- FMT
+        (text "　") (str "She's full of spirit, swinging her slender arms around (just heard someone" 'br)
+        (text "　") (str "yell") (text "“") (str "That's a lie!") (text "”") (str "back there), so everyone, please be nice to her." 'br)
+
         ((cmd 209) 1 2)
         (proc 16))))
+
+; 	Process 16 is reset back to the main game's before returning to the main menu.
+
   (define-proc 16
     (<>
      (text-color 4)

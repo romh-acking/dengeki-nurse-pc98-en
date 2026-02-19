@@ -9,9 +9,9 @@
 
 ; 	Battle-related programs/data loaded into memory
 
-  (load-mem "cmd¥cyclearh.tcm" 6656)
-  (load-mem "cmd¥nrsfent.tcm" 9216)
-  (load-mem "dat¥nrsenemy.dat" 35664)
+  (load-mem "cmd¥cyclearh.tcm" 6656)  ; 
+  (load-mem "cmd¥nrsfent.tcm" 9216)   ; Battle program
+  (load-mem "dat¥nrsenemy.dat" 35664) ; Enemy data
   (exec-mem 17920 1 1) ; whiteh.tcm
 
 ; 	Battle setup begins
@@ -25,10 +25,12 @@
 ; 	Main graphics loaded here
 
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1") ; acte.tcm
-   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+   (image-file "gpc¥face_w00.gpc")
+   (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (exec-mem 2816 "ACCESS 0")
-   (image-file "gpc¥sflame.gpc") (image-mem 1 3)
+   (image-file "gpc¥sflame.gpc")
+   (image-mem 1 3)
 
 ; 	Text frames defined here
 
@@ -176,6 +178,7 @@
             ((cmd 209) 0 2)
             (sound '|| 2)
             ((cmd 197) 0 16)
+
             (image-file "gpc¥Ns0506B.GPC") (image-mem 1 3)
             (image-file "gpc¥Waku2.GPC")   (image-mem 1 3)
             ((cmd 209) 1 2)
@@ -193,7 +196,7 @@
             (exec-mem 34128 0 6 "▼" 40 376)
             (text-frame 12 334 67 389) (text-reset 0) (text "　　　‘Ｔｅｍｐｔ　ｎｏｔ　ｔｈｅ　ｆａｔｅｓ！" 'br "　　　　Ｉ　ａｗａｉｔ　ｙｏｕｒ　ｒｅｔｕｒｎ．’")
             (exec-mem 34128 0 6 "▼" 40 376)
-            (text-frame 12 334 67 389) (text-reset 0) (text #:col 10 "　Ｉ’ｍ　ｎｏｔ　ｃｏｍｉｎｇ　ｂａｃｋ　ｈｅｒｅ！！") (text-color 15)
+            (text-frame 12 334 67 389) (text-reset 0) (text #:col 10 "　Ｏｖｅｒ　ｍｙ　ｄｅａｄ　ｂｏｄｙ！") (text-color 15)
             (exec-mem 34128 0 6 "▼" 40 376)
             ((cmd 197) 0 16)
             (sound '|| 2)

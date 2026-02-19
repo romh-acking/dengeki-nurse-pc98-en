@@ -169,7 +169,7 @@
    (proc 15)
    (text-color 7)
    (str "Man, I wonder if a sequel is coming out? I'm their" "No. 1 fan, I'm sure I can will it into existence!") ; <- PC-98
-;  (str "") <- FMT (to be translated)
+;  (str "It seems that a sequel is going to come out, but" 'br "will it really release as scheduled...?")           <- FMT
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
