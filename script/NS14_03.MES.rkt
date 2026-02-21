@@ -6,6 +6,8 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+  (define-proc 10 (<> (text-color 8) (str "Manko: ")))
+  (define-proc 11 (<> (text-color 11) (str "Sena: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -102,7 +104,7 @@
    (proc 18)
    (text-color 7)
    (str "There's no reason to refuse. One girl is good, two")
-   (str "is great, three is even better... The more ladies," 'br)
+   (str "is great, three is even better... The more ladies,")
    (str "the more fun!")
    (proc 15)
    (proc 19)
@@ -259,8 +261,8 @@
    (str "shameless like you!")
    (proc 15)
    (proc 11)
-         (str "(Fume...)" 'br)
-   (str "Well, it's undignified for us to be fighting!")
+         (str "(Fume...) Well, it's undignified for us to" 'br)
+   (str "be fighting!")
    (proc 15)
    (proc 2)
            (str "??????")
@@ -315,6 +317,9 @@
    (text-color 7)
    (str "I place my finger on the shutter.")
    (proc 15)
+
+; 	The frame flashes...
+
    (text-color 1)
    (str "CLICK!")
    (exec-mem 1280 2 15 15 15)  (delay 2)
@@ -330,6 +335,9 @@
    (sound '|| 0)
    (sound '|se | 20)
    (proc 15)
+
+; 	Text continues.
+
    (text-color 1)
    (str "BRMMM BRMMM BRMMMM!")
    ((cmd 195) 0 1)

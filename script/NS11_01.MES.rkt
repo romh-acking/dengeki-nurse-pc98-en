@@ -3,7 +3,7 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Tanchi lazes around in the lab of Dr. Akiba at the hospital's lab.
-; -----Notes:-----
+; ----Notes:------
 ; Welcome to Dengeki Nurse. Some general info about the formatting in this game:
 ; - The main game's text box width is 50 characters (e.g. this script), and 51 characters in cutscenes (e.g. the previous script).
 ;   - Line breaks are done manually with 'br. It takes up a space as an invisible character, so in cases where the text goes to the end of the box it isn't used.
@@ -21,7 +21,8 @@
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc")
+  (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
@@ -193,8 +194,8 @@
    (proc 15)
    (text-color 1)
    (str "Ding!" 'br)
-   (text 'br)
-   (str "     (Note: SFX for lightbulb appearing over head)")
+   (text 'br "　　")
+   (str " (Note: SFX for lightbulb appearing over head)")
    (proc 15)
    (text-color 7)
    (str "What about I ask the good doctor? Genius! Why" 'br)
