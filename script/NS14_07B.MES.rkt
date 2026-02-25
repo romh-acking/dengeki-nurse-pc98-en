@@ -1,4 +1,4 @@
-; Dengeki Nurse English Translation - NS11_07B.MES
+; Dengeki Nurse English Translation - NS14_07B.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
