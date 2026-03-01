@@ -236,7 +236,7 @@
    (proc 15)
    (sound '|| 0)
    (sound '|| "uso¥Nurse11.uso") ; <- PC-98
-   (sound '|| "Nurse11.fmt")       <- FMT
+;  (sound '|| "Nurse11.fmt")       <- FMT
    (sound '|| 1)
    (proc 10)
           (str "From elementary school to college, I was" 'br)

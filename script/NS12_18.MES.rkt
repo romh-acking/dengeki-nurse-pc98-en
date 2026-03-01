@@ -101,7 +101,7 @@
   (proc 15)
   (sound '|| 0)
   (sound '|se | 25) ; <- PC-98
-  (sound '|se | 4)    <- FMT
+; (sound '|se | 4)    <- FMT
   (proc 2)
            (str "Ah, shit! Ta, Tanchi JUUUUMP!")
   (proc 15)

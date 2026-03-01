@@ -147,7 +147,8 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "Kirara's laughing while holding up that crab she caught...")
+   (str "Kirara's laughing while holding up that crab she" 'br)
+   (str "caught...")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 1))

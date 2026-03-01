@@ -201,7 +201,7 @@
         (text "　") (str "We'll have a Dengeki Nurse message board, of course, so please check it out!" 'br) ; <- PC-98
 ;       (text "　") (str "" 'br)                                                                               <- FMT (to be translated)
         (text 'br)
-        (text "　　") (str "Phone Number: ") (text "＊＊−＊＊＊＊−＊＊＊＊" 'br) (str " (No longer in operation)")
+        (text "　　") (str "Phone Number: ") (text "＊＊−＊＊＊＊−＊＊＊＊") (str " (No longer in operation)" 'br)
         (text "　　") (str "For now we're operating two lines, but plan to increase that to four soon." 'br) ;  <- PC-98
 ;       (text "　　") (str "We're currently operating four lines." 'br)                                         <- FMT
         (text 'br)
