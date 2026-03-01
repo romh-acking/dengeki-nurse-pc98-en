@@ -83,20 +83,20 @@
       (if (</>
            (// (? (= 72 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
            (// (? (= 71 #t) (= 72 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 69 #t) (= 70 #t) (= 71 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 69 #t) (= 70 #t) (= 71 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 71 #t)
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 69 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 73 #t))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 70 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 75 #t))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 73 #t) (= 75 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 74 #t) (= 73 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 71 #t) (= 74 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (// (? (= 75 #t))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 72 #t)
+           (// (? (= 73 #t) (= 75 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 75 #t)
+           (// (? (= 74 #t) (= 73 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 73 #t)
+           (// (? (= 71 #t) (= 74 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 74 #t)
            (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
@@ -260,7 +260,7 @@
    (set-reg 72 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (branch-reg 73 (</> (/ (proc 10)) (/ (proc 12)))) ; This is supposed to check if Ayako has been introduced and display the name accordingly, but right now it seems a bit bugged
+   (branch-reg 73 (</> (/ (proc 10)) (/ (proc 12)))) ; This checks if Ayako has been introduced, and displays her name if so
    (branch-index
     (</>
      (/
@@ -273,7 +273,7 @@
       (str "No, no! No groping my chest!")
       (proc 15)
       (proc 2)
-      (text "But... But I'm not!!!"))
+      (str "But... But I'm not!!!")) ; Congratulations to this line for winning first prize in the "3rd National Text Identifier Hide-and-Seek"
      (/
       (str "Eeeeek! You can't just whip that out" 'br)
       (str "and put it in there!!!")
