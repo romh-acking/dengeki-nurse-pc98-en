@@ -1,9 +1,8 @@
 ::Folders
 set projectFolder=%cd%
-
 set filesHdi=%projectFolder%\files
-
 set scriptHdi=%projectFolder%\script
+set asmFolder=%projectFolder%\asm
 
 ::Tools
 set toolsFolder=%projectFolder%\tools
@@ -18,6 +17,18 @@ set hardDriveNew=%projectFolder%\roms\Dengeki Nurse (NEW).hdi
 cd "%projectFolder%"
 
 copy "%hardDrive%" "%hardDriveNew%"
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: ASM
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+"%toolsFolder%/nasm.exe" -f bin -o "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" -l "NRSOPEN-EN.lst" "%asmFolder%/NRSOPEN-EN.asm"
+del "NRSOPEN-EN.lst"
+"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\CMD\NRSOPEN.TCM" "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" > NUL
+
+@if errorlevel 1 echo "Error patching HDI file!"
+@pause
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Copy over script files
@@ -37,7 +48,7 @@ for /R "%scriptHdi%" %%f in (*.MES.rkt) do copy "%%f"  "%filesHdi%/NURSE/MES"
 :: Disk 1
 ::::::::::::::::::::::::::
 cd "%filesHdi%/NURSE/MES"
-"%juiceFolder%/juice.exe" -cf --engine ai5 *.MES.rkt
+"%juiceFolder%/juice.exe" -cf --engine adv *.MES.rkt
 ren *.MES.rkt.mes ????????????????????.MES
 @pause
 
@@ -48,8 +59,7 @@ ren *.MES.rkt.mes ????????????????????.MES
 cd "%filesHdi%/NURSE/MES"
 
 for /r %%i in (*.MES) do (
-	"%toolsFolder%/NDC.exe" D "%hardDriveNew%" 0 "NURSE/MES/%%~nxi"
-	"%toolsFolder%/NDC.exe" P "%hardDriveNew%" 0 "%%i" "NURSE/MES"
+	"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\MES\%%~nxi" "%filesHdi%\NURSE\MES\%%~nxi"
 )
 
 @pause
