@@ -2691,11 +2691,11 @@ lyrics00_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 81h, 40h, 0
 lyrics00_en1:
-	DB	14, 20	; x, y
-	DB	"                                                     ", 0
+	DB	10, 20	; x, y
+	DB	"                                                          ", 0
 lyrics00_en2:
-	DB	14, 21	; x, y
-	DB	"                                                     ", 0
+	DB	10, 21	; x, y
+	DB	"                                                          ", 0
 
 txt_1DB8:	; "　稲妻　とどろく夜に　甘い夢　恋が始まる　　"
 	DW	lyrics01_jp, lyrics01_en1, lyrics01_en2, 0
@@ -2710,40 +2710,67 @@ lyrics01_en2:
 	DB	"as my sweet dreams kick off the blossom of love", 0
 
 txt_1DE7:	; "　あなたの　腕に抱かれて　熱が出たみたい　　"
-	DW	lyrics02_jp, 0
+	DW	lyrics02_jp, lyrics02_en1, lyrics02_en2, 0
 lyrics02_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 82h, 0A0h, 82h, 0C8h, 82h, 0BDh, 82h, 0CCh, 81h, 40h, 98h, 72h, 82h, 0C9h, 95h, 0F8h, 82h, 0A9h, 82h, 0EAh, 82h, 0C4h, 81h, 40h, 94h, 4Dh, 82h, 0AAh, 8Fh, 6Fh, 82h, 0BDh, 82h, 0DDh, 82h, 0BDh, 82h, 0A2h, 81h, 40h, 81h, 40h, 0
+lyrics02_en1:
+	DB	20, 20	; x, y
+	DB	"And as I hold you up in my loving arms,", 0
+lyrics02_en2:
+	DB	25, 21	; x, y
+	DB	"I can feel the heat bother me", 0
 
 txt_1E16:	; "風邪薬も　効かないのよ　どうすればいいの？　"
-	DW	lyrics03_jp, 0
+	DW	lyrics03_jp, lyrics03_en1, lyrics03_en2, 0
 lyrics03_jp:
 	DB	18, 23	; x, y
 	DB	95h, 97h, 8Eh, 0D7h, 96h, 0F2h, 82h, 0E0h, 81h, 40h, 8Ch, 0F8h, 82h, 0A9h, 82h, 0C8h, 82h, 0A2h, 82h, 0CCh, 82h, 0E6h, 81h, 40h, 82h, 0C7h, 82h, 0A4h, 82h, 0B7h, 82h, 0EAh, 82h, 0CEh, 82h, 0A2h, 82h, 0A2h, 82h, 0CCh, 81h, 48h, 81h, 40h, 0
+lyrics03_en1:
+	DB	10, 20	; x, y
+	DB	"The pills I take for colds, why aren't they taking hold,", 0
+lyrics03_en2:
+	DB	24, 21	; x, y
+	DB	"is there a doctor I should know?", 0
 
 txt_1E45:	; "　チャージＯＮ！　プラズマフラーッシュ！　　"
-	DW	lyrics04_jp, 0
+	DW	lyrics04_jp, lyrics04_en, 0
 lyrics04_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 83h, 60h, 83h, 83h, 81h, 5Bh, 83h, 57h, 82h, 6Eh, 82h, 6Dh, 81h, 49h, 81h, 40h, 83h, 76h, 83h, 89h, 83h, 59h, 83h, 7Dh, 83h, 74h, 83h, 89h, 81h, 5Bh, 83h, 62h, 83h, 56h, 83h, 85h, 81h, 49h, 81h, 40h, 81h, 40h, 0
+lyrics04_en:
+	DB	27, 21	; x, y
+	DB	"Charge ON! Plasma Flash!", 0
 
 txt_1E74:	; "　　　聴診器で聞いて　この胸のドキドキ　　　"
-	DW	lyrics05_jp, 0
+	DW	lyrics05_jp, lyrics05_en1, lyrics05_en2, 0
 lyrics05_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 81h, 40h, 81h, 40h, 92h, 0AEh, 90h, 66h, 8Ah, 0EDh, 82h, 0C5h, 95h, 0B7h, 82h, 0A2h, 82h, 0C4h, 81h, 40h, 82h, 0B1h, 82h, 0CCh, 8Bh, 0B9h, 82h, 0CCh, 83h, 68h, 83h, 4Ch, 83h, 68h, 83h, 4Ch, 81h, 40h, 81h, 40h, 81h, 40h, 0
+lyrics05_en1:
+	DB	21, 20	; x, y
+	DB	"You'll put your stethoscope up to me,", 0
+lyrics05_en2:
+	DB	19, 21	; x, y
+	DB	"and what you'll find is my quick heartbeat", 0
 
 txt_1EA3:	; "　　　ナース！　ナース！　電撃ナース！　　　"
-	DW	lyrics06_jp, 0
+	DW	lyrics06_jp, lyrics06_en, 0
 lyrics06_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 81h, 40h, 81h, 40h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 93h, 64h, 8Ch, 82h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 81h, 40h, 81h, 40h, 0
+lyrics06_en:
+	DB	26, 21	; x, y
+	DB	"Nurse! Nurse! Dengeki Nurse!", 0
 
 txt_1ED2:	; "　　　ナース！　ナース！　電撃ナース！　　　"
-	DW	lyrics07_jp, 0
+	DW	lyrics07_jp, lyrics07_en, 0
 lyrics07_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 81h, 40h, 81h, 40h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 93h, 64h, 8Ch, 82h, 83h, 69h, 81h, 5Bh, 83h, 58h, 81h, 49h, 81h, 40h, 81h, 40h, 81h, 40h, 0
+lyrics07_en:
+	DB	26, 21	; x, y
+	DB	"Nurse! Nurse! Dengeki Nurse!", 0
 
 txt_1F01:	; "稲妻　どしゃ降り雨の　交差点　ひとり待ってた"
 	DW	lyrics08_jp, 0
@@ -2812,94 +2839,95 @@ karPtrs_204A:
 	DW	kar_20DA	; 21
 	DW	kar_20E0	; 22
 kar_2078:
-	COLCHG	20, 23, 1
-	COLCHG	14, 20, 2	; A
+	COLCHG	20, 23, 1	; い - x, y, width
+	COLCHG	14, 20, 1	; A
 	COLCHG_END
 kar_207C:
-	COLCHG	21, 23, 1
+	COLCHG	21, 23, 1	; な
 	COLCHG	16, 20, 5	; light
 	COLCHG_END
 kar_2080:
-	COLCHG	22, 23, 1
-	COLCHG	21, 20, 5	; ning
+	COLCHG	22, 23, 1	; ず
+	COLCHG	21, 20, 4	; ning
 	COLCHG_END
 kar_2084:
-	COLCHG	23, 23, 1
-	COLCHG	26, 20, 7	; strike
+	COLCHG	23, 23, 1	; ま
+	COLCHG	26, 20, 6	; strike
 	COLCHG_END
 kar_2088:
-	COLCHG	26, 23, 2
+	COLCHG	26, 23, 2	; と
 	COLCHG	33, 20, 3	; cra
 	COLCHG_END
 kar_208E:
-	COLCHG	28, 23, 2
-	COLCHG	36, 20, 6	; ckles
+	COLCHG	28, 23, 2	; ど
+	COLCHG	36, 20, 5	; ckles
 	COLCHG_END
 kar_2094:
-	COLCHG	30, 23, 2
-	COLCHG	42, 20, 8	; through
+	COLCHG	30, 23, 2	; ろ
+	COLCHG	42, 20, 7	; through
 	COLCHG_END
 kar_209A:
-	COLCHG	32, 23, 2
-	COLCHG	50, 20, 4	; the
+	COLCHG	32, 23, 2	; く
+	COLCHG	50, 20, 3	; the
 	COLCHG_END
 kar_20A0:
-	COLCHG	34, 23, 1
+	COLCHG	34, 23, 1	; よ
 	COLCHG	54, 20, 4	; lone
 	COLCHG_END
 kar_20A4:
-	COLCHG	35, 23, 1
-	COLCHG	58, 20, 3	; ly
+	COLCHG	35, 23, 1	; る
+	COLCHG	58, 20, 2	; ly
 	COLCHG_END
 kar_20A8:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; に
 	COLCHG	61, 20, 6	; night,
 	COLCHG_END
 kar_20AE:
-	COLCHG	40, 23, 1
-	COLCHG	17, 21, 3	; as
+	COLCHG	40, 23, 1	; あ
+	COLCHG	17, 21, 2	; as
 	COLCHG_END
 kar_20B2:
-	COLCHG	41, 23, 1
-	COLCHG	20, 21, 3	; my
+	COLCHG	41, 23, 1	; ま
+	COLCHG	20, 21, 2	; my
 	COLCHG_END
 kar_20B6:
-	COLCHG	42, 23, 2
-	COLCHG	23, 21, 6	; sweet
+	COLCHG	42, 23, 2	; い
+	COLCHG	23, 21, 3	; swe
 	COLCHG_END
 kar_20BC:
-	COLCHG	44, 23, 1
-	COLCHG	29, 21, 7	; dreams
+	COLCHG	44, 23, 1	; ゆ
+	COLCHG	26, 21, 2	; et
 	COLCHG_END
 kar_20C0:
-	COLCHG	45, 23, 1
-	COLCHG	36, 21, 5	; kick
+	COLCHG	45, 23, 1	; め
+	COLCHG	29, 21, 6	; dreams
 	COLCHG_END
 kar_20C4:
-	COLCHG	48, 23, 1
-	COLCHG	41, 21, 4	; off
+	COLCHG	48, 23, 1	; こ
+	COLCHG	36, 21, 4	; kick
 	COLCHG_END
 kar_20C8:
-	COLCHG	49, 23, 1
+	COLCHG	49, 23, 1	; い
+	COLCHG	41, 21, 3	; off
 	COLCHG_END
 kar_20CC:
-	COLCHG	50, 23, 2
-	COLCHG	45, 21, 4	; the
+	COLCHG	50, 23, 2	; が
+	COLCHG	45, 21, 3	; the
 	COLCHG_END
 kar_20D2:
-	COLCHG	52, 23, 1
+	COLCHG	52, 23, 1	; は
 	COLCHG	49, 21, 3	; blo
 	COLCHG_END
 kar_20D6:
-	COLCHG	53, 23, 1
-	COLCHG	52, 21, 5	; ssom
+	COLCHG	53, 23, 1	; じ
+	COLCHG	52, 21, 4	; ssom
 	COLCHG_END
 kar_20DA:
-	COLCHG	54, 23, 2
-	COLCHG	57, 21, 3	; of
+	COLCHG	54, 23, 2	; ま
+	COLCHG	57, 21, 2	; of
 	COLCHG_END
 kar_20E0:
-	COLCHG	56, 23, 2
+	COLCHG	56, 23, 2	; る
 	COLCHG	60, 21, 4	; love
 	COLCHG_END
 karPtrs_20E6:
@@ -2923,61 +2951,80 @@ karPtrs_20E6:
 	DW	kar_216A	; 17
 	DW	kar_2170	; 18
 kar_210C:
-	COLCHG	20, 23, 2
+	COLCHG	20, 23, 2	; あ
+	COLCHG	20, 20, 3	; And
 	COLCHG_END
 kar_2112:
-	COLCHG	22, 23, 2
+	COLCHG	22, 23, 2	; な
+	COLCHG	24, 20, 2	; as
 	COLCHG_END
 kar_2118:
-	COLCHG	24, 23, 2
+	COLCHG	24, 23, 2	; た
+	COLCHG	27, 20, 1	; I
 	COLCHG_END
 kar_211E:
-	COLCHG	26, 23, 2
+	COLCHG	26, 23, 2	; の
+	COLCHG	29, 20, 4	; hold
 	COLCHG_END
 kar_2124:
-	COLCHG	30, 23, 1
+	COLCHG	30, 23, 1	; う
+	COLCHG	34, 20, 3	; you
 	COLCHG_END
 kar_2128:
-	COLCHG	31, 23, 1
+	COLCHG	31, 23, 1	; で
+	COLCHG	38, 20, 2	; up
 	COLCHG_END
 kar_212C:
-	COLCHG	32, 23, 2
+	COLCHG	32, 23, 2	; にい
+	COLCHG	41, 20, 2	; in
 	COLCHG_END
 kar_2132:
-	COLCHG	34, 23, 2
+	COLCHG	34, 23, 2	; だ
+	COLCHG	44, 20, 2	; my
 	COLCHG_END
 kar_2138:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; か
+	COLCHG	47, 20, 2	; lo
 	COLCHG_END
 kar_213E:
-	COLCHG	38, 23, 2
+	COLCHG	38, 23, 2	; れ
+	COLCHG	49, 20, 4	; ving
 	COLCHG_END
 kar_2144:
-	COLCHG	40, 23, 2
+	COLCHG	40, 23, 2	; て
+	COLCHG	54, 20, 5	; arms,
 	COLCHG_END
 kar_214A:
-	COLCHG	44, 23, 1
+	COLCHG	44, 23, 1	; ね
+	COLCHG	25, 21, 1	; I
 	COLCHG_END
 kar_214E:
-	COLCHG	45, 23, 1
+	COLCHG	45, 23, 1	; つ
+	COLCHG	27, 21, 3	; can
 	COLCHG_END
 kar_2152:
-	COLCHG	46, 23, 2
+	COLCHG	46, 23, 2	; が
+	COLCHG	31, 21, 4	; feel
 	COLCHG_END
 kar_2158:
-	COLCHG	48, 23, 2
+	COLCHG	48, 23, 2	; で
+	COLCHG	36, 21, 3	; the
 	COLCHG_END
 kar_215E:
-	COLCHG	50, 23, 2
+	COLCHG	50, 23, 2	; た
+	COLCHG	40, 21, 4	; heat
 	COLCHG_END
 kar_2164:
-	COLCHG	52, 23, 2
+	COLCHG	52, 23, 2	; み
+	COLCHG	45, 21, 2	; bo
 	COLCHG_END
 kar_216A:
-	COLCHG	54, 23, 2
+	COLCHG	54, 23, 2	; た
+	COLCHG	47, 21, 4	; ther
 	COLCHG_END
 kar_2170:
-	COLCHG	56, 23, 2
+	COLCHG	56, 23, 2	; い
+	COLCHG	52, 21, 2	; me
 	COLCHG_END
 karPtrs_2176:
 	DW	kar_219C	; 0
@@ -3000,61 +3047,80 @@ karPtrs_2176:
 	DW	kar_21FE	; 17
 	DW	kar_2204	; 18
 kar_219C:
-	COLCHG	18, 23, 2
+	COLCHG	18, 23, 2	; か
+	COLCHG	10, 20, 3	; The
 	COLCHG_END
 kar_21A2:
-	COLCHG	20, 23, 2
+	COLCHG	20, 23, 2	; ぜ
+	COLCHG	14, 20, 5	; pills
 	COLCHG_END
 kar_21A8:
-	COLCHG	22, 23, 1
+	COLCHG	22, 23, 1	; ぐ
+	COLCHG	20, 20, 1	; I
 	COLCHG_END
 kar_21AC:
-	COLCHG	23, 23, 1
+	COLCHG	23, 23, 1	; す
+	COLCHG	22, 20, 4	; take
 	COLCHG_END
 kar_21B0:
-	COLCHG	24, 23, 2
+	COLCHG	24, 23, 2	; りも
+	COLCHG	27, 20, 10	; for colds,
 	COLCHG_END
 kar_21B6:
-	COLCHG	28, 23, 2
+	COLCHG	28, 23, 2	; き
+	COLCHG	38, 20, 3	; why
 	COLCHG_END
 kar_21BC:
-	COLCHG	30, 23, 2
+	COLCHG	30, 23, 2	; か
+	COLCHG	42, 20, 6	; aren't
 	COLCHG_END
 kar_21C2:
-	COLCHG	32, 23, 2
+	COLCHG	32, 23, 2	; な
+	COLCHG	49, 20, 4	; they
 	COLCHG_END
 kar_21C8:
-	COLCHG	34, 23, 2
+	COLCHG	34, 23, 2	; い
+	COLCHG	54, 20, 2	; ta
 	COLCHG_END
 kar_21CE:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; の
+	COLCHG	56, 20, 4	; king
 	COLCHG_END
 kar_21D4:
-	COLCHG	38, 23, 2
+	COLCHG	38, 23, 2	; よ
+	COLCHG	61, 20, 5	; hold,
 	COLCHG_END
 kar_21DA:
-	COLCHG	42, 23, 2
+	COLCHG	42, 23, 2	; ど
+	COLCHG	24, 21, 2	; Is
 	COLCHG_END
 kar_21E0:
-	COLCHG	44, 23, 2
+	COLCHG	44, 23, 2	; う
+	COLCHG	27, 21, 5	; there
 	COLCHG_END
 kar_21E6:
-	COLCHG	46, 23, 2
+	COLCHG	46, 23, 2	; す
+	COLCHG	33, 21, 1	; a
 	COLCHG_END
 kar_21EC:
-	COLCHG	48, 23, 2
+	COLCHG	48, 23, 2	; れ
+	COLCHG	35, 21, 3	; doc
 	COLCHG_END
 kar_21F2:
-	COLCHG	50, 23, 2
+	COLCHG	50, 23, 2	; ば
+	COLCHG	38, 21, 3	; tor
 	COLCHG_END
 kar_21F8:
-	COLCHG	52, 23, 2
+	COLCHG	52, 23, 2	; い
+	COLCHG	42, 21, 1	; I
 	COLCHG_END
 kar_21FE:
-	COLCHG	54, 23, 2
+	COLCHG	54, 23, 2	; い
+	COLCHG	44, 21, 6	; should
 	COLCHG_END
 kar_2204:
-	COLCHG	56, 23, 4
+	COLCHG	56, 23, 4	; の？
+	COLCHG	51, 21, 5	; know?
 	COLCHG_END
 karPtrs_220E:
 	DW	kar_222E	; 0
@@ -3074,52 +3140,68 @@ karPtrs_220E:
 	DW	kar_2286	; 14
 	DW	kar_228C	; 15
 kar_222E:
-	COLCHG	20, 23, 2
+	COLCHG	20, 23, 2	; チ
+	COLCHG	27, 21, 2	; Ch
 	COLCHG_END
 kar_2234:
-	COLCHG	22, 23, 2
+	COLCHG	22, 23, 2	; ャ
+	COLCHG	29, 21, 1	; a
 	COLCHG_END
 kar_223A:
-	COLCHG	24, 23, 2
+	COLCHG	24, 23, 2	; ー
+	COLCHG	30, 21, 1	; r
 	COLCHG_END
 kar_2240:
-	COLCHG	26, 23, 2
+	COLCHG	26, 23, 2	; ジ
+	COLCHG	31, 21, 2	; ge
 	COLCHG_END
 kar_2246:
-	COLCHG	28, 23, 2
+	COLCHG	28, 23, 2	; Ｏ
+	COLCHG	34, 21, 1	; O
 	COLCHG_END
 kar_224C:
-	COLCHG	30, 23, 4
+	COLCHG	30, 23, 4	; Ｎ！
+	COLCHG	35, 21, 2	; N!
 	COLCHG_END
 kar_2256:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; プ
+	COLCHG	38, 21, 2	; Pl
 	COLCHG_END
 kar_225C:
-	COLCHG	38, 23, 2
+	COLCHG	38, 23, 2	; ラ
+	COLCHG	40, 21, 1	; a
 	COLCHG_END
 kar_2262:
-	COLCHG	40, 23, 2
+	COLCHG	40, 23, 2	; ズ
+	COLCHG	41, 21, 1	; s
 	COLCHG_END
 kar_2268:
-	COLCHG	42, 23, 2
+	COLCHG	42, 23, 2	; マ
+	COLCHG	42, 21, 2	; ma
 	COLCHG_END
 kar_226E:
-	COLCHG	44, 23, 2
+	COLCHG	44, 23, 2	; フ
+	COLCHG	45, 21, 1	; F
 	COLCHG_END
 kar_2274:
-	COLCHG	46, 23, 2
+	COLCHG	46, 23, 2	; ラ
+	COLCHG	46, 21, 1	; l
 	COLCHG_END
 kar_227A:
-	COLCHG	48, 23, 2
+	COLCHG	48, 23, 2	; ー
+	COLCHG	47, 21, 1	; a
 	COLCHG_END
 kar_2280:
-	COLCHG	50, 23, 2
+	COLCHG	50, 23, 2	; ッ
+	COLCHG	48, 21, 1	; s
 	COLCHG_END
 kar_2286:
-	COLCHG	52, 23, 2
+	COLCHG	52, 23, 2	; シ
+	COLCHG	49, 21, 1	; h
 	COLCHG_END
 kar_228C:
-	COLCHG	54, 23, 4
+	COLCHG	54, 23, 4	; ュ！
+	COLCHG	50, 21, 1	; !
 	COLCHG_END
 karPtrs_2296:
 	DW	kar_22BA	; 0
@@ -3141,58 +3223,76 @@ karPtrs_2296:
 	DW	kar_230E	; 16
 	DW	kar_2314	; 17
 kar_22BA:
-	COLCHG	24, 23, 1
+	COLCHG	24, 23, 1	; ち
+	COLCHG	21, 20, 6	; You'll
 	COLCHG_END
 kar_22BE:
-	COLCHG	25, 23, 1
+	COLCHG	25, 23, 1	; ょ
+	COLCHG	28, 20, 3	; put
 	COLCHG_END
 kar_22C2:
-	COLCHG	26, 23, 1
+	COLCHG	26, 23, 1	; う
+	COLCHG	32, 20, 4	; your
 	COLCHG_END
 kar_22C6:
-	COLCHG	27, 23, 1
+	COLCHG	27, 23, 1	; しん
+	COLCHG	37, 20, 3	; ste
 	COLCHG_END
 kar_22CA:
-	COLCHG	28, 23, 2
+	COLCHG	28, 23, 2	; き
+	COLCHG	40, 20, 3	; tho
 	COLCHG_END
 kar_22D0:
-	COLCHG	30, 23, 2
+	COLCHG	30, 23, 2	; で
+	COLCHG	43, 20, 5	; scope
 	COLCHG_END
 kar_22D6:
-	COLCHG	32, 23, 2
+	COLCHG	32, 23, 2	; き
+	COLCHG	49, 20, 2	; up
 	COLCHG_END
 kar_22DC:
-	COLCHG	34, 23, 2
+	COLCHG	34, 23, 2	; い
+	COLCHG	52, 20, 2	; to
 	COLCHG_END
 kar_22E2:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; て
+	COLCHG	55, 20, 3	; me,
 	COLCHG_END
 kar_22E8:
-	COLCHG	40, 23, 2
+	COLCHG	40, 23, 2	; こ
+	COLCHG	19, 21, 3	; And
 	COLCHG_END
 kar_22EE:
-	COLCHG	42, 23, 2
+	COLCHG	42, 23, 2	; の
+	COLCHG	23, 21, 4	; what
 	COLCHG_END
 kar_22F4:
-	COLCHG	44, 23, 1
+	COLCHG	44, 23, 1	; む
+	COLCHG	28, 21, 6	; you'll
 	COLCHG_END
 kar_22F8:
-	COLCHG	45, 23, 1
+	COLCHG	45, 23, 1	; ね
+	COLCHG	35, 21, 4	; find
 	COLCHG_END
 kar_22FC:
-	COLCHG	46, 23, 2
+	COLCHG	46, 23, 2	; の
+	COLCHG	40, 21, 2	; is
 	COLCHG_END
 kar_2302:
-	COLCHG	48, 23, 2
+	COLCHG	48, 23, 2	; ド
+	COLCHG	43, 21, 2	; my
 	COLCHG_END
 kar_2308:
-	COLCHG	50, 23, 2
+	COLCHG	50, 23, 2	; キ
+	COLCHG	46, 21, 5	; quick
 	COLCHG_END
 kar_230E:
-	COLCHG	52, 23, 2
+	COLCHG	52, 23, 2	; ド
+	COLCHG	52, 21, 5	; heart
 	COLCHG_END
 kar_2314:
-	COLCHG	54, 23, 2
+	COLCHG	54, 23, 2	; キ
+	COLCHG	57, 21, 4	; beat
 	COLCHG_END
 karPtrs_231A:
 	DW	kar_2334	; 0
@@ -3209,43 +3309,56 @@ karPtrs_231A:
 	DW	kar_2376	; 11
 	DW	kar_237C	; 12
 kar_2334:
-	COLCHG	24, 23, 2
+	COLCHG	24, 23, 2	; ナ
+	COLCHG	26, 21, 2	; Nu
 	COLCHG_END
 kar_233A:
-	COLCHG	26, 23, 2
+	COLCHG	26, 23, 2	; ー
+	COLCHG	28, 21, 1	; r
 	COLCHG_END
 kar_2340:
-	COLCHG	28, 23, 4
+	COLCHG	28, 23, 4	; ス！
+	COLCHG	29, 21, 3	; se!
 	COLCHG_END
 kar_234A:
-	COLCHG	34, 23, 2
+	COLCHG	34, 23, 2	; ナ
+	COLCHG	33, 21, 2	; Nu
 	COLCHG_END
 kar_2350:
-	COLCHG	36, 23, 2
+	COLCHG	36, 23, 2	; ー
+	COLCHG	35, 21, 1	; r
 	COLCHG_END
 kar_2356:
-	COLCHG	38, 23, 4
+	COLCHG	38, 23, 4	; ス！
+	COLCHG	36, 21, 3	; se!
 	COLCHG_END
 kar_2360:
-	COLCHG	44, 23, 1
+	COLCHG	44, 23, 1	; で
+	COLCHG	40, 21, 2	; De
 	COLCHG_END
 kar_2364:
-	COLCHG	45, 23, 1
+	COLCHG	45, 23, 1	; ん
+	COLCHG	42, 21, 1	; n
 	COLCHG_END
 kar_2368:
-	COLCHG	46, 23, 1
+	COLCHG	46, 23, 1	; げ
+	COLCHG	43, 21, 2	; ge
 	COLCHG_END
 kar_236C:
-	COLCHG	47, 23, 1
+	COLCHG	47, 23, 1	; き
+	COLCHG	45, 21, 2	; ki
 	COLCHG_END
 kar_2370:
-	COLCHG	48, 23, 2
+	COLCHG	48, 23, 2	; ナ
+	COLCHG	48, 21, 2	; Nu
 	COLCHG_END
 kar_2376:
-	COLCHG	50, 23, 2
+	COLCHG	50, 23, 2	; ー
+	COLCHG	50, 21, 1	; r
 	COLCHG_END
 kar_237C:
-	COLCHG	52, 23, 4
+	COLCHG	52, 23, 4	; ス！
+	COLCHG	51, 21, 3	; se!
 	COLCHG_END
 karPtrs_2386:
 	DW	kar_23B4	; 0
