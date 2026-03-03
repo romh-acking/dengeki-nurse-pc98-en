@@ -241,7 +241,7 @@
    (str "jumping in and racing in F1 is...")
    (proc 15)
    (proc 11)
-          (str "Moguri-san, what's the matter?")
+          (str "Moguri-san, what are you talking about?")
    (proc 15)
    (proc 19)
    (set-reg 110 #t))

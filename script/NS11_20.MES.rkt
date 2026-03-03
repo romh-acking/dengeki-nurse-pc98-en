@@ -131,7 +131,7 @@
    (str "thoughts right now!?")
    (proc 15)
    (text-color 7)
-   (str "...")
+   (str "..................................................")
    (proc 15)
    (text-color 7)
    (str "Wait, that's it! Those breasts!")
