@@ -2570,7 +2570,7 @@ name03_jp:	; "岡地　常義"
 	DB	89h, 0AAh, 92h, 6Eh, 81h, 40h, 8Fh, 0EDh, 8Bh, 60h, 0
 name03_en:
 	DB	4, 10
-	DB	"Nishijin Turbo-R", 0
+	DB	"Tsuneyoshi Okachi", 0
 
 staffptrs_04:
 	DW	role04_jp, role04_en, name04_jp, name04_en, 0
