@@ -4,6 +4,8 @@
 ; --Description:--
 ; Information section.
 ; There are three subsections which are selected in MS_MENU via the setting of a flag.
+; --To change for FMT:--
+; Its quite different.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -139,7 +141,6 @@
 
         ((cmd 209) 1 2)
         (proc 16)
-
         (text 'br)
         (text "　●") (str " Regarding the Imperial Scrolls of Honor..." 'br)
         (text 'br)
@@ -177,7 +178,8 @@
         (text 'br)
         (text "　　") (str "(Maybe I'm a shill for mouse companies...)")
         ((cmd 209) 1 2)
-        (proc 16)) ; <- If you remove this for the FMT version, don't forget to add the closing bracket to the last screen!
+        (proc 16))
+; ^ If you remove this for the FMT version, don't forget to add the closing bracket to the last screen!
 
 ; 		Join our BBS
 
@@ -198,17 +200,25 @@
         (text 'br)
         (text "　　") (str "In addition to new release info and a graphics corner, we can offer" 'br)
         (text "　") (str "support and mail order. There will also be perks like limited-time bargains." 'br)
-        (text "　") (str "We'll have a Dengeki Nurse message board, of course, so please check it out!" 'br) ; <- PC-98
-;       (text "　") (str "" 'br)                                                                               <- FMT (to be translated)
+; PC-98
+        (text "　") (str "We'll have a Dengeki Nurse message board, of course, so please check it out!" 'br)
+; FMT
+;       (text "　") (str "" 'br) ; <- to be translated
         (text 'br)
         (text "　　") (str "Phone Number: ") (text "＊＊−＊＊＊＊−＊＊＊＊") (str " (No longer in operation)" 'br)
-        (text "　　") (str "For now we're operating two lines, but plan to increase that to four soon." 'br) ;  <- PC-98
-;       (text "　　") (str "We're currently operating four lines." 'br)                                         <- FMT
+; PC-98
+        (text "　　") (str "For now we're operating two lines, but plan to increase that to four soon." 'br)
+; FMT
+;       (text "　　") (str "We're currently operating four lines." 'br)
         (text 'br)
-        (text "　　") (str "By the way, our sysop (to find if you need help) will be NANAKO (that's" 'br) ;     <- PC-98
-        (text "　") (str "her ID, send a mail over), the cute girl who penned Can Can Bunny Premiere!" 'br) ;  <- PC-98
-;       (text "　　") (str "By the way, our sysop (person to find if you need help) is NANAKO, the" 'br)        <- FMT
-;       (text "　") (str "cute girl who penned Can Can Bunny Premiere!" 'br)                                   <- FMT
+; PC-98
+        (text "　　") (str "By the way, our sysop (to find if you need help) will be NANAKO (that's" 'br)
+; PC-98
+        (text "　") (str "her ID, send a mail over), the cute girl who penned Can Can Bunny Premiere!" 'br)
+; FMT
+;       (text "　　") (str "By the way, our sysop (person to find if you need help) is NANAKO, the" 'br)
+; FMT
+;       (text "　") (str "cute girl who penned Can Can Bunny Premiere!" 'br)
         (text "　") (str "She's full of spirit, swinging her slender arms around (just heard someone" 'br)
         (text "　") (str "yell") (text "“") (str "That's a lie!") (text "”") (str "back there), so everyone, please be nice to her." 'br)
 

@@ -26,8 +26,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (set-reg 990 #f)
   (exec-mem 10752 "INIT")
@@ -384,8 +386,8 @@
    (sound '|| 0)
    (text-frame 16 324 66 379)
    (text-reset 1)
-   (proc 3)
-         (str "Japanese Foreign Minister, Michio Takegami." 'br)
+   (text-color 4)
+   (str "0074: Japanese Foreign Minister, Michio Takegami." 'br)
    (str "The target's room is at the end, on the right.")
    (proc 16)
    ((cmd 209) 0 2)
@@ -395,7 +397,8 @@
    (exec-mem 10752 "COPY> gpc¥ns1_k02.gpc,GPC")    (image-mem 1 0)
    (exec-mem 10752 "COPY> gpc¥ns1_k03.gpc,GPC")    (image-mem 1 0)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_104.gpc,GPC") (image-mem 1 3)
-;  (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
+; FMT
+;  (sound '|| "Nurse08.fmt") (sound '|| 100)
    (sound '|| 3)
    ((cmd 209) 1 2)
    (proc 19)
@@ -470,7 +473,7 @@
    (proc 5)
    (branch-random
     (</>
-     (/ (str "Hey! The experiment isn't over yet! We" 'br "have 1 million volts to discharge!"))
+     (/ (str "Hey! The experiment isn't over yet! We" 'br "have a million volts to discharge!"))
      (/ (str "Where do you think you're going!? This" 'br "isn't time for a potty break!"))
      (/ (str "Hey! Quit stomping around!"))))
    (proc 15)

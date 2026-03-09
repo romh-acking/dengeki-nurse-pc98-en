@@ -8,8 +8,10 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
-  (flag-save 5) ; <- PC-98
-; (set-reg 889 #f) (branch-reg 1005 (</> (/ (flag-save 5)) (/ (nop@)))) <- FMT
+; PC-98
+  (flag-save 5)
+; FMT
+; (set-reg 889 #f) (branch-reg 1005 (</> (/ (flag-save 5)) (/ (nop@))))
   (define-proc 10 (<> ((cmd 195) 0 65535) ((cmd 195) 1 65535) (delay 270 0) (text-frame 18 239 60 356) (text-reset 1)))
   (define-proc 11 (<> ((cmd 195) 0 65535)                     (delay 270 0) (text-frame 11 68 48 184)  (text-reset 14) (text-frame 28 220 59 316)))
   (define-proc 12 (<> ((cmd 195) 0 65535)                     (delay 270 0) (text-frame 28 220 59 316) (text-reset 14) (text-frame 11 68 48 184)))
@@ -31,8 +33,9 @@
   ((cmd 194) 1 "...........................................ｵ..ｶ..ｷ..ｸ.......................")
   ((cmd 197) 0 15)
   ((cmd 197) 1 15)
-  (sound '|| 0) (sound '|| "a:¥uso¥Nurse02.uso") (sound '|| 1) ; <- PC-98
-; (sound 'cd 2 1) <- FMT
+; PC-98
+  (sound '|| 0) (sound '|| "a:¥uso¥Nurse02.uso") (sound '|| 1)
+; (sound 'cd 2 1)
   ((cmd 209) 1 5)
   (text-color 15)
   ((cmd 195) 0 65535)
@@ -59,16 +62,14 @@
   (text "　　　　　シナリオプログラム" 'br "　　　　　")             (str " Scenario Program" 'br 'br)
   (text "　　　　　　　中谷　由司" 'br "　　　　　　")             (str " Yuji Nakatani")
   (proc 10)
-  (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br 'br) ;         <- PC-98
-; (text "　　　　　" '|34368| "９８版プログラム" 'br "　　　　　　") (str "98 Ver. Program" 'br 'br)   <- FMT
+; PC-98
+  (text "　　　　　　　プログラム" 'br "　　　　　　　　")            (str "Program" 'br 'br)
+; FMT
+; (text "　　　　　" '|34368| "９８版プログラム" 'br "　　　　　　") (str "98 Ver. Program" 'br 'br)
   (text "　　　　　　　　佳　邦" 'br "　　　　　　　")              (str " Yoshikuni")
   (proc 10)
-
-; FMT:
-; (text "　　　　ＴＯＷＮＳ版プログラム" 'br "　　　　　")            (str "TOWNS Ver. Program" 'br 'br)
-; (text "　　　　　　　ぺぺ　藤岡" 'br "　　　　　　")              (str " Pepe Fujioka")
-; (proc 10)
-
+; FMT
+; (text "　　　　ＴＯＷＮＳ版プログラム" 'br "　　　　　") (str "TOWNS Ver. Program" 'br 'br) (text "　　　　　　　ぺぺ　藤岡" 'br "　　　　　　") (str " Pepe Fujioka") (proc 10)
   (text "　　　　　　ＣＧエディター" 'br "　　　　　　　")            (str "CG Editor" 'br 'br)
   (text "　　　　　　　松本　規之" 'br "　　　　　")               (str "Noriyuki Matsumoto")
   (proc 10)
@@ -81,8 +82,10 @@
   (text-reset 4)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_End2.gpc,GPC")
   (image-mem 1 3)
-  (exec-mem 10752 "COPY> b:¥gpa¥ns1-End2.gpa,GPA0") ; <- PC-98
-; ((cmd 193) 0 "ns1-End2.gpa")                        <- FMT
+; PC-98
+  (exec-mem 10752 "COPY> b:¥gpa¥ns1-End2.gpa,GPA0")
+; FMT
+; ((cmd 193) 0 "ns1-End2.gpa")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 6656 0 0 79 399)
   ((cmd 194) 0 ".ｱ..ｲ..ｳ..ｴ..ｵ.")
@@ -140,8 +143,10 @@
   (text-frame 11 68 36 184)
   (delay 150 0)
   (text "　　　　　協力" 'br "　　　") (str " Cooperation" 'br 'br)
-  (text "　　　ゆ　　　　　") (str "Yu" 'br) (text "　" '|34368| "ペペ藤岡　") (str "Pepe Fujioka") ; <- PC-98
-; (text "　　　　　" '|34368| "ゆ" 'br "　　　　　") (str " Yu")                                    <- FMT
+; PC-98
+  (text "　　　ゆ　　　　　") (str "Yu" 'br) (text "　" '|34368| "ペペ藤岡　") (str "Pepe Fujioka")
+; FMT
+; (text "　　　　　" '|34368| "ゆ" 'br "　　　　　") (str " Yu")
 
   ((cmd 195) 0 65535)
   (delay 150 0)
@@ -189,20 +194,12 @@
   ((cmd 195) 0 65535)
   (delay 200)
   (text "　　　　　　制作・著作" 'br "　　　　")     (str " Production／Work" 'br 'br)
-  (str " (C)1992 ") (text "有限会社アイデス") (str " (IDES' CO,LTD.)") ; <- PC-98
+; PC-98
+  (str " (C)1992 ") (text "有限会社アイデス") (str " (IDES' CO,LTD.)")
   (str " (C)1992 ") (text "カクテルソフト　") (str " (COCKTAIL SOFT)")
   ((cmd 195) 0 65535)
-
-; FMT:
-; (delay 400 0)
-; (exec-mem 17920 1 1)
-; (load-mem "cmd¥gpcph.tcm" 28672)
-; (load-mem "dat¥ns1_fm0.dat" 31232)
-; (image-file "Ides#1.Gpc")
-; (image-mem 0 0)
-; (exec-mem 28672 1 31232)
-; (exec-mem 17920 0 1)
-
+; FMT
+; (delay 400 0) (exec-mem 17920 1 1) (load-mem "cmd¥gpcph.tcm" 28672) (load-mem "dat¥ns1_fm0.dat" 31232) (image-file "Ides#1.Gpc") (image-mem 0 0) (exec-mem 28672 1 31232) (exec-mem 17920 0 1)
   (delay 600 0)
   (sound '|| 2)
   ((cmd 209) 0 5)
@@ -222,7 +219,8 @@
      ((cmd 194) 1 ".")
      (set-reg 877 #f)
      (delay 60 0)
-;    (sound 'cd 0 10) <- FMT
+; FMT
+;    (sound 'cd 0 10)
      ((cmd 209) 0 2)
      (mes-jump "b:¥mes¥K_Room.mes"))))
   (loop)))

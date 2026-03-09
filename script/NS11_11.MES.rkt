@@ -293,7 +293,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 1) (str "Echo: ")))
+;  (define-proc 10 (<> (text-color 1) (str "Echo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

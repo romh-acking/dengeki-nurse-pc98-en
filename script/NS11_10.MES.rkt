@@ -18,8 +18,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_124.gpc") (image-mem 1 3)
@@ -324,15 +326,16 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "So sleepy...but... It'd be a shame to go home now...")
+   (str "So sleepy...but... It'd be a shame to go home" 'br)
+   (str "now...")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
+;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

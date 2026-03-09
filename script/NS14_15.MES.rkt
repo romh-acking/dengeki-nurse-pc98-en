@@ -12,7 +12,7 @@
   (load-mem "cmd¥palch.tcm" 28672)
   (define-proc 10 (<> (text-color 5) (str "Chodendo Nurse: ")))
   (define-proc 11 (<> (text-color 5) (str "Mr. Malestre: ")))
-  (define-proc 19 (<> (exec-mem 1280 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17)))
+; (define-proc 19 (<> (exec-mem 1280 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; Not sure why this is defined... dummying it out, we'll see if anything breaks
   (exec-mem 1280 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_445.gpc") (image-mem 0 0) (exec-mem 1280 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_447.gpc") (image-mem 0 0) (exec-mem 1280 "GET 8 0 0 24 144")

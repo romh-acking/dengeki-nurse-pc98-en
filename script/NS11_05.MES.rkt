@@ -16,8 +16,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 2816 "GET 20 71 320 8 64")
@@ -105,8 +107,8 @@
            (str "I'll prepare for the surgery! You handle" 'br)
    (str "the initial procedure!")
    (proc 15)
-   (proc 4)
-          (str "P-Procedure...!?")
+   (text-color 4)
+   (str "Nurse: P-Procedure...!?")
    (proc 15)
    (proc 19)
    (set-reg 52 #t))
@@ -123,8 +125,8 @@
    (proc 2)
            (str "What were you saying there?")
    (proc 15)
-   (proc 4)
-          (str "Just, uh, I'll do my best!")
+   (text-color 4)
+   (str "Nurse: Just, uh, I'll do my best!")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)

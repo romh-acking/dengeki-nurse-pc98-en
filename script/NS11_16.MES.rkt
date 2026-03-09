@@ -6,13 +6,23 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
+; 	Character portraits:
+
+  (define-proc 10 (<> (exec-mem 2816 "GET 2 10 0 10 96"))) ; Happy
+  (define-proc 11 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ;           <- PC-98
-; (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt") (sound '|| 100)
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc") (image-mem 1 3)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 0)
@@ -20,8 +30,10 @@
   (branch-reg 311
    (</>
     (/ ((cmd 209) 1 3))
-    (/ (exec-mem 6656 8) (set-reg 311 #f)))) ;                   <- PC-98
-;   (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f)))) <- FMT
+; PC-98
+    (/ (exec-mem 6656 8)    (set-reg 311 #f))))
+; FMT
+;   (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f))))
   ((cmd 204) 121 127)
 
 ; 	Intro begins here...
@@ -145,15 +157,13 @@
    (proc 2)
            (str "Is Guillotine Nurse really that bad?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "Her hobby is chopping up anything she can.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 121 #t))
  (seg (? (= T 2) (= O 1))
@@ -226,15 +236,11 @@
    (proc 2)
            (str "Yeah! Yeah, I think so too!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 1)
            (str "Cut that out! You two...")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 5)
              (str "Well, at her own request, she's only" 'br)
    (str "wearing the bare minimum.")
@@ -255,30 +261,24 @@
    (text-color 7)
    (str "Doop-dee-doop-dee-doop-dee-doooo....")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 10) (proc 4)
    (proc 1)
            (str "What's up with the weird dance?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
            (str "Come on, Kirara, let's jet outta here!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "What? Where are we going at this hour?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (branch-random
     (</>
      (/
@@ -286,11 +286,7 @@
               (str "There's a special place men and women go," 'br)
       (str "yeah?")
       (proc 15)
-      (exec-mem 2816 "GET 1 5 23 10 96")
-      (exec-mem 2816 "SHOW 0,ACCESS 1")
-      (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-      (exec-mem 2816 "ACCESS 0")
-      (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+      (proc 3) (proc 10) (proc 4)
       (proc 1)
               (str "Oh, you mean the convenience store!"))
      (/
@@ -298,11 +294,9 @@
               (str "How about an evening drive to the" 'br)
       (str "amusement park?")
       (proc 15)
-      (exec-mem 2816 "GET 1 5 23 10 96")
-      (exec-mem 2816 "SHOW 0,ACCESS 1")
+      (proc 3)
       (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-      (exec-mem 2816 "ACCESS 0")
-      (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+      (proc 4)
       (proc 1)
               (str "Uhhh, I'm not so sure about that. Isn't a" 'br)
       (str "place like that better during the daytime?"))
@@ -310,15 +304,11 @@
       (proc 2)
               (str "How about we go to the linen room?")
       (proc 15)
-      (exec-mem 2816 "GET 1 5 23 10 96")
-      (exec-mem 2816 "SHOW 0,ACCESS 1")
-      (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-      (exec-mem 2816 "ACCESS 0")
-      (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+      (proc 3) (proc 11) (proc 4)
       (proc 1)
               (str "As if! You're not dragging me there!"))))
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)

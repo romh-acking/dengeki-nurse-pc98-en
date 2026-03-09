@@ -6,16 +6,16 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
+; (define-proc 10 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
   (define-proc 11 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
   (define-proc 12 (<> (str "Do you want to overwrite existing data?"))) ; This line appears to be unused
-  (define-proc 13
-    (<>
-     (text-frame 3 324 52 379)
-     (text-reset 15)
-     (text-color 1)
-     (text "　　　") (str "Are you sure you want to end the game?")))
-  (define-proc 14
+; (define-proc 13
+;   (<>
+;    (text-frame 3 324 52 379)
+;    (text-reset 15)
+;    (text-color 1)
+;    (text "　　　") (str "Are you sure you want to end the game?")))
+  (define-proc 8 ; originally proc 14
     (<>
      (text-frame 3 324 52 379)
      (text-reset 15)
@@ -42,7 +42,7 @@
      (/ (text #:col 4 "　") (str " Cancel ") (text "　"))
      (/ (text #:col 4 "　") (str "Game End") (text "　"))))
 
-;	The following line decompiled as (set-var |[| 0), which the compiler doesn't accept as valid.
+;	The following line decompiled as (set-var |[| 0), which the compiler (as of juice-0.0.7-DEV+20220419-win) doesn't accept as valid.
 ; 	I've changed it arbitrarily to R to get it to compile, but the value has to be changed back in a hex editor (from 10 to A0).
 
    (set-var R 0)
@@ -65,7 +65,7 @@
       (set-reg 966 #f)
       (set-reg 967 #t)
       (flag-save 0)
-      (proc 14))
+      (proc 8))
      (/
       (set-reg 1001 #f)
       (nop@)
@@ -77,7 +77,7 @@
       (set-reg 966 #t)
       (set-reg 967 #f)
       (flag-save 1)
-      (proc 14)
+      (proc 8)
       (exec-mem 18944 65535 528 23))
      (/
       (set-reg 1002 #f)
@@ -90,7 +90,7 @@
       (set-reg 966 #f)
       (set-reg 967 #f)
       (flag-save 2)
-      (proc 14))
+      (proc 8))
      (/
       (set-reg 1003 #f)
       (nop@)
@@ -102,7 +102,7 @@
       (set-reg 966 #f)
       (set-reg 967 #t)
       (flag-save 3)
-      (proc 14))
+      (proc 8))
      (/
       (set-reg 1004 #f)
       (nop@)
@@ -114,15 +114,15 @@
       (set-reg 966 #t)
       (set-reg 967 #f)
       (flag-save 4)
-      (proc 14))
+      (proc 8))
      (/ (nop@))
 
 ; 	Game End
 
      (/
-      (proc 13)
+      (text-frame 3 324 52 379) (text-reset 15) (text-color 1) (text "　　　") (str "Are you sure you want to end the game?") ; originally proc 13
       ((cmd 211) 0 1)
-      (proc 10)
+      (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|)))) ; originally proc 10
       (branch-var S
        (</>
         (/

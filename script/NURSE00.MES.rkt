@@ -477,16 +477,17 @@
   (load-mem "dat¥icondat.dat" 33024)  ; Icon data
   (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink character
 
-; 	And then the processes are defined, first for character names...
-; 	(10 to 14 are reserved for per-script character names; 8 and 9 are unused)
+; 	And then the processes are defined, first for character names.
+; 	10 to 14 are reserved for per-script character names; 8 and 9 are unused.
+; 	(I've dummied out some of these as they are only used in the first few scripts, so I assigned them to 10.)
 
   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
   (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
   (define-proc 2 (<> (text-color 7) (str "Tanchi: ")))
-  (define-proc 3 (<> (text-color 4) (str "0074: ")))
-  (define-proc 4 (<> (text-color 4) (str "Nurse: ")))
+; (define-proc 3 (<> (text-color 4) (str "0074: ")))
+; (define-proc 4 (<> (text-color 4) (str "Nurse: ")))
   (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
-  (define-proc 6 (<> (text-color 5) (str "Head Nurse: ")))
+; (define-proc 6 (<> (text-color 5) (str "Head Nurse: ")))
   (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
 
 ; 	...And then for animations or text to be displayed while waiting for player input after a line.
@@ -518,6 +519,14 @@
     (<>
      (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320")
      (proc 17)))
+
+; 	Unused/freed processes
+
+  (define-proc 3 (<> (exec-mem 2816 "GET 1 5 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))				; Draw portrait pt.1
+  (define-proc 4 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
+  (define-proc 6 (<> (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")))								; Clear portrait
+; (define-proc 8 (<>))																					; Reserved for SAVE.MES
+; (define-proc 9 (<>))
 
 ; 	Then some miscellaneous stuff before jumping to the main menu
 

@@ -20,8 +20,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "gpc¥ns1_k05.gpc")    (image-mem 1)
@@ -49,16 +51,18 @@
   (proc 10)
                 (str "We should go, we should go, we should")
   (str "go, we should go, we should go, we should go, we" 'br)
-  (str "should go, we should go, we should go to...")
+  (str "should go, we should go, we should go to..........")
   (proc 15)
   (proc 10)
-                (str "...I don't know!")
+                (str "....................................")
+  (str "..................................................")
+  (str ".....................................I don't know!")
   (proc 15)
   (proc 11)
-               (str "...")
+               (str ".....................................")
   (proc 15)
   (proc 10)
-                (str "...")
+                (str "....................................")
   (proc 15)
   (proc 11)
                (str "Ayako, if you keep walking around like")
@@ -168,8 +172,10 @@
    (str "game.")
    (proc 15)
    (text-color 7)
-   (str "Man, I wonder if a sequel is coming out? I'm their" "No. 1 fan, I'm sure I can will it into existence!") ; <- PC-98
-;  (str "It seems that a sequel is going to come out, but" 'br "will it really release as scheduled...?")           <- FMT
+; PC-98
+   (str "Man, I wonder if a sequel is coming out? I'm their" "No. 1 fan, I'm sure I can will it into existence!")
+; FMT
+;  (str "It seems that a sequel is going to come out, but" 'br "will it really release as scheduled...?")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -312,10 +318,10 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 11) (str "Right Nurse: ")))
-   (define-proc 11 (<> (text-color 8)  (str "Left Nurse: ")))
-   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+;  (define-proc 10 (<> (text-color 11) (str "Right Nurse: ")))
+;  (define-proc 11 (<> (text-color 8)  (str "Left Nurse: ")))
+;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
+;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

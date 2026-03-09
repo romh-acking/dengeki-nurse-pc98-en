@@ -13,8 +13,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M32")
@@ -263,7 +265,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5) (str "Lady: ")))
+;  (define-proc 10 (<> (text-color 5) (str "Lady: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

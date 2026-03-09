@@ -6,6 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+  (define-proc 10 (<> (text-color 5) (str "Head Nurse: ")))
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -19,8 +20,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 10752 "INIT")
@@ -223,8 +226,8 @@
    (proc 15)
    (text-color 7)
    (text "“") (str "To my beloved Taro... Your steely eyes when you" 'br)
-   (str "  hold a syringe, the way you masterfully handle" 'br)
-   (str "  your scalpel... How I love it all.") (text "”")
+   (text "　") (str "hold a syringe, the way you masterfully handle" 'br)
+   (text "　") (str "your scalpel... How I love it all.") (text "”")
    (proc 15)
    (text-color 7)
    (str "Oh, what the hell is this... Are these all love" 'br)
@@ -319,8 +322,10 @@
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_109.gpc,GPC") (image-mem 1 3)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse11.uso") ; <- PC-98
-;  (sound '|| "Nurse11.fmt") <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse11.uso")
+; FMT
+;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 5)
@@ -436,8 +441,10 @@
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;  (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse08.uso")
+; FMT
+;  (sound '|| "Nurse08.fmt")
    (sound '|| 1)
    (proc 19)
    (set-reg 25 #t))
@@ -500,8 +507,8 @@
    (proc 15)
    (proc 5)
               (str "To create a righteous nurse, wielding" 'br)
-   (str "the power of one million volts! The ") (text "ＤＥＮＧＥＫＩ")
-   (text "ＮＵＲＳＥ！")
+   (str "the power of a million volts! An electroshock" 'br)
+   (str "nurse...the DENGEKI NURSE!")
    (proc 15)
    (proc 2)
            (str "Wow! Okay, then.")
@@ -561,8 +568,8 @@
    (sound '|| 0)
    ((cmd 209) 1 2)
    (text-frame 16 324 66 379) (text-reset 1)
-   (proc 3)
-         (str "My apologies in advance. I'll make the" 'br)
+   (text-color 4)
+   (str "0074: My apologies in advance. I'll make the" 'br)
    (str "Procedure as painless as possible...")
    (proc 16)
 
@@ -572,7 +579,8 @@
    (text-frame 0 0 79 399) (text-reset 1)
    (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1 3)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
-;  (sound '|| "Nurse08.fmt") <- FMT
+; FMT
+;  (sound '|| "Nurse08.fmt")
    (sound '|| 3)
    ((cmd 209) 1 2)
    (proc 19)
@@ -610,8 +618,10 @@
    (proc 5)
               (str "Back to the la") (text "−") (str "Urk!")
    (exec-mem 2816 "VIEW 27 115 50 258,PUT 3 27 115,FREE 3")
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 15)
    (text-color 7)
    (str "The doc grabs his guts and drops like a rock!")
@@ -722,13 +732,13 @@
    (str "the Nurse Center.")
    (proc 15)
    (exec-mem 2816 "VIEW 8 46 27 173,PUT 4 8 46,FREE 4")
-   (proc 6)
+   (proc 10)
                (str "Hello, Nurse Center.")
    (proc 15)
    (proc 2)
            (str "Emergency case! Prepare for surgery!")
    (proc 15)
-   (proc 6)
+   (proc 10)
                (str "No way! We're already swamped with 8" 'br)
    (str "people from a 5-car pileup, all in critical" 'br)
    (str "condition!")
@@ -737,10 +747,10 @@
            (str "This is just as much an emergency! Aren't" 'br)
    (str "there any free nurses?")
    (proc 15)
-   (proc 6)
+   (proc 10)
                (str "We're short on nurses as it is!")
    (proc 15)
-   (proc 6)
+   (proc 10)
                (str "Oh wait! The Foreign Minister's nurse" 'br)
    (str "is available, since he's faking it and all that.")
    (proc 15)
@@ -793,6 +803,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+;  (define-proc 10 (<> (text-color 5) (str "Head Nurse: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

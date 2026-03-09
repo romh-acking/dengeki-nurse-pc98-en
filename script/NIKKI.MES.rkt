@@ -1,9 +1,10 @@
 ; Dengeki Nurse English Translation - NIKKI.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
-; --Description:--
+; -----Description:-----
 ; The game's development diary, written by the game's scenario writer and game designer Minami Kasai (AKA producer Hironari Tadokoro).
 ; It covers the game's conception from October 1991 up to the wrap-up of its production on 29th August 1992 (about a month before its September 22nd release).
+; --To change for FMT:--
 ; The FM Towns version adds a bonus development diary from the game's scenario programmer that continues up to November 1992 (a month before its December release).
 (mes
  (meta (engine 'ADV) (charset "pc98"))
@@ -336,8 +337,10 @@
   (proc 16)
 
   (text-frame 20 150 71 331)
-  (str "Dengeki Nurse Development Diary" 'br) ;       <- PC98
-; (str "Dengeki Nurse 98 Ver. Development Diary" 'br) <- FMT
+; PC98
+  (str "Dengeki Nurse Development Diary" 'br)
+; FMT
+; (str "Dengeki Nurse 98 Ver. Development Diary" 'br)
   (text 'br)
   (text "　　　　　　　　　　　　　　　　　　") (str "The End" 'br)
   (text 'br)

@@ -1,19 +1,24 @@
 ; Dengeki Nurse English Translation - NS11_19.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
-; --Description:--
+; -----Description:-----
 ; Tanchi and Kirara make it to the operating room, but it's locked...
+; --To change for FMT:--
+; Henshin...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-; (branch-reg 940 (</> (/ <- FMT
+; FMT
+; (branch-reg 940 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "b:¥gpc¥ns1_146.gpc") (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 32 144")
   (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-; (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse10.uso")
+; FMT
+; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_145.gpc") (image-mem 1 3)
@@ -27,16 +32,14 @@
   (proc 2)
           (str "This is the operating room...")
   (proc 15)
-  (exec-mem 2816 "GET 1 5 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
+  (proc 3)
   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+  (proc 4)
   (proc 1)
           (str "Thanks for showing me the way. If you" 'br)
   (str "want, you can wait here.")
   (proc 15)
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+  (proc 6)
   (proc 2)
           (str "Wha!? No, I'm going!")
   (proc 15)
@@ -44,13 +47,16 @@
           (str "Aw, nuts! The door's locked!")
   (proc 15)
   (proc 19)
-  (exec-mem 18944 65535 528 23) ;             <- PC-98
-; (exec-mem 18944 65535 528 23)) (/ (nop@)))) <- FMT
+; PC-98
+  (exec-mem 18944 65535 528 23)
+; FMT
+; (exec-mem 18944 65535 528 23)) (/ (nop@))))
   
 ; 	Dialogue trees defined here...
 
   (loop
-;  (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 2) (seg-call)))) <- FMT
+; FMT
+;  (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 2) (seg-call))))
    (exec-mem 24576 1 1 0)
    (text-color 1)
    (text-frame 3 324 52 379)
@@ -113,15 +119,13 @@
    (proc 2)
            (str "No good! It's not opening!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "Don't you have a spare key?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "If it's locked from the inside, we can't" 'br)
    (str "get in...")
@@ -137,6 +141,7 @@
    (exec-mem 2816 "EXIT")
    ((cmd 209) 0 2)
    (sound '|| 0)
+; PC-98
    (mes-load? "mes¥chang0.mes")
 
 ; 	The following is split into its own segment in the FMT version...
@@ -146,6 +151,7 @@
 ;(seg (? (= T 2) (= O 2))
 ;  (nop@)
 ;  (set-reg 940 #f)
+
    (load-mem "cmd¥quakeh.tcm" 6656)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
@@ -153,8 +159,10 @@
    (image-file "b:¥gpc¥ns1_146.gpc")  (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 32 144")
    (image-file "b:¥gpc¥ns1_146Z.gpc") (image-mem 0 0) (exec-mem 2816 "ACCESS 0")
    (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 0)     <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0)
    (image-file "b:¥gpc¥ns1_145.gpc") (image-mem 1 3)
    ((cmd 193) 0 "b:¥gpa¥ns1-146.gpa")
    (text-frame 3 324 52 379)
@@ -175,15 +183,19 @@
    ((cmd 194) 0 "............ｱ...ｲ..ｳ..ｴ..ｵ..ｶ..ｷ")
    ((cmd 195) 0 1)
    (sound '|| 0)
-   (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 3)    <- FMT
+; PC-98
+   (sound '|se | 20)
+; FMT
+;  (sound '|se | 3)
    (delay 80 0)
    (exec-mem 6656 1 0 1 3 0)
    (text-frame 3 324 52 379)
    (text-reset 15)
    (sound '|| 0)
-   (sound '|se | 24) ; <- PC-98
-;  (sound '|se | 6)    <- FMT
+; PC-98
+   (sound '|se | 24)
+; FMT
+;  (sound '|se | 6)
    (text-color 1)
    (text "ＢＬＡＡＡＡＡＡＡＡＡＭ！")
    (proc 15)
@@ -192,12 +204,13 @@
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
    (set-reg 990 #f)
-;  (set-reg 941 #f) <- FMT
+; FMT
+;  (set-reg 941 #f)
    (mes-jump "b:¥mes¥Ns11_20.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
-   (str "BANG BANG BANG! TAK! THUD! THUMP!")
+   (str "ＢＡＮＧ　ＢＡＮＧ　ＢＡＮＧ！" 'br "ＴＡＫ！　ＴＨＵＤ！　ＴＨＵＭＰ！")
    (proc 15)
    (text-color 7)
    (str "No good... The door isn't moving.")

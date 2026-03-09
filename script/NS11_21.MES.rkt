@@ -16,8 +16,10 @@
   (exec-mem 10752 "MODE V0E0M64")
   (exec-mem 10752 "LOAD> gpc¥ns1_k08.gpc,TEMP")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ;           <- PC-98
-; (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt") (sound '|| 100)
   (sound '|| 1)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 3)
   ((cmd 209) 1 4)
@@ -47,15 +49,13 @@
              (str "Let me introduce Kirara Inazuma. She's" 'br)
    (str "assigned to internal med and pediatrics.")
   (proc 15)
-  (exec-mem 2816 "GET 1 5 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
+  (proc 3)
   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+  (proc 4)
   (proc 1)
           (str "I'm Kirara Inazuma, pleased to meet you.")
   (proc 15)
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+  (proc 6)
   (proc 2)
           (str "Ahhh, yeah... The pleasure is all mine...")
   (proc 15)
@@ -70,16 +70,14 @@
   (proc 5)
              (str "He checked out this morning in a hurry.")
   (proc 15)
-  (exec-mem 2816 "GET 1 5 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
+  (proc 3)
   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+  (proc 4)
   (proc 1)
           (str "Something must have spooked him... Hee" 'br)
    (str "hee!")
   (proc 15)
-  (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+  (proc 6)
   (text-color 7)
   (str "Good grief... What's gonna happen next? But it's" 'br)
    (str "okay, at least Kirara is cute!")
@@ -89,8 +87,10 @@
 ; 		(I'm genuinely surprised the scripting for this wasn't significantly changed for the FMT version)
 
   (sound '|| 0)
-  (sound '|se | 21) ; <- PC-98
-; (sound '|se | 0)    <- FMT
+; PC-98
+  (sound '|se | 21)
+; FMT
+; (sound '|se | 0)
   (text #:col 1 'br)
   (text "　　　　") (str "Episode 1:") (text "“") (str "Dengeki Nurse's Debut") (text "”" 'br)
   (text "　　　　　　　　　　　　　　　　　　　　　") (str " The End")
@@ -104,8 +104,10 @@
   (delay 100 0)
   ((cmd 209) 1 4)
   (sound '|| 0)
-  (sound '|se | 22) ; <- PC-98
-; (sound '|se | 1)    <- FMT
+; PC-98
+  (sound '|se | 22)
+; FMT
+; (sound '|se | 1)
   (exec-mem 1280 13 12 15 13)
   (exec-mem 2816 "VIEW 0 0 10 80,PUT 10 0 0")        (delay 2)
   (exec-mem 2816 "VIEW 10 0 20 80,PUT 10 10 0")      (delay 2)

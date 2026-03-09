@@ -25,8 +25,10 @@
      (text-reset 1)))
 
   (sound '|| 0)
-  (sound '|| "uso¥nurse11.uso") ; <- PC-98
-; (sound '|| "nurse11.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥nurse11.uso")
+; FMT
+; (sound '|| "nurse11.fmt")
   (sound '|| 1)
 
   (text-frame 0 0 79 399)    (text-reset 1)
@@ -302,8 +304,10 @@
 
   ((cmd 209) 0 5)
   (sound '|| 0)
-  (sound '|| "uso¥nurse04.uso") ; <- PC-98
-; (sound '|| "nurse04.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥nurse04.uso")
+; FMT
+; (sound '|| "nurse04.fmt")
   (sound '|| 1)
   (define-proc 16
     (<>
@@ -380,8 +384,10 @@
   (str "Minami and Mao want to take a break for a while!")
   (proc 15)
   (sound '|| 0)
-  (sound '|| "uso¥nurse08.uso") ; <- PC-98
-; (sound '|| "nurse08.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥nurse08.uso")
+; FMT
+; (sound '|| "nurse08.fmt")
   (sound '|| 1)
   (proc 11)
   (str "Clap clap clap clap clap clap!!!" 'br)
@@ -638,5 +644,7 @@
 
   ((cmd 209) 0 2)
   (sound '|| 2)
-  (mes-jump "mes¥Ns_Menu.mes"))) ; <- PC-98
-; (mes-jump "StaffBox.mes")))      <- FMT
+; PC-98
+  (mes-jump "mes¥Ns_Menu.mes")))
+; FMT
+; (mes-jump "StaffBox.mes")))

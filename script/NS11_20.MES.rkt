@@ -8,7 +8,8 @@
  (seg*
   (define-proc 10 (<> (text-color 3) (str "Minister: ")))
   (define-proc 11 (<> (text-color 5) (str "Guillotine Nurse: ")))
-; (branch-reg 941 (</> (/ <- FMT
+; FMT
+; (branch-reg 941 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_149.gpc") (image-mem 0 0) (exec-mem 2816 "GET 3 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_150.gpc") (image-mem 0 0) (exec-mem 2816 "GET 4 0 0 24 144")
@@ -16,8 +17,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso") ;           <- PC-98
-; (sound '|| "Nurse10.fmt") (sound '|| 100) <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse10.uso")
+; FMT
+; (sound '|| "Nurse10.fmt") (sound '|| 100)
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_148.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
@@ -51,13 +54,16 @@
             (str "Haa, haa, haa...")
   (proc 15)
   (proc 19)
-  (exec-mem 18944 65535 528 33) ;             <- PC-98
-; (exec-mem 18944 65535 528 33)) (/ (nop@)))) <- FMT
+; PC-98
+  (exec-mem 18944 65535 528 33)
+; FMT
+; (exec-mem 18944 65535 528 33)) (/ (nop@))))
   
 ; 	Dialogue trees defined here...
 
   (loop
-;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 4) (seg-call)))) <- FMT
+; FMT
+;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 4) (seg-call))))
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -243,15 +249,19 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 153 52 310,PUT 3 27 153,FREE 3")
    (sound '|| 0)
-   (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 8)    <- FMT
+; PC-98
+   (sound '|se | 20)
+; FMT
+;  (sound '|se | 8)
    (proc 0)
                   (str "Dengeki Scalpel Shuriken!")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 30 180,PUT 4 5 23,FREE 4")
    (sound '|| 0)
-   (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 9)    <- FMT
+; PC-98
+   (sound '|se | 20)
+; FMT
+;  (sound '|se | 9)
    (text-color 1)
    (str "WHOOOOOOSH!!!")
    (proc 15)
@@ -277,22 +287,30 @@
    (image-file "b:¥gpc¥Ns1_152.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 0 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0 0)
    (image-file "b:¥gpc¥ns1_151.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 1 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
    (sound '|| 0)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (exec-mem 6656 8) ;  <- PC-98
-;  (exec-mem 17920 0 1) <- FMT
+; PC-98
+   (exec-mem 6656 8)
+; FMT
+;  (exec-mem 17920 0 1)
    (proc 11)
                      (str "Urgh... Fools... Don't think you")
    (str "can hide from the society...")
    (proc 15)
-   (exec-mem 28672 4 16 51 303 1 2 8 36) ; <- PC-98
-;  (exec-mem 28672 4 16 51 303 1 2 4 72)   <- FMT
+; PC-98
+   (exec-mem 28672 4 16 51 303 1 2 8 36)
+; FMT
+;  (exec-mem 28672 4 16 51 303 1 2 4 72)
    (proc 0)
                   (str "I won't lose, no matter what" 'br)
    (str "terrors await...")
@@ -340,8 +358,8 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 3) (str "Minister: ")))
-   (define-proc 11 (<> (text-color 5) (str "Guillotine Nurse: ")))
+;  (define-proc 10 (<> (text-color 3) (str "Minister: ")))
+;  (define-proc 11 (<> (text-color 5) (str "Guillotine Nurse: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

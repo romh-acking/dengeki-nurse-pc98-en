@@ -1,16 +1,18 @@
 ; Dengeki Nurse English Translation - NS11_13.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
-; --Description:--
+; -----Description:-----
 ; Tanchi carries the mysterious woman outside the annex to an examination room to check up on her.
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
   (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
-  (define-proc 12 (<> (text-color 11) (str "Ayako: "))) ; <--- Unused
+; (define-proc 12 (<> (text-color 11) (str "Ayako: "))) <--- Unused
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
-  (define-proc 14 (<> (text-color 5)  (str "Voice: "))) ; <--- Unused
+; (define-proc 14 (<> (text-color 5)  (str "Voice: "))) <--- Unused
 ; (branch-reg 941 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_136.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
@@ -27,8 +29,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 10752 "INIT")
@@ -50,13 +54,16 @@
    (str "I lay the woman on a bed in the exam room.")
   (proc 15)
   (proc 19)
-  (exec-mem 18944 65535 528 33) ; <- PC-98
-; (exec-mem 18944 65535 528 33)) (/ (nop@)))) <- FMT
+; PC-98
+  (exec-mem 18944 65535 528 33)
+; FMT
+; (exec-mem 18944 65535 528 33)) (/ (nop@))))
   
 ; 	Dialogue trees defined here...
 
   (loop
-;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 9) (seg-call)))) <- FMT
+; FMT
+;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 9) (seg-call))))
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -262,17 +269,21 @@
  (seg (? (= T 2) (= O 3))
    (exec-mem 2816 "VIEW 27 152 50 295,PUT 16 27 152,FREE 16")
    (proc 18)
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 10)
-         (str "I should have just stayed asleep...")
+         (str "I should have just stayed asleep...") ; Flagging this
    (proc 15)
    (proc 2)
            (str "What in the") (text "−") (str "!?")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse04.uso") ; <- PC-98
-;  (sound '|| "Nurse04.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse04.uso")
+; FMT
+;  (sound '|| "Nurse04.fmt")
    (sound '|| 1)
    (proc 10)
          (str "Taste the unholy terror of the guillotine!")
@@ -342,16 +353,20 @@
    (proc 15)
    ((cmd 196) 0 0)
    (sound '|| 0)
-   (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 7)    <- FMT
+; PC-98
+   (sound '|se | 20)
+; FMT
+;  (sound '|se | 7)
    (text-color 1)
-   (str "ZZZZZZZZZORCH!")
+   (text "ＺＺＺＺＺＺＺＺＺＯＲＣＨ！")
    (proc 15)
    (sound '|| 0)
-   (sound '|se | 24) ; <- PC-98
-;  (sound '|se | 6)    <- FMT
+; PC-98
+   (sound '|se | 24)
+; FMT
+;  (sound '|se | 6)
    (text-color 1)
-   (str "BAM! KABOOOOOOOM!")
+   (text "ＢＡＭ！　ＫＡＢＯＯＯＯＯＯＯＭ！")
    (proc 15)
    (proc 2)
            (str "Gwaaaaaaaaaaa!")
@@ -360,8 +375,10 @@
    (exec-mem 2816 "GET 7 27 152 50 295")
    (exec-mem 2816 "VIEW 27 152 50 295,OVER 1,PUT 8 27 152,FREE 8")
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-;  (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
    (proc 2)
            (str "Whoa! The guillotine came off!")
@@ -421,10 +438,13 @@
    (sound '|| 2)
    (exec-mem 2816 "EXIT")
    (set-var U 1)
-;  (set-reg 988 #f) <- FMT
+; FMT
+;  (set-reg 988 #f)
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes") ; <- PC-98
-;  (mes-load? "mes¥action1.mes"))  <- FMT
+; PC-98
+   (mes-load? "mes¥action1.mes")
+; FMT
+;  (mes-load? "mes¥action1.mes"))
 
 ; 	The post-battle stuff here is moved into its own dialogue tree in the FMT version (see below).
 
@@ -600,11 +620,15 @@
    (image-file "b:¥gpc¥Ns1_133.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso") ;           <- PC-98
-;  (sound '|| "Nurse10.fmt") (sound '|| 100) <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt") (sound '|| 100)
    (sound '|| 1)
-   (exec-mem 28672 4 16 51 303 1 1 12 24) ; <- PC-98
-;  (exec-mem 28672 4 16 51 303 1 1 4 72)    <- FMT
+; PC-98
+   (exec-mem 28672 4 16 51 303 1 1 12 24)
+; FMT
+;  (exec-mem 28672 4 16 51 303 1 1 4 72)
    (proc 15)
    (proc 11)
                      (str "!!! Who... Who dares!?")
@@ -706,11 +730,11 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
-   (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
-   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
-   (define-proc 14 (<> (text-color 5)  (str "Voice: ")))
+;  (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
+;  (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
+;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
+;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+;  (define-proc 14 (<> (text-color 5)  (str "Voice: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

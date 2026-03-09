@@ -12,8 +12,10 @@
   (image-file "gpc¥ns1_k02.gpc")    (image-mem 1 0)
   (image-file "b:¥gpc¥ns1_105.gpc") (image-mem 1 3)
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   ((cmd 204) 66 68)
   (set-reg 144 #f)

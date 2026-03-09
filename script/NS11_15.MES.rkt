@@ -1,14 +1,23 @@
 ; Dengeki Nurse English Translation - NS11_15.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
-; --Description:--
+; -----Description:-----
 ; Tanchi and Dengeki Nurse barge into the Minister's room to find Ayako riding him.
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: "))) ; <--- Unused
+; (define-proc 13 (<> (text-color 8)  (str "Tomoyo: "))) ; <--- Unused
+
+; 	Character portraits:
+
+  (define-proc 11 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
@@ -18,8 +27,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-;    (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse10.uso")
+; FMT
+;    (sound '|| "Nurse10.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_139.gpc") (image-mem 1 3)
@@ -93,15 +104,11 @@
              (str "Enough! Do you know who you are talking" 'br)
    (str "to!?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "That woman's here to kill you!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 10)
              (str "Nonsense! A cute little thing like" 'br)
    (str "this...")
@@ -109,45 +116,33 @@
    (proc 12)
           (str "Its fiiine! Just a li'l misunderstanding...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "I bet she told you to freshen your" 'br)
    (str "breath with a mint, didn't she?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Oh, dude...")
    (proc 15)
    (proc 10)
              (str "...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "Are you feeling drowsy?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 10)
              (str "...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "Fall asleep, and she'll inject you" 'br)
    (str "with Trans-Bio solution, then you'll drop dead" 'br)
    (str "from heart failure!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 10)
              (str "Oh, oh no...")
    (proc 15)
@@ -155,36 +150,31 @@
           (str "My my, someone thinks they're well-" 'br)
    (str "informed! But it's allll just lies!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "How long can you play dumb, Goofy" 'br)
    (str "Nurse Ayako?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 12)
           (str "Oh daddy, won't you give me a moment to" 'br)
    (str "take care of that gabby little girl?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3) (proc 11) (proc 4)
    (proc 0)
                   (str "I'll be taking care of YOU!")
    (proc 15)
    (sound '|| 2)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (exec-mem 2816 "EXIT")
    (set-var U 2)
-;  (set-reg 988 #f) ; <- FMT
+; FMT
+;  (set-reg 988 #f)
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes") ; <- PC-98
-;  (mes-jump "mes¥action02.mes"))  <- FMT
+; PC-98
+   (mes-load? "mes¥action1.mes")
+; FMT
+;  (mes-jump "mes¥action02.mes"))
 
 ; 	Post-battle chunk following... relocated in FMT version
 
@@ -198,15 +188,13 @@
    (proc 12)
           (str "Oh no, don't you dare touch my chesticles!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 0)
                   (str "What do you think you're doing!?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -218,9 +206,9 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
-   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
-   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+;  (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
+;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
+;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

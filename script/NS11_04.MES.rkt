@@ -6,6 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+  (define-proc 10 (<> (text-color 4) (str "Nurse: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc")
   (image-mem 0 0)
@@ -16,8 +17,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-;    (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "gpc¥ns1_k04.gpc")    (image-mem 1 3)
@@ -129,7 +132,7 @@
            (str "Hey! This is an emergency! We gotta get to")
    (str "surgery! Help me out here!")
    (proc 15)
-   (proc 4)
+   (proc 10)
           (str "Huh? Wha?")
    (proc 15)
    (proc 19)
@@ -139,7 +142,7 @@
    (proc 2)
            (str "What do you mean,") (text "“") (str "Huh?") (text "”") (str "Let's go!")
    (proc 15)
-   (proc 4)
+   (proc 10)
           (str "But... But I...")
    (proc 15)
    (proc 19)
@@ -150,14 +153,14 @@
            (str "He's just faking, ignore him! Every second")
    (str "counts here!")
    (proc 15)
-   (proc 4)
+   (proc 10)
           (str "But..uh...well, I...")
    (proc 15)
    (proc 19)
    (set-reg 46 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (proc 4)
+   (proc 10)
           (str "So, uh... What is wrong, exactly...? And" 'br)
    (str "why are you jumping around like that...?")
    (proc 15)
@@ -167,7 +170,7 @@
    (text-color 7)
    (str "I grab the nurse's hand!")
    (proc 15)
-   (proc 4)
+   (proc 10)
           (str "Eek!")
    (proc 15)
    (proc 2)
@@ -180,7 +183,7 @@
    (proc 2)
            (str "Follow me! There's no time!")
    (proc 15)
-   (proc 4)
+   (proc 10)
           (str "...")
    (proc 15)
    (proc 2)
@@ -202,6 +205,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+;  (define-proc 10 (<> (text-color 4) (str "Nurse: ")))
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

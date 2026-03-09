@@ -12,7 +12,7 @@
   (define-proc 10 (<> (text-color 1) (str "Announcer: ")))
   (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
-  (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17)))
+; (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; Not sure why this is defined... dummying it out, we'll see if anything breaks
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -47,7 +47,7 @@
   (proc 15)
   (proc 10)
              (str "He's made up a 10-lap deficit and is" 'br)
-  (str "now side by side with Chumacher!")
+  (str "now neck and neck with Chumacher!")
   (proc 15)
   (proc 10)
              (str "Here it is, the final straight! Will he")
