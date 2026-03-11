@@ -10,19 +10,20 @@
 ; (branch-reg 941 (</> (/ (load-mem "cmd¥quakeh.tcm" 6656) <- FMT
   (define-proc 10 (<> (text-color 5) (str "Golgo 31: ")))
   (define-proc 11 (<> (text-color 8) (str "Akiko: ")))
+
+; 	The only cutaway here is a Kirara upskirt... but I guess I can stuff that into processes too
+
+  (define-proc 9  (<> (exec-mem 2816 "GET 7 17 93 42 237")))
+  (define-proc 12 (<> (exec-mem 2816 "VIEW 17 93 42 237")))
+  (define-proc 13 (<> (exec-mem 2816 "PUT 6 17 93")))
+  (define-proc 14 (<> (exec-mem 2816 "PUT 7 17 93,FREE 7")))
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (text-frame 0 0 79 399)
-  (text-reset 0)
-  (image-file "b:¥gpc¥ns1_239.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 6 0 0 24 144")
-  (text-frame 0 0 79 399)
-  (text-reset 0)
-  (image-file "b:¥gpc¥ns1_240.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 8 0 0 24 144")
-  (text-frame 0 0 79 399)
-  (text-reset 0)
-  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_239.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
+  (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_240.gpc") (image-mem 0 0) (exec-mem 2816 "GET 8 0 0 24 144")
+  (text-frame 0 0 79 399) (text-reset 0) (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V128E0M0")
@@ -97,7 +98,7 @@
   (sound '|se | 20) ; <- PC-98
 ; (sound '|se | 9)    <- FMT
   (proc 0)
-                 (str "DENGEKI JUUUMP!!!")
+                 (text "ＤＥＮＧＥＫＩ　ＪＵＵＵＭＰ！！！")
   (proc 15)
   (sound '|| 0)
   (sound '|se | 25) ; <- PC-98
@@ -199,8 +200,7 @@
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
-   (exec-mem 2816 "GET 7 17 93 42 237")
-   (exec-mem 2816 "VIEW 17 93 42 237,PUT 6 17 93")
+   (proc 9) (proc 12) (proc 13)
    (proc 2)
            (str "Arrgh, if I look down I'll get vertigo," 'br)
    (str "and if I look up I'll get a nosebleed!")
@@ -208,7 +208,7 @@
    (proc 0)
                   (str "So don't look up!")
    (proc 15)
-   (exec-mem 2816 "VIEW 17 93 42 237,PUT 7 17 93,FREE 7")
+   (proc 12) (proc 14)
    (proc 19)
    (set-reg 121 #t))
  (seg (? (= T 1) (= O 1))
@@ -218,14 +218,13 @@
    (str "so my velocity will be...")
    (proc 15)
    (text-color 7)
-   (exec-mem 2816 "GET 7 17 93 42 237")
-   (exec-mem 2816 "VIEW 17 93 42 237,PUT 6 17 93")
+   (proc 9) (proc 12) (proc 13)
    (str "No good! I can't do math when I've got vertigo!")
    (proc 15)
    (proc 0)
                   (str "I told you to stop looking up!!")
    (proc 15)
-   (exec-mem 2816 "VIEW 17 93 42 237,PUT 7 17 93,FREE 7")
+   (proc 12) (proc 14)
    (proc 19)
    (set-reg 123 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -286,7 +285,8 @@
    (proc 11)
           (str "Ohhh, my darling!")
    (proc 15)
-   (exec-mem 2816 "VIEW 17 93 42 237,PUT 8 17 93,FREE 8")
+   (proc 12)
+   (exec-mem 2816 "PUT 8 17 93,FREE 8")
    (exec-mem 6656 1 0 1 3 0)
    (text-color 1)
    (text "ＴＨＵＭＰ！")
@@ -304,7 +304,7 @@
 ;  (sound '|se | 10)    <- FMT
    (exec-mem 6656 1 0 1 3 0)
    (proc 0)
-                  (str "DENGEKI KIIICK!")
+                  (text "ＤＥＮＧＥＫＩ　ＫＩＩＩＣＫ！")
    (proc 15)
    (proc 10)
              (str "Uwaaaagh!")

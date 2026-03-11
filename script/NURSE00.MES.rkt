@@ -444,10 +444,10 @@
   (wait 80)
   (exec-mem 256 3 0)
   (delay 100 0)
+  ((cmd 209) 0 3)
 
 ; 	Opening sequence set up and loaded here
 
-  ((cmd 209) 0 3)
   (exec-mem 32768 "INIT,SHOW 0,EXIT")
   (image-file "b:¥open¥nsop_13.gpc")
   (exec-mem 5504 0 0)
@@ -475,11 +475,11 @@
   (load-mem "cmd¥ChgFonth.tcm" 32768) ; Font thickness (0: 1px; 1: 2px)
   (load-mem "cmd¥ExitOffH.tcm" 32848) ; (Used in CHANG0.MES)
   (load-mem "dat¥icondat.dat" 33024)  ; Icon data
-  (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink character
+  (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink text character
 
 ; 	And then the processes are defined, first for character names.
 ; 	10 to 14 are reserved for per-script character names; 8 and 9 are unused.
-; 	(I've dummied out some of these as they are only used in the first few scripts, so I assigned them to 10.)
+; 	(I've dummied out some of these as they are only used in the first few scripts.)
 
   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
   (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
@@ -520,13 +520,19 @@
      (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320")
      (proc 17)))
 
-; 	Unused/freed processes
+;	I'm making use of the freed processes for drawing Kirara's portraits, which takes up quite a few bytes in the original script and is generally quite messy to look at.
+;	(This was motivated by the realisation that the translated scripts are too big to fit in the disks as-is.)
+;	The command which actually calls the portrait coordinates will be defined per-script with the processes from 9 to 14 which are free.
+;	Some boxes have different coordinates, and some scripts have different display commands; These are also defined per-script.
 
   (define-proc 3 (<> (exec-mem 2816 "GET 1 5 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))				; Draw portrait pt.1
   (define-proc 4 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
-  (define-proc 6 (<> (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")))								; Clear portrait
-; (define-proc 8 (<>))																					; Reserved for SAVE.MES
-; (define-proc 9 (<>))
+  (define-proc 6 (<>                            (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")))	; Clear portrait
+
+; 	Other unused processes
+
+; (define-proc 8 (<>))	; Reserved for SAVE.MES
+; (define-proc 9 (<>))	; Reserved for per-script ACTE commands
 
 ; 	Then some miscellaneous stuff before jumping to the main menu
 

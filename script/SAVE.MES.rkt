@@ -7,8 +7,8 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
 ; (define-proc 10 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
-  (define-proc 11 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
-  (define-proc 12 (<> (str "Do you want to overwrite existing data?"))) ; This line appears to be unused
+; (define-proc 11 (<> (menu1 22 345 22 361 (</> (/ (text-color 4) (text "　　Ｙｅｓ　　")) (/ (text #:col 4 '|34368| "　　Ｎｏ　　" '|34368|))))))
+; (define-proc 12 (<> (str "Do you want to overwrite existing data?"))) ; This line appears to be unused
 ; (define-proc 13
 ;   (<>
 ;    (text-frame 3 324 52 379)
