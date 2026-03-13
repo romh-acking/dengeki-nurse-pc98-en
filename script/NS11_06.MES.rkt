@@ -10,10 +10,10 @@
 
 ; 	Character portraits:
 
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 0 0 10 96")))  ; Smiling
-  (define-proc 12 (<> (exec-mem 2816 "GET 2 20 0 10 96"))) ; Sad
-  (define-proc 13 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
-  (define-proc 14 (<> (exec-mem 2816 "GET 2 70 0 10 96"))) ; Flushed
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 0 0 10 96")  (proc 4))) ; Smiling
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4))) ; Sad
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
+  (define-proc 14 (<> (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4))) ; Flushed
 
 ; 	Setup continues...
 
@@ -150,8 +150,8 @@
  (seg (? (= T 0) (= O 3))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
    (text-color 7)
-   (str "So she's Kirara Inazuma... Kirara, ") (text "きらら") (str ", what a" 'br)
-   (str "nice name...")
+   (str "So she's Kirara Inazuma... Kirara, ") (text "きらら") (str ", ") (text "キララ") (str ",")
+   (str "what a nice name...")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 4))												; (After Kirara reveals she is part of Black Cross)
@@ -246,7 +246,7 @@
    (set-reg 65 #t))
  (seg (? (= T 1) (= O 5))												; 
    (proc 18)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (text-color 7)
    (str "Ah... She looks so sad now... I guess it's no" 'br)
    (str "surprise, finding out she's just a pawn of her" 'br)
@@ -256,7 +256,7 @@
    (proc 19))
  (seg (? (= T 1) (= O 6))												; 
    (proc 18)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (text-color 7)
    (str "She still has that sad expression... Maybe I can" 'br)
    (str "cheer her up a little?")
@@ -318,7 +318,7 @@
    (proc 5)
               (str "You stop right there, KIRARA INAZUMA!")
    (proc 15)
-   (proc 3) (proc 13) (proc 4)
+   (proc 13)	; Shouting
    (proc 10)
           (str "!!! But how... How do you know my name!?")
    (proc 15)
@@ -331,7 +331,7 @@
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 4))												; #2
    (proc 18)
-   (proc 3) (proc 13) (proc 4)
+   (proc 13)	; Shouting
    (proc 10)
           (str "Who are you people!?")
    (proc 15)
@@ -342,7 +342,7 @@
    (proc 2)
            (str "Kirara, why are you here?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "I'm sorry... I was here to perform a" 'br)
    (str "Procedure on the minister...")
@@ -351,7 +351,7 @@
    (proc 2)
            (str "A... Procedure?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "In Black Cross terms, a Procedure...is" 'br)
    (str "murder!")
@@ -367,7 +367,7 @@
    (proc 5)
               (str "What are you going to do now?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "I can't go back...to the Society... I want")
    (str "to look for my mom here in Japan, but...")
@@ -376,7 +376,7 @@
    (proc 2)
            (str "What's the matter?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "The Black Cross does not forgive traitors.")
    (str "...I'll be the target of their next Procedure...")
@@ -394,7 +394,7 @@
            (str "Absolutely! You should stay here and find" 'br)
    (str "your mother!")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "Thank you both, but... I'd be troubling" 'br)
    (str "the both of you...")
@@ -409,7 +409,7 @@
            (str "Er, yes...that's, right. So, uh, you can" 'br)
    (str "stay in Japan.")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Smiling
    (proc 1)
            (str "Is that really okay...?")
    (proc 15)
@@ -421,7 +421,7 @@
    (set-reg 57 #t))
  (seg (? (= T 2) (= O 6))												; #2
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Smiling
    (proc 1)
            (str "I'm not sure how this will go, but..." 'br)
    (str "We'll give it our all then.")
@@ -444,7 +444,7 @@
    (proc 19))
  (seg (? (= T 3) (= O 1))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14)	; Flushed
    (text-color 7)
    (str "I hold up my half of the pendant.")
    (proc 15)
@@ -464,7 +464,7 @@
    (proc 6)
    (str "I placed it together with Kirara's pendant.")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14)	; Flushed
    (exec-mem 2816 "VIEW 41 165 59 285,OVER 1,PUT 5 41 165,FREE 5")
    (sound '|| 0)
 ; PC-98
@@ -479,7 +479,7 @@
    (proc 5)
               (str "Your father and mother, Kirara.")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "...")
    (proc 15)
@@ -492,7 +492,7 @@
    (str "The doc recapped everything he told me in the" 'br)
    (str "archives.")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "I... I'm a Black Cross Society commando...")
    (proc 15)
@@ -500,7 +500,7 @@
    (proc 2)
            (str "What!?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Sad
    (proc 1)
            (str "I've been in their ranks as long as I" 'br)
    (str "remember, and was trained to be a Nurse" 'br)

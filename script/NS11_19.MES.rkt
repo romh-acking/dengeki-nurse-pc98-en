@@ -8,6 +8,15 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
+; 	Compacting code:
+; 	Was originally (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET x x x 32 144") (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT x 13 100,FREE x")
+
+  (define-proc 10 (<> (exec-mem 2816 "SHOW 0,ACCESS 1")))
+  (define-proc 11 (<> (exec-mem 2816 "ACCESS 0,VIEW 13 100 45 244")))
+
+; 	Setup continues...
+
 ; FMT
 ; (branch-reg 940 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -171,10 +180,10 @@
    (proc 2)
            (str "Hey, don't do anything reckless now...")
    (proc 15)
-   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 5 0 0 32 144")     (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 5 13 100,FREE 5")   (delay 20)
-   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 7 33 0 32 144")    (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 7 13 100,FREE 7")   (delay 5)
-   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 9 0 144 32 144")   (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 9 13 100,FREE 9")   (delay 5)
-   (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 11 33 144 32 144") (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 13 100 45 244,PUT 11 13 100,FREE 11")
+   (proc 10) (exec-mem 2816 "GET 5 0 0 32 144")     (proc 11) (exec-mem 2816 "PUT 5 13 100,FREE 5")   (delay 20)
+   (proc 10) (exec-mem 2816 "GET 7 33 0 32 144")    (proc 11) (exec-mem 2816 "PUT 7 13 100,FREE 7")   (delay 5)
+   (proc 10) (exec-mem 2816 "GET 9 0 144 32 144")   (proc 11) (exec-mem 2816 "PUT 9 13 100,FREE 9")   (delay 5)
+   (proc 10) (exec-mem 2816 "GET 11 33 144 32 144") (proc 11) (exec-mem 2816 "PUT 11 13 100,FREE 11")
    (proc 0)
                   (str "Leave this to a professional! I'm" 'br)
    (str "just gonna flatten it! ...Lightly!")

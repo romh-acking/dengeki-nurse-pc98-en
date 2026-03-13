@@ -9,8 +9,8 @@
 
 ; 	Character portraits:
 
-  (define-proc 10 (<> (exec-mem 2816 "GET 2 10 0 10 96"))) ; Happy
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
 
 ; 	Setup continues...
 
@@ -236,7 +236,7 @@
    (proc 2)
            (str "Yeah! Yeah, I think so too!")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Angry
    (proc 1)
            (str "Cut that out! You two...")
    (proc 15)
@@ -261,7 +261,7 @@
    (text-color 7)
    (str "Doop-dee-doop-dee-doop-dee-doooo....")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Happy
    (proc 1)
            (str "What's up with the weird dance?")
    (proc 15)
@@ -286,7 +286,7 @@
               (str "There's a special place men and women go," 'br)
       (str "yeah?")
       (proc 15)
-      (proc 3) (proc 10) (proc 4)
+      (proc 10)	; Happy
       (proc 1)
               (str "Oh, you mean the convenience store!"))
      (/
@@ -304,7 +304,7 @@
       (proc 2)
               (str "How about we go to the linen room?")
       (proc 15)
-      (proc 3) (proc 11) (proc 4)
+      (proc 11)	; Angry
       (proc 1)
               (str "As if! You're not dragging me there!"))))
    (proc 15)

@@ -16,8 +16,8 @@
 
 ; 	Character portraits:
 
-  (define-proc 10 (<> (exec-mem 2816 "GET 2 0 0 10 96")))  ; Smiling
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 0 0 10 96")  (proc 4))) ; Smiling
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
 
 ; 	Setup continues...
 
@@ -144,7 +144,7 @@
            (str "As a man... I cannot permit you to go in" 'br)
    (str "there alone...")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Eh... Fair enough... But you might" 'br)
    (str "regret saying that later.")
@@ -153,7 +153,7 @@
    (proc 2)
            (str "Of course I won't!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Where's the minister's room?")
    (proc 15)
@@ -172,13 +172,13 @@
    (proc 2)
            (str "Does this mean you have a plan?")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Don't let go of my hand, no matter" 'br)
    (str "what.")
    (proc 15)
    (proc 6)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "Dengeki Juuuuuuuuuuuuuump!")
    (proc 15)
@@ -216,7 +216,7 @@
    (mes-jump "b:¥mes¥ns11_15.mes"))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Don't you have the key?")
    (proc 15)
@@ -227,7 +227,7 @@
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "We'll do without. Where's the" 'br)
    (str "minister's room?")
@@ -236,7 +236,7 @@
    (proc 2)
            (str "Wait, what are you planning?")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "I'm going in through the window.")
    (proc 15)
@@ -244,7 +244,7 @@
    (proc 2)
            (str "That's nuts! It's on the second floor!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "I was a Nurse Commando, I've got" 'br)
    (str "plenty of training under my lab coat.")
@@ -254,7 +254,7 @@
    (set-reg 117 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "Which room on the second floor?" 'br)
    (str "Tell me!")
@@ -266,7 +266,7 @@
    (proc 2)
            (str "Okay, then let's go together!")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "As if, you'll just get in the way!")
    (proc 15)
@@ -274,7 +274,7 @@
    (proc 2)
            (str "It's not just Guillotine Nurse in our way!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Ayako, right? Goofy Nurse Ayako.")
    (proc 15)
@@ -282,7 +282,7 @@
    (proc 2)
            (str "Yeah, yeah! That's her name!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "Ayako and Tomoyo are basically" 'br)
    (str "joined at the hip. They make a powerful team.")
@@ -292,7 +292,7 @@
            (str "For reals? They seem like a pair of idiots")
    (str "to me. ")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Smiling
    (proc 0)
                   (str "They're a fearsome Doofy and Goofy" 'br)
    (str "combo... Those two airheads have cruel efficiency.")
@@ -309,7 +309,7 @@
    (set-reg 118 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "We can't waste time! Into the room!")
    (proc 15)

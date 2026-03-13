@@ -14,7 +14,7 @@
 
 ; 	Character portraits:
 
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
 
 ; 	Setup continues...
 
@@ -104,7 +104,7 @@
              (str "Enough! Do you know who you are talking" 'br)
    (str "to!?")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "That woman's here to kill you!")
    (proc 15)
@@ -116,7 +116,7 @@
    (proc 12)
           (str "Its fiiine! Just a li'l misunderstanding...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "I bet she told you to freshen your" 'br)
    (str "breath with a mint, didn't she?")
@@ -128,7 +128,7 @@
    (proc 10)
              (str "...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "Are you feeling drowsy?")
    (proc 15)
@@ -136,7 +136,7 @@
    (proc 10)
              (str "...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "Fall asleep, and she'll inject you" 'br)
    (str "with Trans-Bio solution, then you'll drop dead" 'br)
@@ -150,7 +150,7 @@
           (str "My my, someone thinks they're well-" 'br)
    (str "informed! But it's allll just lies!")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "How long can you play dumb, Goofy" 'br)
    (str "Nurse Ayako?")
@@ -160,7 +160,7 @@
           (str "Oh daddy, won't you give me a moment to" 'br)
    (str "take care of that gabby little girl?")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Shouting
    (proc 0)
                   (str "I'll be taking care of YOU!")
    (proc 15)

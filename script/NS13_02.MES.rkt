@@ -8,12 +8,26 @@
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+
+; 	Character portraits:
+
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+
+; 	And some other stuff while I'm here:
+
+  (define-proc 9  (<> (exec-mem 2816 "ACCESS 0")))
+  (define-proc 12 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120")))
+  (define-proc 13 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_304.gpc,GPC")))
+  (define-proc 14 (<> (exec-mem 2816 "SHOW 0,ACCESS 1")))
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "GET 4 10 0 10 96")
   (exec-mem 2816 "GET 6 30 0 10 96")
-  (exec-mem 2816 "ACCESS 0")
+  (proc 9)
   (sound '|| 0)
   (sound '|| "uso¥Nurse12.uso")
   (sound '|| 1)
@@ -24,7 +38,7 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_306.gpc,TEMP")
   (exec-mem 10752 "LOAD> gpc¥Face_w00.gpc,TEMP")
   (image-file "gpc¥Aflame01.gpc") (image-mem 1 3)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_304.gpc,GPC") (image-mem 1 3)
+  (proc 13) (image-mem 1 3)
 
 ; 	Intro begins here...
 
@@ -124,44 +138,58 @@
    (text-color 7)
    (str "What kind of swimsuit would she wear...?")
    (proc 15)
+
+; Tanchi fantasises...
    (text-color 7)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_304.gpc,GPC") (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_305.gpc,GPC") (image-mem 1 3)
-   (exec-mem 2816 "ACCESS 0")
+   (proc 14)
+   (proc 13)
+   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_305.gpc,GPC")
+   (image-mem 1 3)
+   (proc 9)
    (exec-mem 6656 4 28 51 303)
    (str "Wahaha... Maybe a high-leg one like this!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 4 5 23")
+
+; Kirara reacts...
+   (proc 12) (exec-mem 2816 "PUT 4 5 23")
    (proc 1)
            (str "What's wrong? Why are you staring at me" 'br)
    (str "like that?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_304.gpc,GPC") (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_306.gpc,GPC") (image-mem 1 3)
-   (exec-mem 2816 "ACCESS 0")
+
+; Tanchi fantasises again...
+   (proc 6)
+   (proc 14)
+   (proc 13)
+   (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_306.gpc,GPC")
+   (image-mem 1 3)
+   (proc 9)
    (exec-mem 6656 4 28 51 303)
    (text-color 7)
    (str "Or maybe... a T-back instead!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 6 5 23")
+
+; Kirara reacts...
+   (proc 12) (exec-mem 2816 "PUT 6 5 23")
    (proc 1)
            (str "Tanchi!!! You've got naughty thoughts" 'br)
    (str "going through your head!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+
+; Okay, get that out of here
+   (proc 6)
    (proc 19)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_304.gpc,GPC") (image-mem 0 0)
-   (exec-mem 2816 "ACCESS 0")
+   (proc 14)
+   (proc 13)
+   (image-mem 0 0)
+   (proc 9)
    (exec-mem 6656 4 16 51 303)
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC") (image-mem 0 0)
-   (exec-mem 2816 "ACCESS 0")
+   (proc 14)
+   (exec-mem 10752 "COPY> gpc¥Face_w00.gpc,GPC")
+   (image-mem 0 0)
+   (proc 9)
    (set-reg 21 #t))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
@@ -206,16 +234,12 @@
    (set-reg 17 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11)	; Happy
    (proc 1)
            (str "Hurry up and change so we can hit the" 'br)
    (str "beach!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Right, right, on it.")
    (proc 15)
@@ -223,28 +247,22 @@
    (set-reg 22 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11)	; Happy
    (proc 1)
            (str "Tanchi, what are you doing?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Um... Warmup exercises, obviously.")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "Shouldn't you change into your swimsuit" 'br)
    (str "first?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -275,7 +293,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+;  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
    (proc 19)
    (set-var B 3)
    (set-var C 3)))

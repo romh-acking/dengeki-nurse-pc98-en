@@ -473,9 +473,10 @@
    (proc 5)
    (branch-random
     (</>
-     (/ (str "Hey! The experiment isn't over yet! We" 'br "have a million volts to discharge!"))
-     (/ (str "Where do you think you're going!? This" 'br "isn't time for a potty break!"))
-     (/ (str "Hey! Quit stomping around!"))))
+     (/ (str "Hey! The experiment isn't over yet! We" 'br "have a million volts to discharge"))
+     (/ (str "Where do you think you're going!? This" 'br "isn't time for a potty break"))
+     (/ (str "Hey! Quit stomping around"))))
+   (str "!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
@@ -485,12 +486,12 @@
    (str "Where do you think you're going!?")
    (proc 15)
    (proc 2)
-           (str "Oh, uhh... I, um...gotta ")
+           (str "Oh, uhh... I, um...gotta g")
    (branch-random
     (</>
-     (/ (str "go and use the" 'br "bathroom"))
-     (/ (str "get some tea, I'm" "thirsty"))
-     (/ (str "go try and pick" 'br "up some girls"))))
+     (/ (str "o and use the" 'br "bathroom"))
+     (/ (str "et some tea, I'm" "thirsty"))
+     (/ (str "o try and pick" 'br "up some girls"))))
    (str "...")
    (proc 15)
    (proc 5)

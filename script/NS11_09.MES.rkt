@@ -10,6 +10,14 @@
   (define-proc 11 (<> (text-color 8)  (str "Left Nurse: ")))
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
+
+; 	This is so stupid, but:
+
+  (define-proc 9  (<> (str "e should go, w")))
+  (define-proc 14 (<> (str ".........")))
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc")
   (image-mem 0 0)
@@ -49,20 +57,20 @@
                (str "Sounds good! Where should we go?")
   (proc 15)
   (proc 10)
-                (str "We should go, we should go, we should")
-  (str "go, we should go, we should go, we should go, we" 'br)
-  (str "should go, we should go, we should go to..........")
+                (str "W") (proc 9) (proc 9) (str "e should")
+  (str "go, w") (proc 9) (proc 9) (proc 9) (str "e" 'br)
+  (str "should go, w") (proc 9) (str "e should go to.") (proc 14)
   (proc 15)
   (proc 10)
-                (str "....................................")
-  (str "..................................................")
-  (str ".....................................I don't know!")
+                (proc 14) (proc 14) (proc 14) (proc 14)
+  (proc 14) (proc 14) (proc 14) (proc 14) (proc 14)
+  (proc 14) (proc 14) (proc 14) (proc 14) (str ".......I don't know!")
   (proc 15)
   (proc 11)
-               (str ".....................................")
+               (proc 14) (proc 14) (proc 14) (proc 14) (str ".")
   (proc 15)
   (proc 10)
-                (str "....................................")
+                (proc 14) (proc 14) (proc 14) (proc 14)
   (proc 15)
   (proc 11)
                (str "Ayako, if you keep walking around like")

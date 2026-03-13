@@ -7,6 +7,13 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 5) (str "Head Nurse: ")))
+
+; 	Misc savings:
+
+  (define-proc 11 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)))
+
+; 	Setup continues...
+
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -61,7 +68,7 @@
   (str "the shelves. I'm really tempted to toss 'em all," 'br)
   (str "but rules are rules.")
   (proc 15)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
+  (proc 11)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 5)
   (str "Where'd you find it?")
@@ -437,7 +444,7 @@
    (str "love between Mitsuko and Taro.")
    
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
+   (proc 11)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 15)
    (sound '|| 0)
@@ -578,7 +585,7 @@
    ((cmd 209) 0 2)
    (text-frame 0 0 79 399) (text-reset 1)
    (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)
+   (proc 11)
 ; FMT
 ;  (sound '|| "Nurse08.fmt")
    (sound '|| 3)

@@ -93,9 +93,15 @@
           (str "So, who is the target who needs punishment?")
   ((cmd 195) 0 65535)
   (proc 16)
+
+; 	Dengeki Nurse appears on the screen
+
   ((cmd 197) 0 16)
   (exec-mem 1280 14 12 15 13)
   (exec-mem 6656 28 20 52 160)
+
+; 	Text continues
+
   (proc 11)
                (str "This girl. We have intel she's going" 'br)
   (str "to the beach on Sunday.")
@@ -165,14 +171,20 @@
   (proc 16)
   (proc 10)
           (str "Make sure the punishment fee of 1 million" 'br)
-  (str "ryo-bucks is transferred to the designated account." 'br)
+  (str "ryo-bucks is transferred to the designated account.")
   (str "Ciao!")
   (proc 16)
+
+; 	The Shioki Sentai Yoranger exit the scene.
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (exec-mem 10752 "COPY> gpc¥ns1_K01.gpc,GPC") (image-mem 0 0)
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 6656 28 16 63 281)
   ((cmd 197) 0 15)
+
+; 	Text continues...
+
   (proc 11)
                (str "...")
   ((cmd 195) 0 65535)

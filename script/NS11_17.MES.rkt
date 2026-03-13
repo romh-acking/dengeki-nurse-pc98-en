@@ -9,9 +9,9 @@
 
 ; 	Character portraits:
 
-  (define-proc 10 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 50 0 10 96"))) ; Confused
-  (define-proc 12 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
 
 ; 	Setup continues...
 
@@ -188,7 +188,7 @@
    (set-reg 131 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Confused
    (proc 1)
            (str "Uh... This is a vinyl toy, isn't it?")
    (proc 15)
@@ -197,7 +197,7 @@
            (str "Why? How!? When!? How did the Minister" 'br)
    (str "turn into a vinyl toy?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Shouting
    (proc 1)
            (str "That's not the Minister, he's been" 'br)
    (str "abducted!")
@@ -206,7 +206,7 @@
    (proc 5)
              (str "Gracious sakes...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11)	; Confused
    (proc 1)
            (str "Ayako must have made us hallucinate all" 'br)
    (str "that.")
@@ -220,7 +220,7 @@
            (str "So...that Ayako woman...was banging" 'br)
    (str "Allizdog?")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Angry
    (proc 1)
            (str "Where is your head at, you perv!? We need" 'br)
    (str "to get to the operating room, and fast!")
@@ -229,7 +229,7 @@
    (proc 2)
            (str "The Minister's in the operating room...?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Shouting
    (proc 1)
            (str "Guillotine Nurse is totally obsessed with" 'br)
    (str "surgery!")
@@ -238,7 +238,7 @@
    (proc 2)
            (str "What!? But...what do you want me to do?")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Shouting
    (proc 1)
            (str "Take me to the operating room!")
    (proc 15)
@@ -247,7 +247,7 @@
            (str "We went there to do surgery on Doc" 'br)
    (str "yesterday...")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Shouting
    (proc 1)
            (str "Yeah, but I forgot where it is!")
    (proc 15)
@@ -256,7 +256,7 @@
    (set-reg 128 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12)	; Shouting
    (proc 1)
            (str "No time to waste! To the operating room!")
    (proc 15)
@@ -276,7 +276,7 @@
            (str "But...I'm scared...of Guillotine Nurse!" 'br)
    (str "She's totally gonna get me!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Angry
    (proc 1)
            (str "Why are you grabbing my arm like that!?")
    (proc 15)
@@ -296,7 +296,7 @@
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10)	; Angry
    (proc 1)
            (str "Stop running away! Show some fortitude! Be")
    (str "a man for once!")
