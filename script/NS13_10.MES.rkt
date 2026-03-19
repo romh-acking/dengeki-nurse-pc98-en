@@ -440,7 +440,7 @@
    (sound '|se | 24)
    (proc 10)
            (str "We act on your grudges, and do it with a" 'br)
-   (str "smile... Shioki Sentai Yoranger, here on the" 'br)
+   (str "smile... Oshioki Sentai Yoranger, here on the" 'br)
    (str "scene!")
    (proc 15)
    (proc 2)

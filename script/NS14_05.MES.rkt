@@ -6,6 +6,15 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
+; 	Consolidating ACTE code:
+
+  (define-proc 10 (<> (exec-mem 2816 "VIEW 5 150 29 294")))
+  (define-proc 11 (<> (exec-mem 2816 "PUT 6 5 150")))
+  (define-proc 12 (<> (exec-mem 2816 "VIEW 27 23 51 167")))
+
+; 	Setup continues...
+
   (load-mem "cmd¥quakeh.tcm" 6656)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_452.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
@@ -180,19 +189,20 @@
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (exec-mem 2816 "GET 7 5 150 29 294")
-   (exec-mem 2816 "VIEW 5 150 29 294,PUT 6 5 150")
+   (proc 10) (proc 11)
    (text-color 7)
    (str "Huh?")
    (proc 15)
    (text-color 7)
    (str "Something's tangled around my hand?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 150 29 294,PUT 7 5 150,FREE 7")
+   (proc 10)
+   (exec-mem 2816 "PUT 7 5 150,FREE 7")
    (proc 19)
    (set-reg 66 #t))
  (seg (? (= T 1) (= O 3))
    (proc 18)
-   (exec-mem 2816 "VIEW 5 150 29 294,PUT 6 5 150")
+   (proc 10) (proc 11)
    (text-color 7)
    (str "A small white triangle of cloth") (text "−")
    (proc 15)
@@ -214,7 +224,8 @@
    (str "I turn my neck upward to look.")
    (proc 15)
    (exec-mem 2816 "GET 9 27 23 51 167")
-   (exec-mem 2816 "VIEW 27 23 51 167,PUT 8 27 23")
+   (proc 12)
+   (exec-mem 2816 "PUT 8 27 23")
    (proc 1)
            (str "EEEEEEEEEEEK!")
    ((cmd 195) 0 1)
@@ -226,7 +237,8 @@
    (proc 1)
            (str "Then don't look!")
    (proc 15)
-   (exec-mem 2816 "VIEW 27 23 51 167,PUT 9 27 23,FREE 9")
+   (proc 12)
+   (exec-mem 2816 "PUT 9 27 23,FREE 9")
    (proc 19)
    (set-reg 62 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -295,6 +307,9 @@
    (text-color 7)
    (str "Arrrrrrggggggg!!!")
    (proc 15)
+
+; 	This screen shake causes problems if the GDC clock is set to 5Mhz!
+
    (sound '|| 0)
    (exec-mem 6656 1 0 1 8 0)
    (text-color 1)
@@ -303,6 +318,9 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_415.gpc,GPC") (image-mem 0 0)
    (exec-mem 17920 0 1)
    (proc 15)
+
+; 	Regularly-scheduled programming continues...
+
    (text-color 7)
    (str "The car goes into a violent spin and then comes to")
    (str "a stop!")

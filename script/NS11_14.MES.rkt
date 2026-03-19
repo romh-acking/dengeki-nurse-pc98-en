@@ -276,7 +276,7 @@
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
-                  (str "Ayako, right? Goofy Nurse Ayako.")
+                  (str "Ayako, right? Goofus Nurse Ayako.")
    (proc 15)
    (proc 6)
    (proc 2)
@@ -294,8 +294,9 @@
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
-                  (str "They're a fearsome Doofy and Goofy" 'br)
-   (str "combo... Those two airheads have cruel efficiency.")
+                  (str "They're a fearsomely doofy and" 'br)
+   (str "goofy combo... Those two airheads have cruel" 'br)
+   (str "efficiency.")
    (proc 15)
    (proc 0)
                   (str "Ayako can make her foes" 'br)

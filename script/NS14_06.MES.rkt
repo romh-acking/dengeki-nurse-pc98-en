@@ -8,6 +8,13 @@
  (seg*
   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
+
+; 	Character portraits:
+
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc")
   (image-mem 0 0)
@@ -142,15 +149,11 @@
    (proc 2)
            (str "......")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "But it was so much fun, though!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Why, you...")
    (proc 15)
@@ -158,15 +161,11 @@
    (set-reg 70 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "I wanna ride again!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -190,16 +189,14 @@
    (set-reg 71 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "Speaking of talent... What happened to" 'br)
    (str "Sena and Manko?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 11)
            (str "They probably went home early.")
    (proc 15)
@@ -210,15 +207,11 @@
              (str "Okay, Kirara-chan, we'll see you" 'br)
    (str "tomorrow!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "Okaaaaaay!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "......")
    (proc 15)
@@ -246,8 +239,8 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
-   (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
+;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
+;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

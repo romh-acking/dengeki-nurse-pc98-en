@@ -8,6 +8,14 @@
  (seg*
   (define-proc 10 (<> (text-color 8) (str "Manko: ")))
   (define-proc 11 (<> (text-color 11) (str "Sena: ")))
+
+; 	Character portraits:
+
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -32,7 +40,7 @@
           (str "Tanchi! Make sure you get a good picture!")
   (proc 15)
   (proc 2)
-          (str "Geez... Man... What a lucky guy...")
+          (str "Geez... Man, what a lucky gal...")
   (proc 15)
   (proc 19)
   
@@ -177,42 +185,32 @@
    (proc 2)
            (str "Okay, now show me a big smile.")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)	; Angry
    (proc 1)
            (str "Like this...?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "No, that's an angry face.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "Hurry up and take it already!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Hold on, I gotta set the focus...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "What's focus?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Just stay quiet and count to ten!")
    (proc 15)
@@ -224,15 +222,11 @@
            (str "So what do you wanna do, Kirara? Can they" 'br)
    (str "join in?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "Do whatever you like, Tanchi.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 40 #t))
  (seg (? (= T 2) (= O 3))
@@ -274,15 +268,11 @@
    (set-reg 42 #t))
  (seg (? (= T 2) (= O 5))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12)	; Happy
    (proc 1)
            (str "Hurry up and take the picture already!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -321,7 +311,7 @@
 ; 	The frame flashes...
 
    (text-color 1)
-   (str "CLICK!")
+   (text "ＣＬＩＣＫ！")
    (exec-mem 1280 2 15 15 15)  (delay 2)
    (exec-mem 1280 4 15 15 15)  (delay 2)
    (exec-mem 1280 6 15 15 15)  (delay 1)
@@ -336,30 +326,34 @@
    (sound '|se | 20)
    (proc 15)
 
-; 	Text continues.
+; 	Sparks fly from the car...
 
    (text-color 1)
-   (str "BRMMM BRMMM BRMMMM!")
+   (text "ＢＲＭＭＭ　ＢＲＭＭＭ　ＢＲＭＭＭＭ！")
    ((cmd 195) 0 1)
    (proc 15)
+
+; 	Sparks fly again, and then...
+
    ((cmd 196) 0 0)
    (text-color 1)
-   (str "VRRRRRRRROOOOOM!")
+   (text "ＶＲＲＲＲＲＲＲＲＯＯＯＯＯＭ！")
    ((cmd 195) 0 2)
    (proc 15)
+
+; 	Text continues!
+
    ((cmd 196) 0 0)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
    (proc 1)
            (str "Eeeeeek! It started moving by itself!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Wha-aaaaaaaaaaaaaaa!?")
    (proc 15)
@@ -372,23 +366,19 @@
    (mes-jump "b:¥mes¥ns14_04.mes"))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)	; Angry
    (proc 1)
            (str "Tanchi! Where are you going? Hurry up and" 'br)
    (str "take the picture!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 8)  (str "Manko: ")))
-   (define-proc 11 (<> (text-color 11) (str "Sena: ")))
+;  (define-proc 10 (<> (text-color 8)  (str "Manko: ")))
+;  (define-proc 11 (<> (text-color 11) (str "Sena: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

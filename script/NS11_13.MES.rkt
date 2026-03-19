@@ -399,7 +399,7 @@
    (proc 15)
    (proc 13)
            (str "Hoh-hoh! Inside the org, I'm known as the" 'br)
-   (str "Doofy Nurse!")
+   (str "Doofus Nurse!")
    (proc 15)
    (proc 13)
            (str "Doctor, your technique is...lacking, it" 'br)

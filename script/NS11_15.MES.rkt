@@ -152,7 +152,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
-                  (str "How long can you play dumb, Goofy" 'br)
+                  (str "How long can you play dumb, Goofus" 'br)
    (str "Nurse Ayako?")
    (proc 15)
    (proc 6)
