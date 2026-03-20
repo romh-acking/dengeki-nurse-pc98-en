@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS15_02.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; The Black Cross Monitor reports back to Black Nurse...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

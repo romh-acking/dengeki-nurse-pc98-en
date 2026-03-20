@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS15_01.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Black Nurse reads on the tale of Elektros.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
