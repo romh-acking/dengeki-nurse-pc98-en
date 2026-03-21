@@ -1,4 +1,4 @@
-; Dengeki Nurse English Translation - NS15_01.MES
+; Dengeki Nurse English Translation - NS15_00.MES
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--

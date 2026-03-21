@@ -6,7 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) (text-color 11) (str "Croco: ")))
 
 ; 	Character portraits:
 
@@ -19,7 +19,7 @@
 
   (define-proc 12 (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 2 10 192 10 96")))
   (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
-  (define-proc 14 (<> (proc 14)))
+  (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
 
 ; 	Setup continues...
 
@@ -226,10 +226,7 @@
    (str "Ho ho ho!") (text "“") (str "An item") (text "”") (str "indeed!")
    (proc 15)
    (proc 14)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 192 10 96") ; Croco
-   (proc 4)
-   (proc 10)
+   (proc 10)	; Croco
    (str "Waniiii!")
    (proc 15)
    (proc 6)
@@ -275,10 +272,7 @@
    (str "Ha ha ha, hopeless...this new item is hopeless!")
    (proc 15)
    (proc 14)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 192 10 96") ; Croco
-   (proc 4)
-   (proc 10)
+   (proc 10)	; Croco
    (str "Waninini.....")
    (proc 15)
    (proc 6)
