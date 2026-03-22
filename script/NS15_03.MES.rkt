@@ -54,6 +54,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 17 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
@@ -168,7 +169,7 @@
    (proc 15)
    (proc 14)
    (proc 2)
-           (str "Well, since she just called... Maybe about" 'br)
+           (str "Well, since she just called... Maybe about")
    (str "thirty minutes?")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
@@ -204,7 +205,7 @@
    (str "Elektros?")
    (proc 15)
    (proc 10)
-   (text "I know it, Waniiiii!")
+   (str "I know it, Waniiiii!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)	; Dr. Akiba
@@ -213,7 +214,7 @@
    (proc 15)
    (proc 14)
    (proc 2)
-           (str "So yeah, Narsia...her name is Narsia...")
+           (str "So yeah, Nursia...her name is Nursia...")
    (proc 15)
    (proc 2)
            (str "She's the last surviving descendant of the")
@@ -230,7 +231,7 @@
            (str "Well, yes, kind of. But Kirara's here, so" 'br)
    (str "that probably acts as a counter...")
    (proc 15)
-   (proc 10)	; Aloof
+   (proc 11)	; Aloof
    (proc 1)
            (str "Hey, don't you go dragging me into this!")
    (proc 15)
@@ -242,7 +243,7 @@
    (proc 2)
            (str "Kirara, why're you so cranky?")
    (proc 15)
-   (proc 10)	; Aloof
+   (proc 11)	; Aloof
    (proc 1)
            (str "I'm NOT cranky!")
    (proc 15)
@@ -265,7 +266,7 @@
    (str "Bing Bong Bing Pwoong...")
    (proc 15)
    (text-color 1)
-   (str "Announcement: Dr. Tanchi Dempa, your guest has" 'br)
+   (str "Announcement: Dr. Tanchi Denpa, your guest has" 'br)
    (str "arrived. Please report to the courtyard" 'br)
    (str "immediately.")
    (proc 15)

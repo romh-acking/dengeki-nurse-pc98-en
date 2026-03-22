@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS15_04.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Back at the Black Cross lair, Black Nurse receives some critical intel...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -12,7 +17,8 @@
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 1)
-  (image-file "gpc¥ns1_k01.gpc") (image-mem 1 3)
+  (image-file "gpc¥ns1_k01.gpc")
+  (image-mem 1 3)
   ((cmd 193) 0 "gpa¥Ns1-K01.gpa")
   ((cmd 193) 1 "gpa¥Ns1-K01.gpa")
   ((cmd 194) 0 ".ｱ.ｲ..ｳ...ｴ.....ｵ.......ｴ.....ｳ...ｲ..ｱ........")
@@ -83,36 +89,42 @@
   (text-color 10)
   (str "Pepe: Paooooooooooo!")
   ((cmd 195) 0 65535)
-  ((cmd 195) 1 1)
+  ((cmd 195) 1 1)	; Pepe's eyes open
   (proc 16)
   (proc 10)
                (str "My goodness, Pepe, you're certainly" 'br)
   (str "ready to go!")
   ((cmd 195) 0 65535)
-  ((cmd 195) 1 1)
+  ((cmd 195) 1 1)	; Pepe's eyes open
   (proc 16)
+
+;	Power Rangers Elephant Zord, go!
+
   ((cmd 197) 0 16)
   (exec-mem 19456 2 32 4 128 75 32 40 128 40 0 30)
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_506.gpc,GPC") (image-mem 1 3 16 16)
+  (exec-mem 10752 "COPY> b:¥gpc¥ns1_506.gpc,GPC")
+  (image-mem 1 3 16 16)
   (exec-mem 19456 1 32 40 128 40 32 4 128 75 8 30)
   (sound '|| 2)
+
+; 	Text continues...
+
   (text-color 6)
-  (text "Piston air pressure: check!")
+  (str "Piston air pressure: check!")
   (proc 16)
   (text-color 6)
   (sound '|| 0)
-  (text "Stretcher angle: 36 degrees!")
+  (str "Stretcher angle: 36 degrees!")
   (proc 16)
   (text-color 6)
-  (text "Blood pressure: 40-90 (slightly low, really)")
+  (str "Blood pressure: 40-90 (slightly low, really)")
   (proc 16)
   (text-color 6)
-  (text "Gate open! Launch preparations complete!")
+  (str "Gate open! Launch preparations complete!")
   (proc 16)
   (proc 10)
                (str "Okay, Pepe.. LET'S GO!")
   (proc 16)
-  
   (text-color 10)
   (str "Pepe: Pwooooooooooooooooo!")
   (proc 16)

@@ -54,6 +54,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 130 #t))                       (nop@) (set-var T 0) (set-var O 4) (seg-call))

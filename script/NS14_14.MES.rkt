@@ -43,7 +43,7 @@
   (proc 15)
   (text-color 7)
   (str "How come? Well, there's something I need to ask" 'br)
-   (str "Kirara.")
+  (str "Kirara.")
   (proc 15)
   (text-color 7)
   (str "Of course, I'm referring to that promise!")
@@ -60,6 +60,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 161 #t))                       (nop@) (set-var T 0) (set-var O 5) (seg-call))

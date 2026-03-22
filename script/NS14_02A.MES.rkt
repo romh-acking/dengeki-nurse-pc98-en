@@ -40,7 +40,7 @@
   (text "　−") (str "1 week later, at the Suzuka Qualifying Pit") (text "−")
   (proc 15)
   (proc 2)
-          (str "Hello, I'm Tanchi Dempa from Dentendo" 'br)
+          (str "Hello, I'm Tanchi Denpa from Dentendo" 'br)
   (str "Hospital.")
   (proc 15)
   (proc 9)	; Happy
@@ -317,7 +317,7 @@
    (str "left.")
    (proc 15)
    (proc 2)
-           (str "I-I'm Tanchi Dempa! Japan's #1 genius" 'br)
+           (str "I-I'm Tanchi Denpa! Japan's #1 genius" 'br)
    (str "internal medicine specialist.")
    (proc 15)
    (proc 3)

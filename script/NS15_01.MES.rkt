@@ -13,7 +13,7 @@
   (define-proc 0  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
   (define-proc 7  (<> (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4))) ; Shocked
   (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
-  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 96 0 10 96") (proc 4))) ; Aloof
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 0 96 10 96") (proc 4))) ; Aloof
 
 ; 	Dr. Akiba portrait:
 
@@ -57,6 +57,7 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
            (// (? (= 13 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
@@ -119,7 +120,8 @@
  (seg (? (= T 0) (= O 2))
    (proc 18)
    (text-color 7)
-   (str "Ah...these two are an item now, are they?")
+   (str "Uh...the two of us are a") (text "“") (str "fresh couple") (text "”") (str "now, are" 'br)
+   (str "we?")
    (proc 15)
    (text-color 7)
    (str "That's just like Doc Akiba... Even out-of-date" 'br)
@@ -129,7 +131,7 @@
    (str "Bing bong!")
    (proc 15)
    (text-color 1)
-   (str "Announcement: Phone call for Dr. Tanchi Dempa from")
+   (str "Announcement: Phone call for Dr. Tanchi Denpa from")
    (str "Internal Med, Please come to the doctor's office" 'br)
    (str "immediately.")
    (proc 15)
@@ -223,7 +225,8 @@
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
-   (str "Ho ho ho!") (text "“") (str "An item") (text "”") (str "indeed!")
+              (str "Ho ho ho! The two of you are a fresh" 'br)
+   (str "couple indeed!")
    (proc 15)
    (proc 14)
    (proc 10)	; Croco
@@ -244,8 +247,8 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
-   (str "Who could that phone call be from? A lady," 'br)
-   (str "perchance?")
+              (str "Who could that phone call be from? A" 'br)
+   (str "lady, perchance?")
    (proc 15)
    (proc 14)
    (proc 2)
@@ -269,7 +272,8 @@
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
-   (str "Ha ha ha, hopeless...this new item is hopeless!")
+              (str "Ha ha ha, hopeless...this new item is" 'br)
+   (str "hopeless!")
    (proc 15)
    (proc 14)
    (proc 10)	; Croco
@@ -282,8 +286,8 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
-   (str "Hurry up then, it's rude to keep them waiting..." 'br)
-   (str "Get moving already!")
+              (str "Hurry up then, it's rude to keep them" 'br)
+   (str "waiting... Get moving already!")
    (proc 15)
    (proc 14)
    (proc 19))
@@ -309,13 +313,14 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "What are you talking about?") (text "“") (str "Cheating") (text "”")
+           (str "What are you talking about?") (text "“") (str "Cheating") (text "”" 'br)
    (str "only applies if you're dating or married in the" 'br)
    (str "first place!")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
-   (str "Enough talk! Hurry up and get the phone already!")
+              (str "Enough talk! Hurry up and get the phone")
+   (str "already!")
    (proc 15)
    (proc 14)
    (proc 2)
