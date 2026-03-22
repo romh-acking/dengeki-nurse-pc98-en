@@ -81,13 +81,13 @@
  (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
-   (str "Narsia...")
+   (str "Nursia...")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "The ring that slipped from Narsia's finger in my" 'br)
+   (str "The ring that slipped from Nursia's finger in my" 'br)
    (str "hand... It's still slightly warm...")
    (proc 15)
    (proc 19)
@@ -95,7 +95,7 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "I look at the bed... Just moments ago, Narsia had" 'br)
+   (str "I look at the bed... Just moments ago, Nursia had" 'br)
    (str "sat there, smiling...")
    (proc 15)
    (proc 11)	; Aloof
@@ -148,14 +148,14 @@
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (text-color 1)
-   (text "ＳＬＡＰ！")
+   (text 'br "　　　　　　　　　　ＳＬＡＰ！")
    (proc 15)
 
 ; 	Text continues...
 
    (proc 2)
            (str "Stupid idiot! What do you think a nurse's" 'br)
-   (str "job is?")
+   (str "job IS!?")
    (proc 15)
    (sound '|| 0)
    (sound '|| "uso¥Nurse11.uso")
@@ -188,10 +188,10 @@
            (str "Hey! Kirara...")
    (proc 15)
    (proc 1)
-           (str "Tanchi... Tanchi... I HATE YOU!")
+           (str "Tanchi... Tanchi... ") (text "Ｉ" '|34368| "ＨＡＴＥ" '|34368| "ＹＯＵ！")
    (proc 15)
    (proc 2)
-           (str "Kirara...")
+           (str "Kirara...!")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)
@@ -205,7 +205,7 @@
    (proc 18)
    (text-color 7)
    (str "Black Nurse vanished without a trace... And she" 'br)
-   (str "took Narsia with her...")
+   (str "took Nursia with her...")
    (proc 15)
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
@@ -220,7 +220,7 @@
    (proc 18)
    (text-color 7)
    (str "I turn to the window and look outside. Neither" 'br)
-   (str "Black Nurse nor Narsia in sight...")
+   (str "Black Nurse nor Nursia in sight...")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

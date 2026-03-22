@@ -45,7 +45,7 @@
   (str "Long ago, in ancient times...")
   (proc 16)
   (text-color 15)
-  (str "On the coast of the Meditteranean sea was a small" 'br)
+  (str "On the coast of the Mediterranean sea was a small" 'br)
   (str "kingdom named Elektros.")
   (proc 16)
   (text-color 15)

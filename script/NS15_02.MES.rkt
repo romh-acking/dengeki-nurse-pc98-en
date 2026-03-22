@@ -26,7 +26,7 @@
   ((cmd 209) 1 2)
   (proc 11)
            (str "Come in, Black Nurse! I've found someone" 'br)
-  (str "with Elektro blood!")
+  (str "with Elektros blood!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)

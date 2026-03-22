@@ -123,7 +123,7 @@
   (str "Gate open! Launch preparations complete!")
   (proc 16)
   (proc 10)
-               (str "Okay, Pepe.. LET'S GO!")
+               (str "Okay, Pepe... LET'S GO!")
   (proc 16)
   (text-color 10)
   (str "Pepe: Pwooooooooooooooooo!")
