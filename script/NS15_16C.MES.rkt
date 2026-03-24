@@ -1,9 +1,14 @@
+; Dengeki Nurse English Translation - NS15_16C.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Dungeon Panda (?) warp.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "dat¥icondat.dat" 33024)
   (load-mem "cmd¥quakeh.tcm" 6656)
-  (define-proc 10 (<> (text #:col 11 "［ナーシア］" 'br)))
+; (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
   (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
   (image-file "b:¥gpc¥Ns1_564.gpc") (image-mem 1 3)
   (proc 13)
@@ -18,9 +23,10 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 10)
-  (text "たんち先生、ワープ装置がありますわ。")
+          (str "Doctor Tanchi, there's a warp device here" 'br)
+  (str "too...")
   (proc 15)
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+  (proc 14)
   (proc 19)
   
 ; 	Dialogue trees defined here...
@@ -33,12 +39,13 @@
    (proc 19)
    (branch-var Z
     (</>
-     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
-     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
-     (/ (nop@) (set-var T 2) (set-var O 0) (seg-call))
-     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
-     (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
-     (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call)) ; Think
+     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call)) ; Look
+     (/ (nop@) (set-var T 2) (set-var O 0) (seg-call)) ; Talk
+     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call)) ; Action
+     (/ (nop@) (set-var T 4) (set-var O 0) (seg-call)) ; Move
+     (/ (nop@) (set-var T 5) (set-var O 0) (seg-call)) ; Save
+; Unused
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))
@@ -50,106 +57,110 @@
 
 ; 	Text continues here...
 
- (seg (? (= T 0) (= O 0))						; Think
+ (seg (? (= T 0) (= O 0))												; Think
    (nop@)
    (proc 18)
-   (text #:col 7 "あまり使いたくないワープ装置だ‥‥" 'br)
-   (text "宇宙の果てにワープしてしまいそうだぞ‥‥")
+   (text-color 7)
+   (str "I don't want to use this one... It feels like it" 'br)
+   (str "might warp us out into deep space...")
    (proc 15)
    (proc 19))
- (seg (? (= T 1) (= O 0))						; Look
+ (seg (? (= T 1) (= O 0))												; Look
    (nop@)
    (proc 18)
-   (text #:col 7 "う〜む‥‥何と言ったらよいのやら‥‥‥‥" 'br)
-   (text "超未来的なワープ装置とでも言うべきか‥‥‥‥")
+   (text-color 7)
+   (str "Hmm... How would I describe this... A super-" 'br)
+   (str "futuristic warp device, maybe?")
    (proc 15)
    (proc 19))
- (seg (? (= T 2) (= O 0))						; Talk
+ (seg (? (= T 2) (= O 0))												; Talk
    (nop@)
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 40 0 10 96")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 3)
+   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
+   (proc 4)
    (proc 0)
-   (text "たんちィ！　パンダだァア！！")
+                  (str "Tanchi!!! A panda!!!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
-   (text "うむ、パンダだ。")
+           (str "Yes, that's definitely a panda.")
    (proc 15)
    (proc 19))
- (seg (? (= T 3) (= O 0))						; Action
+ (seg (? (= T 3) (= O 0))												; Action
    (nop@)
    (proc 18)
-   (text #:col 7 "俺はパンダの頭をなでてやった。")
+   (text-color 7)
+   (str "I pat the panda's head.")
    (proc 15)
-   (text #:col 7 "動物愛護の心は忘れてはいけない。")
+   (text-color 7)
+   (str "One must be kind to animals, after all.")
    (proc 15)
    (proc 19))
- (seg (? (= T 4) (= O 0))						; Move
+ (seg (? (= T 4) (= O 0))												; Move
    (nop@)
    (proc 18)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (text #:col 1 "どうしますか？")
+   (text-color 1)
+   (str "What should we do?")
    (set-var T 0)
    ((cmd 211) 1 2)
-   (menu1
-    10
-    348
-    24
-    348
+   (menu1 10 348 24 348
     (</>
-     (/ (text #:col 4 '|34368| "ワープする" '|34368|))
-     (/ (text #:col 4 '|34368| "部屋を出る" '|34368|))))
+     (/ (text #:col 4 "　Ｗａｒｐ　"))
+     (/ (text #:col 4 '|34368| "Ｌｅａｖｅ" '|34368|))))
    (branch-var S
     (</>
+
+; 	Warp
+
      (/
       (text-frame 3 324 52 379)
       (text-reset 15)
       (if (</>
+
+; 		No coin
+
            (//
             (? (= 806 #f) (= D 0))
             (nop@)
-            (exec-mem 2816 "GET 1 40 23 10 96")
-            (exec-mem 2816 "SHOW 0,ACCESS 1")
-            (exec-mem 2816 "GET 2 10 288 10 96")
-            (exec-mem 2816 "ACCESS 0")
-            (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+            (proc 9) (proc 11)	; Nursia
             (proc 10)
-            (text "そのワープ装置は、" 'br)
-            (text "コインを入れないと動かない仕組みなんです‥‥")
+                    (str "That warp device won't work unless you" 'br)
+            (str "insert a coin.")
             (proc 15)
-            (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+            (proc 14)
             (exec-mem 18944 65535 528 33))
+
+; 		Out of coins
+
            (//
             (? (= 806 #t) (= D 0))
             (nop@)
-            (exec-mem 2816 "GET 1 40 23 10 96")
-            (exec-mem 2816 "SHOW 0,ACCESS 1")
-            (exec-mem 2816 "GET 2 10 288 10 96")
-            (exec-mem 2816 "ACCESS 0")
-            (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+            (proc 9) (proc 11)	; Nursia
             (proc 10)
-            (text "コインがなくなったみたいですね。")
+                    (str "Looks like we're out of coins...")
             (proc 15)
-            (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
-            (exec-mem 2816 "GET 1 5 23 10 96")
-            (exec-mem 2816 "SHOW 0,ACCESS 1")
-            (exec-mem 2816 "GET 2 40 0 10 96")
-            (exec-mem 2816 "ACCESS 0")
-            (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+            (proc 14)
+            (proc 3)
+            (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
+            (proc 4)
             (proc 0)
-            (text "また、取りに行けばあるかなあ？")
+                           (str "Maybe we could go back and get" 'br)
+            (str "more?")
             (proc 15)
-            (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+            (proc 6)
             (exec-mem 18944 65535 528 33))
+
+; 		Coin inserted
+
            (//
-            (text #:col 7 "俺はワープ装置にコインを入れた。")
+            (text-color 7)
+            (str "I insert a coin into the warp device.")
             (proc 15)
-            (text #:col 1 "ぽんぺけぽんぺけぽぽんぽぴ〜〜〜！！")
+            (text-color 1)
+            (str "Beebeebooooop!")
             (exec-mem 6656 0 2 1 4 0)
             (exec-mem 6656 0 40 1 1 0)
             (if (</>
@@ -164,6 +175,9 @@
             (exec-mem 18944 65535 528 33)
             (set-reg 990 #f)
             (mes-jump "b:¥mes¥Ns15_16.mes")))))
+
+; 	Leave
+
      (/
       (set-var S 0)
       (exec-mem 19456 2 8 4 103 75 55 45 55 45 0 20)
@@ -172,16 +186,12 @@
       (set-reg 990 #f)
       (mes-jump "b:¥mes¥Ns15_16.mes"))))
    (proc 19))
- (seg (? (= T 5) (= O 0))						; Save
+ (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (exec-mem 2816 "GET 1 40 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 288 10 96")
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+   (proc 9) (proc 11)	; Nursia
    (proc 10)
-   (text "ごめんなさい‥‥部屋の中ではセーブできません。" 'br)
-   (text "通路に出てセーブして下さいねッ。")
+           (str "Sorry, but we'll have to head out to the" 'br)
+   (str "hallway to save...")
    (proc 15)
-   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+   (proc 14)
    (proc 19)))
