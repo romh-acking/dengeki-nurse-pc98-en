@@ -464,7 +464,9 @@
   (load-mem "cmd¥picbankh.tcm" 256)   ; (Used in CHANG0.MES)
   (load-mem "cmd¥palch.tcm" 1280)     ; Palette change
   (load-mem "cmd¥acte.tcm" 2816)      ; Graphics overlay
-  (load-mem "cmd¥quakeh.tcm" 6656)    ; Screen shake/dissolve
+  (load-mem "cmd¥quakeh.tcm" 6656)    ; Screen shake
+; (load-mem "cmd¥cappear.tcm" 6656)   ; Screen dissolve (swapped in during main game when needed) 
+; (load-mem "cmd¥gpcph.tcm" 6656)     ; (also swapped in during main game when needed) 
   (load-mem "cmd¥buff.tcm" 10752)     ; Screen buffer
   (load-mem "cmd¥whiteh.tcm" 17920)   ; Screen fade to white/black
   (load-mem "cmd¥mousecsr.tcm" 18944) ; Mouse cursor
@@ -478,7 +480,7 @@
   (load-mem "cmd¥blnkcsrh.tcm" 34128) ; Blink text character
 
 ; 	And then the processes are defined, first for character names.
-; 	10 to 14 are reserved for per-script character names; 8 and 9 are unused.
+; 	10 to 14 are reserved for per-script character names.
 ; 	(I've dummied out some of these as they are only used in the first few scripts.)
 
   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
@@ -528,11 +530,6 @@
   (define-proc 3 (<> (exec-mem 2816 "GET 1 5 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))				; Draw portrait pt.1
   (define-proc 4 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
   (define-proc 6 (<>                            (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")))	; Clear portrait
-
-; 	Other unused processes
-
-; (define-proc 8 (<>))	; Reserved for SAVE.MES
-; (define-proc 9 (<>))	; Reserved for per-script ACTE commands
 
 ; 	Then some miscellaneous stuff before jumping to the main menu
 

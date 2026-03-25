@@ -244,8 +244,7 @@
      (/ (nop@))
      (/ (nop@))
      (/ (nop@))))
-   (branch-reg
-    806
+   (branch-reg 806
     (</>
      (/
       (text-frame 3 324 52 379)

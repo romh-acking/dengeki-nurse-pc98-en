@@ -11,6 +11,7 @@
 ; 	Misc savings:
 
   (define-proc 11 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)))
+  (define-proc 12 (<> (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)))
 
 ; 	Setup continues...
 
@@ -69,7 +70,7 @@
   (str "but rules are rules.")
   (proc 15)
   (proc 11)
-  (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+  (proc 12)
   (proc 5)
   (str "Where'd you find it?")
   (proc 15)
@@ -334,7 +335,7 @@
 ; FMT
 ;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
-   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+   (proc 12)
    (proc 5)
               (str "Twenty years ago, you see... Taro" 'br)
    (str "Inazuma was my assistant.")
@@ -376,7 +377,7 @@
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC") (image-mem 1 3)
-   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+   (proc 12)
    (proc 5)
               (str "The global criminal organization, the" 'br)
    (str "Black Cross. They shamefully use the power of" 'br)
@@ -413,7 +414,7 @@
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC") (image-mem 1 3)
-   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+   (proc 12)
    (proc 5)
               (str "They offered a crazy signing bonus, but")
    (str "she turned them down. Then the harrassment" 'br)
@@ -445,7 +446,7 @@
    
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (proc 11)
-   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+   (proc 12)
    (proc 15)
    (sound '|| 0)
 ; PC-98
