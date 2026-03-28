@@ -175,7 +175,7 @@
    (str "Alloy Z...")
    (proc 15)
    (proc 10)
-          (str "Hey! You two! just what do you think you're")
+          (str "Hey! You two! Just what do you think you're")
    (str "doing, talking during MY class!")
    (proc 15)
    (proc 2)

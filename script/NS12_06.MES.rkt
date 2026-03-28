@@ -168,7 +168,7 @@
    (proc 15)
    (text-color 7)
    (str "The principal's job should be to create a relaxed" 'br)
-   (str "environment condusive for education...")
+   (str "environment conducive for education...")
    (proc 15)
    (proc 19)
    (set-reg 46 #t))

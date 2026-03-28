@@ -274,7 +274,7 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 10)
-         (str "I should have just stayed asleep...") ; Flagging this
+         (str "You should've let this sleeping dog lie...")
    (proc 15)
    (proc 2)
            (str "What in the") (text "−") (str "!?")
@@ -695,7 +695,7 @@
  (seg (? (= T 4) (= O 2))
    (proc 18)
    (text-color 7)
-   (str "Sniff sniff... If I knew this would go down, I" 'br)
+   (str "Sniff sniff... If I knew that this would go down, I" 'br)
    (str "woulda gone home, sniff sniff... My regret means" 'br)
    (str "nothing...")
    (proc 15)

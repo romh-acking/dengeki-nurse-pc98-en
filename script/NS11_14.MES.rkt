@@ -289,7 +289,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "For reals? They seem like a pair of idiots")
+           (str "For real? They seem like a pair of idiots")
    (str "to me. ")
    (proc 15)
    (proc 10)	; Smiling

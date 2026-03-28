@@ -233,9 +233,9 @@
    (text-color 7)
    (branch-random
     (</>
-     (/ (text "俺はダンジョンはキライだ！" 'br "ダンジョンは暗いし、狭いし、恐い！！"))
+     (/ (str "I hate dungeons! They are dark, cramped, and" 'br "scary!"))
      (/ (str "Arrghhh, I HATE dungeons! ...But I can't complain" 'br "too much, not when I've got two cute girls with" 'br "me!"))
-     (/ (text "俺はダンジョンは大大大キライだ！！" 'br "特に３Ｄのダンジョンは大大大大大キライだ！！"))))
+     (/ (str "I absolutely positively freakin' HATE dungeons!!" 'br "Especially 3D ones! They SUUUUUUUUUUUUUUUUUUUUUCK!"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look

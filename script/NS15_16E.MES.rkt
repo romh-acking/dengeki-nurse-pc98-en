@@ -189,7 +189,7 @@
    (text-color 7)
    (if (</>
         (// (? (= 705 #t) (= D 0)) (str "Let's finish this up... I want to go home and play" "some games."))
-        (//                        (text "ゲームだと、何度入ってもコインがあるんだが‥‥"))))
+        (//                        (str "In games, no matter how many times you go in, the" 'br "coins are always there..."))))
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look
@@ -197,7 +197,7 @@
    (text-color 7)
    (if (</>
         (// (? (= 705 #t) (= D 0)) (str "How the heck do we have floating coins? Is" 'br "Elektros technology able to negate gravity...?"))
-        (//                        (text "コインはもうないようだ。"))))
+        (//                        (str "Looks like there aren't any coins."))))
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
