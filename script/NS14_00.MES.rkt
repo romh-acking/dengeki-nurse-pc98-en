@@ -137,7 +137,7 @@
    (proc 15)
    (text-color 7)
    (str "But still... If I don't explain things somehow," 'br)
-   (str "even with Doc's authority, my paid leave might get")
+   (str "with Doc's authority, my paid leave might get" 'br)
    (str "cancelled...")
    (proc 15)
    (proc 19)

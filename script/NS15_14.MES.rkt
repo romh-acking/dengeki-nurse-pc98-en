@@ -240,11 +240,11 @@
    (proc 6)
    (proc 12) (proc 13)	; Black Nurse
    (proc 7)
-                (str "Hmph! Take this, you traitor! ELEGARD")
+                (str "Hmph! Take this, you traitor! ELEGUARD")
    (str "SPECIAL!!!")
    (proc 15)
 
-; 	She pulls out the Elegard Special!
+; 	She pulls out the Elegaurd Special!
 
    (proc 14)
    (exec-mem 2816 "GET 9 16 93 40 237")
@@ -392,7 +392,7 @@
    (str "ZZZOZOOOOORP!!! ZAZAZAZAZAZARRRRCHHHHHH!")
    (proc 15)
 
-; 	And the Elegard Special loses its hold!
+; 	And the Eleguard Special loses its hold!
 
    (exec-mem 1280 14 15 8 8 1)
    (exec-mem 1280 14 14 8 8 1)

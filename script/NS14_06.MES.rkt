@@ -110,9 +110,9 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "Bean and Moguri are both laughing their heads off,")
-   (str "acting like it was nothing! How can they brush off")
-   (str "something like that!?")
+   (str "No Nakajima and Moguri are both laughing their" 'br)
+   (str "heads off, acting like it was nothing! How can" 'br)
+   (str "they brush off something like that!?")
    (proc 15)
    (proc 19)
    (set-reg 72 #t))
