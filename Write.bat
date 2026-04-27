@@ -18,6 +18,15 @@ cd "%projectFolder%"
 
 copy "%hardDrive%" "%hardDriveNew%"
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Dump files
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+rmdir /q /s "%filesHdi%"
+
+mkdir "%filesHdi%"
+
+"%toolsFolder%/NDC.exe" G "%hardDrive%" 0 "%filesHdi%"
+@pause
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: ASM
@@ -26,8 +35,19 @@ copy "%hardDrive%" "%hardDriveNew%"
 "%toolsFolder%/nasm.exe" -f bin -o "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" -l "NRSOPEN-EN.lst" "%asmFolder%/NRSOPEN-EN.asm"
 del "NRSOPEN-EN.lst"
 "%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\CMD\NRSOPEN.TCM" "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" > NUL
-
 @if errorlevel 1 echo "Error patching HDI file!"
+
+
+copy "%asmFolder%\NRSFIGHT-EN.asm" "%filesHdi%\NURSE\NRSFIGHT-EN.asm"
+cd "%filesHdi%\NURSE"
+"%toolsFolder%/nasm.exe" -f bin -o "%filesHdi%\NURSE\NRSFIGHT-EN.CMD" "%filesHdi%\NURSE\NRSFIGHT-EN.asm"
+del "NRSFIGHT.CMD"
+move "NRSFIGHT-EN.CMD" "NRSFIGHT.CMD"
+"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\NRSFIGHT.CMD" "%filesHdi%\NURSE\NRSFIGHT.CMD" > NUL
+@if errorlevel 1 echo "Error patching HDI file!"
+@pause
+
+"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\DAT\NRSENEMY.DAT" "%asmFolder%\NRSENEMY.DAT" > NUL
 @pause
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
