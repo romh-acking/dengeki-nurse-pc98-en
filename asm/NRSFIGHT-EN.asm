@@ -2,6 +2,7 @@
 ;	nasm -f bin -o NRSFIGHT-EN.CMD -l NRSFIGHT-EN.LST "NRSFIGHT-EN.asm"
 ;	This requires NRSFIGHT.CMD (35 088 bytes) to be in the same folder.
 
+;TODO: test "Pepe" battle for proper word breaking
 	use16
 	cpu	186
 CODE_BASE_OFS EQU 0400h
@@ -31,7 +32,7 @@ DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 	
 	; ShowActionText (1C83h)
 	incbin "NRSFIGHT.CMD", $, 1C94h - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoordLst1
+	mov	si, tCoord_Actions
 	incbin "NRSFIGHT.CMD", $, 1CA0h - ($-$$-CODE_BASE_OFS)
 	mov	si, tListActions
 	
@@ -44,7 +45,7 @@ DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 	
 	; ShowStat_HP (1CC5h)
 	incbin "NRSFIGHT.CMD", $, 1CD9h - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoordLst2
+	mov	si, tCoord_HP
 	incbin "NRSFIGHT.CMD", $, 1CE7h - ($-$$-CODE_BASE_OFS)
 	mov	si, txtHealth
 	;incbin "NRSFIGHT.CMD", $, 1CEDh - ($-$$-CODE_BASE_OFS)
@@ -52,7 +53,7 @@ DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 	
 	; ShowStat_Atk (1CFBh)
 	incbin "NRSFIGHT.CMD", $, 1D0Fh - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoordLst3
+	mov	si, tCoord_Atk
 	incbin "NRSFIGHT.CMD", $, 1D1Dh - ($-$$-CODE_BASE_OFS)
 	mov	si, txtAttack
 	;incbin "NRSFIGHT.CMD", $, 1D23h - ($-$$-CODE_BASE_OFS)
@@ -60,7 +61,7 @@ DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 	
 	; ShowStat_Def (1D31h)
 	incbin "NRSFIGHT.CMD", $, 1D45h - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoordLst4
+	mov	si, tCoord_Def
 	incbin "NRSFIGHT.CMD", $, 1D53h - ($-$$-CODE_BASE_OFS)
 	mov	si, txtDefense
 	;incbin "NRSFIGHT.CMD", $, 1D59h - ($-$$-CODE_BASE_OFS)
@@ -68,19 +69,19 @@ DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 	
 	; ShowMessageText (1DAFh)
 	incbin "NRSFIGHT.CMD", $, 1DBAh - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoord5
+	mov	si, tCoord_Msg
 	incbin "NRSFIGHT.CMD", $, 1DC0h - ($-$$-CODE_BASE_OFS)
 	mov	si, tListMessages
 	
 	; ShowChat1Text (1DD0h)
 	incbin "NRSFIGHT.CMD", $, 1DDBh - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoord6
+	mov	si, tCoord_PlrChat
 	incbin "NRSFIGHT.CMD", $, 1DE1h - ($-$$-CODE_BASE_OFS)
 	mov	si, tListPlayer
 	
 	; ShowChat2Text (1DF1h)
 	incbin "NRSFIGHT.CMD", $, 1DFCh - ($-$$-CODE_BASE_OFS)
-	mov	si, tCoord7
+	mov	si, tCoord_EnmChat
 	incbin "NRSFIGHT.CMD", $, 1E02h - ($-$$-CODE_BASE_OFS)
 	mov	si, tListEnemy
 	
@@ -133,20 +134,18 @@ loc_12A48:
 	incbin "NRSFIGHT.CMD", $, 2A50h - ($-$$-CODE_BASE_OFS)
 DrawDigit_FW:
 	push	dx
-	push	bx
 	call	Div10
-	add	bx, dx	; TODO: optimize using "add dx, bx", then we don't need to "push/pop bx"
+	add	dx, bx
 	js	short ddig_fw
 ddig_hw:
-	mov	[si], bl
+	mov	[si], dl
 	jmp	short ddig_fin
 ddig_fw:
-	xchg	bh, bl
-	mov	[si], bx
-	xchg	bh, bl
+	xchg	dh, dl
+	mov	[si], dx
+	xchg	dh, dl
 ddig_fin:
 	mov	ax, cx
-	pop	bx
 	pop	dx
 	retn
 
@@ -261,7 +260,7 @@ dtc_16px_wait:
 	xor	ax, di
 	and	ax, ~0001h	; mask out "8-pixel" steps, keeping only 16px and more
 	jz	short dtc16w_nowait
-	; wait only when the screen position is different from before
+	; Wait only when the screen position is different from before.
 	; We take only 16-pixel steps into account, so that the drawing speed
 	; of full-width and half-width characters is consistent.
 	call	WaitFrames
@@ -317,13 +316,6 @@ CheckForLineBreak:
 	cmp	ax, 27
 	jnz	short cflb_ret	; only continue when printing to the text box in the centre
 	
-	mov	al, [si]
-	sub	al, 10h
-	cmp	al, 13h-10h
-	; for "draw saved text" commands, return instantly
-	; This causes the flag to trigger again when we process the actual first letter of the text to print.
-	jb	short cflb_ret
-	
 	mov	al, byte [es:36C7h]
 	add	al, al		; shift previous "space" flag (bit 0) into bit 1
 	
@@ -371,17 +363,18 @@ CalcWordWidth:
 cww_loop:
 	mov	ax, [si]
 	or	al, al
-	jz	short cww_end	; terminator character
+	jz	short cww_str_end	; terminator character
 	cmp	al, 20h
-	jz	short cww_end	; ASCII space -> word end
+	jz	short cww_word_end	; ASCII space -> word end
 	cmp	ax, 4081h
-	jz	short cww_end	; full-width space -> word end
+	jz	short cww_word_end	; full-width space -> word end
+	; Note: 8640h is treated as non-breaking space.
 	cmp	al, 40h
-	jz	short cww_end	; @ is a control code
-	cmp	al, 13h
-	jb	short cww_end	; quit on control characters
+	jz	short cww_word_end	; @ is a control code
+	cmp	al, 10h
+	jb	short cww_word_end	; quit on control characters
 	cmp	al, 15h
-	jb	short cww_numstr
+	jb	short cww_str_ref	; 10..15 - string reference
 	cmp	al, 81h
 	jb	short cww_1byte
 	cmp	al, 0A0h
@@ -407,11 +400,31 @@ cww_width1:
 	inc	cx
 	jmp	short cww_loop
 
-cww_numstr:
+cww_str_ref:
 	inc	si
-	add	cx, byte 3	; assume 3 characters for the number
-	jmp	short cww_loop
+	
+	xor	ah, ah
+	sub	al, 10h
+	shl	ax, 2
+	push	ds
+	push	si
+	mov	si, 39FAh	; SavedTextPtrs
+	add	si, ax
+	lds	si, [si]	; DS:SI = *SavedTextPtrs[AL-10h]
+	call	CalcWordWidth
+	pop	si
+	pop	ds
+	pushf
+	add	cx, ax
+	popf
+	jnc	short cww_end	; carry clear - sub-string parsing ended with "word end", so exit
+	jmp	short cww_loop	; carry set - the sub-string ended with 00h, so we need to continue counting in the main text
 
+cww_str_end:
+	stc
+	jmp	short cww_end
+cww_word_end:
+	clc
 cww_end:
 	mov	ax, cx
 	pop	si
@@ -495,15 +508,15 @@ word_1500A:
 	DW	0, 0E00h, 1C00h, 2A00h, 3800h, 4600h, 5400h, 6200h, 7000h
 	DW	0, 0E00h, 1C00h, 2A00h, 3800h, 4600h, 5400h, 6200h, 0
 
-tCoordLst1:	; 035Eh
-	DW	tCoord1_0
-	DW	tCoord1_1
-	DW	tCoord1_2
-tCoord1_0:
+tCoord_Actions:	; 035Eh
+	DW	tCrdAct_0
+	DW	tCrdAct_1
+	DW	tCrdAct_2
+tCrdAct_0:
 	DB	"@X27@Y264@C0@F1", 0
-tCoord1_1:
+tCrdAct_1:
 	DB	"@X27@Y280@C0@F1", 0
-tCoord1_2:
+tCrdAct_2:
 	DB	"@X27@Y296@C0@F1", 0
 
 ;	Text data begins here...
@@ -583,28 +596,28 @@ txtAction14:	; "電撃バズーカ"
 	DB	"Dengeki Bazooka", 0
 
 
-tCoordLst2:	; 047Eh
-	DW	tCoord2_0
-	DW	tCoord2_1
-tCoord2_0:
+tCoord_HP:	; 047Eh
+	DW	tCrdHP_0
+	DW	tCrdHP_1
+tCrdHP_0:
 	DB	"@X7@Y328@C0@F1", 0
-tCoord2_1:
+tCrdHP_1:
 	DB	"@X61@Y328@C0@F1", 0
 
-tCoordLst3:	; 04A1h
-	DW	tCoord3_0
-	DW	tCoord3_1
-tCoord3_0:
+tCoord_Atk:	; 04A1h
+	DW	tCrdAtk_0
+	DW	tCrdAtk_1
+tCrdAtk_0:
 	DB	"@X7@Y344@C0@F1", 0
-tCoord3_1:
+tCrdAtk_1:
 	DB	"@X61@Y344@C0@F1", 0
 
-tCoordLst4:	; 04C4h
-	DW	tCoord4_0
-	DW	tCoord4_1
-tCoord4_0:
+tCoord_Def:	; 04C4h
+	DW	tCrdDef_0
+	DW	tCrdDef_1
+tCrdDef_0:
 	DB	"@X7@Y360@C0@F1", 0
-tCoord4_1:
+tCrdDef_1:
 	DB	"@X61@Y360@C0@F1", 0
 
 ;	Status names
@@ -639,7 +652,7 @@ txtDirNorth:
 txtDirSouth:
 	;DB	96h, 6Bh, 0	; 北 South
 	DB	"South", 0
-tCoord5:	; 0504h
+tCoord_Msg:	; 0504h
 	DB	"@X27@Y264@C0@F1", 0
 
 
@@ -847,7 +860,7 @@ txtMsg2A:
 txtMsg2B:
 	DB	10h, " uses Vitamin N!", 0
 txtMsg2C:
-	DB	10h, " uses Vitamin N Super!", 0
+	DB	10h, " uses Vitamin N ", 82h, 93h, 82h, 95h, 82h, 90h, 82h, 85h, 82h, 92h, "!", 0
 
 ;	Enemy recovery messages
 
@@ -884,7 +897,7 @@ txtMsg37:
 
 ;	Result 2
 txtMsg38:
-	DB	10h, " got stabbed in the butt with", 0Dh, "Vitamin N Super!", 0
+	DB	10h, " got stabbed in the butt with", 0Dh, "Vitamin N ", 82h, 93h, 82h, 95h, 82h, 90h, 82h, 85h, 82h, 92h, "!", 0
 
 ;	Result 3
 txtMsg39:
@@ -926,11 +939,11 @@ txtMsg43:	; Enemy
 txtMsg44:
 	DB	"Plasma charge is now at", 0Dh, 14h, 81h, 93h, "... Plasma Flash is online!", 0
 
-tCoord6:	; 12C1h
-	DB	"@X27@Y264@C4@F1", 0
-
 
 ;	Dengeki Nurse dialog follows...
+
+tCoord_PlrChat:	; 12C1h
+	DB	"@X27@Y264@C4@F1", 0
 
 tListPlayer:	; 12D1h
 	DW	txtPlr00
@@ -1045,11 +1058,10 @@ txtPlr20:
 	DB	0Dh, "It's sooooo stinky!!!", 0
 
 
-tCoord7:	; 18FFh
-	DB	"@X27@Y264@C7@F1", 0
-
-
 ;	Enemy dialog follows...
+
+tCoord_EnmChat:	; 18FFh
+	DB	"@X27@Y264@C7@F1", 0
 
 tListEnemy:	; 190Fh
 	DW	tLstEnemy00
