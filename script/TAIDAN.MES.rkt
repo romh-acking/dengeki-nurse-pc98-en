@@ -325,7 +325,7 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (text-color 15)
-  (str "Black Nurse: P-please forgive me... Hell Nurse...")
+  (str "Black Nurse: P-please forgive me... Jigoku Nurse...")
   (proc 16)
   (text-color 11)
   (str "Jigoku Nurse: Silence! How dare you come crawling" 'br)
@@ -376,6 +376,7 @@
   (text "　　　　　　") (str "Or maybe...............")
   (proc 16)
 
+  (text 'br)
   (str "Depending on the passionate fan mail that touches our" 'br)
   (str "president's heart...")
   (proc 15)

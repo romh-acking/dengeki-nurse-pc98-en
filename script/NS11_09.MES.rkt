@@ -11,11 +11,6 @@
   (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
 
-; 	This is so stupid, but:
-
-  (define-proc 9  (<> (str "e should go, w")))
-  (define-proc 14 (<> (str ".........")))
-
 ; 	Setup continues...
 
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")

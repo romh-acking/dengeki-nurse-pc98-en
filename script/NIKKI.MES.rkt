@@ -197,7 +197,7 @@
   (str "style electric guitar sound, he was like,") (text "“") (str "Ha ha ha...") (text "”" 'br)
   (text 'br)
   (text "　") (str "The meeting ended quickly after that, and we instead spent a")
-  (str "while excitedly discussing Novella.")
+  (str "while excitedly discussing Novela.")
   (proc 16)
 
   (text "　　　　　　　") (str "May: Transformation complete!!!" 'br)
