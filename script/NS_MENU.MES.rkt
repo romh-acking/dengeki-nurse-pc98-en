@@ -95,11 +95,11 @@
         60 122
         60 144
         (</>
-         (/ (set-reg 1000 #t) (text #:col 1 "　")  (str " Carte ") (text "１　" '|34368|))
-         (/ (set-reg 1001 #t) (text #:col 1 "　")  (str " Carte ") (text "２　" '|34368|))
-         (/ (set-reg 1002 #t) (text #:col 1 "　")  (str " Carte ") (text "３　" '|34368|))
-         (/ (set-reg 1003 #t) (text #:col 1 "　")  (str " Carte ") (text "４　" '|34368|))
-         (/ (set-reg 1004 #t) (text #:col 1 "　")  (str " Carte ") (text "５　" '|34368|))
+         (/ (set-reg 1000 #t) (text #:col 1 "　")  (str " Chart ") (text "１　" '|34368|))
+         (/ (set-reg 1001 #t) (text #:col 1 "　")  (str " Chart ") (text "２　" '|34368|))
+         (/ (set-reg 1002 #t) (text #:col 1 "　")  (str " Chart ") (text "３　" '|34368|))
+         (/ (set-reg 1003 #t) (text #:col 1 "　")  (str " Chart ") (text "４　" '|34368|))
+         (/ (set-reg 1004 #t) (text #:col 1 "　")  (str " Chart ") (text "５　" '|34368|))
          (/                   (text #:col 1 "　　") (str "Cancel")  (text "　　"))))
        (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
        (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))

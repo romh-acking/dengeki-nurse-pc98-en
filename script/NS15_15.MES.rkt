@@ -165,7 +165,7 @@
    (proc 15)
    (proc 10)
            (str "Inside the castle there's a...certain" 'br)
-   (str "device. If don't return the ring, something" 'br)
+   (str "device. If we don't return the ring, something" 'br)
    (str "terrible will happen!")
    (proc 15)
    (proc 2)
@@ -198,7 +198,7 @@
            (str "Kirara! Prepare the Jet Hang Glider!")
    (proc 15)
    (proc 10)
-           (str "W-wait...")
+           (str "W-Wait...")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

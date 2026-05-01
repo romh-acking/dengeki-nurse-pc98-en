@@ -523,7 +523,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
-   (str "It's been a while since I've seen Narisa. I'd like")
+   (str "It's been a while since I've seen Nurisa. I'd like")
    (str "to have a long talk with her.")
    (proc 15)
    (proc 19))

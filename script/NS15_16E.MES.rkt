@@ -9,8 +9,14 @@
   (load-mem "dat¥icondat.dat" 33024)
 ; (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
   (sound '|| 0)
+
+; 	Intro begins here...
+
   (if (</>
        (//
+
+; 		First visit
+
         (? (= 705 #f))
         (nop@)
         ((cmd 204) 550 565)
@@ -51,12 +57,16 @@
         (proc 6)
         (proc 9) (proc 11)	; Nursia
         (proc 10)
-                (text "‥‥‥‥‥‥‥‥‥‥‥‥")
+                (text "...")
         (proc 15)
         (proc 14)
         (set-reg 705 #t))
+
+; 		Subsequent visits without having taken coins
+
        (//
-        (? (= 705 #t) (= 806 #f) (= D 0))
+;       (? (= 705 #t) (= 806 #f) (= D 0)) <- No need for a coin check here, on the suggestion of ValleyBell
+        (? (= 705 #t) (= 806 #f))
         (nop@)
         (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
         (exec-mem 2816 "GET 11 8 145 4 30")
@@ -91,6 +101,9 @@
         (str "coins!")
         (proc 15)
         (proc 14))
+
+; 		Subsequent visit, after running out of previously-taken coins
+
        (//
         (? (= 705 #t) (= 806 #t) (= D 0))
         (nop@)
@@ -119,7 +132,8 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
-                (str "I grabbed them, but are there more?")
+                (str "There are coins floating here again! I" 'br)
+        (str "thought I took them all...")
         (proc 15)
         (proc 3)
         (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
@@ -130,9 +144,12 @@
         (proc 6)
         (proc 9) (proc 11)	; Nursia
         (proc 10)
-                (text "‥‥‥‥‥‥‥‥‥‥‥‥")
+                (text "...")
         (proc 15)
         (proc 14))
+
+; 		Subsequent visit with coins
+
        (//
         (? (= 705 #t) (= 806 #t))
         (nop@)
@@ -209,7 +226,7 @@
    (if (</>
         (//
          (? (= 705 #t) (= D 0))
-         (str "The coins shining in the sky are so")
+                        (str "The coins shining in the sky are so")
          (str "pretty!")
          (proc 15)
          (proc 6)
@@ -217,11 +234,12 @@
                  (str "Hey... Do you not understand how things" 'br)
          (str "work?"))
         (//
-         (str "It's nice and cool inside here!")
+                        (str "It's nice and cool inside here!")
          (proc 15)
          (proc 6)
          (proc 2)
-                 (str "She really has no sense of tension..."))))
+                 (str "You really have no sense of trepidation," 'br)
+         (str "do you..."))))
    (proc 15)
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
@@ -250,7 +268,7 @@
       (text-frame 3 324 52 379)
       (text-reset 15)
       (text-color 1)
-      (str "Should I take the coin?")
+      (str "Should we take the coins?")
       (set-var T 0)
       ((cmd 211) 1 2)
       (menu1 10 348 28 348
@@ -264,7 +282,7 @@
          (text-reset 15)
          (proc 2)
                  (str "If we collect enough coins we'll get a" 'br)
-         (str "1UP, right?")
+         (text "１ＵＰ") (str ", right?")
          (proc 15)
          (sound '|se | 25) (exec-mem 2816 "VIEW 16 17 20 47,PUT 11 16 17")    (delay 30)
          (sound '|se | 25) (exec-mem 2816 "VIEW 24 17 28 47,PUT 11 24 17")    (delay 30)
@@ -282,7 +300,7 @@
          (sound '|se | 25) (exec-mem 2816 "VIEW 24 209 28 239,PUT 11 24 209") (delay 30)
          (sound '|se | 25) (exec-mem 2816 "VIEW 32 209 36 239,PUT 11 32 209") (delay 30)
          (sound '|se | 25) (exec-mem 2816 "VIEW 40 209 44 239,PUT 11 40 209")
-         (set-var D 15)
+         (set-var D 15) ; As ValleyBell points out: The game shows you picking up 16 coins but then only increments your value by 15! Stingy bastards
          (proc 2)
                  (str "Hahaha! I'm strangely enjoying this!")
          (proc 15)
@@ -345,7 +363,7 @@
    (proc 18)
    (proc 9) (proc 11)	; Nursia
    (proc 10)
-           (str "Doctor Tanchi.. Please don't save in a" 'br)
+           (str "Doctor Tanchi... Please don't save in a" 'br)
    (str "place like this...")
    (proc 15)
    (proc 14)

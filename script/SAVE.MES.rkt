@@ -29,16 +29,16 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (text-color 1)
-   (text "　　　") (str "Which Carte would you like to save to?")
+   (text "　　　") (str "Which chart would you like to save to?")
    (menu1
     4 345  16 345  28 345
     4 361  16 361  28 361  40 361
     (</>
-     (/ (text #:col 4 "　") (str "Carte ")   (text "１　"))
-     (/ (text #:col 4 "　") (str "Carte ")   (text "２　"))
-     (/ (text #:col 4 "　") (str "Carte ")   (text "３　"))
-     (/ (text #:col 4 "　") (str "Carte ")   (text "４　"))
-     (/ (text #:col 4 "　") (str "Carte ")   (text "５　"))
+     (/ (text #:col 4 "　") (str "Chart ")   (text "１　"))
+     (/ (text #:col 4 "　") (str "Chart ")   (text "２　"))
+     (/ (text #:col 4 "　") (str "Chart ")   (text "３　"))
+     (/ (text #:col 4 "　") (str "Chart ")   (text "４　"))
+     (/ (text #:col 4 "　") (str "Chart ")   (text "５　"))
      (/ (text #:col 4 "　") (str " Cancel ") (text "　"))
      (/ (text #:col 4 "　") (str "Game End") (text "　"))))
 

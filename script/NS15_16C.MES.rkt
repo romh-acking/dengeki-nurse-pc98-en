@@ -65,6 +65,7 @@
    (str "might warp us out into deep space...")
    (proc 15)
    (proc 19))
+
  (seg (? (= T 1) (= O 0))												; Look
    (nop@)
    (proc 18)
@@ -73,6 +74,7 @@
    (str "futuristic warp device, maybe?")
    (proc 15)
    (proc 19))
+
  (seg (? (= T 2) (= O 0))												; Talk
    (nop@)
    (proc 18)
@@ -87,6 +89,7 @@
            (str "Yes, that's definitely a panda.")
    (proc 15)
    (proc 19))
+
  (seg (? (= T 3) (= O 0))												; Action
    (nop@)
    (proc 18)
@@ -97,6 +100,7 @@
    (str "One must be kind to animals, after all.")
    (proc 15)
    (proc 19))
+
  (seg (? (= T 4) (= O 0))												; Move
    (nop@)
    (proc 18)
@@ -186,6 +190,7 @@
       (set-reg 990 #f)
       (mes-jump "b:¥mes¥Ns15_16.mes"))))
    (proc 19))
+
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (proc 9) (proc 11)	; Nursia

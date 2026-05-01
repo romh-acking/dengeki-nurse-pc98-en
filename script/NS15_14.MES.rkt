@@ -240,7 +240,7 @@
    (proc 6)
    (proc 12) (proc 13)	; Black Nurse
    (proc 7)
-                (str "Black Nurse: Hmph! Take this, you traitor!" 'br)
+                (str "Hmph! Take this, you traitor!" 'br)
    (str "ELEGUARD SPECIAL!!!")
    (proc 15)
 

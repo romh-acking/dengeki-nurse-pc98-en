@@ -17,7 +17,7 @@
 
 ; 	These appear to be... I dunno:
 
-  (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 18 49 18 49 0 20) (set-reg 990 #f)))
+  (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 18 49 18 49 0 20)))
   (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
 
 ; 	Nursia portrait:
@@ -33,6 +33,9 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (image-file "b:¥gpc¥Ns1_550.gpc") (image-mem 1 3)
+
+; 	Different door graphics loaded based on the current floor
+
   (if (</>
        (//
         (? (= G 1)) (nop@))
@@ -62,6 +65,9 @@
         (image-file "b:¥gpc¥Ns1_555.gpc") (image-mem 1 0)
         (image-file "b:¥gpc¥Ns1_557.gpc") (image-mem 1 0)
         (image-file "b:¥gpc¥Ns1_560.gpc") (image-mem 1 3))))
+
+; 	Face portrait setup (only on first visit)
+
   (branch-reg 333
    (</>
     (/
@@ -72,8 +78,10 @@
      (exec-mem 2816 "ACCESS 0")
      (set-reg 333 #t))
     (/ (nop@))))
-  (branch-reg
-   991
+
+; 	Miscellaneous scripting for first and subsequent visits
+
+  (branch-reg 991
    (</>
     (/ ((cmd 209) 1 2) (set-reg 991 #t))
     (/ (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20))))
@@ -88,8 +96,10 @@
        (//
         (? (= 700 #f))
         (nop@)
-        (set-reg 700 #t)
+        (set-reg 700 #t)	; Flag set so intro is not shown again
         (set-reg 666 #t)
+        (set-var D 0)		; New addition: Variable set to ensure you don't have coins going into the dungeon, thanks ValleyBell for figuring this out
+
         (proc 9) (proc 11)	; Nursia
         (proc 10)
                 (str "The castle has six floors, and one of them")
@@ -194,6 +204,7 @@
                        (str "Okay, so what do we do now?")
         (proc 15)
         (proc 6))))
+
   (if (</> (// (? (= 666 #t)) (nop@) (set-reg 666 #f)) (// (proc 13))))
   (proc 19)
   
@@ -207,18 +218,22 @@
    (proc 19)
    (branch-var Z
     (</>
+
+; The typical
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call)) ; Think
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call)) ; Look
      (/ (nop@) (set-var T 2) (set-var O 0) (seg-call)) ; Talk
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call)) ; Action
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call)) ; Move
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call)) ; Save
+
 ; Room selection
      (/ (nop@) (set-var T 6)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 7)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 8)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 9)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 10) (set-var O 0) (seg-call))
+
 ; Unused
      (/ (nop@))
      (/ (nop@))
@@ -238,6 +253,7 @@
      (/ (str "I absolutely positively freakin' HATE dungeons!!" 'br "Especially 3D ones! They SUUUUUUUUUUUUUUUUUUUUUCK!"))))
    (proc 15)
    (proc 19))
+
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
@@ -254,6 +270,7 @@
    (str " floor of the castle.")
    (proc 15)
    (proc 19))
+
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (branch-random
@@ -288,10 +305,11 @@
       (proc 9) (proc 11)	; Nursia
       (proc 10)
               (str "I'm feeling a little better. Maybe it's" 'br)
-      (str "the Elektros fresh air?")
+      (str "the fresh Elektros air?")
       (proc 15)
       (proc 14))))
    (proc 19))
+
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (branch-random
@@ -329,14 +347,16 @@
       (proc 15)
       (proc 6))))
    (proc 19))
+
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 1)
    (str "Which room do you want to enter? Select a door by" 'br)
-      (str "clicking on it.")
+   (str "clicking on it.")
    (proc 15)
    (exec-mem 18944 65535 382 286)
    (proc 19))
+
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
@@ -350,64 +370,50 @@
 ; 	Complicated dungeon code begins here...
 
 
+; 	Door 1
 
  (seg (? (= T 6) (= O 0))
    (nop@)
    (set-var S 1)
    (proc 18)
+
+; Psycho barrier toggle
    (if (</>
-        (// (? (= G 1)) (nop@) (set-reg 851 #t))
-        (// (? (= G 2)) (nop@) (set-reg 850 #t))
-        (// (? (= G 3)) (nop@) (set-reg 850 #t))
-        (// (? (= G 4)) (nop@) (set-reg 851 #t))
-        (// (? (= G 5)) (nop@) (set-reg 850 #t))
-        (// (? (= G 6)) (nop@) (set-reg 851 #t))))
+        (// (? (= G 1)) (nop@) (set-reg 851 #t))   ; 1F
+        (// (? (= G 2)) (nop@) (set-reg 850 #t))   ; 2F
+        (// (? (= G 3)) (nop@) (set-reg 850 #t))   ; 3F
+        (// (? (= G 4)) (nop@) (set-reg 851 #t))   ; 4F
+        (// (? (= G 5)) (nop@) (set-reg 850 #t))   ; 5F
+        (// (? (= G 6)) (nop@) (set-reg 851 #t)))) ; 6F
+
+; Display different door text based on above
    (if (</>
-        (//
-         (? (= 850 #t))
-         (nop@)
-         (set-reg 850 #f)
-         (set-var T 11)
-         (set-var O 0)
-         (seg-call))
-        (//
-         (? (= 851 #t))
-         (nop@)
-         (set-reg 851 #f)
-         (set-var T 12)
-         (set-var O 0)
-         (seg-call))))
+        (// (? (= 850 #t)) (nop@) (set-reg 850 #f) (set-var T 11) (set-var O 0) (seg-call))
+        (// (? (= 851 #t)) (nop@) (set-reg 851 #f) (set-var T 12) (set-var O 0) (seg-call))))
+
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 18 49 18 49 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
+
+; Define room type
    (branch-var F
     (</>
      (/ (nop@))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))    ; 1F
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))))) ; 2F
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))))) ; 3F
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))    ; 4F
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))))) ; 5F
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))))  ; 6F
    (proc 19))
+
+; 	Door 2
+
  (seg (? (= T 7) (= O 0))
    (nop@)
    (set-var S 2)
    (proc 18)
+
+; Psycho barrier toggle
    (if (</>
         (// (? (= G 1)) (nop@) (set-reg 851 #t))
         (// (? (= G 2)) (nop@) (set-reg 851 #t))
@@ -415,79 +421,64 @@
         (// (? (= G 4)) (nop@) (set-reg 851 #t))
         (// (? (= G 5)) (nop@) (set-reg 851 #t))
         (// (? (= G 6)) (nop@) (set-reg 850 #t))))
+
+; Display different door text based on above
    (if (</>
-        (//
-         (? (= 850 #t))
-         (nop@)
-         (set-reg 850 #f)
-         (set-var T 11)
-         (set-var O 0)
-         (seg-call))
-        (//
-         (? (= 851 #t))
-         (nop@)
-         (set-reg 851 #f)
-         (set-var T 12)
-         (set-var O 0)
-         (seg-call))))
+        (// (? (= 850 #t)) (nop@) (set-reg 850 #f) (set-var T 11) (set-var O 0) (seg-call))
+        (// (? (= 851 #t)) (nop@) (set-reg 851 #f) (set-var T 12) (set-var O 0) (seg-call))))
+
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 34 45 34 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
+
+; Define room type
    (branch-var F
     (</>
      (/ (nop@))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))))
    (proc 19))
+
+; 	Door 3
+
  (seg (? (= T 8) (= O 0))
    (nop@)
    (set-var S 3)
    (proc 18)
+
+; Psycho barrier toggle
    (if (</>
         (// (? (= G 1)) (nop@) (set-reg 851 #t))
         (// (? (= G 2)) (nop@) (set-reg 850 #t))
         (// (? (= G 4)) (nop@) (set-reg 850 #t))
         (// (? (= G 5)) (nop@) (set-reg 850 #t))
         (// (? (= G 6)) (nop@) (set-reg 851 #t))))
+; ^ Door 3 doesn't appear here as it is custom, see below
+
+; Display different door text based on above
    (if (</>
-        (//
-         (? (= 850 #t))
-         (nop@)
-         (set-reg 850 #f)
-         (set-var T 11)
-         (set-var O 0)
-         (seg-call))
-        (//
-         (? (= 851 #t))
-         (nop@)
-         (set-reg 851 #f)
-         (set-var T 12)
-         (set-var O 0)
-         (seg-call))))
+        (// (? (= 850 #t)) (nop@) (set-reg 850 #f) (set-var T 11) (set-var O 0) (seg-call))
+        (// (? (= 851 #t)) (nop@) (set-reg 851 #f) (set-var T 12) (set-var O 0) (seg-call))))
+
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 55 45 55 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
+
+; Define room type
    (branch-var F
     (</>
      (/ (nop@))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes"))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes")))))
+
+; 	Unique dialogue for Elektros-sealed door
      (/
-      (branch-reg
-       804
+      (branch-reg 805
        (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes")))))
-     (/
-      (branch-reg
-       805
-       (</>
+
+; 		Without crest
         (/
          (proc 9) (proc 11)	; Nursia
          (proc 10)
@@ -496,6 +487,8 @@
          (str "inside...")
          (proc 15)
          (proc 14))
+
+; 		With Crest
         (/
          (text-color 7)
          (str "I insert the Elektros crest into the door!")
@@ -508,24 +501,21 @@
          (proc 15)
          (proc 12)
          (mes-jump "b:¥mes¥Ns15_16A.mes")))))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes")))))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))))
+
+; 	Regular branching continues
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes")))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))))
    (proc 19))
+
+; 	Door 4
+
  (seg (? (= T 9) (= O 0))
    (nop@)
    (set-var S 4)
    (proc 18)
+
+; Psycho barrier toggle
    (if (</>
         (// (? (= G 1)) (nop@) (set-reg 851 #t))
         (// (? (= G 2)) (nop@) (set-reg 850 #t))
@@ -533,47 +523,35 @@
         (// (? (= G 4)) (nop@) (set-reg 851 #t))
         (// (? (= G 5)) (nop@) (set-reg 851 #t))
         (// (? (= G 6)) (nop@) (set-reg 851 #t))))
+
+; Display different door text based on above
    (if (</>
-        (//
-         (? (= 850 #t))
-         (nop@)
-         (set-reg 850 #f)
-         (set-var T 11)
-         (set-var O 0)
-         (seg-call))
-        (//
-         (? (= 851 #t))
-         (nop@)
-         (set-reg 851 #f)
-         (set-var T 12)
-         (set-var O 0)
-         (seg-call))))
+        (// (? (= 850 #t)) (nop@) (set-reg 850 #f) (set-var T 11) (set-var O 0) (seg-call))
+        (// (? (= 851 #t)) (nop@) (set-reg 851 #f) (set-var T 12) (set-var O 0) (seg-call))))
+
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 76 45 76 45 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
+
+; Define room type
    (branch-var F
     (</>
      (/ (nop@))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes")))))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes")))))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16C.mes")))))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes")))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))))
    (proc 19))
+
+; 	Door 5
+
  (seg (? (= T 10) (= O 0))
    (nop@)
    (set-var S 5)
    (proc 18)
+
+; Psycho barrier toggle
    (if (</>
         (// (? (= G 1)) (nop@) (set-reg 851 #t))
         (// (? (= G 2)) (nop@) (set-reg 851 #t))
@@ -581,43 +559,35 @@
         (// (? (= G 4)) (nop@) (set-reg 851 #t))
         (// (? (= G 5)) (nop@) (set-reg 851 #t))
         (// (? (= G 6)) (nop@) (set-reg 850 #t))))
+
+; Display different door text based on above
    (if (</>
-        (//
-         (? (= 850 #t))
-         (nop@)
-         (set-reg 850 #f)
-         (set-var T 11)
-         (set-var O 0)
-         (seg-call))
-        (//
-         (? (= 851 #t))
-         (nop@)
-         (set-reg 851 #f)
-         (set-var T 12)
-         (set-var O 0)
-         (seg-call))))
+        (// (? (= 850 #t)) (nop@) (set-reg 850 #f) (set-var T 11) (set-var O 0) (seg-call))
+        (// (? (= 851 #t)) (nop@) (set-reg 851 #f) (set-var T 12) (set-var O 0) (seg-call))))
+
    (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 92 49 92 49 0 20)))
    (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
+
+; Define room type
    (branch-var F
     (</>
      (/ (nop@))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
-     (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16D.mes"))
-     (/
-      (branch-reg
-       804
-       (</>
-        (/ (nop@))
-        (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16B.mes"))
+     (/                                    (proc 12) (mes-jump "b:¥mes¥Ns15_16D.mes"))
+     (/ (branch-reg 804 (</> (/ (nop@)) (/ (proc 12) (mes-jump "b:¥mes¥Ns15_16A.mes")))))))
    (proc 19))
- (seg (? (= T 11) (= O 0))
+
+; 	Door entry text follows...
+
+ (seg (? (= T 11) (= O 0))											; With psycho barrier
    (nop@)
-   (branch-reg
-    800
+   (branch-reg 800
     (</>
+
+	; without release controller
      (/
       (proc 9) (proc 11)	; Nursia
       (proc 10)
@@ -625,6 +595,8 @@
       (str "enter without its release controller.")
       (proc 15)
       (proc 14))
+
+	; with release controller
      (/
       (text-color 7)
       (str "I activate the psycho barrier's release" 'br)
@@ -645,7 +617,8 @@
       (text-color 7)
       (str "We get pulled into the barrier!")
       (proc 15)))))
- (seg (? (= T 12) (= O 0))
+
+ (seg (? (= T 12) (= O 0))											; Regular door
    (nop@)
    (branch-random
     (</>

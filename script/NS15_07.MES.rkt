@@ -116,7 +116,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "Narisa was kidnapped by Black Nurse!")
+           (str "Nurisa was kidnapped by Black Nurse!")
    (proc 15)
    (proc 10)	; Shouting
    (proc 1)
