@@ -2821,8 +2821,8 @@ lyrics02_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 82h, 0A0h, 82h, 0C8h, 82h, 0BDh, 82h, 0CCh, 81h, 40h, 98h, 72h, 82h, 0C9h, 95h, 0F8h, 82h, 0A9h, 82h, 0EAh, 82h, 0C4h, 81h, 40h, 94h, 4Dh, 82h, 0AAh, 8Fh, 6Fh, 82h, 0BDh, 82h, 0DDh, 82h, 0BDh, 82h, 0A2h, 81h, 40h, 81h, 40h, 0
 lyrics02_en1:
-	DB	20, 20	; x, y
-	DB	"And as I hold you up in my loving arms,", 0
+	DB	18, 20	; x, y
+	DB	"And as you're swept up into my doting arms,", 0
 lyrics02_en2:
 	DB	25, 21	; x, y
 	DB	"I can feel the heat bother me", 0
@@ -3091,47 +3091,47 @@ karPtrs_20E6:
 	DW	kar_2170	; 18
 kar_210C:
 	COLCHG	20, 23, 2	; あ
-	COLCHG	20, 20, 3	; And_
+	COLCHG	18, 20, 3	; And_
 	COLCHG_END
 kar_2112:
 	COLCHG	22, 23, 2	; な
-	COLCHG	24, 20, 2	; as_
+	COLCHG	22, 20, 2	; as_
 	COLCHG_END
 kar_2118:
 	COLCHG	24, 23, 2	; た
-	COLCHG	27, 20, 1	; I_
+	COLCHG	25, 20, 6	; you're_
 	COLCHG_END
 kar_211E:
 	COLCHG	26, 23, 2	; の
-	COLCHG	29, 20, 4	; hold_
+	COLCHG	32, 20, 5	; swept_
 	COLCHG_END
 kar_2124:
 	COLCHG	30, 23, 1	; う
-	COLCHG	34, 20, 3	; you_
+	COLCHG	38, 20, 2	; up_
 	COLCHG_END
 kar_2128:
 	COLCHG	31, 23, 1	; で
-	COLCHG	38, 20, 2	; up_
+	COLCHG	41, 20, 2	; in
 	COLCHG_END
 kar_212C:
 	COLCHG	32, 23, 2	; にい
-	COLCHG	41, 20, 2	; in_
+	COLCHG	43, 20, 2	; to_
 	COLCHG_END
 kar_2132:
 	COLCHG	34, 23, 2	; だ
-	COLCHG	44, 20, 2	; my_
+	COLCHG	46, 20, 2	; my_
 	COLCHG_END
 kar_2138:
 	COLCHG	36, 23, 2	; か
-	COLCHG	47, 20, 2	; lo
+	COLCHG	49, 20, 2	; do
 	COLCHG_END
 kar_213E:
 	COLCHG	38, 23, 2	; れ
-	COLCHG	49, 20, 4	; ving_
+	COLCHG	51, 20, 4	; ting_
 	COLCHG_END
 kar_2144:
 	COLCHG	40, 23, 2	; て
-	COLCHG	54, 20, 5	; arms,
+	COLCHG	56, 20, 5	; arms,
 	COLCHG_END
 kar_214A:
 	COLCHG	44, 23, 1	; ね
