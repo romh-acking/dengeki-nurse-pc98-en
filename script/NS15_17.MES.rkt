@@ -34,7 +34,7 @@
   (str "I can't see anything...")
   (proc 15)
   (proc 2)
-          (str "KIrara! Are you okay?")
+          (str "Kirara! Are you okay?")
   (proc 15)
   (proc 10)	; Happy
   (proc 0)
@@ -248,7 +248,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "‥‥‥‥‥‥‥‥‥")
+           (str ".........")
    (proc 15)
    (proc 19)
    (set-reg 93 #t))

@@ -4,9 +4,15 @@
 ; --Description:--
 ; Dungeon main hallway.
 ; -----Notes:-----
-; So, this probably needs some explanation.
-; [...]
-
+; So, this probably needs some explanation...
+;
+; The following scripts make up 
+;
+; Players start in this hallway and then are presented with five doors, which can lead into one of four room types:
+; - NS15_16A: Empty room. This can on ocassion house an enemy, whom after defeating will give up an item of varying uses, such as to unlock doors in the hallway.
+; - NS15_16B: Elektros Warp Device room, which can be used to teleport to another floor's hallway.
+; - NS15_16C: Mysterious Warp Device room, that functions the same as the other room except that it needs coins to operate.
+; - NS15_16D: Pipe room. There is only one of these; the pipe leads to NS15_16E, which is where the afore-mentioned coins can be obtained.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -456,7 +462,7 @@
         (// (? (= G 4)) (nop@) (set-reg 850 #t))
         (// (? (= G 5)) (nop@) (set-reg 850 #t))
         (// (? (= G 6)) (nop@) (set-reg 851 #t))))
-; ^ Door 3 doesn't appear here as it is custom, see below
+; ^ Floor 3 doesn't appear here as it is custom, see below
 
 ; Display different door text based on above
    (if (</>
@@ -483,7 +489,7 @@
          (proc 9) (proc 11)	; Nursia
          (proc 10)
                  (str "That room's been sealed by the power of" 'br)
-         (str "Elektros. Without an Elektros crest, you can't go" 'br)
+         (str "Elektros. Without an Elektros Crest, you can't go" 'br)
          (str "inside...")
          (proc 15)
          (proc 14))
@@ -491,7 +497,7 @@
 ; 		With Crest
         (/
          (text-color 7)
-         (str "I insert the Elektros crest into the door!")
+         (str "I insert the Elektros Crest into the door!")
          (proc 15)
          (text-color 1)
          (str "WRRRRRRRRRT....")

@@ -14,9 +14,6 @@
     (/ (nop@))
     (/ (nop@))
     (/ (nop@))
-
-; 	
-
     (/
      (branch-var R
       (</>
@@ -24,7 +21,7 @@
        (/ (nop@))
        (/ (nop@))
 
-; 		
+; 		3F Sealed Door
 
        (/
         (branch-reg 500
@@ -76,15 +73,13 @@
         ((cmd 206) 1 3)
         (set-reg 990 #f)
         (mes-jump "b:¥mes¥Ns15_17.mes"))
-
        (/ (nop@))
-
-; 		3F
-
        (/
-        (branch-reg
-         501
+        (branch-reg 501
          (</>
+
+; 		3F Rematch
+
           (/
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")
@@ -195,9 +190,6 @@
               (set-reg 800 #t))
              (/ (nop@)))))
           (/ (nop@))))))))
-
-; 	
-
     (/
      (branch-var R
       (</>
@@ -207,6 +199,9 @@
        (/
         (branch-reg 502
          (</>
+
+; 		4F Rematch
+
           (/
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")
@@ -301,9 +296,6 @@
        (/ (nop@))
        (/ (nop@)))))
     (/ (nop@))
-
-; 	6F Enemy
-
     (/
      (branch-var R
       (</>
@@ -315,6 +307,9 @@
        (/
         (branch-reg 503
          (</>
+
+; 		6F Rematch
+
           (/
            (sound '|| 0)
            (sound '|| "uso¥Nurse10.uso")

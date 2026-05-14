@@ -138,15 +138,15 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 0)
-                  (str "Baaaaaaaam!")
+                  (str "Dokkaaaaaaannn!")
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "Baaaam!")
+           (str "Dokkannn!")
    (proc 15)
    (proc 9) (proc 11)	; Nursia
    (proc 10)
-           (str "Baaaam...")
+           (str "Dokkan...")
    (proc 15)
    (proc 14)
    (proc 19))
@@ -197,6 +197,7 @@
       (exec-mem 18944 65535 528 33)
       (set-reg 990 #f)
       (mes-jump "b:¥mes¥Ns15_16.mes")))))
+
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (proc 9) (proc 11)	; Nursia
