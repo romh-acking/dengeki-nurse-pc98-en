@@ -295,7 +295,7 @@
  (seg (? (= T 3) (= O 2))
    (proc 18)
    (text-color 7)
-   (str "Then I check the camera.")
+   (str "I check the camera again.")
    (proc 15)
    (text-color 7)
    (str "There's a switch labeled autofocus. Man, stop" 'br)

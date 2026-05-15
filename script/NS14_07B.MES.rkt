@@ -2,14 +2,14 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Speaking of looks, Moguri ain't looking too good...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
-  (define-proc 12 (<> (text-color 5) (str "Mr. Blister: ")))
+  (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
 
 ; 	Character portraits:
 ; 	(for this script specifically they put the Dr. Akiba portrait in the same position as Kirara's, THANK YOU)
@@ -173,9 +173,9 @@
  (seg (? (= T 0) (= O 3))
    (proc 18)
    (text-color 7)
-   (str "As expected from Doc Akiba! Ten years secluded in" 'br)
-   (str "the tropical rainforest, he's the world's leading" 'br)
-   (str "expert on endemic illnesses!")
+   (str "As expected from Doc Akiba! After once spending" 'br)
+   (str "ten years secluded in the tropical rainforest, he" 'br)
+   (str "emerged as the world expert on endemic illnesses!")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 4))
@@ -513,7 +513,7 @@
  (seg (? (= T 2) (= O 10))
    (proc 18)
    (proc 12)
-                (str "I've reviewed the situation, and I'm" 'br)
+                (str "I've reviewed the situation, and I'm")
    (str "authorizing Tanchi's participation.")
    (proc 15)
    (proc 2)
@@ -539,8 +539,8 @@
    (proc 15)
    (proc 6)
    (proc 12)
-                (str "According to our connections, you two")
-   (str "are likely most suitable to deal with them...")
+                (str "According to our connections, you" 'br)
+   (str "two are likely most suitable to deal with them...")
    (proc 15)
    (proc 2)
            (str "I... I see...")
@@ -569,7 +569,7 @@
    (str "president's given me his blessing, I'll drive!")
    (proc 15)
    (proc 12)
-                (str "I'm counting on you, Tanchi. Protect" 'br)
+                (str "I'm counting on you, Tanchi. Protect")
    (str "the Grand Prix!")
    (proc 15)
    (proc 2)
@@ -612,7 +612,7 @@
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
-;  (define-proc 12 (<> (text-color 5) (str "Mr. Blister: ")))
+;  (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

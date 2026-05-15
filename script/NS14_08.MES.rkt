@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Now we cut to Tanchi in the cockpit of an F1 car, ready to race!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

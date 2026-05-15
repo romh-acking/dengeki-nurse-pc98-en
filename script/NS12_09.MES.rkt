@@ -388,7 +388,7 @@
    (proc 6)
    (proc 2)
            (str "I thought maybe we could get through this" 'br)
-   (str "vent..")
+   (str "vent...")
    (proc 15)
    (text-color 1)
    (str "Clank clank clank...")

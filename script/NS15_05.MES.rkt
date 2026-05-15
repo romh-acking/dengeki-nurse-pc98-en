@@ -69,8 +69,8 @@
   (proc 15)
   (proc 12) (proc 13)	; Dr. Akiba
   (proc 5)
-              (str "Oh, Osakan okonomiyaki!!! How'd you" 'br)
-  (str "know this was my favorite!?")
+              (str "Oh, Osaka okonomiyaki!!! How'd you know")
+  (str "this was my favorite!?")
   (proc 15)
   (proc 14)
   (proc 10)

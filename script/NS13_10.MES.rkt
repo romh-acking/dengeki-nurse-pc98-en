@@ -658,7 +658,7 @@
            (str "Ugh! Ooooooogh...")
    (proc 15)
    (text-color 7)
-   (str "M-my consciousness is fading away...")
+   (str "M-My consciousness is fading away...")
    (proc 15)
    ((cmd 209) 0 5)
    (text-frame 3 324 52 379) (text-reset 15)

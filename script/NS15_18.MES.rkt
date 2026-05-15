@@ -182,7 +182,7 @@
    (proc 15)
    (proc 12)	; Sad
    (proc 0)
-                  (text "‥‥‥‥‥‥‥‥‥‥‥‥‥‥")
+                  (str "............")
    (proc 15)
    (proc 11)
    (proc 7)
@@ -390,7 +390,7 @@
    (proc 15)
    (proc 6)
    (proc 10)
-           (text "‥‥‥‥‥‥‥‥‥‥‥‥‥‥")
+           (str "............")
    (proc 15)
    (proc 14)	; Black Nurse
    (proc 7)

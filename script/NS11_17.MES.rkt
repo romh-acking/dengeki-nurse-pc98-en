@@ -166,7 +166,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 5)
-             (str "That's... Allizdog, isn't it.")
+             (str "That's... Allizdog, isn't it?")
    (proc 15)
    (proc 2)
            (str "I can damn well see that! But why would" 'br)

@@ -57,7 +57,7 @@
         (proc 6)
         (proc 9) (proc 11)	; Nursia
         (proc 10)
-                (text "...")
+                (str "...")
         (proc 15)
         (proc 14)
         (set-reg 705 #t))
@@ -144,7 +144,7 @@
         (proc 6)
         (proc 9) (proc 11)	; Nursia
         (proc 10)
-                (text "...")
+                (str "...")
         (proc 15)
         (proc 14))
 

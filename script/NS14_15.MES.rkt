@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Mr. Blister brings the two into the official room to disuss matters...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -279,7 +279,7 @@
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
    (proc 1)
-           (str "Wh-what!? The plasma waves aren't" 'br)
+           (str "Wh-What!? The plasma waves aren't" 'br)
    (str "gathering...")
    (proc 15)
    (exec-mem 1280 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
@@ -364,7 +364,7 @@
    (exec-mem 7424 21 40 44 303)
    (text-frame 3 324 52 379)
    (proc 10)
-                   (str "The Magnetic Lunatic Princess, the")
+                   (str "The Magnetic Lunatic Princess; The")
    (str "Superconducting Chodendo Nurse!")
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")

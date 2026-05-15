@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; A fresh day means a fresh crew ready to race! Hey, why the sullen looks?
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

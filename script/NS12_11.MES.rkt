@@ -132,7 +132,7 @@
                 (str "It's been a while! How are you doing?")
    (proc 15)
    (proc 10)
-          (str "F-fine, thanks to you...")
+          (str "F-Fine, thanks to you...")
    (proc 15)
    (proc 19)
    (set-reg 87 #t))

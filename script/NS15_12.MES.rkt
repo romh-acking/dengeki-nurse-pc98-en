@@ -151,7 +151,7 @@
    (proc 15)
    (text-color 5)
    (text "“") (str "Your battle has come to its conclusion. As" 'br)
-   (text "　") (str "your mother, I will end it for you.") (text "”　　　−") (str "Mom")
+   (text "　") (str "your mother, I will end it for you.") (text "”−") (str "Mom")
    (proc 15)
    (proc 10)	; Sad
    (proc 1)

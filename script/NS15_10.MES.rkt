@@ -144,7 +144,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "Suspected? WHAT?")
+           (str "Suspected WHAT?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)

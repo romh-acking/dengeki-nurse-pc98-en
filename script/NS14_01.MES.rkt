@@ -165,7 +165,7 @@
                (str "I'll be counting on you.")
   (proc 16)
   (proc 10)
-                  (str "Roger!")
+                  (str "Roger that!")
   (proc 16)
   ((cmd 209) 0 2)
   (text-frame 3 324 52 379) (text-reset 15)

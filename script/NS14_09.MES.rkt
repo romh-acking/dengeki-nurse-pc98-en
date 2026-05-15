@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; And so the race begins!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

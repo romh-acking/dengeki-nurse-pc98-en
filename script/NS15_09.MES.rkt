@@ -211,7 +211,7 @@
            (str "Wh-what!? Why didn't you say anything!?")
    (proc 15)
    (proc 12)
-            (str "Please forgive me. I was wrong.")
+            (str "Please forgive me. I did something wrong.")
    (proc 15)
    (proc 12)
             (str "I knew Kirara had returned to Japan and" 'br)

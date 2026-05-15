@@ -24,7 +24,7 @@
      (str "Tomoyo: Heh heh heh! So you made it here!")
      (proc 15)
      (proc 2)
-             (str "Wh-who the hell are you? I thought we" 'br)
+             (str "H-How the hell are you-? I thought we" 'br)
      (str "defeated you!")
      (proc 15)
      (text-color 8)
@@ -121,7 +121,7 @@
    (nop@)
    (proc 18)
    (text-color 7)
-   (str "Baaaaaaaam!")
+   (str "Dokkaaaaaaaan!")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look
@@ -142,7 +142,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
-           (str "Dokkannn!")
+           (str "Dokkannnnnn!")
    (proc 15)
    (proc 9) (proc 11)	; Nursia
    (proc 10)

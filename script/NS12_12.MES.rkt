@@ -282,7 +282,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 10)
-           (str "Oh, what the PII!?")
+           (str "Oh, what the BEEP!?")
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
