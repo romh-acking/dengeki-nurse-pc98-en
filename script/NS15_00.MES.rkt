@@ -9,6 +9,9 @@
   (load-mem "cmd¥scrh.tcm" 28672)
   (define-proc 10 (<> (text-color 15) (str "Black Nurse: ")))
   (define-proc 11 (<> (text-color 6)  (str "Monitor: ")))
+
+; 	Episode title sequence setup
+
   (text-frame 0 0 79 399)
   (text-reset 15)
   (image-file "gpc¥Seki10.gpc") (image-mem 1 3)
@@ -19,6 +22,9 @@
   (exec-file "APPEARH.CMD gpc¥5WA.gpc,10,103,69,246,4,1,1")
   (delay 150 0)
   ((cmd 209) 0 5)
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc")
   (image-mem 0 0)
@@ -41,6 +47,9 @@
   (text-reset 1)
   ((cmd 209) 1 2)
   ((cmd 204) 0 799)
+
+; 	Text begins here...
+
   (text-color 15)
   (str "Long ago, in ancient times...")
   (proc 16)
@@ -71,11 +80,17 @@
   (str "This secret has been passed down through" 'br)
   (str "generations of once royal blood...")
   (proc 16)
+
+; 	Cut to Black Nurse...
+
   (sound '|| 2)
   (exec-mem 19456 2 32 4 128 75 32 40 128 40 0 30)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_502.gpc,GPC")
   (image-mem 0 3)
   (exec-mem 19456 1 32 40 128 40 32 4 128 75 8 30)
+
+; 	Text continues
+
   (proc 10)
                (str "Splendid! And if I were to get my" 'br)
   (str "hands on that treasure...")

@@ -19,7 +19,7 @@
   (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
   (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
 
-; 	Setup continues...
+; 	Episode title sequence setup
 
   (text-frame 0 0 79 399)
   (text-reset 15)
@@ -31,6 +31,9 @@
   (exec-file "APPEARH.CMD b:¥gpc¥4WA.gpc,3,104,76,247,4,1,1")
   (delay 150 0)
   ((cmd 209) 0 5)
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")

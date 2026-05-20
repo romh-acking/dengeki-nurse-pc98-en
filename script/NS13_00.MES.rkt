@@ -19,12 +19,11 @@
   (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
   (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
 
-; 	Setup continues...
+; 	Episode title sequence setup
 
   (text-frame 0 0 79 399)
   (text-reset 15)
-  (image-file "gpc¥Seki10.gpc")
-  (image-mem 1 3)
+  (image-file "gpc¥Seki10.gpc") (image-mem 1 3)
   (sound '|| 0)
   (sound '|| "uso¥Nurse01a.uso")
   (sound '|| 1)
@@ -32,9 +31,11 @@
   (exec-file "APPEARH.CMD b:¥gpc¥3WA.gpc,2,109,76,250,4,1,1")
   (delay 150 0)
   ((cmd 209) 0 5)
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
-  (image-file "gpc¥face_w00.gpc")
-  (image-mem 0 0)
+  (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)

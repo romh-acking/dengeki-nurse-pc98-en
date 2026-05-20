@@ -9,6 +9,9 @@
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 4)  (str "0074: ")))
   (define-proc 11 (<> (text-color 15) (str "Black Nurse: ")))
+
+; 	Episode title sequence setup
+
   (text-frame 0 0 79 399)
   (text-reset 15)
   (image-file "gpc¥Seki10.gpc")
@@ -22,6 +25,9 @@
 ; (sound '|se | 5)
   (delay 150 0)
   ((cmd 209) 0 5)
+
+; 	Normal scene loading continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_103.gpc") (image-mem 0 0) (exec-mem 2816 "GET 1 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_101.gpc") (image-mem 0 0) (exec-mem 2816 "GET 8 50 154 14 89")

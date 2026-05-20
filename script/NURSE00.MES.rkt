@@ -493,39 +493,20 @@
   (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
 
 ; 	...And then for animations or text to be displayed while waiting for player input after a line.
+; 	15 to 17 are defined again in the main menu three times (New Game, Continue, Episode Select) because they're re-defined in the bonus/info sections.
+; 	Only 16 needs to be re-defined there because it's used a lot so it's been dummied out here, for 15 and 17 the three defines in the main menu have been dummied out.
 
-  (define-proc 15							; Continuing an in-game dialogue
-    (<>
-     (text-color 4)
-     (exec-mem 34128 0 6 "■" 66 376 0 0 0)
-     (text-frame 3 324 52 379)
-     (text-reset 15)))
-  (define-proc 16							; Continuing a cutscene dialogue
-    (<>
-     (text-color 4)
-     (exec-mem 34128 0 6 "▽" 70 376 0 0 1)
-     (text-frame 16 324 66 379)
-     (text-reset 1)))
-  (define-proc 17							; Waiting for player input between dialogues (text component only)
-    (<>
-     (text-color 4)
-     (text-frame 16 346 52 360)
-     (text "Please select a command!")
-     (text-frame 3 324 52 379)))
-  (define-proc 18							; Setting up text boxes for dialogue
-    (<>
-     (text-frame 5 320 39 382)
-     (text-reset 15)
-     (text-frame 3 324 52 379)))
-  (define-proc 19							; Waiting for player input between dialogues (prints graphic, then text as defined in proc 17)
-    (<>
-     (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320")
-     (proc 17)))
+  (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15))) 			; Continuing an in-game dialogue
+; (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1))) 			; Continuing a cutscene dialogue
+  (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (text "Please select a command!") (text-frame 3 324 52 379))) 	; Waiting for player input between dialogues (text component only)
+  (define-proc 18 (<> (text-frame 5 320 39 382) (text-reset 15) (text-frame 3 324 52 379))) 									; Setting up text boxes for dialogue
+  (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) 												; Waiting for player input between dialogues (prints graphic, then text as defined in proc 17)
 
 ;	I'm making use of the freed processes for drawing Kirara's portraits, which takes up quite a few bytes in the original script and is generally quite messy to look at.
-;	(This was motivated by the realisation that the translated scripts are too big to fit in the disks as-is.)
-;	The command which actually calls the portrait coordinates will be defined per-script with the processes from 9 to 14 which are free.
+;	(This was motivated by the realisation that the translated scripts became too big to fit in the floppy disks they originally came on.)
+;	The command which actually calls the portrait coordinates will be defined per-script with the processes from 9 to 14, which are free.
 ;	Some boxes have different coordinates, and some scripts have different display commands; These are also defined per-script.
+; 	If there's too much going on in a script, I also take from the remaining name processes that aren't used in that script; and then right before the mes-jump I reinstate those names.
 
   (define-proc 3 (<> (exec-mem 2816 "GET 1 5 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))				; Draw portrait pt.1
   (define-proc 4 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
@@ -536,9 +517,9 @@
   (exec-mem 2816 "INIT,ACCESS 0,EXIT")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (exec-mem 18944 1 0)
-  (exec-mem 32768 1)
-  (exec-mem 24576 0 33024)
-  (exec-mem 18944 1 19200)
-  (exec-mem 18944 65535 528 33)
+  (exec-mem 18944 1 0) ; Set up mouse cursor
+  (exec-mem 32768 1) ; Make font thick
+  (exec-mem 24576 0 33024) ; Set up icon display to use loaded icon data
+  (exec-mem 18944 1 19200) ; Set up mouse cursor to use loaded cursor icon
+  (exec-mem 18944 65535 528 33) ; More mouse cursor setup of some sort
   (mes-jump "mes¥Ns_menu.mes")))

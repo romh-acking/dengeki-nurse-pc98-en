@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Dengeki Nurse saves the day again! Japan's reputation survives Suzuka intact! Tanchi's face does not survive the onigiri intact! Kirara's promise to Tanchi does not survive intact!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -12,7 +12,7 @@
   (define-proc 10 (<> (text-color 1) (str "Announcer: ")))
   (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
-; (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; Not sure why this is defined... dummying it out, we'll see if anything breaks
+  (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; "Select a command" process moved back to original position in memory after being shifted in previous script
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)

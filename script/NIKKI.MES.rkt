@@ -9,6 +9,9 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+
+; 	Process 16 is temporarily modified to accomodate this section's text box.
+
   (define-proc 16
     (<>
      ((cmd 209) 1 2)
