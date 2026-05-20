@@ -83,9 +83,9 @@
 
       (/
        ((cmd 209) 0 3)
-;      (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
+       (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
        (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))
-;      (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
+       (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
        (set-var U 1)
        (text-frame 3 324 52 379)
        (text-reset 15)
@@ -112,9 +112,9 @@
          (/ (set-reg 1003 #t) (text #:col 1 "　")  (str " Chart ") (text "４　" '|34368|))
          (/ (set-reg 1004 #t) (text #:col 1 "　")  (str " Chart ") (text "５　" '|34368|))
          (/                   (text #:col 1 "　　") (str "Cancel")  (text "　　"))))
-;      (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
+       (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
        (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))
-;      (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
+       (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
        (branch-var S
         (</>
          (/ ((cmd 209) 0 3) (image-file "gpc¥aflame01.gpc") (image-mem 1 3) (flag-load 0))
@@ -221,9 +221,9 @@
                   (/ (text #:col 1 "　") (str "Episode ") (text "４　"))
                   (/ (text #:col 1 "　") (str "Episode ") (text "５　"))
                   (/ (text #:col 1 "　　") (str "Cancel") (text "　　"))))
-;               (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
+                (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
                 (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1)))
-;               (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
+                (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (str "Please select a command!") (text-frame 3 324 52 379)))
                 (branch-var S
                  (</>
                   (/ ((cmd 209) 0 2) ((cmd 206) 1 1) (mes-jump "b:¥mes¥Ns11_00.mes"))

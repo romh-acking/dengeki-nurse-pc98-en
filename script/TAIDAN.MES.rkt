@@ -646,10 +646,6 @@
   ((cmd 209) 0 2)
   (sound '|| 2)
 
-; 	Re-define in-game proc 15 here; by doing it here, it doesn't need to be done three times on the main menu
-
-  (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15)))
-
 ; PC-98
   (mes-jump "mes¥Ns_Menu.mes")))
 ; FMT

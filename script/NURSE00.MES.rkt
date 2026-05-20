@@ -497,7 +497,7 @@
 ; 	Only 16 needs to be re-defined there because it's used a lot so it's been dummied out here, for 15 and 17 the three defines in the main menu have been dummied out.
 
   (define-proc 15 (<> (text-color 4) (exec-mem 34128 0 6 "■" 66 376 0 0 0) (text-frame 3 324 52 379) (text-reset 15))) 			; Continuing an in-game dialogue
-; (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1))) 			; Continuing a cutscene dialogue
+  (define-proc 16 (<> (text-color 4) (exec-mem 34128 0 6 "▽" 70 376 0 0 1) (text-frame 16 324 66 379) (text-reset 1))) 			; Continuing a cutscene dialogue
   (define-proc 17 (<> (text-color 4) (text-frame 16 346 52 360) (text "Please select a command!") (text-frame 3 324 52 379))) 	; Waiting for player input between dialogues (text component only)
   (define-proc 18 (<> (text-frame 5 320 39 382) (text-reset 15) (text-frame 3 324 52 379))) 									; Setting up text boxes for dialogue
   (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) 												; Waiting for player input between dialogues (prints graphic, then text as defined in proc 17)
