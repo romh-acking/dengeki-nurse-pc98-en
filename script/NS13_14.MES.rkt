@@ -53,6 +53,9 @@
           (str "Whaaaaaaa! Hurry up!! Find it, find it," 'br)
   (str "find it!")
   (proc 15)
+
+; 	Episode 3 End Animation
+
   (sound '|| 0)
   (sound '|se | 21)
   (text #:col 1 'br)

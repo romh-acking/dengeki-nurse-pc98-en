@@ -9,6 +9,13 @@
   (define-proc 10 (<> (text-color 1)  (str "Moguri: ")))
   (define-proc 11 (<> (text-color 11) (str "Nurse THE SENNA: ")))
   (define-proc 12 (<> (text-color 3)  (str "Nakajima: ")))
+
+; 	Character portraits:
+
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_434.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_435.gpc") (image-mem 0 0) (exec-mem 2816 "GET 8 0 0 24 144")
@@ -158,16 +165,12 @@
    (proc 2)
            (str "Kirara! You're okay!")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)
    (proc 0)
                   (str "Of course I'm okay! Like I'd ever" 'br)
    (str "lose to a dolt like that!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "That's Dengeki Nurse for you.")
    (proc 15)
@@ -425,15 +428,11 @@
            (str "Kirara, maybe you need to dial it back a" 'br)
    (str "little.")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)
    (proc 0)
                   (str "I'll get it this time for sure!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (text-color 1)
    (sound '|| 0)
    (sound '|se | 20)
@@ -562,9 +561,9 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 1)  (str "Moguri: ")))
-   (define-proc 11 (<> (text-color 11) (str "Nurse THE SENNA: ")))
-   (define-proc 12 (<> (text-color 3)  (str "Nakajima: ")))
+;  (define-proc 10 (<> (text-color 1)  (str "Moguri: ")))
+;  (define-proc 11 (<> (text-color 11) (str "Nurse THE SENNA: ")))
+;  (define-proc 12 (<> (text-color 3)  (str "Nakajima: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

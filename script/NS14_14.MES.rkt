@@ -8,6 +8,14 @@
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 5) (str "Mystery Lady: ")))
+
+; 	Character portraits:
+
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0)
   (image-file "b:¥gpc¥ns1_439.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 12 89 32 303")
@@ -173,15 +181,11 @@
    (set-reg 166 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (text-color 7)
    (str "Kirara's got a bright smile.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
 
    (exec-mem 2816 "GET 1 25 198 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -189,13 +193,15 @@
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 25 198 35 295,PUT 2 25 198,FREE 2")
 
-; 	^ This face portrait is meant to be positioned above where the upwards arrow appears in the text.
+; 	^ The display code for this face portrait is custom, as it is meant to be positioned above where the upwards arrow appears in the text.
 
    (text-color 7)
    (str "Normally she'd make this (") (text "↑") (str ") face and say") (text "“") (str "Don't" 'br)
    (str "be ridiculous!") (text "”") (str "or something...")
    (proc 15)
-   (exec-mem 2816 "VIEW 25 198 35 295,PUT 1 25 198,FREE 1")
+
+   (exec-mem 2816 "VIEW 25 198 35 295,PUT 1 25 198,FREE 1") ; Remember to change this if you change the coordinates for the portrait above
+
    (text-color 7)
    (str "Wait... Could this be... Maybe... Maybe this is" 'br)
    (str "it!")
@@ -217,16 +223,12 @@
    (str "Oh! Someone's getting out of the Testarossa.")
    (proc 15)
    (exec-mem 2816 "VIEW 12 89 32 303,OVER 1,PUT 6 12 89,FREE 6")
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "Oh, thanks for helping out before. I" 'br)
    (str "really needed the assist.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Huh? You two know each other?")
    (proc 15)
@@ -257,16 +259,12 @@
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "What's wrong? Why'd you come all the way" 'br)
    (str "out here?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 164 #t))
  (seg (? (= T 2) (= O 1))
@@ -274,28 +272,20 @@
    (proc 2)
            (str "Kirara...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "What? What's with that serious face?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "About my promise from before... What" 'br)
    (str "happens in a situation like this?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Confused
    (proc 1)
            (str "What should I do?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 162 #t))
  (seg (? (= T 2) (= O 2))
@@ -304,41 +294,29 @@
            (str "If I kept driving, I really feel like I" 'br)
    (str "could have won...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Confused
    (proc 1)
            (str "Yeah... You put in the hard work," 'br)
    (str "Tanchi...")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "S-So you'll acknowledge that, at least...?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "If Moguri wins.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 157 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "I hope Moguri wins.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Yes! Exactly!")
    (proc 15)
@@ -355,15 +333,13 @@
                  (str "No, not you. To the young lady over" 'br)
    (str "there.")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "To me?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "So what are you giving here?")
    (proc 15)
@@ -387,15 +363,13 @@
                  (str "If my daughter were still alive," 'br)
    (str "she'd be about the same age as this young woman...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "I see...")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "B-But... Why a tanuki, of all things?")
    (proc 15)
@@ -403,15 +377,11 @@
                  (str "I thought it could come in handy, in")
    (str "some way... Will you take it?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "Certainly... I'll gladly take it.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 10)
                  (str "Thank you. Well then, I must be off.")
    (proc 15)
@@ -426,15 +396,11 @@
    (str "this statue, but I've gotta be the guy to carry" 'br)
    (str "it?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 11) ; Happy
    (proc 1)
            (str "Well, it's too heavy for me.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "Ugh... I haven't got any stamina left...")
    (proc 15)
@@ -472,7 +438,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5) (str "Mystery Lady: ")))
+;  (define-proc 10 (<> (text-color 5) (str "Mystery Lady: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

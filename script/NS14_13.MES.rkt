@@ -6,9 +6,17 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (text-color 1) (str "Moguri: "))) ; <- Unused
+; (define-proc 10 (<> (text-color 1) (str "Moguri: "))) ; <- Unused
   (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 13 (<> (text-color 5) (str "Mr. Malestre: ")))
+
+; 	Character portraits:
+
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96")   (proc 4))) ; Angry
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 10 192 10 96") (proc 4))) ; Dr. Akiba
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc")
   (image-mem 0 0)
@@ -209,29 +217,23 @@
            (str "What a bummer... I wanted him to get the" 'br)
    (str "championship here in Japan.")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "Don't sweat it! He's totally gonna win!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "It's not THAT easy...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 192 10 96") ; Dr. Akiba
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Dr. Akiba
    (proc 5)
               (str "The vaccine took its time getting here,")
    (str "but we managed to figure out the source of the" 'br)
    (str "outbreak...")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 147 #t))
  (seg (? (= T 2) (= O 2))
@@ -240,15 +242,11 @@
            (str "Huh? What's up with you two? Why are you" 'br)
    (str "staring at my face like that?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 192 10 96") ; Dr. Akiba
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Dr. Akiba
    (proc 5)
               (str "Oh, it's nothing... Nothing at all...")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "??????")
    (proc 15)
@@ -283,15 +281,13 @@
    (proc 13)
                  (str "Can I count on you to do this?")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
+   (proc 3)
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 4)
    (proc 1)
            (str "R-Really?")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 154 #t))
  (seg (? (= T 2) (= O 4))
@@ -311,17 +307,13 @@
    (proc 15)
    (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 0 0) (exec-mem 2816 "ACCESS 0") (exec-mem 6656 30 67 42 303)
    (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC")   (image-mem 0 0) (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 192 10 96") ; Dr. Akiba
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Dr. Akiba
    (text-frame 3 324 52 379)
    (proc 5)
               (str "Tanchi... I think you might want to" 'br)
    (str "reconsider.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 2)
            (str "What are you talking about? Nothing this" 'br)
    (str "lucky even happens to me, man!")
@@ -342,15 +334,11 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 10) ; Angry
    (proc 1)
            (str "Hey! Don't touch my butt!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 3) (= O 1))
    (proc 18)
@@ -370,15 +358,11 @@
    (proc 11)
              (str "Oh no, that's") (text "−")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 10 192 10 96") ; Dr. Akiba
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 12) ; Dr. Akiba
    (proc 5)
               (str "......")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19)
    (set-reg 148 #t))
  (seg (? (= T 3) (= O 2))
@@ -386,16 +370,12 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (exec-mem 2816 "GET 1 5 23 10 96")
-   (exec-mem 2816 "SHOW 0,ACCESS 1")
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (exec-mem 2816 "ACCESS 0")
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 10) ; Angry
    (proc 1)
            (str "How many times do I have to tell you," 'br)
    (str "don't touch my butt!")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 6)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -409,9 +389,9 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 1) (str "Moguri: ")))
-   (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
-   (define-proc 13 (<> (text-color 5) (str "Mr. Malestre: ")))
+;  (define-proc 10 (<> (text-color 1) (str "Moguri: ")))
+;  (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
+;  (define-proc 13 (<> (text-color 5) (str "Mr. Malestre: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

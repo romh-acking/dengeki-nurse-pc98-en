@@ -13,6 +13,21 @@
   (define-proc 10 (<> (text-color 5) (str "Chodendo Nurse: ")))
   (define-proc 11 (<> (text-color 5) (str "Mr. Malestre: ")))
   (define-proc 19 (<> (exec-mem 1280 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; "Select a command" process shifted around in memory for this script
+
+; 	Because the memory location of the portrait display code is moved in this script, they have to be redefined for this script:
+
+  (define-proc 12 (<> (exec-mem 1280 "GET 1 5 23 10 96") (exec-mem 1280 "SHOW 0,ACCESS 1")))			; Draw portrait pt.1
+  (define-proc 13 (<> (exec-mem 1280 "ACCESS 0") (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
+  (define-proc 14 (<> (exec-mem 1280 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")))							; Clear portrait
+
+; 	Misc savings:
+
+  (define-proc 5 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")))
+  (define-proc 7 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC")))
+  (define-proc 9 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC")))
+
+; 	Setup continues...
+
   (exec-mem 1280 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_445.gpc") (image-mem 0 0) (exec-mem 1280 "GET 6 0 0 24 144")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_447.gpc") (image-mem 0 0) (exec-mem 1280 "GET 8 0 0 24 144")
@@ -35,7 +50,7 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_444.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_445.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_446.gpc,TEMP")
-  (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC")
+  (proc 5)
   (image-mem 1 3)
 
 ; 	Intro begins here...
@@ -200,7 +215,7 @@
 ; 	Tanchi looks back at Kirara's bare body...
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1 3)
+   (proc 9) (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (text-color 7)
    (str "I look at Kirara's chest.")
@@ -218,15 +233,15 @@
 ; 	Back to the scene.
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 3)
+   (proc 5) (image-mem 1 3)
+   (proc 7) (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 19)
    (set-reg 178 #t))
  (seg (? (= T 1) (= O 4))
    (proc 18)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1 3)
+   (proc 9) (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (text-color 7)
    (str "I look into Kirara's eyes.")
@@ -256,8 +271,8 @@
    (exec-mem 17920 2 0)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
    (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1 3)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 0)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 3)
+   (proc 5) (image-mem 1 0)
+   (proc 7) (image-mem 1 3)
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 7424 0 0 79 399)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
@@ -273,16 +288,14 @@
    (proc 10)
                    (str "Heh heh heh...")
    (proc 15)
-   (exec-mem 1280 "GET 1 5 23 10 96")
-   (exec-mem 1280 "SHOW 0,ACCESS 1")
+   (proc 12)
    (exec-mem 1280 "GET 2 70 0 10 96")
-   (exec-mem 1280 "ACCESS 0")
-   (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)
    (proc 1)
            (str "Wh-What!? The plasma waves aren't" 'br)
    (str "gathering...")
    (proc 15)
-   (exec-mem 1280 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 14)
    (proc 10)
                    (str "This room is magnetically" 'br)
    (str "shielded! Even the slightest bit of static" 'br)
@@ -342,7 +355,7 @@
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_446.gpc,GPC") (image-mem 1)
+   (proc 9) (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 1)
            (str "Eeeeek! Who are you supposed to be?")
@@ -352,14 +365,14 @@
 
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 1 3)
+   (proc 5) (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
 
 ; 	And Mr. Malestre turns out to be a disguise for... Chodendo Nurse!
 
    (exec-mem 1280 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_442.gpc,GPC") (image-mem 0 0)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_444.gpc,GPC") (image-mem 1 0)
+   (proc 5) (image-mem 0 0)
+   (proc 7) (image-mem 1 0)
    (exec-mem 1280 "ACCESS 0")
    (exec-mem 7424 21 40 44 303)
    (text-frame 3 324 52 379)
@@ -388,15 +401,13 @@
                    (str "If you can't transform, you're" 'br)
    (str "just a worthless little girl!")
    (proc 15)
-   (exec-mem 1280 "GET 1 5 23 10 96")
-   (exec-mem 1280 "SHOW 0,ACCESS 1")
+   (proc 12)
    (exec-mem 1280 "GET 2 30 0 10 96")
-   (exec-mem 1280 "ACCESS 0")
-   (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)
    (proc 1)
            (str "...!!")
    (proc 15)
-   (exec-mem 1280 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (proc 14)
    (proc 10)
                    (str "Now then, should I start my" 'br)
    (str "incision across that cute little chest of yours?")
@@ -458,11 +469,9 @@
    (proc 2)
            (str "Kirara! Transform!")
    (proc 15)
-   (exec-mem 1280 "GET 1 5 23 10 96")
-   (exec-mem 1280 "SHOW 0,ACCESS 1")
+   (proc 12)
    (exec-mem 1280 "GET 2 0 0 10 96")
-   (exec-mem 1280 "ACCESS 0")
-   (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+   (proc 13)
    (proc 1)
            (str "Roger!")
    (proc 15)
@@ -529,6 +538,12 @@
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 990 #f)
+
+; 	Rewriting default processes
+
+   (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
+   (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
+
    (mes-jump "b:¥mes¥ns14_16.mes"))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
