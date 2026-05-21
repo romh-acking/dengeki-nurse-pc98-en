@@ -2822,7 +2822,7 @@ lyrics02_jp:
 	DB	81h, 40h, 82h, 0A0h, 82h, 0C8h, 82h, 0BDh, 82h, 0CCh, 81h, 40h, 98h, 72h, 82h, 0C9h, 95h, 0F8h, 82h, 0A9h, 82h, 0EAh, 82h, 0C4h, 81h, 40h, 94h, 4Dh, 82h, 0AAh, 8Fh, 6Fh, 82h, 0BDh, 82h, 0DDh, 82h, 0BDh, 82h, 0A2h, 81h, 40h, 81h, 40h, 0
 lyrics02_en1:
 	DB	18, 20	; x, y
-	DB	"And as you're swept up into my doting arms,", 0
+	DB	"And as you're swept up into my loving arms,", 0
 lyrics02_en2:
 	DB	25, 21	; x, y
 	DB	"I can feel the heat bother me", 0
@@ -2896,8 +2896,8 @@ lyrics09_jp:
 	DB	18, 23	; x, y
 	DB	81h, 40h, 81h, 40h, 82h, 0A0h, 82h, 0C8h, 82h, 0BDh, 82h, 0CCh, 81h, 40h, 8Eh, 70h, 82h, 0B3h, 82h, 0AAh, 82h, 0B5h, 82h, 0C4h, 81h, 40h, 8Eh, 84h, 82h, 0D1h, 82h, 0B5h, 82h, 0E5h, 94h, 47h, 82h, 0EAh, 82h, 0E6h, 81h, 40h, 81h, 40h, 0
 lyrics09_en1:
-	DB	17, 20	; x, y
-	DB	"And as I look for you through the pelting pain,", 0
+	DB	16, 20	; x, y
+	DB	"And as I look for you through the showering pain,", 0
 lyrics09_en2:
 	DB	22, 21	; x, y
 	DB	"I can feel my clothes getting soaked", 0
@@ -2909,7 +2909,7 @@ lyrics10_jp:
 	DB	95h, 97h, 8Eh, 0D7h, 96h, 0F2h, 82h, 0B6h, 82h, 0E1h, 81h, 40h, 8Eh, 0A1h, 82h, 0E7h, 82h, 0C8h, 82h, 0A2h, 82h, 0EDh, 81h, 40h, 82h, 0B7h, 82h, 0AEh, 82h, 0C9h, 82h, 0B1h, 82h, 0B1h, 82h, 0C9h, 97h, 88h, 82h, 0C4h, 81h, 49h, 81h, 40h, 0
 lyrics10_en1:
 	DB	14, 20	; x, y
-	DB	"The pills I take ran out, what I took didn't help,", 0
+	DB	"The pills I take ran out, those I took didn't help,", 0
 lyrics10_en2:
 	DB	20, 21	; x, y
 	DB	"that's why I need you here right now!", 0
@@ -3635,43 +3635,43 @@ karPtrs_242E:
 	DW	kar_24AC	; 16
 kar_2450:
 	COLCHG	22, 23, 2	; あ
-	COLCHG	17, 20, 3	; And_
+	COLCHG	16, 20, 3	; And_
 	COLCHG_END
 kar_2456:
 	COLCHG	24, 23, 2	; な
-	COLCHG	21, 20, 2	; as_
+	COLCHG	20, 20, 2	; as_
 	COLCHG_END
 kar_245C:
 	COLCHG	26, 23, 2	; た
-	COLCHG	24, 20, 1	; I_
+	COLCHG	23, 20, 1	; I_
 	COLCHG_END
 kar_2462:
 	COLCHG	28, 23, 2	; の
-	COLCHG	26, 20, 4	; look_
+	COLCHG	25, 20, 4	; look_
 	COLCHG_END
 kar_2468:
 	COLCHG	32, 23, 1	; す
-	COLCHG	31, 20, 3	; for_
+	COLCHG	30, 20, 3	; for_
 	COLCHG_END
 kar_246C:
 	COLCHG	33, 23, 1	; がた
-	COLCHG	35, 20, 11	; you through_
+	COLCHG	34, 20, 11	; you through_
 	COLCHG_END
 kar_2470:
 	COLCHG	34, 23, 2	; さ
-	COLCHG	47, 20, 3	; the_
+	COLCHG	46, 20, 3	; the_
 	COLCHG_END
 kar_2476:
 	COLCHG	36, 23, 2	; が
-	COLCHG	51, 20, 3	; pel
+	COLCHG	50, 20, 4	; show
 	COLCHG_END
 kar_247C:
 	COLCHG	38, 23, 2	; し
-	COLCHG	54, 20, 4	; ting_
+	COLCHG	54, 20, 5	; ering_
 	COLCHG_END
 kar_2482:
 	COLCHG	40, 23, 2	; て
-	COLCHG	59, 20, 5	; pain,
+	COLCHG	60, 20, 5	; pain,
 	COLCHG_END
 kar_2488:
 	COLCHG	44, 23, 1	; わ
@@ -3743,27 +3743,27 @@ kar_24EC:
 	COLCHG_END
 kar_24F6:
 	COLCHG	30, 23, 1	; な
-	COLCHG	40, 20, 4	; what_
+	COLCHG	40, 20, 5	; those_
 	COLCHG_END
 kar_24FA:
 	COLCHG	31, 23, 1	; お
-	COLCHG	45, 20, 1	; I_
+	COLCHG	46, 20, 1	; I_
 	COLCHG_END
 kar_24FE:
 	COLCHG	32, 23, 2	; ら
-	COLCHG	47, 20, 4	; took_
+	COLCHG	48, 20, 4	; took_
 	COLCHG_END
 kar_2504:
 	COLCHG	34, 23, 2	; な
-	COLCHG	52, 20, 2	; di
+	COLCHG	53, 20, 2	; di
 	COLCHG_END
 kar_250A:
 	COLCHG	36, 23, 2	; い
-	COLCHG	54, 20, 4	; dn't_
+	COLCHG	55, 20, 4	; dn't_
 	COLCHG_END
 kar_2510:
 	COLCHG	38, 23, 2	; わ
-	COLCHG	59, 20, 5	; help,_
+	COLCHG	60, 20, 5	; help,_
 	COLCHG_END
 kar_2516:
 	COLCHG	42, 23, 2	; す
@@ -3835,23 +3835,22 @@ kar_2582:
 	COLCHG_END
 kar_2588:
 	COLCHG	28, 23, 2	; イ
-	COLCHG	38, 20, 3	; pen_
 	COLCHG_END
 kar_258E:
 	COLCHG	30, 23, 2	; ド
-	COLCHG	42, 20, 1	; a_
+	COLCHG	38, 20, 3	; pen_
 	COLCHG_END
 kar_2594:
 	COLCHG	32, 23, 2	; は
-	COLCHG	44, 20, 3	; pla
+	COLCHG	42, 20, 1	; a_
 	COLCHG_END
 kar_259A:
 	COLCHG	34, 23, 2	; っ
-	COLCHG	47, 20, 2	; st
+	COLCHG	44, 20, 3	; pla
 	COLCHG_END
 kar_25A0:
 	COLCHG	36, 23, 2	; て
-	COLCHG	49, 20, 2	; er_
+	COLCHG	47, 20, 4	; ster_
 	COLCHG_END
 kar_25A6:
 	COLCHG	38, 23, 2	; よ
