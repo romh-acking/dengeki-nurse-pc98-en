@@ -90,7 +90,7 @@
 ; PC-98
          (str "You can now eject the disk and turn off the power.")
 ; FMT
-;        (str "You can now eject the save disk and power off.")
+;        (text "　") (str "You can now eject the save disk and power off.")
          (sound '|| 0)
 ; PC-98
          (loop)

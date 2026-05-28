@@ -205,7 +205,9 @@
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
-;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+; FMT
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
+
 ;  (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
 ;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
 ;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))

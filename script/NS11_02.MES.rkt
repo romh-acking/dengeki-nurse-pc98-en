@@ -11,7 +11,8 @@
 ; 	Misc savings:
 
   (define-proc 11 (<> (exec-mem 10752 "COPY> b:¥gpc¥ns1_108.gpc,GPC") (image-mem 1 3)))
-  (define-proc 12 (<> (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)))
+  (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)))
+  (define-proc 13 (<> (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)))
 
 ; 	Setup continues...
 
@@ -53,7 +54,7 @@
   (text-reset 15)
   ((cmd 209) 1 2)
   ((cmd 204) 25 42)
-  (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
+  (proc 12)
   (text #:col 1 'br)
   (text "　　　　　−") (str "Dentendo Hospital Archives") (text "−")
   (proc 15)
@@ -70,7 +71,7 @@
   (str "but rules are rules.")
   (proc 15)
   (proc 11)
-  (proc 12)
+  (proc 13)
   (proc 5)
   (str "Where'd you find it?")
   (proc 15)
@@ -327,7 +328,7 @@
 
 ; 	Flashback of Taro and Mitsuko
 
-   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
+   (proc 12)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_109.gpc,GPC") (image-mem 1 3)
    (sound '|| 0)
 ; PC-98
@@ -335,7 +336,7 @@
 ; FMT
 ;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
-   (proc 12)
+   (proc 13)
    (proc 5)
               (str "Twenty years ago, you see... Taro" 'br)
    (str "Inazuma was my assistant.")
@@ -375,9 +376,9 @@
 
 ; 	Flashback of Black Cross
 
-   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC") (image-mem 1 3)
    (proc 12)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC") (image-mem 1 3)
+   (proc 13)
    (proc 5)
               (str "The global criminal organization, the" 'br)
    (str "Black Cross. They shamefully use the power of" 'br)
@@ -412,9 +413,9 @@
 
 ; 	Flashback of Mitsuko rejecting the Black Cross
 
-   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC") (image-mem 1 3)
    (proc 12)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC") (image-mem 1 3)
+   (proc 13)
    (proc 5)
               (str "They offered a crazy signing bonus, but")
    (str "she turned them down. Then the harrassment" 'br)
@@ -444,9 +445,9 @@
               (str "And so, that pendant is a symbol of the")
    (str "love between Mitsuko and Taro.")
    
-   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (proc 11)
    (proc 12)
+   (proc 11)
+   (proc 13)
    (proc 15)
    (sound '|| 0)
 ; PC-98
@@ -584,8 +585,10 @@
 ; 	Back to Tanchi and Dr. Akiba in the archives
 
    ((cmd 209) 0 2)
-   (text-frame 0 0 79 399) (text-reset 1)
-   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1 3)
+   (text-frame 0 0 79 399)
+   (text-reset 1)
+   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")
+   (image-mem 1 3)
    (proc 11)
 ; FMT
 ;  (sound '|| "Nurse08.fmt")
@@ -810,7 +813,9 @@
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
-;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+; FMT
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
+
 ;  (define-proc 10 (<> (text-color 5) (str "Head Nurse: ")))
    (proc 19)
    (set-var B 1)

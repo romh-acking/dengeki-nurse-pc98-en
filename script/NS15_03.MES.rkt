@@ -301,7 +301,9 @@
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
-;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+; FMT
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
+
 ;  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) (text-color 11) (str "Croco: ")))
    (proc 19)
    (set-var B 5)

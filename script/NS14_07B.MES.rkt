@@ -12,12 +12,19 @@
   (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
 
 ; 	Character portraits:
-; 	(for this script specifically they put the Dr. Akiba portrait in the same position as Kirara's, THANK YOU)
 
   (define-proc 0  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96")   (proc 4))) ; Happy
   (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 40 0 10 96")   (proc 4))) ; Shocked
   (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96")   (proc 4))) ; Confused
-  (define-proc 14 (<> (proc 3) (exec-mem 2816 "GET 2 10 192 10 96") (proc 4))) ; Dr. Akiba
+
+; 	(for this script specifically they put the Dr. Akiba portrait in the same position as Kirara's, THANK YOU)
+
+  (define-proc 5  (<> (proc 3) (exec-mem 2816 "GET 2 10 192 10 96") (proc 4) (text-color 8) (str "Dr. Akiba: ")))
+
+; 	Moguri looking at the mirror:
+
+  (define-proc 7  (<> (exec-mem 2816 "GET 7 16 93 40 237") (exec-mem 2816 "VIEW 16 93 40 237,PUT 6 16 93"))) ; Display
+  (define-proc 14 (<> (exec-mem 2816 "VIEW 16 93 40 237,PUT 7 16 93,FREE 7"))) ; Hide
 
 ; 	Setup continues...
 
@@ -163,7 +170,6 @@
    (str "Wait! When it comes to weird diseases, there's one")
    (str "guy you can turn to...")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "A clear-cut case of Papipapi Disease.")
    (proc 15)
@@ -225,14 +231,13 @@
    (proc 19))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (exec-mem 2816 "GET 7 16 93 40 237")
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 6 16 93")
+   (proc 7)
    (text-color 7)
    (str "Hmm, but by judging by how surprised he looks... I")
    (str "don't think he painted his face like that just to" 'br)
    (str "mess with us.")
    (proc 15)
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 7 16 93,FREE 7")
+   (proc 14)
    (proc 19)
    (set-reg 92 #t))
  (seg (? (= T 1) (= O 2))
@@ -247,13 +252,12 @@
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 3))
-   (exec-mem 2816 "GET 7 16 93 40 237")
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 6 16 93")
+   (proc 7)
    (proc 18)
    (text-color 7)
    (str "Moguri keeps looking in the mirror.")
    (proc 15)
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 7 16 93,FREE 7")
+   (proc 14)
    (text-color 7)
    (str "I guess when your face is that famous, your image" 'br)
    (str "actually matters...")
@@ -288,22 +292,20 @@
    (str "fooling around with? Just take a look in the" 'br)
    (str "mirror!")
    (proc 15)
-   (exec-mem 2816 "GET 7 16 93 40 237")
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 6 16 93")
+   (proc 7)
    (proc 11)
            (str "Oh my gooooooooooooooood!")
    (proc 15)
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 7 16 93,FREE 7")
+   (proc 14)
    (proc 19)
    (set-reg 99 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (exec-mem 2816 "GET 7 16 93 40 237")
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 6 16 93")
+   (proc 7)
    (proc 11)
            (str "Aaaaaaagh! Agh! Agh!")
    (proc 15)
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 7 16 93,FREE 7")
+   (proc 14)
    (proc 0)	; Happy
    (proc 1)
            (str "The polka dots are kind of cute, in their" 'br)
@@ -316,7 +318,6 @@
    (proc 2)
            (str "Papipapi Disease?")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "It comes from deep in the Brazilian" 'br)
    (str "interior, and is a microbial infection that causes")
@@ -327,7 +328,6 @@
            (str "But how would he have been exposed to" 'br)
    (str "that...?")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "Maybe he ate something bad?")
    (proc 15)
@@ -336,7 +336,6 @@
            (str "Can't you do anything!? The finals are" 'br)
    (str "tomorrow!")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "It will be difficult...")
    (proc 15)
@@ -345,13 +344,11 @@
            (str "But my face! Can't you at least get rid of")
    (str "the dots!?")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "Not without the vaccine that we'd need" 'br)
    (str "delivered from Brazil...")
    (proc 15)
    (proc 6)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "Even if we request it now, it wouldn't" 'br)
    (str "be in time for tomorrow's starting grid...")
@@ -368,7 +365,6 @@
            (str "Isn't there some sort of medicine to make" 'br)
    (str "them fade!?")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "This isn't some common thing like" 'br)
    (str "appendicitis!")
@@ -403,7 +399,6 @@
              (str "Hmmm... As a respected team, we can't" 'br)
    (str "send out one of our guys looking like that...")
    (proc 15)
-   (proc 14)	; Dr. Akiba
    (proc 5)
              (str "There's not much we can do. And by" 'br)
    (str "tomorrow, the diarrhea and fever will...escalate.")
@@ -590,7 +585,11 @@
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-reg 990 #f)
-   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: "))) ; Rewrote default process
+
+ ; Rewriting default processes
+   (define-proc 0 (<> (text-color 4) (str "Dengeki Nurse: ")))
+   (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
+
    (mes-jump "b:¥mes¥ns14_08.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -609,7 +608,9 @@
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
-;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
+; FMT
+;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
+
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
 ;  (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
