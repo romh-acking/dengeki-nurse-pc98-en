@@ -302,7 +302,7 @@
    (proc 18)
    (mes-load? "mes¥save.mes")
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212))))) <- FMT
-   (define-proc 10 (<> (text-color 5) (str "Surfer Lady: ")))
+;  (define-proc 10 (<> (text-color 5) (str "Surfer Lady: ")))
    (proc 19)
    (set-var B 3)
    (set-var C 3)))

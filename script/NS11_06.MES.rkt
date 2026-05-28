@@ -278,7 +278,7 @@
  (seg (? (= T 2) (= O 1))												; #2
    (proc 18)
    (proc 2)
-           (str "And I'm sorry for inconvienencing you," 'br)
+           (str "And I'm sorry for inconveniencing you," 'br)
    (str "nurse, you can go back to your post now.")
    (proc 15)
    (proc 10)
