@@ -3,6 +3,8 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; It's a race to find Kirara's pendant before something bad happens!
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -18,7 +20,8 @@
 
 ; 	Setup continues...
 
-; (if (</> (// (? (= 940 #t)) (nop@)) (// (? (= 941 #t)) (nop@)) (// <- FMT
+; FMT
+; (if (</> (// (? (= 940 #t)) (nop@)) (// (? (= 941 #t)) (nop@)) (//
   (sound '|| 0)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_222.gpc") (image-mem 0 0)     (exec-mem 2816 "GET 8 24 16 50 303")
@@ -46,8 +49,10 @@
   (exec-mem 1280 13 14 15 11)
   (exec-mem 2816 "VIEW 25 16 50 303,OVER 1,PUT 8 25 16,FREE 8")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-; (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse10.uso")
+; FMT
+; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (proc 10)
           (str "Ah! You two... You two escaped from the" 'br)
@@ -68,7 +73,8 @@
 ; 	Dialogue trees defined here...
 
   (loop
-;  (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 4) (seg-call)))) (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 5) (seg-call)))) <- FMT
+; FMT
+;  (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 4) (seg-call)))) (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 5) (seg-call))))
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -252,11 +258,13 @@
 ; 	Transition into battle scene...
 ; 	As usual, the FM Towns version implements this a bit differently
 
-;  (sound '|| 2) <- FMT
+; FMT
+;  (sound '|| 2)
    ((cmd 209) 0 2)
    (proc 6)
    (exec-mem 2816 "EXIT")
-;  (set-var K 2) (sound '|| 0) <- FMT
+; FMT
+;  (set-var K 2) (sound '|| 0)
    (mes-load? "mes¥chang0.mes")
 
 ;  FMT:
@@ -272,8 +280,10 @@
    (image-file "b:¥gpc¥ns1_213.gpc") (image-mem 1 0)
    (image-file "b:¥gpc¥ns1_222.gpc") (image-mem 1 3)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-;  (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    ((cmd 209) 1 2)
 
@@ -308,11 +318,12 @@
    (proc 15)
    (exec-mem 2816 "EXIT")
    (set-var U 4)
-;  (set-reg 988 #f) <- FMT
+; FMT
+;  (set-reg 988 #f)
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes") ; <- PC-98
-
-;  FMT:
+; PC-98
+   (mes-load? "mes¥action1.mes")
+; FMT
 ;  (mes-jump "mes¥action04.mes"))
 ;(seg (? (= T 2) (= O 5))
 ;  (nop@)
@@ -323,23 +334,31 @@
    (text-frame 0 0 79 399)
    (text-reset 0)
    (image-file "gpc¥face_w00.gpc")
-   (image-mem 0)   ; <- PC-98
-;  (image-mem 0 0)   <- FMT
+; PC-98
+   (image-mem 0)
+; FMT
+;  (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 0 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0 0)
    (image-file "b:¥gpc¥ns1_213.gpc")
    (image-mem 1 0)
    (image-file "b:¥gpc¥ns1_223.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 1 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
    (exec-mem 6656 8)
    (text-frame 3 324 52 379)
    (text-reset 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso") ;           <- PC-98
-;  (sound '|| "Nurse10.fmt") (sound '|| 100) <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt") (sound '|| 100)
    (sound '|| 1)
    (proc 3) (proc 14) (proc 4)
    (proc 0)

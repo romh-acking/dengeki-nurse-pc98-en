@@ -9,7 +9,7 @@
   (load-mem "cmd¥quakeh.tcm" 6656)
   (load-mem "cmd¥scrh.tcm" 28672)
   (define-proc 10 (<> (text-color 3) (str "Schoolgirl A: ")))
-; (define-proc 11 (<> (text-color 1) (str "Schoolgirl B: "))) <- only used once
+; (define-proc 11 (<> (text-color 1) (str "Schoolgirl B: "))) <--- only used once
   (define-proc 12 (<> (text-color 8) (str "Lady: ")))
   (define-proc 13 (<> (text-color 8) (str "Akiko: ")))
 
@@ -31,8 +31,10 @@
   (exec-mem 2816 "GET 10 40 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse09.uso") ; <- PC-98
-; (sound '|| "Nurse09.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse09.uso")
+; FMT
+; (sound '|| "Nurse09.fmt")
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_211.gpc") (image-mem 1 3)
@@ -241,15 +243,19 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 12 5 23,FREE 12")
    (sound '|| 0)
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 12)
          (str "What is the meaning of this disgraceful" 'br)
    (str "scene!?")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse14.uso") ; <- PC-98
-;  (sound '|| "Nurse14.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse14.uso")
+; FMT
+;  (sound '|| "Nurse14.fmt")
    (sound '|| 3)
    (proc 19)
    (set-reg 38 #t))
@@ -327,8 +333,10 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 152 51 296,PUT 14 27 152,FREE 14")
    (sound '|| 0)
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 2)
            (str "Gack! It's those two from this morning!")
    (proc 15)
@@ -339,8 +347,10 @@
    (str "Momoko: Hehehe!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse14.uso") ; <- PC-98
-;  (sound '|| "Nurse14.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse14.uso")
+; FMT
+;  (sound '|| "Nurse14.fmt")
    (sound '|| 3)
    (proc 13)
           (str "Discipline Committee! Take the students" 'br)

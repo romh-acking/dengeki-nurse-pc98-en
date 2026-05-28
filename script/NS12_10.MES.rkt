@@ -22,8 +22,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse14.uso") ; <- PC-98
-; (sound '|| "Nurse14.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse14.uso")
+; FMT
+; (sound '|| "Nurse14.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_220.gpc") (image-mem 1 3)
 
@@ -203,8 +205,10 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (sound '|| 0)
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 1)
            (str "Ah!")
    (proc 15)

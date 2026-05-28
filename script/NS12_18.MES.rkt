@@ -6,8 +6,10 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (load-mem "cmd¥quakeh.tcm" 6656) ;                       <- PC-98
-; (branch-reg 941 (</> (/ (load-mem "cmd¥quakeh.tcm" 6656) <- FMT
+; PC-98
+  (load-mem "cmd¥quakeh.tcm" 6656)
+; FMT
+; (branch-reg 941 (</> (/ (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (text-color 5) (str "Golgo 31: ")))
   (define-proc 11 (<> (text-color 8) (str "Akiko: ")))
 
@@ -35,8 +37,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
-     (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-;    (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+     (sound '|| "uso¥Nurse10.uso")
+; FMT
+;    (sound '|| "Nurse10.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_236.gpc") (image-mem 1 3)
@@ -88,28 +92,36 @@
   (proc 15)
   (text-color 1)
   (sound '|| 0)
-  (sound '|se | 25) ; <- PC-98
-; (sound '|se | 4)    <- FMT
+; PC-98
+  (sound '|se | 25)
+; FMT
+; (sound '|se | 4)
   (text "ＢＡＭ！")
   (proc 15)
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_237.gpc,GPC") (image-mem 1 3)
   (sound '|| 0)
-  (sound '|se | 20) ; <- PC-98
-; (sound '|se | 9)    <- FMT
+; PC-98
+  (sound '|se | 20)
+; FMT
+; (sound '|se | 9)
   (proc 0)
                  (text "ＤＥＮＧＥＫＩ　ＪＵＵＵＭＰ！！！")
   (proc 15)
   (sound '|| 0)
-  (sound '|se | 25) ; <- PC-98
-; (sound '|se | 4)    <- FMT
+; PC-98
+  (sound '|se | 25)
+; FMT
+; (sound '|se | 4)
   (proc 2)
            (str "Ah, shit! Ta, Tanchi JUUUUMP!")
   (proc 15)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (sound '|| 0)
-  (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-; (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse10.uso")
+; FMT
+; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (proc 10)
             (str "Playtime is over. I've got to wrap this" 'br)
@@ -121,7 +133,8 @@
 ; 	Dialogue trees defined here...
 
   (loop
-;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 3) (set-var O 2) (seg-call)))) <- FMT
+; FMT
+;  (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 3) (set-var O 2) (seg-call))))
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -300,8 +313,10 @@
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_241.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
-   (sound '|se | 20) ; <- PC-98
-;  (sound '|se | 10)    <- FMT
+; PC-98
+   (sound '|se | 20)
+; FMT
+;  (sound '|se | 10)
    (exec-mem 6656 1 0 1 3 0)
    (proc 0)
                   (text "ＤＥＮＧＥＫＩ　ＫＩＩＩＣＫ！")
@@ -327,30 +342,34 @@
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-var U 6)
-   (mes-load? "mes¥action1.mes") ; <- PC-98
+; PC-98
+   (mes-load? "mes¥action1.mes")
 
-; FMT:
-;  (sound '|| 2)
-;  (mes-jump "mes¥action06.mes"))
-;(seg (? (= T 3) (= O 2))
-;  (nop@)
-;  (set-reg 941 #f)
-;  (set-reg 311 #f)
+; FMT
+;  (sound '|| 2) (mes-jump "mes¥action06.mes")) (seg (? (= T 3) (= O 2)) (nop@) (set-reg 941 #f) (set-reg 311 #f)
 
    (image-file "gpc¥aflame01.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 0 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0 0)
    (image-file "b:¥gpc¥ns1_243.gpc")
-   (image-mem 1 3) ; <- PC-98
-;  (image-mem 1 0)   <- FMT
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse11.uso") ;           <- PC-98
-;  (sound '|| "Nurse11.fmt") (sound '|| 100) <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse11.uso")
+; FMT
+;  (sound '|| "Nurse11.fmt") (sound '|| 100)
    (sound '|| 1)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (exec-mem 6656 8) ;  <- PC-98
-;  (exec-mem 17920 0 1) <- FMT
+; PC-98
+   (exec-mem 6656 8)
+; FMT
+;  (exec-mem 17920 0 1)
    (proc 0)
                   (str "It's all over... Peace will finally")
    (str "return to the academy.")

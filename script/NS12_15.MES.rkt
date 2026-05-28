@@ -3,6 +3,8 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Dengeki Nurse and Tanchi catch up with Akiko, who seems shaken by the threat on her life...
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -13,19 +15,28 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse09.uso") ;           <- PC-98
-; (sound '|| "Nurse09.fmt") (sound '|| 100) <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse09.uso")
+; FMT
+; (sound '|| "Nurse09.fmt") (sound '|| 100)
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")
-  (image-mem 1 3) ; <- PC-98
-; (image-mem 0 0)   <- FMT
+; PC-98
+  (image-mem 1 3)
+; FMT
+; (image-mem 0 0)
   (image-file "b:¥gpc¥ns1_228.gpc")
-  (image-mem 1 3) ; <- PC-98
-; (image-mem 1 0)   <- FMT
-  ((cmd 209) 1 2) (text-frame 3 324 52 379) (text-reset 15) (exec-mem 6656 8) ;                         <- PC-98
-; (branch-reg 311 (</> (/ ((cmd 209) 1 2)) (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f)))) <- FMT
+; PC-98
+  (image-mem 1 3)
+; FMT
+; (image-mem 1 0)
+; PC-98
+  ((cmd 209) 1 2) (text-frame 3 324 52 379) (text-reset 15) (exec-mem 6656 8)
+; FMT
+; (branch-reg 311 (</> (/ ((cmd 209) 1 2)) (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f))))
   ((cmd 204) 104 114)
-; (text-frame 3 324 52 379) (text-reset 15) <- FMT
+; FMT
+; (text-frame 3 324 52 379) (text-reset 15)
 
 ; 	Intro begins here...
 
@@ -234,8 +245,10 @@
    (str "domination?")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse11.uso") ; <- PC-98
-;  (sound '|| "Nurse11.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse11.uso")
+; FMT
+;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
    (proc 10)
           (str "From elementary school to college, I was" 'br)

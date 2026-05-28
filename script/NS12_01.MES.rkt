@@ -14,8 +14,10 @@
   (image-file "b:¥gpc¥ns1_203.gpc") (image-mem 1 0)
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
-; (sound '|| "Nurse04.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse04.uso")
+; FMT
+; (sound '|| "Nurse04.fmt")
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 0)

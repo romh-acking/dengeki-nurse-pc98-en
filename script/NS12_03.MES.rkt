@@ -34,8 +34,10 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_213.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_214.gpc,TEMP")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse14.uso") ; <- PC-98
-; (sound '|| "Nurse14.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse14.uso")
+; FMT
+; (sound '|| "Nurse14.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_205.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
@@ -475,8 +477,10 @@
            (str "You better remember us!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse09.uso") ; <- PC-98
-;  (sound '|| "Nurse09.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse09.uso")
+; FMT
+;  (sound '|| "Nurse09.fmt")
    (sound '|| 1)
 
 ;	Cut to the two rescued girls in school...

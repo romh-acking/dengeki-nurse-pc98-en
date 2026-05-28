@@ -20,8 +20,10 @@
   (exec-mem 2816 "GET 8 47 22 65 150")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse04.uso") ; <- PC-98
-; (sound '|| "Nurse04.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse04.uso")
+; FMT
+; (sound '|| "Nurse04.fmt")
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
@@ -78,8 +80,10 @@
   (str "left...")
   (proc 16)
   (sound '|| 0)
-  (sound '|se | 25) ; <- PC-98
-; (sound '|se | 4)    <- FMT
+; PC-98
+  (sound '|se | 25)
+; FMT
+; (sound '|se | 4)
   (proc 10)
             (str "And ") (text "ＦＩＲＥ〜〜〜〜！！")
   (proc 16)
@@ -90,8 +94,10 @@
   (text-color 15)
   (str "Pew pew pew pew..." 'br)
   (str "Brap brap brap brap, humm...")
-  (sound '|se | 25) ; <- PC-98
-; (sound '|se | 4)    <- FMT
+; PC-98
+  (sound '|se | 25)
+; FMT
+; (sound '|se | 4)
   (repeat 10
    (<>
     (exec-mem 1280 13 12 15 13) (delay 1)

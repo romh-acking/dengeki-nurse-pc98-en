@@ -3,6 +3,8 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Dengeki Nurse and her sidekick peer into Akiko's room, where she is lost in her research and unaware of the danger she's in.
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -30,8 +32,10 @@
   (exec-mem 2816 "GET 12 60 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ; <- PC-98
-; (sound '|| "Nurse08.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V128E0M0")
@@ -183,8 +187,10 @@
    (proc 15)
    (proc 9) (proc 13)
    (sound '|| 0)
-   (sound '|se | 26) ; <- PC-98
-;  (sound '|se | 5)    <- FMT
+; PC-98
+   (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 2)
    (text "！！！！！！！！！！！！！！！！！！！！！")
    (proc 0)
@@ -238,8 +244,10 @@
    (str "pass peacefully from acute uremia!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse10.uso") ; <- PC-98
-;  (sound '|| "Nurse10.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    (proc 19)
    (set-reg 95 #t))
@@ -430,11 +438,15 @@
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-var U 5)
-;  (set-reg 988 #f)                                    <- FMT
+; FMT
+;  (set-reg 988 #f)
    (sound '|| 2)
-   (mes-load? "mes¥action1.mes") ;                     <- PC-98
-;  (mes-jump "mes¥action05.mes"))                      <- FMT
-   (set-reg 990 #f) (mes-jump "b:¥mes¥ns12_15.mes")) ; <- PC-98
+; PC-98
+   (mes-load? "mes¥action1.mes")
+; FMT
+;  (mes-jump "mes¥action05.mes"))
+; PC-98
+   (set-reg 990 #f) (mes-jump "b:¥mes¥ns12_15.mes"))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")

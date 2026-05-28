@@ -30,8 +30,10 @@
   (exec-mem 2816 "GET 14 60 0 10 96")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse09.uso") ; <- PC-98
-; (sound '|| "Nurse09.fmt")       <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse09.uso")
+; FMT
+; (sound '|| "Nurse09.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_213.gpc") (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_214.gpc") (image-mem 1 3)
@@ -444,8 +446,10 @@
    (image-file "b:¥gpc¥ns1_213.gpc") (image-mem 1)
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
-   (sound '|se | 22) ; <- PC-98
-;  (sound '|se | 1)    <- FMT
+; PC-98
+   (sound '|se | 22)
+; FMT
+;  (sound '|se | 1)
 
 ; 	Text continues
 
@@ -457,8 +461,10 @@
            (str "Gorgeousss!")
    (proc 15)
    (sound '|| 0)
-   (sound '|| "uso¥Nurse09.uso") ; <- PC-98
-;  (sound '|| "Nurse09.fmt")       <- FMT
+; PC-98
+   (sound '|| "uso¥Nurse09.uso")
+; FMT
+;  (sound '|| "Nurse09.fmt")
    (sound '|| 3)
    (proc 6)
    (proc 11)

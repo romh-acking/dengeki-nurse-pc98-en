@@ -18,8 +18,10 @@
   (exec-mem 10752 "MODE V0E0M32")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_242.gpc,TEMP")
   (sound '|| 0)
-  (sound '|| "uso¥Nurse08.uso") ;           <- PC-98
-; (sound '|| "Nurse08.fmt") (sound '|| 100) <- FMT
+; PC-98
+  (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt") (sound '|| 100)
   (sound '|| 1)
   (image-file "gpc¥ns1_k07a.gpc") (image-mem 1 3)
   (image-file "gpc¥ns1_k08.gpc")  (image-mem 1 0)
@@ -87,8 +89,10 @@
 ; 	Episode 2 End Animation
 
   (sound '|| 0)
-  (sound '|se | 21) ; <- PC-98
-; (sound '|se | 0)    <- FMT
+; PC-98
+  (sound '|se | 21)
+; FMT
+; (sound '|se | 0)
   (text #:col 1 'br)
   (text "　　") (str "Episode 2:") (text "“") (str "The Terrifying Geba-Geba Plan") (text "”" 'br)
   (text "　　　　　　　　　　　　　　　　　　　　　") (str " The End")
@@ -102,8 +106,10 @@
   (delay 100 0)
   ((cmd 209) 1 4)
   (sound '|| 0)
-  (sound '|se | 22) ; <- PC-98
-; (sound '|se | 1)    <- FMT
+; PC-98
+  (sound '|se | 22)
+; FMT
+; (sound '|se | 1)
   (exec-mem 1280 13 12 15 13)
   (exec-mem 2816 "VIEW 70 0 80 80,PUT 10 70 0")      (delay 2)
   (exec-mem 2816 "VIEW 60 0 70 80,PUT 10 60 0")      (delay 2)
