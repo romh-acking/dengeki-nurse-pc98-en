@@ -1,4 +1,5 @@
-; Dengeki Nurse English Translation - FREE_BTL.MES
+; Dengeki Nurse (PC-98) - FREE_BTL.MES
+; English Translation
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--

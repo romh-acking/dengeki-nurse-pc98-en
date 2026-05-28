@@ -1,4 +1,5 @@
-; Dengeki Nurse English Translation - K_ROOM.MES
+; Dengeki Nurse (PC-98) - K_ROOM.MES
+; English Translation
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--

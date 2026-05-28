@@ -464,4 +464,7 @@
 ; (proc 16)
 
   ((cmd 209) 0 2)
+; PC-98
   (mes-jump "mes¥Ns_Menu.mes")))
+; FMT
+; (mes-jump "mes¥StaffBox.mes")))

@@ -199,7 +199,7 @@
   (proc 16)
 
   (proc 11)
-  (str "Ahh! Spoiler! You said there was a dungeon!")
+  (str "Ahh! Spoiler! You mentioned the dungeon!")
   (proc 15)
   (proc 10)
   (str "Yes, well, moving on.")

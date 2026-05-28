@@ -13,6 +13,7 @@
 ; (define-proc 12 (<> (text-color 11) (str "Ayako: "))) <--- Unused
   (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))
 ; (define-proc 14 (<> (text-color 5)  (str "Voice: "))) <--- Unused
+; FMT
 ; (branch-reg 941 (</> (/
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399) (text-reset 0) (image-file "b:¥gpc¥ns1_136.gpc") (image-mem 0 0) (exec-mem 2816 "GET 6 0 0 24 144")
@@ -536,7 +537,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 1)
-   (str "Twitch, twitch...")
+   (str "Ba-bump, ba-bump...")
    (proc 15)
    (text-color 7)
    (str "I check the woman's pulse, nothing abnormal here.")

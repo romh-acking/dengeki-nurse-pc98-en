@@ -176,7 +176,7 @@
 ; FMT
 ;  (mes-jump "mes¥action02.mes"))
 
-; 	Post-battle chunk following... relocated in FMT version
+; 	Post-battle chunk following... removed (?!?!) in FMT version
 
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)

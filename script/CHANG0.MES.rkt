@@ -1,4 +1,5 @@
-; Dengeki Nurse English Translation - CHANG0.MES
+; Dengeki Nurse (PC-98) - CHANG0.MES
+; English Translation
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
