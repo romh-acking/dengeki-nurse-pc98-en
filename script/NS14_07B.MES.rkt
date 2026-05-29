@@ -45,7 +45,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
+; PC-98
      (sound '|| "uso¥Nurse08.uso")
+; FMT
+;    (sound '|| "Nurse08.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 1 3)
@@ -71,6 +74,8 @@
   (proc 15)
   (proc 6)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 
@@ -528,7 +533,10 @@
    (proc 15)
    (proc 9)	; Shocked
    (sound '|| 0)
+; PC-98
    (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 1)
            (str "The Black Cross!!!")
    (proc 15)

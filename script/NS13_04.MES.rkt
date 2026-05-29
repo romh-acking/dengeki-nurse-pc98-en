@@ -25,7 +25,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse14.uso")
+; FMT
+; (sound '|| "Nurse14.fmt")
   (sound '|| 1)
   (text-frame 0 0 79 399)
   (text-reset 1)

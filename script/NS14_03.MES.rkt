@@ -23,7 +23,10 @@
   (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_412.gpc")
   (image-mem 1 3)
@@ -43,6 +46,8 @@
           (str "Geez... Man, what a lucky gal...")
   (proc 15)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 
@@ -323,7 +328,10 @@
    (exec-mem 1280 4 0 15 0)    (delay 1)
    (exec-mem 1280 2 9 15 10)   (delay 1)
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 7)
    (proc 15)
 
 ; 	Sparks fly from the car...
@@ -336,6 +344,8 @@
 ; 	Sparks fly again, and then...
 
    ((cmd 196) 0 0)
+; FMT
+;  (sound '|se | 7)
    (text-color 1)
    (text "ＶＲＲＲＲＲＲＲＲＯＯＯＯＯＭ！")
    ((cmd 195) 0 2)
@@ -348,7 +358,10 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    (proc 1)
            (str "Eeeeeek! It started moving by itself!")

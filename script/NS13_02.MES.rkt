@@ -29,7 +29,10 @@
   (exec-mem 2816 "GET 6 30 0 10 96")
   (proc 9)
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse12.uso")
+; FMT
+; (sound '|| "Nurse12.fmt")
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M128")

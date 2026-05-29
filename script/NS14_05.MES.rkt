@@ -31,7 +31,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
+; PC-98
      (sound '|| "uso¥Nurse10.uso")
+; FMT
+;    (sound '|| "Nurse10.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   ((cmd 193) 0 "b:¥gpa¥Ns1-453.gpa")
@@ -63,6 +66,8 @@
   (str "this!")
   (proc 15)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 

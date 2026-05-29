@@ -12,10 +12,8 @@
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
-  (image-file "b:¥gpc¥Ns1_320.gpc") (image-mem 0 0)
-  (exec-mem 2816 "GET 8 8 25 44 227")
-  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0)
-  (exec-mem 2816 "GET 20 71 320 8 64")
+  (image-file "b:¥gpc¥Ns1_320.gpc") (image-mem 0 0) (exec-mem 2816 "GET 8 8 25 44 227")
+  (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M96")
@@ -76,7 +74,10 @@
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_317.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (proc 11)
             (str "Hee, hee... Good evening.")
@@ -259,7 +260,10 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_318.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
+; PC-98
    (sound '|se | 26)
+; FMT
+;  (sound '|se | 5)
    (proc 1)
            (str "E-eeeeek! It...it's you!!!")
    (proc 15)
@@ -295,7 +299,10 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_319.gpc,GPC") (image-mem 1 3)
    ((cmd 209) 1 5)
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse08.uso")
+; FMT
+;  (sound '|| "Nurse08.fmt")
    (sound '|| 3)
    (proc 19)
    (set-reg 65 #t))

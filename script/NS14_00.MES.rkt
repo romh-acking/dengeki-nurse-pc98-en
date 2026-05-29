@@ -24,11 +24,14 @@
   (text-frame 0 0 79 399)
   (text-reset 15)
   (image-file "gpc¥Seki10.gpc") (image-mem 1 3)
-  (sound '|| 0)
-  (sound '|| "uso¥Nurse01a.uso")
-  (sound '|| 1)
+; PC-98
+  (sound '|| 0) (sound '|| "uso¥Nurse01a.uso") (sound '|| 1)
+; FMT
+; (sound '|se | "MUS¥NRS_ADV.SE")              (sound '|| 100)
   ((cmd 209) 1 5)
   (exec-file "APPEARH.CMD b:¥gpc¥4WA.gpc,3,104,76,247,4,1,1")
+; FMT
+; (sound '|se | 5)
   (delay 150 0)
   ((cmd 209) 0 5)
 
@@ -39,7 +42,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse08.uso")
+; FMT
+; (sound '|| "Nurse08.fmt")
   (sound '|| 1)
   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
   (image-file "gpc¥ns1_k10.gpc")    (image-mem 1 0)

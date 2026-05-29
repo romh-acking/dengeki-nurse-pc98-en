@@ -16,7 +16,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
+; PC-98
      (sound '|| "uso¥Nurse10.uso")
+; FMT
+;    (sound '|| "Nurse10.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_414.gpc")
@@ -38,6 +41,8 @@
           (str "Wh-which is the brake!?")
   (proc 15)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 

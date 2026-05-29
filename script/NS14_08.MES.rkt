@@ -23,7 +23,10 @@
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_422.gpc,TEMP")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_423.gpc,TEMP")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse13.uso")
+; FMT
+; (sound '|| "Nurse13.fmt")
   (sound '|| 1)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_419.gpc,GPC") (image-mem 1 3)
   (image-file "b:¥gpc¥ns1_421.gpc") (image-mem 1 3)
@@ -52,6 +55,8 @@
   (str "Suzuka?")
   (proc 15)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 
@@ -185,7 +190,10 @@
    (text-color 4)
    (exec-mem 34128 0 6 "■" 66 376)
    (exec-mem 10752 "EXIT")
-   (exec-mem 19456 4 16 51 303 1 1 16 18)
+; PC-98
+   (exec-mem 19456 4 16 51 303 1 1 4 72)
+; FMT
+;
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 2)
@@ -210,8 +218,18 @@
    (exec-mem 2816 "ACCESS 0")
    (branch-reg 666
     (</>
-     (/ (exec-mem 19456 4 16 51 303 0 1 16 18) (set-reg 666 #t))
-     (/ (exec-mem 19456 4 16 51 303 0 1 32 9))))
+     (/
+; PC-98
+      (exec-mem 19456 4 16 51 303 0 1 16 18)
+; FMT
+;     (exec-mem 19456 4 16 51 303 0 1 4 72)
+      (set-reg 666 #t))
+     (/
+; PC-98
+      (exec-mem 19456 4 16 51 303 0 1 32 9)
+; FMT
+;     (exec-mem 19456 4 16 51 303 0 1 4 72)
+      )))
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (image-file "b:¥gpc¥ns1_423.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
@@ -224,7 +242,12 @@
    (exec-mem 34128 0 6 "■" 66 376)
    (branch-reg 667
     (</>
-     (/ (exec-mem 19456 4 16 51 303 1 1 16 18) (set-reg 667 #t))
+     (/
+; PC-98
+      (exec-mem 19456 4 16 51 303 1 1 16 18)
+; FMT
+;     (exec-mem 19456 4 16 51 303 1 1 4 72)
+      (set-reg 667 #t))
      (/ (exec-mem 19456 4 16 51 303 1 1 32 9))))
    (text-frame 3 324 52 379)
    (text-reset 15)

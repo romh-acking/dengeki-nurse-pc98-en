@@ -28,7 +28,10 @@
   (exec-mem 10752 "MODE V0E0M64")
   (exec-mem 10752 "LOAD> b:¥gpc¥ns1_404.gpc,TEMP")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse10.uso")
+; FMT
+; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥ns1_410.gpc") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
@@ -58,6 +61,8 @@
   (str "they'd prefer to keep quiet!")
   (proc 15)
   (proc 19)
+; FMT
+; (exec-mem 18944 65535 528 23)
   
 ; 	Dialogue trees defined here...
 
@@ -286,7 +291,10 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC") (image-mem 0 0)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse09.uso")
+; FMT
+;  (sound '|| "Nurse09.fmt")
    (sound '|| 1)
    (proc 19)
    (set-reg 27 #t))

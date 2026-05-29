@@ -21,7 +21,10 @@
     (/ (nop@))
     (/
      (sound '|| 0)
+; PC-98
      (sound '|| "uso¥Nurse12.uso")
+; FMT
+;    (sound '|| "Nurse12.fmt")
      (sound '|| 1)
      (set-reg 990 #f))))
   (image-file "b:¥gpc¥ns1_307.gpc") (image-mem 1 3)

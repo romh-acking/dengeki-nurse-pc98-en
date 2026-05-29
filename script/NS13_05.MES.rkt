@@ -25,7 +25,10 @@
                                          (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse12.uso")
+; FMT
+; (sound '|| "Nurse12.fmt")
   (sound '|| 1)
   (image-file "gpc¥Aflame01.gpc")   (image-mem 1 3)
   (image-file "b:¥gpc¥Ns1_309.gpc") (image-mem 1 3)
@@ -166,7 +169,10 @@
    (proc 15)
    (exec-mem 2816 "VIEW 16 93 40 237,OVER 1,PUT 8 16 93,FREE 8")
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 6)
    (exec-mem 6656 0 2 1 3 0)
    (text-color 1)
    (text "ＳＰＬＡＳＨ") (str "!")

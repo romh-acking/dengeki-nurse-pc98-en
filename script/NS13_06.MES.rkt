@@ -11,7 +11,10 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse11.uso")
+; FMT
+; (sound '|| "Nurse11.fmt")
   (sound '|| 1)
   (image-file "b:¥gpc¥Ns1_312.gpc") (image-mem 1 3)
   ((cmd 209) 1 2)
