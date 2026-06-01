@@ -191,9 +191,9 @@
    (exec-mem 34128 0 6 "■" 66 376)
    (exec-mem 10752 "EXIT")
 ; PC-98
-   (exec-mem 19456 4 16 51 303 1 1 4 72)
+   (exec-mem 19456 4 16 51 303 1 1 16 18)
 ; FMT
-;
+;  (exec-mem 19456 4 16 51 303 1 1 4 72)
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 2)
