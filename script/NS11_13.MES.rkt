@@ -445,7 +445,7 @@
 ; PC-98
    (mes-load? "mes¥action1.mes")
 ; FMT
-;  (mes-load? "mes¥action1.mes"))
+;  (mes-load? "mes¥action01.mes"))
 
 ; 	The post-battle stuff here is moved into its own dialogue tree in the FMT version (see below).
 

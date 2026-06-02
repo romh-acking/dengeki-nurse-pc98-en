@@ -172,17 +172,9 @@
 ;  (set-reg 988 #f)
    (sound '|| 2)
 ; PC-98
-   (mes-load? "mes¥action1.mes")
+   (mes-load? "mes¥action1.mes") (text-frame 3 324 52 379) (text-reset 15) (text-frame 4 16 51 303) (text-reset 15) (set-reg 311 #t) (set-reg 990 #f) (mes-jump "b:¥mes¥ns11_16.mes"))
 ; FMT
 ;  (mes-jump "mes¥action02.mes"))
-
-; 	Post-battle chunk following... removed (?!?!) in FMT version
-
-   (text-frame 3 324 52 379) (text-reset 15)
-   (text-frame 4 16 51 303)  (text-reset 15)
-   (set-reg 311 #t)
-   (set-reg 990 #f)
-   (mes-jump "b:¥mes¥ns11_16.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 12)

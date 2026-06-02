@@ -444,7 +444,7 @@
   (proc 15)
   (proc 11)
   (str "It's fine! I learned a secret technique so I can win now." 'br)
-  (text "↑" '|34368| "↑" '|34368| "↓" '|34368| "↓" '|34368| "←" '|34368| "→" '|34368| "←" '|34368| "→") (str " ...")
+  (text "ＵＵＤＤＬＲＬＲ") (str " ...")
   (proc 15)
   (proc 10)
   (str "Noooo! That's privileged top-secret company information!")

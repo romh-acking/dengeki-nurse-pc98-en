@@ -271,15 +271,10 @@
    (proc 15)
    (exec-mem 2816 "EXIT")
    (set-var U 3)
+; PC-98
    (sound '|| 0) (mes-load? "mes¥action1.mes")
-
-; 	Post-battle split in FMT version...
-
-;  (sound '|| 2) (mes-jump "mes¥action03.mes"))
-;(seg (? (= T 2) (= O 4))
-;  (nop@)
-;  (set-reg 941 #f)
-;  (set-reg 311 #f)
+; FMT
+;  (sound '|| 2) (mes-jump "mes¥action03.mes")) (seg (? (= T 2) (= O 4)) (nop@) (set-reg 941 #f) (set-reg 311 #f)
    (load-mem "cmd¥scrh.tcm" 28672)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
