@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Tanchi finds Kirara, playing with Nishijin Turbo-R... well, that's probably not the machine she was playing.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -117,8 +117,8 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "At her feet is a mountain of winnings. My god! She")
-   (str "won a lot in such a short time...!")
+   (str "At her feet is a mountain of winnings. My god, she")
+   (str "has won a lot in such a short time...!")
    (proc 15)
    (text-color 7)
    (str "I mean, now's not the time to be impressed, but...")

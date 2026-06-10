@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; With no lessons learnt, Tanchi delivers Kirara back to the hospital where Dr. Akiba waits...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -240,7 +240,7 @@
    (str "And... And...")
    (proc 15)
    (proc 2)
-           (str "I don't want you doing this alone Kirara." 'br)
+           (str "I don't want you doing this alone, Kirara.")
    (str "Even if I just get in the way...")
    (proc 15)
    (proc 3)
