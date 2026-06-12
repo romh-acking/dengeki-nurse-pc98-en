@@ -1,3 +1,8 @@
+; Dengeki Nurse English Translation - NS15_17.MES
+; Translated by Geometrizer
+; Edited and commented by trentsignia
+; --Description:--
+; Tanchi and Kirara jump down a mysterious hole and find themselves in the dark, both literally and figuratively...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -142,8 +147,7 @@
       (proc 15)
       (proc 6)
       (proc 2)
-              (str "Sorry... It wasn't on purpose, I" 'br)
-      (str "swear..."))
+              (str "Sorry... It wasn't on purpose, I swear..."))
      (/
       (exec-mem 2816 "GET 1 5 23 10 96")
       (exec-mem 2816 "SHOW 0,ACCESS 1")
