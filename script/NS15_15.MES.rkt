@@ -184,6 +184,7 @@
    (set-var G 1)
    (sound '|| 2)
    (set-reg 990 #f)
+   (set-reg 991 #f) ; New addition: had the music in the next script fail to play on me, never again..,,,
    (mes-jump "b:¥mes¥ns15_16.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)

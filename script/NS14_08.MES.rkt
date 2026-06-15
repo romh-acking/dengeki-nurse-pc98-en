@@ -348,7 +348,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
-           (str "Wh-what did you just say?")
+           (str "Wh-What did you just say?")
    (proc 15)
    (proc 1)
            (str "I said I'd give you a kiss if you win! So" 'br)

@@ -205,7 +205,7 @@
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
-              (str "Wh-what's with this out of nowhere!?")
+              (str "Wh-What's with this out of nowhere!?")
    (proc 15)
    (proc 14)
    (proc 11)	; Angry

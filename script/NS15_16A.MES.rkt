@@ -263,7 +263,7 @@
               (exec-mem 6656 8)
               (load-mem "cmd¥cappear.tcm" 6656)
               (proc 2)
-                      (str "Wh-what's this?")
+                      (str "Wh-What's this?")
               (proc 15)
               (proc 9) (proc 11)	; Nursia
               (text-frame 3 324 52 379)

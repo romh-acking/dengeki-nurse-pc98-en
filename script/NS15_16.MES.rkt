@@ -6,13 +6,21 @@
 ; -----Notes:-----
 ; So, this probably needs some explanation...
 ;
-; The following scripts make up 
+; This script acts as a hub for all six floors of the following dungeon section.
+; - The variable G (1 to 6) determines which floor the player is on, and the rooms/barriers/etc. are loaded accordingly.
 ;
-; Players start in this hallway and then are presented with five doors, which can lead into one of four room types:
-; - NS15_16A: Empty room. This can on ocassion house an enemy, whom after defeating will give up an item of varying uses, such as to unlock doors in the hallway.
+; On each floor players are presented with five doors, which can lead into one of four room types:
+; - NS15_16A: Empty room. This can on occasion house an enemy, whom after defeating will give up an item of varying uses, such as to unlock doors in the hallway.
 ; - NS15_16B: Elektros Warp Device room, which can be used to teleport to another floor's hallway.
-; - NS15_16C: Mysterious Warp Device room, that functions the same as the other room except that it needs coins to operate.
+; - NS15_16C: Mysterious Warp Device room. It functions the same as the other warp device, except that it needs coins to operate.
 ; - NS15_16D: Pipe room. There is only one of these; the pipe leads to NS15_16E, which is where the afore-mentioned coins can be obtained.
+;
+; The items that can sometimes be collected by going into NS15_16A are:
+; - Coins (variable D): Obtained by beating Tomoyo. Collecting them in NS15_16E sets this value to 15, and it is decremented by 1 every time the mysterious warp is used.
+; - Controller (register 800): Obtained by beating Asuka. Barriers can be passed through once this is collected.
+; - Key (save flag 6): Obtained by beating Ayako. A sixth save file is written when the key is collected, and allows Kirara's Room to be accessed from the Omake Mode in the main menu.
+; - Crest (register 805): Obtained by beating Guillotine Nurse. Opens the big door on the third floor, which is what ends the dungeon segment.
+;
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*

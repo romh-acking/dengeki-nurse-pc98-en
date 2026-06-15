@@ -152,7 +152,7 @@
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
-           (str "Wh-what now...?")
+           (str "Wh-What now...?")
    (proc 15)
    (proc 6)
    (proc 2)

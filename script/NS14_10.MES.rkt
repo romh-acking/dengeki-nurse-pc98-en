@@ -186,7 +186,7 @@
    (str "VOOOOOOOSH!")
    (proc 15)
    (text-color 7)
-   (str "Wh-what the...")
+   (str "Wh-What the...")
    (proc 15)
    (text-color 7)
    (str "Flying right next to me, it's...")

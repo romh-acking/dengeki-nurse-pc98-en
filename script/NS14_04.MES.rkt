@@ -38,7 +38,7 @@
           (str "Kirara! Stomp on the brake!")
   (proc 15)
   (proc 1)
-          (str "Wh-which is the brake!?")
+          (str "Wh-Which is the brake!?")
   (proc 15)
   (proc 19)
 ; FMT

@@ -208,7 +208,7 @@
  (seg (? (= T 0) (= O 3))
    (proc 18)
    (text-color 7)
-   (str "Wh-what's going on here? And who is that woman?")
+   (str "Wh-What's going on here? And who is that woman?")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 4))

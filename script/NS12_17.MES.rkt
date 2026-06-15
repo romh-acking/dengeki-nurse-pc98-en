@@ -192,7 +192,7 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_235.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 10)
-           (str "Oh Aunty, have you seen a hot guy running" 'br)
+           (str "Oh aunty, have you seen a hot guy running" 'br)
    (str "around?")
    (proc 15)
    (proc 11)
@@ -225,8 +225,8 @@
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
 
-   (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
-   (define-proc 11 (<> (text-color 5) (str "Cleaning Lady: ")))
+;  (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
+;  (define-proc 11 (<> (text-color 5) (str "Cleaning Lady: ")))
    (proc 19)
    (set-var B 2)
    (set-var C 2)))
