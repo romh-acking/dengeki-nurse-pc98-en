@@ -569,8 +569,8 @@
          (str "Hee hee hee hee...")
    (proc 15)
    (proc 2)
-           (str "I can't move my hand! It's trapped by her" 'br)
-   (str "breasts!")
+           (str "I can't move my hand! It's caught in her" 'br)
+   (str "booby trap!") ; this was suggested by a certain penguin lover, you know who you are
    (proc 15)
    (proc 19)
    (set-reg 105 #t))

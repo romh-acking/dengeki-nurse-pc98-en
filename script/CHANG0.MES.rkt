@@ -64,7 +64,7 @@
   (text-frame 15 321 64 383)
   (text-reset 0)
   (text #:col 4 'br)
-  (text "　　　　　" '|34368| "ＰＬＡＳＭＡ　ＣＨＡＲＧＥ！")
+  (text "　　　　　　" "ＰＬＡＳＭＡ　ＦＬＡＳＨ！")
   (delay 100 0)
   (text-frame 15 321 64 383)
   (text-reset 0)

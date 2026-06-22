@@ -86,21 +86,21 @@
      (/
       (if (</>
            (// (? (= 90 #t))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 93 #t)
            (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 90 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 91 #t) (= 92 #t) (= 90 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 91 #t) (= 92 #t) (= 90 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 90 #t)
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 91 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 90 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 90 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns12_13.mes")
            (// (? (= 92 #t) (= 90 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 93 #t) (= 92 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 93 #t) (= 92 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 92 #t)
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 89 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -266,11 +266,8 @@
 ; FMT
 ;  (set-var K 2) (sound '|| 0)
    (mes-load? "mes¥chang0.mes")
-
 ;  FMT:
-;(seg (? (= T 2) (= O 4))
-;  (nop@)
-;  (set-reg 940 #f)
+;(seg (? (= T 2) (= O 4)) (nop@) (set-reg 940 #f)
 
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
@@ -324,11 +321,7 @@
 ; PC-98
    (mes-load? "mes¥action1.mes")
 ; FMT
-;  (mes-jump "mes¥action04.mes"))
-;(seg (? (= T 2) (= O 5))
-;  (nop@)
-;  (set-reg 941 #f)
-;  (set-reg 311 #f)
+;  (mes-jump "mes¥action04.mes")) (seg (? (= T 2) (= O 5)) (nop@) (set-reg 941 #f) (set-reg 311 #f)
 
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
