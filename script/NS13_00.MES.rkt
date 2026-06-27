@@ -84,20 +84,20 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 11 #t))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 10 #t) (= 11 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 11 #t))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 15 #t)
+           (// (? (= 10 #t) (= 11 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 14 #t)
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 12 #t)
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
 ; Talk
      (/
       (if (</>
-           (// (? (= 15 #t))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 15 #t))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns13_01.mes")
            (// (? (= 11 #t) (= 15 #f))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 14 #t) (= 11 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 14 #t) (= 11 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 11 #t)
            (// (? (= 10 #t) (= 14 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 12 #t) (= 13 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 12 #t) (= 13 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 10 #t)
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 13 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move

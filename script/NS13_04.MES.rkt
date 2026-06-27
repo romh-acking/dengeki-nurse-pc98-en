@@ -142,7 +142,7 @@
   (proc 16)
   (proc 9)
   (proc 13)
-         (str "Th-the Storm Summoner lady...?")
+         (str "Th-The Storm Summoner lady...?")
   (proc 16)
   ((cmd 209) 0 2)
   (text-frame 3 324 52 379) (text-reset 15)

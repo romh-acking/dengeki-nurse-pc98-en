@@ -143,7 +143,7 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 31 #t))                               (nop@) (set-var T 4) (set-var O 2)  (seg-call))
+           (// (? (= 31 #t))                               (nop@) (set-var T 4) (set-var O 2)  (seg-call))    ; (mes-jump "b:¥mes¥ns11_03.mes")
            (// (? (= 28 #t) (= 31 #f))                     (nop@) (set-var T 4) (set-var O 1)  (seg-call))
            (//                                             (nop@) (set-var T 4) (set-var O 0)  (seg-call)))))
 ; Save
@@ -407,8 +407,8 @@
    (proc 15)
    (proc 5)
               (str "So Mitsuko, a practicing nurse with" 'br)
-   (str "shock powers, was scouted as a potential commando" 'br)
-   (str "nurse.")
+   (str "shocking powers, was scouted as a potential" 'br)
+   (str "commando nurse.")
    (proc 15)
 
 ; 	Flashback of Mitsuko rejecting the Black Cross
