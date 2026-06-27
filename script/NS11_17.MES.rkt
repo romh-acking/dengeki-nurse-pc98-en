@@ -46,7 +46,7 @@
   (proc 15)
   (proc 5)
       ; Dr. Akiba:
-            (str "What's all this shouting in the middle" 'br)
+             (str "What's all this shouting in the middle" 'br)
   (str "of the night? ...Huh, huhhhh!?")
   (proc 15)
   (proc 3)
@@ -171,7 +171,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "That's... Allizdog, isn't it?")
+              (str "That's... Allizdog, isn't it?")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -180,7 +180,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Hmm... From a medical perspective, it's")
+              (str "Hmm... From a medical perspective, it's")
    (str "possible...")
    (proc 15)
    (proc 19)
@@ -189,7 +189,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "Don't get too close! He could get" 'br)
+              (str "Don't get too close! He could get" 'br)
    (str "bitey!")
    (proc 15)
    (proc 19)
@@ -216,7 +216,7 @@
    (proc 6)
    (proc 5)
        ; Dr. Akiba:
-             (str "Gracious sakes...")
+              (str "Gracious sakes...")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
@@ -289,7 +289,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "Hey, don't get so clingy! You might" 'br)
+              (str "Hey, don't get so clingy! You might" 'br)
    (str "have been exposed to radiation!")
    (proc 15)
    (proc 19)
@@ -312,7 +312,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "Hey, where are you going?")
+              (str "Hey, where are you going?")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -320,7 +320,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "There's no need for that!")
+              (str "There's no need for that!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 1))
@@ -349,7 +349,7 @@
    (proc 6)
    (proc 5)
        ; Dr. Akiba:
-             (str "Kirara, don't forget this...")
+              (str "Kirara, don't forget this...")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 21 158,PUT 3 5 23,FREE 3")
    (proc 2)
@@ -358,12 +358,12 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "It's a compact plasma integration" 'br)
+              (str "It's a compact plasma integration" 'br)
    (str "device!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Switch it on, and you'll absorb plasma" 'br)
+              (str "Switch it on, and you'll absorb plasma" 'br)
    (str "waves, transforming you into Dengeki Nurse!")
    (proc 15)
    (sound '|| 2)

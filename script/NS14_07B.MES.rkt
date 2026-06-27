@@ -13,9 +13,9 @@
 
 ; 	Character portraits:
 
-  (define-proc 0  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96")   (proc 4))) ; Happy
-  (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 40 0 10 96")   (proc 4))) ; Shocked
-  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96")   (proc 4))) ; Confused
+  (define-proc 0  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4))) ; Shocked
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
 
 ; 	(for this script specifically they put the Dr. Akiba portrait in the same position as Kirara's, THANK YOU)
 
@@ -179,7 +179,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "A clear-cut case of Papipapi Disease.")
+              (str "A clear-cut case of Papipapi Disease.")
    (proc 15)
    (proc 6)
    (proc 19)
@@ -245,7 +245,7 @@
    (str "don't think he painted his face like that just to" 'br)
    (str "mess with us.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Hide Moguri looking at mirror
    (proc 19)
    (set-reg 92 #t))
  (seg (? (= T 1) (= O 2))
@@ -265,7 +265,7 @@
    (text-color 7)
    (str "Moguri keeps looking in the mirror.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Hide Moguri looking at mirror
    (text-color 7)
    (str "I guess when your face is that famous, your image" 'br)
    (str "actually matters...")
@@ -304,7 +304,7 @@
    (proc 11)
            (str "Oh my gooooooooooooooood!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Hide Moguri looking at mirror
    (proc 19)
    (set-reg 99 #t))
  (seg (? (= T 2) (= O 1))
@@ -313,7 +313,7 @@
    (proc 11)
            (str "Aaaaaaagh! Agh! Agh!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Hide Moguri looking at mirror
    (proc 0)	; Happy
    (proc 1)
        ; Kirara:
@@ -330,7 +330,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "It comes from deep in the Brazilian" 'br)
+              (str "It comes from deep in the Brazilian" 'br)
    (str "interior, and is a microbial infection that causes")
    (str "diarrhea and fever for three days straight.")
    (proc 15)
@@ -342,7 +342,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Maybe he ate something bad?")
+              (str "Maybe he ate something bad?")
    (proc 15)
    (proc 6)
    (proc 11)
@@ -351,7 +351,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "It will be difficult...")
+              (str "It will be difficult...")
    (proc 15)
    (proc 6)
    (proc 11)
@@ -360,13 +360,13 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Not without the vaccine that we'd need" 'br)
+              (str "Not without the vaccine that we'd need" 'br)
    (str "delivered from Brazil...")
    (proc 15)
    (proc 6)
    (proc 5)
        ; Dr. Akiba:
-             (str "Even if we request it now, it wouldn't" 'br)
+              (str "Even if we request it now, it wouldn't" 'br)
    (str "be in time for tomorrow's starting grid...")
    (proc 15)
    (proc 6)
@@ -383,7 +383,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "This isn't some common thing like" 'br)
+              (str "This isn't some common thing like" 'br)
    (str "appendicitis!")
    (proc 15)
    (proc 6)
@@ -420,7 +420,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "There's not much we can do. And by" 'br)
+              (str "There's not much we can do. And by" 'br)
    (str "tomorrow, the diarrhea and fever will...escalate.")
    (proc 15)
    (proc 6)
@@ -442,9 +442,7 @@
        ; Tanchi:
            (str "So you're gonna drop out of the finals?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Smiling
    (proc 1)
        ; Kirara:
            (str "What a pity... You could've become the" 'br)

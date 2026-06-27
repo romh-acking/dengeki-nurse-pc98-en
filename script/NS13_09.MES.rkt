@@ -265,7 +265,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "But..but...no!")
+           (str "But...but...no!")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -278,7 +278,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "Aaahhnnn! N-no! Get your hands off me!")
+           (str "Aaahhnnn! N-No! Get your hands off me!")
    (proc 15)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_318.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
@@ -289,7 +289,7 @@
 ;  (sound '|se | 5)
    (proc 1)
        ; Kirara:
-           (str "E-eeeeek! It...it's you!!!")
+           (str "E-Eeeeek! It...it's you!!!")
    (proc 15)
    (proc 12)
              (str "Heeheeheehee, busted!")
@@ -363,7 +363,7 @@
    (proc 18)
    (proc 2)
        ; Tanchi:
-           (str "Ha...haha..hahahaha...")
+           (str "Ha...haha...hahahaha...")
    (proc 15)
    (sound '|| 0)
    (exec-mem 2816 "GET 7 8 25 44 227")
@@ -383,7 +383,7 @@
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "N-no! It's not what it looks like!")
+           (str "N-No! It's not what it looks like!")
    (proc 15)
    (proc 1)
        ; Kirara:
@@ -392,7 +392,7 @@
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "Wait just a minute! This is all just a" 'br)
+           (str "Wait just a minute, this is all just a" 'br)
    (str "misunderstanding! A really big one!")
    (proc 15)
    (exec-mem 2816 "VIEW 8 25 51 251,PUT 7 8 25,FREE 7")

@@ -218,7 +218,7 @@
    (str "Elektros?")
    (proc 15)
    (proc 10)
-   (str "I know it, Waniiiii!")
+   (str "I know it, waniiiii!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)	; Dr. Akiba

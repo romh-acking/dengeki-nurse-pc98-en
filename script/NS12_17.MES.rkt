@@ -203,7 +203,7 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_235.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 10)
-           (str "Oh aunty, have you seen a hot guy running" 'br)
+           (str "Oh auntie, have you seen a hot guy running" 'br)
    (str "around?")
    (proc 15)
    (proc 11)

@@ -354,7 +354,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "Mom...!")
+           (str "Mother...!")
    (proc 15)
    (proc 10)
             (str "Come on... Hold on tight...")
@@ -436,7 +436,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "Mom!!!")
+           (str "Mother!!!")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -452,8 +452,8 @@
    (proc 4)
    (proc 1)
        ; Kirara:
-           (str "Mom, I'm sorry... I don't think I can ever")
-   (str "become a Florence Nightingale...")
+           (str "Mother, I'm sorry... I don't think I can" 'br)
+   (str "ever become a Florence Nightingale...")
    (proc 15)
 
 ; 	Quick! Transform!

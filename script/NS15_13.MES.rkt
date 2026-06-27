@@ -242,7 +242,7 @@
    (proc 6)
    (proc 2)
        ; Tanchi:
-           (str "S-sorry... That came out kind of weird.")
+           (str "S-Sorry... That came out kind of weird.")
    (proc 15)
    (proc 10)	; Smiling
    (proc 1)
@@ -257,7 +257,7 @@
    (proc 10)	; Smiling
    (proc 1)
        ; Kirara:
-           (str "It's fine, I'm sure my mom is okay!")
+           (str "It's fine, I'm sure my mother is okay!")
    (proc 15)
    (proc 6)
    (proc 19))

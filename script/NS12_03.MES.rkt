@@ -166,7 +166,7 @@
    (exec-mem 2816 "PUT 2 5 23") ; Angry
    (proc 1)
        ; Kirara:
-           (str "This is unforgiveable! I have to give them")
+           (str "This is unforgivable! I have to give them")
    (str "a piece of my mind!")
    (proc 15)
    (proc 6)
@@ -286,7 +286,7 @@
            (str "Ahh...ahhh...")
    (proc 15)
    (proc 11)
-           (str "That's all it takes? You're tough for" 'br)
+           (str "That's all it takes? You're tough for" 'br) ; flagging this
    (str "having such a cute face!")
    (proc 15)
    (proc 10)

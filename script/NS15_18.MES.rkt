@@ -280,8 +280,7 @@
    (proc 10)
            (str "I am Nursia XIV, Princess of Elektros!")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "I've been waiting for this...")
    (proc 15)
@@ -290,8 +289,7 @@
            (str "Black Nurse, please let go of Doctor" 'br)
    (str "Tanchi and give us the ring back.")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Pfyeah, whatever!")
    (proc 15)
@@ -299,8 +297,7 @@
    (proc 10)
            (str "The ring has no use to you.")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "You think you can keep all the" 'br)
    (str "treasure for yourself? As if!")
@@ -309,8 +306,7 @@
    (proc 10)
            (str "Humans... What sad, foolish creatures...")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Oh wow, now the kid is hallucinating!")
    (proc 15)
@@ -368,8 +364,7 @@
            (str "It is an activation device to awaken the" 'br)
    (str "Elektros people beneath from their hibernation.")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "What is this sci-fi mumbo jumbo? No" 'br)
    (str "kid is stupid enough to believe that junk!")
@@ -383,8 +378,7 @@
            (str "...This atomic disintegration laser must" 'br)
    (str "pierce your cold heart.")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Oh, um, okay, hold on. Here you go.")
    (proc 15)
@@ -399,8 +393,7 @@
    (proc 10)
            (str "Now, the ring next.")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Don't mess with me, you little turd!")
    (proc 15)
@@ -419,8 +412,7 @@
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Oh my, what a flimsy toy!")
    (proc 15)
@@ -428,8 +420,7 @@
    (proc 10)
            (str "............")
    (proc 15)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "You little crap-muffin! How dare you" 'br)
    (str "scare me like that!")
@@ -445,8 +436,7 @@
    (str "about me!")
    (proc 15)
    (proc 11)
-   (proc 14)	; Black Nurse
-   (proc 7)
+   (proc 14) (proc 7)
        ; Black Nurse:
                (str "Hah! I'll start by ripping you apart!")
    (str "The traitor, Dengeki Nurse!")

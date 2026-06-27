@@ -150,10 +150,10 @@
  (seg (? (= T 0) (= O 5))
    (proc 18)
    (text-color 7)
-   (str "It's like she had her own cat bite her...") ; Flagging this
+   (str "It's like she had her own cat bite her...")
    (proc 15)
    (text-color 7)
-   (str "But! But! Butt! Butt!!!")
+   (str "But! But! Butt!! Butt!!!")
    (proc 15)
    (text-color 7)
    (str "If Akiko's planning on taking over the world, we" 'br)

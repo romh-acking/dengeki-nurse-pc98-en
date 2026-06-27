@@ -240,7 +240,8 @@
    (proc 10)	; Happy
    (proc 1)
        ; Kirara:
-           (str "I want to show it to Doc Akiba and Croco!")
+           (str "I want to show it to Doctor Akihabara and" 'br)
+   (str "Croco!")
    (proc 15)
    (proc 6)
    (proc 19)
@@ -307,7 +308,8 @@
    (proc 10)	; Happy
    (proc 1)
        ; Kirara:
-           (str "I hope Doc Akiba and Croco arrive soon!")
+           (str "I hope Doctor Akihabara and Croco arrive" 'br)
+   (str "soon!")
    (proc 15)
    (proc 6)
    (proc 19))

@@ -391,7 +391,7 @@
    (proc 1)
        ; Kirara:
            (str "I can't go back...to the Society... I want")
-   (str "to look for my mom here in Japan, but...")
+   (str "to look for my mother here in Japan, but...")
    (proc 15)
    (proc 6)
    (proc 2)

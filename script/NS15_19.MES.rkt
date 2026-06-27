@@ -212,8 +212,8 @@
   (proc 16)
   (proc 1)
       ; Kirara:
-          (str "Back at the hospital, Doc Akiba and Croco" 'br)
-  (str "will be there...")
+          (str "Back at the hospital, Doctor Akihabara and")
+  (str "Croco will be there...")
   (proc 16)
   (proc 1)
       ; Kirara:

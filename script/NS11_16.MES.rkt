@@ -41,8 +41,8 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (text-color 7)
-  (str "This is the office of Doc Akiba's director. The" 'br)
-  (str "Doc's lab is underneath.")
+  (str "This is the Director's Office that Doc Akiba uses.")
+  (str "His lab is underneath.")
   (proc 15)
   (text-color 7)
   (str "There's also an unused exam room next door that" 'br)
@@ -50,7 +50,7 @@
   (proc 15)
   (proc 5)
       ; Dr. Akiba:
-            (str "How fares the Minister?")
+             (str "How fares the Minister?")
   (proc 15)
   (proc 2)
       ; Tanchi:
@@ -179,22 +179,22 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Hmm, perhaps you should know as well...")
+              (str "Hmm, perhaps you should know as well...")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "We humans carry a small static charge," 'br)
+              (str "We humans carry a small static charge," 'br)
    (str "but Kirara's constitution is extra powerful.")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "And with the power of my plasma wave" 'br)
+              (str "And with the power of my plasma wave" 'br)
    (str "device, it sucks the plasma directly out of the" 'br)
    (str "air.")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "The plasma waves and Kirara's static" 'br)
+              (str "The plasma waves and Kirara's static" 'br)
    (str "charge combine, creating a million-volt plasma" 'br)
    (str "barrier!")
    (proc 15)
@@ -204,17 +204,17 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "In other words, her million-volt plasma")
+              (str "In other words, her million-volt plasma")
    (str "armor has created a nurse that is indestructible!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "And I've equipped her with the weapons" 'br)
+              (str "And I've equipped her with the weapons" 'br)
    (str "I've been readying for this very day!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "And that's how we have...the Dengeki" 'br)
+              (str "And that's how we have...the Dengeki" 'br)
    (str "Nurse!")
    (proc 15)
    (proc 2)
@@ -228,7 +228,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "What do you think? In awe of my" 'br)
+              (str "What do you think? In awe of my" 'br)
    (str "greatness?")
    (proc 15)
    (proc 2)
@@ -245,12 +245,12 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Well, it's part of it. But not the only")
+              (str "Well, it's part of it. But not the only")
    (str "reason!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-             (str "Ideally, to increase electrical" 'br)
+              (str "Ideally, to increase electrical" 'br)
    (str "resistance, it'd be best to go fully nude.")
    (proc 15)
    (proc 2)
@@ -265,7 +265,7 @@
    (proc 6)
    (proc 5)
        ; Dr. Akiba:
-             (str "Well, at her own request, she's only" 'br)
+              (str "Well, at her own request, she's only" 'br)
    (str "wearing the bare minimum.")
    (proc 15)
    (proc 19)
@@ -274,7 +274,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-             (str "Shall I explain her weapons to you?")
+              (str "Shall I explain her weapons to you?")
    (proc 15)
    (proc 2)
        ; Tanchi:

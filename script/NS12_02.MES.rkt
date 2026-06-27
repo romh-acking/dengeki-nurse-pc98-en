@@ -297,8 +297,8 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
-   (str "Don't panic! I need to work out patterns and" 'br) ; Flagging this
-   (str "countermeasures...")
+   (str "Not so fast! Let us analyze and strategize the" 'br)
+   (str "situation before our eyes...")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

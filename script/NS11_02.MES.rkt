@@ -74,7 +74,7 @@
   (proc 13)
   (proc 5)
       ; Dr. Akiba:
-  (str "Where'd you find it?")
+             (str "Where'd you find it?")
   (proc 15)
   (proc 2)
       ; Tanchi:

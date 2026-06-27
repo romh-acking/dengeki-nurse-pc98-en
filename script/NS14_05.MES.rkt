@@ -304,8 +304,8 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "B-but... You absolutely....positively" 'br)
-   (str "can't look up!")
+           (str "B-But... You absolutely, positively, can" 'br)
+   (str "not look up!")
    (proc 15)
    (proc 19)
    (set-reg 60 #t))

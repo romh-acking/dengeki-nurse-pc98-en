@@ -284,8 +284,8 @@
               (str "Regardless, we need to get Kirara.")
    (proc 15)
    (proc 11)
-           (str "She's not here, Wani! And hasn't been for" 'br)
-   (str "a while, Wani!")
+           (str "She's not here, wani! And hasn't been for" 'br)
+   (str "a while, wani!")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -322,7 +322,7 @@
    (str "sentence!")
    (proc 15)
    (proc 11)
-           (str "Yah, Wani!")
+           (str "Yah, wani!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:

@@ -54,7 +54,7 @@
   (str "where's Tanchi-kun?")
   (proc 15)
   (proc 10)
-         (str "Haven't seen him all morning, Wani!")
+         (str "Haven't seen him all morning, wani!")
   (proc 15)
   (proc 1)
       ; Kirara:

@@ -223,7 +223,7 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-              (str "Most likely, a bit reckless. but...")
+              (str "Most likely. A bit reckless, but...")
    (proc 15)
    (proc 11)	; Shouting
    (proc 1)

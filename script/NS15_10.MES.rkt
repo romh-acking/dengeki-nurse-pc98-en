@@ -108,7 +108,7 @@
    (proc 15)
    (text-color 7)
    (str "Does he have any idea how badly Kirara wanted to" 'br)
-   (str "see her mother? Doesn't he get it at all?")
+   (str "see her mom? Doesn't he get it at all?")
    (proc 15)
    (proc 19)
    (set-reg 57 #t))
@@ -196,7 +196,7 @@
    (proc 2)
        ; Tanchi:
            (str "Do you have any idea how long Kirara has" 'br)
-   (str "been searching for her mother?")
+   (str "been searching for her mom?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
