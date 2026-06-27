@@ -175,23 +175,29 @@
    (str "Kirara's stomach is rumbling.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong? That's spoiling the romantic")
    (str "atmosphere.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm sorry...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Haha, don't sweat it. I'll go find us some")
    (str "eats.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Wait a minute! I'll go too!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Are you sure you're good to go?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Of course! As long as I'm with you," 'br)
    (str "Tanchi!")
    (proc 15)
@@ -205,10 +211,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong? It seems like something's" 'br)
    (str "got you down.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 19)
@@ -216,16 +224,20 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Don't be embarrassed, I won't sneak a look")
    (str "or anything.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "No, that's not it...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What do you mean, then?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm sorry... If only I'd listened to you" 'br)
    (str "back then...")
    (proc 15)
@@ -234,24 +246,30 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Don't worry. I'm sure Doc Akiba and Croco" 'br)
    (str "are totally fine.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Yeah...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Anyway... The sun's set, so we'll worry" 'br)
    (str "about it tomorrow.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Tomorrow?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Both the sea and jungle are dangerous at" 'br)
    (str "night.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "So we're staying overnight...?")
    (proc 15)
    (proc 19)
@@ -259,27 +277,34 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yeah... I'll just sleep outside...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Tanchi...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What is it?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Stay with me...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...")
    (proc 15)
    (proc 19)
@@ -287,9 +312,11 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Tanchi...")
    (proc 15)
    (proc 19))

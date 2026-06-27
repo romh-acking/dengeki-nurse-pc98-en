@@ -90,6 +90,7 @@
    (str "I touch the Warp Device.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "It feels slightly different from Kirara's" 'br)
    (str "butt.")
    (proc 15)
@@ -97,6 +98,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Of course it does!")
    (proc 15)
    (proc 6)
@@ -155,8 +157,8 @@
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Sorry, but we'll have to head out to the" 'br)
    (str "hallway to save...")
    (proc 15)

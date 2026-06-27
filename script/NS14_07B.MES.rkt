@@ -66,10 +66,12 @@
   (str "And I've got a fever...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Moguri...your face...")
   (proc 15)
   (proc 9)	; Shocked
   (proc 1)
+      ; Kirara:
           (str "What happened to you?")
   (proc 15)
   (proc 6)
@@ -176,6 +178,7 @@
    (str "guy you can turn to...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "A clear-cut case of Papipapi Disease.")
    (proc 15)
    (proc 6)
@@ -236,7 +239,7 @@
    (proc 19))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (proc 7)
+   (proc 7) ; Show Moguri looking at mirror
    (text-color 7)
    (str "Hmm, but by judging by how surprised he looks... I")
    (str "don't think he painted his face like that just to" 'br)
@@ -257,7 +260,7 @@
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 3))
-   (proc 7)
+   (proc 7) ; Show Moguri looking at mirror
    (proc 18)
    (text-color 7)
    (str "Moguri keeps looking in the mirror.")
@@ -297,7 +300,7 @@
    (str "fooling around with? Just take a look in the" 'br)
    (str "mirror!")
    (proc 15)
-   (proc 7)
+   (proc 7) ; Show Moguri looking at mirror
    (proc 11)
            (str "Oh my gooooooooooooooood!")
    (proc 15)
@@ -306,13 +309,14 @@
    (set-reg 99 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 7)
+   (proc 7) ; Show Moguri looking at mirror
    (proc 11)
            (str "Aaaaaaagh! Agh! Agh!")
    (proc 15)
    (proc 14)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "The polka dots are kind of cute, in their" 'br)
    (str "own way.")
    (proc 15)
@@ -321,19 +325,23 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Papipapi Disease?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "It comes from deep in the Brazilian" 'br)
    (str "interior, and is a microbial infection that causes")
    (str "diarrhea and fever for three days straight.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "But how would he have been exposed to" 'br)
    (str "that...?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Maybe he ate something bad?")
    (proc 15)
    (proc 6)
@@ -342,6 +350,7 @@
    (str "tomorrow!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "It will be difficult...")
    (proc 15)
    (proc 6)
@@ -350,11 +359,13 @@
    (str "the dots!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Not without the vaccine that we'd need" 'br)
    (str "delivered from Brazil...")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
              (str "Even if we request it now, it wouldn't" 'br)
    (str "be in time for tomorrow's starting grid...")
    (proc 15)
@@ -371,6 +382,7 @@
    (str "them fade!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "This isn't some common thing like" 'br)
    (str "appendicitis!")
    (proc 15)
@@ -379,6 +391,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Don't worry about the polka dots. Just" 'br)
    (str "tough out the poops and the fever as best as you" 'br)
    (str "can...")
@@ -393,6 +406,7 @@
    (proc 15)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "What about covering them with some makeup?")
    (proc 15)
    (proc 6)
@@ -405,6 +419,7 @@
    (str "send out one of our guys looking like that...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "There's not much we can do. And by" 'br)
    (str "tomorrow, the diarrhea and fever will...escalate.")
    (proc 15)
@@ -415,6 +430,7 @@
    (proc 18)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Yeah, but if you race looking like that," 'br)
    (str "all the kids will love you, though...")
    (proc 15)
@@ -423,12 +439,14 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So you're gonna drop out of the finals?")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What a pity... You could've become the" 'br)
    (str "first Japanese champion...")
    (proc 15)
@@ -448,6 +466,7 @@
              (str "That's it! Tanchi... Why don't YOU race?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wha-whaaaaaa?")
    (proc 15)
    (proc 10)
@@ -465,10 +484,12 @@
  (seg (? (= T 2) (= O 8))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Well, um, that was actually...")
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "But... Isn't it impossible to just drop" 'br)
    (str "into F1 and start doing it?")
    (proc 15)
@@ -478,6 +499,7 @@
    (proc 15)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "There's this book I've been reading that I")
    (str "could lend you.")
    (proc 15)
@@ -517,6 +539,7 @@
    (str "authorizing Tanchi's participation.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "But... Why?")
    (proc 15)
    (proc 12)
@@ -524,6 +547,7 @@
    (str "sinister forces are afoot here at the Grand Prix.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "?????")
    (proc 15)
    (sound '|| 0)
@@ -538,6 +562,7 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 1)
+       ; Kirara:
            (str "The Black Cross!!!")
    (proc 15)
    (proc 6)
@@ -546,6 +571,7 @@
    (str "two are likely most suitable to deal with them...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I... I see...")
    (proc 15)
    (proc 19)
@@ -556,6 +582,7 @@
    (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Tanchi! You've gotta do this!")
    (proc 15)
    (proc 6)
@@ -568,6 +595,7 @@
    (str "Cross Society? The WHAT?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "No... Yes... Er, all right! Since the" 'br)
    (str "president's given me his blessing, I'll drive!")
    (proc 15)
@@ -576,14 +604,17 @@
    (str "the Grand Prix!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I will...")
    (proc 15)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Wow, Tanchi, you're totally awesome!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, the time for a victory lap is later!" 'br)
    (str "Gawd, what a mess I've gotten myself into...")
    (proc 15)

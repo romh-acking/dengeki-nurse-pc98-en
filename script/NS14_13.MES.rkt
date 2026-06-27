@@ -194,6 +194,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Man... I'm worn out...")
    (proc 15)
    (proc 11)
@@ -201,6 +202,7 @@
    (str "there.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Sorry, man... I wound up so far back in" 'br)
    (str "the rankings...")
    (proc 15)
@@ -214,6 +216,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What a bummer... I wanted him to get the" 'br)
    (str "championship here in Japan.")
    (proc 15)
@@ -221,14 +224,16 @@
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't sweat it! He's totally gonna win!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "It's not THAT easy...")
    (proc 15)
-   (proc 12) ; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 5)
+       ; Dr. Akiba:
               (str "The vaccine took its time getting here,")
    (str "but we managed to figure out the source of the" 'br)
    (str "outbreak...")
@@ -239,15 +244,17 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Huh? What's up with you two? Why are you" 'br)
    (str "staring at my face like that?")
    (proc 15)
-   (proc 12) ; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 5)
+       ; Dr. Akiba:
               (str "Oh, it's nothing... Nothing at all...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "??????")
    (proc 15)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -267,6 +274,7 @@
    (str "the integrity of the Grand Prix remained intact.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ha... Ha ha ha...")
    (proc 15)
    (proc 13)
@@ -285,6 +293,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "R-Really?")
    (proc 15)
    (proc 6)
@@ -293,12 +302,14 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Are we seriously allowed to do that?")
    (proc 15)
    (proc 13)
                  (str "Certainly. It's my request.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What an honor! We're happy to accept.")
    (proc 15)
    (proc 13)
@@ -310,11 +321,13 @@
    (proc 12) ; Dr. Akiba
    (text-frame 3 324 52 379)
    (proc 5)
+       ; Dr. Akiba:
               (str "Tanchi... I think you might want to" 'br)
    (str "reconsider.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What are you talking about? Nothing this" 'br)
    (str "lucky even happens to me, man!")
    (proc 15)
@@ -336,6 +349,7 @@
    (proc 15)
    (proc 10) ; Angry
    (proc 1)
+       ; Kirara:
            (str "Hey! Don't touch my butt!")
    (proc 15)
    (proc 6)
@@ -358,8 +372,8 @@
    (proc 11)
              (str "Oh no, that's") (text "−")
    (proc 15)
-   (proc 12) ; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 5)
+       ; Dr. Akiba:
               (str "......")
    (proc 15)
    (proc 6)
@@ -372,6 +386,7 @@
    (proc 15)
    (proc 10) ; Angry
    (proc 1)
+       ; Kirara:
            (str "How many times do I have to tell you," 'br)
    (str "don't touch my butt!")
    (proc 15)

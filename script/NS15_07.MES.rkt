@@ -36,6 +36,7 @@
   ((cmd 204) 24 40)
   ((cmd 209) 1 2)
   (proc 2)
+      ; Tanchi:
           (str "Dammit... How did this happen...")
   (proc 15)
   (proc 19)
@@ -100,6 +101,7 @@
    (proc 15)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str "What happened?")
    (proc 15)
    (proc 6)
@@ -107,23 +109,28 @@
    (str "The door opens and Kirara walks in.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You took your time getting here!")
    (proc 15)
    (proc 10)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Why are you yelling at me? I've got things")
    (str "to do too!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Nursia was kidnapped by Black Nurse!")
    (proc 15)
    (proc 10)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Black Nurse!?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "If you actually showed up on time, this" 'br)
    (str "wouldn't have happened in the first place!")
    (proc 15)
@@ -131,11 +138,13 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Even if you say that...")
    (proc 15)
    (proc 6)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str "Isn't that fine? She had an incurable" 'br)
    (str "disease! She's not going to live anyway, right?")
    (proc 15)
@@ -154,6 +163,7 @@
 ; 	Text continues...
 
    (proc 2)
+       ; Tanchi:
            (str "Stupid idiot! What do you think a nurse's" 'br)
    (str "job IS!?")
    (proc 15)
@@ -161,19 +171,24 @@
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 3)
    (proc 1)
+       ; Kirara:
            (str "..............")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "If that's how you're going to think, you" 'br)
    (str "better stop being a nurse!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "..............")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "..............")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "..............")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
@@ -182,15 +197,19 @@
    (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 1)
+       ; Kirara:
            (str "TANCHI, YOU JERK!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey! Kirara...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Tanchi... Tanchi... ") (text "Ｉ" '|34368| "ＨＡＴＥ" '|34368| "ＹＯＵ！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...!")
    (proc 15)
    ((cmd 209) 0 2)

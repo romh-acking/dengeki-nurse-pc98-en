@@ -97,6 +97,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Minister, what are you doing!? You're" 'br)
    (str "supposed to be a patient here!")
    (proc 15)
@@ -106,6 +107,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That woman's here to kill you!")
    (proc 15)
    (proc 6)
@@ -118,11 +120,13 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I bet she told you to freshen your" 'br)
    (str "breath with a mint, didn't she?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, dude...")
    (proc 15)
    (proc 10)
@@ -130,6 +134,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Are you feeling drowsy?")
    (proc 15)
    (proc 6)
@@ -138,6 +143,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Fall asleep, and she'll inject you" 'br)
    (str "with Trans-Bio solution, then you'll drop dead" 'br)
    (str "from heart failure!")
@@ -152,6 +158,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "How long can you play dumb, Goofus" 'br)
    (str "Nurse Ayako?")
    (proc 15)
@@ -162,6 +169,7 @@
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll be taking care of YOU!")
    (proc 15)
    (sound '|| 2)
@@ -184,6 +192,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What do you think you're doing!?")
    (proc 15)
    (proc 6)

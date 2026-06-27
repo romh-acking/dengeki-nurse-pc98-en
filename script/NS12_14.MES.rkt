@@ -138,11 +138,13 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hmm, she's wearing a kimono...in summer?" 'br)
    (str "Something is UP with this woman.")
    (proc 15)
    (proc 9) (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Maybe she gets cold easily?")
    (proc 15)
    (proc 6)
@@ -151,11 +153,13 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "And those daring glasses... I'm sensing" 'br)
    (str "something demonic from her.")
    (proc 15)
    (proc 9) (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Really? It could just be her style,")
    (str "though...")
    (proc 15)
@@ -192,8 +196,10 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 2)
+       ; Tanchi:
    (text "！！！！！！！！！！！！！！！！！！！！！")
    (proc 0)
+       ; Dengeki Nurse:
    (text '|34368| "！！！！！！！！！！！！！！！！！")
    (proc 15)
    (proc 6)
@@ -223,6 +229,7 @@
    (str "along, haven't you!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "World domination!?")
    (proc 15)
    (proc 11)
@@ -264,11 +271,13 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Whew, it looks like she hasn't had a" 'br)
    (str "Procedure performed on her yet. What do we do?")
    (proc 15)
    (proc 9) (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "If we told her, she might not" 'br)
    (str "believe us... Should we wait for Asuka to show up?")
    (proc 15)
@@ -280,6 +289,7 @@
    (proc 9)
    (exec-mem 2816 "PUT 12 5 23") ; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Shh, stop talking! She's saying" 'br)
    (str "something!")
    (proc 15)
@@ -290,16 +300,19 @@
    (proc 18)
    (proc 9) (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi, what exactly is Uranium?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, it's a radioactive element that's the" 'br)
    (str "source of radium. It's the one with the ") (text "Ｕ") (str " symbol,")
    (str "and the atomic number is 92.")
    (proc 15)
    (proc 9) (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "...???")
    (proc 15)
    (proc 6)
@@ -308,11 +321,13 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! Let's move!")
    (proc 15)
    (proc 9)
    (exec-mem 2816 "PUT 2 5 23")
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Of course!")
    (proc 15)
    (proc 6)
@@ -325,10 +340,12 @@
    (proc 15)
    (proc 9) (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Stay quiet, or we'll be heard! Shhhhh!!")
    (proc 15)
    (proc 19)
@@ -340,6 +357,7 @@
    (proc 15)
    (proc 9) (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "......")
    (proc 15)
    (proc 6)
@@ -348,15 +366,18 @@
    (proc 18)
    (proc 9) (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Where do you think you're going?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I was thinking we should get ice cream...")
    (proc 15)
    (proc 9)
    (exec-mem 2816 "PUT 4 5 23") ; Happy
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Good idea! Let's go later, though.")
    (proc 15)
    (proc 6)
@@ -381,12 +402,14 @@
 ; 	Text continues.
 
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hold it right there!")
    (proc 15)
    (proc 11)
            (str "Who the hell!?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm the million-volt Dengeki Nurse!")
    (proc 15)
    (proc 11)
@@ -394,6 +417,7 @@
    (str "the first to fall!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hey, that's my line!")
    (proc 15)
    (proc 11)
@@ -402,6 +426,7 @@
    (str "like those?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Mine are better! I'm the lab coat" 'br)
    (str "warrior, the invincible physician, the million-" 'br)
    (str "volt nurse!")
@@ -411,6 +436,7 @@
    (str "Asuka of the Asami clan, will not!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What are you on about!? And you" 'br)
    (str "plan on beating me with that dumb yo-yo?")
    (proc 15)
@@ -419,6 +445,7 @@
    (str "just a yo-yo... It's far, far more than that!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Sure it is... Did a Living National")
    (str "Treasure craft it? Did it win a world yo-yo" 'br)
    (str "championship?")
@@ -428,6 +455,7 @@
    (str "than steel! It's ultra-thin string is unbreakable!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Yeah, whatever, sister! A yo-yo is" 'br)
    (str "a yo-yo!")
    (proc 15)

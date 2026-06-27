@@ -38,10 +38,12 @@
    (str "Hold me!!!")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "It's got to be Golgo 31!")
   (proc 15)
   (proc 2)
-          (str "No, wait! Kirara, wait up! ")
+      ; Tanchi:
+          (str "No, wait! Kirara, wait up!")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
@@ -108,6 +110,7 @@
            (str "Come on, let's have some fun!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "No way! I've got to go!")
    (proc 15)
    (proc 19)
@@ -118,6 +121,7 @@
            (str "Ahhhhh... Do you hate me that much?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Put a sock in it, I'm worried for Kirara!")
    (proc 15)
    (proc 10)
@@ -125,6 +129,7 @@
    (str "else here, so just take it easy!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Shut up! You're the third wheel here, I've")
    (str "gotta go help Kirara!")
    (proc 15)
@@ -142,6 +147,7 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Nooooo, lemme gooooo!")
    (proc 15)
    (proc 10)
@@ -153,6 +159,7 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_233.gpc,GPC") (image-mem 1 0)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ma'am, have you seen Golgo 31" 'br)
    (str "around here?")
    (proc 15)
@@ -161,6 +168,7 @@
    (str "hill.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Thank you!")
    (proc 15)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -172,15 +180,18 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_234.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 2)
+       ; Tanchi:
            (str "Dammit, Kirara's too fast!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, lady, you seen Dengeki Nurse?")
    (proc 15)
    (proc 11)
                   (str "Yep. Running towards the hill.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Thanks a bunch!")
    (proc 15)
    (exec-mem 2816 "SHOW 0,ACCESS 1")

@@ -45,18 +45,20 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
+            ; Tanchi:
                 (str "What the heck is going on here?")
         (proc 15)
         (proc 3)
         (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
         (proc 4)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "Could this be the Elektros" 'br)
         (str "treasure?")
         (proc 15)
         (proc 6)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "...")
         (proc 15)
         (proc 14)
@@ -93,10 +95,11 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
+            ; Tanchi:
                 (str "As expected... The coins are floating.")
         (proc 15)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "Doctor Tanchi, let's grab those floating" 'br)
         (str "coins!")
         (proc 15)
@@ -132,6 +135,7 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
+            ; Tanchi:
                 (str "There are coins floating here again! I" 'br)
         (str "thought I took them all...")
         (proc 15)
@@ -139,11 +143,12 @@
         (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
         (proc 4)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "Puzzling... Is this Elektros magic?")
         (proc 15)
         (proc 6)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "...")
         (proc 15)
         (proc 14))
@@ -161,12 +166,14 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
+            ; Tanchi:
                 (str "The coins are gone!")
         (proc 15)
         (proc 3)
         (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
         (proc 4)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "Didn't you just grab them, Tanchi?")
         (proc 15)
         (proc 6))
@@ -223,6 +230,7 @@
    (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
    (if (</>
         (//
          (? (= 705 #t) (= D 0))
@@ -231,6 +239,7 @@
          (proc 15)
          (proc 6)
          (proc 2)
+             ; Tanchi:
                  (str "Hey... Do you not understand how things" 'br)
          (str "work?"))
         (//
@@ -238,6 +247,7 @@
          (proc 15)
          (proc 6)
          (proc 2)
+             ; Tanchi:
                  (str "You really have no sense of trepidation," 'br)
          (str "do you..."))))
    (proc 15)
@@ -281,6 +291,7 @@
          (text-frame 3 324 52 379)
          (text-reset 15)
          (proc 2)
+             ; Tanchi:
                  (str "If we collect enough coins we'll get a" 'br)
          (text "１ＵＰ") (str ", right?")
          (proc 15)
@@ -302,6 +313,7 @@
          (sound '|se | 25) (exec-mem 2816 "VIEW 40 209 44 239,PUT 11 40 209")
          (set-var D 15) ; As ValleyBell points out: The game shows you picking up 16 coins but then only increments your value by 15! Stingy bastards
          (proc 2)
+             ; Tanchi:
                  (str "Hahaha! I'm strangely enjoying this!")
          (proc 15)
          (exec-mem 2816 "FREE 11,FREE 12")
@@ -318,6 +330,7 @@
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
       (str "Let's get moving already!")
       (proc 15)
       (proc 6))))
@@ -361,8 +374,8 @@
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Doctor Tanchi... Please don't save in a" 'br)
    (str "place like this...")
    (proc 15)

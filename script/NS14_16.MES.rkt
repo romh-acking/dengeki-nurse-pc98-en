@@ -68,18 +68,21 @@
   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
   (proc 4)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Incredible!!!")
   (proc 15)
   (proc 6)
   (exec-mem 2816 "VIEW 12 93 44 237,PUT 7 12 93,FREE 7")
   (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
   (proc 2)
+      ; Tanchi:
           (str "H-He did it! K-Kirara... our promise...")
   (proc 15)
   (proc 3)
   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
   (proc 4)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Tanchi... Your face...")
   (proc 15)
   (proc 6)
@@ -89,6 +92,7 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
   (proc 5)
+      ; Dr. Akiba:
             (str "Oops, looks like I need to call Brazil" 'br)
   (str "again.")
   (proc 15)
@@ -119,9 +123,11 @@
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_451.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 2)
+      ; Tanchi:
           (str "Kirara, the kiss! You promised!")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Eeeeek, you look disgusting! Stay awaaaay!")
   (proc 15)
 

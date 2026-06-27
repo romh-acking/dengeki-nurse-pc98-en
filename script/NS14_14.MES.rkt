@@ -225,11 +225,13 @@
    (exec-mem 2816 "VIEW 12 89 32 303,OVER 1,PUT 6 12 89,FREE 6")
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "Oh, thanks for helping out before. I" 'br)
    (str "really needed the assist.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Huh? You two know each other?")
    (proc 15)
    (proc 19)
@@ -261,6 +263,7 @@
    (proc 18)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "What's wrong? Why'd you come all the way" 'br)
    (str "out here?")
    (proc 15)
@@ -270,19 +273,23 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...")
    (proc 15)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "What? What's with that serious face?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "About my promise from before... What" 'br)
    (str "happens in a situation like this?")
    (proc 15)
    (proc 12) ; Confused
    (proc 1)
+       ; Kirara:
            (str "What should I do?")
    (proc 15)
    (proc 6)
@@ -291,20 +298,24 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "If I kept driving, I really feel like I" 'br)
    (str "could have won...")
    (proc 15)
    (proc 12) ; Confused
    (proc 1)
+       ; Kirara:
            (str "Yeah... You put in the hard work," 'br)
    (str "Tanchi...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "S-So you'll acknowledge that, at least...?")
    (proc 15)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "If Moguri wins.")
    (proc 15)
    (proc 6)
@@ -314,10 +325,12 @@
    (proc 18)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "I hope Moguri wins.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yes! Exactly!")
    (proc 15)
    (proc 19))
@@ -327,6 +340,7 @@
                  (str "Er, I'd like to give this to you.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh? You're giving this to me?")
    (proc 15)
    (proc 10)
@@ -337,10 +351,12 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "To me?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "So what are you giving here?")
    (proc 15)
    (proc 10)
@@ -357,6 +373,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Um. Um. Why are you giving that to her?")
    (proc 15)
    (proc 10)
@@ -367,10 +384,12 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "I see...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "B-But... Why a tanuki, of all things?")
    (proc 15)
    (proc 10)
@@ -379,6 +398,7 @@
    (proc 15)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "Certainly... I'll gladly take it.")
    (proc 15)
    (proc 6)
@@ -392,16 +412,19 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Dammit, Kirara! You're the one that got" 'br)
    (str "this statue, but I've gotta be the guy to carry" 'br)
    (str "it?")
    (proc 15)
    (proc 11) ; Happy
    (proc 1)
+       ; Kirara:
            (str "Well, it's too heavy for me.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Ugh... I haven't got any stamina left...")
    (proc 15)
    (proc 19)

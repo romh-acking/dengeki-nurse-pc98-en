@@ -32,12 +32,14 @@
   ((cmd 204) 73 77)
   ((cmd 209) 1 2)
   (proc 2)
+      ; Tanchi:
           (str "Argh... This isn't ideal!!!")
   (proc 15)
   (proc 3)
   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Can't be helped, it's a one-seater!")
   (proc 15)
   (proc 6)
@@ -137,6 +139,7 @@
    (str "A castle rises from the greenery!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! Is that it?")
    (proc 15)
    (sound '|| 0)
@@ -144,6 +147,7 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Ah! That's...")
    (proc 15)
    ((cmd 209) 0 2)
@@ -157,10 +161,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Damn! We aren't near to Elektros yet?")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "We should almost be there...")
    (proc 15)
    (proc 6)
@@ -169,35 +175,43 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, aren't you scared?")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "I don't have a problem with heights.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "No, I mean fighting Black Nurse!")
    (proc 15)
    (proc 10)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "She's the head of the Black Cross Society,")
    (str "so I might not be able to beat her...")
    (proc 15)
    (proc 6)
    (proc 1)
+       ; Kirara:
            (str "But... But...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "But what?")
    (proc 15)
    (proc 10)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "Because you came with me, Tanchi... I'm" 'br)
    (str "not scared.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...")
    (proc 15)
    (proc 19)
@@ -206,6 +220,7 @@
    (proc 18)
    (proc 10)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "If I'm with you, I bet we can even beat" 'br)
    (str "Black Nurse.")
    (proc 15)
@@ -214,20 +229,24 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I hope your mother is safe too.")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "S-sorry... That came out kind of weird.")
    (proc 15)
    (proc 10)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "No... Thank you for worrying about her.")
    (proc 15)
    (proc 6)
@@ -237,6 +256,7 @@
    (proc 18)
    (proc 10)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "It's fine, I'm sure my mom is okay!")
    (proc 15)
    (proc 6)
@@ -247,6 +267,7 @@
    (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Hey, stop wiggling around! What if we" 'br)
    (str "fall?")
    (proc 15)

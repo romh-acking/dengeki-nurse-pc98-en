@@ -106,12 +106,15 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hm, yes... Just as expected.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What's the matter?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "When Kirara slapped you, you got an" 'br)
    (str "electric shock, no? So I was thinking...")
    (proc 15)
@@ -120,15 +123,18 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Just like her mother, Kirara has her" 'br)
    (str "mother Mitsuko's electrical constitution!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "With Kirara's abilities and the circuit")
    (str "diagram we found, my years of research may bear" 'br)
    (str "fruit!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Good for you, man... So sleepy... Yaaawn!")
    (proc 15)
    (proc 19)
@@ -136,23 +142,29 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Did you move the Minister to the" 'br)
    (str "hospital annex?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, I took care of it.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Only you and I have the key, so he's safe" 'br)
    (str "for now.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You...did lock the door, yes?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "It's fine, it's fine.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Well, then I suppose you deserve some" 'br)
    (str "rest.")
    (proc 15)
@@ -164,16 +176,19 @@
    (str "Zzzzzzzzzzzzzzzz...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey! You can't sleep here!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'm about to pass out, and I've got night" 'br)
    (str "shift...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "One moment, I want to talk to you about")
    (str "something!")
    (proc 15)
@@ -182,9 +197,11 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, I'm headed home now.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Don't take any detours! Off with you!")
    (proc 15)
    ((cmd 209) 0 2)

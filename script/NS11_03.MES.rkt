@@ -134,6 +134,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Excuse me, which room is the Minister in?")
    (proc 15)
    (text-color 1)

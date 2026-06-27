@@ -47,6 +47,7 @@
   ((cmd 209) 1 2)
   ((cmd 204) 60 69)
   (proc 2)
+      ; Tanchi:
           (str "Ow... Ow ow ow...")
   (proc 15)
   (text-color 7)
@@ -59,9 +60,11 @@
   (str "legs...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Aaaaaaahh! What are you doing!?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "I can't help it! I just ended up like" 'br)
   (str "this!")
   (proc 15)
@@ -172,12 +175,15 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Don't loooook!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm looking for the brake, okay!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I may be a pervert, but I'm not" 'br)
    (str "prioritizing panties over not getting killed!")
    (proc 15)
@@ -232,14 +238,17 @@
    (proc 12)
    (exec-mem 2816 "PUT 8 27 23")
    (proc 1)
+       ; Kirara:
            (str "EEEEEEEEEEEK!")
    ((cmd 195) 0 1)
    (proc 15)
    ((cmd 196) 0 2)
    (proc 2)
+       ; Tanchi:
            (str "Hey! Don't let go of the steering wheel!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Then don't look!")
    (proc 15)
    (proc 12)
@@ -249,9 +258,11 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Hurry up and stop the car!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I know, I know! If only I can reach the" 'br)
    (str "brake somehow...")
    (proc 15)
@@ -260,6 +271,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "You absolutely, positively must not look" 'br)
    (str "up!")
    (proc 15)
@@ -267,6 +279,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Tanchi, you idiot! I told you not to look!")
    (proc 15)
    (proc 19))
@@ -282,12 +295,15 @@
    (str "I reach toward the brake with everything I've got!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Eeeeek! Stop touching weird places!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Stop yelling at me! I can't help it!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "B-but... You absolutely....positively" 'br)
    (str "can't look up!")
    (proc 15)
@@ -331,15 +347,19 @@
    (str "a stop!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Pant, pant...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Haaaa, haaaaa...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Good lord.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Hey! How long are you going to stay like" 'br)
    (str "that? Get out of the car, you!")
    (proc 15)
@@ -353,9 +373,11 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Aaaahhhh! No!!!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Quit complaining! I'm doing my best in an" 'br)
    (str "emergency situation!")
    (proc 15)

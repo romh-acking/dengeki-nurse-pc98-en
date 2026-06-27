@@ -3,6 +3,8 @@
 ; Edited and commented by trentsignia
 ; --Description:--
 ; Finally, we face the cold Golgo 31. Cold, as in the ice cream. You get me.
+; --To change for FMT:--
+; Battle stuff...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -52,6 +54,7 @@
   ((cmd 209) 1 2)
   ((cmd 204) 118 123)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Golgo 31, I've found you! Prepare" 'br)
   (str "yourself!")
   (proc 15)
@@ -60,6 +63,7 @@
   (str "of the reaper?")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Spare me your drama, inconsolable" 'br)
   (str "pervert!")
   (proc 15)
@@ -72,6 +76,7 @@
   (str "even if I do.")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "I'll repeat it as much as I want," 'br)
   (str "you skeeze! Pervert! Pervert! Pervert! Pervert!" 'br)
   (str "Pervert! Pervert! Pervert! Pervert! Pervert!")
@@ -80,9 +85,11 @@
             (str "......")
   (proc 15)
   (proc 2)
+      ; Tanchi:
            (str "Kiraraaaaaaa!")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Stay back! This is too dangerous!")
   (proc 15)
   (proc 10)
@@ -106,6 +113,7 @@
 ; FMT
 ; (sound '|se | 9)
   (proc 0)
+      ; Dengeki Nurse:
                  (text "ＤＥＮＧＥＫＩ　ＪＵＵＵＭＰ！！！")
   (proc 15)
   (sound '|| 0)
@@ -114,7 +122,8 @@
 ; FMT
 ; (sound '|se | 4)
   (proc 2)
-           (str "Ah, shit! Ta, Tanchi JUUUUMP!")
+      ; Tanchi:
+          (str "Ah, shit! Ta, Tanchi JUUUUMP!")
   (proc 15)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (sound '|| 0)
@@ -215,10 +224,12 @@
    (proc 18)
    (proc 9) (proc 12) (proc 13)
    (proc 2)
+       ; Tanchi:
            (str "Arrgh, if I look down I'll get vertigo," 'br)
    (str "and if I look up I'll get a nosebleed!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "So don't look up!")
    (proc 15)
    (proc 12) (proc 14)
@@ -235,6 +246,7 @@
    (str "No good! I can't do math when I've got vertigo!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I told you to stop looking up!!")
    (proc 15)
    (proc 12) (proc 14)
@@ -243,6 +255,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hey, let go of my legs! I can't" 'br)
    (str "fight him like this!")
    (proc 15)
@@ -251,23 +264,28 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "If I let go, I'll fall! ")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Come on, you'll just break your" 'br)
    (str "leg!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "E-Er...")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Would you rather die than have a" 'br)
    (str "broken leg?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I don't want either!")
    (proc 15)
    (proc 19)
@@ -282,10 +300,12 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No... There's no other way... Before the" 'br)
    (str "inevitable, I'll look up one last time...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Let go already!!")
    (proc 15)
    (text-color 1)
@@ -293,6 +313,7 @@
    (str "Plop!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Aaaaargh!")
    (proc 15)
    (proc 11)
@@ -305,6 +326,7 @@
    (text "ＴＨＵＭＰ！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Uhhhh...")
    (proc 15)
    (proc 11)
@@ -319,12 +341,14 @@
 ;  (sound '|se | 10)
    (exec-mem 6656 1 0 1 3 0)
    (proc 0)
+       ; Dengeki Nurse:
                   (text "ＤＥＮＧＥＫＩ　ＫＩＩＩＣＫ！")
    (proc 15)
    (proc 10)
              (str "Uwaaaagh!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Prepare yourself, Golgo 31!")
    (proc 15)
    (proc 10)
@@ -332,6 +356,7 @@
    (str "paid enough to take this on...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "For a guy, you're being way too" 'br)
    (str "picky!")
    (proc 15)
@@ -371,21 +396,26 @@
 ; FMT
 ;  (exec-mem 17920 0 1)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "It's all over... Peace will finally")
    (str "return to the academy.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "But mine is far from over...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Until the Black Cross is destroyed,")
    (str "this empty battle will never end.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "But until then... Until then... I" 'br)
    (str "mustn't ever cry...isn't that right, mother?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Someday, someday, surely...we'll" 'br)
    (str "meet again...")
    (proc 15)

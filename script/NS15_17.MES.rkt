@@ -39,10 +39,12 @@
   (str "I can't see anything...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara! Are you okay?")
   (proc 15)
   (proc 10)	; Happy
   (proc 0)
+      ; Dengeki Nurse:
                  (str "All good here! It's super dark," 'br)
   (str "though.")
   (proc 15)
@@ -112,11 +114,13 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, let's hold hands so we don't lose" 'br)
    (str "each other.")
    (proc 15)
    (proc 12)	; Flushed
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Huh? Oh, okay...")
    (proc 15)
    (proc 6)
@@ -125,10 +129,12 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I wonder if Nursia is okay...")
    (proc 15)
    (proc 11)	; Sad
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm worried...")
    (proc 15)
    (proc 6)
@@ -143,10 +149,12 @@
      (/
       (proc 12)	; Flushed
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Hey! Watch those hands!")
       (proc 15)
       (proc 6)
       (proc 2)
+          ; Tanchi:
               (str "Sorry... It wasn't on purpose, I swear..."))
      (/
       (exec-mem 2816 "GET 1 5 23 10 96")
@@ -155,18 +163,22 @@
       (exec-mem 2816 "ACCESS 0")
       (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Ow! What are you doing!?")
       (proc 15)
       (proc 6)
       (proc 2)
+          ; Tanchi:
               (str "Ha...hahahaha..."))
      (/
       (proc 10)	; Happy
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Eeeeek! That tickles!")
       (proc 15)
       (proc 6)
       (proc 2)
+          ; Tanchi:
               (str "Whuh? That's weird..."))))
    (proc 15)
    (proc 19))
@@ -212,6 +224,7 @@
    (proc 15)
    (proc 10)	; Happy
    (proc 0)
+       ; Dengeki Nurse:
                   (str "How far is this gonna go," 'br)
    (str "seriously?")
    (proc 15)
@@ -225,6 +238,7 @@
    (proc 15)
    (proc 11)	; Sad
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm getting an icky feeling about" 'br)
    (str "this...")
    (proc 15)
@@ -240,18 +254,22 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ahhhhhhhhhhh!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong?")
    (proc 15)
    (proc 10)	; Happy
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Oh, nothing.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str ".........")
    (proc 15)
    (proc 19)

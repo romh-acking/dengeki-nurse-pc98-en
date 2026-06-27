@@ -48,6 +48,7 @@
   (str "We arrive at the annex. It's quiet...too quiet.")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Aw, dammit! It's locked from the inside!")
   (proc 15)
   (proc 19)
@@ -136,28 +137,34 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Um, yes? My eyes ARE up here, but" 'br)
    (str "you're making it worse...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "As a man... I cannot permit you to go in" 'br)
    (str "there alone...")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Eh... Fair enough... But you might" 'br)
    (str "regret saying that later.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Of course I won't!")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Where's the minister's room?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Leftmost room on the second floor.")
    (proc 15)
    (proc 6)
@@ -165,21 +172,25 @@
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Up there? Well, we can't climb..." 'br)
    (str "Well, why don't you grab hold of me?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Does this mean you have a plan?")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Don't let go of my hand, no matter" 'br)
    (str "what.")
    (proc 15)
    (proc 6)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Dengeki Juuuuuuuuuuuuuump!")
    (proc 15)
    (text-color 7)
@@ -202,9 +213,11 @@
 ;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
    (proc 2)
+       ; Tanchi:
            (str "OWWWW! Why would you do that!?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Stop thrashing around! Hold on" 'br)
    (str "tight!")
    (proc 15)
@@ -218,10 +231,12 @@
    (proc 18)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Don't you have the key?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, but I...uhh...kind of dropped it.")
    (proc 15)
    (proc 19))
@@ -229,23 +244,28 @@
    (proc 18)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "We'll do without. Where's the" 'br)
    (str "minister's room?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Wait, what are you planning?")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm going in through the window.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "That's nuts! It's on the second floor!")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I was a Nurse Commando, I've got" 'br)
    (str "plenty of training under my lab coat.")
    (proc 15)
@@ -256,6 +276,7 @@
    (proc 18)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Which room on the second floor?" 'br)
    (str "Tell me!")
    (proc 15)
@@ -264,46 +285,56 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, then let's go together!")
    (proc 15)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "As if, you'll just get in the way!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "It's not just Guillotine Nurse in our way!")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ayako, right? Goofy Nurse Ayako.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, yeah! That's her name!")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ayako and Tomoyo are basically" 'br)
    (str "joined at the hip. They make a powerful team.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "For real? They seem like a pair of idiots" 'br)
    (str "to me.")
    (proc 15)
    (proc 10)	; Smiling
    (proc 0)
+       ; Dengeki Nurse:
                   (str "They're a fearsome Doofus and" 'br)
    (str "Goofus combo... Those two airheads have cruel" 'br)
    (str "efficiency.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ayako can make her foes" 'br)
    (str "hallucinate, for one.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hmmmm.")
    (proc 15)
    (proc 19)
@@ -312,6 +343,7 @@
    (proc 18)
    (proc 11)	; Shouting
    (proc 0)
+       ; Dengeki Nurse:
                   (str "We can't waste time! Into the room!")
    (proc 15)
    (proc 6)
@@ -335,11 +367,13 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hey, you! Why are you grabbing my" 'br)
    (str "butt in an emergency situation?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "My hand just...moves on its own.") ; Ed: bro
    (proc 15)
    (proc 19))

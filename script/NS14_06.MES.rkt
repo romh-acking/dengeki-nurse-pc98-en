@@ -127,6 +127,7 @@
              (str "Man, you guys are something else!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Please don't say that, man.")
    (proc 15)
    (proc 19)
@@ -138,6 +139,7 @@
    (str "lap, your time was even faster than mine!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ha ha ha, you're SO funny.")
    (proc 15)
    (proc 10)
@@ -145,6 +147,7 @@
    (str "wasted as a medical professional.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "No way... Just one lap and I'm totally" 'br)
    (str "wiped out.")
    (proc 15)
@@ -152,14 +155,17 @@
            (str "I'd say, you've even got a nosebleed.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "But it was so much fun, though!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Why, you...")
    (proc 15)
    (proc 19)
@@ -168,6 +174,7 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I wanna ride again!")
    (proc 15)
    (proc 6)
@@ -175,6 +182,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Still... What made the car start moving?")
    (proc 15)
    (proc 10)
@@ -198,6 +206,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Speaking of talent... What happened to" 'br)
    (str "Sena and Manko?")
    (proc 15)
@@ -206,6 +215,7 @@
            (str "They probably went home early.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, and so should we.")
    (proc 15)
    (proc 10)
@@ -214,10 +224,12 @@
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Okaaaaaay!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    ((cmd 209) 0 2)

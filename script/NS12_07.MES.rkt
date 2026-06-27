@@ -48,6 +48,7 @@
           (str "Uh, sorry...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Huh? It's you two with the sheer and" 'br)
    (str "string panties... Uh, I mean, you're Yunako-chan" 'br)
    (str "and Mohiko-chan, right?")
@@ -57,6 +58,7 @@
    (str "advice...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "About what, is anything wrong physically?" 'br)
    (str "I'm not a gynecologist, but I have some basic" 'br)
    (str "knowledge") (text "−")
@@ -71,6 +73,7 @@
   (proc 12)
   (exec-mem 2816 "PUT 12 5 23")
   (proc 1)
+      ; Kirara:
           (str "Save") (text "−") (str "?")
   (proc 15)
   (proc 6)
@@ -231,12 +234,14 @@
    (str "normal! You saw it this morning!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Er, instead of us, wouldn't it be better" 'br)
    (str "to call the Board of Education or, you know, a" 'br)
    (str "human rights group?")
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 12 5 23")
    (proc 1)
+       ; Kirara:
            (str "This really is awful, though.")
    (proc 15)
    (proc 6)
@@ -249,6 +254,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Really? Isn't the principal a pretty" 'br)
    (str "decent guy?")
    (proc 15)
@@ -257,10 +263,12 @@
    (str "Akiko when she arrived...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Akiko!?")
    (proc 15)
    (proc 12) (proc 13)
    (proc 1)
+       ; Kirara:
            (str "That stuck-up lady from earlier!")
    (proc 15)
    (proc 6)
@@ -285,6 +293,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Does the principal or chairman have" 'br)
    (str "anything to say?")
    (proc 15)
@@ -316,6 +325,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "But...you know, we're just physicians...")
    (proc 15)
    (proc 11)
@@ -323,15 +333,18 @@
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 4 5 23")
    (proc 1)
+       ; Kirara:
            (str "This could be fun! Let's give it a shot!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Well, I might help, if you agree to go on" 'br)
    (str "a date with me...")
    (proc 15)
    (proc 12) (proc 13)
    (proc 1)
+       ; Kirara:
            (str "Tanchi!")
    (proc 15)
    (proc 6)
@@ -339,6 +352,7 @@
            (str "A date...?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, where would you like to go?")
    (proc 15)
    (proc 11)
@@ -347,6 +361,7 @@
    (proc 15)
    (proc 12) (proc 13)
    (proc 1)
+       ; Kirara:
            (str "No dates required! I'll take down the" 'br)
    (str "Morals Committee and Akiko all by myself!")
    (proc 15)
@@ -355,10 +370,12 @@
            (str "For real?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh come on, Kirara!")
    (proc 15)
    (proc 12) (proc 14)
    (proc 1)
+       ; Kirara:
            (str "I'll take care of things if you don't! You")
    (str "can just go back to the hospital!")
    (proc 15)
@@ -369,6 +386,7 @@
    (proc 18)
    (proc 12) (proc 14)
    (proc 1)
+       ; Kirara:
            (str "Just go back to the hospital by yourself!")
    (proc 15)
    (proc 6)
@@ -376,6 +394,7 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, okay, I get it... I'll help...")
    (proc 15)
    (proc 11)
@@ -383,6 +402,7 @@
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 2 5 23")
    (proc 1)
+       ; Kirara:
            (str "...So, what exactly are we supposed to do?")
    (proc 15)
    (proc 6)
@@ -393,18 +413,22 @@
            (str "We hadn't thought that far ahead...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What!? Where are your heads at!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Okay, okay... So for now, we've got to" 'br)
    (str "look into that teacher Akiko.")
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 4 5 23")
    (proc 1)
+       ; Kirara:
            (str "Let's start digging up dirt!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hold up, walking around the school dressed")
    (str "like this will draw way too much attention.")
    (proc 15)
@@ -414,22 +438,27 @@
    (str "will think you're students!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 4 5 23")
    (proc 1)
+       ; Kirara:
            (str "Good thinking!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Am I supposed to wear this too...?")
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 2 5 23")
    (proc 1)
+       ; Kirara:
            (str "This fits me perfectly!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Uh, even if I wear a sailor uniform," 'br)
    (str "there's no fooling anyone with this hairstyle...")
    (proc 15)
@@ -454,10 +483,12 @@
 ; 	Text continues
 
    (proc 2)
+       ; Tanchi:
            (str "Byobyobyooooing!")
    (proc 15)
    (proc 12) (exec-mem 2816 "PUT 8 5 23")
    (proc 1)
+       ; Kirara:
            (str "Gorgeousss!")
    (proc 15)
    (sound '|| 0)
@@ -475,6 +506,7 @@
    (str "How about you tag along and sneak in?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I guess we could do that...")
    (proc 15)
    (proc 11)
@@ -495,22 +527,27 @@
    (proc 3) (proc 9) (proc 4)
    (text-frame 3 324 52 379)
    (proc 1)
+       ; Kirara:
            (str "Shall we get changed, then?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "But where?")
    (proc 15)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What about that toilet over there?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Arrrgh... How did it come to this...")
    (proc 15)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Stop grumbling and get changed already," 'br)
    (str "come on!")
    (proc 15)
@@ -541,6 +578,7 @@
      (/
       (proc 12) (proc 13)
       (proc 1)
+          ; Kirara:
               (str "HEYYY!! Cut that out or I'll blast you" 'br)
       (str "with my bazooka!")
       (proc 15)
@@ -556,18 +594,22 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Fine! I'm going home, then!")
    (proc 15)
    (proc 12) (proc 14)
    (proc 1)
+       ; Kirara:
            (str "Hold it, buster! Don't try to split!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You're the one who told me to go, Kirara!")
    (proc 15)
    (proc 12) (proc 14)
    (proc 1)
+       ; Kirara:
            (str "If you don't help, you can get a kiss from")
    (str "my electric fist!")
    (proc 15)

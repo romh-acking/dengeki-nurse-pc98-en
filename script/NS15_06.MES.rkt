@@ -32,6 +32,7 @@
   ((cmd 204) 24 40)
   ((cmd 209) 1 2)
   (proc 2)
+      ; Tanchi:
           (str "It's been quite a while, hasn't it?")
   (proc 15)
   (proc 10)
@@ -39,6 +40,7 @@
   (str "time, Doctor Tanchi...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "What are you on about? You're getting" 'br)
   (str "better, didn't you get the memo?")
   (proc 15)
@@ -193,26 +195,32 @@
    (proc 15)
    (sound '|| 0)
    (proc 1)
+       ; Kirara:
            (str "Cough, cough. Sorry to interrupt, do you" 'br)
    (str "mind?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ah, of course.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Nursia, this is the Hospital Guidebook.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "In it, you can find the lights-out timing,")
    (str "meal rules, all that sort of information. Please" 'br)
    (str "look it over and follow the rules best you can.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Also, if you press the button next to your")
    (str "bed, I'll come immediately, so don't hesitate to" 'br)
    (str "use it!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'll be here for you!")
    (proc 15)
    (text-color 7)
@@ -247,6 +255,7 @@
    (text "ＣＲＡＳＨ！！！！！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What the what!? Who the hell are you!?")
    (proc 15)
    (sound '|| 0)
@@ -266,6 +275,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 7)
+       ; Black Nurse:
                 (str "The head of the Black Cross Society," 'br)
    (str "BLACK NURSE!")
    (exec-mem 28672 4 16 51 303 1 4 16 18)
@@ -308,6 +318,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I want you to get better, then you can" 'br)
    (str "show me around Germany again...")
    (proc 15)
@@ -316,6 +327,7 @@
    (str "Japan...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Of course! I'll take you anywhere you want")
    (str "to go.")
    (proc 15)
@@ -327,6 +339,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "But you're going to need to get better" 'br)
    (str "first.")
    (proc 15)
@@ -338,6 +351,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's up with Kirara? She's acting kind" 'br)
    (str "of prickly...")
    (proc 15)
@@ -349,12 +363,14 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Sorry, she's not usually like that...")
    (proc 15)
    (proc 10)
            (str "She likes you a lot, Doctor Tanchi.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What are you talking about? You're just a" 'br)
    (str "kid!")
    (proc 15)
@@ -367,10 +383,12 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Damn, the Black Cross Society? What are" 'br)
    (str "you planning this time?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Heh heh heh, I don't need you two" 'br)
    (str "fools today. I'm deadset on getting the little" 'br)
    (str "girl!")
@@ -379,6 +397,7 @@
            (str "!!!!!!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Come now, my little princess. You've" 'br)
    (str "got nothing to fear. Get over here.")
    (proc 15)
@@ -386,10 +405,12 @@
            (str "No way!!!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "No need to be frightened. Until we" 'br)
    (str "get the treasure, we'll treat you like a VIP.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Don't expect us to believe that!")
    (proc 15)
    (proc 19)
@@ -397,10 +418,12 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "You'd better get out of here before you" 'br)
    (str "regret it!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Oh, get stuffed! I told you, I don't" 'br)
    (str "care about you!")
    (proc 15)
@@ -408,6 +431,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 7)
+       ; Black Nurse:
                 (str "Hey... Isn't your Dengeki Nurse" 'br)
    (str "around? I've got things to do, so tell her to get" 'br)
    (str "her ass in gear!")
@@ -434,11 +458,13 @@
    (str "I quickly jam the Nurse Call button by the bed.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You're a moth flying into the flame!" 'br)
    (str "Dengeki Nurse is coming to kick you into next" 'br)
    (str "Thursday!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Hah! Dengeki Nurse is no match for" 'br)
    (str "me! I'll smash her into dust!")
    (proc 15)
@@ -473,12 +499,15 @@
    (str "I grab Nursia's hand!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Let go of the kid!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Dammit! Hurry up, Kirara!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "If you don't behave, you're getting a")
    (str "spanking!")
    (proc 15)
@@ -486,10 +515,12 @@
            (str "Help!!!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Like hell I'm letting go! Kirara, get here")
    (str "already!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Looks like she's abandoned you in" 'br)
    (str "your time of need! Pepe, FINISH THEM!")
    (proc 15)
@@ -500,15 +531,18 @@
    (str "Pepe: ") (text "ＰＡＯＰＡＯＰＡＯＯＯＯＯＯＯＯ！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "WHAT THE HELL!?")
    (proc 15)
    (proc 10)
            (str "Doctor Tanchi!!!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Nursiaaaaaaaaaa!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "The girl's mine now! Give my regards" 'br)
    (str "to your dippy Dengeki Nurse!")
    (proc 15)
@@ -530,6 +564,7 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 7)
+       ; Black Nurse:
                 (str "Where do you think YOU'RE going!?")
    (proc 15)
    (proc 19))

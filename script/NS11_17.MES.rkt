@@ -37,12 +37,15 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
+      ; Tanchi:
           (str "Whaaaaa! This is not what I was expecting!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Doctor! Kirara!")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
             (str "What's all this shouting in the middle" 'br)
   (str "of the night? ...Huh, huhhhh!?")
   (proc 15)
@@ -56,6 +59,7 @@
 ; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (proc 1)
+      ; Kirara:
           (str "It's Allizdog!")
   (proc 15)
   (proc 6)
@@ -166,13 +170,16 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "That's... Allizdog, isn't it?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I can damn well see that! But why would" 'br)
    (str "the Minister turn into Allizdog!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Hmm... From a medical perspective, it's")
    (str "possible...")
    (proc 15)
@@ -181,6 +188,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "Don't get too close! He could get" 'br)
    (str "bitey!")
    (proc 15)
@@ -190,65 +198,79 @@
    (proc 18)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Uh... This is a vinyl toy, isn't it?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Why? How!? When!? How did the Minister" 'br)
    (str "turn into a vinyl toy?")
    (proc 15)
    (proc 12)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "That's not the Minister, he's been" 'br)
    (str "abducted!")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
              (str "Gracious sakes...")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Ayako must have made us hallucinate all" 'br)
    (str "that.")
    (proc 15)
    (proc 6)
    (proc 1)
+       ; Kirara:
            (str "By the time we got to the annex, the" 'br)
    (str "minister was swapped out with Allizdog.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So...that Ayako woman...was banging" 'br)
    (str "Allizdog?")
    (proc 15)
    (proc 10)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Where is your head at, you perv!? We need" 'br)
    (str "to get to the operating room, and fast!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "The Minister's in the operating room...?")
    (proc 15)
    (proc 12)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Guillotine Nurse is totally obsessed with" 'br)
    (str "surgery!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What!? But...what do you want me to do?")
    (proc 15)
    (proc 12)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Take me to the operating room!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "We went there to do surgery on Doc" 'br)
    (str "yesterday...")
    (proc 15)
    (proc 12)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Yeah, but I forgot where it is!")
    (proc 15)
    (proc 6)
@@ -258,6 +280,7 @@
    (proc 18)
    (proc 12)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "No time to waste! To the operating room!")
    (proc 15)
    (proc 6)
@@ -265,6 +288,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "Hey, don't get so clingy! You might" 'br)
    (str "have been exposed to radiation!")
    (proc 15)
@@ -273,11 +297,13 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "But...I'm scared...of Guillotine Nurse!" 'br)
    (str "She's totally gonna get me!")
    (proc 15)
    (proc 10)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Why are you grabbing my arm like that!?")
    (proc 15)
    (proc 6)
@@ -285,12 +311,15 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "Hey, where are you going?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm calling Dr. Hirata!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "There's no need for that!")
    (proc 15)
    (proc 19))
@@ -298,6 +327,7 @@
    (proc 18)
    (proc 10)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Stop running away! Show some fortitude! Be")
    (str "a man for once!")
    (proc 15)
@@ -306,27 +336,33 @@
  (seg (? (= T 4) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, fine, fine! Let's go!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Yeah! I'm counting on you!")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
              (str "Kirara, don't forget this...")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 21 158,PUT 3 5 23,FREE 3")
    (proc 2)
+       ; Tanchi:
            (str "What is that?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "It's a compact plasma integration" 'br)
    (str "device!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Switch it on, and you'll absorb plasma" 'br)
    (str "waves, transforming you into Dengeki Nurse!")
    (proc 15)

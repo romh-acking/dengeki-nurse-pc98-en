@@ -184,15 +184,18 @@
    (proc 18)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Tanchi, are you available for a short" 'br)
    (str "business trip from Friday to Sunday next week?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "A business trip? But next week's schedule" 'br)
    (str "is...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wait just a minute here! I signed up for" 'br)
    (str "paid vacation from Friday to Sunday!")
    (proc 15)
@@ -202,30 +205,36 @@
    (proc 18)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Well, I think it's important that you" 'br)
    (str "go.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "No, no way! Absolutely not!")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "What in heaven's name is wrong?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Even if a patient with a stomach ulcer got")
    (str "peritonitis, intestinal obstruction and pneumonia,")
    (str "I won't go!")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Mmmmm. What order of business could" 'br)
    (str "possibly be more important than that?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well, uh...")
    (proc 15)
    (proc 19)
@@ -234,6 +243,7 @@
    (proc 18)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "What is it? Can you not explain?")
    (proc 15)
    (proc 14)
@@ -241,47 +251,57 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Er, I'm going to the F1 Japan Grand" 'br)
    (str "Prix... I finally managed to snag a ticket...")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Ah, so that's the case, it can't be" 'br)
    (str "helped...")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "I'm sorry about that... Ha ha ha ha...")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "If that's the case, then Kirara, Croco,")
    (str "and I will just go to Suzuka ourselves...")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "S-Suzuka!?")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, we're attending the F1 Japan GP as")
    (str "the team doctors.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "I'M GOING!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Even if a terminal cancer patient falls in")
    (str "a ditch, I'm going, I'm going, I'm going! So what" 'br)
    (str "team is it?")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "It's Moguri Suzuki's Bootwork team.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "I see... That's why you picked me...")
    (proc 15)
    (proc 19)
@@ -290,14 +310,17 @@
    (proc 18)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "So like, what's an F One?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You... You don't know anything about F1?")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Is this like #####'s MI card?")
    (proc 15)
    (proc 6)
@@ -306,26 +329,31 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "F1 is the highest class of formula car" 'br)
    (str "racing. Each year, they fight for the world" 'br)
    (str "championship over 16 races.")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Ch, Chum, Chump-ion?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "And at this year's Japan GP, Moguri Suzuki")
    (str "might be the first Japanese world champion!")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Is that good? Is this Manky Suzuki person" 'br)
    (str "important?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Arrrgh, this is painful... But yes! The" 'br)
    (str "dude is amazing!")
    (proc 15)
@@ -333,26 +361,31 @@
    (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "And if that amazing person chose Tanchi," 'br)
    (str "that means you're even MORE amazing!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
    (str "Hahaha, well, Tanchi and Moguri are" 'br)
    (str "slightly acquainted.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Please don't bring up the old days...")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
    (str "There's no shame in hiding it, is" 'br)
    (str "there?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "No, dude, seriously, stop!")
    (proc 15)
    ((cmd 209) 0 2)

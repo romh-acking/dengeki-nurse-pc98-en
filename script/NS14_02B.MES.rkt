@@ -43,19 +43,23 @@
   ((cmd 209) 1 2)
   ((cmd 204) 27 39)
   (proc 5)
+      ; Dr. Akiba:
             (str "Moguri and Tanchi used to street race" 'br)
   (str "in the Thunder Tribe.")
   (proc 15)
   (proc 14)	; Confused
   (proc 1)
+      ; Kirara:
           (str "The Thunder Tribe!?")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "W-We aren't old enough to have been mixed" 'br)
   (str "up in that!")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
             (str "Ha ha ha! Back in the day, they ran one")
   (str "of the two speed gangs in Yokohama. It's something")
   (str "they'd prefer to keep quiet!")
@@ -227,6 +231,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 31 49 43 304,OVER 1,PUT 8 31 49,FREE 8")
    (proc 2)
+       ; Tanchi:
            (str "Hey, nice run! Way to snag provisional" 'br)
    (str "pole!")
    (proc 15)
@@ -251,12 +256,14 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "So Tanchi, you were actually a delinquent?")
    (str "Did you shave your eyebrows real thin, bleach your")
    (str "hair and add streaks?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, that's enough! That was a long time" 'br)
    (str "ago!")
    (proc 15)
@@ -269,11 +276,13 @@
    (str "Tanchi.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Like hell. Even back then you were" 'br)
    (str "incredibly fast.")
    (proc 15)
    (proc 9)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "I guess you can't judge a book by its" 'br)
    (str "cover.")
    (proc 15)
@@ -302,19 +311,23 @@
    (proc 18)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Where did Moguri go?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "He's gonna start his run.")
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Oh, he went jogging, then? Being a racer" 'br)
    (str "must be tough.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 19))
@@ -322,14 +335,17 @@
    (proc 18)
    (proc 13)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "That's so cool!!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Are you a believer, then?")
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Yeah, F1 is incredible!")
    (proc 15)
    (proc 6)
@@ -341,6 +357,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "This is looking real promising!")
    (proc 15)
    (proc 10)
@@ -348,10 +365,12 @@
    (proc 15)
    (proc 13)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "This is so awesome! I wanna ride too!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What are you talking about? You can't just")
    (str "hop on and take a ride!")
    (proc 15)
@@ -360,6 +379,7 @@
    (proc 15)
    (proc 13)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "For real!?")
    (proc 15)
    (proc 6)
@@ -367,6 +387,7 @@
              (str "Haha. No.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I feel like I've heard that joke before.")
    (proc 15)
    (proc 10)
@@ -379,10 +400,12 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Vrmmmm.... Vrmmm vrmmm vrmmmmmmm.....")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What are you getting so excited about?")
    (proc 15)
    (proc 19))
@@ -390,11 +413,13 @@
    (proc 18)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "So what's a professional pole? And who are")
    (str "Senna and Mansell?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Urrgh... Explaining all this will take" 'br)
    (str "forever. Why don't you just read a book on F1" 'br)
    (str "instead?")
@@ -403,6 +428,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Geez, you're mean! Fine, I'll just ask" 'br)
    (str "Moguri about it.")
    (proc 15)
@@ -414,6 +440,7 @@
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Wow, what a champ!")
    (proc 15)
    (proc 6)
@@ -429,6 +456,7 @@
  (seg (? (= T 2) (= O 8))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yo!!! Moguri!!!")
    (proc 15)
    (proc 11)
@@ -437,6 +465,7 @@
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Whaaat? He's not my boyfriend!")
    (proc 15)
    (proc 6)
@@ -446,20 +475,24 @@
    (proc 15)
    (proc 9)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "Okay...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Okay, let's haul out of here before we get")
    (str "in the way.")
    (proc 15)
    (proc 13)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "W-Wait a second... Didn't he say I could" 'br)
    (str "sit in the cockpit?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, you're still going on about that?")
    (proc 15)
    (proc 10)

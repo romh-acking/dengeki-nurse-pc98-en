@@ -32,20 +32,25 @@
   (text "　　　　　　　　") (str " ") (text "−") (str "The Next Day") (text "−")
   (proc 15)
   (proc 2)
-          (str "Yes, Doctor? You needed me?")
+      ; Tanchi:
+          (str "Yes, Doc? You needed me?")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "It's nothing major, but... I'd like to" 'br)
    (str "introduce you to our new nurse.")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Oh boy, I hope she's hot!")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Please, enter...")
   (proc 15)
   (exec-mem 10752 "COPY> gpc¥ns1_k08.gpc,TEMP") (image-mem 1 0)
   (proc 5)
+      ; Dr. Akiba:
              (str "Let me introduce Kirara Inazuma. She's" 'br)
    (str "assigned to internal med and pediatrics.")
   (proc 15)
@@ -53,27 +58,33 @@
   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "I'm Kirara Inazuma, pleased to meet you.")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Ahhh, yeah... The pleasure is all mine...")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Well, I hope you two hit it off, heh" 'br)
    (str "heh heh!")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "By the by, the Minister... He'll be" 'br)
    (str "testifying in front of the National Diet.")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "He checked out this morning in a hurry.")
   (proc 15)
   (proc 3)
   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Something must have spooked him... Hee" 'br)
    (str "hee!")
   (proc 15)

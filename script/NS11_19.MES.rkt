@@ -39,20 +39,24 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
+      ; Tanchi:
           (str "This is the operating room...")
   (proc 15)
   (proc 3)
   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Thanks for showing me the way. If you" 'br)
   (str "want, you can wait here.")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Wha!? No, I'm going!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Aw, nuts! The door's locked!")
   (proc 15)
   (proc 19)
@@ -126,16 +130,19 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No good! It's not opening!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't you have a spare key?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "If it's locked from the inside, we can't" 'br)
    (str "get in...")
    (proc 15)
@@ -144,6 +151,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Well then, stand back!")
    (proc 15)
    (sound '|| 2)
@@ -178,6 +186,7 @@
    (text-reset 15)
    ((cmd 209) 1 2)
    (proc 2)
+       ; Tanchi:
            (str "Hey, don't do anything reckless now...")
    (proc 15)
    (proc 10) (exec-mem 2816 "GET 5 0 0 32 144")     (proc 11) (exec-mem 2816 "PUT 5 13 100,FREE 5")   (delay 20)
@@ -185,6 +194,7 @@
    (proc 10) (exec-mem 2816 "GET 9 0 144 32 144")   (proc 11) (exec-mem 2816 "PUT 9 13 100,FREE 9")   (delay 5)
    (proc 10) (exec-mem 2816 "GET 11 33 144 32 144") (proc 11) (exec-mem 2816 "PUT 11 13 100,FREE 11")
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Leave this to a professional! I'm" 'br)
    (str "just gonna flatten it! ...Lightly!")
    (wait)

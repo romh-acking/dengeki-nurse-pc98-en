@@ -40,17 +40,21 @@
     (</>
      (/
       (proc 1)
+          ; Kirara:
               (str "Hi, I'm Kirara! Welcome to my room!")
       (proc 16)
       (proc 1)
+          ; Kirara:
               (str "Did you enjoy playing Dengeki Nurse?")
       (proc 16)
       (proc 1)
+          ; Kirara:
               (str "I'm wiped out from fighting the Black" 'br)
       (str "Cross... Why are those guys so annoyingly" 'br)
       (str "persistent?")
       (proc 16)
       (proc 1)
+          ; Kirara:
               (str "Ah ha, sorry, I'll stop complaining. You" 'br)
       (str "came all this way to visit, too...")
       (proc 16))
@@ -60,7 +64,8 @@
 
    (loop
     (proc 1)
-    (str "So, what should we do?")
+        ; Kirara:
+            (str "So, what should we do?")
     (exec-mem 2816 "VIEW 54 226 80 397,OVER 1,PUT 20 54 226")
     (text-frame 56 239 77 373)
     (text-reset 15)
@@ -89,18 +94,22 @@
        (text-frame 3 324 52 379)
        (text-reset 15)
        (proc 1)
-       (str "Ahhh... This is kind of embarrassing...")
+           ; Kirara:
+               (str "Ahhh... This is kind of embarrassing...")
        (proc 16)
        (proc 1)
-       (str "But since you came to visit, after all...")
+           ; Kirara:
+               (str "But since you came to visit, after all...")
        (proc 16)
        (proc 1)
-       (str "Yeah! I'll show you something special!")
+           ; Kirara:
+               (str "Yeah! I'll show you something special!")
        (proc 16)
        (loop
         ((cmd 209) 1 2)
         (proc 1)
-        (str "What album should we look at?")
+            ; Kirara:
+                (str "What album should we look at?")
         (exec-mem 2816 "VIEW 54 226 80 397,OVER 1,PUT 20 54 226")
         (text-frame 56 239 77 375)
         (text-reset 15)
@@ -360,17 +369,21 @@
        (text-frame 3 324 52 379)
        (text-reset 15)
        (proc 1)
+           ; Kirara:
                (str "Hmm... What kind of music do you like?")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "Ah! I'm sorry! I lent all my CDs to" 'br)
        (str "Tanchi...")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "I only have the Dengeki Nurse CD left..." 'br)
        (str "is that okay? This should be fine, right?")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "Pick the song you want to hear!")
        (loop
         (exec-mem 2816 "VIEW 5 16 56 327,OVER 1,PUT 10 5 16")
@@ -443,12 +456,15 @@
        (text-frame 3 324 52 379)
        (text-reset 15)
        (proc 1)
+           ; Kirara:
                (str "Whaaa!? You want me to transform, here?")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "That's sort of embarrassing...")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "Okay, then... Close your eyes first, all" 'br)
        (str "right?")
        (proc 16)
@@ -470,9 +486,11 @@
        (text-frame 3 324 52 379)
        (text-reset 15)
        (proc 1)
+           ; Kirara:
                (str "Oh? You want to see the opening?")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "In that case, just reset the game to watch")
        (str "it!")
        (proc 16))
@@ -480,18 +498,22 @@
        (text-frame 3 324 52 379)
        (text-reset 15)
        (proc 1)
+           ; Kirara:
                (str "Oh, you're leaving already? That's a bit" 'br)
        (str "disappointing...")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "But I'll leave my key with you so you can" 'br)
        (str "visit anytime.")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "Take care, don't catch a cold! Brush your" 'br)
        (str "teeth! Do your homework!")
        (proc 16)
        (proc 1)
+           ; Kirara:
                (str "Bye bye!!!")
        (proc 16)
        ((cmd 209) 0 3)

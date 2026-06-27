@@ -47,18 +47,23 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 1)
+      ; Kirara:
           (str "Tanchi... Tanchi, you idiot...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Tanchi... Just what were you doing...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "......")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "...I hate you so much...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Stupid Tanchi...")
   (proc 15)
   (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -77,12 +82,14 @@
           (str "What are you doing up at this hour?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Oh... Oh, nothing at all...")
   (proc 15)
   (proc 10)
           (str "You're crying, aren't you?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "......")
   (proc 15)
   (proc 10)
@@ -91,6 +98,7 @@
   (str "smile.")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "You're a romantic, aren't you...")
   (proc 15)
   (proc 10)
@@ -98,6 +106,7 @@
   (str "why I love the sea.")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "...??")
   (proc 15)
   (proc 10)
@@ -106,12 +115,14 @@
   (str "fishing...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara...!")
   (proc 15)
   (proc 3)
   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "No! Stay away from me!")
   (proc 15)
   (proc 6)
@@ -275,6 +286,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What happened back there was a" 'br)
    (str "misunderstanding...")
    (proc 15)
@@ -282,6 +294,7 @@
    (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Stay back! Tanchi, you're filthy!")
    (proc 15)
    (proc 6)
@@ -290,6 +303,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No, it's not like that! What actually" 'br)
    (str "happened was") (text "−")
    (proc 15)
@@ -297,6 +311,7 @@
    (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "I don't wanna hear your excuses!")
    (proc 15)
    (proc 6)
@@ -306,6 +321,7 @@
    (str "made Kirara cry.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That's none of your business! This is" 'br)
    (str "between the two of us!")
    (proc 15)
@@ -336,6 +352,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Y-Y-You can knock it off with the jokes...")
    (proc 15)
    (proc 10)
@@ -347,6 +364,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Uh... Uh, Johnny... That really is enough,")
    (str "you can sheathe that blade...")
    (proc 15)
@@ -367,6 +385,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "How do I end up in these situations...")
    (proc 15)
    (proc 10)
@@ -374,6 +393,7 @@
    (str "then you will face me!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "But I'm not a samurai, I'm a physician!")
    (proc 15)
    (exec-mem 2816 "VIEW 38 119 51 303,OVER 1,PUT 6 38 119,FREE 6")
@@ -384,6 +404,7 @@
           (str "Ah, master! I finally found the swimsuit!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "??????")
    (proc 15)
    (proc 13)
@@ -394,6 +415,7 @@
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "?????")
    (proc 15)
    (proc 6)
@@ -409,12 +431,14 @@
           (str "Oh, good evening... I'm Janet.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What is going on here!? Isn't that" 'br)
    (str "Kirara's swimsuit!?")
    (proc 15)
@@ -426,6 +450,7 @@
    (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Seriously, just who are you people?")
    (proc 15)
    (proc 6)
@@ -444,6 +469,7 @@
    (str "scene!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Seriously, what the hell!?")
    (proc 15)
    (sound '|| 0)
@@ -462,10 +488,10 @@
  (seg (? (= T 2) (= O 9))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Who exactly are you guys!?")
-   (proc 15)
-   (proc 14)	; Johnny
-   (proc 10)
+   (proc 15) (proc 14) (proc 10)
+       ; Johnny:
            (str "I have no grudge to bear... But by the" 'br)
    (str "order of the Black Cross, we will punish Dengeki" 'br)
    (str "Nurse!")
@@ -475,10 +501,12 @@
    (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "The order of WHAT!?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "The Black Cross!!!")
    (proc 15)
    (proc 11)
@@ -498,32 +526,34 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... Did you...")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "No! That's a lie...a big fat lie! Tanchi," 'br)
    (str "you've got to believe me...!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yeah... Yeah, I'll believe you.")
-   (proc 15)
-   (proc 14)	; Johnny
-   (proc 10)
+   (proc 15) (proc 14) (proc 10)
+       ; Johnny:
            (str "Oh, punishment time is cancelled, then." 'br)
    (str "You two head back to the mansion, and we'll do a" 'br)
    (str "reshoot.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What is wrong with you!? You think we're" 'br)
    (str "gonna do that again knowing what the trick is!?")
-   (proc 15)
-   (proc 14)	; Johnny
-   (proc 10)
+   (proc 15) (proc 14) (proc 10)
+       ; Johnny:
            (str "Uh... Yeah, since it's part of the Pine" 'br)
    (str "Course request. We gotta deliver video proof to" 'br)
    (str "the client.")
@@ -537,6 +567,7 @@
    (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Like hell! We're not doing anything for" 'br)
    (str "the Black Cross!")
    (proc 15)
@@ -563,19 +594,17 @@
 ;	Text continues
 
    (proc 0)
+       ; Dengeki Nurse:
                   (str "All right, bring it on! You'll see" 'br)
    (str "what you get when you mess with us!")
-   (proc 15)
-   (proc 14)	; Johnny
-   (proc 10)
+   (proc 15) (proc 14) (proc 10)
+       ; Johnny:
            (str "Mmm...Very well, then! Janet! Rough 'em up")
    (str "a little bit!")
    (proc 15)
    (proc 6)
-   (proc 5)
-   (exec-mem 2816 "GET 2 50 192 10 96") ; Janet
-   (proc 7)
-   (proc 13)
+   (proc 5) (exec-mem 2816 "GET 2 50 192 10 96") (proc 7) (proc 13)
+       ; Janet:
           (str "Wha!? Why me? How come I'm always drawing" 'br)
    (str "the short straw!?")
    (proc 15)
@@ -597,6 +626,7 @@
    (proc 15)
    (proc 6)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I don't care who you send against" 'br)
    (str "me! I'm punishing you all with a million volts!")
    (proc 15)
@@ -621,6 +651,7 @@
    (exec-mem 17920 0 1)
    (exec-mem 6656 8)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Now who's next?!")
    (proc 15)
    (proc 11)
@@ -637,9 +668,11 @@
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 5 26 145,FREE 5")
    (exec-mem 2816 "VIEW 6 31 29 174,PUT 8 6 31,FREE 8")
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ah! Ahhhhhhh...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! Kirara!!!")
    (proc 15)
    (proc 11)
@@ -655,6 +688,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 5 26 145,FREE 5")
    (proc 2)
+       ; Tanchi:
            (str "Ugh! Ooooooogh...")
    (proc 15)
    (text-color 7)

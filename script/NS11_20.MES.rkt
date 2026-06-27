@@ -31,6 +31,7 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Not one more step, Guillotine" 'br)
    (str "Nurse!")
   (proc 15)
@@ -39,6 +40,7 @@
    (str "traitor! No one interferes with my noble hobby!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Yo! Let the Minister go!")
   (proc 15)
   (proc 11)
@@ -196,6 +198,7 @@
    (str "do a surgical obvservation on my fine Procedure!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "...")
    (proc 15)
    (proc 19)
@@ -203,6 +206,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Wait! Guillotine Nurse! You...you might" 'br)
    (str "have breast cancer!")
    (proc 15)
@@ -210,6 +214,7 @@
                      (str "W-What are you on about?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I realized it when I touched your chest" 'br)
    (str "just now! Didn't you notice that hard lump?")
    (proc 15)
@@ -221,6 +226,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "As a doctor I recommend you get an exam" 'br)
    (str "posthaste!")
    (proc 15)
@@ -231,6 +237,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Listen! If you get breast cancer, you'll" 'br)
    (str "need to have your breast removed!")
    (proc 15)
@@ -238,6 +245,7 @@
                      (str "...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "If you lost your breasts, you wouldn't be" 'br)
    (str "able to do all the fun stuff with them!")
    (proc 15)
@@ -245,6 +253,7 @@
                      (str "No way...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Here's my chance!")
    (proc 15)
    (exec-mem 2816 "VIEW 27 153 52 310,PUT 3 27 153,FREE 3")
@@ -254,6 +263,7 @@
 ; FMT
 ;  (sound '|se | 8)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Dengeki Scalpel Shuriken!")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 30 180,PUT 4 5 23,FREE 4")
@@ -307,14 +317,17 @@
 ; FMT
 ;  (exec-mem 28672 4 16 51 303 1 2 4 72)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I won't lose, no matter what" 'br)
    (str "terrors await...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Until the day I crush the Black" 'br)
    (str "Cross, until the day I see my mother again...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll keep fighting as Dengeki" 'br)
    (str "Nurse!")
    (proc 15)
@@ -333,6 +346,7 @@
                      (str "Don't you move!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yes... Er, I'm sorry...")
    (proc 15)
    (proc 19))
@@ -343,6 +357,7 @@
    (str "going!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Uh, I kinda have to go pee") (text "−")
    (proc 15)
    (proc 11)

@@ -128,9 +128,11 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 19)
@@ -138,9 +140,11 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hello, earth to Kirara?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 19)
@@ -148,15 +152,19 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... What are you actually doing?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Pachinko.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "N-No, that's not what I meant...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm not giving you any balls.")
    (proc 15)
    (proc 19)
@@ -164,13 +172,16 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... About before... I'm sorry. I" 'br)
    (str "think I went too far.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm not going to help you save Nursia.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "No! There's something else...")
    (proc 15)
    (proc 19)
@@ -178,6 +189,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... We've found your mother!")
    (proc 15)
    (proc 3)
@@ -185,10 +197,12 @@
    (proc 4)
    (sound '|| 0)
    (proc 1)
+       ; Kirara:
            (str "WHAT?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Come on, we gotta go! She's at the" 'br)
    (str "hospital!")
    (proc 15)
@@ -196,6 +210,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "O-Okay...")
    (proc 15)
    ((cmd 209) 0 2)

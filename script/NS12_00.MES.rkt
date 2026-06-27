@@ -177,10 +177,12 @@
    (proc 18)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "I'm counting on you tomorrow.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, yeah, I know, munch munch...")
    (proc 15)
    (proc 19))
@@ -188,31 +190,37 @@
    (proc 18)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What have you been so giddy about all this")
    (str "time?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "It's a seeeecret!")
    (proc 15)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Tomorrow we're going to the Cybernetic" 'br)
    (str "Girls' School for physical examinations.")
    (proc 15)
    (proc 14)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Is that any fun?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Well, we're talking about fresh, sparkling")
    (str "high school girls here! And they come from the" 'br)
    (str "prestigious Cybernetic Girls' School!")
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "???")
    (proc 15)
    (proc 6)
@@ -222,10 +230,12 @@
    (proc 18)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "I... I don't get it.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Ah, you don't need to, Kirara!")
    (proc 15)
    (proc 19))
@@ -233,23 +243,28 @@
    (proc 18)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "W-What is with the creepy smirk?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, don't judge me!")
    (proc 15)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Ha ha! Kirara, you're coming too.")
    (proc 15)
    (proc 14)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Great! I can't wait!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Now, what does a girl like you have to get")
    (str "excited about?")
    (proc 15)
@@ -257,17 +272,20 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Well, I've never been to a normal school" 'br)
    (str "before...")
    (proc 15)
    (proc 6)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "It's fine... I'd like to do a physical" 'br)
    (str "exam at least once myself.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "No way! You're a surgeon, Doc. This is an" 'br)
    (str "internal med perk!")
    (proc 15)
@@ -277,36 +295,44 @@
    (proc 18)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "What if we switched departments for" 'br)
    (str "just one day?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Forget it!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Who's that girl at the other table?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Hmm. She's an unfamiliar face, isn't she?")
    (proc 15)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Oh, that's Croco-chan, a new nurse in" 'br)
    (str "the Surgery department.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "She's a bit of an odd bird, isn't she?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Her clothing choices are quite stylish.")
    (proc 15)
    (proc 11) (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "As a nurse, she has a bit to learn, but")
    (str "she's not a bad kid.")
    (proc 15)

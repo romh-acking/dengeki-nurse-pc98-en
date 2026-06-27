@@ -42,6 +42,7 @@
   (proc 15)
   (proc 12) (proc 13)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
               (str "The pleasure is all mine. I'm Director" 'br)
   (str "Akihabara.")
   (proc 15)
@@ -51,6 +52,7 @@
   (proc 15)
   (proc 12) (proc 13)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
               (str "Oh, it's nothing, really. Dr. Tanchi" 'br)
   (str "here has cured countless incurable diseases.")
   (proc 15)
@@ -60,6 +62,7 @@
   (proc 15)
   (proc 12) (proc 13)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
               (str "Just leave everything to us.")
   (proc 15)
   (proc 14)
@@ -69,6 +72,7 @@
   (proc 15)
   (proc 12) (proc 13)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
               (str "Oh, Osaka okonomiyaki!!! How'd you know")
   (str "this was my favorite!?")
   (proc 15)
@@ -143,6 +147,7 @@
            (str "Doctor Tanchi...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Don't worry, Nursia. You're in good hands.")
    (str "I'll make you all better, I promise.")
    (proc 15)
@@ -156,17 +161,20 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
                (str "Tanchi and Kirara, I'll be counting on" 'br)
    (str "you.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "I'll make her all better.")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Me too!")
    (proc 15)
    (proc 6)
@@ -181,6 +189,7 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
                (str "Hey! Don't steal my okonomiyaki!")
    (proc 15)
    (proc 14)
@@ -189,6 +198,7 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
                (str "You can go to the bathroom later!")
    (proc 15)
    (proc 14)

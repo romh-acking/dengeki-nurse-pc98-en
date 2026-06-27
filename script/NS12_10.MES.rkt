@@ -36,9 +36,11 @@
   ((cmd 209) 1 2)
   ((cmd 204) 74 80)
   (proc 2)
+      ; Tanchi:
           (str "Ohh... This is a fine view...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Stop looking at me!")
   (proc 15)
   (proc 19)
@@ -113,14 +115,17 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hmm, it's all cobwebbed in there...")
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What did you just say!?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I mean, in the passage...")
    (proc 15)
    (proc 19)
@@ -128,18 +133,22 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Oh, a yellow stain...")
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "No way! Gross!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, it's right there on the wall...")
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Tanchi!")
    (proc 15)
    (proc 6)
@@ -148,27 +157,33 @@
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ah!")
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Wh-What now...?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "There's an air vent over here! Try looking")
    (str "through it!")
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Fine...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Why are you so mad all the time?")
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Sorry, you just get me worked up...")
    (proc 15)
    (proc 6)
@@ -177,9 +192,11 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Stop looking at me!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I can't help it, you're right up to my" 'br)
    (str "face!")
    (proc 15)
@@ -188,11 +205,13 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "If you're gonna complain, why don't we" 'br)
    (str "switch places? It's super tight in here, though.")
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Fine, whatever! How can you be so carefree")
   (str "in an emergency like this!?")
    (proc 15)
@@ -210,13 +229,16 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 1)
+       ; Kirara:
            (str "Ah!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What is it? What do you see?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Shh... I can see the Special Morals" 'br)
    (str "Committee room!")
    (proc 15)
@@ -233,10 +255,12 @@
    (proc 15)
    (proc 3) (proc 10) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't breathe on me!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I wasn't doing it on purpose! Jeez! Am I" 'br)
    (str "supposed to hold my breath and die?")
    (proc 15)
@@ -249,10 +273,12 @@
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Heyyyy... No... Don't do that!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Heh heh heh heh...")
    (proc 15)
    (proc 19))
@@ -260,6 +286,7 @@
    (proc 18)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Stop wiggling around, this place is" 'br)
    (str "cramped enough!")
    (proc 15)
@@ -278,6 +305,7 @@
    (proc 18)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Ah! Don't touch me there!")
    (proc 15)
    (proc 6)
@@ -286,6 +314,7 @@
    (proc 18)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Ahhh... S-Stop it... Stop, it's making me" 'br)
    (str "feel...")
    (proc 15)

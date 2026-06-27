@@ -50,6 +50,7 @@
   ((cmd 209) 1 2)
   ((cmd 204) 16 22)
   (proc 1)
+      ; Kirara:
           (str "Hooray! The beach!")
   (proc 15)
   (proc 10)
@@ -157,6 +158,7 @@
 ; Kirara reacts...
    (proc 12) (exec-mem 2816 "PUT 4 5 23")
    (proc 1)
+       ; Kirara:
            (str "What's wrong? Why are you staring at me" 'br)
    (str "like that?")
    (proc 15)
@@ -177,6 +179,7 @@
 ; Kirara reacts...
    (proc 12) (exec-mem 2816 "PUT 6 5 23")
    (proc 1)
+       ; Kirara:
            (str "Tanchi!!! You've got naughty thoughts" 'br)
    (str "going through your head!")
    (proc 15)
@@ -197,10 +200,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Honestly, those two are acting like little")
    (str "kids...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Ha ha ha! The two of them are like" 'br)
    (str "daughters to me.")
    (proc 15)
@@ -209,10 +214,12 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "But tell me...are young ladies really" 'br)
    (str "into fundoshi these days?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ah, those are actually called high-leg" 'br)
    (str "swimsuits and thongs.")
    (proc 15)
@@ -221,14 +228,17 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyway, I'm glad both of them are having" 'br)
    (str "fun.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hmm. I wonder if Kirara would wear" 'br)
    (str "something like that...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, didn't you just say that she's like a")
    (str "daughter to you? What's going through that head of")
    (str "yours!?")
@@ -239,11 +249,13 @@
    (proc 18)
    (proc 11)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Hurry up and change so we can hit the" 'br)
    (str "beach!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Right, right, on it.")
    (proc 15)
    (proc 19)
@@ -252,16 +264,19 @@
    (proc 18)
    (proc 11)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Tanchi, what are you doing?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Um... Warmup exercises, obviously.")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Shouldn't you change into your swimsuit" 'br)
    (str "first?")
    (proc 15)
@@ -277,9 +292,11 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doctor, should we head out?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, let's go.")
    (proc 15)
    (text-color 7)

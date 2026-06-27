@@ -40,7 +40,8 @@
   (image-file "b:¥gpc¥ns1_125.gpc") (image-mem 1 0)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 2)
-  (str "Where...am...I?")
+      ; Tanchi:
+          (str "Where...am...I?")
   ((cmd 195) 1 1)
   (proc 15)
   ((cmd 195) 0 8096)
@@ -225,6 +226,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "HEEEEEY!")
    (proc 15)
    (proc 10)

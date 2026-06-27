@@ -215,6 +215,7 @@
    (proc 15)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm fine! No injuries for you?")
    (proc 15)
    (proc 6)
@@ -231,6 +232,7 @@
    (proc 13)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "It'll take more than that to kill" 'br)
    (str "us!")
    (proc 15)
@@ -287,6 +289,7 @@
    (proc 15)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's right! I'm not losing!")
    (proc 15)
    (proc 6)
@@ -356,6 +359,7 @@
    (proc 13)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi! You need to get back in the")
    (str "race!")
    (proc 15)
@@ -365,6 +369,7 @@
    (proc 15)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Don't let them determine what goes" 'br)
    (str "down!")
    (proc 15)
@@ -374,6 +379,7 @@
    (proc 15)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Show some guts and you'll power" 'br)
    (str "through!")
    (proc 15)
@@ -386,6 +392,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Count on it!")
    (proc 15)
    (proc 6)
@@ -397,6 +404,7 @@
    (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You bet!")
    (proc 15)
    (proc 6)
@@ -407,6 +415,7 @@
    (proc 15)
    (proc 9)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Come on, let's fight!")
    (proc 15)
    (proc 6)

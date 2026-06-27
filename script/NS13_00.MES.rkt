@@ -168,14 +168,17 @@
    (proc 18)
    (proc 9)	; Sad
    (proc 1)
+       ; Kirara:
            (str "Haaaahh...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What's with the sighing?")
    (proc 15)
    (proc 9)	; Sad
    (proc 1)
+       ; Kirara:
            (str "Oh no, it's nothing...")
    (proc 15)
    (proc 6)
@@ -184,32 +187,38 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No, you're acting weird. What's up?")
    (proc 15)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Doctor Akiba!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, what is it? That's a scary look" 'br)
    (str "you've got...")
    (proc 15)
    (proc 14)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "I demand an improvement to our working" 'br)
    (str "environment!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Wh-What's with this out of nowhere!?")
    (proc 15)
    (proc 14)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "The whole world's excited for summer" 'br)
    (str "vacation, so why don't we get any time off" 'br)
    (str "ourselves!?")
@@ -217,6 +226,7 @@
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Uh, umm...well...")
    (proc 15)
    (proc 14)
@@ -226,11 +236,13 @@
    (proc 18)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Nurses deserve a summer holiday too!")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hmmmmm...")
    (proc 15)
    (proc 14)
@@ -238,24 +250,28 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "It's a good point. She's not asking for" 'br)
    (str "overseas travel, just an ocean or mountain trip" 'br)
    (str "would be nice.")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "The problem is... We have quite the" 'br)
    (str "nurse shortage around here.")
    (proc 15)
    (proc 14)
    (proc 9)	; Sad
    (proc 1)
+       ; Kirara:
            (str "And actually... I want to search for my" 'br)
    (str "mother, but I can't even make time for that...")
    (proc 15)
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hmmm...")
    (proc 15)
    (proc 14)
@@ -265,6 +281,7 @@
    (proc 18)
    (proc 9)	; Sad
    (proc 1)
+       ; Kirara:
            (str "Sniff, sniff... I guess nursing really" 'br)
    (str "does exemplify the three Ds...")
    (proc 15)
@@ -273,11 +290,13 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara's right, even with a staff shortage")
    (str "we're suffering way too much!")
    (proc 15)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Fine, fine, fine! All of us can head to")
    (str "the beach this Sunday!")
    (proc 15)
@@ -286,6 +305,7 @@
    (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Yay!!! You see, Croco-chan? It does pay" 'br)
    (str "off to let your feelings be heard!")
    (proc 15)
@@ -299,11 +319,13 @@
    (proc 6)
    (proc 12) (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "...Somehow I feel like I've been" 'br)
    (str "tricked into something...")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well, it's a good thing, isn't it? We" 'br)
    (str "should refresh ourselves once in a while.")
    (proc 15)

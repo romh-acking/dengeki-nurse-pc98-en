@@ -32,12 +32,15 @@
   ((cmd 209) 1 2)
   ((cmd 204) 50 59)
   (proc 1)
+      ; Kirara:
           (str "Aaaaah! Heeeelp!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara! Stomp on the brake!")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Wh-Which is the brake!?")
   (proc 15)
   (proc 19)
@@ -134,13 +137,16 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Aaaagh! Corner! CORNER! Kirara, turn the" 'br)
    (str "wheel!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "L-Like this?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Aaaargh... Strong lateral Gs... Incredible")
    (str "cornering...")
    (proc 15)
@@ -156,22 +162,27 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Which one is the brake again?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "It's next to the accelerator!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I've never driven a car before, you need" 'br)
    (str "to be more specific!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Just step on literally anything!")
    (proc 15)
    (text-color 1)
    (text "ＶＲＲＲＲＲＭ　ＶＲＭ　ＶＲＭ　ＶＲＲＲＲＲＭ！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Aaaaaaagh! That was the accelerator! Hit" 'br)
    (str "the pedal next to it!")
    (proc 15)
@@ -180,9 +191,11 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "I can't find it!!! You do it, Tanchi!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm hardly in the position to do so!!!")
    (proc 15)
    (proc 19)
@@ -190,13 +203,16 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "What am I supposed to do!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Okay, okay! Just look straight ahead and" 'br)
    (str "focus on steering!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "O-Okay...!")
    (proc 15)
    (proc 19)
@@ -204,6 +220,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "I'm doing my best, so don't talk to me!")
    (proc 15)
    (proc 19))

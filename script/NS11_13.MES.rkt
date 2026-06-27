@@ -242,6 +242,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Where exactly does it hurt, now...?")
    (proc 15)
    (proc 10)
@@ -252,6 +253,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Do you think you could take off your shirt")
    (str "for me?")
    (proc 15)
@@ -278,6 +280,7 @@
          (str "You should've let this sleeping dog lie...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What in the") (text "−") (str "!?")
    (proc 15)
    (sound '|| 0)
@@ -295,6 +298,7 @@
    ((cmd 193) 0 "b:¥gpa¥ns1-134.gpa")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Who the hell are you!?")
    (proc 15)
    (proc 10)
@@ -302,6 +306,7 @@
    (str "The cold-blooded Guillotine Nurse!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "The Black Cross Society!?")
    (proc 15)
    (proc 19)
@@ -313,6 +318,7 @@
    (str "death!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Whoa whoa, hold on! Why would the Black" 'br)
    (str "Cross target a law-abiding citizen like me!?")
    (proc 15)
@@ -321,6 +327,7 @@
    (str "destroyed!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What the shit!? How'd I get on your bad" 'br)
    (str "side!?")
    (proc 15)
@@ -337,6 +344,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, help me!!!")
    (proc 15)
    (proc 11)
@@ -348,6 +356,7 @@
    (exec-mem 2816 "GET 9 5 23 28 166")
    (exec-mem 2816 "VIEW 5 23 28 166,OVER 1,PUT 10 5 23,FREE 10")
    (proc 0)
+       ; Dengeki Nurse:
                   (str "PLASMA FLASH!!!")
    ((cmd 195) 0 1)
    (delay 80 0)
@@ -370,6 +379,7 @@
    (text "ＢＡＭ！　ＫＡＢＯＯＯＯＯＯＯＭ！")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Gwaaaaaaaaaaa!")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 9 5 23,FREE 9")
@@ -382,6 +392,7 @@
 ;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
    (proc 2)
+       ; Tanchi:
            (str "Whoa! The guillotine came off!")
    (proc 15)
    (proc 11)
@@ -395,6 +406,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 152 50 295,OVER 1,PUT 6 27 152,FREE 6")
    (proc 2)
+       ; Tanchi:
            (str "You... You're Tomoyo-chan from earlier" 'br)
    (str "today...!")
    (proc 15)
@@ -407,14 +419,17 @@
    (str "wasn't arousing at all. Pathetic, frankly.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, enough of that! You're not one to" 'br)
    (str "judge!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What were you doing earlier" 'br)
    (str "today...?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That's um, um, um...")
    (proc 15)
    (proc 13)
@@ -422,6 +437,7 @@
    (str "0074... Kirara-chan!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "A brat!!! Why, you...")
    (proc 15)
    (proc 13)
@@ -429,10 +445,12 @@
    (str "me!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I don't, but I'm coming at you" 'br)
    (str "regardless!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I've been reborn as Dengeki Nurse," 'br)
    (str "with the sole purpose of smashing the Black Cross!")
    (proc 15)
@@ -467,10 +485,12 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Phew... That was too close for" 'br)
    (str "comfort.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You saved my ass!")
    (proc 15)
    (proc 19)
@@ -481,9 +501,11 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Dang, that was quite the show.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I guess I surprised myself too. I" 'br)
    (str "didn't know I had powers like that.")
    (proc 15)
@@ -491,15 +513,19 @@
  (seg (? (= T 2) (= O 8))
    (proc 18)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Oh, um, where's Guillotine Nurse?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Now that you mention it...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Oh no, the minister's in danger!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "He's in the annex! We gotta go!")
    (proc 15)
    (proc 19)
@@ -525,11 +551,11 @@
 ;  (exec-mem 17920 0 1)
 ;  (text-frame 3 324 52 379)
 ;  (text-reset 15)
-;  (proc 0)
+;  (proc 0) ; Dengeki Nurse
 ;                 (str "Phew... That was too close for" 'br)
 ;  (str "comfort.")
 ;  (proc 15)
-;  (proc 2)
+;  (proc 2) ; Tanchi
 ;          (str "You saved my ass!")
 ;  (proc 15)
 ;  (proc 19)
@@ -546,12 +572,14 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Around...here?")
    (proc 15)
    (proc 10)
          (str "Ahhh... There...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hmm...")
    (proc 15)
    (exec-mem 2816 "VIEW 5 24 28 167,PUT 18 5 24,FREE 18")
@@ -562,6 +590,7 @@
    ((cmd 195) 1 1)
    (delay 300 0)
    (proc 2)
+       ; Tanchi:
            (str "Wh-What the hell!?")
    (proc 15)
    ((cmd 196) 1 5)
@@ -569,6 +598,7 @@
          (str "Hee hee hee hee...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I can't move my hand! It's caught in her" 'br)
    (str "booby trap!") ; this was suggested by a certain penguin lover, you know who you are
    (proc 15)
@@ -604,6 +634,7 @@
                      (str "Get ready to rest in...PIECES!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Gwaaaaaaaaaaaaaah!!! Someone! Anyone!" 'br)
    (str "Heeeeeeeelp!")
    (proc 15)
@@ -613,6 +644,7 @@
    (proc 15)
    (sound '|| 0)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hold it right there!")
    (proc 15)
    (proc 11)
@@ -635,17 +667,20 @@
                      (str "!!! Who... Who dares!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "!?!?")
    (proc 15)
    (exec-mem 2816 "GET 11 16 80 39 223")
    (exec-mem 2816 "VIEW 16 80 39 223,PUT 12 16 80,FREE 12")
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll cure all ill, body and mind!")
    (text "　") (str "The invincible medical professional," 'br)
    (text "　　　　　　　　　　　　　　　　　") (str "Dengeki Nurse!")
    (proc 15)
    (exec-mem 2816 "VIEW 16 80 39 223,PUT 11 16 80,FREE 11")
    (proc 2)
+       ; Tanchi:
            (str "Dengeki Nurse... Kirara, is that you!?")
    (proc 15)
    (proc 11)
@@ -677,6 +712,7 @@
    (str "Clap clap clap!!!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Enough with the applause... It's" 'br)
    (str "embarrassing.")
    (proc 15)

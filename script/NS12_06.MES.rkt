@@ -49,6 +49,7 @@
                 (str "Aaaaahhhh...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Hey... Hey, what are you doing...?")
   (proc 15)
   (text-color 1)
@@ -58,6 +59,7 @@
   (proc 9)
   (exec-mem 2816 "PUT 10 5 23")
   (proc 1)
+      ; Kirara:
           (str "Kyaaa! Stop it!")
   (proc 15)
   (proc 6)
@@ -218,11 +220,13 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What is going on here!?")
    (proc 15)
    (proc 9)
    (exec-mem 2816 "PUT 8 5 23")
    (proc 1)
+       ; Kirara:
            (str "Eek! Tanchi, help! She's touching my" 'br)
    (str "chest!")
    (proc 15)
@@ -232,6 +236,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yo! Back off, you two! I'll explain all" 'br)
    (str "this calmly later...")
    (proc 15)
@@ -239,6 +244,7 @@
                  (str "Mmmmm! I want THIS!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ow!! Enough with the rough play!")
    (proc 15)
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 12 5 23,FREE 12")
@@ -262,6 +268,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "P-Please help meee!")
    (proc 15)
    (proc 12)
@@ -272,6 +279,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Oh, uh, and you are...?")
    (proc 15)
    (proc 12)
@@ -279,12 +287,14 @@
    (str "counselor!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, I see...")
    (proc 15)
    (proc 13)
           (str "Now, how on earth has this happened!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What do you mean? I didn't do anything," 'br)
    (str "things just kind of escalated quickly...")
    (proc 15)
@@ -300,11 +310,13 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I swear! I was conducting the exams with" 'br)
    (str "the typical sanctity, without a shred of ill" 'br)
    (str "intent...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Then a pink light flashed through the" 'br)
    (str "window, and...")
    (proc 15)
@@ -323,6 +335,7 @@
    (proc 11)
    (exec-mem 2816 "PUT 6 41 23")
    (proc 1)
+       ; Kirara:
            (str "Say what you like, but this isn't our" 'br)
    (str "fault!")
    (proc 15)
@@ -338,6 +351,7 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 2)
+       ; Tanchi:
            (str "Gack! It's those two from this morning!")
    (proc 15)
    (text-color 5)
@@ -357,6 +371,7 @@
    (str "to...the Reflection Cell!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hold on a minute, we haven't finished the" 'br)
    (str "exams yet!")
    (proc 15)
@@ -376,12 +391,14 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "The principal's the one who asked us here.")
    (str "We don't take orders from you!")
    (proc 15)
    (proc 11)
    (exec-mem 2816 "PUT 6 41 23")
    (proc 1)
+       ; Kirara:
            (str "Yes! Physical exams are important for" 'br)
    (str "girls going through puberty!")
    (proc 15)
@@ -417,10 +434,12 @@
    (proc 9)
    (exec-mem 2816 "PUT 2 5 23")
    (proc 1)
+       ; Kirara:
            (str "What are you doing!?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I'm not doing anything!")
    (proc 15)
    (proc 19))
@@ -430,11 +449,13 @@
    (str "Squeeze, squeeze, squeeze...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey! Get away from me!")
    (proc 15)
    (proc 11)
    (exec-mem 2816 "PUT 2 41 23")
    (proc 1)
+       ; Kirara:
            (str "That's my butt!")
    (proc 15)
    (proc 14)
@@ -445,6 +466,7 @@
    (str "Squish squish squish...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Look, a teacher! Go grope her instead!")
    (proc 15)
    (proc 13)
@@ -469,6 +491,7 @@
    (proc 11)
    (exec-mem 2816 "PUT 10 41 23")
    (proc 1)
+       ; Kirara:
            (str "No, don't go yet! I can't keep my things!")
    (proc 15)
    (proc 14)

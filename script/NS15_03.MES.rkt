@@ -138,42 +138,51 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "What was the phone call about?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well... A patient is transferring in from" 'br)
    (str "Germany...")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "That's a bit sudden.")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well, apparently it's an incurable" 'br)
    (str "disease...")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Why our hospital in particular, though?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "When I was doing my physician's training" 'br)
    (str "in Germany, I, er, met a girl while I was there...")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "So when is she arriving?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well, since she just called... Maybe about")
    (str "thirty minutes?")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Thirty minutes!? That's fast!")
    (proc 15)
    (proc 14)
@@ -183,6 +192,7 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "To get here from Germany in a half-" 'br)
    (str "hour... She must be in the care of International" 'br)
    (str "Rescue!")
@@ -192,15 +202,18 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Well, how do I put it... She's something" 'br)
    (str "of a VIP.")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Say again??")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Erm, listen, do you know the legend of the")
    (str "Elektros?")
    (proc 15)
@@ -210,29 +223,35 @@
    (proc 6)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Oh, you mean the lost kingdom of gold!")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "So yeah, Nursia...her name is Nursia...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "She's the last surviving descendant of the")
    (str "Elektros royal family.")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Is it okay for her to be here!? Isn't" 'br)
    (str "every criminal organization on the planet trying" 'br)
    (str "to get their hands on her?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Well, yes, kind of. But Kirara's here, so" 'br)
    (str "that probably acts as a counter...")
    (proc 15)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str "Hey, don't you go dragging me into this!")
    (proc 15)
    (proc 6)
@@ -241,10 +260,12 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, why're you so cranky?")
    (proc 15)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str "I'm NOT cranky!")
    (proc 15)
    (proc 6)
@@ -253,12 +274,14 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Spill the beans, Kirara, what's wrong?")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "I told you, nothing's wrong whatsoever!")
    (proc 15)
    (proc 6)
@@ -271,10 +294,12 @@
    (str "immediately.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Look like she's arrived.")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Let's all go meet her!")
    (proc 15)
    ((cmd 209) 0 2)

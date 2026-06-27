@@ -73,10 +73,12 @@
   (proc 11)
   (proc 13)
   (proc 5)
+      ; Dr. Akiba:
   (str "Where'd you find it?")
   (proc 15)
   (proc 2)
-  (str "Here, inside this.")
+      ; Tanchi:
+          (str "Here, inside this.")
   (proc 15)
   (text-color 7)
   (str "I pull out an old tin box, the kind that contains" 'br)
@@ -302,12 +304,15 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So what's up with this pendant, then?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "It belongs to Taro Inazuma!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Taro Inazuma? Who?")
    (proc 15)
    (proc 19)
@@ -315,13 +320,16 @@
  (seg (? (= T 2) (= O 1))												; #2
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "This letter to him is from Mitsuko!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Doc, you gotta start making sense.")
    (proc 15)
    (sound '|| 2)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, yes, yes! This is all related to" 'br)
    (str "my current research!")
    (proc 15)
@@ -338,38 +346,47 @@
    (sound '|| 1)
    (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "Twenty years ago, you see... Taro" 'br)
    (str "Inazuma was my assistant.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "An earnest man of talent! Much unlike" 'br)
    (str "you.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "He was thought to have a promising" 'br)
    (str "future as a brain surgeon and electronics" 'br)
    (str "engineer.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "After a whirlwind courtship, he married")
    (str "Mitsuko, a nurse who worked here.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "They had a beautiful baby girl, and" 'br)
    (str "were at the peak of happiness.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "But such happiness was not meant to" 'br)
    (str "last, and they were struck by misfortune.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Mitsuko's constitution was...electric.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "She'd accumulate plasma waves from the" 'br)
    (str "air, and blast them out as electric shocks!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Said ability caught the eye of a" 'br)
    (str "certain group.")
    (proc 15)
@@ -380,32 +397,39 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_110.gpc,GPC") (image-mem 1 3)
    (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "The global criminal organization, the" 'br)
    (str "Black Cross. They shamefully use the power of" 'br)
    (str "medicine for crime!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "They infiltrate hospitals as doctors" 'br)
    (str "and nurses...then commit murder and leave no" 'br)
    (str "trace!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Eventually they became more than mere" 'br)
    (str "hitmen, and set their sights on world domination!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Medicine and science can be fearsome" 'br)
    (str "weapons, depending on how they're wielded...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "So they began turning doctors and" 'br)
    (str "nurses into full-fledged commando assassins!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Warriors who strike...with medical" 'br)
    (str "knowledge!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "So Mitsuko, a practicing nurse with" 'br)
    (str "shocking powers, was scouted as a potential" 'br)
    (str "commando nurse.")
@@ -417,23 +441,28 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_111.gpc,GPC") (image-mem 1 3)
    (proc 13)
    (proc 5)
+       ; Dr. Akiba:
               (str "They offered a crazy signing bonus, but")
    (str "she turned them down. Then the harrassment" 'br)
    (str "started...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Dead cats in the hospital entrance," 'br)
    (str "gangsters making a scene inside...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Unable to bear the state of affairs," 'br)
    (str "Mitsuko up and vanished one day.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Losing Mitsuko, Taro lost himself, and" 'br)
    (str "the booze told him to storm the Black Cross HQ...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Where he was brutally murdered," 'br)
    (str "naturally.")
    (proc 15)
@@ -442,6 +471,7 @@
 
    (sound '|| 2)
    (proc 5)
+       ; Dr. Akiba:
               (str "And so, that pendant is a symbol of the")
    (str "love between Mitsuko and Taro.")
    
@@ -460,6 +490,7 @@
  (seg (? (= T 2) (= O 2))												; #3
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "A symbol of the tragedy of their once" 'br)
    (str "great love...")
    (proc 15)
@@ -467,70 +498,87 @@
  (seg (? (= T 2) (= O 3))												; (After thinking about the pendant)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So Mitsuko's got the other half, huh...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "No! Before she vanished, she entrusted" 'br)
    (str "it to her daughter Kirara, as a bond from mother" 'br)
    (str "to child.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So, where'd this Kirara girl wind up?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Uh, well, I was raising her myself," 'br)
    (str "but... One day we took a trip to the zoo.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "She began crying because she was afraid")
    (str "of the tiger, which I thought was hilarious.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "So I took her all the way to the cage," 'br)
    (str "she ran away, and... Uh, that was it, I never saw" 'br)
    (str "her again.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That's the most irresponsible thing I've" 'br)
    (str "ever heard.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, well. That's when I began my" 'br)
    (str "current research.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "...To smash the Black Cross, who tore" 'br)
    (str "apart a once loving and happy family unit!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So by making all those weird weapons...are")
    (str "you taking the fight to them yourself, Doc?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "No! I'm waiting for the day Mitsuko" 'br)
    (str "comes back.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Taro had the same idea to make" 'br)
    (str "Mitsuko's electric power even stronger.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "To create a righteous nurse, wielding" 'br)
    (str "the power of a million volts! An electroshock" 'br)
    (str "nurse...the DENGEKI NURSE!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wow! Okay, then.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "However! The critical plasma" 'br)
    (str "accumulator can't be finished yet.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I need the device to quickly and" 'br)
    (str "efficiently collect plasma in the human body.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I thought Taro might have had something")
    (str "amongst his belongings that might have helped...")
    (proc 15)
@@ -539,23 +587,28 @@
  (seg (? (= T 2) (= O 4))												; #2
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Well, there's a lot of love letters here.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hmmmph.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 5))												; (After thinking about Kirara)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So about Kirara running away...If she were")
    (str "still around today, how old would she be?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Let's see... She'd probably be 19. I" 'br)
    (str "can only hope she's still alive and well.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "19, huh? Fate, do your thing!")
    (proc 15)
    (text-color 7)
@@ -599,6 +652,7 @@
  (seg (? (= T 2) (= O 6))												; #2
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Come on, then! Keep digging for more of")
    (str "Taro's stuff! Memos, notes, anything!")
    (proc 15)
@@ -607,26 +661,32 @@
  (seg (? (= T 2) (= O 7))												; (After seeing a particularly interesting paper in the tin)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc! How about this?")
    (proc 15)
    (sound '|| 0)
    (proc 5)
+       ; Dr. Akiba:
               (str "Ah, that's it! The circuit diagram for" 'br)
    (str "the plasma accumulator! Tanchi, we've got to build")
    (str "it right now!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Come on, it's after midnight! Let's do" 'br)
    (str "this later!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You've got night shift tomorrow, right?")
    (str "Then we're clear to work until morning! C'mon!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Are you for real!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Back to the la") (text "−") (str "Urk!")
    (exec-mem 2816 "VIEW 27 115 50 258,PUT 3 27 115,FREE 3")
 ; PC-98
@@ -642,12 +702,14 @@
  (seg (? (= T 2) (= O 8))												; (When Dr. Akiba first collapses)
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Urrrrgh! Ow! Ow, ow, ow!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 9))												; (After spotting the phone)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hello!? Hello, anyone there?")
    (proc 15)
    (text-color 7)
@@ -658,6 +720,7 @@
  (seg (? (= T 2) (= O 10))												; (After calling the head nurse)
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Oooourgh!!!")
    (proc 15)
    (proc 19))
@@ -669,6 +732,7 @@
    (str "Banging on the cracker tin makes a good sound.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Stop making that racket! It can't be" 'br)
    (str "that much fun to shake it around like that!")
    (proc 15)
@@ -682,6 +746,7 @@
    (str "That's me shuffling the papers.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey, randomly shuffling them around" 'br)
    (str "won't help!")
    (proc 15)
@@ -728,9 +793,11 @@
    (str "case I, uh, pressed to find where the pain was.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Guuurgh... Gwahhhh...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "This is acute appendicitis! We gotta" 'br)
    (str "operate now!")
    (proc 15)
@@ -747,6 +814,7 @@
                (str "Hello, Nurse Center.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Emergency case! Prepare for surgery!")
    (proc 15)
    (proc 10)
@@ -755,6 +823,7 @@
    (str "condition!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "This is just as much an emergency! Aren't" 'br)
    (str "there any free nurses?")
    (proc 15)
@@ -766,6 +835,7 @@
    (str "is available, since he's faking it and all that.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Got it!")
    (proc 15)
    (proc 19)
@@ -784,6 +854,7 @@
    (str "way he'd let me...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey, don't you think about ditching!")
    (proc 15)
    (proc 19))
@@ -797,6 +868,7 @@
  (seg (? (= T 4) (= O 2))												; (After calling the head nurse)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc, hold on best you can!")
    (proc 15)
    (text-color 7)

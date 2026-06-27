@@ -30,43 +30,55 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 1)
+      ; Kirara:
           (str "Ahhh... I can't sleep... Something's" 'br)
   (str "making me feel nervous...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara...Kirara...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Wh-Who is that!?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Shh... It's me, Tanchi...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Why, you! Don't scare me like that!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara, can I sleep next to you?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Why? What's wrong?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "I can't get to sleep for some reason...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Are you gonna do something weird to me?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Perish the thought.")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Fine, then...")
   (proc 15)
   ((cmd 209) 0 5)
   (delay 80 0)
   ((cmd 209) 1 5)
   (proc 2)
+      ; Tanchi:
          (str "Ughh, I drank too much and my head's" 'br)
   (str "swimming... I wonder if Kirara's conked out yet...")
   (proc 15)
@@ -193,6 +205,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Y-You!?")
    (proc 15)
    (proc 11)
@@ -204,6 +217,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's going on here...")
    (proc 15)
    (proc 11)
@@ -215,6 +229,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I mean, I don't NOT like it, but... This" 'br)
    (str "whole thing is awkward...")
    (proc 15)
@@ -223,6 +238,7 @@
    (str "your girlfriend.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Aha...hahaha.")
    (proc 15)
    (proc 11)
@@ -235,26 +251,33 @@
    ((cmd 209) 1 5)
    (sound '|| 2)
    (proc 2)
+       ; Tanchi:
            (str "Kirara...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "No, no, stop! I told you, nothing weird...")
    (proc 15)
    (sound '|| 0)
    (proc 2)
+       ; Tanchi:
            (str "But I like you, Kirara...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "But..but...no!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh Kirara, will you hate me for doing" 'br)
    (str "this...?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Aaahhnnn! N-no! Get your hands off me!")
    (proc 15)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_318.gpc,GPC") (image-mem 1 3)
@@ -265,12 +288,14 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 1)
+       ; Kirara:
            (str "E-eeeeek! It...it's you!!!")
    (proc 15)
    (proc 12)
              (str "Heeheeheehee, busted!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Wh-What do you think you're doing?")
    (proc 15)
    (proc 12)
@@ -278,6 +303,7 @@
    (str "girls are doin' it!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Lemme go! I'll scream!")
    (proc 15)
    (proc 12)
@@ -285,6 +311,7 @@
    (str "your boyfriend sees you like this?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 12)
@@ -292,6 +319,7 @@
    (str "I'll make you feel really good soon...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Ah... Ah...  Noooooooooo!")
    (proc 15)
    ((cmd 209) 0 5)
@@ -309,6 +337,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ah... W-We should stop... This is getting" 'br)
    (str "real bad...")
    (proc 15)
@@ -321,6 +350,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No, no, that's not it, I just...")
    (proc 15)
    (proc 11)
@@ -332,29 +362,36 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ha...haha..hahahaha...")
    (proc 15)
    (sound '|| 0)
    (exec-mem 2816 "GET 7 8 25 44 227")
    (exec-mem 2816 "VIEW 8 25 51 251,OVER 1,PUT 8 8 25,FREE 8")
    (proc 1)
+       ; Kirara:
            (str "Tanchi! Help meeeeee!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "K-Kirara!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Well, I'm sorry! It looks like you're..." 'br)
    (str "busy!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "N-no! It's not what it looks like!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Well, excuse me, then! You two can enjoy" 'br)
    (str "yourselves!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wait just a minute! This is all just a" 'br)
    (str "misunderstanding! A really big one!")
    (proc 15)
@@ -364,6 +401,7 @@
    (str "take our time...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Shut up! Get away from me!")
    (proc 15)
    ((cmd 209) 0 2)

@@ -146,13 +146,16 @@
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
    (text-color 7)
    (proc 2)
+       ; Tanchi:
            (str "Thank goodness! This island isn't deserted")
    (str "after all!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "W-what are we gonna do?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "We're going to have to stay the night!")
    (proc 15)
    ((cmd 209) 0 2)
@@ -164,10 +167,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What an incredible place... How far did we")
    (str "get swept away?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "What if we can't get back?")
    (proc 15)
    (proc 19)
@@ -175,10 +180,12 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "We'll be fine, we can't be that far away" 'br)
    (str "from civilization...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "We're going to live here from now on," 'br)
   (str "aren't we...?")
    (proc 15)
@@ -187,17 +194,21 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I told you, we're fine! Stop worrying so" 'br)
    (str "much.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm not really worried, I'm just concerned")
    (str "about starting a new life here...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I told you, stop thinking about it!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Ahh! Tanchi! What is this?")
    (proc 15)
    (proc 19)
@@ -205,9 +216,11 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "??????")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Look, look! over here!")
    (proc 15)
    (proc 19))
@@ -217,12 +230,14 @@
    (str "I touch the leaf Kirara is wearing.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yes. Yes, that's a fine leaf.")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Hands off!")
    (proc 15)
    (proc 6)

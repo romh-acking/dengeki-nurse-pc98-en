@@ -139,11 +139,13 @@
    (proc 18)
    (proc 11) (proc 12)
    (proc 1)
+       ; Kirara:
            (str "This is all really confusing... I don't" 'br)
    (str "get any of this...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, you're actually taking this lecture" 'br)
    (str "seriously?")
    (proc 15)
@@ -153,10 +155,12 @@
    (proc 18)
    (proc 11) (proc 12)
    (proc 1)
+       ; Kirara:
            (str "Well, everyone else is!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Everyone else is terrified, more likely." 'br)
    (str "You could hear a pin drop.")
    (proc 15)
@@ -165,14 +169,17 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Maybe they're afraid of the giant fan...?")
    (proc 15)
    (proc 11) (proc 12)
    (proc 1)
+       ; Kirara:
            (str "It looks normal to me.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You never know, it could be made of Super-")
    (str "Alloy Z...")
    (proc 15)
@@ -181,6 +188,7 @@
    (str "doing, talking during MY class!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ack, sorry...")
    (proc 15)
    (proc 10)
@@ -192,6 +200,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 152 51 296,PUT 14 27 152,FREE 14")
    (proc 2)
+       ; Tanchi:
            (str "Aw, not them again!")
    (proc 15)
    (proc 10)
@@ -200,10 +209,12 @@
    (proc 11)
    (exec-mem 2816 "PUT 2 5 23")
    (proc 1)
+       ; Kirara:
            (str "Noooo! Lemme go!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, let's see how this plays out so we")
    (str "can figure out what this Reflection Cell is!")
    (proc 15)
@@ -220,10 +231,12 @@
    (proc 15)
    (proc 11) (proc 12)
    (proc 1)
+       ; Kirara:
            (str "What are you doing?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, um, nothing... My legs poking out from")
    (str "under the skirt are cute...")
    (proc 15)
@@ -234,6 +247,7 @@
           (str "Just where do you think you're going!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, um... I gotta go pee?")
    (proc 15)
    (proc 10)

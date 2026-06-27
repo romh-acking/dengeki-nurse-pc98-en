@@ -26,6 +26,7 @@
   ((cmd 204) 43 49)
   ((cmd 209) 1 2)
   (proc 2)
+      ; Tanchi:
           (str "I'm...truly sorry...")
   (proc 15)
   (proc 10)
@@ -33,6 +34,7 @@
    (str "to blame.")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "To think that even the Black Cross was" 'br)
    (str "after her...")
   (proc 15)
@@ -135,6 +137,7 @@
    (str "Elektros.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I should probably hold on to that ring" 'br)
    (str "for now.")
    (proc 15)
@@ -152,21 +155,26 @@
    (proc 15)
    (sound '|| 0)
    (proc 5)
+       ; Dr. Akiba:
               (str "Yes, this is Doctor Akihabara speaking.")
    (proc 15)
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (proc 7)
+       ; Black Nurse:
                 (str "Hi, this is Black Nurse. Sorry to" 'br)
    (str "trouble you during working hours.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "What can I do for you?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Is Tanchi Denpa there?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Oh yes, he's right here, please hold...")
    (str "Hey Tanchi, Black Nurse") (text "−") (str " Woah!")
    (proc 15)
@@ -174,46 +182,58 @@
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
    (proc 2)
+       ; Tanchi:
            (str "Hey!!! Where the hell are you? What did" 'br)
    (str "you do with Nursia?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Now now, no need to go all huffy on" 'br)
    (str "me.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Give Nursia back!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "She's all yours...but only in" 'br)
    (str "exchange for the ring you have.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What do you want us to do!?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Get it delivered to the ruins of" 'br)
    (str "Elektros, if you'd be so kind.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Fine! I'm on my way, but don't you dare" 'br)
    (str "lay a hand on Nursia!")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Oh, but I don't want you to come" 'br)
    (str "over, though.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Say what!?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Tell Dengeki Nurse to come in your" 'br)
    (str "stead.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Why!?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Because I said so.")
    (proc 15)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9")
@@ -232,6 +252,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Is Nursia really going to be all right?")
    (proc 15)
    (proc 10)
@@ -243,6 +264,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "But once they get it...")
    (proc 15)
    (proc 10)
@@ -254,9 +276,11 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Dammit...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Regardless, we need to get Kirara.")
    (proc 15)
    (proc 11)
@@ -264,9 +288,11 @@
    (str "a while, Wani!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "That's odd... Did I miss something?")
    (proc 15)
    (proc 19)
@@ -274,10 +300,12 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'm sorry... I lost my temper earlier..." 'br)
    (str "And scolded her pretty badly...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I see... Ahh, what a pickle.")
    (proc 15)
    (proc 19)
@@ -285,9 +313,11 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'll go to the Elektros ruins myself!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "No no no. That would be a death" 'br)
    (str "sentence!")
    (proc 15)
@@ -295,21 +325,26 @@
            (str "Yah, Wani!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "In any case, we're going to need to" 'br)
    (str "locate Kirara and have her go...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "............")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I'll try using my Plasma Searcher to" 'br)
    (str "locate her electromagnetic signature.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You can go turn the hospital upside" 'br)
    (str "down to find her.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Y-Yes...")
    (proc 15)
    ((cmd 209) 0 2)
@@ -329,6 +364,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Don't panic, son. In times like this," 'br)
    (str "rational thought conquers all.")
    (proc 15)

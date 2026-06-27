@@ -41,9 +41,11 @@
 ; 	Intro begins here...
 
   (proc 2)
+      ; Tanchi:
           (str "Kirara, are you okay!?")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Thanks, I'm still intact. But what" 'br)
   (str "about Ms. Akiko? Did she get hurt?")
   (proc 15)
@@ -197,6 +199,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ms. Akiko, are you okay?")
    (proc 15)
    (proc 10)
@@ -207,6 +210,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hey, do you think you could explain all" 'br)
    (str "that talk about world domination to us?")
    (proc 15)
@@ -218,6 +222,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Aren't these atomic bomb schematics!? What")
    (str "were you thinking!?")
    (proc 15)
@@ -226,6 +231,7 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "AN ATOMIC BOMB!?")
    (proc 15)
    (proc 6)
@@ -237,10 +243,12 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Akiko...we aren't your enemies. You need" 'br)
    (str "to level with us.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Are you really planning on world" 'br)
    (str "domination?")
    (proc 15)
@@ -274,6 +282,7 @@
    (str "feet! I would make them call me Queen!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That sure is a reason to build an atomic" 'br)
    (str "bomb...")
    (proc 15)
@@ -281,6 +290,7 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's kind of sad...")
    (proc 15)
    (proc 6)
@@ -295,6 +305,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So forming the Discipline Committee and" 'br)
    (str "building the Reflection Cell, were those part of" 'br)
    (str "your world domination plans?")
@@ -311,6 +322,7 @@
    (str "Reflection Cell was a symbol of that power...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "But it didn't work out, did it...")
    (proc 15)
    (proc 10)
@@ -327,6 +339,7 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So Akiko, are you still thinking of world" 'br)
    (str "domination?")
    (proc 15)
@@ -334,14 +347,17 @@
           (str "......")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "The shy and reserved Akiko is in the past,")
    (str "you're an assertive person now!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's right, you've become a real" 'br)
    (str "go-getter!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Give yourself some credit, Akiko. You've" 'br)
    (str "got plenty of looks, you know!")
    (proc 15)
@@ -350,6 +366,7 @@
    (str "a dream...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "So no more building scary dangerous")
    (str "nuclear bombs, okay?")
    (proc 15)
@@ -370,6 +387,7 @@
    (str "without permission.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oops, okay... Your taste in underwear is" 'br)
    (str "pretty modest though, just by the way.")
    (proc 15)

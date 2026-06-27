@@ -153,6 +153,7 @@
    (str "I'm far better as a doctor than a racer...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi! Tanchiiiiiiiiii!")
    (proc 15)
    (text-color 7)
@@ -163,15 +164,18 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_433.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! You're okay!")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Of course I'm okay! Like I'd ever" 'br)
    (str "lose to a dolt like that!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "That's Dengeki Nurse for you.")
    (proc 15)
    (proc 19)
@@ -271,10 +275,12 @@
    (str "to me!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh? Oh geeze! Where are you even" 'br)
    (str "standing!?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What a pain in the butt!")
    (proc 15)
    (proc 11)
@@ -282,6 +288,7 @@
    (str "acting tough with that tiny chest of yours!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What-what-whaaaat!? How dare you" 'br)
    (str "bring up the one thing I'm most sensitive about!")
    (proc 15)
@@ -290,6 +297,7 @@
    (str "times as I want! Flatty! Flatty! Flaaaaaaaaaatty!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "YOU! I'm never forgiving you for" 'br)
    (str "that!!! Prepare to face the wrath of the million-" 'br)
    (str "volt nurse!")
@@ -300,6 +308,7 @@
    (str "Attack!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Whoa whoa whoa! You two shouldn't be" 'br)
    (str "fighting in a place like this!")
    (proc 15)
@@ -316,6 +325,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'm fine! I'm firing on all cylinders, so" 'br)
    (str "don't sweat it!")
    (proc 15)
@@ -328,6 +338,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hello? Hello?")
    (proc 15)
    (proc 10)
@@ -337,6 +348,7 @@
            (str "AH!!!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Seriously, what's wrong with you?")
    (proc 15)
    (proc 10)
@@ -348,6 +360,7 @@
    (str "spots on my face are gone!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Well, at least someone's having a good" 'br)
    (str "day.")
    (proc 15)
@@ -356,6 +369,7 @@
    (str "of the race to me!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "The car is rapidly disintegrating, so I'm" 'br)
    (str "totally cool with that!")
    (proc 15)
@@ -368,6 +382,7 @@
    (str "you can!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I don't think that's possible when I'm" 'br)
    (str "already in last place...")
    (proc 15)
@@ -375,16 +390,20 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Seriously, how can you stand like that?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll explain later! Let's take down")
    (str "Senna!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey! What exactly is the plan here?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll finish her in one shot!")
    (proc 15)
    (text-color 1)
@@ -406,9 +425,11 @@
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, that was the wrong car.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's odd.")
    (proc 15)
    (proc 19)
@@ -416,20 +437,24 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I wonder why it missed...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, maybe you need to dial it back a" 'br)
    (str "little.")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'll get it this time for sure!")
    (proc 15)
    (proc 6)
@@ -451,6 +476,7 @@
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
    (proc 2)
+       ; Tanchi:
            (str "I don't know how to bring this up, but you")
    (str "missed again.")
    (proc 15)
@@ -459,27 +485,33 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "............")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Why are you pouting like that?")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "It might be a good idea to quit while" 'br)
    (str "you're behind.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Shut up! It's your weird swerving" 'br)
    (str "that keeps making me miss!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, I don't even have a wing, and the" 'br)
    (str "suspension is next to nonexistent!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "It's fine, I'll get her next time!")
    (proc 15)
    (text-color 1)
@@ -500,9 +532,11 @@
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
    (proc 2)
+       ; Tanchi:
            (str "Wow! And on your first try!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Too easy!!!")
    (proc 15)
    (text-color 1)
@@ -515,9 +549,11 @@
  (seg (? (= T 2) (= O 8))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Whew...somehow we made it...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hah! Piece of cake!")
    (proc 15)
    (proc 19))

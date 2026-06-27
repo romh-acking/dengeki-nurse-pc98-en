@@ -183,9 +183,11 @@
    (str "deeds finally paid off...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Tanchi! Hey, Tanchi!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh?" 'br)
    (text-color 4)
    (exec-mem 34128 0 6 "■" 66 376)
@@ -197,9 +199,11 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, it's just you, Kirara.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Stop spacing out! Seriously,") (text "“") (str "Just me?") (text "”")
    (proc 15)
    (proc 19)
@@ -207,6 +211,7 @@
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ughh... I should take a good look at" 'br)
    (str "Kirara and keep that as a souvenir for the after-" 'br)
    (str "life...")
@@ -236,6 +241,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 2)
+       ; Tanchi:
            (str "Ahh... Before I died, I really wanted to" 'br)
    (str "experience Kirara's mysterious world...")
    (text-color 4)
@@ -252,6 +258,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 1)
+       ; Kirara:
            (str "Stop gawking at me like that!")
    (proc 15)
    (proc 19)
@@ -259,6 +266,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yesterday I accepted all of this in midst" 'br)
    (str "of the insanity... When you think about it," 'br)
    (str "jumping in and racing in F1 is...")
@@ -271,12 +279,14 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "This is all insane...totally insane!")
    (proc 15)
    (proc 11)
           (str "Moguri-san!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Urgh, everything in front of me is pitch-" 'br)
    (str "black...")
    (proc 15)
@@ -296,6 +306,7 @@
           (str "Well then, Moguri-san, do your best!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 11)
@@ -312,6 +323,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Aaaaghhhhhhh!")
    (proc 15)
    (proc 10)
@@ -325,10 +337,12 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... If I die... Don't shed a tear" 'br)
    (str "for me...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "What are you babbling about? We're all" 'br)
    (str "counting on you, so do your best!")
    (proc 15)
@@ -337,9 +351,11 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... Can I have a kiss goodbye?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Oh, don't be such a coward! Geez, you can" 'br)
    (str "get a kiss if you win!")
    (proc 15)
@@ -348,32 +364,41 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Wh-What did you just say?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I said I'd give you a kiss if you win! So" 'br)
    (str "go and win already!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "For real...!?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Am I one to lie?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You swear?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Yes, I swear!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Okay! I'm gonna do it!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Senna, Mansell, it doesn't matter! No" 'br)
    (str "one's getting in front of me!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "...What a simpleton...")
    (proc 15)
    ((cmd 209) 0 2)

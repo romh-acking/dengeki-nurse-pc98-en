@@ -39,6 +39,7 @@
   (str "must return to Planet Elektros...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Nursia, before you go I wanna ask you" 'br)
   (str "something... Are humans really as foolish as your" 'br)
   (str "people take us to be?")
@@ -73,9 +74,11 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
   (proc 1)
+      ; Kirara:
           (str "Maybe fighting really is meaningless...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "I defeated Black Nurse, but that won't" 'br)
   (str "bring back my mother...")
   (proc 15)
@@ -88,6 +91,7 @@
   (str "to the planet of Elektros?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "W-What do you mean?")
   (proc 15)
   (proc 10)
@@ -100,6 +104,7 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
   (proc 1)
+      ; Kirara:
           (str "Please! I'll wait for as long as it takes!")
   (proc 15)
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
@@ -117,6 +122,7 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
   (proc 1)
+      ; Kirara:
           (str "Then... Then take me with you...")
   (proc 15)
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
@@ -125,6 +131,7 @@
   (str "Earth who is important to you, is there not?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str ".........")
   (proc 15)
   (proc 10)
@@ -137,11 +144,13 @@
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
   (proc 1)
+      ; Kirara:
           (str "Goodbye, Nursia... Please... Take care of" 'br)
   (str "my mother.")
   (proc 15)
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
   (proc 2)
+      ; Tanchi:
           (str "Farewell, Nursia...")
   (proc 15)
   (proc 10)
@@ -174,19 +183,23 @@
           (str "She's gone.")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "Yeah...")
   (proc 16)
   (proc 11)
           (str "Are you...lonely?")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "......")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "I'm fine! Starting tomorrow, I'll be back" 'br)
   (str "at work, working hard!")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "I need to follow my mother's nursing" 'br)
   (str "legacy!")
   (proc 16)
@@ -194,25 +207,30 @@
           (str "Are you really okay...?")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "I'm fine... I'm not lonely at all.")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "Back at the hospital, Doc Akiba and Croco" 'br)
   (str "will be there...")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "And so will you, Tanchi!")
   (proc 16)
   (proc 11)
           (str "Kirara...")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "Yes...?")
   (proc 16)
   (proc 11)
           (str "I love you...")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "Huh? What was that? You need to speak up," 'br)
   (str "I couldn't hear you.")
   (proc 16)
@@ -220,18 +238,21 @@
           (str "N-No, it's nothing...")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "C'mon! Tell me!")
   (proc 16)
   (proc 11)
           (str "I said, it's nothing...")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "Hey... Tanchi?")
   (proc 16)
   (proc 11)
           (str "...Yeah?")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "I love you too!")
   (proc 16)
   ((cmd 209) 0 4)

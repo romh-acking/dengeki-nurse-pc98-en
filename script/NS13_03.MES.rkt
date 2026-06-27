@@ -36,12 +36,15 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 1)
+      ; Kirara:
           (str "Taaaanchi! Look look look!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "What is it, why are you yelling?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "It's a crab!")
   (proc 15)
   (proc 19)
@@ -199,11 +202,13 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Don't get all excited catching something" 'br)
    (str "like that! I've always hated crabs, anyway...")
    (proc 15)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "But why? Aren't crabs cute?")
    (proc 15)
    (proc 6)
@@ -213,23 +218,28 @@
    (proc 18)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "What's with the crab hate?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "When I was a kid, a crab got into my swim" 'br)
    (str "trunks!")
    (proc 15)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Wow, what a dark past!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, shut up!")
    (proc 15)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I want to show it to Doc Akiba and Croco!")
    (proc 15)
    (proc 6)
@@ -239,6 +249,7 @@
    (proc 18)
    (proc 11)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Speaking of which... Where did those two" 'br)
    (str "get to?")
    (proc 15)
@@ -247,11 +258,13 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Those two have their hands full blowing up")
    (str "that inflatable raft.")
    (proc 15)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Oh boy, a boat! I can't wait! Count me in!")
    (proc 15)
    (proc 6)
@@ -260,6 +273,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hey, uh... Doesn't that swimsuit run a" 'br)
    (str "little big?")
    (proc 15)
@@ -267,11 +281,13 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Y-Yeah... I was busy, so I didn't have" 'br)
    (str "time to go buy one...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Well, it'll probably be just fine once" 'br)
    (str "your chest fills out.")
    (proc 15)
@@ -279,6 +295,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Hey, put a sock in it! I'm pretty self-" 'br)
    (str "conscious about my chest size, you know!")
    (proc 15)
@@ -289,6 +306,7 @@
    (proc 18)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I hope Doc Akiba and Croco arrive soon!")
    (proc 15)
    (proc 6)
@@ -302,6 +320,7 @@
    (proc 15)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Ahhh! You've done it now!")
    (proc 15)
    (proc 6)

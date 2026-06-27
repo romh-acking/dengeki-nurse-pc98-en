@@ -30,15 +30,18 @@
   ((cmd 209) 1 2)
   (proc 10)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
              (str "Oh, good timing, Tanchi. I just located")
   (str "Kirara.")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "No way! Tell me where she is!")
   (proc 15)
   (proc 10)	; Dr. Akiba
   (proc 5)
+      ; Dr. Akiba:
              (str "What's gotten into you, with all the" 'br)
   (str "frantic gesticulation?")
   (proc 15)
@@ -127,27 +130,33 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc! I've got massive news!")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Mmm? What is it now?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Well, it's like this, and like that, and" 'br)
    (str "blah blah blah...")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "I see... Just as I suspected.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Suspected WHAT?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Ever since she arrived at the hospital,")
    (str "I knew I recognized that face...")
    (sound '|| 0)
@@ -161,6 +170,7 @@
    (proc 18)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Not only that, she brought my favorite" 'br)
    (str "okonomiyaki...")
    (proc 15)
@@ -169,23 +179,28 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "W-Why didn't you say anything?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Well, she chose to keep it a secret. I" 'br)
    (str "supposed that she had her reasons...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, come on!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Do you have any idea how long Kirara has" 'br)
    (str "been searching for her mother?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "There are many things Kirara still has" 'br)
    (str "to accomplish.")
    (proc 15)
@@ -196,6 +211,7 @@
    (proc 18)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "And like it or not, fighting is one of" 'br)
    (str "those things...")
    (proc 15)
@@ -204,28 +220,34 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So to hell with Kirara's feelings, is that")
    (str "it?")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str ".........")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Tell me where she is!")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "She's at the pachinko parlor by the" 'br)
    (str "station, UN International Hall.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I'm gonna go get her! Please call Mitsuko!")
    (proc 15)
    (proc 10)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str ".........")
    (proc 15)
    ((cmd 209) 0 2)

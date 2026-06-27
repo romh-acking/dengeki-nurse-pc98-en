@@ -40,9 +40,11 @@
   ((cmd 209) 1 2)
   ((cmd 204) 40 49)
   (proc 1)
+      ; Kirara:
           (str "Tanchi! Make sure you get a good picture!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Geez... Man, what a lucky gal...")
   (proc 15)
   (proc 19)
@@ -188,14 +190,17 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, now show me a big smile.")
    (proc 15)
    (proc 13)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Like this...?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "No, that's an angry face.")
    (proc 15)
    (proc 19))
@@ -203,20 +208,24 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Hurry up and take it already!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hold on, I gotta set the focus...")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What's focus?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Just stay quiet and count to ten!")
    (proc 15)
    (proc 19)
@@ -224,11 +233,13 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So what do you wanna do, Kirara? Can they" 'br)
    (str "join in?")
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Do whatever you like, Tanchi.")
    (proc 15)
    (proc 6)
@@ -237,6 +248,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Okay, then... Move on in, move on in.")
    (proc 15)
    (proc 10)
@@ -247,6 +259,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "No, not back there, move forward a bit.")
    (proc 15)
    (proc 10)
@@ -264,6 +277,7 @@
    (str "be fighting!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "??????")
    (proc 15)
    (proc 11)
@@ -275,6 +289,7 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Hurry up and take the picture already!")
    (proc 15)
    (proc 6)
@@ -364,10 +379,12 @@
 ;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    (proc 1)
+       ; Kirara:
            (str "Eeeeeek! It started moving by itself!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Wha-aaaaaaaaaaaaaaa!?")
    (proc 15)
    ((cmd 209) 0 2)
@@ -381,6 +398,7 @@
    (proc 18)
    (proc 13)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Tanchi! Where are you going? Hurry up and" 'br)
    (str "take the picture!")
    (proc 15)

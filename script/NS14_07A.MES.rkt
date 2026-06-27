@@ -44,10 +44,12 @@
   (text '|34368| "−") (str "The Next Day, Day 2 of Qualifying at Suzuka") (text "−")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Good morning.")
   (proc 15)
   (proc 12)	; Happy
   (proc 1)
+      ; Kirara:
           (str "Good morniiiiiing!")
   (proc 15)
   (proc 6)
@@ -248,6 +250,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong? You're looking real serious.")
    (proc 15)
    (proc 10)
@@ -263,6 +266,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I freaking knew it! You did something" 'br)
    (str "weird to them, didn't you!?")
    (proc 15)
@@ -279,6 +283,7 @@
    (str "first thing in the morning.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So what did you do?")
    (proc 15)
    (proc 11)
@@ -293,6 +298,7 @@
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I have some stomach medicines that could" 'br)
    (str "help out!")
    (proc 15)
@@ -301,16 +307,19 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, make me a sandwich! Onigiri is" 'br)
    (str "perfectly acceptable too!")
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Hey, hey, those two not being here is a" 'br)
    (str "problem, right?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Don't change the subject!!!")
    (proc 15)
    (proc 10)
@@ -323,15 +332,18 @@
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "So that's the case... Sponsors are that" 'br)
    (str "important in the world of F1.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh? You've been reading up on things?")
    (proc 15)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I read a whole bunch of F1 books" 'br)
    (str "yesterday, and even memorized all the drivers'" 'br)
    (str "faces!")
@@ -341,6 +353,7 @@
              (str "I've got it!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You've got what?")
    (proc 15)
    (proc 19)
@@ -362,6 +375,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Whaaaaa? ME?")
    (proc 15)
    (proc 6)
@@ -380,6 +394,7 @@
    (proc 18)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Hey... Tanchi, what should I do here...?")
    (proc 15)
    (proc 6)
@@ -387,6 +402,7 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Erm, but what if someone gets sick...?")
    (proc 15)
    (proc 10)
@@ -394,10 +410,12 @@
    (str "thing about our team is how healthy we are.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So Kirara, what do YOU want to do?")
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Hmm... I could give it a try...")
    (proc 15)
    (proc 6)
@@ -428,6 +446,7 @@
    (proc 18)
    (proc 12)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Ha ha ha... This is making me kind of" 'br)
    (str "nervous...")
    (proc 15)
@@ -439,6 +458,7 @@
              (str "Something's off here...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong?")
    (proc 15)
    (proc 10)
@@ -446,17 +466,20 @@
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Is something wrong with the car? The" 'br)
    (str "engine? The gearbox?")
    (proc 15)
    (proc 6)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Or maybe the downforce isn't set" 'br)
    (str "correctly?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, stop throwing around random terms you")
    (str "just learned last night!")
    (proc 15)
@@ -466,6 +489,7 @@
    (proc 18)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "What's wrong with Moguri?")
    (proc 15)
    (proc 6)
@@ -473,6 +497,7 @@
  (seg (? (= T 2) (= O 11))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Maybe the car really is acting up?")
    (proc 15)
    (proc 10)
@@ -488,10 +513,12 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Amazing! You can talk through all of that?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What, you didn't know? All that studying" 'br)
    (str "you did was just a cram session...")
    (proc 15)

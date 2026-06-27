@@ -37,16 +37,19 @@
            (text-reset 15)
            (sound '|| 0)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "What is this...?")
            (proc 15)
            (proc 6)
            (proc 2)
+               ; Tanchi:
                    (str "Some sort of a huge hole?")
            (proc 15)
            (proc 10)
                    (str "Eeeeeek!")
            (proc 15)
            (proc 2)
+               ; Tanchi:
                    (str "Nursia!")
            (proc 15)
            (text-color 7)
@@ -54,12 +57,14 @@
            (str "into the hole!")
            (proc 15)
            (proc 2)
+               ; Tanchi:
                    (str "Kirara... What do we do?")
            (proc 15)
            (proc 3)
            (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "We chase after her!")
            (proc 15)
            (proc 6)
@@ -96,6 +101,7 @@
            (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "Hey, that's my line!")
            (proc 15)
            (proc 6)
@@ -107,6 +113,7 @@
            (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "Still carrying around that little" 'br)
            (str "kid's yo-yo, are you?")
            (proc 15)
@@ -119,6 +126,7 @@
            (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "Oh, please! Let's just get on with" 'br)
            (str "it!")
            (proc 15)
@@ -158,15 +166,17 @@
               (text-frame 3 324 52 379)
               (text-reset 15)
               (proc 0)
+                  ; Dengeki Nurse:
                              (str "What is this? Some sort of TV" 'br)
               (str "remote?")
               (proc 15)
               (proc 6)
               (proc 2)
+                  ; Tanchi:
                       (str "No... Maybe for a VCR?")
               (proc 15)
-              (proc 9) (proc 11)	; Nursia
-              (proc 10)
+              (proc 9) (proc 11) (proc 10)
+                  ; Nursia:
                       (str "Oh, that's the controller that disables" 'br)
               (str "the Psycho Barrier!")
               (proc 15)
@@ -216,6 +226,7 @@
            (str "you, Dengeki Nurse!")
            (proc 15)
            (proc 2)
+               ; Tanchi:
                    (str "Oh damn, it's Guillotine Nurse!")
            (proc 15)
            (text-color 5)
@@ -227,6 +238,7 @@
            (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "You shut your mouth! All you can" 'br)
            (str "ever do is guillotine, guillotine, guillotine!")
            (proc 15)
@@ -263,16 +275,19 @@
               (exec-mem 6656 8)
               (load-mem "cmd¥cappear.tcm" 6656)
               (proc 2)
+                  ; Tanchi:
                       (str "Wh-What's this?")
               (proc 15)
-              (proc 9) (proc 11)	; Nursia
+              (proc 9) (proc 11)
               (text-frame 3 324 52 379)
               (text-reset 15)
               (proc 10)
+                  ; Nursia:
                       (str "It's the Elektros Crest!")
               (proc 15)
               (proc 14)
               (proc 2)
+                  ; Tanchi:
                       (str "Okay, sounds good! Grabbing it!")
               (proc 15)
               (text-color 7)
@@ -328,6 +343,7 @@
            (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "Hahahahhah!")
            (proc 15)
            (proc 6)
@@ -339,6 +355,7 @@
            (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
            (proc 4)
            (proc 0)
+               ; Dengeki Nurse:
                           (str "That silly pose! You seriously" 'br)
            (str "think you can beat me, putting that kind of foot" 'br)
            (str "forward?")
@@ -377,18 +394,21 @@
               (text-frame 3 324 52 379)
               (text-reset 15)
               (proc 2)
+                  ; Tanchi:
                       (str "Hey, what's this random object?")
               (proc 15)
-              (proc 9) (proc 11)	; Nursia
-              (proc 10)
+              (proc 9) (proc 11) (proc 10)
+                  ; Nursia:
                       (str "Looks like a key...")
               (proc 15)
               (proc 14)
               (proc 0)
+                  ; Dengeki Nurse:
                              (str "I've seen a key like this before...")
               (str "Hey! This looks like the key to my room!")
               (proc 15)
               (proc 2)
+                  ; Tanchi:
                       (str "Okay, whatever, it might come in handy." 'br)
               (str "Let's take it.")
               (proc 15)
@@ -470,6 +490,7 @@
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Looks like there's nothing here.")
    (proc 15)
    (proc 6)
@@ -481,10 +502,12 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Stop touching my butt!!!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "But, but come on... It's not like it's" 'br)
    (str "going to wear out or anything...")
    (proc 15)
@@ -492,6 +515,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "But it totally will!")
    (proc 15)
    (proc 6)
@@ -532,8 +556,8 @@
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Sorry, but we'll have to head out to the" 'br)
    (str "hallway to save...")
    (proc 15)

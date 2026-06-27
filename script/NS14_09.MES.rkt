@@ -58,6 +58,7 @@
   (str "The F1 Japan GP has begun!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Waaaaagh! It's started! But I can't see" 'br)
   (str "the other cars!")
   (proc 15)
@@ -65,6 +66,7 @@
             (str "Nice start, Tanchi!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Oh wait, yeah! That means I'm in the lead!")
   (proc 15)
   (proc 10)
@@ -72,6 +74,7 @@
   (str "They'll a move at the first corner, so stay sharp!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Got it! I'm taking home the win, just" 'br)
   (str "leave it to me!")
   (proc 15)
@@ -87,6 +90,7 @@
   (proc 15)
   (proc 12)	; Happy
   (proc 1)
+      ; Kirara:
           (str "That's because there's nothing going" 'br)
   (str "through his brain!")
   (proc 15)
@@ -102,6 +106,7 @@
   (proc 15)
   (proc 12)	; Happy
   (proc 1)
+      ; Kirara:
           (str "Oh! I'm a nurse, how can I help you?")
   (proc 15)
   (proc 6)
@@ -110,6 +115,7 @@
   (proc 15)
   (proc 12)	; Happy
   (proc 1)
+      ; Kirara:
           (str "Oh, um, it's a long story...")
   (proc 15)
   (proc 6)
@@ -128,6 +134,7 @@
   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "This is your definition of collapsed??")
   (proc 15)
   (proc 6)
@@ -150,6 +157,7 @@
   (sound '|| 0)
   (sound '|se | 26)
   (proc 1)
+      ; Kirara:
           (str "!!!!!!")
   (proc 15)
   (proc 6)
@@ -160,6 +168,7 @@
   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Tanchi's in danger!")
   (proc 15)
   ((cmd 209) 0 2)

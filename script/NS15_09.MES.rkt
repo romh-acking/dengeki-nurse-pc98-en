@@ -176,6 +176,7 @@
    (str "stairs.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm so sorry. This all happened because I" 'br)
    (str "was careless...")
    (proc 15)
@@ -184,6 +185,7 @@
    (str "Black Cross Society would rear its ugly head.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "W-What do you mean?")
    (proc 15)
    (proc 10)
@@ -201,6 +203,7 @@
    (str "doesn't know how to handle it.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You... You're...!")
    (proc 15)
    (proc 10)
@@ -208,6 +211,7 @@
    (str "Inazuma... Kirara's mother.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wh-What!? Why didn't you say anything!?")
    (proc 15)
    (proc 12)
@@ -256,6 +260,7 @@
    (str "but suffering.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You can't put this on yourself. The Black" 'br)
    (str "Cross Society are the real monsters here.")
    (proc 15)
@@ -267,6 +272,7 @@
    (str "Black Cross twisted me into something else...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You know that's not true!")
    (proc 15)
    (proc 12)
@@ -277,6 +283,7 @@
    (str "the Black Cross would make a move...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str ".........")
    (proc 15)
    (proc 12)
@@ -288,12 +295,14 @@
    (str "Help Kirara to forget it all.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str ".........")
    (proc 15)
    (proc 12)
             (str "I'm counting on you, Tanchi.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "W-Wait a minute! Wait! Mom, where are you" 'br)
    (str "going?")
    (proc 15)

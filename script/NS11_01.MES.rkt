@@ -289,10 +289,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc... How long are you gonna keep at this")
    (str "experiment?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "As long as it takes, boyo.")
    (proc 15)
    (proc 19)
@@ -300,16 +302,20 @@
  (seg (? (= T 2) (= O 1))												; (When Tanchi decides to ask about the experiment)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "By the way... What's the goal of this" 'br)
    (str "experiment?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You want to know?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Please.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "No.")
    (proc 15)
    (proc 19)
@@ -317,9 +323,11 @@
  (seg (? (= T 2) (= O 2))												; #2
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's with the secrecy!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Explaining it would take too long.")
    (proc 15)
    (proc 19)
@@ -327,49 +335,61 @@
  (seg (? (= T 2) (= O 3))												; #3
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Come on, man, just tell me!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Do me one favor and I'll spill the" 'br)
    (str "beans. Sound good?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm listening...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "This afternoon, the Minister of Foreign")
    (str "Affairs was admitted here, correct?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, the big faker's pretending he's" 'br)
    (str "sick.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "We're saying it's a heart condition," 'br)
    (str "but he's just trying to duck corruption" 'br)
    (str "allegations.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Fine, so what's the favor?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I need to hold a press conference where")
    (str "I tell something like 800 lies. So I'd like you to")
    (str "step in as acting director and do it instead.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "I'm not the lying type... You, however,")
    (str "are perfect for the role.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "......Fine, fine, I'll do it. Now, the" 'br)
    (str "purpose of the experiment?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "It is...to do battle against a terrible")
    (str "foe...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "...A terrible what?")
    (proc 15)
 
@@ -409,9 +429,11 @@
  (seg (? (= T 2) (= O 4))												; #4
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "How terrible is this foe, exactly?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Terrible or not terrible...hmmm?")
    (proc 15)
    (proc 19)
@@ -419,6 +441,7 @@
  (seg (? (= T 2) (= O 5))												; #5
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hmmmmmmmmmmmm?")
    (proc 15)
    (proc 19)
@@ -426,21 +449,26 @@
  (seg (? (= T 2) (= O 6))												; (After Tanchi looks down at his own chest)
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Tanchi, where'd you get that pendant?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, I found it when I was organizing the" 'br)
    (str "archives. Looks nice, doesn't it?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I was thinking there might be a girl" 'br)
    (str "somewhere in the world who's got the other half," 'br)
    (str "and we're destined to get it on...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "We must go to the archives immediately!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Whuh?")
    (proc 15)
    (proc 19)
@@ -448,14 +476,17 @@
  (seg (? (= T 2) (= O 7))												; #2
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Where exactly in the archives you found")
    (str "that pendant, I must know! Tell me!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, let's call it a day already... I've" 'br)
    (str "got the night shift again tomorrow...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "That doesn't matter! We must go right" 'br)
    (str "now!")
    (proc 15)
@@ -464,6 +495,7 @@
  (seg (? (= T 2) (= O 8))												; #3
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "What're you waiting for? To the" 'br)
    (str "archives!")
    (proc 15)
@@ -471,6 +503,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
    (branch-random
     (</>
      (/ (str "Hey! The experiment isn't over yet! We" 'br "have a million volts to discharge"))
@@ -482,10 +515,12 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey, the experiment isn't over yet!" 'br)
    (str "Where do you think you're going!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, uhh... I, um...gotta g")
    (branch-random
     (</>
@@ -495,12 +530,14 @@
    (str "...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Be patient for once!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 1))												; (When Dr. Akiba insists on going to the Archives)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Fine, fine... It's not like I've got any" 'br)
    (str "choice in the matter. Let's go to the archives.")
    (proc 15)

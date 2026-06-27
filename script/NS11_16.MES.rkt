@@ -49,13 +49,16 @@
   (str "the Doc likes to nap in.")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
             (str "How fares the Minister?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "He's conked out in the next room. We can" 'br)
   (str "keep an eye on him, so he's okay for now.")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Don't let your guard down! Guillotine" 'br)
   (str "Nurse is an unholy monster!")
   (proc 15)
@@ -155,12 +158,14 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Is Guillotine Nurse really that bad?")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Her hobby is chopping up anything she can.")
    (proc 15)
    (proc 6)
@@ -169,41 +174,51 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc, gimme the scoop on Dengeki Nurse!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Hmm, perhaps you should know as well...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "We humans carry a small static charge," 'br)
    (str "but Kirara's constitution is extra powerful.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "And with the power of my plasma wave" 'br)
    (str "device, it sucks the plasma directly out of the" 'br)
    (str "air.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "The plasma waves and Kirara's static" 'br)
    (str "charge combine, creating a million-volt plasma" 'br)
    (str "barrier!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "...That's a new theory...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "In other words, her million-volt plasma")
    (str "armor has created a nurse that is indestructible!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "And I've equipped her with the weapons" 'br)
    (str "I've been readying for this very day!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "And that's how we have...the Dengeki" 'br)
    (str "Nurse!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I don't...think...I get it...but yes, wow,")
    (str "it sounds amazing...")
    (proc 15)
@@ -212,36 +227,44 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "What do you think? In awe of my" 'br)
    (str "greatness?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "...")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "And that costume...is that...your thing," 'br)
    (str "Doc?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Well, it's part of it. But not the only")
    (str "reason!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
              (str "Ideally, to increase electrical" 'br)
    (str "resistance, it'd be best to go fully nude.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah! Yeah, I think so too!")
    (proc 15)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Cut that out! You two...")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
              (str "Well, at her own request, she's only" 'br)
    (str "wearing the bare minimum.")
    (proc 15)
@@ -250,9 +273,11 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
              (str "Shall I explain her weapons to you?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Er, no, that's okay.")
    (proc 15)
    (proc 19))
@@ -263,6 +288,7 @@
    (proc 15)
    (proc 10)	; Happy
    (proc 1)
+       ; Kirara:
            (str "What's up with the weird dance?")
    (proc 15)
    (proc 6)
@@ -270,12 +296,14 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Come on, Kirara, let's jet outta here!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What? Where are we going at this hour?")
    (proc 15)
    (proc 6)
@@ -283,14 +311,17 @@
     (</>
      (/
       (proc 2)
+          ; Tanchi:
               (str "There's a special place men and women go," 'br)
       (str "yeah?")
       (proc 15)
       (proc 10)	; Happy
       (proc 1)
+          ; Kirara:
               (str "Oh, you mean the convenience store!"))
      (/
       (proc 2)
+          ; Tanchi:
               (str "How about an evening drive to the" 'br)
       (str "amusement park?")
       (proc 15)
@@ -298,14 +329,17 @@
       (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
       (proc 4)
       (proc 1)
+          ; Kirara:
               (str "Uhhh, I'm not so sure about that. Isn't a" 'br)
       (str "place like that better during the daytime?"))
      (/
       (proc 2)
+          ; Tanchi:
               (str "How about we go to the linen room?")
       (proc 15)
       (proc 11)	; Angry
       (proc 1)
+          ; Kirara:
               (str "As if! You're not dragging me there!"))))
    (proc 15)
    (proc 6)
@@ -313,6 +347,7 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'll crash for a bit in the next room" 'br)
    (str "over.")
    (proc 15)

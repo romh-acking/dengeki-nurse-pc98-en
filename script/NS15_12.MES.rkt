@@ -28,9 +28,11 @@
   ((cmd 204) 68 72)
   ((cmd 209) 1 2)
   (proc 5)
+      ; Dr. Akiba:
              (str "You took your sweet time.")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Sorry, there was a lot to unpack.")
   (proc 15)
   (proc 19)
@@ -156,6 +158,7 @@
    (proc 15)
    (proc 10)	; Sad
    (proc 1)
+       ; Kirara:
            (str "Mom...!")
    (proc 15)
    (proc 6)
@@ -178,9 +181,11 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Doc, where's Mitsuko?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Ah, well, you see...")
    (proc 15)
    (text-color 7)
@@ -192,15 +197,18 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 5)
+       ; Dr. Akiba:
               (str "Give this a read.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "W-What happened!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Mitsuko is gone... And it looks like" 'br)
    (str "she took the ring...")
    (proc 15)
@@ -209,38 +217,47 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "She went to the Elektros ruins, didn't" 'br)
    (str "she!?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Most likely, a bit reckless. but...")
    (proc 15)
    (proc 11)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "I'm going!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You are?")
    (proc 15)
    (proc 11)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "I'm going to finish Black Nurse!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Then I'm going too!")
    (proc 15)
    (proc 11)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "But this isn't your fight!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I'm responsible for Nursia's kidnapping!" 'br)
    (str "And... And...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I don't want you doing this alone, Kirara.")
    (str "Even if I just get in the way...")
    (proc 15)
@@ -248,6 +265,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Tanchi...")
    (proc 15)
    ((cmd 209) 0 2)

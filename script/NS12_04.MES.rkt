@@ -146,11 +146,13 @@
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Why do you have that big grin on your" 'br)
    (str "face?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Uh, it's nothing...")
    (proc 15)
    (proc 19))
@@ -172,6 +174,7 @@
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Why are you staring at me like that?")
    (proc 15)
    (proc 6)
@@ -180,6 +183,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yes, no abnormalities. Your development is")
    (str "coming along nicely.")
    (proc 15)
@@ -187,10 +191,12 @@
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Hey hey, are you actually enjoying this?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Shh, just record the data.")
    (proc 15)
    (proc 19)
@@ -198,21 +204,25 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Underbust, 70cm... Top, 83cm... That would")
    (str "make it a B-cup, I guess...")
    (proc 15)
    (proc 3) (proc 12) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "There's nowhere to write that down here.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Just jot it in the margins.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, you're getting a physical later" 'br)
    (str "too.")
    (proc 15)
@@ -220,25 +230,30 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Huh? Me?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You can't manage someone's health without" 'br)
    (str "being aware of your own. Any medical professional" 'br)
    (str "knows that.")
    (proc 15)
    (proc 3) (proc 12) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "This sounds kind of...embarrassing.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "That's fine, it'll just be the two of" 'br)
    (str "us...")
    (proc 15)
    (proc 3) (proc 11) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    ((cmd 209) 0 2)
@@ -255,6 +270,7 @@
                (str "Ahhhh! Cold!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh, me? Am I cold?")
    (proc 15)
    (proc 10)

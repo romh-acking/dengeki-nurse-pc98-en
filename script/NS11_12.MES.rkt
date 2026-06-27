@@ -152,12 +152,14 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong?")
    (proc 15)
    (proc 10)
          (str "I'm sorry, it's my chronic illness...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That's no good! Fortunately, I'm a doctor.")
    (str "Let me examine you.")
    (proc 15)
@@ -169,6 +171,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Please hold on a second, if you can. I" 'br)
    (str "need to take care of something first.")
    (proc 15)
@@ -184,6 +187,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Oh, all right, then. Here won't do, let's" 'br)
    (str "go to the examination room.")
    (proc 15)
@@ -191,6 +195,7 @@
          (str "We just met... I'm sorry to trouble you...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Not at all, call it a fateful encounter!")
    (proc 15)
    (proc 19)
@@ -238,6 +243,7 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "All right then! On my back!")
    (proc 15)
    (proc 10)

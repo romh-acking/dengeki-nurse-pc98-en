@@ -114,33 +114,35 @@
         (set-reg 666 #t)
         (set-var D 0)		; New addition: Variable set to ensure you don't have coins going into the dungeon, thanks ValleyBell for figuring this out
 
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "The castle has six floors, and one of them")
         (str "has a control room.")
         (proc 15)
         (proc 14)
         (proc 2)
+            ; Tanchi:
                 (str "Control room? What does any of this" 'br)
         (str "mean...!?")
         (proc 15)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "Well, you can use the warp device in each" 'br)
         (str "room to move between the floors.")
         (proc 15)
         (proc 14)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "If you don't warp correctly, you won't be" 'br)
         (str "able to reach the control room.")
         (proc 15)
         (proc 14)
         (proc 2)
+            ; Tanchi:
                 (str "So...do you know how to warp correctly?")
         (proc 15)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "It was written in the ancient Elektros" 'br)
         (str "scripts, so... I forgot.")
         (proc 15)
@@ -167,6 +169,7 @@
         (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
         (proc 4)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "Please be a good girl and step" 'br)
         (str "aside!")
         (proc 15)
@@ -178,6 +181,7 @@
         (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
         (proc 4)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "So that's how it's gonna be..." 'br)
         (str "You'd be a lot happier living like a normal high" 'br)
         (str "school girl, you know...")
@@ -215,6 +219,7 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 0)
+            ; Dengeki Nurse:
                        (str "Okay, so what do we do now?")
         (proc 15)
         (proc 6))))
@@ -291,33 +296,37 @@
     (</>
      (/
       (proc 2)
+          ; Tanchi:
               (str "Kirara, are you into dungeons?")
       (proc 15)
       (proc 3)
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
                      (str "I hate dungeons in games, but real" 'br)
       (str "ones get me kinda excited!")
       (proc 15)
       (proc 6))
      (/
       (proc 2)
+          ; Tanchi:
               (str "Nursia, can't you remember anything about" 'br)
       (str "the control room?")
       (proc 15)
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "I'm sorry... That's the one thing I just" 'br)
       (str "don't know about.")
       (proc 15)
       (proc 14))
      (/
       (proc 2)
+          ; Tanchi:
               (str "Nursia, how's your constitution?")
       (proc 15)
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "I'm feeling a little better. Maybe it's" 'br)
       (str "the fresh Elektros air?")
       (proc 15)
@@ -333,22 +342,24 @@
       (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Hey! Don't touch my butt!")
       (proc 15)
       (proc 6)
       (proc 2)
+          ; Tanchi:
               (str "Oh, it's just... It's been a while...")
       (proc 15))
      (/
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "Tanchi... If you dance in a dungeon, it" 'br)
       (str "brings out the ghosts.")
       (proc 15)
       (proc 14))
      (/
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "Doctor Tanchi...  That hand better not be" 'br)
       (str "doing what I think it is.")
       (proc 15)
@@ -357,6 +368,7 @@
       (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
                      (str "TANCHI!")
       (proc 15)
       (proc 6))))
@@ -496,8 +508,8 @@
 
 ; 		Without crest
         (/
-         (proc 9) (proc 11)	; Nursia
-         (proc 10)
+         (proc 9) (proc 11) (proc 10)
+             ; Nursia:
                  (str "That room's been sealed by the power of" 'br)
          (str "Elektros. Without an Elektros Crest, you can't go" 'br)
          (str "inside...")
@@ -605,8 +617,8 @@
 
 	; without release controller
      (/
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "This room has a psycho barrier. We can't" 'br)
       (str "enter without its release controller.")
       (proc 15)
@@ -639,8 +651,8 @@
    (branch-random
     (</>
      (/
-      (proc 9) (proc 11)	; Nursia
-      (proc 10)
+      (proc 9) (proc 11) (proc 10)
+          ; Nursia:
               (str "Doctor Tanchi, please be careful...")
       (proc 15)
       (proc 14))
@@ -649,6 +661,7 @@
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Wow, this is getting me fired up!")
       (proc 15)
       (proc 6))
@@ -657,6 +670,7 @@
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
       (proc 4)
       (proc 0)
+          ; Dengeki Nurse:
                      (str "Let's go inside already!")
       (proc 15)
       (proc 6))))))

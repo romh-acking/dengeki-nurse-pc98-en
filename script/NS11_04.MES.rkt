@@ -129,6 +129,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hey! This is an emergency! We gotta get to")
    (str "surgery! Help me out here!")
    (proc 15)
@@ -140,6 +141,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What do you mean,") (text "“") (str "Huh?") (text "”") (str "Let's go!")
    (proc 15)
    (proc 10)
@@ -150,6 +152,7 @@
  (seg (? (= T 2) (= O 2))												; #2
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "He's just faking, ignore him! Every second")
    (str "counts here!")
    (proc 15)
@@ -174,6 +177,7 @@
           (str "Eek!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Come on, hurry!")
    (proc 15)
    (proc 19)
@@ -181,12 +185,14 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Follow me! There's no time!")
    (proc 15)
    (proc 10)
           (str "...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What are you doing? Come with me!")
    (proc 15)
    (proc 19))

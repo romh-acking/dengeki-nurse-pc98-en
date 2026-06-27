@@ -27,14 +27,17 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 1)
+      ; Kirara:
           (str "Hey hey hey, you haven't found the video" 'br)
   (str "yet?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Kirara, let's call it off... If the tape's")
   (str "at the bottom of the ocean, we're safe...probably.")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Mmmm. And the seawater would likely" 'br)
   (str "ruin it, anyway.")
   (proc 15)
@@ -42,14 +45,17 @@
          (str "Wa-nii...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Nope, not accepting that an answer! If" 'br)
   (str "that video got out, I'd never be able to get" 'br)
   (str "married!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Yeah, I'd be okay with that...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Whaaaaaaa! Hurry up!! Find it, find it," 'br)
   (str "find it!")
   (proc 15)

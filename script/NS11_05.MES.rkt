@@ -104,6 +104,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "I'll prepare for the surgery! You handle" 'br)
    (str "the initial procedure!")
    (proc 15)
@@ -115,6 +116,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Appendicitis! You know the procedure," 'br)
    (str "right?")
    (proc 15)
@@ -123,6 +125,7 @@
    (str "can't blow my cover!)")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What were you saying there?")
    (proc 15)
    (text-color 4)

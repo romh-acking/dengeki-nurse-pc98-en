@@ -182,6 +182,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hello hello!")
    (proc 15)
    (proc 10)
@@ -191,6 +192,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Are you two new here?")
    (proc 15)
    (proc 10)
@@ -198,6 +200,7 @@
    (str "todaaay!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Well, I'm the guy in charge of internal" 'br)
    (str "medicine. You can call me Tanchi Denpa!")
    (proc 15)
@@ -214,6 +217,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What are your names?")
    (proc 15)
    (proc 10)
@@ -221,6 +225,7 @@
    (str "my blood type is A, and I'm into computer games!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh, you don't seem like an A. What kind" 'br)
    (str "of games do you like?")
    (proc 15)
@@ -228,6 +233,7 @@
           (str "Well,") (text "“") (str "A") (text "Ⅲ”") (str "was a lot of fun! (LOL)") ; the "lol" is part of the original script, i swear
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What about you?")
    (proc 15)
    (proc 11)
@@ -238,6 +244,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Look, I know we just met, but...do you" 'br)
    (str "think you could hook me up with your phone number?")
    (proc 15)
@@ -248,6 +255,7 @@
            (str "What would you even do with her number?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Um, um... Collecting phone numbers is...my")
    (str "hobby.")
    (proc 15)
@@ -275,18 +283,21 @@
       (str "nowhere!")
       (proc 15)
       (proc 2)
-      (str "But... I didn't touch you!"))
+          ; Tanchi:
+              (str "But... I didn't touch you!"))
      (/
       (str "No, no! No groping my chest!")
       (proc 15)
       (proc 2)
-      (str "But... But I'm not!!!")) ; Congratulations to this line for winning first prize in the "3rd National Text Identifier Hide-and-Seek"
+          ; Tanchi:
+              (str "But... But I'm not!!!")) ; Congratulations to this line for winning first prize in the "3rd National Text Identifier Hide-and-Seek"
      (/
       (str "Eeeeek! You can't just whip that out" 'br)
       (str "and put it in there!!!")
       (proc 15)
       (proc 2)
-      (str "But... I'm not doing anything!"))))
+          ; Tanchi:
+              (str "But... I'm not doing anything!"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
@@ -299,6 +310,7 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Alright, why don't the three of us go" 'br)
    (str "somewhere naughty then?")
    (proc 15)

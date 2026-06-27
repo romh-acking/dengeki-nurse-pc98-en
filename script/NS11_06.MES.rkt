@@ -47,10 +47,12 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
+      ; Tanchi:
           (str "Wow, I guess it was just a stomachache, ha")
   (str "ha!")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Idiot! You were about to slice me open,")
   (str "you quack?!")
   (proc 15)
@@ -222,9 +224,11 @@
 ; FMT
 ;  (sound '|se | 5)
    (proc 2)
+       ; Tanchi:
            (str "Ahhh! Ahhh! Ahhh! Ahhh!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey, what's up? Why are you yelling!?")
    (proc 15)
    (proc 19)
@@ -266,10 +270,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyhoo, Doc, you must be exhausted. Why" 'br)
    (str "don't you get some rest?")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You may be right, Tanchi... But I must" 'br)
    (str "do my experiment based on that circuit diagram.")
    (proc 15)
@@ -278,6 +284,7 @@
  (seg (? (= T 2) (= O 1))												; #2
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "And I'm sorry for inconveniencing you," 'br)
    (str "nurse, you can go back to your post now.")
    (proc 15)
@@ -285,9 +292,11 @@
           (str "Ah, yes... Thank you.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Wait... I don't recognize you.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Now that you mention it...")
    (proc 15)
    (proc 19)
@@ -295,12 +304,14 @@
  (seg (? (= T 2) (= O 2))												; (After noticing the nurse's pendant)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "That... That pendant...!?")
    (proc 15)
    (proc 10)
           (str "???")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "...")
    (proc 15)
    (proc 19)
@@ -308,6 +319,7 @@
  (seg (? (= T 2) (= O 3))												; (After thinking about the pendant)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "You and I are destined to be together!" 'br)
    (str "Don't be shy! Throw yourself into my arms!")
    (proc 15)
@@ -316,6 +328,7 @@
    (str "I'm, just gonna get going...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "You stop right there, KIRARA INAZUMA!")
    (proc 15)
    (proc 13)	; Shouting
@@ -340,81 +353,99 @@
  (seg (? (= T 2) (= O 5))												; (After Kirara reveals she is part of Black Cross)
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, why are you here?")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "I'm sorry... I was here to perform a" 'br)
    (str "Procedure on the minister...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "A... Procedure?")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "In Black Cross terms, a Procedure...is" 'br)
    (str "murder!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "It was supposed to be my first Procedure," 'br)
    (str "but... I can't do it...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You mustn't, Kirara.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "What are you going to do now?")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "I can't go back...to the Society... I want")
    (str "to look for my mom here in Japan, but...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What's the matter?")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "The Black Cross does not forgive traitors.")
    (str "...I'll be the target of their next Procedure...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I...I won't allow that to happen!!! To go" 'br)
    (str "and") (text "“") (str "treat") (text "”") (str "such a cutie like you... Unthinkable!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "So how about it, Tanchi? Will you help" 'br)
    (str "me smash the Black Cross?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Absolutely! You should stay here and find" 'br)
    (str "your mother!")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "Thank you both, but... I'd be troubling" 'br)
    (str "the both of you...")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
               (str "It's no problem at all. No matter how" 'br)
    (str "many Black Cross thugs cross your path, young" 'br)
    (str "Tanchi will protect you!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Er, yes...that's, right. So, uh, you can" 'br)
    (str "stay in Japan.")
    (proc 15)
    (proc 11)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "Is that really okay...?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yes! It's been decided.")
    (proc 15)
    (proc 19)
@@ -423,6 +454,7 @@
    (proc 18)
    (proc 11)	; Smiling
    (proc 1)
+       ; Kirara:
            (str "I'm not sure how this will go, but..." 'br)
    (str "We'll give it our all then.")
    (proc 15)
@@ -434,10 +466,12 @@
    (str "Clatter, clatter, clatter...")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Woah! Don't go swinging that scalpel" 'br)
    (str "around!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Aw man, I really wanted to try an" 'br)
    (str "appendectomy...")
    (proc 15)
@@ -452,12 +486,14 @@
    (exec-mem 2816 "GET 3 34 162 50 297")
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 4 34 162,FREE 4")
    (proc 2)
+       ; Tanchi:
            (str "Behold, the pendant of our destiny!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "This is...")
    (proc 15)
    (text-color 7)
@@ -477,15 +513,18 @@
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
               (str "Your father and mother, Kirara.")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "...")
    (proc 15)
    (proc 6)
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 3 34 162,FREE 3")
    (proc 5)
+       ; Dr. Akiba:
               (str "Blah blah blah...")
    (proc 15)
    (text-color 7)
@@ -494,20 +533,24 @@
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "I... I'm a Black Cross Society commando...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What!?")
    (proc 15)
    (proc 12)	; Sad
    (proc 1)
+       ; Kirara:
            (str "I've been in their ranks as long as I" 'br)
    (str "remember, and was trained to be a Nurse" 'br)
    (str "Commando...")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
               (str "Truly, the most ironic of fates...")
    (proc 15)
    (proc 19)
@@ -518,6 +561,7 @@
    (str "Shake shake shake!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Hey! Stop rocking the bed, you lunatic!")
    (proc 15)
    (proc 19))
@@ -528,6 +572,7 @@
    (str "pull her towards me.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I guess this is our destiny after all. One")
    (str "day we'll get hitched and have a happy family!")
    (proc 15)
@@ -546,9 +591,11 @@
    (proc 15)
    ((cmd 196) 0 2)
    (proc 1)
+       ; Kirara:
            (str "Get real!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "!!!")
    (proc 15)
    (text-color 7)
@@ -556,6 +603,7 @@
    (str "my cheek got electrocuted!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "K-Kirara! Do you think you could come" 'br)
    (str "with me to my lab?")
    (proc 15)

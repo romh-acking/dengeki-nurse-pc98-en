@@ -28,10 +28,12 @@
   ((cmd 209) 1 2)
   ((cmd 204) 81 88)
   (proc 2)
+      ; Tanchi:
           (str "Buh? Their clothes are different from" 'br)
   (str "before? And what's with that weirdo?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "...")
   (proc 15)
   (proc 19)
@@ -131,6 +133,7 @@
    (str "coming out of it? Hmm, it's a high-tech machine...")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "It's been a while! How are you doing?")
    (proc 15)
    (proc 10)
@@ -141,6 +144,7 @@
  (seg (? (= T 1) (= O 1))
    (proc 18)
    (proc 7)
+       ; Black Nurse:
                 (str "Did Golgo 31 execute his mission" 'br)
    (str "successfully?")
    (proc 15)
@@ -153,15 +157,18 @@
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (proc 7)
+       ; Black Nurse:
                 (str "What's Akiko's current status?")
    (proc 15)
    (proc 10)
           (str "Her research has entered its final stage.")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "That's unfortunate...")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "I thought we could cut off Akiko's" 'br)
    (str "funding by destroying the school's reputation, but")
    (str "it seems that such a plan was wishful thinking.")
@@ -170,6 +177,7 @@
           (str "What should we do, then?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Akiko is an obstacle to the ambitions")
    (str "of our organization. Deal with her immediately.")
    (proc 15)
@@ -188,6 +196,7 @@
  (seg (? (= T 1) (= O 4))
    (proc 18)
    (proc 7)
+       ; Black Nurse:
                 (str "Additionally, I have intel from our" 'br)
    (str "spy within Dentendo Hospital.")
    (proc 15)
@@ -195,6 +204,7 @@
           (str "What do we know?")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "It seems that the traitor Dengeki" 'br)
    (str "Nurse has been sighted there.")
    (proc 15)
@@ -202,12 +212,15 @@
           (str "I will deal with her as well, then.")
    (proc 15)
    (proc 7)
+       ; Black Nurse:
                 (str "Destroy her on sight.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Gah! What the hell and a half!?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 10)
@@ -231,12 +244,15 @@
            (str "Fiiiiine...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "What are we gonna do, Kirara?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "What else? Get my pendant back!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Okay then, let's move!")
    (proc 15)
    ((cmd 209) 0 2)
@@ -249,6 +265,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "Shhh, stay quiet. If they notice us, we're")
    (str "done for.")
    (proc 15)
@@ -256,21 +273,26 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What in the hell is going on here?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Those two make up the Black Cross's Sailor")
    (str "Nurse Squad! The long-haired one is the captain" 'br)
    (str "Asuka, and the other is Momoko.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "They're Black Cross!?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Keep your voice down! The woman in the" 'br)
    (str "hologram is Black Nurse, the Black Cross's leader!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Black Nurse...??")
    (proc 15)
    (proc 19)
@@ -278,6 +300,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "What are they plotting? Let's keep" 'br)
    (str "watching and find out...")
    (proc 15)
@@ -285,21 +308,26 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Who the hell is") (text "“") (str "Golgo 31") (text "”") (str "now?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "A super-famous underworld sniper! All we" 'br)
    (str "know is that he's Asian, everything else is a" 'br)
    (str "mystery!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Wow, he sounds awesome!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "But I heard he hasn't actually shot anyone")
    (str "down. And rumor has it...he loves ice cream.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "...What an enigma.")
    (proc 15)
    (proc 19)
@@ -307,21 +335,26 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 1)
+       ; Kirara:
            (str "So yeah, he's a mysterious sharpshooter.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Akiko...you mean THAT Akiko?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "That's right, Akiko Ano!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "So what's her gambit?")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "I'm not sure... But her life is definitely")
    (str "in danger!")
    (proc 15)
@@ -333,11 +366,13 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't you dare dance, sing or touch my" 'br)
    (str "butt! I can't stand it!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I won't!!")
    (proc 15)
    (proc 19))
@@ -347,10 +382,12 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Sniff, sniff... Are you leaving me behind?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Don't be stupid, there's nowhere for me to")
    (str "go!")
    (proc 15)

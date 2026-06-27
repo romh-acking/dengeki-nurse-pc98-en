@@ -46,9 +46,11 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 2)
+      ; Tanchi:
           (str "Nnngh...")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Argh...")
   (proc 15)
   (proc 10)
@@ -56,9 +58,11 @@
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Nnnnnn! Oh god! What fresh hell is this!?")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "N-No way! Just what are you planning to do")
    (str "here?")
   (proc 15)
@@ -178,12 +182,14 @@
    (text "２Ｘ＋３Ｙ＝３Ｘ＋２Ｙ‥‥" 'br)
    (text "Ｘ＝‥‥‥‥‥‥")
    (proc 15)
-   (proc 5)
+   (proc 5) ; Show Kirara close-up
    (proc 1)
+       ; Kirara:
            (str "Tanchi... Tanchi... Please... Look at" 'br)
    (str "me...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara... What's wrong?")
    (proc 15)
    (proc 11)
@@ -192,16 +198,19 @@
    (proc 15)
    (proc 6)
    (proc 1)
+       ; Kirara:
            (str "Please... Will you...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You know what? If she's gonna insist, then")
    (str "I'll look at her all I can!")
    (proc 15)
-   (proc 7)
+   (proc 7) ; Hide Kirara close-up
    (proc 19)
    (set-reg 91 #t))
  (seg (? (= T 0) (= O 6))
@@ -237,9 +246,10 @@
    (text-color 7)
    (str "I look at Kirara.")
    (proc 15)
-   (proc 5)
+   (proc 5) ; Show Kirara close-up
    (exec-mem 6656 0 1 1 3 0)
    (proc 1)
+       ; Kirara:
            (str "Ahhh.. Ahhhh... Aaaaaaah! I... I can't" 'br)
    (str "take this...")
    (exec-mem 6656 0 1 1 3 0)
@@ -249,10 +259,11 @@
    (proc 15)
    (exec-mem 6656 0 2 1 3 0)
    (proc 1)
+       ; Kirara:
            (str "Ahhhhhhh! Hhn, hhnnnnnnnnnn......")
    (exec-mem 6656 0 2 1 3 0)
    (proc 15)
-   (proc 7)
+   (proc 7) ; Hide Kirara close-up
    (proc 19)
    (set-reg 88 #t))
  (seg (? (= T 1) (= O 3))
@@ -260,9 +271,10 @@
    (text-color 7)
    (str "I gaze at Kirara's figure...")
    (proc 15)
-   (proc 5)
+   (proc 5) ; Show Kirara close-up
    (exec-mem 6656 0 3 1 3 0)
    (proc 1)
+       ; Kirara:
            (str "Aaaaaaahhhhh! More! More, Tanchi!")
    (exec-mem 6656 0 3 1 3 0)
    (proc 15)
@@ -273,9 +285,10 @@
    (text-color 7)
    (str "I stare at Kirara even more...")
    (proc 15)
-   (proc 7)
+   (proc 7) ; Hide Kirara close-up
    (exec-mem 6656 0 4 1 3 0)
    (proc 1)
+       ; Kirara:
            (str "Ah! Ah! Aaahhhnnnnngh!")
    (exec-mem 6656 0 4 1 3 0)
    (proc 15)
@@ -326,13 +339,16 @@
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (exec-mem 17920 0 1)
    (proc 2)
+       ; Tanchi:
            (str "K-Kirara!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi, you've done it! Thanks to" 'br)
    (str "you, it worked perfectly!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ah, no, but this is kinda embarrassing...")
    (proc 15)
    (proc 10)
@@ -340,6 +356,7 @@
    (proc 15)
    (proc 6)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Now hand over the video!")
    (proc 15)
    (proc 10)
@@ -348,6 +365,7 @@
    (proc 15)
    (proc 6)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "If you do, I'll let it all slide...")
    (str "this time!")
    (proc 15)
@@ -357,10 +375,12 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey, don't you mess around like that! I'm" 'br)
    (str "not gonna let you release my shame on the world! ")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's right! We're not joking" 'br)
    (str "around here!")
    (proc 15)
@@ -381,6 +401,7 @@
    (proc 15)
    (proc 6)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hey, wait!!")
    (proc 15)
    (proc 9) (proc 13)
@@ -405,6 +426,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What have you got up your sleeve!?")
    (proc 15)
    (proc 10)
@@ -416,6 +438,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What are you going to do to Kirara!?")
    (proc 15)
    (proc 10)
@@ -452,11 +475,13 @@
    (exec-mem 6656 0 1 1 3 0)
    (proc 15)
    (proc 1)
+       ; Kirara:
    (exec-mem 6656 0 1 1 3 0)
            (str "Ah! Aaaaaaa!")
    (exec-mem 6656 0 1 1 3 0)
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Huh? What's going on!?")
    (proc 15)
    (proc 10)
@@ -468,6 +493,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What kind of trickery is this!?")
    (proc 15)
    (proc 10)
@@ -479,6 +505,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "The blue hell? Stop laughing and explain" 'br)
    (str "what this sicko shit is!")
    (proc 15)
@@ -492,6 +519,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "You're messing with me! What would ever" 'br)
    (str "get me aroused at a time like this?")
    (proc 15)
@@ -507,6 +535,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Stop it! Please, stop!")
    (proc 15)
    (proc 10)
@@ -520,6 +549,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "You idiot! As long as I don't look, I" 'br)
    (str "won't get aroused in the first place!")
    (proc 15)
@@ -529,6 +559,7 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What treachery! And you call yourself a" 'br)
    (str "samurai!")
    (proc 15)
@@ -538,6 +569,7 @@
    (proc 6)
    (exec-mem 6656 0 1 1 3 0)
    (proc 1)
+       ; Kirara:
            (str "Ahhh.. Aghhh... N-No... Stop...")
    (exec-mem 6656 0 1 1 3 0)
    (proc 15)

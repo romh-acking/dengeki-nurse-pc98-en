@@ -24,6 +24,7 @@
      (str "Tomoyo: Heh heh heh! So you made it here!")
      (proc 15)
      (proc 2)
+         ; Tanchi:
              (str "H-How the hell are you-? I thought we" 'br)
      (str "defeated you!")
      (proc 15)
@@ -35,6 +36,7 @@
      (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
      (proc 4)
      (proc 0)
+         ; Dengeki Nurse:
                     (str "It's fine! We beat her once, we" 'br)
      (str "sure can do it again!")
      (proc 15)
@@ -67,10 +69,11 @@
         (text-frame 3 324 52 379)
         (text-reset 15)
         (proc 2)
+            ; Tanchi:
                 (str "Wh-wh-whaaaat is this?")
         (proc 15)
-        (proc 9) (proc 11)	; Nursia
-        (proc 10)
+        (proc 9) (proc 11) (proc 10)
+            ; Nursia:
                 (str "I'd say it's a pipe?")
         (proc 15)
         (proc 14)
@@ -80,10 +83,11 @@
      (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
      (image-file "b:¥gpc¥Ns1_570.gpc") (image-mem 1 0)
      (proc 13)
-     (proc 9) (proc 11)	; Nursia
+     (proc 9) (proc 11)
      (text-frame 3 324 52 379)
      (text-reset 15)
      (proc 10)
+         ; Nursia:
              (str "Doctor Tanchi, there's a pipe here...")
      (proc 15)
      (proc 14))))
@@ -138,14 +142,16 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Dokkaaaaaaannn!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Dokkannnnnn!")
    (proc 15)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Dokkan...")
    (proc 15)
    (proc 14)
@@ -200,8 +206,8 @@
 
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Sorry, but we'll have to head out to the" 'br)
    (str "hallway to save...")
    (proc 15)

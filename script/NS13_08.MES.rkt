@@ -160,6 +160,7 @@
            (str "Ho ho, you must have had it rough.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You really helped us out by letting us" 'br)
    (str "stay here, not to mention giving us clothes and a" 'br)
    (str "delicious meal!")
@@ -170,6 +171,7 @@
    (proc 15)
    (proc 13)	; Flushed
    (proc 1)
+       ; Kirara:
            (str "Ah, I'm...not legal yet...")
    (proc 15)
    (proc 6)
@@ -182,6 +184,7 @@
    (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "A Yamato Nadeshiko...???")
    (proc 15)
    (proc 6)
@@ -193,6 +196,7 @@
            (str "Come on, drink up already!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Don't mind if I do, thanks! ")
    (proc 15)
    (proc 19)
@@ -200,6 +204,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hahaha, this mansion's totally crazy.")
    (proc 15)
    (proc 11)
@@ -210,6 +215,7 @@
    (str "private island.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "That's nuts! Man, I wish I could have an" 'br)
    (str "island like this too!")
    (proc 15)
@@ -225,6 +231,7 @@
              (str "Now come on, drink more already!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Thank you, thank you!")
    (proc 15)
    (proc 19)
@@ -232,6 +239,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "That totally explains why your Japanese is")
    (str "so good!")
    (proc 15)
@@ -245,6 +253,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Damn! Living the high life on a private" 'br)
    (str "island with two gorgeous women is everyone's" 'br)
    (str "dream.")
@@ -254,6 +263,7 @@
    (str "but she's away on a business trip, unfortunately.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Damn, now I'm double jealous! Seriously," 'br)
    (str "man, I'm green with envy!")
    (proc 15)
@@ -261,6 +271,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Tanchii!!")
    (proc 15)
    (proc 6)
@@ -269,6 +280,7 @@
    (proc 15)
    (proc 13)	; Flushed
    (proc 1)
+       ; Kirara:
            (str "Wha-wha-wha.... I'm nothing of the sort!")
    (proc 15)
    (proc 6)
@@ -288,6 +300,7 @@
    (str "it!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "No way, I'm already shitfaced!")
    (proc 15)
    (proc 19)
@@ -310,6 +323,7 @@
    (str "an unfortunate mistake.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Y-yes... Of course...")
    (proc 15)
    ((cmd 209) 0 2)
@@ -335,6 +349,7 @@
             (str "Where do you think you're going?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Uh, to the restroom...")
    (proc 15)
    (proc 11)

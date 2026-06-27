@@ -82,10 +82,12 @@
    (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi!!! A panda!!!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yes, that's definitely a panda.")
    (proc 15)
    (proc 19))
@@ -129,8 +131,8 @@
            (//
             (? (= 806 #f) (= D 0))
             (nop@)
-            (proc 9) (proc 11)	; Nursia
-            (proc 10)
+            (proc 9) (proc 11) (proc 10)
+                ; Nursia:
                     (str "That warp device won't work unless you" 'br)
             (str "insert a coin.")
             (proc 15)
@@ -142,8 +144,8 @@
            (//
             (? (= 806 #t) (= D 0))
             (nop@)
-            (proc 9) (proc 11)	; Nursia
-            (proc 10)
+            (proc 9) (proc 11) (proc 10)
+                ; Nursia:
                     (str "Looks like we're out of coins...")
             (proc 15)
             (proc 14)
@@ -151,6 +153,7 @@
             (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
             (proc 4)
             (proc 0)
+                ; Dengeki Nurse:
                            (str "Maybe we could go back and get" 'br)
             (str "more?")
             (proc 15)
@@ -193,8 +196,8 @@
 
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
-   (proc 9) (proc 11)	; Nursia
-   (proc 10)
+   (proc 9) (proc 11) (proc 10)
+       ; Nursia:
            (str "Sorry, but we'll have to head out to the" 'br)
    (str "hallway to save...")
    (proc 15)

@@ -150,6 +150,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 4 16 52 166,PUT 7 4 16,FREE 7")
    (proc 1)
+       ; Kirara:
            (str "Tanchi! Here! Over here!")
    (proc 15)
    (proc 19)
@@ -216,9 +217,11 @@
    (proc 15)
    (exec-mem 2816 "VIEW 4 16 52 166,PUT 7 4 16,FREE 7")
    (proc 1)
+       ; Kirara:
            (str "Tanchi! Tanchiiii!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, what's wrong?")
    (proc 15)
    (proc 10)
@@ -254,20 +257,25 @@
    (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 2)
+       ; Tanchi:
            (str "K-Kirara! ...You're really fast...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Look out, Tanchi! That's not Senna" 'br)
    (str "and Mansell!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Say what!?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "They're probably Black Cross" 'br)
    (str "Society commandos!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh, dammit! I'm not giving up on my hot" 'br)
    (str "Kirara smooch!")
    (proc 15)
@@ -283,6 +291,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Something just whizzed by me...!")
    (proc 15)
    (proc 10)
@@ -294,6 +303,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Nakajima-san! Missiles are literally" 'br)
    (str "flying by me right now!")
    (proc 15)
@@ -305,24 +315,30 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "It's nice to see you again!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Idiot!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! What you said before, is it true?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You two! It's about time you" 'br)
    (str "revealed your true selves!")
    (proc 15)
@@ -338,6 +354,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 198 15 294,PUT 1 5 198,FREE 1")
    (proc 2)
+       ; Tanchi:
            (str "You...you're Manko-chan!")
    (proc 15)
    (exec-mem 2816 "GET 1 40 198 10 96")
@@ -352,6 +369,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 40 198 50 294,PUT 1 40 198,FREE 1")
    (proc 2)
+       ; Tanchi:
            (str "What!? You're Sena-chan!")
    (proc 15)
    (exec-mem 2816 "GET 1 5 198 10 96")
@@ -364,6 +382,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 5 198 15 294,PUT 1 5 198,FREE 1")
    (proc 2)
+       ; Tanchi:
            (str "What...what the hell are you doing!?")
    (proc 15)
    (exec-mem 2816 "GET 1 5 198 10 96")
@@ -391,6 +410,7 @@
    (text "ＫＡＡＡＢＯＯＯＯＯＯＯＯＯＭ！！！")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Eeeeeek!")
    (proc 15)
    (exec-mem 2816 "GET 1 40 198 10 96")

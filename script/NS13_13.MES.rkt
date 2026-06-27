@@ -163,10 +163,12 @@
    (sound '|| 1)
    (exec-mem 2816 "VIEW 4 108 51 303,OVER 1,PUT 10 4 108,FREE 10")
    (proc 2)
+       ; Tanchi:
            (str "Kirara! It's them!")
    (proc 15)
    (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hold it right there, Johnny" 'br)
    (str "Nakamura! Hand over that videotape!")
    (proc 15)
@@ -201,11 +203,13 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara!! Driving that thing fast is super" 'br)
    (str "dangerous!")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Come on, it's not like I know how" 'br)
    (str "to drive this in the first place!")
    (proc 15)
@@ -215,10 +219,12 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyway, don't panic! Stay calm!")
    (proc 15)
    (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I can't stay calm!! What if someone")
    (str "actually sees that video!?")
    (proc 15)
@@ -228,6 +234,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Stop messing around! Drop that video and" 'br)
    (str "go back to California or wherever!")
    (proc 15)
@@ -243,6 +250,7 @@
    (proc 9)
    (proc 14)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ohh, you're gonna get it!")
    (proc 15)
    (exec-mem 2816 "EXIT")
@@ -271,14 +279,17 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "L-Let me go!")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi! What's going on!?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "S-Sorry... I just wanted to get the video" 'br)
    (str "back...")
    (proc 15)
@@ -292,6 +303,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, don't worry about me! Just zap" 'br)
    (str "this fool!")
    (proc 15)
@@ -299,6 +311,7 @@
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You... You say that, but...")
    (proc 15)
    (proc 6)
@@ -309,6 +322,7 @@
    (proc 6)
    (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "......")
    (proc 15)
    (proc 6)
@@ -317,6 +331,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! You gotta fight back!")
    (proc 15)
    (sound '|| 0)
@@ -335,12 +350,14 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What what WHAAAAAT?")
    (proc 15)
    (proc 14)
    (sound '|| 0)
    (sound '|se | 20)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Now's my chance! Eat this!" 'br)
    (str "PLASMA FLAAAASH!")
    (proc 15)

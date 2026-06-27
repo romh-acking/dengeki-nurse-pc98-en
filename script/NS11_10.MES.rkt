@@ -152,12 +152,14 @@
    (str "say") (text "“") (str "Ahh?") (text "”")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hmm, why should I?")
    (proc 15)
    (proc 12)
           (str "Don't you want to eat some tasty candy?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Forget that, I want to suck on those" 'br)
    (str "cherries on your chest!")
    (proc 15)
@@ -170,6 +172,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ayako's boobs are fabulous.")
    (proc 15)
    (proc 12)
@@ -180,6 +183,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Tomoyo's butt is unbelievably tight.")
    (proc 15)
    (proc 13)
@@ -190,6 +194,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ayako's a big dummy!")
    (proc 15)
    (proc 12)
@@ -201,6 +206,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Tomoyo's so cute.")
    (proc 15)
    (proc 13)
@@ -211,6 +217,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ayako...chan... I'm so...slee...py...")
    (proc 15)
    (proc 12)
@@ -224,6 +231,7 @@
    (str "Grope, grope...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Ayako's boobs are massive.")
    (proc 15)
    (proc 12)
@@ -233,6 +241,7 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Ah, what the hey.")
    (proc 15)
    (text-color 7)
@@ -298,10 +307,12 @@
    (proc 15)
    (sound '|| 2)
    (proc 2)
+       ; Tanchi:
            (str "Can't...too sleepy... Losing..." 'br)
    (str "consciousness...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Can't stay...awazZZzZZZZZZZZ...")
    (proc 15)
    (proc 13)

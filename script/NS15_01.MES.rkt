@@ -136,6 +136,7 @@
    (str "immediately.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "A phone call? What's this all about?")
    (proc 15)
    (proc 19)
@@ -172,23 +173,28 @@
    (proc 18)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "F1 was a blast, wasn't it? I wanna go" 'br)
    (str "again!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Next year, I suppose.")
    (proc 15)
    (proc 7)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "Wha? That's basically an eternity!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "F1 travels all around the world, you know.")
    (proc 15)
    (proc 9)	; Confused
    (proc 1)
+       ; Kirara:
            (str "I wanna see F1 everywhere and anywhere!" 'br)
    (str "Come on, take me to see it somewhere else!")
    (proc 15)
@@ -198,33 +204,40 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Well, maybe we could do that if you marry" 'br)
    (str "me.")
    (proc 15)
    (proc 7)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "Marry you? For real?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hey hey, don't take that seriously.")
    (proc 15)
    (proc 9)	; Confused
    (proc 1)
+       ; Kirara:
            (str "But all those F1 drivers... They're all so")
    (str "cool...")
    (proc 15)
    (proc 6)
    (proc 0)	; Happy
    (proc 1)
+       ; Kirara:
            (str "I want to meet all of them...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "......")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Ho ho ho! The two of you are a fresh" 'br)
    (str "couple indeed!")
    (proc 15)
@@ -239,6 +252,7 @@
    (proc 18)
    (proc 9)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Oh, if only SOMEBODY would take me...")
    (proc 15)
    (proc 6)
@@ -247,11 +261,13 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Who could that phone call be from? A" 'br)
    (str "lady, perchance?")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Ha ha ha... No way!")
    (proc 15)
    (text-color 1)
@@ -263,15 +279,18 @@
    (proc 15)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str ".........Stop messing around and take that")
    (str "call already!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Why are YOU getting mad at me?")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Ha ha ha, hopeless...this new item is" 'br)
    (str "hopeless!")
    (proc 15)
@@ -286,6 +305,7 @@
    (proc 18)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Hurry up then, it's rude to keep them" 'br)
    (str "waiting... Get moving already!")
    (proc 15)
@@ -294,6 +314,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "It's probably just the landlady, or my" 'br)
    (str "mom. I can call back later...")
    (proc 15)
@@ -305,25 +326,30 @@
    (str "woman. A YOUNG woman.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Good grief.")
    (proc 15)
    (proc 11)	; Aloof
    (proc 1)
+       ; Kirara:
            (str "You cheater!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What are you talking about?") (text "“") (str "Cheating") (text "”" 'br)
    (str "only applies if you're dating or married in the" 'br)
    (str "first place!")
    (proc 15)
    (proc 12) (proc 13)	; Dr. Akiba
    (proc 5)
+       ; Dr. Akiba:
               (str "Enough talk! Hurry up and get the phone")
    (str "already!")
    (proc 15)
    (proc 14)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, yeah...")
    (proc 15)
    ((cmd 209) 0 2)
@@ -345,6 +371,7 @@
    (str "Munch munch munch...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, this food is great!")
    (proc 15)
    (text-color 7)

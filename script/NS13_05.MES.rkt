@@ -44,6 +44,7 @@
   (proc 15)
   (proc 9)	; Happy
   (proc 1)
+      ; Kirara:
           (str "Haaaahahha!")
   (proc 15)
   (proc 6)
@@ -165,6 +166,7 @@
    (str "What...what the!?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "A tidal waaaaaaaave!")
    (proc 15)
    (exec-mem 2816 "VIEW 16 93 40 237,OVER 1,PUT 8 16 93,FREE 8")
@@ -178,12 +180,15 @@
    (text "ＳＰＬＡＳＨ") (str "!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Kyaaaa!")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Whoa-hoa-hoa-hoaaaaa!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Uwaaaawawawawawawa!")
    (proc 15)
    (proc 10)
@@ -198,9 +203,11 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "It looks like dark clouds are forming.")
    (proc 15)
    (proc 5)
+       ; Dr. Akiba:
               (str "Mm, yes, the water at sea can turn on a")
    (str "dime. Let's head back before the storm hits.")
    (proc 15)
@@ -209,11 +216,13 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hey, you two! We're going back to shore," 'br)
    (str "so get back on the boat!")
    (proc 15)
    (proc 12)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "Whaa!? No way, I don't want to!")
    (proc 15)
    (proc 6)
@@ -223,25 +232,30 @@
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Stop acting like little kids! Something" 'br)
    (str "weird is going on with the sky!")
    (proc 15)
    (proc 12)	; Shocked
    (proc 1)
+       ; Kirara:
            (str "But there's such beautiful weather over" 'br)
    (str "there!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "There are big grey clouds over our boat!")
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Isn't that weird? How come they're over us")
    (str "and nowhere else?")
    (proc 15)
    (proc 6)
    (proc 5)
+       ; Dr. Akiba:
               (str "Now that you mention it, that is" 'br)
    (str "puzzling...")
    (proc 15)
@@ -250,10 +264,12 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, it's inexplicable...")
    (proc 15)
    (proc 9)	; Happy
    (proc 1)
+       ; Kirara:
            (str "See! See! I told you!")
    (proc 15)
    (proc 6)
@@ -261,20 +277,24 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyway, if we don't start heading back, a" 'br)
    (str "giant wave is gonna be like SPLOOSH and get us!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "And then we'll wind up drifting away to" 'br)
    (str "some deserted island!")
    (proc 15)
    (proc 13)	; Confused
    (proc 1)
+       ; Kirara:
            (str "But it's not deserted if we're there," 'br)
    (str "right?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Shut up! That's just semantics!")
    (proc 15)
    (proc 19)
@@ -282,10 +302,12 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyway, we're headed home!")
    (proc 15)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "No no no!")
    (proc 15)
    (proc 6)
@@ -300,14 +322,17 @@
    (proc 15)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Oooogh!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "What's wrong?")
    (proc 15)
    (proc 11)	; Angry
    (proc 1)
+       ; Kirara:
            (str "Water went up my schnozz!")
    (proc 15)
    (proc 6)

@@ -14,7 +14,7 @@
   (define-proc 11 (<> (text-color 5) (str "Mr. Malestre: ")))
   (define-proc 19 (<> (exec-mem 1280 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; "Select a command" process shifted around in memory for this script
 
-; 	Because the memory location of the portrait display code is moved in this script, they have to be redefined for this script:
+; 	Because the memory location of the portrait display code is moved in this script, the processes also have to be redefined:
 
   (define-proc 12 (<> (exec-mem 1280 "GET 1 5 23 10 96") (exec-mem 1280 "SHOW 0,ACCESS 1")))			; Draw portrait pt.1
   (define-proc 13 (<> (exec-mem 1280 "ACCESS 0") (exec-mem 1280 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")))	; Draw portrait pt.2
@@ -64,6 +64,7 @@
    (str "a pity, indeed...")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "A pity? How so?")
   (proc 15)
   (proc 11)
@@ -227,6 +228,7 @@
    (str "If only the cut had been a bit wider...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Hey!!! What are you staring at!?")
    (proc 15)
 
@@ -247,6 +249,7 @@
    (str "I look into Kirara's eyes.")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Oh wait, I see...")
    (proc 15)
    (text-color 7)
@@ -292,6 +295,7 @@
    (exec-mem 1280 "GET 2 70 0 10 96")
    (proc 13)
    (proc 1)
+       ; Kirara:
            (str "Wh-What!? The plasma waves aren't" 'br)
    (str "gathering...")
    (proc 15)
@@ -317,6 +321,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "What a real pity...")
    (proc 15)
    (proc 11)
@@ -338,6 +343,7 @@
    (str "has truly succeeded!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "!?!?!?!!")
    (proc 15)
    (proc 11)
@@ -358,6 +364,7 @@
    (proc 9) (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 1)
+       ; Kirara:
            (str "Eeeeek! Who are you supposed to be?")
    (proc 15)
 
@@ -384,6 +391,7 @@
    (sound '|| 1)
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "You impostor!")
    (proc 15)
    (proc 19)
@@ -405,6 +413,7 @@
    (exec-mem 1280 "GET 2 30 0 10 96")
    (proc 13)
    (proc 1)
+       ; Kirara:
            (str "...!!")
    (proc 15)
    (proc 14)
@@ -428,6 +437,7 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hiyaaaa! Tanchi PUNCH!!!")
    (proc 15)
    (text-color 7)
@@ -444,6 +454,7 @@
    (str "Wiggle wiggle wiggle...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Dammit! The door won't open!")
    (proc 15)
    (proc 10)
@@ -455,6 +466,7 @@
  (seg (? (= T 3) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "HWAAAAH! Take this!!!")
    (proc 15)
    (exec-mem 28672 13 15 5 6)
@@ -467,12 +479,14 @@
    (str "Woooooosh!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! Transform!")
    (proc 15)
    (proc 12)
    (exec-mem 1280 "GET 2 0 0 10 96")
    (proc 13)
    (proc 1)
+       ; Kirara:
            (str "Roger!")
    (proc 15)
    (exec-mem 10752 "EXIT")
@@ -488,20 +502,24 @@
    (text-frame 3 324 52 379)
    ((cmd 209) 1 2)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Thank you, Tanchi! Wait, Tanchi..." 'br)
    (str "what's wrong?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "My stomach hurts like hell... I was" 'br)
    (str "ignoring it, but once I threw the statue...")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You! What did you do to Tanchi?")
    (proc 15)
    (proc 10)
                    (str "Hmph... I didn't do anything!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Then why is he suffering like this?")
    (proc 15)
    (proc 10)
@@ -509,10 +527,12 @@
    (str "he probably ate something lying on the ground!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi! Is that true? Did you eat" 'br)
    (str "random food somewhere?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str ".........")
    (proc 15)
    (proc 10)
@@ -520,6 +540,7 @@
    (str "boyfriend suits you perfectly!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Hold the phone! You keep throwing" 'br)
    (str "around the word") (text "“") (str "boyfriend!") (text "”")
    (proc 15)
@@ -528,6 +549,7 @@
    (str "were in a steamy doctor-nurse relationship!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Oh, that's it, now I'm REALLY mad!" 'br)
    (str "I'm going to show you the power of a million" 'br)
    (str "volts!")

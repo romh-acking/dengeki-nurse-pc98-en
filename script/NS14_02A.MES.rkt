@@ -43,15 +43,18 @@
   (text "　−") (str "1 week later, at the Suzuka Qualifying Pit") (text "−")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Hello, I'm Tanchi Denpa from Dentendo" 'br)
   (str "Hospital.")
   (proc 15)
   (proc 9)	; Happy
   (proc 1)
+      ; Kirara:
           (str "Who's this guy supposed to be?")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Geez, Kirara! Don't be so rude!")
   (proc 15)
   (proc 10)
@@ -60,10 +63,12 @@
   (proc 15)
   (proc 9)	; Happy
   (proc 1)
+      ; Kirara:
           (str "It's nice to meet you, Mr. Nattojima!")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Kirara!!! That's not how you read his" 'br)
   (str "name! Come on, you're talking to a former driver" 'br)
   (str "that's unbelievably famous!")
@@ -169,6 +174,7 @@
    (str "Tanchi!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Hey, it's been a while!")
    (proc 15)
    (proc 19)
@@ -248,11 +254,13 @@
    (str "team doctor collapsed suddenly.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Oh no, it's no problem... I'm honored to" 'br)
    (str "be given the opportunity.")
    (proc 15)
    (proc 9)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Yes! I'm totally fired up!")
    (proc 15)
    (proc 6)
@@ -262,6 +270,7 @@
    (proc 15)
    (proc 9)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Yes! All the drivers look so cool. It" 'br)
    (str "feels like a workplace for guys!")
    (proc 15)
@@ -286,6 +295,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Come on, Mr. Nakajima. Aren't there plenty")
    (str "of flowers blooming at the circuit?")
    (proc 15)
@@ -294,6 +304,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 6 30 30 303,OVER 1,PUT 10 6 30,FREE 10")
    (proc 2)
+       ; Tanchi:
            (str "Oh, speak of the devil! Circuit flowers!")
    (proc 15)
    (text-color 11)
@@ -320,6 +331,7 @@
    (str "left.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I-I'm Tanchi Denpa! Japan's #1 genius" 'br)
    (str "internal medicine specialist.")
    (proc 15)
@@ -327,6 +339,7 @@
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Tanchi! You're literally drooling right" 'br)
    (str "now!")
    (proc 15)
@@ -360,23 +373,28 @@
    (proc 18)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Is that Moguri Suzuki there?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Yeah, Japan's genius driver!")
    (proc 15)
    (proc 9)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Wow, those are some big ears.")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "It's not just his ears that are big. He's" 'br)
    (str "made lots of girls cry...")
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "??????")
    (proc 15)
    (proc 6)
@@ -388,6 +406,7 @@
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Suzuki-san is so cool...")
    (proc 15)
    (proc 6)
@@ -398,6 +417,7 @@
            (str "You're looking well.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Same as you. Are you in top condition?")
    (proc 15)
    (proc 11)
@@ -405,18 +425,22 @@
    (str "here in Japan.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "I'm sure glad you still remember me.")
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "How do you know Suzuki-san?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Er... we're old acquaintances.")
    (proc 15)
    (proc 9)	; Happy
    (proc 1)
+       ; Kirara:
            (str "Huuuuuh? Just old acquaintances?")
    (proc 15)
    (proc 6)
@@ -426,17 +450,20 @@
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "Town painting!?")
    (proc 15)
    (proc 6)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
    (proc 5)
+       ; Dr. Akiba:
    (str "C'mon then, how about just one song?")
    (proc 15)
    (text-color 11)
    (str "Croco: Waniwaniwani.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Noooooo!")
    (proc 15)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
@@ -454,19 +481,23 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Hmmmhmmmmmmhmmmm...")
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "What are you doing?")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "I'm using my telepathy to communicate with")
    (str "Mr. Nakajima!")
    (proc 15)
    (proc 14)	; Confused
    (proc 1)
+       ; Kirara:
            (str "......")
    (proc 15)
    (proc 6)

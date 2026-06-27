@@ -140,6 +140,7 @@
    (proc 15)
    (proc 11)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What is??")
    (proc 15)
    (proc 6)
@@ -161,23 +162,28 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Shit! Where the hell did they go?")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "If that video gets out, I'll never" 'br)
    (str "be able to get married!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Don't worry, I'll take you regardless!")
    (proc 15)
    (proc 13)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "E-Eh??")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Oh, ha ha, nothing...")
    (proc 15)
    (proc 19)
@@ -185,10 +191,12 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Anyway, which way did they go?")
    (proc 15)
    (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "I'm not seeing them... Where" 'br)
    (str "indeed?")
    (proc 15)
@@ -198,12 +206,14 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Er, excuse me...")
    (proc 15)
    (proc 10)
                 (str "What do you want?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Did you see a real skeezy pervert around" 'br)
    (str "here wearing duck pattern underwear?")
    (proc 15)
@@ -212,10 +222,12 @@
    (str "ago.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Shit, they got away, then!")
    (proc 15)
    (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "What do we do!?" 'br)
    (proc 15)
    (proc 6)
@@ -225,16 +237,19 @@
    (proc 18)
    (proc 12)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Tanchi, what should we do...")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hmm...")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Since it's the ocean and all... It's not" 'br)
    (str "like we can go after them on foot.")
    (proc 15)
@@ -244,6 +259,7 @@
    (proc 15)
    (proc 11)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Ehh, for real!?")
    (proc 15)
    (proc 6)
@@ -252,6 +268,7 @@
    (str "my board if you want.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Geez lady, why're you being so nice to" 'br)
    (str "strangers like us?")
    (proc 15)
@@ -261,6 +278,7 @@
    (str "sentimental.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Thanks a lot, I promise we'll make the" 'br)
    (str "most we can of this!")
    (proc 15)
@@ -268,12 +286,14 @@
                 (str "Don't get yourselves killed, now.")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Come on, Kirara, we're hitting the waves!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
    (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You bet!")
    (proc 15)
    ((cmd 209) 0 2)

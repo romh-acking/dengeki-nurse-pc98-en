@@ -36,6 +36,7 @@
   (text "　　　　　　　　") (str " ") (text "−") (str "The Next Day") (text "−")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Kirara, how did yesterday's physicals" 'br)
   (str "go? Did it all run smoothly?")
   (proc 15)
@@ -43,10 +44,12 @@
   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
   (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Ha hah, without a hitch!")
   (proc 15)
   (proc 6)
   (proc 5)
+      ; Dr. Akiba:
              (str "Oho! Music to my ears. By the by," 'br)
   (str "where's Tanchi-kun?")
   (proc 15)
@@ -54,15 +57,18 @@
          (str "Haven't seen him all morning, Wani!")
   (proc 15)
   (proc 1)
+      ; Kirara:
           (str "Now that you mention it, I wonder if" 'br)
   (str "something's wrong?")
   (proc 15)
   (proc 5)
+      ; Dr. Akiba:
              (str "Ah, he probably just overslept. He's a" 'br)
   (str "real goofball.")
   (proc 15)
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (proc 2)
+      ; Tanchi:
           (str "Uhhh... Uuuuhhhh... Haa!!!")
   (proc 15)
   (proc 11)
@@ -71,18 +77,21 @@
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_242.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
   (proc 2)
+      ; Tanchi:
           (str "Uwaaaaaaaah!")
   (proc 15)
   (proc 11)
          (str "You! What did you do to me!?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "What...I didn't do anything at all!")
   (proc 15)
   (proc 11)
          (str "Ahhh! You'd better take responsibility!")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "But, buuuuuut...!")
   (proc 15)
 

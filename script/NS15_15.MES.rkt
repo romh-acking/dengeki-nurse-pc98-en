@@ -27,16 +27,20 @@
   ((cmd 204) 82 86)
   (branch-reg 777 (</> (/ ((cmd 209) 1 2)) (/ (exec-mem 17920 0 1) (exec-mem 6656 8) (set-reg 777 #f))))
   (proc 0)
+      ; Dengeki Nurse:
                  (str "That's it, Black Nurse! You are" 'br)
    (str "next! ...Huh?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "She ran towards the castle!")
   (proc 15)
   (proc 0)
+      ; Dengeki Nurse:
                  (str "Why didn't you stop her!?")
   (proc 15)
   (proc 2)
+      ; Tanchi:
           (str "Don't be absurd! I had my hands full" 'br)
    (str "protecting Nursia!")
   (proc 15)
@@ -130,6 +134,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Nursia! Are you okay?")
    (proc 15)
    (proc 10)
@@ -140,9 +145,11 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! What are we gonna do?")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Well then... We need to get Nursia" 'br)
    (str "back to the hospital!")
    (proc 15)
@@ -155,10 +162,12 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Nursia, let's get you back to the hospital")
    (str "first.")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "That's right, we can get the" 'br)
    (str "treasure back from Black Nurse any time we want" 'br)
    (str "to!")
@@ -169,12 +178,14 @@
    (str "terrible will happen!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "A device?")
    (proc 15)
    (proc 10)
            (str "It'll be a disaster! Please! Trust me!")
    (proc 15)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Fine! Let's go after Black Nurse!")
    (proc 15)
    ((cmd 209) 0 2)
@@ -196,6 +207,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara! Prepare the Jet Hang Glider!")
    (proc 15)
    (proc 10)

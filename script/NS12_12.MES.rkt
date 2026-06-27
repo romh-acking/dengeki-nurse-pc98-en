@@ -38,11 +38,13 @@
   ((cmd 204) 89 93)
   (proc 3) (proc 13) (proc 4)
   (proc 1)
+      ; Kirara:
           (str "We changed clothes in this bathroom," 'br)
    (str "didn't we?")
   (proc 15)
   (proc 6)
   (proc 2)
+      ; Tanchi:
           (str "Yeah, but all the bathrooms look the same,")
    (str "so I'm not sure...")
   (proc 15)
@@ -60,6 +62,7 @@
   (proc 15)
   (proc 3) (proc 14) (proc 4)
   (proc 1)
+      ; Kirara:
           (str "Of course! Like we'd stick around in a" 'br)
    (str "place like that!")
   (proc 15)
@@ -164,9 +167,11 @@
    (str "lying around in the bathroom like this?")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "!!!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Oh, ha ha, sorry! That's my bad!")
    (proc 15)
    (proc 11)
@@ -184,6 +189,7 @@
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Heh heh heh heh...")
    (proc 15)
    (proc 10)
@@ -193,10 +199,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "So what are we supposed to do?")
    (proc 15)
    (proc 3) (proc 13) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "This isn't good. She's not that tough, but")
    (str "not someone we could beat barehanded...")
    (proc 15)
@@ -206,11 +214,13 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Then I've got no choice. I don't make a" 'br)
    (str "habit of hitting girls, but I'll take her on!")
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't, you're making a terrible mistake!")
    (proc 15)
    (proc 6)
@@ -234,6 +244,7 @@
    (proc 15)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "The Reflection Cell's days are numbered" 'br)
    (str "since Akiko's fate's already been decided!")
    (proc 15)
@@ -243,6 +254,7 @@
    (proc 15)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Don't play dumb with me, you're Momoko of" 'br)
    (str "the Sailor Nurse Squad!")
    (proc 15)
@@ -252,6 +264,7 @@
    (proc 15)
    (proc 3) (proc 9) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Hehehe...")
    (proc 15)
 
@@ -293,20 +306,24 @@
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Now's your chance to apologize to" 'br)
    (str "me!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "That's right! This lady's totally crazy!" 'br)
    (str "Apologize if you know what's good for you!")
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You can shut your smug trap!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Ahh! Yes, ma'am...")
    (proc 15)
    (proc 10)
@@ -355,6 +372,7 @@
    (sound '|| 1)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Now where's Akiko? And where's your")
    (str "captain Asuka?")
    (proc 15)
@@ -365,11 +383,13 @@
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Girl, if you don't spill you're" 'br)
    (str "gonna face MINE!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hmm, I wonder if I could punish her too...")
    (proc 15)
    (proc 10)
@@ -378,14 +398,17 @@
    (proc 15)
    (proc 3) (proc 14) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "Good enough! Let's move!")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Hold on, I still wanna punish Momoko!")
    (proc 15)
    (proc 3) (proc 12) (proc 4)
    (proc 0)
+       ; Dengeki Nurse:
                   (str "You're coming with me!")
    (proc 15)
    ((cmd 209) 0 2)
@@ -398,21 +421,25 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Dwaaaaaaaaa!!!!!!!")
    (proc 15)
    (proc 3)
    (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "What are you doing???")
    (proc 15)
    (proc 6)
    (proc 2)
+       ; Tanchi:
            (str "Uh, I was just thinking I'd beat her with" 'br)
    (str "magic...")
    (proc 15)
    (proc 3) (proc 12) (proc 4)
    (proc 1)
+       ; Kirara:
            (str "...")
    (proc 15)
    (proc 6)

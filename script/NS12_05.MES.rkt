@@ -114,6 +114,7 @@
   (str "Tanchi: Wh-What the!?")
   (proc 16)
   (proc 1)
+      ; Kirara:
           (str "??????")
   (proc 16)
   ((cmd 209) 0 2)

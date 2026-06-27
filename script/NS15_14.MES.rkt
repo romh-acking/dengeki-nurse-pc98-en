@@ -46,18 +46,20 @@
   ((cmd 209) 1 2)
   (proc 9)	; Shouting
   (proc 1)
+      ; Kirara:
           (str "Mother!")
   (proc 15)
   (proc 6)
   (proc 10)
            (str "Kirara! You shouldn't have come...")
   (proc 15)
-  (proc 12) (proc 13)	; Black Nurse
-  (proc 7)
+  (proc 12) (proc 13) (proc 7)
+      ; Black Nurse:
                (str "Ho ho ho! What a touching reunion!")
   (proc 15)
   (proc 14)
   (proc 2)
+      ; Tanchi:
   (str "Nursia!")
   (proc 15)
   (proc 11)
@@ -178,13 +180,14 @@
    (str "It looks like the mist is making something snap" 'br)
    (str "and crackle in the air...")
    (proc 15)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Ho ho ho, I'll drain all of that" 'br)
    (str "meddlesome plasma power from your body!")
    (proc 15)
    (proc 14)
    (proc 1)
+       ; Kirara:
            (str "Ahhhhhh.....")
    (proc 15)
    (proc 19)
@@ -198,11 +201,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Black Nurse! You're committing a crime" 'br)
    (str "against humanity!")
    (proc 15)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Ho ho ho! Don't be such a drama" 'br)
    (str "queen! We were just having a nice little" 'br)
    (str "conversation!")
@@ -212,34 +216,38 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara, your mom's in big trouble! She" 'br)
    (str "needs treatment, stat!")
    (proc 15)
    (proc 9)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "Unforgivable... I will never forgive you," 'br)
    (str "Black Nurse!")
    (proc 15)
    (proc 6)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Oh, heavens, and what will you do" 'br)
    (str "about that?")
    (proc 15)
    (proc 14)
    (proc 9)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "I'll beat your ass! I'll show you the" 'br)
    (str "power of Dengeki Nurse!")
    (proc 15)
    (proc 6)
    (proc 9)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "CHARGE ON!")
    (proc 15)
    (proc 6)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Hmph! Take this, you traitor!" 'br)
    (str "ELEGUARD SPECIAL!!!")
    (proc 15)
@@ -292,6 +300,7 @@
 ; 	Text continues.
 
    (proc 1)
+       ; Kirara:
            (str "Ah... My plasma waves are dissipating...")
    (proc 15)
    (proc 12) (proc 13)	; Black Nurse
@@ -299,6 +308,7 @@
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
    (proc 7)
+       ; Black Nurse:
                 (str "Ho ho ho! Kirara Inazuma, it looks" 'br)
    (str "like this is the final curtain! If you can't" 'br)
    (str "transform, you're just an ordinary nurse!")
@@ -309,15 +319,18 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Kirara!!!")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Ahh... Ahhhhhh!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 2)
+       ; Tanchi:
            (str "Stop this, Black Nurse! Fight me instead!" 'br)
    (str "Be a man!")
    (proc 15)
@@ -326,6 +339,7 @@
             (str "Tanchi... You can't...")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Mitsuko!!!")
    (proc 15)
 
@@ -339,12 +353,14 @@
             (str "Kirara... Take my hand...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Mom...!")
    (proc 15)
    (proc 10)
             (str "Come on... Hold on tight...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Okay...")
    (proc 15)
    (proc 10)
@@ -405,6 +421,7 @@
    (exec-mem 1280 14 7 6 3 1)
    (exec-mem 1280 14 6 5 2 1)
    (proc 7)
+       ; Black Nurse:
                 (str "!!!!!!!!")
    (proc 15)
 
@@ -418,13 +435,15 @@
    (str "kind girl...")
    (proc 15)
    (proc 1)
+       ; Kirara:
            (str "Mom!!!")
    (proc 15)
    (proc 2)
+       ; Tanchi:
            (str "Mitsuko!!!")
    (proc 15)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Tsk! Melodramatic fools!")
    (proc 15)
    (proc 14)
@@ -432,6 +451,7 @@
    (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
    (proc 4)
    (proc 1)
+       ; Kirara:
            (str "Mom, I'm sorry... I don't think I can ever")
    (str "become a Florence Nightingale...")
    (proc 15)
@@ -460,23 +480,25 @@
 
    (proc 9)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "I'll avenge you, Mom! Black Nurse, I'll" 'br)
    (str "never forgive you!")
    (proc 15)
    (proc 6)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Hmph! A family of total idiots!")
    (proc 15)
    (proc 14)
    (proc 9)	; Shouting
    (proc 1)
+       ; Kirara:
            (str "You shut it! Take this...my mother's final")
    (str "DENGEKI SHOCK!")
    (proc 15)
    (proc 6)
-   (proc 12) (proc 13)	; Black Nurse
-   (proc 7)
+   (proc 12) (proc 13) (proc 7)
+       ; Black Nurse:
                 (str "Pfwah! Like I'd waste my time" 'br)
    (str "fighting you! Pepe, FINISH HER!")
    (proc 15)
