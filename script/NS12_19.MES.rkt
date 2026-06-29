@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
-  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+; (define-proc 10 (<> (text-color 11) (str "Croco: "))) <--- only used once
   (define-proc 11 (<> (text-color 8)  (str "Akiko: ")))
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
@@ -40,21 +40,19 @@
              (str "Kirara, how did yesterday's physicals" 'br)
   (str "go? Did it all run smoothly?")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "Ha hah, without a hitch!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 5)
       ; Dr. Akiba:
              (str "Oho! Music to my ears. By the by," 'br)
   (str "where's Tanchi-kun?")
   (proc 15)
-  (proc 10)
-         (str "Haven't seen him all morning, wani!")
+  (text-color 11)
+  (str "Croco: Haven't seen him all morning, wani!")
   (proc 15)
   (proc 1)
       ; Kirara:
@@ -66,21 +64,32 @@
              (str "Ah, he probably just overslept. He's a" 'br)
   (str "real goofball.")
   (proc 15)
+
+; 	Cut away from the office...
+
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (proc 2)
       ; Tanchi:
           (str "Uhhh... Uuuuhhhh... Haa!!!")
   (proc 15)
   (proc 11)
+      ; Akiko:
          (str "Aaahh... Ahhh... Kyaaaaaaaaaaa!")
   (proc 15)
+
+; 	To Tanchi still at the top of the hill, with a naked Akiko!
+
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_242.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues
+
   (proc 2)
       ; Tanchi:
           (str "Uwaaaaaaaah!")
   (proc 15)
   (proc 11)
+      ; Akiko:
          (str "You! What did you do to me!?")
   (proc 15)
   (proc 2)
@@ -88,6 +97,7 @@
           (str "What...I didn't do anything at all!")
   (proc 15)
   (proc 11)
+      ; Akiko:
          (str "Ahhh! You'd better take responsibility!")
   (proc 15)
   (proc 2)

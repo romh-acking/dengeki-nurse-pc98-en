@@ -10,7 +10,7 @@
   (load-mem "cmd¥gpcph.tcm" 28672)
   (load-mem "dat¥ns1_k00p.dat" 31232)
   (define-proc 10 (<> (text-color 2)  (str "Golgo 31: ")))
-  (define-proc 11 (<> (text-color 15) (str "Crow: ")))
+; (define-proc 11 (<> (text-color 15) (str "Crow: "))) <--- only used once
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (exec-mem 2816 "ACCESS 0")
   (text-frame 0 0 79 399)
@@ -62,9 +62,8 @@
   (str "let myself be distracted by impulsive thoughts like")
   (str "those...")
   (proc 16)
-  (proc 11)
-      ; Crow:
-        (str "Ba-ka! Ba-ka! Ba-ka!")
+  (text-color 15)
+  (str "Crow: Ba-ka! Ba-ka! Ba-ka!")
   (proc 16)
   (proc 10)
       ; Golgo 31:

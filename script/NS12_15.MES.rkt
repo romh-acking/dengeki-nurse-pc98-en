@@ -203,6 +203,7 @@
            (str "Ms. Akiko, are you okay?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Y-Yes...")
    (proc 15)
    (proc 19)
@@ -215,6 +216,7 @@
    (str "that talk about world domination to us?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "......")
    (proc 15)
    (proc 19)
@@ -234,8 +236,9 @@
        ; Dengeki Nurse:
                   (str "AN ATOMIC BOMB!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Akiko:
           (str "......")
    (proc 15)
    (proc 19)
@@ -259,25 +262,31 @@
 ;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
    (proc 10)
+       ; Akiko:
           (str "From elementary school to college, I was" 'br)
    (str "always quiet, and very reserved...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "I'd watch as boys would fawn over girls who")
    (str "were prettier or curvier than me...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "And I would... I would just watch, just sit")
    (str "and watch from afar...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "I was... I was a wallflower! I was a good" 'br)
    (str "girl who only knew how to study!")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "So I thought I'd use my brilliant mind...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "To make all the men of the world bow at my" 'br)
    (str "feet! I would make them call me Queen!")
    (proc 15)
@@ -293,12 +302,13 @@
        ; Dengeki Nurse:
                   (str "That's kind of sad...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 107 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 10)
+       ; Akiko:
           (str "I'm sorry... Sniff, sniff... Snort...")
    (proc 15)
    (proc 19))
@@ -311,13 +321,16 @@
    (str "your world domination plans?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "For my ambitions to be realized...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "I had to take control of the school and its")
    (str "abundant funding...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "The discipliners were my soldiers, and the" 'br)
    (str "Reflection Cell was a symbol of that power...")
    (proc 15)
@@ -326,6 +339,7 @@
                   (str "But it didn't work out, did it...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "...")
    (proc 15)
    (proc 19)
@@ -333,6 +347,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 10)
+       ; Akiko:
           (str "I'm sorry...")
    (proc 15)
    (proc 19))
@@ -344,6 +359,7 @@
    (str "domination?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "......")
    (proc 15)
    (proc 2)
@@ -362,6 +378,7 @@
    (str "got plenty of looks, you know!")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Thank you... I feel like I've woken up from")
    (str "a dream...")
    (proc 15)
@@ -371,6 +388,7 @@
    (str "nuclear bombs, okay?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "O-Okay... Thank you so much, both of you...")
    (proc 15)
    ((cmd 209) 0 2)
@@ -383,6 +401,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Akiko:
           (str "I'm sorry... Please don't open the drawer" 'br)
    (str "without permission.")
    (proc 15)

@@ -11,8 +11,8 @@
 
 ; 	Character portraits:
 
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
-  (define-proc 12 (<> (exec-mem 2816 "GET 2 70 0 10 96"))) ; Flushed
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4))) ; Flushed
 
 ; 	Setup continues...
 
@@ -170,7 +170,7 @@
    (str "She's so cute... Be it in a sailor uniform or a" 'br)
    (str "lab coat, her cuteness transcends all dimensions!")
    (proc 15)
-   (proc 3) (proc 11) (proc 4) ; Portrait (Angry)
+   (proc 11) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Why are you staring at me like that?")
@@ -204,7 +204,7 @@
            (str "Underbust, 70cm... Top, 83cm... That would")
    (str "make it a B-cup, I guess...")
    (proc 15)
-   (proc 3) (proc 12) (proc 4) ; Portrait (Flushed)
+   (proc 12) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "There's nowhere to write that down here.")
@@ -234,7 +234,7 @@
    (str "being aware of your own. Any medical professional" 'br)
    (str "knows that.")
    (proc 15)
-   (proc 3) (proc 12) (proc 4) ; Portrait (Flushed)
+   (proc 12) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "This sounds kind of...embarrassing.")
@@ -245,7 +245,7 @@
            (str "That's fine, it'll just be the two of" 'br)
    (str "us...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4) ; Portrait (Angry)
+   (proc 11) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "......")

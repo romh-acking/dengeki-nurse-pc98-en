@@ -10,7 +10,7 @@
   (load-mem "cmd¥gpcph.tcm" 9472)
   (load-mem "dat¥ns1_k01p.dat" 9984)
   (define-proc 10 (<> (text-color 2)  (str "Golgo 31: ")))
-  (define-proc 11 (<> (text-color 15) (str "Crow: ")))
+; (define-proc 11 (<> (text-color 15) (str "Crow: "))) <--- only used once
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 1)
@@ -35,17 +35,20 @@
   ((cmd 209) 1 2)
   (text-frame 16 324 66 379)
   (text-reset 1)
-  (proc 11)
-        (str "Ba-ka! Ba-ka! Ba-ka!")
+  (text-color 15)
+  (str "Crow: Ba-ka! Ba-ka! Ba-ka!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Stop that! Stop perching behind me!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "...So, will my M16 taste blood for the" 'br)
   (str "first time tonight? What an evening of occasion.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "...")
   (proc 16)
   (exec-mem 2816 "GET 9 48 20 15 130")
@@ -57,14 +60,17 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Golgo 31:
             (str "Oh Dengeki Nurse, you're sure to my" 'br)
   (str "taste... To kill you would be nothing short of a" 'br)
   (str "waste!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "......")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Maybe I'll switch to the Immoral Ray..." 'br)
   (str "I'll take my sweet time, just for today.")
   (proc 16)
@@ -78,6 +84,7 @@
   (str "Click...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "There we go, now the Immoral Ray's" 'br)
   (str "attached up.")
   (proc 16)
@@ -89,14 +96,17 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Golgo 31:
             (str "Now let's see your naughty side, before" 'br)
   (str "your time is past! Heh heh...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Safety off!")
   (proc 16)
   (sound '|| 0)
   (proc 10)
+      ; Golgo 31:
             (str "And ") (text "ＦＩＲＥ‥‥‥‥")
   (exec-mem 2816 "VIEW 18 42 42 186,PUT 3 18 42,FREE 3")
   (proc 16)
@@ -105,9 +115,11 @@
   (str "area... Out of the way!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Buh!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Agh, aaaagh!")
   (proc 16)
   (exec-mem 19456 2 32 4 127 75 111 20 111 20 0 20)

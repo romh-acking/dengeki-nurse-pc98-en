@@ -14,9 +14,9 @@
 ; 	Similar situation to NS12_03, putting unique portrait code in these procs
 
   (define-proc 9  (<> (exec-mem 2816 "GET 1 5 23 15 120,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 12 (<> (exec-mem 2816 "PUT 6 5 23")))  ; Angry
-  (define-proc 13 (<> (exec-mem 2816 "PUT 8 5 23")))  ; Shocked
-  (define-proc 14 (<> (exec-mem 2816 "PUT 10 5 23"))) ; Confused
+  (define-proc 12 (<> (proc 9) (exec-mem 2816 "PUT 6 5 23")))  ; Angry
+  (define-proc 13 (<> (proc 9) (exec-mem 2816 "PUT 8 5 23")))  ; Shocked
+  (define-proc 14 (<> (proc 9) (exec-mem 2816 "PUT 10 5 23"))) ; Confused
 
 ; 	Setup continues...
 
@@ -142,12 +142,12 @@
            (str "Hmm, she's wearing a kimono...in summer?" 'br)
    (str "Something is UP with this woman.")
    (proc 15)
-   (proc 9) (proc 14)
+   (proc 14) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "Maybe she gets cold easily?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 96 #t))
  (seg (? (= T 1) (= O 1))
@@ -157,18 +157,19 @@
            (str "And those daring glasses... I'm sensing" 'br)
    (str "something demonic from her.")
    (proc 15)
-   (proc 9) (proc 14)
+   (proc 14) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "Really? It could just be her style,")
    (str "though...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 101 #t))
  (seg (? (= T 1) (= O 2))
    (proc 18)
    (proc 10)
+       ; Akiko:
           (str "Ho ho ho, it's complete! And now, how to" 'br)
    (str "get all that uranium...")
    (proc 15)
@@ -183,13 +184,14 @@
    (str "Knock knock...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Who's there?")
    (proc 15)
    (text-color 5)
    (str "Voice: This is Asuka of the Special Discipline" 'br)
    (str "Committee!")
    (proc 15)
-   (proc 9) (proc 13)
+   (proc 13) ; Portrait ()
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
@@ -202,8 +204,9 @@
        ; Dengeki Nurse:
    (text '|34368| "！！！！！！！！！！！！！！！！！")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Akiko:
           (str "I'm in the middle of something, come back" 'br)
    (str "later please!")
    (proc 15)
@@ -215,16 +218,20 @@
 ;  ^ Asuka appears
 
    (proc 10)
+       ; Akiko:
           (str "I said later, now leave!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "This is where it ends, Akiko! You're" 'br)
    (str "finished!")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Huh, what's gotten into you Asuka?")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "You've been plotting world domination all" 'br)
    (str "along, haven't you!?")
    (proc 15)
@@ -233,20 +240,25 @@
            (str "World domination!?")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "A certain organization has employed me and" 'br)
    (str "Momoko to keep you from going too far...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "What...?")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "You've gone too far! Apologies, but this" 'br)
    (str "is where we put you to sleep.")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "......")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "Settle down now, while I make sure you" 'br)
    (str "pass peacefully from acute uremia!")
    (proc 15)
@@ -261,10 +273,12 @@
  (seg (? (= T 1) (= O 4))
    (proc 18)
    (proc 11)
+       ; Asuka:
            (str "Get ready, Teach! Bare that butt for a" 'br)
    (str "subcutaneous injection!")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "............")
    (proc 15)
    (proc 19))
@@ -275,47 +289,46 @@
            (str "Whew, it looks like she hasn't had a" 'br)
    (str "Procedure performed on her yet. What do we do?")
    (proc 15)
-   (proc 9) (proc 14)
+   (proc 14) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "If we told her, she might not" 'br)
    (str "believe us... Should we wait for Asuka to show up?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 97 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 9)
-   (exec-mem 2816 "PUT 12 5 23") ; Shouting
+   (proc 9) (exec-mem 2816 "PUT 12 5 23") ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Shh, stop talking! She's saying" 'br)
    (str "something!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 98 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 9) (proc 14)
+   (proc 14) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi, what exactly is Uranium?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, it's a radioactive element that's the" 'br)
    (str "source of radium. It's the one with the ") (text "Ｕ") (str " symbol,")
    (str "and the atomic number is 92.")
    (proc 15)
-   (proc 9) (proc 14)
+   (proc 14) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "...???")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 100 #t))
  (seg (? (= T 2) (= O 3))
@@ -330,7 +343,7 @@
        ; Dengeki Nurse:
                   (str "Of course!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 103 #t))
  (seg (? (= T 3) (= O 0))												; Action
@@ -338,12 +351,12 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (proc 9) (proc 12)
+   (proc 12) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Stay quiet, or we'll be heard! Shhhhh!!")
@@ -355,21 +368,21 @@
    (text-color 1)
    (str "Rub rub rub rub...")
    (proc 15)
-   (proc 9) (proc 12)
+   (proc 12) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "......")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (proc 9) (proc 13)
+   (proc 13) ; Portrait ()
    (proc 0)
        ; Dengeki Nurse:
                   (str "Where do you think you're going?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I was thinking we should get ice cream...")
@@ -380,7 +393,7 @@
        ; Dengeki Nurse:
                   (str "Good idea! Let's go later, though.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
@@ -406,6 +419,7 @@
                   (str "Hold it right there!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "Who the hell!?")
    (proc 15)
    (proc 0)
@@ -413,6 +427,7 @@
                   (str "I'm the million-volt Dengeki Nurse!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "Ho, the traitor herself? Fine, you'll be" 'br)
    (str "the first to fall!")
    (proc 15)
@@ -421,6 +436,7 @@
                   (str "Hey, that's my line!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "I'm Captain of the Sailor Nurses, and Queen")
    (str "of the Delinquents! Think you can match titles" 'br)
    (str "like those?")
@@ -432,6 +448,7 @@
    (str "volt nurse!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "Laaame! Even if heaven forgives you... I," 'br)
    (str "Asuka of the Asami clan, will not!")
    (proc 15)
@@ -441,6 +458,7 @@
    (str "plan on beating me with that dumb yo-yo?")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "Ha! Words of a rank amateur. This isn't" 'br)
    (str "just a yo-yo... It's far, far more than that!")
    (proc 15)
@@ -451,6 +469,7 @@
    (str "championship?")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "This yo-yo is forged from an alloy harder" 'br)
    (str "than steel! It's ultra-thin string is unbreakable!")
    (proc 15)
@@ -460,6 +479,7 @@
    (str "a yo-yo!")
    (proc 15)
    (proc 11)
+       ; Asuka:
            (str "You insolent whelp, I won't forgive you" 'br)
    (str "for such brazen disrespect!")
    (proc 15)

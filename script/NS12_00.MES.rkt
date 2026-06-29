@@ -9,8 +9,8 @@
 
 ; 	Character portraits:
 
-  (define-proc 9  (<> (exec-mem 2816 "GET 2 10 0 10 96")))   ; Happy
-  (define-proc 10 (<> (exec-mem 2816 "GET 2 50 0 10 96")))   ; Confused
+  (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
 
 ; Dr. Akiba has his own set of display coordinates...
   (define-proc 11 (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))
@@ -84,23 +84,23 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 11 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; 
-           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; 
-           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; 
+           (// (? (= 11 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 13 #t)
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 12 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 11 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; 
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; 
+           (// (? (= 11 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 15 #t)
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; 
-           (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; 
-           (// (? (= 13 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; 
-           (// (? (= 10 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; 
-           (// (? (= 12 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; 
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; 
+           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns12_01.mes")
+           (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 13 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 11 #t)
+           (// (? (= 10 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 12 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 10 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -188,7 +188,7 @@
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
+   (proc 9) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What have you been so giddy about all this")
@@ -205,7 +205,7 @@
    (str "Girls' School for physical examinations.")
    (proc 15)
    (proc 14) ; Clear Dr. Akiba portrait
-   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
+   (proc 10) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Is that any fun?")
@@ -217,7 +217,7 @@
    (str "high school girls here! And they come from the" 'br)
    (str "prestigious Cybernetic Girls' School!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
+   (proc 10) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "???")
@@ -227,7 +227,7 @@
    (set-reg 10 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
+   (proc 10) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "I... I don't get it.")
@@ -240,7 +240,7 @@
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
+   (proc 9) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "W-What is with the creepy smirk?")
@@ -255,7 +255,7 @@
               (str "Ha ha! Kirara, you're coming too.")
    (proc 15)
    (proc 14) ; Clear Dr. Akiba portrait
-   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
+   (proc 9) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Great! I can't wait!")

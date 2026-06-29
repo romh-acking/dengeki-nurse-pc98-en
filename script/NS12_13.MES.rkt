@@ -24,12 +24,14 @@
   (text "　　　　　　−") (str "At the Ice Cream Shop") (text "−")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "A double scoop of Peppermint Bark please,")
   (str "with cinnamon on top.")
   (proc 16)
   (str "Clerk: Would you like fries with that?")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "No.")
   (proc 16)
   (text-color 10)
@@ -39,36 +41,46 @@
   (str "Communicator: Call for you, Golgo-san!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Sniper Golgo 31 speaking, ready to bear" 'br)
   (str "your bad news...now offering express delivery.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Good, because Dengeki Nurse has" 'br)
   (str "revealed herself.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "So?")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Kill her for me.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Hey, I never land my shots, remember? I'm")
   (str "quite proud of that.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "I'll pay you handsomely.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Fine... Fax me the estimate.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "I'm counting on you.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Anything else?")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Yes, bring me some orange sherbet" 'br)
   (str "while you're at it. That's all.")
   (proc 16)
@@ -76,6 +88,7 @@
   (str "Click...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Add an orange sherbet to my order, Miss." 'br)
   (str "And pack it in dry ice, please... It's to go.")
   (proc 16)

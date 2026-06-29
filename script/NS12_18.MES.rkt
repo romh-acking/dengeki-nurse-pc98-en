@@ -59,6 +59,7 @@
   (str "yourself!")
   (proc 15)
   (proc 10)
+      ; Golgo 31:
             (str "Foolish maiden... Why rush into the arms")
   (str "of the reaper?")
   (proc 15)
@@ -68,20 +69,22 @@
   (str "pervert!")
   (proc 15)
   (proc 10)
+      ; Golgo 31:
             (str "Pervert...? How that word pierces my" 'br)
   (str "heart.")
   (proc 15)
   (proc 10)
+      ; Golgo 31:
             (str "Repeat it, and my M16 won't forgive you,")
   (str "even if I do.")
   (proc 15)
   (proc 0)
       ; Dengeki Nurse:
                  (str "I'll repeat it as much as I want," 'br)
-  (str "you skeeze! Pervert! Pervert! Pervert! Pervert!" 'br)
-  (str "Pervert! Pervert! Pervert! Pervert! Pervert!")
+  (str "you skeeze!!!") (repeat 9 (<> (str " Pervert!")))
   (proc 15)
   (proc 10)
+      ; Golgo 31:
             (str "......")
   (proc 15)
   (proc 2)
@@ -93,10 +96,14 @@
                  (str "Stay back! This is too dangerous!")
   (proc 15)
   (proc 10)
+      ; Golgo 31:
             (str "I hold no grudge against you, but this" 'br)
   (str "is business. Good luck... May you dream sweetly in")
   (str "your grave.")
   (proc 15)
+
+; 	Un oh! Dodge that!
+
   (text-color 1)
   (sound '|| 0)
 ; PC-98
@@ -114,7 +121,7 @@
 ; (sound '|se | 9)
   (proc 0)
       ; Dengeki Nurse:
-                 (text "ＤＥＮＧＥＫＩ　ＪＵＵＵＭＰ！！！")
+                (text "ＤＥＮＧＥＫＩ　ＪＵＵＵＭＰ！！！")
   (proc 15)
   (sound '|| 0)
 ; PC-98
@@ -133,6 +140,7 @@
 ; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
   (proc 10)
+      ; Golgo 31:
             (str "Playtime is over. I've got to wrap this" 'br)
   (str "up, or my ice cream will melt...")
   (proc 15)
@@ -194,14 +202,14 @@
    (proc 18)
    (text-color 7)
    (str "There's no time to mess around! Things are looking")
-  (str "pretty grim here!!!")
+   (str "pretty grim here!!!")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 1))
    (proc 18)
    (text-color 7)
    (str "If I let go of Kirara... I'll fall, won't I? Is" 'br)
-  (str "Kirara aware of the laws of gravity!?")
+   (str "Kirara aware of the laws of gravity!?")
    (proc 15)
    (proc 19)
    (set-reg 122 #t))
@@ -209,7 +217,7 @@
    (proc 18)
    (text-color 7)
    (str "I might break my leg... With a broken leg I can't" 'br)
-  (str "walk, right?")
+   (str "walk, right?")
    (proc 15)
    (proc 19)
    (set-reg 120 #t))
@@ -222,7 +230,7 @@
    (proc 19))
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
-   (proc 9) (proc 12) (proc 13)
+   (proc 9) (proc 12) (proc 13) ; Tanchi looks up
    (proc 2)
        ; Tanchi:
            (str "Arrgh, if I look down I'll get vertigo," 'br)
@@ -232,7 +240,7 @@
        ; Dengeki Nurse:
                   (str "So don't look up!")
    (proc 15)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Tanchi stops looking up
    (proc 19)
    (set-reg 121 #t))
  (seg (? (= T 1) (= O 1))
@@ -242,14 +250,14 @@
    (str "so my velocity will be...")
    (proc 15)
    (text-color 7)
-   (proc 9) (proc 12) (proc 13)
+   (proc 9) (proc 12) (proc 13) ; Tanchi looks up
    (str "No good! I can't do math when I've got vertigo!")
    (proc 15)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I told you to stop looking up!!")
    (proc 15)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Tanchi stops looking up
    (proc 19)
    (set-reg 123 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -317,11 +325,13 @@
            (str "Aaaaargh!")
    (proc 15)
    (proc 11)
+       ; Akiko:
           (str "Ohhh, my darling!")
    (proc 15)
-   (proc 12)
-   (exec-mem 2816 "PUT 8 17 93,FREE 8")
-   (exec-mem 6656 1 0 1 3 0)
+
+   (proc 12) (exec-mem 2816 "PUT 8 17 93,FREE 8") (exec-mem 6656 1 0 1 3 0)
+; ^ Tanchi lands on Akiko.
+
    (text-color 1)
    (text "ＴＨＵＭＰ！")
    (proc 15)
@@ -330,8 +340,12 @@
            (str "Uhhhh...")
    (proc 15)
    (proc 11)
+       ; Akiko:
           (str "Ohhh....")
    (proc 15)
+
+; 	Dengeki Nurse takes the opportunity to give Golgo 31 a good...
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_241.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
@@ -340,11 +354,15 @@
 ; FMT
 ;  (sound '|se | 10)
    (exec-mem 6656 1 0 1 3 0)
+
+; 	A good...
+
    (proc 0)
        ; Dengeki Nurse:
                   (text "ＤＥＮＧＥＫＩ　ＫＩＩＩＣＫ！")
    (proc 15)
    (proc 10)
+       ; Golgo 31:
              (str "Uwaaaagh!")
    (proc 15)
    (proc 0)
@@ -352,6 +370,7 @@
                   (str "Prepare yourself, Golgo 31!")
    (proc 15)
    (proc 10)
+       ; Golgo 31:
              (str "Don't... Don't do that, now... I'm not" 'br)
    (str "paid enough to take this on...")
    (proc 15)
@@ -361,9 +380,13 @@
    (str "picky!")
    (proc 15)
    (proc 10)
+       ; Golgo 31:
              (str "Very well...such is the curse of being" 'br)
    (str "The Professional...")
    (proc 15)
+
+; 	Battle time!
+
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-var U 6)
@@ -395,6 +418,9 @@
    (exec-mem 6656 8)
 ; FMT
 ;  (exec-mem 17920 0 1)
+
+; 	Text continues!
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "It's all over... Peace will finally")

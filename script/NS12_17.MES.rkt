@@ -107,7 +107,8 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 10)
-           (str "Come on, let's have some fun!")
+       ; Akiko:
+          (str "Come on, let's have some fun!")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -118,14 +119,16 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 10)
-           (str "Ahhhhh... Do you hate me that much?")
+       ; Akiko:
+          (str "Ahhhhh... Do you hate me that much?")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Put a sock in it, I'm worried for Kirara!")
    (proc 15)
    (proc 10)
-           (str "She's just a third wheel. There's no one" 'br)
+       ; Akiko:
+          (str "She's just a third wheel. There's no one" 'br)
    (str "else here, so just take it easy!")
    (proc 15)
    (proc 2)
@@ -141,7 +144,8 @@
    (str "Struggle struggle!!!")
    (proc 15)
    (proc 10)
-           (str "Mmmmm, stop struggling!")
+       ; Akiko:
+          (str "Mmmmm, stop struggling!")
    (proc 15)
    (proc 19))
  (seg (? (= T 3) (= O 1))
@@ -151,19 +155,27 @@
            (str "Nooooo, lemme gooooo!")
    (proc 15)
    (proc 10)
-           (str "No, wait!!")
+       ; Akiko:
+          (str "No, wait!!")
    (proc 15)
+
+; 	Cut to Dengeki Nurse running out of the school...
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_232.gpc,GPC") (image-mem 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_233.gpc,GPC") (image-mem 1 0)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues...
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "Ma'am, have you seen Golgo 31" 'br)
    (str "around here?")
    (proc 15)
    (proc 11)
+       ; Cleaning Lady:
                   (str "Oh yeah, that guy. He was up on the")
    (str "hill.")
    (proc 15)
@@ -171,6 +183,9 @@
        ; Dengeki Nurse:
                   (str "Thank you!")
    (proc 15)
+
+; 	Cut to Tanchi running out of the school...
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 2816 "VIEW 4 16 52 303,PUT 10 4 16")
    (exec-mem 2816 "ACCESS 0")
@@ -179,6 +194,9 @@
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_234.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues...
+
    (proc 2)
        ; Tanchi:
            (str "Dammit, Kirara's too fast!")
@@ -188,12 +206,16 @@
            (str "Hey, lady, you seen Dengeki Nurse?")
    (proc 15)
    (proc 11)
+       ; Cleaning Lady:
                   (str "Yep. Running towards the hill.")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Thanks a bunch!")
    (proc 15)
+
+; 	Cut to Akiko running out of the school...
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 2816 "VIEW 4 16 52 303,PUT 10 4 16")
    (exec-mem 2816 "ACCESS 0")
@@ -202,16 +224,22 @@
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_235.gpc,GPC") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues...
+
    (proc 10)
-           (str "Oh auntie, have you seen a hot guy running" 'br)
+       ; Akiko:
+          (str "Oh auntie, have you seen a hot guy running" 'br)
    (str "around?")
    (proc 15)
    (proc 11)
+       ; Cleaning Lady:
                   (str "I don't know if I'd say hot...but" 'br)
    (str "up the hill, I guess.")
    (proc 15)
    (proc 10)
-           (str "Thank youuuu!")
+       ; Akiko:
+          (str "Thank youuuu!")
    (proc 15)
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 2816 "VIEW 4 16 52 303,PUT 10 4 16,FREE 10")
@@ -227,7 +255,8 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
-           (str "Nooo, Don't goooo!")
+       ; Akiko:
+          (str "Nooo, Don't goooo!")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
