@@ -101,7 +101,7 @@
 ; Action
      (/
       (if (</>
-           (// (? (= 64 #t))                     (nop@) (set-var T 3) (set-var O 3) (seg-call))
+           (// (? (= 64 #t))                     (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns11_07.mes")
            (// (? (= 56 #t) (= 65 #f))           (nop@) (set-var T 3) (set-var O 2) (seg-call))
            (// (? (= 55 #t) (= 56 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 56 #t)
            (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
@@ -250,22 +250,22 @@
    (set-reg 65 #t))
  (seg (? (= T 1) (= O 5))												; 
    (proc 18)
-   (proc 12)	; Sad
+   (proc 12) ; Kirara Portrait (Sad)
    (text-color 7)
    (str "Ah... She looks so sad now... I guess it's no" 'br)
    (str "surprise, finding out she's just a pawn of her" 'br)
    (str "parents' killers...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 1) (= O 6))												; 
    (proc 18)
-   (proc 12)	; Sad
+   (proc 12) ; Kirara Portrait (Sad)
    (text-color 7)
    (str "She still has that sad expression... Maybe I can" 'br)
    (str "cheer her up a little?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
@@ -289,6 +289,7 @@
    (str "nurse, you can go back to your post now.")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "Ah, yes... Thank you.")
    (proc 15)
    (proc 5)
@@ -308,6 +309,7 @@
            (str "That... That pendant...!?")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "???")
    (proc 15)
    (proc 5)
@@ -324,6 +326,7 @@
    (str "Don't be shy! Throw yourself into my arms!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "I don't know what you're talking about." 'br)
    (str "I'm, just gonna get going...")
    (proc 15)
@@ -331,12 +334,13 @@
        ; Dr. Akiba:
               (str "You stop right there, KIRARA INAZUMA!")
    (proc 15)
-   (proc 13)	; Shouting
+   (proc 13) ; Portrait (Shouting)
    (proc 10)
+       ; Nurse:
           (str "!!! But how... How do you know my name!?")
    (proc 15)
    (text-color 7)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (str "She's adopting a grim expression and steeling" 'br)
    (str "herself.")
    (proc 15)
@@ -344,11 +348,12 @@
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 4))												; #2
    (proc 18)
-   (proc 13)	; Shouting
+   (proc 13) ; Portrait (Shouting)
    (proc 10)
+       ; Nurse:
           (str "Who are you people!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 5))												; (After Kirara reveals she is part of Black Cross)
    (proc 18)
@@ -356,18 +361,18 @@
        ; Tanchi:
            (str "Kirara, why are you here?")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I'm sorry... I was here to perform a" 'br)
    (str "Procedure on the minister...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "A... Procedure?")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "In Black Cross terms, a Procedure...is" 'br)
@@ -378,7 +383,7 @@
            (str "It was supposed to be my first Procedure," 'br)
    (str "but... I can't do it...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "You mustn't, Kirara.")
@@ -387,24 +392,24 @@
        ; Dr. Akiba:
               (str "What are you going to do now?")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I can't go back...to the Society... I want")
    (str "to look for my mother here in Japan, but...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What's the matter?")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "The Black Cross does not forgive traitors.")
    (str "...I'll be the target of their next Procedure...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I...I won't allow that to happen!!! To go" 'br)
@@ -420,13 +425,13 @@
            (str "Absolutely! You should stay here and find" 'br)
    (str "your mother!")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Thank you both, but... I'd be troubling" 'br)
    (str "the both of you...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "It's no problem at all. No matter how" 'br)
@@ -438,12 +443,12 @@
            (str "Er, yes...that's, right. So, uh, you can" 'br)
    (str "stay in Japan.")
    (proc 15)
-   (proc 11)	; Smiling
+   (proc 11) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Is that really okay...?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yes! It's been decided.")
@@ -452,13 +457,13 @@
    (set-reg 57 #t))
  (seg (? (= T 2) (= O 6))												; #2
    (proc 18)
-   (proc 11)	; Smiling
+   (proc 11) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "I'm not sure how this will go, but..." 'br)
    (str "We'll give it our all then.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -478,50 +483,55 @@
    (proc 19))
  (seg (? (= T 3) (= O 1))												; (After Dr. Akiba calls out Kirara's name)
    (proc 18)
-   (proc 14)	; Flushed
+   (proc 14) ; Portrait (Flushed)
    (text-color 7)
    (str "I hold up my half of the pendant.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
    (exec-mem 2816 "GET 3 34 162 50 297")
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 4 34 162,FREE 4")
+; ^ Display Tanchi's half of the pendant
+
    (proc 2)
        ; Tanchi:
            (str "Behold, the pendant of our destiny!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "This is...")
    (proc 15)
    (text-color 7)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (str "I placed it together with Kirara's pendant.")
    (proc 15)
-   (proc 14)	; Flushed
+   (proc 14) ; Portrait (Flushed)
+
    (exec-mem 2816 "VIEW 41 165 59 285,OVER 1,PUT 5 41 165,FREE 5")
+; ^ Display Kirara's half of the pendant
+
    (sound '|| 0)
 ; PC-98
    (sound '|| "uso¥Nurse11.uso")
 ; FMT
 ;  (sound '|| "Nurse11.fmt")
    (sound '|| 1)
+
    (text-color 4)
    (str "Kirara:") (text "“") (str "LOVE TARO AND MITSUKO...") (text "”")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Your father and mother, Kirara.")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 3 34 162,FREE 3")
    (proc 5)
        ; Dr. Akiba:
@@ -531,24 +541,24 @@
    (str "The doc recapped everything he told me in the" 'br)
    (str "archives.")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I... I'm a Black Cross Society commando...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What!?")
    (proc 15)
-   (proc 12)	; Sad
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I've been in their ranks as long as I" 'br)
    (str "remember, and was trained to be a Nurse" 'br)
    (str "Commando...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Truly, the most ironic of fates...")

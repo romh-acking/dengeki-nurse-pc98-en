@@ -60,31 +60,31 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 99 #t))             (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 98 #t) (= 99 #f))   (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 97 #t) (= 98 #f))   (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 99 #t))             (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 102 #t)
+           (// (? (= 98 #t) (= 99 #f))   (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 100 #t)
+           (// (? (= 97 #t) (= 98 #f))   (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 101 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 100 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 100 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 99 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 102 #t))            (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 101 #t) (= 102 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 102 #t))            (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 103 #t)
+           (// (? (= 101 #t) (= 102 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 98 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 97 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 97 #t))             (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (// (? (= 97 #t))             (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; 
+           (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call))))) ; 
 ; Move
      (/
       (if (</>
-           (// (? (= 103 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 103 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; 
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call))))) ; 
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
 ; Unused
@@ -125,7 +125,7 @@
    (proc 18)
    (text-color 7)
    (str "Well...as a doctor, human life is above all." 'br)
-   (str "Especially the life of a gorgeous woman.")
+   (str "Especially the life of a gorgeous woman!")
    (proc 15)
    (proc 19)
    (set-reg 102 #t))
@@ -156,6 +156,7 @@
            (str "What's wrong?")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "I'm sorry, it's my chronic illness...")
    (proc 15)
    (proc 2)
@@ -164,6 +165,7 @@
    (str "Let me examine you.")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "I... I'm sorry...")
    (proc 15)
    (proc 19)
@@ -176,6 +178,7 @@
    (str "need to take care of something first.")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "Ahhh... It hurts...")
    (proc 15)
    (text-color 7)
@@ -192,6 +195,7 @@
    (str "go to the examination room.")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "We just met... I'm sorry to trouble you...")
    (proc 15)
    (proc 2)
@@ -219,17 +223,20 @@
       (str "Rub rub...")
       (proc 15)
       (proc 10)
-      (str "Ooh, um, that's not where it hurts..."))
+          ; Lady:
+            (str "Ooh, um, that's not where it hurts..."))
      (/
       (str "Grope grope grope...")
       (proc 15)
       (proc 10)
-      (str "No... That's not where the problem is..."))
+          ; Lady:
+            (str "No... That's not where the problem is..."))
      (/
       (str "Squeeze squeeze squeeze...")
       (proc 15)
       (proc 10)
-      (str "Aaaah... No... Not there...!"))))
+          ; Lady:
+            (str "Aaaah... No... Not there...!"))))
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
@@ -247,12 +254,19 @@
            (str "All right then! On my back!")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "I'm sorry to be a burden...")
    (proc 15)
+
+; 	Lady removed from the scene
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_126.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 6656 28 185 48 305)
+
+; 	Text continues...
+
    (text-color 7)
    (str "I carry the woman on my back to the exam room.")
    (proc 15)

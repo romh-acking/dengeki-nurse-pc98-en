@@ -77,45 +77,45 @@
       (if (</>
            (// (? (= 108 #t))                                  (nop@) (set-var T 0) (set-var O 5) (seg-call))
            (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 106 #t) (= 107 #f))                       (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 106 #t) (= 107 #f))                       (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 113 #t)
            (// (? (= 105 #t) (= 106 #f))                       (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 104 #t) (= 105 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 104 #t) (= 105 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 110 #t)
            (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 108 #t))                                  (nop@) (set-var T 1) (set-var O 5) (seg-call))
+           (// (? (= 108 #t))                                  (nop@) (set-var T 1) (set-var O 5) (seg-call))    ; (set-reg 112 #t)
            (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 105 #t) (= 106 #t))                       (nop@) (set-var T 1) (set-var O 3) (seg-call))
+           (// (? (= 105 #t) (= 106 #t))                       (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 114 #t)
            (// (? (= 109 #t) (= 105 #t) (= 106 #f))            (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 109 #t) (= 105 #f))                       (nop@) (set-var T 1) (set-var O 1) (seg-call))
            (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 112 #t))                                  (nop@) (set-var T 2) (set-var O 8) (seg-call))
+           (// (? (= 112 #t))                                  (nop@) (set-var T 2) (set-var O 8) (seg-call))    ; (set-reg 116 #t)
            (// (? (= 108 #t) (= 112 #f))                       (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 111 #t) (= 107 #f))                       (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 106 #t) (= 111 #f))                       (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 105 #t) (= 106 #f))                       (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (mes-load? "mes¥action1.mes") -> (set-reg 108 #t)
+           (// (? (= 111 #t) (= 107 #f))                       (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 114 #t)
+           (// (? (= 106 #t) (= 111 #f))                       (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 111 #t)
+           (// (? (= 105 #t) (= 106 #f))                       (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 106 #t)
            (// (? (= 109 #t) (= 105 #f))                       (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 110 #t) (= 109 #f))                       (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 110 #t) (= 109 #f))                       (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 109 #t)
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 104 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 108 #t))                                  (nop@) (set-var T 3) (set-var O 6) (seg-call))
            (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 3) (set-var O 5) (seg-call))
-           (// (? (= 113 #t) (= 114 #t) (= 111 #t) (= 115 #t)) (nop@) (set-var T 3) (set-var O 4) (seg-call))
-           (// (? (= 105 #t) (= 106 #t))                       (nop@) (set-var T 3) (set-var O 3) (seg-call))
+           (// (? (= 113 #t) (= 114 #t) (= 111 #t) (= 115 #t)) (nop@) (set-var T 3) (set-var O 4) (seg-call))    ; (set-reg 107 #t)
+           (// (? (= 105 #t) (= 106 #t))                       (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (set-reg 115 #t)
            (// (? (= 105 #t) (= 106 #f))                       (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 109 #t) (= 105 #f))                       (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 109 #t) (= 105 #f))                       (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 105 #t)
            (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/
       (if (</>
-           (// (? (= 116 #t))                                  (nop@) (set-var T 4) (set-var O 5) (seg-call))
+           (// (? (= 116 #t))                                  (nop@) (set-var T 4) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns11_14.mes")
            (// (? (= 108 #t) (= 116 #f))                       (nop@) (set-var T 4) (set-var O 4) (seg-call))
            (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 4) (set-var O 3) (seg-call))
            (// (? (= 106 #t) (= 107 #f))                       (nop@) (set-var T 4) (set-var O 2) (seg-call))
@@ -246,6 +246,7 @@
            (str "Where exactly does it hurt, now...?")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "My chest... My chest feels tight...")
    (proc 15)
    (proc 19)
@@ -258,31 +259,43 @@
    (str "for me?")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "Yes... Of course...")
    (proc 15)
+
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_129.gpc,GPC") (image-mem 1 0)
+; ^ And so her shirt comes off!
+
    (proc 19)
    (set-reg 109 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 10)
+       ; Lady:
          (str "Um... Aren't you going to examine me?")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 3))
+
    (exec-mem 2816 "VIEW 27 152 50 295,PUT 16 27 152,FREE 16")
+; ^ Guillotine Nurse reveals herself
+
    (proc 18)
 ; PC-98
    (sound '|se | 26)
 ; FMT
 ;  (sound '|se | 5)
    (proc 10)
+       ; Lady:
          (str "You should've let this sleeping dog lie...")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "What in the") (text "−") (str "!?")
    (proc 15)
+
+; 	Guillotine Nurse wastes no time in putting Tanchi on the portable chopping block!
+
    (sound '|| 0)
 ; PC-98
    (sound '|| "uso¥Nurse04.uso")
@@ -290,6 +303,7 @@
 ;  (sound '|| "Nurse04.fmt")
    (sound '|| 1)
    (proc 10)
+       ; Lady:
          (str "Taste the unholy terror of the guillotine!")
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_131.gpc,GPC") (image-mem 1 3)
@@ -297,11 +311,15 @@
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    ((cmd 193) 0 "b:¥gpa¥ns1-134.gpa")
    (proc 15)
+
+; 	Text continues.
+
    (proc 2)
        ; Tanchi:
            (str "Who the hell are you!?")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "The Executioner of the Black Cross Society!" 'br)
    (str "The cold-blooded Guillotine Nurse!")
    (proc 15)
@@ -314,6 +332,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Prepare for the icy embrace of" 'br)
    (str "death!")
    (proc 15)
@@ -323,6 +342,7 @@
    (str "Cross target a law-abiding citizen like me!?")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Anyone who opposes us will be" 'br)
    (str "destroyed!")
    (proc 15)
@@ -336,6 +356,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Ho ho ho, my blade is so sharp" 'br)
    (str "it'll be over before you know it!")
    (proc 15)
@@ -348,19 +369,25 @@
            (str "Kirara, help me!!!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Pfah! What could a second-rate" 'br)
    (str "commando who's never even done a procedure" 'br)
    (str "possibly do?")
    (proc 15)
+
+; 	Dengeki Nurse throws a little zap...
+
    ((cmd 194) 0 ".ｱ.ｲ..ｳ.........ｲ..ｱ...ｴ.ｵ.ｶ.ｱ")
    (exec-mem 2816 "GET 9 5 23 28 166")
    (exec-mem 2816 "VIEW 5 23 28 166,OVER 1,PUT 10 5 23,FREE 10")
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "PLASMA FLASH!!!")
    ((cmd 195) 0 1)
    (delay 80 0)
    (proc 15)
+
    ((cmd 196) 0 0)
    (sound '|| 0)
 ; PC-98
@@ -370,6 +397,7 @@
    (text-color 1)
    (text "ＺＺＺＺＺＺＺＺＺＯＲＣＨ！")
    (proc 15)
+
    (sound '|| 0)
 ; PC-98
    (sound '|se | 24)
@@ -378,10 +406,14 @@
    (text-color 1)
    (text "ＢＡＭ！　ＫＡＢＯＯＯＯＯＯＯＭ！")
    (proc 15)
+
    (proc 2)
        ; Tanchi:
            (str "Gwaaaaaaaaaaa!")
    (proc 15)
+
+; 	And off comes the Guillotine!
+
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 9 5 23,FREE 9")
    (exec-mem 2816 "GET 7 27 152 50 295")
    (exec-mem 2816 "VIEW 27 152 50 295,OVER 1,PUT 8 27 152,FREE 8")
@@ -391,30 +423,43 @@
 ; FMT
 ;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
+
+; 	Regularly-scheduled programming continues...
+
    (proc 2)
        ; Tanchi:
            (str "Whoa! The guillotine came off!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Tsk! Impudent brat! Someone of" 'br)
    (str "your low caliber isn't worth my time!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 27 152 50 295,PUT 7 27 152,FREE 7")
+; ^ Clear visual
+
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Doofy Nurse! That's the traitor,")
    (str "0074! Deal with her posthaste!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 27 152 50 295,OVER 1,PUT 6 27 152,FREE 6")
+; ^ Doofy Nurse appears
+
    (proc 2)
        ; Tanchi:
            (str "You... You're Tomoyo-chan from earlier" 'br)
    (str "today...!")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Hoh-hoh! Inside the org, I'm known as the" 'br)
    (str "Doofus Nurse!")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Doctor, your technique is...lacking, it" 'br)
    (str "wasn't arousing at all. Pathetic, frankly.")
    (proc 15)
@@ -433,6 +478,7 @@
            (str "That's um, um, um...")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Nothing a brat like you would understand," 'br)
    (str "0074... Kirara-chan!")
    (proc 15)
@@ -441,6 +487,7 @@
                   (str "A brat!!! Why, you...")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "That's right! You got a problem, come at" 'br)
    (str "me!")
    (proc 15)
@@ -454,6 +501,9 @@
                   (str "I've been reborn as Dengeki Nurse," 'br)
    (str "with the sole purpose of smashing the Black Cross!")
    (proc 15)
+
+; 	Battle time
+
    (sound '|| 2)
    (exec-mem 2816 "EXIT")
    (set-var U 1)
@@ -466,6 +516,7 @@
 ;  (mes-load? "mes¥action01.mes"))
 
 ; 	The post-battle stuff here is moved into its own dialogue tree in the FMT version (see below).
+; 	Dummy out everything in the following section for the FMT port.
 
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
@@ -484,13 +535,11 @@
    (exec-mem 6656 8)
    (text-frame 3 324 52 379)
    (text-reset 15)
-   (proc 0)
-       ; Dengeki Nurse:
+   (proc 0) ; Dengeki Nurse:
                   (str "Phew... That was too close for" 'br)
    (str "comfort.")
    (proc 15)
-   (proc 2)
-       ; Tanchi:
+   (proc 2) ; Tanchi:
            (str "You saved my ass!")
    (proc 15)
    (proc 19)
@@ -576,12 +625,16 @@
            (str "Around...here?")
    (proc 15)
    (proc 10)
+       ; Lady:
          (str "Ahhh... There...")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Hmm...")
    (proc 15)
+
+; 	The lady's boobs start...moving???
+
    (exec-mem 2816 "VIEW 5 24 28 167,PUT 18 5 24,FREE 18")
    ((cmd 194) 0 ".ｱ..ｲ..ｳ..ｲ..ｱ..ｲ..ｳ..ｲ..ｱ..ｳ..ｲ..ｱ.")
    ((cmd 194) 1 "......................................................................ｱ......ｲ..‾ｱｴ..ｵ..ｶ..ｷ..ｶ..")
@@ -589,12 +642,16 @@
    ((cmd 195) 0 2)
    ((cmd 195) 1 1)
    (delay 300 0)
+
+; 	Text continues...
+
    (proc 2)
        ; Tanchi:
            (str "Wh-What the hell!?")
    (proc 15)
    ((cmd 196) 1 5)
    (proc 10)
+       ; Lady:
          (str "Hee hee hee hee...")
    (proc 15)
    (proc 2)
@@ -620,6 +677,7 @@
    (str "Clatter clatter clatter!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Struggle all you like, it won't" 'br)
    (str "help!")
    (proc 15)
@@ -631,6 +689,7 @@
    (str "Clatter clatter! Hrrrgh! Clatter clatter!!!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Get ready to rest in...PIECES!")
    (proc 15)
    (proc 2)
@@ -639,6 +698,7 @@
    (str "Heeeeeeeelp!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Nobody's coming to save you," 'br)
    (str "child!")
    (proc 15)
@@ -648,7 +708,11 @@
                   (str "Hold it right there!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Hey! Who") (text "−")
+
+; 	Pan upwards to reveal... Dengeki Nurse!
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (image-file "b:¥gpc¥Ns1_133.gpc") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
@@ -663,27 +727,38 @@
 ; FMT
 ;  (exec-mem 28672 4 16 51 303 1 1 4 72)
    (proc 15)
+
+; 	Text continues...
+
    (proc 11)
+       ; Guillotine Nurse:
                      (str "!!! Who... Who dares!?")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "!?!?")
    (proc 15)
+
    (exec-mem 2816 "GET 11 16 80 39 223")
    (exec-mem 2816 "VIEW 16 80 39 223,PUT 12 16 80,FREE 12")
+; ^ Dengeki Nurse does her little pose
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "I'll cure all ill, body and mind!")
    (text "　") (str "The invincible medical professional," 'br)
    (text "　　　　　　　　　　　　　　　　　") (str "Dengeki Nurse!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 16 80 39 223,PUT 11 16 80,FREE 11")
+; ^ Clear visual
+
    (proc 2)
        ; Tanchi:
            (str "Dengeki Nurse... Kirara, is that you!?")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Oho, the traitor herself!")
    (proc 15)
    (proc 19)
@@ -703,6 +778,7 @@
    (str "She dodged the attack!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "You imbecile!")
    (proc 15)
    (proc 19))

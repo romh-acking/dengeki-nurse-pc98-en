@@ -58,132 +58,162 @@
   (proc 16)
   (exec-mem 2816 "VIEW 50 154 63 242,OVER 1,PUT 8 50 154,FREE 8") ; 0074 appears
   (proc 10)
+      ; 0074:
         (str "Black Nurse, you called on me?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Yes...You've done well. I've heard" 'br)
   (str "about your admirable performance in Ecuador.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "It was nothing of note, ma'am.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Wee-hee-hee! No need to be modest." 'br)
   (str "From here on out, the future of the Black Cross" 'br)
   (str "rests on your shoulders.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "You are too kind, madam. I have a long way to")
   (str "go.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Now then, about your next mission..." 'br)
   (str "Would you be willing to go to Japan?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Japan...!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Oh, that's right! That's where you're" 'br)
   (str "from, isn't it?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Yes...yes, that's right.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Then this is a perfect state of" 'br)
   (str "affairs.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "What...what do you mean?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "You've been racking up a healthy share")
   (str "of paid vacation days, haven't you?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Erk! I'm sorry, I, uh") (text "−")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "No need to apologize. Your dedication" 'br)
   (str "to the cause shines through. But you do need to use")
   (str "that paid leave properly.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Uh, yes...")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Then how about this? Once your" 'br)
   (str "mission's complete, why not take a little vacation" 'br)
   (str "in Japan?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "You mean it?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "No.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "U...Understood... So, the mission?")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Yes. Take a look...")
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 197) 0 16)
   (exec-mem 6656 28 20 52 160) ; Minister shown on screen
   (proc 11)
+      ; Black Nurse:
                (str "This man is Japan's Minister of" 'br)
   (str "Foreign Affairs, and he's caught up in quite the" 'br)
   (str "scandal.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Your mission is to silence him.")
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Silence him...")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "That's right. But you have yet to" 'br)
   (str "perform a...Procedure. Am I wrong?")
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "I'm sorry...")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "To become an A-Rank Nurse Commando," 'br)
   (str "the Procedure is an unavoidable hurdle.")
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "I understand...")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Wee-hee-hee... Carry out your mission" 'br)
   (str "successfully, and maybe you will get that vacation.")
   (proc 16)
   (proc 10)
+      ; 0074:
         (str "Thank you, madam. I won't let you down.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Go get 'em, tigress. Off you go then!")
   (proc 16)
   (exec-mem 2816 "VIEW 39 153 63 297,OVER 0,PUT 1 39 153,FREE 1") ; Close-up on 0074

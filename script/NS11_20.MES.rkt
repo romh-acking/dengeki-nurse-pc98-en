@@ -33,26 +33,29 @@
   (proc 0)
       ; Dengeki Nurse:
                  (str "Not one more step, Guillotine" 'br)
-   (str "Nurse!")
+  (str "Nurse!")
   (proc 15)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "Hah! So you show your face," 'br)
-   (str "traitor! No one interferes with my noble hobby!")
+  (str "traitor! No one interferes with my noble hobby!")
   (proc 15)
   (proc 2)
       ; Tanchi:
           (str "Yo! Let the Minister go!")
   (proc 15)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "I don't usually attempt this" 'br)
-   (str "type of procedure... It'll hurt more than" 'br)
-   (str "surgery, so just cope!")
+  (str "type of procedure... It'll hurt more than" 'br)
+  (str "surgery, so just cope!")
   (proc 15)
   (text-color 7)
   (str "Guillotine Nurse presses a scalpel to the" 'br)
-   (str "Minister's throat!")
+  (str "Minister's throat!")
   (proc 15)
   (proc 10)
+      ; Minister:
             (str "Haa, haa, haa...")
   (proc 15)
   (proc 19)
@@ -71,29 +74,62 @@
    (text-color 1)
    (text-frame 3 324 52 379)
    (proc 19)
+
+; 	The flags in this script appear to be totally botched. This is how it was branched originally...
+
+;  (branch-var Z
+;   (</>
+; Think
+;    (/
+;     (if (</>
+;          (// (? (= 140 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
+;          (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 142 #t)
+;          (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 139 #t)
+;          (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+; Look
+;    (/
+;     (if (</>
+;          (// (? (= 140 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
+;          (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
+;          (// (? (= 141 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
+;          (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+; Talk
+;    (/
+;     (if (</>
+;          (// (? (= 143 #t) (= 142 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns11_21.mes")
+;          (// (? (= 143 #t) (= 142 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+;          (// (? (= 142 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 143 #t)
+;          (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 141 #t)
+
+; 	And this is how I would alter it:
+; 	(To keep within the 6 flags defined for this script, I essentially sacrificed Think #2 in progression.)
+
    (branch-var Z
     (</>
 ; Think
      (/
       (if (</>
-           (// (? (= 140 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 140 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 143 #t)
+           (// (? (= 139 #t) (= 142 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 142 #t)
+           (// (? (= 138 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 140 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 141 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
+           (// (? (= 141 #t) (= 138 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 143 #t) (= 142 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 143 #t) (= 142 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 142 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 143 #t) (= 142 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns11_21.mes")
+           (// (? (= 140 #t) (= 143 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 142 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 140 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 141 #t)
+
+;	The rest are fine.
+
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -126,8 +162,7 @@
    (text-color 7)
    (str "Hmmmm, nothing...")
    (proc 15)
-   (proc 19)
-   (set-reg 139 #t))
+   (proc 19))
  (seg (? (= T 0) (= O 2))
    (proc 18)
    (text-color 7)
@@ -139,7 +174,7 @@
    (str "thoughts right now!?")
    (proc 15)
    (text-color 7)
-   (str "..................................................")
+   (repeat 50 (<> (str ".")))
    (proc 15)
    (text-color 7)
    (str "Wait, that's it! Those breasts!")
@@ -156,9 +191,10 @@
    (str "In that case...")
    (proc 15)
    (text-color 7)
-   (str "I'll need to piss her off even more!")
+   (str "I'll need to rattle her even more!")
    (proc 15)
-   (proc 19))
+   (proc 19)
+   (set-reg 143 #t))
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
@@ -194,6 +230,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Heh! If you behave, I'll let you")
    (str "do a surgical obvservation on my fine Procedure!")
    (proc 15)
@@ -211,6 +248,7 @@
    (str "have breast cancer!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "W-What are you on about?")
    (proc 15)
    (proc 2)
@@ -219,10 +257,11 @@
    (str "just now! Didn't you notice that hard lump?")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "S-Stop messing around...")
    (proc 15)
    (proc 19)
-   (set-reg 143 #t))
+   (set-reg 140 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 2)
@@ -231,6 +270,7 @@
    (str "posthaste!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "...")
    (proc 15)
    (proc 19))
@@ -242,6 +282,7 @@
    (str "need to have your breast removed!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "...")
    (proc 15)
    (proc 2)
@@ -250,35 +291,48 @@
    (str "able to do all the fun stuff with them!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "No way...")
    (proc 15)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Here's my chance!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 27 153 52 310,PUT 3 27 153,FREE 3")
+; ^ Dengeki Scalpel Shuriken, go!
+
    (sound '|| 0)
 ; PC-98
    (sound '|se | 20)
 ; FMT
 ;  (sound '|se | 8)
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "Dengeki Scalpel Shuriken!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 5 23 30 180,PUT 4 5 23,FREE 4")
+; ^ Clear visual
+
    (sound '|| 0)
 ; PC-98
    (sound '|se | 20)
 ; FMT
 ;  (sound '|se | 9)
+
    (text-color 1)
    (str "WHOOOOOOSH!!!")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "You little...You tricked me!" 'br)
    (str "I'll destroy you two first!")
    (proc 15)
+
+; 	Battle time...
+
    (exec-mem 2816 "EXIT")
    (set-var U 3)
 ; PC-98
@@ -309,6 +363,7 @@
 ; FMT
 ;  (exec-mem 17920 0 1)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Urgh... Fools... Don't think you")
    (str "can hide from the society...")
    (proc 15)
@@ -343,6 +398,7 @@
    (str "Clatter...")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Don't you move!")
    (proc 15)
    (proc 2)
@@ -353,6 +409,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Where do you think you're" 'br)
    (str "going!?")
    (proc 15)
@@ -361,6 +418,7 @@
            (str "Uh, I kinda have to go pee") (text "−")
    (proc 15)
    (proc 11)
+       ; Guillotine Nurse:
                      (str "Permission DENIED!")
    (proc 15)
    (proc 19))

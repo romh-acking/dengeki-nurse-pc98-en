@@ -21,46 +21,57 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Minister:
             (str "Nooo, stop! Don't do it! I'm not even" 'br)
   (str "siiiiiick!")
   (proc 16)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "That's right... But things would" 'br)
   (str "be better off for you if you WERE sick. Isn't that" 'br)
   (str "what you want?")
   (proc 16)
   (proc 10)
+      ; Minister:
             (str "Aiiiigh! Stop!!!")
   (proc 16)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "I'll just inject these pure" 'br)
   (str "cultured terminal cancer cells, and make you" 'br)
   (str "legitimately unwell!")
   (proc 16)
   (proc 10)
+      ; Minister:
             (str "F-Forgive me! Please!")
   (proc 16)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "Now where should I inject these?" 'br)
   (str "Your heart? Your gut? I'll leave the decision to" 'br)
   (str "you!")
   (proc 16)
   (proc 10)
+      ; Minister:
             (str "Ahhhhh! Ahhhhh! Aaaaaaahhhhhhhh!")
   (proc 16)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "No need to be frightened. My" 'br)
   (str "surgical skills are world-class!")
   (proc 16)
   (proc 10)
+      ; Minister:
             (str "Sob, sob...")
   (proc 16)
   (proc 11)
+      ; Guillotine Nurse:
                     (str "This procedure came out of the" 'br)
   (str "blue, so I don't have any anesthesia. This may" 'br)
   (str "sting...")
   (proc 16)
   (proc 10)
+      ; Minister:
             (str "Aaaahhh.... Aieeeeeee!!!")
   (proc 16)
   ((cmd 209) 0 2)

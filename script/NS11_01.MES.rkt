@@ -149,7 +149,7 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 15 #t))                               (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 15 #t))                               (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_02.mes")
            (//                                             (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))

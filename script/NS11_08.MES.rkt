@@ -66,7 +66,7 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 68 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 68 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_09.mes")
            (//                         (nop@) (set-var T 4) (set-var O 0) (seg-call))))) ; (set-reg 67 #t)
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))

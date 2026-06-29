@@ -62,7 +62,7 @@
       ; Kirara:
           (str "It's Allizdog!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -79,30 +79,30 @@
      (/
 ; Think
       (if (</>
-           (// (? (= 129 #t))                                  (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 128 #t) (= 129 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 129 #t))                                  (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 135 #t)
+           (// (? (= 128 #t) (= 129 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 129 #t)
+           (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 132 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 128 #t))                                  (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 133 #t)
 ; Talk
      (/
       (if (</>
            (// (? (= 128 #t))                                  (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 131 #t) (= 132 #t) (= 133 #t) (= 134 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 130 #t))                                  (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 131 #t) (= 132 #t) (= 133 #t) (= 134 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 128 #t)
+           (// (? (= 130 #t))                                  (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 131 #t)
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 130 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 128 #t))                                  (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call))))) ; (set-reg 134 #t)
 ; Move
      (/
       (if (</>
-           (// (? (= 135 #t))                                  (nop@) (set-var T 4) (set-var O 2) (seg-call))
+           (// (? (= 135 #t))                                  (nop@) (set-var T 4) (set-var O 2) (seg-call))    ; (mes-jump "b:¥mes¥Ns11_18.mes")
            (// (? (= 128 #t) (= 135 #f))                       (nop@) (set-var T 4) (set-var O 1) (seg-call))
            (//                                                 (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
@@ -196,35 +196,35 @@
    (set-reg 131 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Uh... This is a vinyl toy, isn't it?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Why? How!? When!? How did the Minister" 'br)
    (str "turn into a vinyl toy?")
    (proc 15)
-   (proc 12)	; Shouting
+   (proc 12) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "That's not the Minister, he's been" 'br)
    (str "abducted!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Gracious sakes...")
    (proc 15)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Ayako must have made us hallucinate all" 'br)
    (str "that.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 1)
        ; Kirara:
            (str "By the time we got to the annex, the" 'br)
@@ -235,55 +235,55 @@
            (str "So...that Ayako woman...was banging" 'br)
    (str "Allizdog?")
    (proc 15)
-   (proc 10)	; Angry
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Where is your head at, you perv!? We need" 'br)
    (str "to get to the operating room, and fast!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "The Minister's in the operating room...?")
    (proc 15)
-   (proc 12)	; Shouting
+   (proc 12) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Guillotine Nurse is totally obsessed with" 'br)
    (str "surgery!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What!? But...what do you want me to do?")
    (proc 15)
-   (proc 12)	; Shouting
+   (proc 12) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Take me to the operating room!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "We went there to do surgery on Doc" 'br)
    (str "yesterday...")
    (proc 15)
-   (proc 12)	; Shouting
+   (proc 12) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Yeah, but I forgot where it is!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 128 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 12)	; Shouting
+   (proc 12) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "No time to waste! To the operating room!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -301,12 +301,12 @@
            (str "But...I'm scared...of Guillotine Nurse!" 'br)
    (str "She's totally gonna get me!")
    (proc 15)
-   (proc 10)	; Angry
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Why are you grabbing my arm like that!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -325,13 +325,13 @@
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
-   (proc 10)	; Angry
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Stop running away! Show some fortitude! Be")
    (str "a man for once!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 2))
    (proc 18)
@@ -339,19 +339,20 @@
        ; Tanchi:
            (str "Okay, fine, fine! Let's go!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Yeah! I'm counting on you!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Kirara, don't forget this...")
    (proc 15)
+
    (exec-mem 2816 "VIEW 5 23 21 158,PUT 3 5 23,FREE 3")
+; ^ Device shown
+
    (proc 2)
        ; Tanchi:
            (str "What is that?")

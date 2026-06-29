@@ -42,15 +42,13 @@
       ; Tanchi:
           (str "This is the operating room...")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
   (proc 1)
       ; Kirara:
           (str "Thanks for showing me the way. If you" 'br)
   (str "want, you can wait here.")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Wha!? No, I'm going!")
@@ -77,16 +75,16 @@
    (branch-var Z
     (</>
 ; Think
-     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call)) ; (set-reg 136 #t)
 ; Look
-     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call)) ; (set-reg 137 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 136 #t) (= 137 #t) (= 200 #t) (= 201 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 136 #t) (= 137 #t) (= 200 #t) (= 201 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥Ns11_20.mes")
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 201 #t)
 ; Action
-     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call)) ; (set-reg 200 #t)
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save
@@ -133,14 +131,12 @@
        ; Tanchi:
            (str "No good! It's not opening!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Don't you have a spare key?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "If it's locked from the inside, we can't" 'br)
@@ -154,21 +150,17 @@
        ; Kirara:
            (str "Well then, stand back!")
    (proc 15)
+
+; 	Charge ON! PLASMA FLASH!
+
    (sound '|| 2)
    (exec-mem 2816 "EXIT")
    ((cmd 209) 0 2)
    (sound '|| 0)
 ; PC-98
    (mes-load? "mes¥chang0.mes")
-
-; 	The following is split into its own segment in the FMT version...
-
-;  (set-var K 1)
-;  (mes-jump "mes¥chang0.mes"))
-;(seg (? (= T 2) (= O 2))
-;  (nop@)
-;  (set-reg 940 #f)
-
+; FMT
+;  (set-var K 1) (mes-jump "mes¥chang0.mes")) (seg (? (= T 2) (= O 2)) (nop@) (set-reg 940 #f)
    (load-mem "cmd¥quakeh.tcm" 6656)
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
@@ -185,19 +177,27 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    ((cmd 209) 1 2)
+
    (proc 2)
        ; Tanchi:
            (str "Hey, don't do anything reckless now...")
    (proc 15)
+
+; 	Dengeki Nurse whips out her bazooka...
+
    (proc 10) (exec-mem 2816 "GET 5 0 0 32 144")     (proc 11) (exec-mem 2816 "PUT 5 13 100,FREE 5")   (delay 20)
    (proc 10) (exec-mem 2816 "GET 7 33 0 32 144")    (proc 11) (exec-mem 2816 "PUT 7 13 100,FREE 7")   (delay 5)
    (proc 10) (exec-mem 2816 "GET 9 0 144 32 144")   (proc 11) (exec-mem 2816 "PUT 9 13 100,FREE 9")   (delay 5)
    (proc 10) (exec-mem 2816 "GET 11 33 144 32 144") (proc 11) (exec-mem 2816 "PUT 11 13 100,FREE 11")
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "Leave this to a professional! I'm" 'br)
    (str "just gonna flatten it! ...Lightly!")
    (wait)
+
+; 	...And BAM!
+
    (exec-mem 2816 "VIEW 13 100 46 228,PUT 3 13 100,FREE 3")
    ((cmd 194) 0 "............ｱ...ｲ..ｳ..ｴ..ｵ..ｶ..ｷ")
    ((cmd 195) 0 1)

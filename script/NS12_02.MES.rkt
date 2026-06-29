@@ -9,12 +9,12 @@
   (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (text-color 5) (str "Discipliner: ")))
   (define-proc 11 (<> (text-color 3) (str "Girl 1: ")))
-  (define-proc 12 (<> (text-color 1) (str "Girl 2: ")))
+; (define-proc 12 (<> (text-color 1) (str "Girl 2: "))) ; <--- Only used once
 
 ; 	Character portraits:
 
-  (define-proc 13 (<> (exec-mem 2816 "GET 2 10 0 10 96")))   ; Happy
-  (define-proc 14 (<> (exec-mem 2816 "GET 2 50 0 10 96")))   ; Confused
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4)))   ; Happy
+  (define-proc 14 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4)))   ; Confused
 
 ; 	Setup continues...
 
@@ -118,12 +118,12 @@
        ; Tanchi:
            (str "Hmm, this is a French-style gate.")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "It could be an English-style one...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 19 #t))
  (seg (? (= T 1) (= O 1))
@@ -158,25 +158,23 @@
            (str "Ho ho ho! here come the physicals! This is")
    (str "gonna be awesome!")
    (proc 15)
-   (proc 3) (proc 13) (proc 4)
+   (proc 13) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I'm excited too! Let's go already!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 18 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Hey, Tanchi... What are they doing over" 'br)
    (str "there?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 17 #t))
  (seg (? (= T 2) (= O 2))
@@ -187,19 +185,20 @@
    (str "checking if the uniform or hairstyles break the" 'br)
    (str "school's dress code.")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Huh. The Nurse Commando Academy was" 'br)
    (str "strict, but it looks like normal schools are" 'br)
    (str "equally so...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Well, this place IS prestigious.")
    (proc 15)
    (proc 10)
+       ; Discipliner:
                 (str "Hey! Are these striped panties!? The" 'br)
    (str "rules say underwear must be white cotton!")
    (proc 15)
@@ -207,45 +206,46 @@
    (set-reg 16 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "...They're inspecting panties too!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeeeah... It's fine to watch, but... This" 'br)
    (str "might be a bit much.")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "This can't be right!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Girl 1:
            (str "No way! Please forgive me!")
    (proc 15)
-   (proc 12)
-           (str "We're not like that!")
+   (text-color 1)
+   (str "Girl 2: We're not like that!")
    (proc 15)
    (proc 10)
+       ; Discipliner:
                 (str "All right, you get over here! Asuka" 'br)
    (str "and Momoko are gonna check you!")
    (proc 15)
    (proc 11)
+       ; Girl 1:
            (str "Anything but that...anything but that!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "This is awful! I'm going to give them a" 'br)
    (str "piece of my mind!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Wait, Kirara! This isn't our business...")
@@ -268,12 +268,12 @@
        ; Tanchi:
            (str "One-two-three-four! One-two-three-four!")
    (proc 15)
-   (proc 3) (proc 13) (proc 4)
+   (proc 13) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Warm-up exercises for the physical exams!")
@@ -285,14 +285,12 @@
        ; Tanchi:
            (str "I wonder what Kirara's panties look like?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "What are you doing!?!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

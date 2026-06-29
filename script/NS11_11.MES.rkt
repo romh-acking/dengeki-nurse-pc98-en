@@ -8,7 +8,7 @@
  (seg*
   (load-mem "cmd¥gpcph.tcm" 6656)
   (load-mem "dat¥ns1_k00p.dat" 7168)
-  (define-proc 10 (<> (text-color 1) (str "Echo: ")))
+; (define-proc 10 (<> (text-color 1) (str "Echo: "))) ; <--- only used once
   (sound '|| 0)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
@@ -63,31 +63,31 @@
      (/
       (if (</>
            (// (? (= 95 #t))                     (nop@) (set-var T 0) (set-var O 7) (seg-call))
-           (// (? (= 93 #t) (= 94 #t) (= 95 #f)) (nop@) (set-var T 0) (set-var O 6) (seg-call))
+           (// (? (= 93 #t) (= 94 #t) (= 95 #f)) (nop@) (set-var T 0) (set-var O 6) (seg-call))    ; (set-reg 95 #t)
            (// (? (= 92 #t))                     (nop@) (set-var T 0) (set-var O 5) (seg-call))
            (// (? (= 91 #t) (= 92 #f))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 90 #t) (= 91 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 88 #t) (= 89 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 90 #t) (= 91 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 91 #t)
+           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 96 #t)
+           (// (? (= 88 #t) (= 89 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 89 #t)
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 88 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 92 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 96 #t) (= 92 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 92 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 93 #t)
+           (// (? (= 96 #t) (= 92 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 90 #t)
            (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/ (nop@) (set-var T 2) (set-var O 0) (seg-call))
 ; Action
      (/
       (if (</>
-           (// (? (= 92 #t))                     (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 91 #t) (= 92 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 92 #t))                     (nop@) (set-var T 3) (set-var O 2) (seg-call))    ; (set-reg 94 #t)
+           (// (? (= 91 #t) (= 92 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 92 #t)
            (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/
       (if (</>
-           (// (? (= 95 #t))                     (nop@) (set-var T 4) (set-var O 2) (seg-call))
+           (// (? (= 95 #t))                     (nop@) (set-var T 4) (set-var O 2) (seg-call))    ; (mes-jump "b:¥mes¥ns11_12.mes")
            (// (? (= 92 #t) (= 95 #f))           (nop@) (set-var T 4) (set-var O 1) (seg-call))
            (//                                   (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
@@ -229,8 +229,8 @@
        ; Tanchi:
            (str "HEEEEEY!")
    (proc 15)
-   (proc 10)
-         (str "...Heeeeey!")
+   (text-color 1)
+   (str "Echo: ...Heeeeey!")
    (proc 15)
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action

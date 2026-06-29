@@ -11,8 +11,8 @@
 
 ; 	Character portraits:
 
-  (define-proc 10 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
-  (define-proc 11 (<> (exec-mem 2816 "GET 2 70 0 10 96"))) ; Flushed
+  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4))) ; Flushed
 
 ; 	Setup continues...
 
@@ -118,12 +118,12 @@
        ; Tanchi:
            (str "Hmm, it's all cobwebbed in there...")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "What did you just say!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I mean, in the passage...")
@@ -136,22 +136,22 @@
        ; Tanchi:
            (str "Oh, a yellow stain...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "No way! Gross!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, it's right there on the wall...")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Tanchi!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 76 #t))
  (seg (? (= T 1) (= O 2))
@@ -160,33 +160,33 @@
        ; Tanchi:
            (str "Ah!")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Wh-What now...?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "There's an air vent over here! Try looking")
    (str "through it!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Fine...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Why are you so mad all the time?")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Sorry, you just get me worked up...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 80 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -209,20 +209,18 @@
            (str "If you're gonna complain, why don't we" 'br)
    (str "switch places? It's super tight in here, though.")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Fine, whatever! How can you be so carefree")
   (str "in an emergency like this!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 74 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
@@ -232,7 +230,7 @@
        ; Kirara:
            (str "Ah!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What is it? What do you see?")
@@ -253,12 +251,12 @@
    (text-color 7)
    (str "Haaaaaa...")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 10) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Don't breathe on me!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I wasn't doing it on purpose! Jeez! Am I" 'br)
@@ -271,12 +269,12 @@
    (text-color 1)
    (str "Poke poke poke...")
    (proc 15)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Heyyyy... No... Don't do that!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Heh heh heh heh...")
@@ -284,13 +282,13 @@
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Stop wiggling around, this place is" 'br)
    (str "cramped enough!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
@@ -303,20 +301,20 @@
    (set-var C 2))
  (seg (? (= T 7) (= O 0))												; Poophole (336, 96)
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Ah! Don't touch me there!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 8) (= O 0))												; Cooch (300, 140)
    (proc 18)
-   (proc 3) (proc 11) (proc 4)
+   (proc 11) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Ahhh... S-Stop it... Stop, it's making me" 'br)
    (str "feel...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)))

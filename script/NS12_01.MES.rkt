@@ -29,33 +29,40 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Golgo 31:
             (str "The bearer of your bad news has arrived." 'br)
   (str "Golgo 31, at your service.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Hee hee hee! I've been waiting.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Requesting my help for a hit...the mighty")
   (str "Black Cross Society has truly fallen.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "It's a job that only you can do.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "My fee will be substantial.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "We can discuss that with Accounting" 'br)
    (str "later.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "So, then...tell me what you want me to" 'br)
    (str "do.")
   ((cmd 195) 0 65535)
@@ -64,39 +71,49 @@
   (exec-mem 1280 14 12 15 13)
   (exec-mem 6656 28 20 52 160)
   (proc 11)
+      ; Black Nurse:
                (str "This is Akiko Ano, age 24. She is the" 'br)
   (str "Physics teacher in Cybernetic Girls' School.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "You want me to kill her?")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "If it were that simple, I wouldn't" 'br)
   (str "have called you.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "That figures... After all, I'm the" 'br)
   (str "legendary sniper who's never landed a shot.")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "Yeah. So instead, I want you to create")
   (str "a scandal that will forever tarnish the reputation" 'br)
   (str "of Cybernetic Girls' School.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Is that all?")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "That's all. No need to probe deeper.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Oh, so what about this Akiko woman then?")
   (proc 16)
   (proc 11)
+      ; Black Nurse:
                (str "I just wanted to show her picture to" 'br)
   (str "you.")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Okay.")
   (proc 16)
   ((cmd 209) 0 2)

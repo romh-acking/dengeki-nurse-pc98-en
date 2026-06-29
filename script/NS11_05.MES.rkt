@@ -59,7 +59,7 @@
 ; Talk
      (/
       (if (</>
-           (// (? (= 52 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (// (? (= 52 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_06.mes")
            (//               (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 52 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))

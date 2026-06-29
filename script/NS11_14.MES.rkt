@@ -67,25 +67,25 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 117 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 117 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 120 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 118 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 118 #t))            (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_15.mes")
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
            (// (? (= 118 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 120 #t) (= 118 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 120 #t) (= 118 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 118 #t)
            (// (? (= 117 #t) (= 120 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 119 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (// (? (= 119 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 117 #t)
            (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/
       (if (</>
-           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 119 #t)
            (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/
@@ -133,32 +133,30 @@
    (text-color 7)
    (str "I gaze at Kirara's face.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Um, yes? My eyes ARE up here, but" 'br)
    (str "you're making it worse...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "As a man... I cannot permit you to go in" 'br)
    (str "there alone...")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Eh... Fair enough... But you might" 'br)
    (str "regret saying that later.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Of course I won't!")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Where's the minister's room?")
@@ -167,34 +165,35 @@
        ; Tanchi:
            (str "Leftmost room on the second floor.")
    (proc 15)
-   (proc 6)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (proc 4)
+   (proc 6) ; Clear Portrait
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Up there? Well, we can't climb..." 'br)
    (str "Well, why don't you grab hold of me?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Does this mean you have a plan?")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Don't let go of my hand, no matter" 'br)
    (str "what.")
    (proc 15)
-   (proc 6)
-   (proc 11)	; Shouting
+   (proc 6) ; Clear Portrait
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Dengeki Juuuuuuuuuuuuuump!")
    (proc 15)
    (text-color 7)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
+; 	Cut to Dengeki Nurse and Tanchi jumping through the window...
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30) (image-file "b:¥gpc¥NS1_138.gpc") (image-mem 1)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
@@ -203,15 +202,20 @@
 ; FMT
 ;  (sound '|se | 6)
    (exec-mem 6656 1 0 1 3 0)
+
    (text-color 1)
    (text "ＣｒｒｒｒｒａＡＡＡＡＡＳＨ！")
    (proc 15)
+
    (sound '|| 0)
 ; PC-98
    (sound '|| "uso¥Nurse10.uso")
 ; FMT
 ;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
+
+; 	Text continues
+
    (proc 2)
        ; Tanchi:
            (str "OWWWW! Why would you do that!?")
@@ -229,12 +233,12 @@
    (mes-jump "b:¥mes¥ns11_15.mes"))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Don't you have the key?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, but I...uhh...kind of dropped it.")
@@ -242,45 +246,45 @@
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "We'll do without. Where's the" 'br)
    (str "minister's room?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Wait, what are you planning?")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I'm going in through the window.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "That's nuts! It's on the second floor!")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I was a Nurse Commando, I've got" 'br)
    (str "plenty of training under my lab coat.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 117 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Which room on the second floor?" 'br)
    (str "Tell me!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -288,39 +292,39 @@
        ; Tanchi:
            (str "Okay, then let's go together!")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "As if, you'll just get in the way!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "It's not just Guillotine Nurse in our way!")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Ayako, right? Goofy Nurse Ayako.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, yeah! That's her name!")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Ayako and Tomoyo are basically" 'br)
    (str "joined at the hip. They make a powerful team.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "For real? They seem like a pair of idiots" 'br)
    (str "to me.")
    (proc 15)
-   (proc 10)	; Smiling
+   (proc 10) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "They're a fearsome Doofus and" 'br)
@@ -332,7 +336,7 @@
                   (str "Ayako can make her foes" 'br)
    (str "hallucinate, for one.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hmmmm.")
@@ -341,12 +345,12 @@
    (set-reg 118 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "We can't waste time! Into the room!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -363,15 +367,13 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Hey, you! Why are you grabbing my" 'br)
    (str "butt in an emergency situation?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "My hand just...moves on its own.") ; Ed: bro

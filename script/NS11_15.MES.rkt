@@ -44,10 +44,12 @@
   (str "Oh, good... He's alive...")
   (proc 15)
   (proc 10)
+      ; Minister:
             (str "What is the meaning of this!? How" 'br)
    (str "improper!")
   (proc 15)
   (proc 12)
+      ; Ayako:
          (str "Oh myyy, oh nooooo, how embarrassing!")
   (proc 15)
   (proc 19)
@@ -102,78 +104,89 @@
    (str "supposed to be a patient here!")
    (proc 15)
    (proc 10)
+       ; Minister:
              (str "Enough! Do you know who you are talking" 'br)
    (str "to!?")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "That woman's here to kill you!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Minister:
              (str "Nonsense! A cute little thing like" 'br)
    (str "this...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Its fiiine! Just a li'l misunderstanding...")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I bet she told you to freshen your" 'br)
    (str "breath with a mint, didn't she?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, dude...")
    (proc 15)
    (proc 10)
+       ; Minister:
              (str "...")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Are you feeling drowsy?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Minister:
              (str "...")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Fall asleep, and she'll inject you" 'br)
    (str "with Trans-Bio solution, then you'll drop dead" 'br)
    (str "from heart failure!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Minister:
              (str "Oh, oh no...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "My my, someone thinks they're well-" 'br)
    (str "informed! But it's allll just lies!")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "How long can you play dumb, Goofus" 'br)
    (str "Nurse Ayako?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 12)
+       ; Ayako:
           (str "Oh daddy, won't you give me a moment to" 'br)
    (str "take care of that gabby little girl?")
    (proc 15)
-   (proc 11)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I'll be taking care of YOU!")
    (proc 15)
+
+; 	Next battle begins...
+
    (sound '|| 2)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 2816 "EXIT")
    (set-var U 2)
 ; FMT
@@ -183,23 +196,24 @@
    (mes-load? "mes¥action1.mes") (text-frame 3 324 52 379) (text-reset 15) (text-frame 4 16 51 303) (text-reset 15) (set-reg 311 #t) (set-reg 990 #f) (mes-jump "b:¥mes¥ns11_16.mes"))
 ; FMT
 ;  (mes-jump "mes¥action02.mes"))
+
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 12)
+       ; Ayako:
           (str "Oh no, don't you dare touch my chesticles!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "What do you think you're doing!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 12)
+       ; Ayako:
           (str "You can't leave now, sweetie!")
    (proc 15)
    (proc 19))

@@ -45,27 +45,31 @@
   (str "There's two nurses walking by and chatting.")
   (proc 15)
   (proc 10)
+      ; Right Nurse:
                (str "Once work is over, do you want to go" 'br)
   (str "shopping?")
   (proc 15)
   (proc 11)
+      ; Left Nurse:
               (str "Sounds good! Where should we go?")
   (proc 15)
   (proc 10)
+      ; Right Nurse:
                (str "We should go, we should go, we should")
   (str "go, we should go, we should go, we should go, we" 'br)
   (str "should go, we should go, we should go to..........")
   (proc 15)
-  (proc 10)
-               (repeat 124 (<> (str "."))) (str "I don't know!")
+  (proc 10) ; Right Nurse:
+  (repeat 124 (<> (str "."))) (str "I don't know!")
+  (proc 15)
+  (proc 11) ; Left Nurse:
+  (repeat 38 (<> (str ".")))
+  (proc 15)
+  (proc 10) ; Right Nurse:
+  (repeat 37 (<> (str ".")))
   (proc 15)
   (proc 11)
-              (repeat 38 (<> (str ".")))
-  (proc 15)
-  (proc 10)
-               (repeat 37 (<> (str ".")))
-  (proc 15)
-  (proc 11)
+      ; Left Nurse:
               (str "Ayako, if you keep walking around like")
   (str "a ditz, you're gonna slip on a banana peel or" 'br)
   (str "something!")
@@ -108,7 +112,7 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 72 #t))                     (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 72 #t))                     (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_10.mes")
            (//                                   (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
@@ -186,6 +190,7 @@
            (str "Hello hello!")
    (proc 15)
    (proc 10)
+       ; Right Nurse:
                 (str "Hi hi!")
    (proc 15)
    (proc 19))
@@ -196,6 +201,7 @@
            (str "Are you two new here?")
    (proc 15)
    (proc 10)
+       ; Right Nurse:
                 (str "That's riight, we're on duty starting")
    (str "todaaay!")
    (proc 15)
@@ -205,10 +211,12 @@
    (str "medicine. You can call me Tanchi Denpa!")
    (proc 15)
    (proc 10)
+       ; Right Nurse:
                 (str "What a lovely name for such a" 'br)
    (str "handsome man!")
    (proc 15)
    (proc 11)
+       ; Left Nurse:
                (str "Ayako, you're on the clock! Tone it" 'br)
    (str "down!")
    (proc 15)
@@ -221,6 +229,7 @@
            (str "What are your names?")
    (proc 15)
    (proc 10)
+       ; Right Nurse:
                 (str "I'm Ayako Sawashima. I'm an Aeries," 'br)
    (str "my blood type is A, and I'm into computer games!")
    (proc 15)
@@ -230,6 +239,7 @@
    (str "of games do you like?")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Well,") (text "“") (str "A") (text "Ⅲ”") (str "was a lot of fun! (LOL)") ; the "lol" is part of the original script, i swear
    (proc 15)
    (proc 2)
@@ -237,6 +247,7 @@
            (str "What about you?")
    (proc 15)
    (proc 11)
+       ; Left Nurse:
                (str "Oh, I'm Tomoyo Koshizuka. Aquarius, B.")
    (proc 15)
    (proc 19)
@@ -249,9 +260,11 @@
    (str "think you could hook me up with your phone number?")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Oh no, I couldn't do something so naughty!")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "What would you even do with her number?")
    (proc 15)
    (proc 2)
@@ -264,10 +277,12 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 12)
+       ; Ayako:
           (str "Forget the phone call, let's cut to the" 'br)
    (str "chase and go to a naughty place...right now!")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Well, I guess that would be quicker," 'br)
    (str "wouldn't it?")
    (proc 15)
@@ -279,20 +294,23 @@
    (branch-index
     (</>
      (/
-      (str "Eeek! Don't touch my butt out of" 'br)
+          ; Right Nurse:
+                   (str "Eeek! Don't touch my butt out of" 'br)
       (str "nowhere!")
       (proc 15)
       (proc 2)
           ; Tanchi:
               (str "But... I didn't touch you!"))
      (/
-      (str "No, no! No groping my chest!")
+          ; Right Nurse:
+                   (str "No, no! No groping my chest!")
       (proc 15)
       (proc 2)
           ; Tanchi:
               (str "But... But I'm not!!!")) ; Congratulations to this line for winning first prize in the "3rd National Text Identifier Hide-and-Seek"
      (/
-      (str "Eeeeek! You can't just whip that out" 'br)
+          ; Right Nurse:
+                   (str "Eeeeek! You can't just whip that out" 'br)
       (str "and put it in there!!!")
       (proc 15)
       (proc 2)
@@ -315,6 +333,7 @@
    (str "somewhere naughty then?")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Let's gooooo!")
    (proc 15)
    (text-color 7)

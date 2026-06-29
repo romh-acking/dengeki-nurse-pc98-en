@@ -40,27 +40,34 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Golgo 31:
             (str "The wind is picking up...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Oh, how the cold steel of my M16 tickles" 'br)
   (str "my fancies and rattles my nerves...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "For the target is a high school girl...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "She's pretty cute, too...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "No, no, gotta stay professional... Can't" 'br)
   (str "let myself be distracted by impulsive thoughts like")
   (str "those...")
   (proc 16)
   (proc 11)
+      ; Crow:
         (str "Ba-ka! Ba-ka! Ba-ka!")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "Quiet, bird! Don't perch behind me!")
   (proc 16)
   (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -72,10 +79,12 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (proc 10)
+      ; Golgo 31:
             (str "Immoral Ray Unit loaded... Safety catch" 'br)
   (str "released...")
   (proc 16)
   (proc 10)
+      ; Golgo 31:
             (str "A little to the right...a little to the" 'br)
   (str "left...")
   (proc 16)
@@ -85,6 +94,7 @@
 ; FMT
 ; (sound '|se | 4)
   (proc 10)
+      ; Golgo 31:
             (str "And ") (text "ＦＩＲＥ〜〜〜〜！！")
   (proc 16)
   (exec-mem 19456 2 32 4 127 75 111 20 111 20 0 20)

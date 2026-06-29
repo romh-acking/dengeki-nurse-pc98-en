@@ -12,10 +12,10 @@
 
 ; 	Similar situation to NS12_03, putting unique portrait code in these procs
 
-  (define-proc 9  (<> (exec-mem 2816 "GET 2 10 0 10 96"))) ; Happy
+  (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
   (define-proc 12 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 13 (<> (exec-mem 2816 "PUT 6 5 23")))
-  (define-proc 14 (<> (exec-mem 2816 "PUT 14 5 23")))
+  (define-proc 13 (<> (exec-mem 2816 "PUT 6 5 23")))  ; 
+  (define-proc 14 (<> (exec-mem 2816 "PUT 14 5 23"))) ; 
 
 ; 	Setup continues...
 
@@ -45,6 +45,7 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 10)
+      ; Yunako:
           (str "Uh, sorry...")
   (proc 15)
   (proc 2)
@@ -54,6 +55,7 @@
    (str "and Mohiko-chan, right?")
   (proc 15)
   (proc 11)
+      ; Mohiko:
           (str "I was wondering if you could give a little")
    (str "advice...")
   (proc 15)
@@ -64,19 +66,20 @@
    (str "knowledge") (text "−")
   (proc 15)
   (proc 11)
+      ; Mohiko:
           (str "No no, not about that!")
   (proc 15)
   (proc 10)
+      ; Yunako:
           (str "We need your help to save Cybernetic" 'br)
    (str "Girls' School!")
   (proc 15)
-  (proc 12)
-  (exec-mem 2816 "PUT 12 5 23")
+  (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait ()
   (proc 1)
       ; Kirara:
           (str "Save") (text "−") (str "?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -216,7 +219,7 @@
    (set-reg 53 #t))
  (seg (? (= T 1) (= O 2))
    (proc 18)
-   (proc 12) (proc 13)
+   (proc 12) (proc 13) ; Portrait ()
    (text-color 7)
    (str "Kirara's fuming, veins popping out and everything.")
    (str "Why'd she get mad so easily?")
@@ -225,11 +228,12 @@
    (str "I only touched her butt a little bit... Geez," 'br)
    (str "something really went wrong with her upbringing...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 11)
+       ; Mohiko:
            (str "The school rules here are anything but" 'br)
    (str "normal! You saw it this morning!")
    (proc 15)
@@ -239,13 +243,14 @@
    (str "to call the Board of Education or, you know, a" 'br)
    (str "human rights group?")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 12 5 23")
+   (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "This really is awful, though.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Yunako:
            (str "That wouldn't work! The principal and" 'br)
    (str "chairman would just crush any attempt!")
    (proc 15)
@@ -259,6 +264,7 @@
    (str "decent guy?")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Everyone changed and started obeying Ms." 'br)
    (str "Akiko when she arrived...")
    (proc 15)
@@ -266,18 +272,20 @@
        ; Tanchi:
            (str "Akiko!?")
    (proc 15)
-   (proc 12) (proc 13)
+   (proc 12) (proc 13) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "That stuck-up lady from earlier!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Yunako:
            (str "Ever since Ms. Akiko took over student" 'br)
    (str "guidance, the academy's took a turn for the" 'br)
    (str "worse...")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "She uses the Special Morals Committee as" 'br)
    (str "her enforcers and even built her") (text "“") (str "Reflection" 'br)
    (str "Cell") (text "”") (str "on school premises!")
@@ -287,6 +295,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 11)
+       ; Mohiko:
            (str "At this rate, our youth will be ruined...")
    (proc 15)
    (proc 19))
@@ -298,19 +307,23 @@
    (str "anything to say?")
    (proc 15)
    (proc 10)
+       ; Yunako:
            (str "Both of them were seduced by Ms. Akiko," 'br)
    (str "and she exploits their weaknesses!")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Akiko is the academy dictator! She's" 'br)
    (str "trying to dominate not just the students, but also")
    (str "the finances!")
    (proc 15)
    (proc 10)
+       ; Yunako:
            (str "That's right! She's buying all these weird")
    (str "machines claiming it's for the physics classes!")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "She's got something up her sleeve! Please,")
    (str "you've got to save the academy!")
    (proc 15)
@@ -319,6 +332,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 10)
+       ; Yunako:
            (str "Please, help our school!")
    (proc 15)
    (proc 19))
@@ -329,26 +343,28 @@
            (str "But...you know, we're just physicians...")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Don't say that! We're begging you!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23")
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "This could be fun! Let's give it a shot!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Well, I might help, if you agree to go on" 'br)
    (str "a date with me...")
    (proc 15)
-   (proc 12) (proc 13)
+   (proc 12) (proc 13) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Tanchi!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Mohiko:
            (str "A date...?")
    (proc 15)
    (proc 2)
@@ -356,40 +372,42 @@
            (str "Yeah, where would you like to go?")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "I'd...go to an amusement park... I want to")
    (str "ride the horses on the merry-go-round...")
    (proc 15)
-   (proc 12) (proc 13)
+   (proc 12) (proc 13) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "No dates required! I'll take down the" 'br)
    (str "Morals Committee and Akiko all by myself!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Yunako:
            (str "For real?")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Oh come on, Kirara!")
    (proc 15)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "I'll take care of things if you don't! You")
    (str "can just go back to the hospital!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 50 #t))
  (seg (? (= T 2) (= O 6))
    (proc 18)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Just go back to the hospital by yourself!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 7))
    (proc 18)
@@ -398,18 +416,21 @@
            (str "Okay, okay, I get it... I'll help...")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Yay, it's happening!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 2 5 23")
+   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "...So, what exactly are we supposed to do?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Yunako:
            (str "Uh, I don't know.")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "We hadn't thought that far ahead...")
    (proc 15)
    (proc 2)
@@ -421,18 +442,19 @@
            (str "Okay, okay... So for now, we've got to" 'br)
    (str "look into that teacher Akiko.")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23")
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Let's start digging up dirt!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hold up, walking around the school dressed")
    (str "like this will draw way too much attention.")
    (proc 15)
    (proc 10)
+       ; Yunako:
            (str "Oh, I prepared uniforms just for this" 'br)
    (str "occasion! Just change into these, and everyone" 'br)
    (str "will think you're students!")
@@ -441,28 +463,29 @@
        ; Tanchi:
            (str "......")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23")
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Good thinking!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Am I supposed to wear this too...?")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 2 5 23")
+   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "This fits me perfectly!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Uh, even if I wear a sailor uniform," 'br)
    (str "there's no fooling anyone with this hairstyle...")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "I've also prepared for this!")
    (proc 15)
 
@@ -486,7 +509,7 @@
        ; Tanchi:
            (str "Byobyobyooooing!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 8 5 23")
+   (proc 12) (exec-mem 2816 "PUT 8 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Gorgeousss!")
@@ -497,11 +520,13 @@
 ; FMT
 ;  (sound '|| "Nurse09.fmt")
    (sound '|| 3)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Mohiko:
            (str "Here, use this wig!")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Luckily, our next class is with Ms. Akiko.")
    (str "How about you tag along and sneak in?")
    (proc 15)
@@ -510,6 +535,7 @@
            (str "I guess we could do that...")
    (proc 15)
    (proc 11)
+       ; Mohiko:
            (str "Okay, then we're counting on you!")
    (proc 15)
 
@@ -524,34 +550,34 @@
 
 ; 	Text continues...
 
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Happy)
    (text-frame 3 324 52 379)
    (proc 1)
        ; Kirara:
            (str "Shall we get changed, then?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "But where?")
    (proc 15)
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What about that toilet over there?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Arrrgh... How did it come to this...")
    (proc 15)
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Stop grumbling and get changed already," 'br)
    (str "come on!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
@@ -576,7 +602,7 @@
       (str "scream!")
       (proc 15))
      (/
-      (proc 12) (proc 13)
+      (proc 12) (proc 13) ; Portrait ()
       (proc 1)
           ; Kirara:
               (str "HEYYY!! Cut that out or I'll blast you" 'br)
@@ -587,6 +613,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
+       ; Yunako:
            (str "Wait! Just hold on... Please, we're" 'br)
    (str "begging you...")
    (proc 15)
@@ -597,23 +624,23 @@
        ; Tanchi:
            (str "Fine! I'm going home, then!")
    (proc 15)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Hold it, buster! Don't try to split!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "You're the one who told me to go, Kirara!")
    (proc 15)
-   (proc 12) (proc 14)
+   (proc 12) (proc 14) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "If you don't help, you can get a kiss from")
    (str "my electric fist!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 54 #t))
  (seg (? (= T 5) (= O 0))												; Save

@@ -12,7 +12,7 @@
 ; 	Similar situation to NS12_03, putting unique portrait code in these procs
 
   (define-proc 11 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 12 (<> (exec-mem 2816 "PUT 4 5 23")))
+  (define-proc 12 (<> (exec-mem 2816 "PUT 4 5 23"))) ; 
 
 ; 	Setup continues...
 
@@ -137,13 +137,13 @@
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 11) (proc 12)
+   (proc 11) (proc 12) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "This is all really confusing... I don't" 'br)
    (str "get any of this...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, you're actually taking this lecture" 'br)
@@ -153,12 +153,12 @@
    (set-reg 58 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 11) (proc 12)
+   (proc 11) (proc 12) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Well, everyone else is!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Everyone else is terrified, more likely." 'br)
@@ -172,18 +172,19 @@
        ; Tanchi:
            (str "Maybe they're afraid of the giant fan...?")
    (proc 15)
-   (proc 11) (proc 12)
+   (proc 11) (proc 12) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "It looks normal to me.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "You never know, it could be made of Super-")
    (str "Alloy Z...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Hey! You two! Just what do you think you're")
    (str "doing, talking during MY class!")
    (proc 15)
@@ -192,27 +193,31 @@
            (str "Ack, sorry...")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Discipline! Discipline Committee!!")
    (proc 15)
    (text-color 1)
    (sound '|| 0)
    (str "Slam!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 27 152 51 296,PUT 14 27 152,FREE 14")
+; ^ Discipline committee appears
+
    (proc 2)
        ; Tanchi:
            (str "Aw, not them again!")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Take these two to the Reflection Cell!")
    (proc 15)
-   (proc 11)
-   (exec-mem 2816 "PUT 2 5 23")
+   (proc 11) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Noooo! Lemme go!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Kirara, let's see how this plays out so we")
@@ -229,12 +234,12 @@
    (text-color 1)
    (str "Rub rub rub...")
    (proc 15)
-   (proc 11) (proc 12)
+   (proc 11) (proc 12) ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, um, nothing... My legs poking out from")
@@ -244,6 +249,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
+       ; Akiko:
           (str "Just where do you think you're going!?")
    (proc 15)
    (proc 2)
@@ -251,6 +257,7 @@
            (str "Oh, um... I gotta go pee?")
    (proc 15)
    (proc 10)
+       ; Akiko:
           (str "Hold it until the break, then!")
    (proc 15)
    (proc 19))

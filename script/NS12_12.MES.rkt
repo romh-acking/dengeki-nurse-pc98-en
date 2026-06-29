@@ -13,10 +13,10 @@
 
 ; 	Character portraits:
 
-  (define-proc 9  (<> (exec-mem 2816 "GET 2 0 0 10 96")))  ; Smiling
-  (define-proc 12 (<> (exec-mem 2816 "GET 2 30 0 10 96"))) ; Angry
-  (define-proc 13 (<> (exec-mem 2816 "GET 2 50 0 10 96"))) ; Confused
-  (define-proc 14 (<> (exec-mem 2816 "GET 2 60 0 10 96"))) ; Shouting
+  (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 0 0 10 96")  (proc 4))) ; Smiling
+  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4))) ; Angry
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
+  (define-proc 14 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
 
 ; 	Setup continues...
 
@@ -36,18 +36,21 @@
   (text-reset 15)
   ((cmd 209) 1 2)
   ((cmd 204) 89 93)
-  (proc 3) (proc 13) (proc 4)
+  (proc 13) ; Portrait (Confused)
   (proc 1)
       ; Kirara:
           (str "We changed clothes in this bathroom," 'br)
    (str "didn't we?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Yeah, but all the bathrooms look the same,")
    (str "so I'm not sure...")
   (proc 15)
+
+; 	Momoko appears!
+
   (exec-mem 1280 13 14 15 11)
   (exec-mem 2816 "VIEW 25 16 50 303,OVER 1,PUT 8 25 16,FREE 8")
   (sound '|| 0)
@@ -56,17 +59,20 @@
 ; FMT
 ; (sound '|| "Nurse10.fmt")
   (sound '|| 1)
+
+; 	Text continues
+
   (proc 10)
           (str "Ah! You two... You two escaped from the" 'br)
    (str "Reflection Cell!?")
   (proc 15)
-  (proc 3) (proc 14) (proc 4)
+  (proc 14) ; Portrait (Shouting)
   (proc 1)
       ; Kirara:
           (str "Of course! Like we'd stick around in a" 'br)
    (str "place like that!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 10)
           (str "The cheek! I'll make you regret that!")
   (proc 15)
@@ -160,10 +166,14 @@
    (str "Aw, man... The pendant has to be somewhere in this")
    (str "bathroom...")
    (proc 15)
+
    (exec-mem 2816 "GET 5 5 99 11 205")
    (exec-mem 2816 "VIEW 5 99 15 303,PUT 4 5 99,FREE 4")
+; ^ Cleaning Lady appears
+
    (proc 11)
-             (str "Seriously, who leaves their clothes" 'br)
+       ; Cleaning Lady:
+                  (str "Seriously, who leaves their clothes")
    (str "lying around in the bathroom like this?")
    (proc 15)
    (proc 2)
@@ -175,15 +185,19 @@
            (str "Oh, ha ha, sorry! That's my bad!")
    (proc 15)
    (proc 11)
-             (str "A lab coat as well, how nostalgic. Here" 'br)
-   (str "you go, but don't just leave things lying around" 'br)
-   (str "next time!")
+       ; Cleaning Lady:
+                  (str "A lab coat as well, how nostalgic." 'br)
+   (str "Here you go, but don't just leave things lying" 'br)
+   (str "around next time!")
    (proc 15)
    (text-color 7)
    (str "Kirara and I got the clothes back. And now we have")
    (str "the pendant back as well!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 5 99 15 303,PUT 5 5 99,FREE 5")
+; ^ Cleaning Lady leaves
+
    (proc 19)
    (set-reg 90 #t))
  (seg (? (= T 1) (= O 2))
@@ -193,6 +207,7 @@
            (str "Heh heh heh heh...")
    (proc 15)
    (proc 10)
+       ; Momoko:
            (str "Hey, stop grinning at me like that!")
    (proc 15)
    (proc 19))
@@ -202,13 +217,13 @@
        ; Tanchi:
            (str "So what are we supposed to do?")
    (proc 15)
-   (proc 3) (proc 13) (proc 4)
+   (proc 13) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "This isn't good. She's not that tough, but")
    (str "not someone we could beat barehanded...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 89 #t))
  (seg (? (= T 2) (= O 1))
@@ -218,13 +233,14 @@
            (str "Then I've got no choice. I don't make a" 'br)
    (str "habit of hitting girls, but I'll take her on!")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Don't, you're making a terrible mistake!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Momoko:
            (str "Bring it on, either one of you!")
    (proc 15)
    (proc 19)
@@ -232,37 +248,41 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 10)
+       ; Momoko:
            (str "So which one of you are gonna take me on?")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 10)
+       ; Momoko:
            (str "What are you mumbling about? If you're not")
    (str "gonna try to fight me, then go back to the" 'br)
    (str "Reflection Cell!")
    (proc 15)
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "The Reflection Cell's days are numbered" 'br)
    (str "since Akiko's fate's already been decided!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Momoko:
            (str "W-What are you on about...?")
    (proc 15)
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Don't play dumb with me, you're Momoko of" 'br)
    (str "the Sailor Nurse Squad!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Momoko:
            (str "Eek! Who the heck are you!?")
    (proc 15)
-   (proc 3) (proc 9) (proc 4)
+   (proc 9) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Hehehe...")
@@ -274,7 +294,7 @@
 ; FMT
 ;  (sound '|| 2)
    ((cmd 209) 0 2)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 2816 "EXIT")
 ; FMT
 ;  (set-var K 2) (sound '|| 0)
@@ -302,31 +322,33 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (proc 10)
+       ; Momoko:
            (str "Oh, what the BEEP!?")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Now's your chance to apologize to" 'br)
    (str "me!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "That's right! This lady's totally crazy!" 'br)
    (str "Apologize if you know what's good for you!")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "You can shut your smug trap!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Ahh! Yes, ma'am...")
    (proc 15)
    (proc 10)
+       ; Momoko:
            (str "Hm-hm-hmmm! Like an insect flying straight")
    (str "into the fire! Prepare yourself!")
    (proc 15)
@@ -370,43 +392,45 @@
 ; FMT
 ;  (sound '|| "Nurse10.fmt") (sound '|| 100)
    (sound '|| 1)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Now where's Akiko? And where's your")
    (str "captain Asuka?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Momoko:
            (str "If I told the likes of you, I'd face the" 'br)
    (str "captain's punishment!")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Girl, if you don't spill you're" 'br)
    (str "gonna face MINE!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hmm, I wonder if I could punish her too...")
    (proc 15)
    (proc 10)
+       ; Momoko:
            (str "Akiko is in the staff dorm, but it's too" 'br)
    (str "late... By now, the captain is...")
    (proc 15)
-   (proc 3) (proc 14) (proc 4)
+   (proc 14) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Good enough! Let's move!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hold on, I still wanna punish Momoko!")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "You're coming with me!")
@@ -424,29 +448,28 @@
        ; Tanchi:
            (str "Dwaaaaaaaaa!!!!!!!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "What are you doing???")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Uh, I was just thinking I'd beat her with" 'br)
    (str "magic...")
    (proc 15)
-   (proc 3) (proc 12) (proc 4)
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
+       ; Momoko:
            (str "Where are you going? Get back to the" 'br)
    (str "Reflection Cell!")
    (proc 15)

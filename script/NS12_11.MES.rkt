@@ -137,6 +137,7 @@
                 (str "It's been a while! How are you doing?")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "F-Fine, thanks to you...")
    (proc 15)
    (proc 19)
@@ -149,6 +150,7 @@
    (str "successfully?")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "No. Akiko interfered, so the desired" 'br)
    (str "outcome was not achieved...")
    (proc 15)
@@ -161,6 +163,7 @@
                 (str "What's Akiko's current status?")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "Her research has entered its final stage.")
    (proc 15)
    (proc 7)
@@ -174,6 +177,7 @@
    (str "it seems that such a plan was wishful thinking.")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "What should we do, then?")
    (proc 15)
    (proc 7)
@@ -182,6 +186,7 @@
    (str "of our organization. Deal with her immediately.")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "Understood.")
    (proc 15)
    (proc 19)
@@ -201,6 +206,7 @@
    (str "spy within Dentendo Hospital.")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "What do we know?")
    (proc 15)
    (proc 7)
@@ -209,6 +215,7 @@
    (str "Nurse has been sighted there.")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "I will deal with her as well, then.")
    (proc 15)
    (proc 7)
@@ -224,23 +231,29 @@
            (str "......")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "You heard the woman, go deal with Akiko.")
    (proc 15)
    (proc 11)
+       ; Momoko:
            (str "Ehhh? Me!? Oh no, I'm no good at that kind")
    (str "of thing...")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "Fine, I'll do it then. Can I leave Dengeki" 'br)
    (str "Nurse to you?")
    (proc 15)
    (proc 11)
+       ; Momoko:
            (str "S-Sure...")
    (proc 15)
    (proc 10)
+       ; Asuka:
           (str "Get on with it, then!")
    (proc 15)
    (proc 11)
+       ; Momoko:
            (str "Fiiiiine...")
    (proc 15)
    (proc 2)
@@ -370,7 +383,7 @@
            (str "Don't you dare dance, sing or touch my" 'br)
    (str "butt! I can't stand it!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I won't!!")
@@ -385,7 +398,7 @@
        ; Kirara:
            (str "Sniff, sniff... Are you leaving me behind?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Don't be stupid, there's nowhere for me to")

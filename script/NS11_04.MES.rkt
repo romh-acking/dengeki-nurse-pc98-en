@@ -78,7 +78,7 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 51 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 51 #t))           (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_05.mes")
            (//                         (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
@@ -134,6 +134,7 @@
    (str "surgery! Help me out here!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "Huh? Wha?")
    (proc 15)
    (proc 19)
@@ -145,6 +146,7 @@
            (str "What do you mean,") (text "“") (str "Huh?") (text "”") (str "Let's go!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "But... But I...")
    (proc 15)
    (proc 19)
@@ -157,6 +159,7 @@
    (str "counts here!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "But..uh...well, I...")
    (proc 15)
    (proc 19)
@@ -164,6 +167,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Nurse:
           (str "So, uh... What is wrong, exactly...? And" 'br)
    (str "why are you jumping around like that...?")
    (proc 15)
@@ -174,6 +178,7 @@
    (str "I grab the nurse's hand!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "Eek!")
    (proc 15)
    (proc 2)
@@ -189,6 +194,7 @@
            (str "Follow me! There's no time!")
    (proc 15)
    (proc 10)
+       ; Nurse:
           (str "...")
    (proc 15)
    (proc 2)

@@ -54,14 +54,12 @@
              (str "Let me introduce Kirara Inazuma. She's" 'br)
    (str "assigned to internal med and pediatrics.")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
   (proc 1)
       ; Kirara:
           (str "I'm Kirara Inazuma, pleased to meet you.")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Ahhh, yeah... The pleasure is all mine...")
@@ -80,15 +78,13 @@
       ; Dr. Akiba:
              (str "He checked out this morning in a hurry.")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "Something must have spooked him... Hee" 'br)
    (str "hee!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (text-color 7)
   (str "Good grief... What's gonna happen next? But it's" 'br)
    (str "okay, at least Kirara is cute!")

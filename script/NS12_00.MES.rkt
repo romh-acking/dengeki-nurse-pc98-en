@@ -16,7 +16,8 @@
   (define-proc 11 (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))
   (define-proc 12 (<> (exec-mem 2816 "GET 2 10 192 10 96")))
   (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
-  (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1"))) ; Good
+; ^ Display portrait
+  (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1"))) ; Clear Kirara portrait
 
 ; 	Episode title sequence setup
 
@@ -83,23 +84,23 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 11 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 11 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; 
+           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; 
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; 
 ; Look
      (/
       (if (</>
-           (// (? (= 11 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 11 #t))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; 
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; 
 ; Talk
      (/
       (if (</>
-           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 13 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 10 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 12 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; 
+           (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; 
+           (// (? (= 13 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; 
+           (// (? (= 10 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; 
+           (// (? (= 12 #t) (= 10 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; 
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; 
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -175,12 +176,11 @@
    (set-reg 15 #t))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "I'm counting on you tomorrow.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Dr. Akiba portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, yeah, I know, munch munch...")
@@ -188,52 +188,51 @@
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 3) (proc 9) (proc 4)
+   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What have you been so giddy about all this")
    (str "time?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "It's a seeeecret!")
    (proc 15)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Tomorrow we're going to the Cybernetic" 'br)
    (str "Girls' School for physical examinations.")
    (proc 15)
-   (proc 14)
-   (proc 3) (proc 10) (proc 4)
+   (proc 14) ; Clear Dr. Akiba portrait
+   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Is that any fun?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "Well, we're talking about fresh, sparkling")
    (str "high school girls here! And they come from the" 'br)
    (str "prestigious Cybernetic Girls' School!")
    (proc 15)
-   (proc 3) (proc 10) (proc 4)
+   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "???")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 19)
    (set-reg 10 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 3) (proc 10) (proc 4)
+   (proc 3) (proc 10) (proc 4) ; Kirara portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "I... I don't get it.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "Ah, you don't need to, Kirara!")
@@ -241,49 +240,45 @@
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 3) (proc 9) (proc 4)
+   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "W-What is with the creepy smirk?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, don't judge me!")
    (proc 15)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Ha ha! Kirara, you're coming too.")
    (proc 15)
-   (proc 14)
-   (proc 3) (proc 9) (proc 4)
+   (proc 14) ; Clear Dr. Akiba portrait
+   (proc 3) (proc 9) (proc 4) ; Kirara portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Great! I can't wait!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "Now, what does a girl like you have to get")
    (str "excited about?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Kirara portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Well, I've never been to a normal school" 'br)
    (str "before...")
    (proc 15)
-   (proc 6)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 6) ; Clear Kirara portrait
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "It's fine... I'd like to do a physical" 'br)
    (str "exam at least once myself.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Dr. Akiba portrait
    (proc 2)
        ; Tanchi:
            (str "No way! You're a surgeon, Doc. This is an" 'br)
@@ -293,13 +288,12 @@
    (set-reg 11 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "What if we switched departments for" 'br)
    (str "just one day?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Dr. Akiba portrait
    (proc 2)
        ; Tanchi:
            (str "Forget it!")
@@ -315,13 +309,12 @@
        ; Kirara:
            (str "Hmm. She's an unfamiliar face, isn't she?")
    (proc 15)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Oh, that's Croco-chan, a new nurse in" 'br)
    (str "the Surgery department.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Dr. Akiba portrait
    (proc 2)
        ; Tanchi:
            (str "She's a bit of an odd bird, isn't she?")
@@ -330,8 +323,7 @@
        ; Kirara:
            (str "Her clothing choices are quite stylish.")
    (proc 15)
-   (proc 11) (proc 12) (proc 13)
-   (proc 5)
+   (proc 11) (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "As a nurse, she has a bit to learn, but")
    (str "she's not a bad kid.")

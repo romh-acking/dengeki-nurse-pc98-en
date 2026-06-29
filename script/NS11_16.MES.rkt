@@ -31,7 +31,7 @@
    (</>
     (/ ((cmd 209) 1 3))
 ; PC-98
-    (/ (exec-mem 6656 8)    (set-reg 311 #f))))
+    (/ (exec-mem 6656 8) (set-reg 311 #f))))
 ; FMT
 ;   (/ (exec-mem 17920 0 1) (set-reg 311 #f) (set-reg 941 #f))))
   ((cmd 204) 121 127)
@@ -75,26 +75,29 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 123 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 122 #t) (= 123 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 121 #t) (= 122 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 123 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 127 #t)
+           (// (? (= 122 #t) (= 123 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 125 #t)
+           (// (? (= 121 #t) (= 122 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 124 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+; Talk
      (/
       (if (</>
            (// (? (= 123 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 125 #t) (= 123 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 125 #t) (= 123 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 123 #t)
            (// (? (= 122 #t) (= 125 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 124 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 124 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 122 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 121 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+; Move
      (/
       (if (</>
-           (// (? (= 127 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 127 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns11_17.mes")
            (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
@@ -161,14 +164,12 @@
        ; Tanchi:
            (str "Is Guillotine Nurse really that bad?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Her hobby is chopping up anything she can.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 121 #t))
  (seg (? (= T 2) (= O 1))
@@ -257,12 +258,12 @@
        ; Tanchi:
            (str "Yeah! Yeah, I think so too!")
    (proc 15)
-   (proc 11)	; Angry
+   (proc 11) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Cut that out! You two...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Well, at her own request, she's only" 'br)
@@ -286,12 +287,12 @@
    (text-color 7)
    (str "Doop-dee-doop-dee-doop-dee-doooo....")
    (proc 15)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What's up with the weird dance?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -299,14 +300,12 @@
        ; Tanchi:
            (str "Come on, Kirara, let's jet outta here!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "What? Where are we going at this hour?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (branch-random
     (</>
      (/
@@ -315,7 +314,7 @@
               (str "There's a special place men and women go," 'br)
       (str "yeah?")
       (proc 15)
-      (proc 10)	; Happy
+      (proc 10) ; Portrait (Happy)
       (proc 1)
           ; Kirara:
               (str "Oh, you mean the convenience store!"))
@@ -325,9 +324,7 @@
               (str "How about an evening drive to the" 'br)
       (str "amusement park?")
       (proc 15)
-      (proc 3)
-      (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-      (proc 4)
+      (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
       (proc 1)
           ; Kirara:
               (str "Uhhh, I'm not so sure about that. Isn't a" 'br)
@@ -337,12 +334,12 @@
           ; Tanchi:
               (str "How about we go to the linen room?")
       (proc 15)
-      (proc 11)	; Angry
+      (proc 11) ; Portrait (Angry)
       (proc 1)
           ; Kirara:
               (str "As if! You're not dragging me there!"))))
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)

@@ -811,6 +811,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 8 46 27 173,PUT 4 8 46,FREE 4")
    (proc 10)
+       ; Head Nurse:
                (str "Hello, Nurse Center.")
    (proc 15)
    (proc 2)
@@ -818,6 +819,7 @@
            (str "Emergency case! Prepare for surgery!")
    (proc 15)
    (proc 10)
+       ; Head Nurse:
                (str "No way! We're already swamped with 8" 'br)
    (str "people from a 5-car pileup, all in critical" 'br)
    (str "condition!")
@@ -828,9 +830,11 @@
    (str "there any free nurses?")
    (proc 15)
    (proc 10)
+       ; Head Nurse:
                (str "We're short on nurses as it is!")
    (proc 15)
    (proc 10)
+       ; Head Nurse:
                (str "Oh wait! The Foreign Minister's nurse" 'br)
    (str "is available, since he's faking it and all that.")
    (proc 15)

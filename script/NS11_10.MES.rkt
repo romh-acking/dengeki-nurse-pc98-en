@@ -38,6 +38,7 @@
   (str "a hospital, it's a real naughty place.")
   (proc 15)
   (proc 12)
+      ; Ayako:
          (str "Hurry, it, up, doctor!!!")
   (proc 15)
   (proc 19)
@@ -63,26 +64,26 @@
       (if (</>
            (// (? (= 76 #t))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
            (// (? (= 78 #t) (= 76 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 77 #t) (= 78 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 77 #t) (= 78 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 78 #t)
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 77 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 83 #t) (= 84 #t)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 82 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 81 #t) (= 82 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 80 #t) (= 81 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 79 #t) (= 80 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 83 #t) (= 84 #t)) (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 76 #t)
+           (// (? (= 82 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 83 #t)
+           (// (? (= 81 #t) (= 82 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 82 #t)
+           (// (? (= 80 #t) (= 81 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 81 #t)
+           (// (? (= 79 #t) (= 80 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 80 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 85 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 76 #t))           (nop@) (set-var T 3) (set-var O 6) (seg-call))
+           (// (? (= 76 #t))           (nop@) (set-var T 3) (set-var O 6) (seg-call))    ; (mes-jump "b:¥mes¥ns11_11.mes")
            (// (? (= 84 #t) (= 76 #f)) (nop@) (set-var T 3) (set-var O 5) (seg-call))
-           (// (? (= 87 #t) (= 84 #f)) (nop@) (set-var T 3) (set-var O 4) (seg-call))
-           (// (? (= 86 #t) (= 87 #f)) (nop@) (set-var T 3) (set-var O 3) (seg-call))
-           (// (? (= 79 #t) (= 86 #f)) (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 85 #t) (= 79 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 87 #t) (= 84 #f)) (nop@) (set-var T 3) (set-var O 4) (seg-call))    ; (set-reg 84 #t)
+           (// (? (= 86 #t) (= 87 #f)) (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (set-reg 87 #t)
+           (// (? (= 79 #t) (= 86 #f)) (nop@) (set-var T 3) (set-var O 2) (seg-call))    ; (set-reg 86 #t)
+           (// (? (= 85 #t) (= 79 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 79 #t)
            (//                         (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/
@@ -148,6 +149,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 12)
+       ; Ayako:
           (str "Ooh, doctor... Why don't you open wide and" 'br)
    (str "say") (text "“") (str "Ahh?") (text "”")
    (proc 15)
@@ -156,6 +158,7 @@
            (str "Hmm, why should I?")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Don't you want to eat some tasty candy?")
    (proc 15)
    (proc 2)
@@ -164,6 +167,7 @@
    (str "cherries on your chest!")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Hey now, it's good etiquette to have a" 'br)
    (str "mint before kissing!")
    (proc 15)
@@ -176,6 +180,7 @@
            (str "Ayako's boobs are fabulous.")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "They're known as the ultimate breasts!")
    (proc 15)
    (proc 19)
@@ -187,6 +192,7 @@
            (str "Tomoyo's butt is unbelievably tight.")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Hey, don't stare! It's embarrassing!")
    (proc 15)
    (proc 19)
@@ -198,6 +204,7 @@
            (str "Ayako's a big dummy!")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Waaaaa! I'm not the dummy, you are! Sniff," 'br)
    (str "sniff...")
    (proc 15)
@@ -210,6 +217,7 @@
            (str "Tomoyo's so cute.")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Of course I am, hee hee!")
    (proc 15)
    (proc 19)
@@ -221,6 +229,7 @@
            (str "Ayako...chan... I'm so...slee...py...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Tee hee...")
    (proc 15)
    (proc 19)
@@ -235,6 +244,7 @@
            (str "Ayako's boobs are massive.")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Ahhhh, wait a minute!")
    (proc 15)
    (proc 19))
@@ -259,6 +269,7 @@
    (str "Grope") (repeat 7 (<> (str " grope"))) (str "...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "No, you mustn't...Oh wait, this feels good!")
    (proc 15)
    (proc 19)
@@ -270,6 +281,7 @@
    (str "Pinch")  (repeat 7 (<> (str " pinch"))) (str "...")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Heeeey! What are you doing!")
    (proc 15)
    (proc 19)
@@ -281,6 +293,7 @@
    (str "Fold")  (repeat 8 (<> (str " fold"))) (str "...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Ahhh, it's soo good! It's...! So...! GOOOD!")
    (proc 15)
    (proc 19)
@@ -292,6 +305,7 @@
    (str "Rub") (repeat 11 (<> (str " rub"))) (str "...")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Ah, haah, haaaah... Oh, no, no no no..." 'br)
    (str "Ahhhahahahahfwaaaaaaaa!")
    (proc 15)
@@ -302,6 +316,7 @@
    (str "Grope...grope...squeeze...")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Hey, what's the matter? You stopped moving" 'br)
    (str "your hands!")
    (proc 15)
@@ -316,9 +331,11 @@
            (str "Can't stay...awazZZzZZZZZZZZ...")
    (proc 15)
    (proc 13)
+       ; Tomoyo:
            (str "Ho ho!")
    (proc 15)
    (proc 12)
+       ; Ayako:
           (str "Hee hee hee...")
    (proc 15)
    ((cmd 209) 0 2)

@@ -62,7 +62,7 @@
       ; Kirara:
           (str "Kyaaa! Stop it!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear portrait (Left)
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -223,14 +223,13 @@
        ; Tanchi:
            (str "What is going on here!?")
    (proc 15)
-   (proc 9)
-   (exec-mem 2816 "PUT 8 5 23")
+   (proc 9) (exec-mem 2816 "PUT 8 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "Eek! Tanchi, help! She's touching my" 'br)
    (str "chest!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear portrait (Left)
    (proc 19)
    (set-reg 41 #t))
  (seg (? (= T 2) (= O 1))
@@ -241,19 +240,24 @@
    (str "this calmly later...")
    (proc 15)
    (proc 10)
+       ; Schoolgirl A:
                  (str "Mmmmm! I want THIS!")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Ow!! Enough with the rough play!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 12 5 23,FREE 12")
+; ^ Akiko appears
+
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
 ; FMT
 ;  (sound '|se | 5)
    (proc 12)
+       ; Lady:
          (str "What is the meaning of this disgraceful" 'br)
    (str "scene!?")
    (proc 15)
@@ -272,6 +276,7 @@
            (str "P-Please help meee!")
    (proc 15)
    (proc 12)
+       ; Lady:
          (str "What is going on here!? What's all this" 'br)
    (str "commotion!?")
    (proc 15)
@@ -283,6 +288,7 @@
            (str "Oh, uh, and you are...?")
    (proc 15)
    (proc 12)
+       ; Lady:
          (str "I'm Akiko Ano, this school's guidance" 'br)
    (str "counselor!")
    (proc 15)
@@ -291,6 +297,7 @@
            (str "Oh, I see...")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "Now, how on earth has this happened!?")
    (proc 15)
    (proc 2)
@@ -303,6 +310,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 13)
+       ; Akiko:
           (str "Nonsense! You're clearly involved with" 'br)
    (str "this! Did you give them some kind of drugs!?")
    (proc 15)
@@ -321,30 +329,36 @@
    (str "window, and...")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "Enough of this! I don't need your" 'br)
    (str "ridiculous excuses!")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "If the public learns of this shameless" 'br)
    (str "debacle, the reputation of Cybernetic Girls'" 'br)
    (str "School will be ruined!")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "And then, my ambitions will be crushed...")
    (proc 15)
-   (proc 11)
-   (exec-mem 2816 "PUT 6 41 23")
+   (proc 11) (exec-mem 2816 "PUT 6 41 23") ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Say what you like, but this isn't our" 'br)
    (str "fault!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear portrait (Right)
    (proc 13)
+       ; Akiko:
           (str "Discipline Committee, you're needed right" 'br)
    (str "now! Get over here!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 27 152 51 296,PUT 14 27 152,FREE 14")
+; ^ Discipline Committee displayed
+
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
@@ -367,6 +381,7 @@
 ;  (sound '|| "Nurse14.fmt")
    (sound '|| 3)
    (proc 13)
+       ; Akiko:
           (str "Discipline Committee! Take the students" 'br)
    (str "to...the Reflection Cell!")
    (proc 15)
@@ -376,6 +391,7 @@
    (str "exams yet!")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "Examinations are cancelled! You people need")
    (str "to leave the premises!")
    (proc 15)
@@ -384,6 +400,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 13)
+       ; Akiko:
           (str "In any case, physical exams have been" 'br)
    (str "cancelled!")
    (proc 15)
@@ -395,15 +412,15 @@
            (str "The principal's the one who asked us here.")
    (str "We don't take orders from you!")
    (proc 15)
-   (proc 11)
-   (exec-mem 2816 "PUT 6 41 23")
+   (proc 11) (exec-mem 2816 "PUT 6 41 23") ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Yes! Physical exams are important for" 'br)
    (str "girls going through puberty!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear portrait (Right)
    (proc 13)
+       ; Akiko:
           (str "I'll tell the principal myself! Now, if" 'br)
    (str "you'll excuse me...")
    (proc 15)
@@ -429,15 +446,15 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Schoolgirl A:
                  (str "Ahhhhh! So gooood!")
    (proc 15)
-   (proc 9)
-   (exec-mem 2816 "PUT 2 5 23")
+   (proc 9) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
    (proc 1)
        ; Kirara:
            (str "What are you doing!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear portrait (Left)
    (proc 2)
        ; Tanchi:
            (str "I'm not doing anything!")
@@ -452,13 +469,12 @@
        ; Tanchi:
            (str "Hey! Get away from me!")
    (proc 15)
-   (proc 11)
-   (exec-mem 2816 "PUT 2 41 23")
+   (proc 11) (exec-mem 2816 "PUT 2 41 23") ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "That's my butt!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear portrait (Right)
    (proc 19))
  (seg (? (= T 3) (= O 2))
    (proc 18)
@@ -470,31 +486,33 @@
            (str "Look, a teacher! Go grope her instead!")
    (proc 15)
    (proc 13)
+       ; Akiko:
           (str "Hands off my breasts!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 10)
+       ; Schoolgirl A:
                  (str "Don't gooooo! Get to it alreaaaaady!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 12)
+       ; Lady:
          (str "Hold it right there! My paper fan is itching")
    (str "to hit a moving target!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 2))
    (proc 18)
-   (proc 11)
-   (exec-mem 2816 "PUT 10 41 23")
+   (proc 11) (exec-mem 2816 "PUT 10 41 23") ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "No, don't go yet! I can't keep my things!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear portrait (Right)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
