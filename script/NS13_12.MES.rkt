@@ -22,12 +22,25 @@
   (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse12.uso")
+; FMT
+; (sound '|| "Nurse12.fmt") (sound '|| 100)
   (sound '|| 1)
-  (image-file "gpc¥Aflame01.gpc")   (image-mem 1 3)
-  (image-file "b:¥gpc¥Ns1_333.gpc") (image-mem 1 3)
-  (exec-mem 17920 0 1)
-  (exec-mem 6656 8)
+  (image-file "gpc¥Aflame01.gpc")
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0 0)
+  (image-file "b:¥gpc¥Ns1_333.gpc")
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
+; PC-98
+  (exec-mem 17920 0 1) (exec-mem 6656 8)
+; FMT
+; (branch-reg 311 (</> (/ ((cmd 209) 1 3)) (/ (exec-mem 17920 0 1) (set-reg 311 #f))))
   ((cmd 204) 99 104)
 
 ; 	Intro begins here...
@@ -58,23 +71,23 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 100 #t))            (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 99 #t) (= 100 #f))  (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 100 #t))            (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 104 #t)
+           (// (? (= 99 #t) (= 100 #f))  (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 103 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 99 #t))             (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 101 #t) (= 99 #f))  (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 101 #t) (= 99 #f))  (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 99 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 104 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 104 #t))            (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns13_13.mes")
            (// (? (= 100 #t) (= 104 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 103 #t) (= 100 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 102 #t) (= 103 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 103 #t) (= 100 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 100 #t)
+           (// (? (= 102 #t) (= 103 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 101 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 102 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -135,16 +148,18 @@
    (str "beach bum.")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "It's coming... It's definitely" 'br)
    (str "coming...")
    (proc 15)
-   (proc 11)
+   (proc 11) ; Portrait (Shocked)
    (proc 0)
        ; Dengeki Nurse:
                   (str "What is??")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Surfer Lady:
                 (str "Once every 19 years, the perfect wave")
    (str "arrives...")
    (proc 15)
@@ -165,23 +180,23 @@
        ; Tanchi:
            (str "Shit! Where the hell did they go?")
    (proc 15)
-   (proc 13)
+   (proc 13) ; Portrait (Flushed)
    (proc 0)
        ; Dengeki Nurse:
                   (str "If that video gets out, I'll never" 'br)
    (str "be able to get married!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Don't worry, I'll take you regardless!")
    (proc 15)
-   (proc 13)
+   (proc 13) ; Portrait (Flushed)
    (proc 0)
        ; Dengeki Nurse:
                   (str "E-Eh??")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, ha ha, nothing...")
@@ -194,13 +209,13 @@
        ; Tanchi:
            (str "Anyway, which way did they go?")
    (proc 15)
-   (proc 12)
+   (proc 12) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I'm not seeing them... Where" 'br)
    (str "indeed?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 101 #t))
  (seg (? (= T 2) (= O 2))
@@ -210,6 +225,7 @@
            (str "Er, excuse me...")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "What do you want?")
    (proc 15)
    (proc 2)
@@ -218,6 +234,7 @@
    (str "here wearing duck pattern underwear?")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "That weirdo shoved off a little while")
    (str "ago.")
    (proc 15)
@@ -225,22 +242,22 @@
        ; Tanchi:
            (str "Shit, they got away, then!")
    (proc 15)
-   (proc 12)
+   (proc 12) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "What do we do!?" 'br)
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 100 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 12)
+   (proc 12) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi, what should we do...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hmm...")
@@ -254,16 +271,18 @@
    (str "like we can go after them on foot.")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "Do you two need something? If you" 'br)
    (str "like, you can borrow my jetski over there.")
    (proc 15)
-   (proc 11)
+   (proc 11) ; Portrait (Shocked)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Ehh, for real!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Surfer Lady:
                 (str "Yeah, go all-out... You can even use" 'br)
    (str "my board if you want.")
    (proc 15)
@@ -273,6 +292,7 @@
    (str "strangers like us?")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "You two remind me of my younger" 'br)
    (str "days... Ah, but's that's just me getting all" 'br)
    (str "sentimental.")
@@ -283,15 +303,14 @@
    (str "most we can of this!")
    (proc 15)
    (proc 10)
+       ; Surfer Lady:
                 (str "Don't get yourselves killed, now.")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "Come on, Kirara, we're hitting the waves!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
    (proc 0)
        ; Dengeki Nurse:
                   (str "You bet!")

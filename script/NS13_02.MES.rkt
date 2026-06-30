@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
-  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+; (define-proc 10 (<> (text-color 11) (str "Croco: "))) <--- only used once
 
 ; 	Character portraits:
 
@@ -53,8 +53,8 @@
       ; Kirara:
           (str "Hooray! The beach!")
   (proc 15)
-  (proc 10)
-         (str "Umi-wani! Umi-wanii!!!")
+  (text-color 11)
+  (str "Croco: Umi-wani! Umi-wanii!!!")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 23)
@@ -164,7 +164,7 @@
    (proc 15)
 
 ; Tanchi fantasises again...
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 14)
    (proc 13)
    (image-mem 1 3)
@@ -185,7 +185,7 @@
    (proc 15)
 
 ; Okay, get that out of here
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (proc 14)
    (proc 13)
@@ -247,13 +247,13 @@
    (set-reg 17 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 11)	; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Hurry up and change so we can hit the" 'br)
    (str "beach!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Right, right, on it.")
@@ -262,25 +262,23 @@
    (set-reg 22 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (proc 11)	; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Tanchi, what are you doing?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Um... Warmup exercises, obviously.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Shouldn't you change into your swimsuit" 'br)
    (str "first?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

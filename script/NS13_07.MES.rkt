@@ -50,22 +50,22 @@
      (/
       (if (</>
            (// (? (= 48 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 47 #t) (= 48 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 46 #t) (= 47 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 47 #t) (= 48 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 51 #t)
+           (// (? (= 46 #t) (= 47 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 49 #t)
            (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 48 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 46 #t) (= 48 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 48 #t))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (mes-jump "b:¥mes¥ns13_08.mes")
+           (// (? (= 46 #t) (= 48 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 50 #t)
            (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
            (// (? (= 48 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 51 #t) (= 48 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 49 #t) (= 50 #t) (= 51 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 51 #t) (= 48 #f))           (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 48 #t)
+           (// (? (= 49 #t) (= 50 #t) (= 51 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 47 #t)
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 46 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -93,7 +93,7 @@
  (seg (? (= T 0) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "You're probably wondering right about now,")(text "“") (str "What" 'br)
+   (str "You're probably wondering right about now,") (text "“") (str "What" 'br)
    (str "if we can't find our way back?") (text "”")
    (proc 15)
    (text-color 7)
@@ -142,9 +142,12 @@
    (text-color 7)
    (str "I follow Kirara's gaze.")
    (proc 15)
+
    (sound '|| 0)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
-   (text-color 7)
+; ^ Johnny's abode appears
+
+;  (text-color 7) <--- why was this defined?
    (proc 2)
        ; Tanchi:
            (str "Thank goodness! This island isn't deserted")
@@ -152,7 +155,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "W-what are we gonna do?")
+           (str "W-What are we gonna do?")
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -221,7 +224,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "Look, look! over here!")
+           (str "Look, look! Over here!")
    (proc 15)
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
@@ -233,14 +236,12 @@
        ; Tanchi:
            (str "Yes. Yes, that's a fine leaf.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Hands off!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

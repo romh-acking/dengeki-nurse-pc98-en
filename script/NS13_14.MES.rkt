@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥cappear.tcm" 28672)
-  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+; (define-proc 10 (<> (text-color 11) (str "Croco: "))) <--- only used once
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 10 60 304 10 80")
@@ -41,8 +41,8 @@
              (str "Mmmm. And the seawater would likely" 'br)
   (str "ruin it, anyway.")
   (proc 15)
-  (proc 10)
-         (str "Wa-nii...")
+  (text-color 11)
+  (str "Croco: Wa-nii...")
   (proc 15)
   (proc 1)
       ; Kirara:

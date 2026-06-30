@@ -6,6 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+; PC-98
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 8)  (str "Johnny: ")))
   (define-proc 11 (<> (proc 5) (exec-mem 2816 "GET 2 70 192 10 96") (proc 7) (text-color 3) (str "Magenta: ")))
@@ -21,6 +22,8 @@
 
 ; 	Setup continues...
 
+; FMT
+; (if (</> (// (? (= 940 #t)) (nop@)) (// (? (= 941 #t)) (nop@)) (// (load-mem "cmd¥cappear.tcm" 6656)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -29,7 +32,10 @@
   (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse11.uso")
+; FMT
+; (sound '|| "Nurse11.fmt")
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M128")
@@ -66,6 +72,9 @@
       ; Kirara:
           (str "Stupid Tanchi...")
   (proc 15)
+
+; 	Johnny appears
+
   (exec-mem 2816 "SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 1)
@@ -78,7 +87,11 @@
   (exec-mem 2816 "ACCESS 0")
   (text-frame 3 324 52 379)
   (text-reset 15)
+
+; 	Text continues...
+
   (proc 10)
+      ; Johnny:
           (str "What are you doing up at this hour?")
   (proc 15)
   (proc 1)
@@ -86,6 +99,7 @@
           (str "Oh... Oh, nothing at all...")
   (proc 15)
   (proc 10)
+      ; Johnny:
           (str "You're crying, aren't you?")
   (proc 15)
   (proc 1)
@@ -93,6 +107,7 @@
           (str "......")
   (proc 15)
   (proc 10)
+      ; Johnny:
           (str "You can't be mourning the summer's passing")
   (str "already. Besides, you look better with a sunny" 'br)
   (str "smile.")
@@ -102,6 +117,7 @@
           (str "You're a romantic, aren't you...")
   (proc 15)
   (proc 10)
+      ; Johnny:
           (str "Not quite... I'm a realist, rather. It's" 'br)
   (str "why I love the sea.")
   (proc 15)
@@ -110,6 +126,7 @@
           (str "...??")
   (proc 15)
   (proc 10)
+      ; Johnny:
           (str "You see, the sea holds no romance. It's a" 'br)
   (str "place where strong men set out for deep-sea" 'br)
   (str "fishing...")
@@ -118,20 +135,22 @@
       ; Tanchi:
           (str "Kirara...!")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
   (proc 1)
       ; Kirara:
           (str "No! Stay away from me!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 19)
   (exec-mem 18944 65535 528 23)
+; FMT
+; )))
   
 ; 	Dialogue trees defined here...
 
   (loop
+; FMT
+; (branch-reg 940 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 10) (seg-call)))) (branch-reg 941 (</> (/ (nop@)) (/ (set-var T 2) (set-var O 11) (seg-call))))
    (exec-mem 24576 1 1 0)
    (exec-mem 24576 3)
    (text-color 1)
@@ -142,31 +161,31 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 76 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 76 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 84 #t)
            (// (? (= 75 #t) (= 76 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 74 #t) (= 75 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 73 #t) (= 74 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 74 #t) (= 75 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 82 #t)
+           (// (? (= 73 #t) (= 74 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 80 #t)
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 78 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 76 #t))                               (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 75 #t) (= 76 #f))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 73 #t) (= 75 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 76 #t))                               (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 85 #t)
+           (// (? (= 75 #t) (= 76 #f))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 83 #t)
+           (// (? (= 73 #t) (= 75 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 81 #t)
            (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 84 #t) (= 85 #t))                     (nop@) (set-var T 2) (set-var O 9) (seg-call))
+           (// (? (= 84 #t) (= 85 #t))                     (nop@) (set-var T 2) (set-var O 9) (seg-call))    ; (mes-jump "b:¥mes¥ns13_11.mes")
            (// (? (= 76 #t))                               (nop@) (set-var T 2) (set-var O 8) (seg-call))
-           (// (? (= 83 #t) (= 76 #f))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))
+           (// (? (= 83 #t) (= 76 #f))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (set-reg 76 #t)
            (// (? (= 75 #t) (= 83 #f))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 82 #t) (= 75 #f))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 82 #t) (= 75 #f))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 75 #t)
            (// (? (= 74 #t) (= 82 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 79 #t) (= 80 #t) (= 81 #t) (= 74 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 73 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 77 #t) (= 78 #t) (= 73 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 79 #t) (= 80 #t) (= 81 #t) (= 74 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 74 #t)
+           (// (? (= 73 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 79 #t)
+           (// (? (= 77 #t) (= 78 #t) (= 73 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 73 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 77 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -290,14 +309,12 @@
            (str "What happened back there was a" 'br)
    (str "misunderstanding...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 96 10 96") (proc 4) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "Stay back! Tanchi, you're filthy!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 77 #t))
  (seg (? (= T 2) (= O 1))
@@ -307,16 +324,15 @@
            (str "No, it's not like that! What actually" 'br)
    (str "happened was") (text "−")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 96 10 96") (proc 4) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "I don't wanna hear your excuses!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (sound '|| 2)
    (proc 10)
+       ; Johnny:
            (str "So that's how it is... You're the one who" 'br)
    (str "made Kirara cry.")
    (proc 15)
@@ -326,15 +342,23 @@
    (str "between the two of us!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "That's not how it works...")
    (proc 15)
    (sound '|| 0)
    (proc 10)
+       ; Johnny:
            (str "A Japanese man who makes a girl cry isn't" 'br)
    (str "fit to be Japanese!")
    (proc 15)
+
+; 	He's serious! Johnny unsheathes his sword.
+
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse04.uso")
+; FMT
+;  (sound '|| "Nurse04.fmt")
    (sound '|| 1)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_323.gpc,GPC") (image-mem 1 3)
@@ -344,6 +368,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 10)
+       ; Johnny:
            (str "Prepare yourself to taste the cursed blade")
    (str "of Muramasa!")
    (proc 15)
@@ -356,20 +381,20 @@
            (str "Y-Y-You can knock it off with the jokes...")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "This is anything but a joke! It's men like")
    (str "you who cause friction in the Japan-USA trade" 'br)
    (str "markets!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Uh... Uh, Johnny... That really is enough,")
    (str "you can sheathe that blade...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "Kirara, I'm not holding back! This issue" 'br)
    (str "will be resolved by Johnny Nakamura!")
    (proc 15)
@@ -378,6 +403,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 10)
+       ; Johnny:
            (str "You're the enemy of women and children!" 'br)
    (str "And I will punish you!")
    (proc 15)
@@ -389,6 +415,7 @@
            (str "How do I end up in these situations...")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "If you even have a drop of samurai blood," 'br)
    (str "then you will face me!")
    (proc 15)
@@ -396,11 +423,19 @@
        ; Tanchi:
            (str "But I'm not a samurai, I'm a physician!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 38 119 51 303,OVER 1,PUT 6 38 119,FREE 6")
+; ^ Janet appears
+
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse08.uso")
+; FMT
+;  (sound '|| "Nurse08.fmt")
    (sound '|| 3)
+
    (proc 13)
+       ; Janet:
           (str "Ah, master! I finally found the swimsuit!")
    (proc 15)
    (proc 2)
@@ -408,18 +443,18 @@
            (str "??????")
    (proc 15)
    (proc 13)
+       ; Janet:
           (str "We managed to summon a storm, but it" 'br)
    (str "knocked the swimsuit off her...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "?????")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 13)
+       ; Janet:
           (str "It was hard to track it down in the ocean," 'br)
    (str "but... Oh, um, did I come at a bad time?")
    (proc 15)
@@ -428,6 +463,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 13)
+       ; Janet:
           (str "Oh, good evening... I'm Janet.")
    (proc 15)
    (proc 2)
@@ -443,27 +479,35 @@
    (str "Kirara's swimsuit!?")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Wahahahhaha! Now that we're busted, the" 'br)
    (str "secret's out!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Seriously, just who are you people?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "Magenta! Columbia! Janet! Assume Crane" 'br)
    (str "Wing battle formation!")
    (proc 15)
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_325.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+; ^ Oshioki Sentai Yoranger assemble!
+
    (sound '|| 0)
+; PC-98
    (sound '|se | 24)
+; FMT
+;  (sound '|se | 6)
+
    (proc 10)
+       ; Johnny:
            (str "We act on your grudges, and do it with a" 'br)
    (str "smile... Oshioki Sentai Yoranger, here on the" 'br)
    (str "scene!")
@@ -473,7 +517,10 @@
            (str "Seriously, what the hell!?")
    (proc 15)
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    (proc 19)
    (set-reg 76 #t))
@@ -481,9 +528,10 @@
    (proc 18)
    (proc 14)	; Johnny
    (proc 10)
+       ; Johnny:
            (str "Wahahaha! I see a look of surprise!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 9))
    (proc 18)
@@ -496,48 +544,47 @@
    (str "order of the Black Cross, we will punish Dengeki" 'br)
    (str "Nurse!")
    (proc 15)
-   (proc 6)
-   (proc 3)
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (proc 4)
+   (proc 6) ; Clear Portrait
+   (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "The order of WHAT!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "The Black Cross!!!")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Master, uh, bad news... The battery died" 'br)
    (str "in the video camera.")
    (proc 15)
    (proc 9)
    (proc 12)
+       ; Columbia:
              (str "There isn't any footage to use.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 14)	; Johnny
    (proc 10)
+       ; Johnny:
            (str "What the!? So there's no video of Dengeki" 'br)
    (str "Nurse groping Columbia, going") (text "“") (str "aaaaahhhhhh") (text "”") (str "and" 'br)
    (str "everything?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Kirara... Did you...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "No! That's a lie...a big fat lie! Tanchi," 'br)
    (str "you've got to believe me...!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah... Yeah, I'll believe you.")
@@ -547,7 +594,7 @@
    (str "You two head back to the mansion, and we'll do a" 'br)
    (str "reshoot.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What is wrong with you!? You think we're" 'br)
@@ -558,14 +605,13 @@
    (str "Course request. We gotta deliver video proof to" 'br)
    (str "the client.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Magenta:
             (str "You'd better do it again, or else.")
    (proc 15)
    (proc 9)
-   (proc 3)
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Like hell! We're not doing anything for" 'br)
@@ -576,14 +622,20 @@
 
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
-   ((cmd 209) 0 2)
-   (mes-load? "mes¥chang0.mes")
+; PC-98
+   ((cmd 209) 0 2) (mes-load? "mes¥chang0.mes")
+; FMT
+;  (sound '|| 2) (set-var K 3) ((cmd 209) 0 2) (sound '|| 0) (mes-jump "mes¥chang0.mes")) (seg (? (= T 2) (= O 10)) (nop@) (set-reg 940 #f)
+
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
    (exec-mem 2816 "GET 20 71 320 8 64")
    (exec-mem 2816 "ACCESS 0")
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 3)
    (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
    (image-file "b:¥gpc¥ns1_326.gpc") (image-mem 1 3)
@@ -602,7 +654,7 @@
            (str "Mmm...Very well, then! Janet! Rough 'em up")
    (str "a little bit!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5) (exec-mem 2816 "GET 2 50 192 10 96") (proc 7) (proc 13)
        ; Janet:
           (str "Wha!? Why me? How come I'm always drawing" 'br)
@@ -610,30 +662,42 @@
    (proc 15)
    (proc 9)
    (proc 12)
+       ; Columbia:
              (str "Stop bellyaching, you low-level" 'br)
    (str "underling!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Magenta:
             (str "Yeah, it's part of your training, or" 'br)
    (str "something.")
    (proc 15)
    (proc 9)
    (proc 14)	; Johnny
    (proc 10)
+       ; Johnny:
            (str "Bushido means you gotta endure hardship!" 'br)
    (str "Ganbatte, Janet! Go fight!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "I don't care who you send against" 'br)
    (str "me! I'm punishing you all with a million volts!")
    (proc 15)
+
+; 	Battle time!
+
    (exec-mem 2816 "EXIT")
    (sound '|| 2)
    (set-var U 7)
+; PC-98
    (mes-load? "mes¥action1.mes")
+; FMT
+;  (mes-jump "mes¥action07.mes")) (seg (? (= T 2) (= O 11)) (nop@) (set-reg 941 #f) (set-reg 311 #f)
+
+; 	And post-battle set-up...
+
    (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 0)
@@ -644,49 +708,79 @@
    (exec-mem 10752 "INIT")
    (exec-mem 10752 "MODE V32E0M0")
    (exec-mem 10752 "LOAD> b:¥gpc¥ns1_327.gpc,TEMP")
-   (image-file "gpc¥aflame01.gpc")   (image-mem 1 3)
-   (image-file "b:¥gpc¥ns1_326.gpc") (image-mem 1 3)
+   (image-file "gpc¥aflame01.gpc")
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 0 0)
+   (image-file "b:¥gpc¥ns1_326.gpc")
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
    (text-frame 3 324 52 379)
    (text-reset 15)
    (exec-mem 17920 0 1)
+; PC-98
    (exec-mem 6656 8)
+
+; 	Text continues
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "Now who's next?!")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Eat this! HAIRPIN STRIKE!")
    (proc 15)
    (proc 9)
+
    (exec-mem 2816 "GET 5 26 145 24 144")
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 6 26 145")
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 11)
    (text-color 1)
    (str "Fwip!")
    (proc 15)
+; ^ Hairpin strike!!
+
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 5 26 145,FREE 5")
    (exec-mem 2816 "VIEW 6 31 29 174,PUT 8 6 31,FREE 8")
    (proc 0)
        ; Dengeki Nurse:
                   (str "Ah! Ahhhhhhh...")
    (proc 15)
+; ^ Dengeki Nurse is stabbed!!
+
    (proc 2)
        ; Tanchi:
            (str "Kirara! Kirara!!!")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "You too, nerdlinger!")
    (proc 15)
    (proc 9)
+
    (exec-mem 2816 "GET 5 26 145 24 144")
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 6 26 145,FREE 6")
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 11)
    (text-color 1)
    (str "Fwip!")
    (proc 15)
+; ^ Hairpin strike!!
+
    (exec-mem 2816 "VIEW 26 145 49 288,PUT 5 26 145,FREE 5")
+; ^ Clear visual
+
    (proc 2)
        ; Tanchi:
            (str "Ugh! Ooooooogh...")
@@ -702,10 +796,9 @@
    ((cmd 206) 1 4)
    (set-reg 990 #f)
 
-;	Time to restore the processes borrowed for this script
-
    (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
    (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
+; ^ Time to restore the processes borrowed for this script
 
    (mes-jump "b:¥mes¥ns13_11.mes"))
  (seg (? (= T 3) (= O 0))												; Action

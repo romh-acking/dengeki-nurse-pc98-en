@@ -65,12 +65,12 @@
 ; Talk
      (/
       (if (</>
-           (// (? (= 115 #t) (= 116 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 115 #t) (= 116 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 117 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 115 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 117 #t))            (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥NS12_18.mes")
            (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))

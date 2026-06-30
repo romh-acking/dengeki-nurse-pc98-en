@@ -74,14 +74,18 @@
       ; Kirara:
           (str "Fine, then...")
   (proc 15)
-  ((cmd 209) 0 5)
-  (delay 80 0)
-  ((cmd 209) 1 5)
+
+  ((cmd 209) 0 5) (delay 80 0) ((cmd 209) 1 5)
+; ^ From black to room ceiling
+
   (proc 2)
       ; Tanchi:
          (str "Ughh, I drank too much and my head's" 'br)
   (str "swimming... I wonder if Kirara's conked out yet...")
   (proc 15)
+
+; 	Columbia appears...
+
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 0 30)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_317.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
@@ -110,25 +114,25 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 66 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 65 #t) (= 66 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 64 #t) (= 65 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 63 #t) (= 64 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 66 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 72 #t)
+           (// (? (= 65 #t) (= 66 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 70 #t)
+           (// (? (= 64 #t) (= 65 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 68 #t)
+           (// (? (= 63 #t) (= 64 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 67 #t)
            (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 65 #t))                               (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 65 #t))                               (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 71 #t)
            (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 72 #t))                               (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 69 #t) (= 70 #t) (= 71 #t) (= 72 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 65 #t))                               (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 68 #t) (= 65 #f))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 67 #t) (= 68 #f))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 72 #t))                               (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns13_10.mes")
+           (// (? (= 69 #t) (= 70 #t) (= 71 #t) (= 72 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 66 #t)
+           (// (? (= 65 #t))                               (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 69 #t)
+           (// (? (= 68 #t) (= 65 #f))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 65 #t)
+           (// (? (= 67 #t) (= 68 #f))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 64 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 63 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -209,6 +213,7 @@
            (str "Y-You!?")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Yeah, and? You don't like what you're" 'br)
    (str "seeing?")
    (proc 15)
@@ -221,6 +226,7 @@
            (str "What's going on here...")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "The night is long... Come on, aren't you" 'br)
    (str "into this?")
    (proc 15)
@@ -234,6 +240,7 @@
    (str "whole thing is awkward...")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Hmm.. Everyone else is asleep. Along with")
    (str "your girlfriend.")
    (proc 15)
@@ -242,6 +249,7 @@
            (str "Aha...hahaha.")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "It's summer. What's wrong with a one-" 'br)
    (str "night stand?")
    (proc 15)
@@ -292,6 +300,7 @@
            (str "E-Eeeeek! It...it's you!!!")
    (proc 15)
    (proc 12)
+       ; Columbia:
              (str "Heeheeheehee, busted!")
    (proc 15)
    (proc 1)
@@ -299,6 +308,7 @@
            (str "Wh-What do you think you're doing?")
    (proc 15)
    (proc 12)
+       ; Columbia:
              (str "Mmmm, you know there's no shame if two" 'br)
    (str "girls are doin' it!")
    (proc 15)
@@ -307,6 +317,7 @@
            (str "Lemme go! I'll scream!")
    (proc 15)
    (proc 12)
+       ; Columbia:
              (str "Go ahead, then! What will you do when" 'br)
    (str "your boyfriend sees you like this?")
    (proc 15)
@@ -315,6 +326,7 @@
            (str "......")
    (proc 15)
    (proc 12)
+       ; Columbia:
              (str "Hee hee, You're a cute little kitten." 'br)
    (str "I'll make you feel really good soon...")
    (proc 15)
@@ -342,6 +354,7 @@
    (str "real bad...")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Why? This is making me so hot... Is it" 'br)
    (str "because my technique is lacking?")
    (proc 15)
@@ -354,6 +367,7 @@
            (str "No, no, that's not it, I just...")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "Here, touch me... Can't you see I'm" 'br)
    (str "burning up right here?")
    (proc 15)
@@ -397,6 +411,7 @@
    (proc 15)
    (exec-mem 2816 "VIEW 8 25 51 251,PUT 7 8 25,FREE 7")
    (proc 11)
+       ; Magenta:
             (str "Now that the third wheel's gone, let's" 'br)
    (str "take our time...")
    (proc 15)
@@ -421,6 +436,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 11)
+       ; Magenta:
             (str "No! I'm not letting you go...")
    (proc 15)
    (proc 19))

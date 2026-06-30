@@ -47,12 +47,13 @@
       ; Kirara:
           (str "Haaaahahha!")
   (proc 15)
-  (proc 6)
-  (proc 14)	; Croco
+  (proc 6) ; Clear Portrait
+  (proc 14) ; Croco portrait
   (proc 10)
+      ; Croco:
          (str "Waniiiiii!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (text-color 7)
   (str "Those two look like they're having fun, but grey" 'br)
   (str "clouds are starting to gather...")
@@ -73,22 +74,22 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 31 #t))                               (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 31 #t))                               (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 36 #t)
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 34 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 32 #t))                               (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 31 #t) (= 32 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 32 #t))                               (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (mes-jump "b:¥mes¥ns13_06.mes")
+           (// (? (= 31 #t) (= 32 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 37 #t)
+           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 35 #t)
 ; Talk
      (/
       (if (</>
            (// (? (= 32 #t))                               (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 36 #t) (= 37 #t) (= 32 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 36 #t) (= 37 #t) (= 32 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 32 #t)
            (// (? (= 31 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 33 #t) (= 34 #t) (= 35 #t) (= 31 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 33 #t) (= 34 #t) (= 35 #t) (= 31 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 31 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 33 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -192,6 +193,7 @@
            (str "Uwaaaawawawawawawa!")
    (proc 15)
    (proc 10)
+       ; Croco:
           (str "Wa, Waniiiiiii!")
    (proc 15)
    ((cmd 209) 0 2)
@@ -225,12 +227,13 @@
        ; Kirara:
            (str "Whaa!? No way, I don't want to!")
    (proc 15)
-   (proc 6)
-   (proc 14)	; Croco
+   (proc 6) ; Clear Portrait
+   (proc 14) ; Croco portrait
    (proc 10)
+       ; Croco:
           (str "Waniwaniwaniwani!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Stop acting like little kids! Something" 'br)
@@ -242,7 +245,7 @@
            (str "But there's such beautiful weather over" 'br)
    (str "there!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "There are big grey clouds over our boat!")
@@ -253,7 +256,7 @@
            (str "Isn't that weird? How come they're over us")
    (str "and nowhere else?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Now that you mention it, that is" 'br)
@@ -272,7 +275,7 @@
        ; Kirara:
            (str "See! See! I told you!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -292,7 +295,7 @@
            (str "But it's not deserted if we're there," 'br)
    (str "right?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Shut up! That's just semantics!")
@@ -310,7 +313,7 @@
        ; Kirara:
            (str "No no no!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -325,7 +328,7 @@
        ; Kirara:
            (str "Oooogh!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What's wrong?")
@@ -335,7 +338,7 @@
        ; Kirara:
            (str "Water went up my schnozz!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

@@ -63,27 +63,27 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 26 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 26 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns13_04.mes")
            (// (? (= 25 #t) (= 26 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 24 #t) (= 25 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 23 #t) (= 24 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 24 #t) (= 25 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 27 #t)
+           (// (? (= 23 #t) (= 24 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 28 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 26 #t))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 25 #t) (= 26 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 27 #t) (= 25 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 25 #t) (= 26 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 30 #t)
+           (// (? (= 27 #t) (= 25 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 29 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
            (// (? (= 26 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 30 #t) (= 26 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 29 #t) (= 30 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 30 #t) (= 26 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 26 #t)
+           (// (? (= 29 #t) (= 30 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 25 #t)
            (// (? (= 24 #t) (= 29 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 28 #t) (= 24 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 28 #t) (= 24 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 24 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 23 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -206,55 +206,55 @@
            (str "Don't get all excited catching something" 'br)
    (str "like that! I've always hated crabs, anyway...")
    (proc 15)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "But why? Aren't crabs cute?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 23 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "What's with the crab hate?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "When I was a kid, a crab got into my swim" 'br)
    (str "trunks!")
    (proc 15)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Wow, what a dark past!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, shut up!")
    (proc 15)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I want to show it to Doctor Akihabara and" 'br)
    (str "Croco!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 24 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Speaking of which... Where did those two" 'br)
    (str "get to?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -263,12 +263,12 @@
            (str "Those two have their hands full blowing up")
    (str "that inflatable raft.")
    (proc 15)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Oh boy, a boat! I can't wait! Count me in!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 25 #t))
  (seg (? (= T 2) (= O 4))
@@ -278,40 +278,36 @@
            (str "Hey, uh... Doesn't that swimsuit run a" 'br)
    (str "little big?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Y-Yeah... I was busy, so I didn't have" 'br)
    (str "time to go buy one...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Well, it'll probably be just fine once" 'br)
    (str "your chest fills out.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Hey, put a sock in it! I'm pretty self-" 'br)
    (str "conscious about my chest size, you know!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 26 #t))
  (seg (? (= T 2) (= O 5))
    (proc 18)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I hope Doctor Akihabara and Croco arrive" 'br)
    (str "soon!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -320,12 +316,12 @@
    (text-color 7)
    (str "I splashed water at Kirara.")
    (proc 15)
-   (proc 10)	; Happy
+   (proc 10) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Ahhh! You've done it now!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

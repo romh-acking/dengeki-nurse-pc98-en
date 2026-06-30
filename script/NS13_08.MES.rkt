@@ -60,26 +60,26 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 54 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 54 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 62 #t)
            (// (? (= 53 #t) (= 54 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 52 #t) (= 53 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 52 #t) (= 53 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 59 #t)
            (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 53 #t))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 53 #t))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 60 #t)
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 57 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 61 #t) (= 62 #t))           (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 54 #t))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 53 #t) (= 60 #t) (= 54 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 58 #t) (= 59 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 52 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 56 #t) (= 57 #t) (= 52 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 55 #t))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 61 #t) (= 62 #t))           (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (mes-jump "b:¥mes¥ns13_09.mes")
+           (// (? (= 54 #t))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 61 #t)
+           (// (? (= 53 #t) (= 60 #t) (= 54 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 54 #t)
+           (// (? (= 58 #t) (= 59 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 53 #t)
+           (// (? (= 52 #t))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 58 #t) <--- this was originally 53
+           (// (? (= 56 #t) (= 57 #t) (= 52 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 52 #t)
+           (// (? (= 55 #t))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 56 #t)
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 55 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -109,7 +109,7 @@
    (text-color 7)
    (str "I see, he's a third-gen Japanese-American, or a" 'br)
    (str "Sansei in short. That explains why his Japanese is")
-   (str "so good.")
+   (str "so good...")
    (proc 15)
    (text-color 7)
    (str "And to think that this is a private island...")
@@ -157,6 +157,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 10)
+       ; Johnny:
            (str "Ho ho, you must have had it rough.")
    (proc 15)
    (proc 2)
@@ -166,33 +167,34 @@
    (str "delicious meal!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Ahh, spare me the thanks. Kirara, why" 'br)
    (str "don't you start drinking?")
    (proc 15)
-   (proc 13)	; Flushed
+   (proc 13) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Ah, I'm...not legal yet...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "Hahaha! It's so rare to find a proper" 'br)
    (str "young lady like yourself these days, a real Yamato")
    (str "Nadeshiko.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "A Yamato Nadeshiko...???")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 10)
+       ; Johnny:
            (str "Come on, drink up already!")
    (proc 15)
    (proc 2)
@@ -208,9 +210,11 @@
            (str "Hahaha, this mansion's totally crazy.")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "It's not just the mansion!")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "This all happens to be Johnny-sama's" 'br)
    (str "private island.")
    (proc 15)
@@ -220,6 +224,7 @@
    (str "island like this too!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Thank my grandfather! He left it all to" 'br)
    (str "me. I'm just a happy third-generation Japanese.")
    (proc 15)
@@ -228,6 +233,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 12)
+       ; Columbia:
              (str "Now come on, drink more already!")
    (proc 15)
    (proc 2)
@@ -235,7 +241,7 @@
            (str "Thank you, thank you!")
    (proc 15)
    (proc 19)
-   (set-reg 53 #t))
+   (set-reg 58 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 2)
@@ -244,6 +250,7 @@
    (str "so good!")
    (proc 15)
    (proc 12)
+       ; Columbia:
              (str "It's not just Japanese he's good at!" 'br)
    (str "Johnny's also a master of Hanayagi Urasenke" 'br)
    (str "swordsmanship!")
@@ -259,6 +266,7 @@
    (str "dream.")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Hahaha... Actually, there's one more girl,")
    (str "but she's away on a business trip, unfortunately.")
    (proc 15)
@@ -267,28 +275,29 @@
            (str "Damn, now I'm double jealous! Seriously," 'br)
    (str "man, I'm green with envy!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Tanchii!!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "Hahahaha! It seems that Kirara is jealous!")
    (proc 15)
-   (proc 13)	; Flushed
+   (proc 13) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Wha-wha-wha.... I'm nothing of the sort!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "I'm sure you are, ma'am! Now let's get you")
    (str "a good rest tonight.")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "We'll set sail tomorrow morning.")
    (proc 15)
    (proc 19)
@@ -296,6 +305,7 @@
  (seg (? (= T 2) (= O 6))
    (proc 18)
    (proc 11)
+       ; Magenta:
             (str "There's another drink with your name on" 'br)
    (str "it!")
    (proc 15)
@@ -308,16 +318,20 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 10)
+       ; Johnny:
            (str "Let's bring the evening to a close, then.")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Magenta, Columbia, show our guests to" 'br)
    (str "their rooms.")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "But, of, course...")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "They will be staying in separate rooms." 'br)
    (str "It'd just be awful if these two young people made" 'br)
    (str "an unfortunate mistake.")
@@ -346,6 +360,7 @@
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 11)
+       ; Magenta:
             (str "Where do you think you're going?")
    (proc 15)
    (proc 2)
@@ -353,6 +368,7 @@
            (str "Uh, to the restroom...")
    (proc 15)
    (proc 11)
+       ; Magenta:
             (str "The banquet's just kicking off. Try to" 'br)
    (str "hold it for a bit, will you?")
    (proc 15)

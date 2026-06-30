@@ -65,30 +65,30 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 108 #t))            (nop@) (set-var T 0) (set-var O 5) (seg-call))
-           (// (? (= 107 #t) (= 108 #f)) (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 105 #t) (= 106 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 104 #t) (= 105 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 108 #t))            (nop@) (set-var T 0) (set-var O 5) (seg-call))    ; (set-reg 114 #t)
+           (// (? (= 107 #t) (= 108 #f)) (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 113 #t)
+           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 112 #t)
+           (// (? (= 105 #t) (= 106 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 111 #t)
+           (// (? (= 104 #t) (= 105 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 110 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 107 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 109 #t) (= 106 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 107 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; 
+           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; 
+           (// (? (= 109 #t) (= 106 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 105 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 114 #t))            (nop@) (set-var T 2) (set-var O 7) (seg-call))
+           (// (? (= 114 #t))            (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (mes-jump "b:¥mes¥ns12_16.mes")
            (// (? (= 108 #t) (= 114 #f)) (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 113 #t) (= 108 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 113 #t) (= 108 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 108 #t)
            (// (? (= 107 #t) (= 113 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 112 #t) (= 107 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 105 #t) (= 112 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 110 #t) (= 105 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 112 #t) (= 107 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 107 #t)
+           (// (? (= 105 #t) (= 112 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 106 #t)
+           (// (? (= 110 #t) (= 105 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 109 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 104 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -295,9 +295,7 @@
            (str "That sure is a reason to build an atomic" 'br)
    (str "bomb...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Portrait (Sad)
    (proc 0)
        ; Dengeki Nurse:
                   (str "That's kind of sad...")

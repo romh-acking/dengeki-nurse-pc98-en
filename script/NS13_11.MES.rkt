@@ -6,6 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
+; PC-98
   (load-mem "cmd¥quakeh.tcm" 6656)
   (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 30 288 10 96") (proc 4) (text-color 8) (str "Johnny: ")))
   (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 70 192 10 96") (proc 4) (text-color 3) (str "Magenta: ")))
@@ -13,9 +14,9 @@
 
 ; 	Columbia portrait:
 
-  (define-proc 9  (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 2 60 192 10 96")))
-  (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
-  (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
+  (define-proc 13 (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 2816 "GET 2 60 192 10 96")))
+  (define-proc 14 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
+  (define-proc 9  (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
 
 ; 	Vibrating Kirara:
 
@@ -24,6 +25,8 @@
 
 ; 	Setup continues...
 
+; FMT
+; (load-mem "cmd¥quakeh.tcm" 6656)
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (text-frame 0 0 79 399)
   (text-reset 0)
@@ -32,7 +35,10 @@
   (image-file "gpc¥face_w00.gpc")   (image-mem 0 0) (exec-mem 2816 "GET 20 71 320 8 64")
   (exec-mem 2816 "ACCESS 0")
   (sound '|| 0)
+; PC-98
   (sound '|| "uso¥Nurse04.uso")
+; FMT
+; (sound '|| "Nurse04.fmt") (sound '|| 100)
   (sound '|| 1)
   (exec-mem 10752 "INIT")
   (exec-mem 10752 "MODE V0E0M64")
@@ -56,7 +62,7 @@
   (proc 10)
           (str "Rise and shine, you two!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Nnnnnn! Oh god! What fresh hell is this!?")
@@ -83,31 +89,31 @@
      (/
       (if (</>
            (// (? (= 91 #t))                     (nop@) (set-var T 0) (set-var O 6) (seg-call))
-           (// (? (= 90 #t) (= 91 #f))           (nop@) (set-var T 0) (set-var O 5) (seg-call))
-           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 88 #t) (= 89 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 90 #t) (= 91 #f))           (nop@) (set-var T 0) (set-var O 5) (seg-call))    ; (set-reg 91 #t)
+           (// (? (= 89 #t) (= 90 #f))           (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 98 #t)
+           (// (? (= 88 #t) (= 89 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 97 #t)
            (// (? (= 87 #t) (= 88 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 86 #t) (= 87 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 86 #t) (= 87 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 95 #t)
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; 
 ; Look
      (/
       (if (</>
-           (// (? (= 92 #t))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 91 #t) (= 92 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 87 #t) (= 91 #f))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 86 #t) (= 87 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 92 #t))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns13_12.mes")
+           (// (? (= 91 #t) (= 92 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 92 #t)
+           (// (? (= 87 #t) (= 91 #f))           (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 88 #t)
+           (// (? (= 86 #t) (= 87 #f))           (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 96 #t)
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 94 #t)
 ; Talk
      (/
       (if (</>
            (// (? (= 90 #t))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 98 #t) (= 90 #f))           (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 97 #t) (= 98 #f))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 98 #t) (= 90 #f))           (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 90 #t)
+           (// (? (= 97 #t) (= 98 #f))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 89 #t)
            (// (? (= 87 #t) (= 97 #f))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 95 #t) (= 96 #t) (= 87 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 95 #t) (= 96 #t) (= 87 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 87 #t)
            (// (? (= 86 #t))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 93 #t) (= 94 #t) (= 86 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 93 #t) (= 94 #t) (= 86 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 86 #t)
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 93 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -193,10 +199,11 @@
            (str "Kirara... What's wrong?")
    (proc 15)
    (proc 11)
-           (str "Hee hee hee! Come on, get more aroused" 'br)
+       ; Magenta:
+            (str "Hee hee hee! Come on, get more aroused" 'br)
    (str "and make her happy!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 1)
        ; Kirara:
            (str "Please... Will you...")
@@ -300,15 +307,19 @@
    (text-color 7)
    (str "Ugh... I'm pathetic...")
    (proc 15)
-   (proc 9) (proc 13)
+   (proc 13) (proc 14) ; Columbia portrait
    (exec-mem 6656 0 5 1 3 0)
    (proc 12)
-           (str "Master! The voltage is way too high!")
+       ; Columbia:
+             (str "Master! The voltage is way too high!")
    (exec-mem 6656 0 5 1 3 0)
    (proc 15)
-   (proc 14)
+   (proc 9) ; Clear Columbia portrait
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 3)
    (exec-mem 17920 2 0)
    (exec-mem 17920 2 0)
    (text-color 1)
@@ -318,7 +329,10 @@
    (proc 15)
    (exec-mem 2816 "VIEW 27 115 50 258,PUT 6 27 115,FREE 6")
    (sound '|| 0)
+; PC-98
    (sound '|se | 20)
+; FMT
+;  (sound '|se | 3)
    (text-color 1)
    (str "Pewpewpewpewpew!")
    (proc 15)
@@ -327,15 +341,23 @@
    (exec-mem 17920 2 0)
    (exec-mem 17920 2 0)
    (proc 10)
+       ; Johnny:
            (str "Waagh! What's going on!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 17920 1 1)
    (sound '|| 0)
+; PC-98
    (sound '|| "uso¥Nurse10.uso")
+; FMT
+;  (sound '|| "Nurse10.fmt")
    (sound '|| 1)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
-   (exec-mem 10752 "COPY> b:¥gpc¥ns1_332.gpc,GPC") (image-mem 1 3)
+   (exec-mem 10752 "COPY> b:¥gpc¥ns1_332.gpc,GPC")
+; PC-98
+   (image-mem 1 3)
+; FMT
+;  (image-mem 1 0)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (exec-mem 17920 0 1)
    (proc 2)
@@ -352,28 +374,31 @@
            (str "Ah, no, but this is kinda embarrassing...")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Damn you and your repulsive trickery!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "Now hand over the video!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "You really think I'd hand it over if you" 'br)
    (str "asked?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "If you do, I'll let it all slide...")
    (str "this time!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "No chance, babe! This video's headed" 'br)
    (str "straight to the black market!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, don't you mess around like that! I'm" 'br)
@@ -385,44 +410,48 @@
    (str "around here!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Columbia! I'll leave the punishment to" 'br)
    (str "you! Magenta and I will deliver the video!")
    (proc 15)
-   (proc 6)
-   (proc 9) (proc 13)
+   (proc 6) ; Clear Portrait
+   (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
-           (str "Yes, Master! Handlin' these two will be" 'br)
+       ; Columbia:
+             (str "Yes, Master! Handlin' these two will be" 'br)
    (str "a piece of cake!")
    (proc 15)
-   (proc 14)
+   (proc 9) ; Clear Columbia portrait
    (proc 10)
+       ; Johnny:
            (str "Well said, Columbia! Atta girl, I'll be on")
    (str "my way then!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "Hey, wait!!")
    (proc 15)
-   (proc 9) (proc 13)
+   (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
-           (str "Heh heh heh... If ya want to chase after")
+       ; Columbia:
+             (str "Heh heh heh... If ya want to chase after")
    (str "him, you'll have ta get past me!")
    (proc 15)
-   (exec-mem 10752 "EXIT")
-   (exec-mem 2816 "EXIT")
-   (sound '|| 2)
-   (set-var U 8)
-   (mes-load? "mes¥action1.mes")
-   (text-frame 3 324 52 379) (text-reset 15)
-   (text-frame 4 16 51 303)  (text-reset 15)
-   (set-reg 990 #f)
 
 ; Reinstate default processes
    (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
    (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
 
-   (mes-jump "b:¥mes¥ns13_12.mes"))
+   (exec-mem 10752 "EXIT")
+   (exec-mem 2816 "EXIT")
+   (sound '|| 2)
+   (set-var U 8)
+; PC-98
+   (mes-load? "mes¥action1.mes") (text-frame 3 324 52 379) (text-reset 15) (text-frame 4 16 51 303)  (text-reset 15) (set-reg 990 #f) (mes-jump "b:¥mes¥ns13_12.mes")
+; FMT
+;  (mes-jump "mes¥action08.mes")
+   )
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 2)
@@ -430,9 +459,10 @@
            (str "What have you got up your sleeve!?")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Ha ha! You'll find out soon enough!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 93 #t))
  (seg (? (= T 2) (= O 1))
@@ -442,30 +472,35 @@
            (str "What are you going to do to Kirara!?")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Ha ha ha! The sexy show's about to start!" 'br)
    (str "Magenta! Columbia! You two ready to rock?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
-           (str "Yeeesss, Master, this time the battery is")
+       ; Magenta:
+            (str "Yeeesss, Master, this time the battery is")
    (str "good to go!")
    (proc 15)
-   (proc 6)
-   (proc 9) (proc 13)
+   (proc 6) ; Clear Portrait
+   (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
-           (str "Vibration Unit OK!")
+       ; Columbia:
+             (str "Vibration Unit OK!")
    (proc 15)
-   (proc 14)
+   (proc 9) ; Clear Columbia portrait
    (proc 10)
+       ; Johnny:
            (str "Aw yeah, aw yeah! Then let's have that" 'br)
    (str "vibration start!")
    (proc 15)
-   (proc 6)
-   (proc 9) (proc 13)
+   (proc 6) ; Clear Portrait
+   (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
-           (str "Yeeeeees, Master!")
+       ; Columbia:
+             (str "Yeeeeees, Master!")
    (proc 15)
-   (proc 14)
+   (proc 9) ; Clear Columbia portrait
    (text-color 1)
    (str "Ka-clunk!")
    (proc 15)
@@ -485,9 +520,10 @@
            (str "Huh? What's going on!?")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Hohoho! This is a linked vibrator system!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 86 #t))
  (seg (? (= T 2) (= O 2))
@@ -497,10 +533,11 @@
            (str "What kind of trickery is this!?")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Oh, it's no trick, baby! It's all" 'br)
    (str "original! Wahahhahahha!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -510,14 +547,16 @@
    (str "what this sicko shit is!")
    (proc 15)
    (proc 11)
-           (str "When you get aroused, her vibrator is the")
+       ; Magenta:
+            (str "When you get aroused, her vibrator is the")
    (str "one that's gonna go crazy!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Johnny:
            (str "Hahaha, let's watch the fun!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "You're messing with me! What would ever" 'br)
@@ -528,9 +567,10 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 11)
-           (str "By looking at her, you ding-dong!")
+       ; Magenta:
+            (str "By looking at her, you ding-dong!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
@@ -539,11 +579,12 @@
            (str "Stop it! Please, stop!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "Humiliating, isn't it? Pathetic, is it" 'br)
    (str "not? And even better, this is gonna get broadcast" 'br)
    (str "worldwide!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 89 #t))
  (seg (? (= T 2) (= O 6))
@@ -554,19 +595,21 @@
    (str "won't get aroused in the first place!")
    (proc 15)
    (proc 11)
-           (str "We saw that coming, so I glued your" 'br)
+       ; Magenta:
+            (str "We saw that coming, so I glued your" 'br)
    (str "eyelids open. You can't close them.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What treachery! And you call yourself a" 'br)
    (str "samurai!")
    (proc 15)
    (proc 10)
+       ; Johnny:
            (str "I'm a Cali kid at heart, baby!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 6656 0 1 1 3 0)
    (proc 1)
        ; Kirara:
@@ -577,19 +620,21 @@
    (set-reg 90 #t))
  (seg (? (= T 2) (= O 7))
    (proc 18)
-   (proc 9) (proc 13)
+   (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
-           (str "Come on, come on, take it all in, pop a" 'br)
+       ; Columbia:
+             (str "Come on, come on, take it all in, pop a" 'br)
    (str "boner and get super horny!")
    (proc 15)
-   (proc 14)
+   (proc 9) ; Clear Columbia portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 11)
-           (str "You're not going anywhere!")
+       ; Magenta:
+            (str "You're not going anywhere!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
