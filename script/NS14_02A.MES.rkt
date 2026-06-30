@@ -47,12 +47,12 @@
           (str "Hello, I'm Tanchi Denpa from Dentendo" 'br)
   (str "Hospital.")
   (proc 15)
-  (proc 9)	; Happy
+  (proc 9) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "Who's this guy supposed to be?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Geez, Kirara! Don't be so rude!")
@@ -61,12 +61,12 @@
             (str "All good. It's nice to meet you, I'm" 'br)
   (str "Bootwork's CEO, No Nakajima.")
   (proc 15)
-  (proc 9)	; Happy
+  (proc 9) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "It's nice to meet you, Mr. Nattojima!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "Kirara!!! That's not how you read his" 'br)
@@ -90,11 +90,11 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 20 #t) (= 19 #t)) (nop@) (set-var T 0) (set-var O 5) (seg-call))
+           (// (? (= 20 #t) (= 19 #t)) (nop@) (set-var T 0) (set-var O 5) (seg-call))    ; (set-reg 24 #t)
            (// (? (= 19 #t) (= 20 #f)) (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 18 #t) (= 19 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 17 #t) (= 18 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 16 #t) (= 17 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 18 #t) (= 19 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 19 #t)
+           (// (? (= 17 #t) (= 18 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 25 #t)
+           (// (? (= 16 #t) (= 17 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 21 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
@@ -102,25 +102,25 @@
            (// (? (= 19 #t))           (nop@) (set-var T 1) (set-var O 4) (seg-call))
            (// (? (= 18 #t) (= 19 #f)) (nop@) (set-var T 1) (set-var O 3) (seg-call))
            (// (? (= 17 #t) (= 18 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 21 #t) (= 17 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 21 #t) (= 17 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 22 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 24 #t))           (nop@) (set-var T 2) (set-var O 8) (seg-call))
+           (// (? (= 24 #t))           (nop@) (set-var T 2) (set-var O 8) (seg-call))    ; (mes-jump "b:¥mes¥ns14_02b.mes")
            (// (? (= 20 #t) (= 24 #f)) (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 19 #t) (= 20 #f)) (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 19 #t) (= 20 #f)) (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 20 #t)
            (// (? (= 18 #t) (= 19 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 23 #t) (= 18 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 23 #t) (= 18 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 18 #t)
            (// (? (= 17 #t) (= 23 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 22 #t) (= 17 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 22 #t) (= 17 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 17 #t)
            (// (? (= 16 #t) (= 22 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 16 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 18 #t))           (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 25 #t) (= 18 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 25 #t) (= 18 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 23 #t)
            (//                         (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
@@ -168,8 +168,12 @@
    (str "What's up with Moguri? Pressure doesn't usually" 'br)
    (str "turn his stomach like this...")
    (proc 15)
+
    (exec-mem 2816 "VIEW 31 49 43 304,OVER 1,PUT 6 31 49,FREE 6")
+; ^ Moguri appears
+
    (proc 11)
+       ; Moguri:
            (str "Sorry I'm late, everyone! Oh ho hoh," 'br)
    (str "Tanchi!")
    (proc 15)
@@ -250,6 +254,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Sorry for asking the impossible, our" 'br)
    (str "team doctor collapsed suddenly.")
    (proc 15)
@@ -258,28 +263,31 @@
            (str "Oh no, it's no problem... I'm honored to" 'br)
    (str "be given the opportunity.")
    (proc 15)
-   (proc 9)	; Happy
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Yes! I'm totally fired up!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "Hah, is this your first time at a" 'br)
    (str "circuit, Kirara?")
    (proc 15)
-   (proc 9)	; Happy
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Yes! All the drivers look so cool. It" 'br)
    (str "feels like a workplace for guys!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "For real? I feel like it's lacking in" 'br)
    (str "charm myself.")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "I'm jealous of you, Tanchi, for getting" 'br)
    (str "to work with cute nurses like Kirara every day.")
    (proc 15)
@@ -288,6 +296,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "If I knew cute nurses were on the" 'br)
    (str "bracket, I would have become a doctor too.")
    (proc 15)
@@ -300,9 +309,13 @@
    (str "of flowers blooming at the circuit?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "No. Gimme a nurse any day.")
    (proc 15)
+
    (exec-mem 2816 "VIEW 6 30 30 303,OVER 1,PUT 10 6 30,FREE 10")
+; ^ Hello, Manko and Sena
+
    (proc 2)
        ; Tanchi:
            (str "Oh, speak of the devil! Circuit flowers!")
@@ -326,6 +339,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Let me give you an intro to our two race")
    (str "queens. That's Sena on the right, and Manko on the")
    (str "left.")
@@ -335,27 +349,29 @@
            (str "I-I'm Tanchi Denpa! Japan's #1 genius" 'br)
    (str "internal medicine specialist.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Tanchi! You're literally drooling right" 'br)
    (str "now!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 12)
+       ; Manko:
           (str "Director, where's Moguri?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Now that you mention it, he hasn't shown")
    (str "yet... He had a case of nerves and couldn't sleep.")
    (proc 15)
    (proc 13)
-          (str "Ohh, he should have called me, then! I" 'br)
+       ; Sena:
+         (str "Ohh, he should have called me, then! I" 'br)
    (str "would have put him right to sleep!")
    (proc 15)
    (proc 12)
+       ; Manko:
           (str "As if he'd give you the time of day!")
    (proc 15)
    (proc 19)
@@ -363,57 +379,58 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 13)
-          (str "Shut up, you ugly slag!")
+       ; Sena:
+         (str "Shut up, you ugly slag!")
    (proc 15)
    (proc 12)
+       ; Manko:
           (str "What!? Your mom has an outie belly button!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 6))
    (proc 18)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Is that Moguri Suzuki there?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, Japan's genius driver!")
    (proc 15)
-   (proc 9)	; Happy
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Wow, those are some big ears.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "It's not just his ears that are big. He's" 'br)
    (str "made lots of girls cry...")
    (proc 15)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "??????")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 20 #t))
  (seg (? (= T 2) (= O 7))
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Suzuki-san is so cool...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 8))
    (proc 18)
    (proc 11)
+       ; Moguri:
            (str "You're looking well.")
    (proc 15)
    (proc 2)
@@ -421,6 +438,7 @@
            (str "Same as you. Are you in top condition?")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "Leave it to me. I'll bring home the win" 'br)
    (str "here in Japan.")
    (proc 15)
@@ -428,33 +446,37 @@
        ; Tanchi:
            (str "I'm sure glad you still remember me.")
    (proc 15)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "How do you know Suzuki-san?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Er... we're old acquaintances.")
    (proc 15)
-   (proc 9)	; Happy
+   (proc 9) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Huuuuuh? Just old acquaintances?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "Heh heh... Back in the day, Tanchi and I" 'br)
    (str "would paint the town red.")
    (proc 15)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Town painting!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
+; ^ Dr. Akiba and Croco pop up. Surprise!
+
    (proc 5)
        ; Dr. Akiba:
    (str "C'mon then, how about just one song?")
@@ -475,6 +497,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Hey now, don't take the front wing.")
    (proc 15)
    (proc 19))
@@ -484,28 +507,29 @@
        ; Tanchi:
            (str "Hmmmhmmmmmmhmmmm...")
    (proc 15)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I'm using my telepathy to communicate with")
    (str "Mr. Nakajima!")
    (proc 15)
-   (proc 14)	; Confused
+   (proc 14) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "......")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 23 #t))
  (seg (? (= T 3) (= O 2))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Hey hey, don't take out the engine!")
    (proc 15)
    (proc 19))

@@ -74,8 +74,8 @@
 ; Look
      (/
       (if (</>
-           (// (? (= 107 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; 
-           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; 
+           (// (? (= 107 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
+           (// (? (= 106 #t) (= 107 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 109 #t) (= 106 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 105 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk

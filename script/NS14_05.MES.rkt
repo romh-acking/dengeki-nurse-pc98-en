@@ -85,30 +85,30 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 62 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 61 #t) (= 62 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 60 #t) (= 61 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 62 #t))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 69 #t)
+           (// (? (= 61 #t) (= 62 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 67 #t)
+           (// (? (= 60 #t) (= 61 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 65 #t)
            (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 67 #t))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 66 #t) (= 67 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 65 #t) (= 66 #f))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 63 #t) (= 64 #t) (= 65 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 67 #t))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))    ; (set-reg 62 #t)
+           (// (? (= 66 #t) (= 67 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 61 #t)
+           (// (? (= 65 #t) (= 66 #f))           (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 66 #t)
+           (// (? (= 63 #t) (= 64 #t) (= 65 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 68 #t)
+           (//                                   (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 63 #t)
 ; Talk
      (/
       (if (</>
            (// (? (= 62 #t))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
            (// (? (= 60 #t) (= 62 #f))           (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 64 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 69 #t))                     (nop@) (set-var T 3) (set-var O 3) (seg-call))
+           (// (? (= 69 #t))                     (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns14_06.mes")
            (// (? (= 60 #t) (= 62 #f))           (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 68 #t) (= 60 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 68 #t) (= 60 #f))           (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 60 #t)
            (//                                   (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))

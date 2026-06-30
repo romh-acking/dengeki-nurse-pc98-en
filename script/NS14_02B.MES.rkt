@@ -52,7 +52,7 @@
       ; Kirara:
           (str "The Thunder Tribe!?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "W-We aren't old enough to have been mixed" 'br)
@@ -81,32 +81,32 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 29 #t))                               (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 29 #t))                               (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 39 #t)
            (// (? (= 28 #t) (= 29 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (// (? (= 27 #t) (= 28 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 35 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 33 #t))                               (nop@) (set-var T 1) (set-var O 6) (seg-call))
-           (// (? (= 32 #t) (= 33 #f))                     (nop@) (set-var T 1) (set-var O 5) (seg-call))
+           (// (? (= 32 #t) (= 33 #f))                     (nop@) (set-var T 1) (set-var O 5) (seg-call))    ; (set-reg 33 #t)
            (// (? (= 28 #t) (= 32 #f))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 31 #t) (= 28 #f))                     (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 30 #t) (= 31 #f))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 27 #t) (= 30 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 31 #t) (= 28 #f))                     (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 28 #t)
+           (// (? (= 30 #t) (= 31 #f))                     (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 37 #t)
+           (// (? (= 27 #t) (= 30 #f))                     (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 30 #t)
+           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 36 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 39 #t))                               (nop@) (set-var T 2) (set-var O 8) (seg-call))
-           (// (? (= 38 #t) (= 39 #f))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 33 #t) (= 38 #f))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 39 #t))                               (nop@) (set-var T 2) (set-var O 8) (seg-call))    ; (mes-jump "b:¥mes¥ns14_03.mes")
+           (// (? (= 38 #t) (= 39 #f))                     (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (set-reg 29 #t)
+           (// (? (= 33 #t) (= 38 #f))                     (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 38 #t)
            (// (? (= 32 #t) (= 33 #f))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 28 #t) (= 32 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 28 #t) (= 32 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 32 #t)
            (// (? (= 37 #t) (= 28 #f))                     (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 27 #t) (= 37 #f))                     (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 34 #t) (= 35 #t) (= 36 #t) (= 27 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 34 #t) (= 35 #t) (= 36 #t) (= 27 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 27 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 34 #t)
 ; Action
      (/
       (if (</>
@@ -212,7 +212,10 @@
    (str "That's fast! He's taken the lead with an" 'br)
    (str "incredible time!")
    (proc 15)
+
    (exec-mem 2816 "VIEW 12 93 44 237,PUT 7 12 93,FREE 7")
+; ^ Shot of F1 car racing
+
    (proc 19)
    (set-reg 28 #t))
  (seg (? (= T 1) (= O 4))
@@ -229,17 +232,22 @@
    (str "Something's happening in the pit area. It looks" 'br)
    (str "like Moguri's back.")
    (proc 15)
+
    (exec-mem 2816 "VIEW 31 49 43 304,OVER 1,PUT 8 31 49,FREE 8")
+; ^ Moguri appears
+
    (proc 2)
        ; Tanchi:
            (str "Hey, nice run! Way to snag provisional" 'br)
    (str "pole!")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "Yeah, with a time like that, I might not" 'br)
    (str "even need to run tomorrow's qualifying.")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Don't get cocky. Senna and Mansell will" 'br)
    (str "be gunning for you tomorrow.")
    (proc 15)
@@ -261,7 +269,7 @@
    (str "Did you shave your eyebrows real thin, bleach your")
    (str "hair and add streaks?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, that's enough! That was a long time" 'br)
@@ -272,6 +280,7 @@
  (seg (? (= T 2) (= O 1))
    (proc 18)
    (proc 11)
+       ; Moguri:
            (str "Well... You made me the man I am today," 'br)
    (str "Tanchi.")
    (proc 15)
@@ -286,14 +295,19 @@
            (str "I guess you can't judge a book by its" 'br)
    (str "cover.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "Moguri, it's about time you got out on" 'br)
    (str "the track.")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "Okay. Well then, we'll catch up later.")
    (proc 15)
+
+; 	Moguri nips off to the track for a little drive.
+
    (sound '|| 2)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
@@ -314,7 +328,7 @@
        ; Kirara:
            (str "Where did Moguri go?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "He's gonna start his run.")
@@ -325,7 +339,7 @@
            (str "Oh, he went jogging, then? Being a racer" 'br)
    (str "must be tough.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "......")
@@ -338,7 +352,7 @@
        ; Kirara:
            (str "That's so cool!!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Are you a believer, then?")
@@ -348,8 +362,9 @@
        ; Kirara:
            (str "Yeah, F1 is incredible!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "Good, good. He's making good time.")
    (proc 15)
    (proc 19)
@@ -361,6 +376,7 @@
            (str "This is looking real promising!")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "He's only doing what comes natural.")
    (proc 15)
    (proc 13)	; Shocked
@@ -368,13 +384,14 @@
        ; Kirara:
            (str "This is so awesome! I wanna ride too!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What are you talking about? You can't just")
    (str "hop on and take a ride!")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Heh heh... You wanna give it a try?")
    (proc 15)
    (proc 13)	; Shocked
@@ -382,8 +399,9 @@
        ; Kirara:
            (str "For real!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "Haha. No.")
    (proc 15)
    (proc 2)
@@ -391,6 +409,7 @@
            (str "I feel like I've heard that joke before.")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "I can't let you take it for a spin, but" 'br)
    (str "I can let you sit in the cockpit.")
    (proc 15)
@@ -403,7 +422,7 @@
        ; Kirara:
            (str "Vrmmmm.... Vrmmm vrmmm vrmmmmmmm.....")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What are you getting so excited about?")
@@ -417,23 +436,22 @@
            (str "So what's a professional pole? And who are")
    (str "Senna and Mansell?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Urrgh... Explaining all this will take" 'br)
    (str "forever. Why don't you just read a book on F1" 'br)
    (str "instead?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Geez, you're mean! Fine, I'll just ask" 'br)
    (str "Moguri about it.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "Oh, I can tell you all about it if you" 'br)
    (str "come to my hotel room later. I'll teach you nice" 'br)
    (str "and slow...all night!")
@@ -443,12 +461,13 @@
        ; Kirara:
            (str "Wow, what a champ!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 38 #t))
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 11)
+       ; Moguri:
            (str "Hmm... Kirara is really my type.")
    (proc 15)
    (proc 19)
@@ -460,6 +479,7 @@
            (str "Yo!!! Moguri!!!")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "Haha, I'll put a stop to it... Your" 'br)
    (str "boyfriend will take off my head.")
    (proc 15)
@@ -468,8 +488,9 @@
        ; Kirara:
            (str "Whaaat? He's not my boyfriend!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "I've got a meeting to prep for tomorrow," 'br)
    (str "so let's take a nice slow date another time, okay?")
    (proc 15)
@@ -478,7 +499,7 @@
        ; Kirara:
            (str "Okay...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Okay, let's haul out of here before we get")
@@ -490,12 +511,13 @@
            (str "W-Wait a second... Didn't he say I could" 'br)
    (str "sit in the cockpit?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, you're still going on about that?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Oh, that's right. Sure, we can even get" 'br)
    (str "a photo of the occaison.")
    (proc 15)
@@ -517,6 +539,7 @@
  (seg (? (= T 3) (= O 1))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Okay, Tanchi... Can you please not take" 'br)
    (str "the tires off?")
    (proc 15)

@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (load-mem "cmd¥scrh.tcm" 28672)
-  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
+; (define-proc 10 (<> (text-color 11) (str "Croco: "))) <--- Only used once
 
 ; 	Character portraits:
 
@@ -84,22 +84,22 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 13 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 13 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 16 #t)
            (// (? (= 12 #t) (= 13 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 11 #t) (= 12 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 11 #t) (= 12 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 15 #t)
+           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 14 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
 ; Talk
      (/
       (if (</>
-           (// (? (= 16 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 12 #t) (= 16 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 15 #t) (= 12 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 16 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns14_01.mes")
+           (// (? (= 12 #t) (= 16 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 13 #t)
+           (// (? (= 15 #t) (= 12 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 12 #t)
            (// (? (= 11 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 14 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 14 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 11 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 10 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -182,13 +182,12 @@
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Tanchi, are you available for a short" 'br)
    (str "business trip from Friday to Sunday next week?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "A business trip? But next week's schedule" 'br)
@@ -203,36 +202,33 @@
    (set-reg 10 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Well, I think it's important that you" 'br)
    (str "go.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "No, no way! Absolutely not!")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "What in heaven's name is wrong?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Even if a patient with a stomach ulcer got")
    (str "peritonitis, intestinal obstruction and pneumonia,")
    (str "I won't go!")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Mmmmm. What order of business could" 'br)
    (str "possibly be more important than that?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Well, uh...")
@@ -241,12 +237,11 @@
    (set-reg 11 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "What is it? Can you not explain?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -255,35 +250,32 @@
            (str "Er, I'm going to the F1 Japan Grand" 'br)
    (str "Prix... I finally managed to snag a ticket...")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Ah, so that's the case, it can't be" 'br)
    (str "helped...")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "I'm sorry about that... Ha ha ha ha...")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "If that's the case, then Kirara, Croco,")
    (str "and I will just go to Suzuka ourselves...")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "S-Suzuka!?")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Yes, we're attending the F1 Japan GP as")
    (str "the team doctors.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "I'M GOING!")
@@ -294,12 +286,11 @@
    (str "a ditch, I'm going, I'm going, I'm going! So what" 'br)
    (str "team is it?")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "It's Moguri Suzuki's Bootwork team.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "I see... That's why you picked me...")
@@ -308,22 +299,22 @@
    (set-reg 12 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "So like, what's an F One?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 2)
        ; Tanchi:
            (str "You... You don't know anything about F1?")
    (proc 15)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Is this like #####'s MI card?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 19)
    (set-reg 13 #t))
  (seg (? (= T 2) (= O 5))
@@ -334,56 +325,52 @@
    (str "racing. Each year, they fight for the world" 'br)
    (str "championship over 16 races.")
    (proc 15)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Ch, Chum, Chump-ion?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 2)
        ; Tanchi:
            (str "And at this year's Japan GP, Moguri Suzuki")
    (str "might be the first Japanese world champion!")
    (proc 15)
-   (proc 11)	; Confused
+   (proc 11) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Is that good? Is this Manky Suzuki person" 'br)
    (str "important?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 2)
        ; Tanchi:
            (str "Arrrgh, this is painful... But yes! The" 'br)
    (str "dude is amazing!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "And if that amazing person chose Tanchi," 'br)
    (str "that means you're even MORE amazing!")
    (proc 15)
-   (proc 6)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 6) ; Clear left portrait
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
    (str "Hahaha, well, Tanchi and Moguri are" 'br)
    (str "slightly acquainted.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Please don't bring up the old days...")
    (proc 15)
-   (proc 12) (proc 13)
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
    (str "There's no shame in hiding it, is" 'br)
    (str "there?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "No, dude, seriously, stop!")
@@ -403,13 +390,11 @@
    (text-color 7)
    (str "I grab one of Croco's bananas.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 192 10 96") ; Croco
-   (proc 4)
-   (proc 10)
-          (str "Waninininini!")
+   (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) ; Croco portrait
+   (text-color 11)
+   (str "Croco: Waninininini!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)

@@ -94,7 +94,7 @@
            (// (? (= 88 #t) (= 89 #f))           (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 97 #t)
            (// (? (= 87 #t) (= 88 #f))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (// (? (= 86 #t) (= 87 #f))           (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 95 #t)
-           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; 
+           (//                                   (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
