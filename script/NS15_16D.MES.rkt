@@ -32,15 +32,13 @@
      (str "Tomoyo: Don't underestimate Black Cross medical" 'br)
      (str "technology!")
      (proc 15)
-     (proc 3)
-     (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-     (proc 4)
+     (proc 3) (exec-mem 2816 "GET 2 0 0 10 96") (proc 4) ; Portrait (Smiling)
      (proc 0)
          ; Dengeki Nurse:
                     (str "It's fine! We beat her once, we" 'br)
      (str "sure can do it again!")
      (proc 15)
-     (proc 6)
+     (proc 6) ; Clear Portrait
      (text-color 8)
      (str "Tomoyo: Heh heh heh! This time, I won't hold back!")
      (proc 15)
@@ -145,7 +143,7 @@
        ; Dengeki Nurse:
                   (str "Dokkaaaaaaannn!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Dokkannnnnn!")

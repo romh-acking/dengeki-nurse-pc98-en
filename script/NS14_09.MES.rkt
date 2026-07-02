@@ -9,14 +9,15 @@
   (load-mem "cmd¥tmaskh.tcm" 19456)
   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 11 (<> (text-color 5) (str "Mystery Lady: ")))
+  (define-proc 12 (<> (text-color 1) (str "Announcer: "))) ; <--- added by me
 
 ; 	Character portraits:
 
-  (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 13 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
 
 ; 	ACTE code:
 
-  (define-proc 13 (<> (exec-mem 2816 "VIEW 16 93 24 300")))
+  (define-proc 14 (<> (exec-mem 2816 "VIEW 16 93 24 300")))
 
 ; 	Setup continues...
 
@@ -44,18 +45,20 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   ((cmd 209) 1 2)
-  (text-color 1)
-  (str "Announcer: Now that the magnificent warm-up lap" 'br)
+  (proc 12)
+      ; Announcer:
+             (str "Now that the magnificent warm-up lap" 'br)
   (str "has finished, all 26 cars have taken their" 'br)
   (str "positions on the grid!")
   (proc 15)
-  (text-color 1)
-  (str "Announcer: The signal has changed from red to" 'br)
-  (str "green! ")
+  (proc 12)
+      ; Announcer:
+             (str "The signal has changed from red to" 'br)
+  (str "green!")
   ((cmd 195) 0 1)
   (delay 150 0)
   ((cmd 196) 0 0)
-  (str "The F1 Japan GP has begun!")
+  (str " The F1 Japan GP has begun!")
   (proc 15)
   (proc 2)
       ; Tanchi:
@@ -63,6 +66,7 @@
   (str "the other cars!")
   (proc 15)
   (proc 10)
+      ; Nakajima:
             (str "Nice start, Tanchi!")
   (proc 15)
   (proc 2)
@@ -70,6 +74,7 @@
           (str "Oh wait, yeah! That means I'm in the lead!")
   (proc 15)
   (proc 10)
+      ; Nakajima:
             (str "Senna and Mansell are right behind you." 'br)
   (str "They'll a move at the first corner, so stay sharp!")
   (proc 15)
@@ -78,95 +83,111 @@
           (str "Got it! I'm taking home the win, just" 'br)
   (str "leave it to me!")
   (proc 15)
+
+; 	Cut to Nakajima at the pits...
+
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_404.gpc,GPC")
   (image-mem 1)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues.
+
   (proc 10)
+      ; Nakajima:
             (str "He's driving exceptionally well. A" 'br)
   (str "normal person would be freaking out, but his" 'br)
   (str "spirit is incredible.")
   (proc 15)
-  (proc 12)	; Happy
+  (proc 13) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "That's because there's nothing going" 'br)
   (str "through his brain!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 10)
+      ; Nakajima:
             (str "??????")
   (proc 15)
+
   (exec-mem 2816 "GET 7 16 93 24 300")
-  (proc 13) (exec-mem 2816 "OVER 1,PUT 6 16 93,FREE 6")
+  (proc 14) (exec-mem 2816 "OVER 1,PUT 6 16 93,FREE 6")
+; ^ Mysterious lady appears
+
   (proc 11)
+      ; Mystery Lady:
                 (str "Excuse me, I heard there was a" 'br)
   (str "doctor present...?")
   (proc 15)
-  (proc 12)	; Happy
+  (proc 13) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "Oh! I'm a nurse, how can I help you?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 11)
+      ; Mystery Lady:
                 (str "That's a very unique nurse uniform.")
   (proc 15)
-  (proc 12)	; Happy
+  (proc 13) ; Portrait (Happy)
   (proc 1)
       ; Kirara:
           (str "Oh, um, it's a long story...")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 11)
+      ; Mystery Lady:
                 (str "I found these people collapsed in" 'br)
   (str "the restroom. Could you please take a look at" 'br)
   (str "them?")
   (proc 15)
+
   (sound '|| 0)
   (sound '|se | 22)
   (exec-mem 2816 "VIEW 27 149 59 334,PUT 8 27 149,FREE 8")
+; ^ Isn't that...
+
   (proc 10)
+      ; Nakajima:
             (str "That's... That's Senna and Mansell!")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
   (proc 1)
       ; Kirara:
           (str "This is your definition of collapsed??")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 11)
+      ; Mystery Lady:
                 (str "Well then, I'll leave them in your" 'br)
   (str "capable hands.")
   (proc 15)
-  (proc 13) (exec-mem 2816 "PUT 7 16 93,FREE 7")
+  (proc 14) (exec-mem 2816 "PUT 7 16 93,FREE 7")
   (proc 10)
+      ; Nakajima:
             (str "Whoa whoa, hold on here! If Senna and" 'br)
   (str "Mansell are here...")
   (proc 15)
   (proc 10)
+      ; Nakajima:
             (str "Who the hell is driving their cars right")
   (str "now!?")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
   (sound '|| 0)
   (sound '|se | 26)
   (proc 1)
       ; Kirara:
           (str "!!!!!!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 10)
+      ; Nakajima:
             (str "Hey, Kirara! Where are you going!?")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
   (proc 1)
       ; Kirara:
           (str "Tanchi's in danger!")

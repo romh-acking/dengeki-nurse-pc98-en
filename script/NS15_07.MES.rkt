@@ -12,6 +12,10 @@
   (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4))) ; Shouting
   (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 0 96 10 96") (proc 4))) ; Aloof
 
+; 	lol
+
+  (define-proc 12 (<> (str "..............")))
+
 ; 	Setup continues...
 
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -57,12 +61,12 @@
 ; Look
      (/
       (if (</>
-           (// (? (= 41 #t) (= 42 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 41 #t) (= 42 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns15_08.mes")
+           (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 41 #t)
 ; Talk
      (/ (nop@) (set-var T 2) (set-var O 0) (seg-call))
 ; Action
-     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 3) (set-var O 0) (seg-call)) ; (set-reg 42 #t)
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save
@@ -99,12 +103,12 @@
    (str "I look at the bed... Just moments ago, Nursia had" 'br)
    (str "sat there, smiling...")
    (proc 15)
-   (proc 11)	; Aloof
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "What happened?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (text-color 7)
    (str "The door opens and Kirara walks in.")
    (proc 15)
@@ -112,37 +116,35 @@
        ; Tanchi:
            (str "You took your time getting here!")
    (proc 15)
-   (proc 10)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Why are you yelling at me? I've got things")
    (str "to do too!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Nursia was kidnapped by Black Nurse!")
    (proc 15)
-   (proc 10)	; Shouting
+   (proc 11) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Black Nurse!?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "If you actually showed up on time, this" 'br)
    (str "wouldn't have happened in the first place!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Even if you say that...")
    (proc 15)
-   (proc 6)
-   (proc 11)	; Aloof
+   (proc 6) ; Clear Portrait
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "Isn't that fine? She had an incurable" 'br)
@@ -153,7 +155,7 @@
 
    (sound '|| 0)
    (sound '|se | 20)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (text-color 1)
@@ -172,7 +174,7 @@
    (sound '|| 3)
    (proc 1)
        ; Kirara:
-           (str "..............")
+           (proc 12)
    (proc 15)
    (proc 2)
        ; Tanchi:
@@ -181,21 +183,27 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "..............")
+           (proc 12)
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "..............")
+           (proc 12)
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "..............")
+           (proc 12)
    (proc 15)
+
+; 	Kirara runs off!
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9")
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_515.gpc,GPC")
    (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues
+
    (proc 1)
        ; Kirara:
            (str "TANCHI, YOU JERK!")

@@ -30,6 +30,7 @@
           (str "I'm...truly sorry...")
   (proc 15)
   (proc 10)
+      ; Yukikoji:
             (str "Don't blame yourself. We're just as much")
    (str "to blame.")
   (proc 15)
@@ -54,24 +55,24 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 45 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 45 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 49 #t)
            (// (? (= 44 #t) (= 45 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 43 #t) (= 44 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 43 #t) (= 44 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 47 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 44 #t))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 46 #t) (= 44 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 46 #t) (= 44 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 44 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 48 #t) (= 49 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 45 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 44 #t) (= 45 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 47 #t) (= 44 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 48 #t) (= 49 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns15_09.mes")
+           (// (? (= 45 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 48 #t)
+           (// (? (= 44 #t) (= 45 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 45 #t)
+           (// (? (= 47 #t) (= 44 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 46 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 43 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -158,8 +159,11 @@
        ; Dr. Akiba:
               (str "Yes, this is Doctor Akihabara speaking.")
    (proc 15)
+
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
+; ^ It's Black Nurse at a phone booth!
+
    (proc 7)
        ; Black Nurse:
                 (str "Hi, this is Black Nurse. Sorry to" 'br)
@@ -236,7 +240,7 @@
        ; Black Nurse:
                 (str "Because I said so.")
    (proc 15)
-   (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9")
+   (exec-mem 2816 "VIEW 16 93 40 237,PUT 9 16 93,FREE 9") ; Clear visual
    (text-color 1)
    (str "Click!")
    (proc 15)
@@ -256,6 +260,7 @@
            (str "Is Nursia really going to be all right?")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "Nursia is the least of their concerns." 'br)
    (str "What they want is the treasure and nothing more.")
    (proc 15)
@@ -268,6 +273,7 @@
            (str "But once they get it...")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "They'll need the ring if they want to" 'br)
    (str "get it.")
    (proc 15)
@@ -284,7 +290,8 @@
               (str "Regardless, we need to get Kirara.")
    (proc 15)
    (proc 11)
-           (str "She's not here, wani! And hasn't been for" 'br)
+       ; Croco:
+          (str "She's not here, wani! And hasn't been for" 'br)
    (str "a while, wani!")
    (proc 15)
    (proc 2)
@@ -322,7 +329,8 @@
    (str "sentence!")
    (proc 15)
    (proc 11)
-           (str "Yah, wani!")
+       ; Croco:
+          (str "Yah, wani!")
    (proc 15)
    (proc 5)
        ; Dr. Akiba:

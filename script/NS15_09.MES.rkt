@@ -49,29 +49,29 @@
     (</>
      (/
       (if (</>
-           (// (? (= 50 #t))                                         (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                                       (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 50 #t))                                         (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 106 #t)
+           (//                                                       (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 51 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 50 #t))                                         (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                                       (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (//                                                       (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 52 #t)
 ; Talk
      (/
       (if (</>
            (// (? (= 50 #t))                                         (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                                       (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                                                       (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 53 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 50 #t))                                         (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (//                                                       (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (//                                                       (nop@) (set-var T 3) (set-var O 0) (seg-call))))) ; (set-reg 54 #t)
 ; Move
      (/
       (if (</>
-           (// (? (= 105 #t) (= 106 #t))                             (nop@) (set-var T 4) (set-var O 3) (seg-call))
-           (// (? (= 50 #t))                                         (nop@) (set-var T 4) (set-var O 2) (seg-call))
-           (// (? (= 51 #t) (= 52 #t) (= 53 #t) (= 54 #t) (= 50 #f)) (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 105 #t) (= 106 #t))                             (nop@) (set-var T 4) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns15_10.mes")
+           (// (? (= 50 #t))                                         (nop@) (set-var T 4) (set-var O 2) (seg-call))    ; (set-reg 105 #t)
+           (// (? (= 51 #t) (= 52 #t) (= 53 #t) (= 54 #t) (= 50 #f)) (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (set-reg 50 #t)
            (//                                                       (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
@@ -165,9 +165,13 @@
    (str "But staying here won't solve anything. I should" 'br)
    (str "search the hospital again...")
    (proc 15)
+
    (exec-mem 2816 "GET 9 15 113 25 303")
    (exec-mem 2816 "VIEW 15 113 25 304,OVER 1,PUT 10 15 113,FREE 10")
+; ^ Yukikoji appears
+
    (proc 10)
+       ; Yukikoji:
              (str "So there you are... I've been looking" 'br)
    (str "for you.")
    (proc 15)
@@ -181,6 +185,7 @@
    (str "was careless...")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "No, the blame is on me... I knew the" 'br)
    (str "Black Cross Society would rear its ugly head.")
    (proc 15)
@@ -189,15 +194,18 @@
            (str "W-What do you mean?")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "Please forgive Kirara. That poor child" 'br)
    (str "has never known what love is...")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "She was never given affection from her" 'br)
    (str "parents, and was raised by the Black Cross," 'br)
    (str "growing up without knowing love...")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "But now for the first time in her life," 'br)
    (str "love has begun to bloom inside her... And she" 'br)
    (str "doesn't know how to handle it.")
@@ -207,6 +215,7 @@
            (str "You... You're...!")
    (proc 15)
    (proc 10)
+       ; Yukikoji:
              (str "I'm sorry for hiding it. I am Mitsuko" 'br)
    (str "Inazuma... Kirara's mother.")
    (proc 15)
@@ -215,46 +224,57 @@
            (str "Wh-What!? Why didn't you say anything!?")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "Please forgive me... I did a cruel thing.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "I knew Kirara had returned to Japan and" 'br)
    (str "was fighting the Black Cross Society.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "I was always watching her from the" 'br)
    (str "shadows.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "Sometimes, as a cleaning lady...sometimes")
    (str "as a surfer girl...and sometimes as a mysterious" 'br)
    (str "Testarossa driver.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "But I couldn't reveal myself as her" 'br)
    (str "mother.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "Not until we crushed the Black Cross" 'br)
    (str "Society that destroyed our family.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "I felt that Kirara had to devote her" 'br)
    (str "heart and soul to the fight...")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "But... She's still just a 19-year-old" 'br)
    (str "girl.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "Normally she would be spending her days" 'br)
    (str "with friends, falling in love...")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "At this age she should be enjoying the" 'br)
    (str "spring of youth...")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "But because she was born with the" 'br)
    (str "electrical constitution, Kirara will know nothing" 'br)
    (str "but suffering.")
@@ -265,9 +285,11 @@
    (str "Cross Society are the real monsters here.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "No... I'm truly a terrible woman.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "My obsession with revenge against the" 'br)
    (str "Black Cross twisted me into something else...")
    (proc 15)
@@ -276,9 +298,11 @@
            (str "You know that's not true!")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "No, I am to blame for this incident.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "I used poor, innocent Nursia as bait, so" 'br)
    (str "the Black Cross would make a move...")
    (proc 15)
@@ -287,10 +311,12 @@
            (str ".........")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "Tanchi... I want you to teach Kirara what")
    (str "love is.")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "All the fighting... All the hatred..." 'br)
    (str "Help Kirara to forget it all.")
    (proc 15)
@@ -299,6 +325,7 @@
            (str ".........")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "I'm counting on you, Tanchi.")
    (proc 15)
    (proc 2)
@@ -307,9 +334,10 @@
    (str "going?")
    (proc 15)
    (proc 12)
+       ; Mitsuko:
             (str "You have no right to call me mom!")
    (proc 15)
-   (exec-mem 2816 "VIEW 15 113 25 303,PUT 9 15 113,FREE 9")
+   (exec-mem 2816 "VIEW 15 113 25 303,PUT 9 15 113,FREE 9") ; bye mom
    (proc 19)
    (set-reg 50 #t))
  (seg (? (= T 4) (= O 2))

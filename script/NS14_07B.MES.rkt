@@ -9,7 +9,7 @@
   (load-mem "cmd¥cappear.tcm" 6656)
   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
-  (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
+  (define-proc 12 (<> (text-color 5) (str "Mr. Blister: ")))
 
 ; 	Character portraits:
 
@@ -62,6 +62,7 @@
   (text-reset 15)
   ((cmd 209) 1 2)
   (proc 11)
+      ; Moguri:
           (str "Urrrgh... My stomach doesn't feel good..." 'br)
   (str "And I've got a fever...")
   (proc 15)
@@ -69,12 +70,12 @@
       ; Tanchi:
           (str "Moguri...your face...")
   (proc 15)
-  (proc 9)	; Shocked
+  (proc 9) ; Portrait (Shocked)
   (proc 1)
       ; Kirara:
           (str "What happened to you?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 19)
 ; FMT
 ; (exec-mem 18944 65535 528 23)
@@ -91,39 +92,39 @@
     (</>
      (/
       (if (</>
-           (// (? (= 98 #t))             (nop@) (set-var T 0) (set-var O 7)  (seg-call))
-           (// (? (= 97 #t)  (= 98 #f))  (nop@) (set-var T 0) (set-var O 6)  (seg-call))
-           (// (? (= 96 #t)  (= 97 #f))  (nop@) (set-var T 0) (set-var O 5)  (seg-call))
-           (// (? (= 95 #t)  (= 96 #f))  (nop@) (set-var T 0) (set-var O 4)  (seg-call))
+           (// (? (= 98 #t))             (nop@) (set-var T 0) (set-var O 7)  (seg-call))    ; (set-reg 106 #t)
+           (// (? (= 97 #t)  (= 98 #f))  (nop@) (set-var T 0) (set-var O 6)  (seg-call))    ; (set-reg 103 #t)
+           (// (? (= 96 #t)  (= 97 #f))  (nop@) (set-var T 0) (set-var O 5)  (seg-call))    ; (set-reg 102 #t)
+           (// (? (= 95 #t)  (= 96 #f))  (nop@) (set-var T 0) (set-var O 4)  (seg-call))    ; (set-reg 101 #t)
            (// (? (= 94 #t)  (= 95 #f))  (nop@) (set-var T 0) (set-var O 3)  (seg-call))
-           (// (? (= 93 #t)  (= 94 #f))  (nop@) (set-var T 0) (set-var O 2)  (seg-call))
-           (// (? (= 92 #t)  (= 93 #f))  (nop@) (set-var T 0) (set-var O 1)  (seg-call))
+           (// (? (= 93 #t)  (= 94 #f))  (nop@) (set-var T 0) (set-var O 2)  (seg-call))    ; (set-reg 94 #t)
+           (// (? (= 92 #t)  (= 93 #f))  (nop@) (set-var T 0) (set-var O 1)  (seg-call))    ; (set-reg 93 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0)  (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 100 #t))            (nop@) (set-var T 1) (set-var O 5)  (seg-call))
+           (// (? (= 100 #t))            (nop@) (set-var T 1) (set-var O 5)  (seg-call))    ; (set-reg 104 #t)
            (// (? (= 97 #t)  (= 100 #f)) (nop@) (set-var T 1) (set-var O 4)  (seg-call))
            (// (? (= 96 #t)  (= 97 #f))  (nop@) (set-var T 1) (set-var O 3)  (seg-call))
            (// (? (= 94 #t)  (= 96 #f))  (nop@) (set-var T 1) (set-var O 2)  (seg-call))
-           (// (? (= 99 #t)  (= 94 #f))  (nop@) (set-var T 1) (set-var O 1)  (seg-call))
+           (// (? (= 99 #t)  (= 94 #f))  (nop@) (set-var T 1) (set-var O 1)  (seg-call))    ; (set-reg 92 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0)  (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 105 #t) (= 106 #t)) (nop@) (set-var T 2) (set-var O 12) (seg-call))
-           (// (? (= 98 #t))             (nop@) (set-var T 2) (set-var O 11) (seg-call))
-           (// (? (= 104 #t) (= 98 #f))  (nop@) (set-var T 2) (set-var O 10) (seg-call))
+           (// (? (= 105 #t) (= 106 #t)) (nop@) (set-var T 2) (set-var O 12) (seg-call))    ; (mes-jump "b:¥mes¥ns14_08.mes")
+           (// (? (= 98 #t))             (nop@) (set-var T 2) (set-var O 11) (seg-call))    ; (set-reg 105 #t)
+           (// (? (= 104 #t) (= 98 #f))  (nop@) (set-var T 2) (set-var O 10) (seg-call))    ; (set-reg 98 #t)
            (// (? (= 100 #t) (= 104 #f)) (nop@) (set-var T 2) (set-var O 9)  (seg-call))
-           (// (? (= 103 #t) (= 100 #f)) (nop@) (set-var T 2) (set-var O 8)  (seg-call))
+           (// (? (= 103 #t) (= 100 #f)) (nop@) (set-var T 2) (set-var O 8)  (seg-call))    ; (set-reg 100 #t)
            (// (? (= 97 #t)  (= 103 #f)) (nop@) (set-var T 2) (set-var O 7)  (seg-call))
-           (// (? (= 102 #t) (= 97 #f))  (nop@) (set-var T 2) (set-var O 6)  (seg-call))
+           (// (? (= 102 #t) (= 97 #f))  (nop@) (set-var T 2) (set-var O 6)  (seg-call))    ; (set-reg 97 #t)
            (// (? (= 96 #t)  (= 102 #f)) (nop@) (set-var T 2) (set-var O 5)  (seg-call))
-           (// (? (= 101 #t) (= 96 #f))  (nop@) (set-var T 2) (set-var O 4)  (seg-call))
+           (// (? (= 101 #t) (= 96 #f))  (nop@) (set-var T 2) (set-var O 4)  (seg-call))    ; (set-reg 96 #t)
            (// (? (= 95 #t)  (= 101 #f)) (nop@) (set-var T 2) (set-var O 3)  (seg-call))
-           (// (? (= 94 #t)  (= 95 #f))  (nop@) (set-var T 2) (set-var O 2)  (seg-call))
+           (// (? (= 94 #t)  (= 95 #f))  (nop@) (set-var T 2) (set-var O 2)  (seg-call))    ; (set-reg 95 #t)
            (// (? (= 99 #t)  (= 94 #f))  (nop@) (set-var T 2) (set-var O 1)  (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0)  (seg-call)))))
+           (//                           (nop@) (set-var T 2) (set-var O 0)  (seg-call))))) ; (set-reg 99 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -181,7 +182,7 @@
        ; Dr. Akiba:
               (str "A clear-cut case of Papipapi Disease.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 94 #t))
  (seg (? (= T 0) (= O 3))
@@ -293,15 +294,18 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 11)
+       ; Moguri:
            (str "Wha? Is something wrong with my face?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Dude, what kind of girls have you been" 'br)
    (str "fooling around with? Just take a look in the" 'br)
    (str "mirror!")
    (proc 15)
    (proc 7) ; Show Moguri looking at mirror
    (proc 11)
+       ; Moguri:
            (str "Oh my gooooooooooooooood!")
    (proc 15)
    (proc 14) ; Hide Moguri looking at mirror
@@ -311,16 +315,17 @@
    (proc 18)
    (proc 7) ; Show Moguri looking at mirror
    (proc 11)
+       ; Moguri:
            (str "Aaaaaaagh! Agh! Agh!")
    (proc 15)
    (proc 14) ; Hide Moguri looking at mirror
-   (proc 0)	; Happy
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "The polka dots are kind of cute, in their" 'br)
    (str "own way.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
@@ -334,7 +339,7 @@
    (str "interior, and is a microbial infection that causes")
    (str "diarrhea and fever for three days straight.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "But how would he have been exposed to" 'br)
@@ -344,8 +349,9 @@
        ; Dr. Akiba:
               (str "Maybe he ate something bad?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "Can't you do anything!? The finals are" 'br)
    (str "tomorrow!")
    (proc 15)
@@ -353,8 +359,9 @@
        ; Dr. Akiba:
               (str "It will be difficult...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "But my face! Can't you at least get rid of")
    (str "the dots!?")
    (proc 15)
@@ -363,14 +370,15 @@
               (str "Not without the vaccine that we'd need" 'br)
    (str "delivered from Brazil...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Even if we request it now, it wouldn't" 'br)
    (str "be in time for tomorrow's starting grid...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "Noooo.... No way!")
    (proc 15)
    (proc 19)
@@ -378,6 +386,7 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 11)
+       ; Moguri:
            (str "Isn't there some sort of medicine to make" 'br)
    (str "them fade!?")
    (proc 15)
@@ -386,7 +395,7 @@
               (str "This isn't some common thing like" 'br)
    (str "appendicitis!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
@@ -397,24 +406,28 @@
    (str "can...")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "You expect me to race with a face like" 'br)
    (str "this!? To stand on the podium looking like this!?")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "They call me the pretty boy of the F1" 'br)
    (str "world! There's no way I can") (text "−") (str " Urghh, my guts....")
    (proc 15)
-   (proc 0)	; Happy
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What about covering them with some makeup?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "W-What?! You want the hottest playboy to" 'br)
    (str "start caking on the rouge!?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Hmmm... As a respected team, we can't" 'br)
    (str "send out one of our guys looking like that...")
    (proc 15)
@@ -423,18 +436,18 @@
               (str "There's not much we can do. And by" 'br)
    (str "tomorrow, the diarrhea and fever will...escalate.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 96 #t))
  (seg (? (= T 2) (= O 5))
    (proc 18)
-   (proc 13)	; Confused
+   (proc 13) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Yeah, but if you race looking like that," 'br)
    (str "all the kids will love you, though...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 6))
    (proc 18)
@@ -448,19 +461,23 @@
            (str "What a pity... You could've become the" 'br)
    (str "first Japanese champion...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 11)
+       ; Moguri:
            (str "Hmph! This is just a race...")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "But still... This isn't just our race" 'br)
    (str "anymore...")
    (proc 15)
    (proc 11)
+       ; Moguri:
            (str "And if I pull out now, all of Japan will" 'br)
    (str "be calling for my head...")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "That's it! Tanchi... Why don't YOU race?")
    (proc 15)
    (proc 2)
@@ -468,6 +485,7 @@
            (str "Wha-whaaaaaa?")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "With yesterday's lap time, we're in the" 'br)
    (str "running! You're definitely competitive!")
    (proc 15)
@@ -476,6 +494,7 @@
  (seg (? (= T 2) (= O 7))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Please, man! You're our only hope!")
    (proc 15)
    (proc 19))
@@ -485,23 +504,27 @@
        ; Tanchi:
            (str "Well, um, that was actually...")
    (proc 15)
-   (proc 13)	; Confused
+   (proc 13) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "But... Isn't it impossible to just drop" 'br)
    (str "into F1 and start doing it?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nakajima:
              (str "I don't know, is it?")
    (proc 15)
-   (proc 0)	; Happy
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "There's this book I've been reading that I")
    (str "could lend you.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
+; 	Mr. Blister appears
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (text-frame 0 0 79 399)
    (text-reset 1)
@@ -514,11 +537,16 @@
    (exec-mem 10752 "COPY> gpc¥face_w00.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (text-frame 3 324 52 379)
+
+; 	Text continues
+
    (proc 12)
+       ; Mr. Blister:
                 (str "I'll allow it. He has my special" 'br)
    (str "permission.")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "Mr. President! What brings you here?")
    (proc 15)
    (proc 19)
@@ -526,6 +554,7 @@
  (seg (? (= T 2) (= O 9))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Roll with it, Tanchi! It's not like" 'br)
    (str "you'll ever get a chance like this again!")
    (proc 15)
@@ -533,7 +562,8 @@
  (seg (? (= T 2) (= O 10))
    (proc 18)
    (proc 12)
-                (str "I've reviewed the situation, and I'm")
+       ; Mr. Blister:
+                (str "I've reviewed the situation, and I'm" 'br)
    (str "authorizing Tanchi's participation.")
    (proc 15)
    (proc 2)
@@ -541,6 +571,7 @@
            (str "But... Why?")
    (proc 15)
    (proc 12)
+       ; Mr. Blister:
                 (str "Keep this under your hat... But" 'br)
    (str "sinister forces are afoot here at the Grand Prix.")
    (proc 15)
@@ -550,10 +581,11 @@
    (proc 15)
    (sound '|| 0)
    (proc 12)
+       ; Mr. Blister:
                 (str "A group called the Black Cross" 'br)
    (str "Society...")
    (proc 15)
-   (proc 9)	; Shocked
+   (proc 9) ; Portrait (Shocked)
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
@@ -563,8 +595,9 @@
        ; Kirara:
            (str "The Black Cross!!!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 12)
+       ; Mr. Blister:
                 (str "According to our connections, you" 'br)
    (str "two are likely most suitable to deal with them...")
    (proc 15)
@@ -576,19 +609,18 @@
    (set-reg 98 #t))
  (seg (? (= T 2) (= O 11))
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Tanchi! You've gotta do this!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 105 #t))
  (seg (? (= T 2) (= O 12))
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "Are you okay in the head? The Black" 'br)
    (str "Cross Society? The WHAT?")
    (proc 15)
@@ -598,19 +630,20 @@
    (str "president's given me his blessing, I'll drive!")
    (proc 15)
    (proc 12)
-                (str "I'm counting on you, Tanchi. Protect")
+       ; Mr. Blister:
+                (str "I'm counting on you, Tanchi. Protect" 'br)
    (str "the Grand Prix!")
    (proc 15)
    (proc 2)
        ; Tanchi:
            (str "I will...")
    (proc 15)
-   (proc 0)	; Happy
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Wow, Tanchi, you're totally awesome!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, the time for a victory lap is later!" 'br)
@@ -631,6 +664,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Nakajima:
              (str "...You're gonna have problems if you try")
    (str "stealing the seat again...")
    (proc 15)
@@ -650,7 +684,7 @@
 
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
-;  (define-proc 12 (<> (text-color 5) (str "Mr. Malestre: ")))
+;  (define-proc 12 (<> (text-color 5) (str "Mr. Blister: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

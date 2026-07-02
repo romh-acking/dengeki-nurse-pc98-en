@@ -20,7 +20,7 @@
 ; FMT
 ; (image-mem 0)                 (sound '|se | "NRS_ADV.SE")    (sound '|| 100)
   ((cmd 209) 1 5)
-  (exec-file "APPEARH.CMD b:¥gpc¥1WA.gpc,14,105,66,247,4,1,1")
+  (exec-file "APPEARH.CMD b:¥gpc¥1WA.gpc,14,105,65,247,4,1,1") ; 65 was originally 66, but that caused a weird visual glitch; thanks VB for suggesting this fix
 ; FMT
 ; (sound '|se | 5)
   (delay 150 0)

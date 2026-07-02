@@ -42,22 +42,22 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 61 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 60 #t) (= 61 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 61 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 67 #t)
+           (// (? (= 60 #t) (= 61 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 66 #t)
+           (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 62 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 62 #t) (= 63 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 62 #t) (= 63 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 65 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 67 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 66 #t) (= 67 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 65 #t) (= 66 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 64 #t) (= 65 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 67 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns15_12.mes")
+           (// (? (= 66 #t) (= 67 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 61 #t)
+           (// (? (= 65 #t) (= 66 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 60 #t)
+           (// (? (= 64 #t) (= 65 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 63 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 64 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -192,29 +192,25 @@
        ; Tanchi:
            (str "Kirara... We've found your mother!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (sound '|| 0)
    (proc 1)
        ; Kirara:
            (str "WHAT?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Come on, we gotta go! She's at the" 'br)
    (str "hospital!")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "O-Okay...")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")

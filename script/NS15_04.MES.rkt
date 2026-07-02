@@ -27,45 +27,56 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   ((cmd 209) 1 2)
+
+; 	Text begins here...
+
   (proc 11)
+      ; Monitor:
            (str "Come in, Black Nurse! We have fresh intel" 'br)
   (str "from our spy inside Dentendo Hospital!")
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "I don't care about stupid Dengeki" 'br)
   (str "Nurse right now! Figure out a way to kidnap that" 'br)
   (str "Elektros brat!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Would you please let me finish talking!?" 'br)
   (str "This is ultra-important intel!!!")
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "Ugh, what a noisy monitor... Fine," 'br)
   (str "just keep it short.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Well, once upon a time, Grandpa went to" 'br)
   (str "the river to wash his clothes, and as for Grandma") (text "−")
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "......")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Listen, if you make more stupid jokes,")
   (str "I'm going to format your CPU.")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Hahaha... Anyway, it looks like the" 'br)
   (str "Elektros girl you're looking for...is going to" 'br)
   (str "Dentendo Hospital!")
@@ -73,15 +84,18 @@
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "What what WHAT? How lucky!!!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Lucky! Lucky!")
   ((cmd 195) 0 65535)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "Ho ho ho! Pepe, it's been a while" 'br)
   (str "since our last mission!")
   ((cmd 195) 0 65535)
@@ -92,6 +106,7 @@
   ((cmd 195) 1 1)	; Pepe's eyes open
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "My goodness, Pepe, you're certainly" 'br)
   (str "ready to go!")
   ((cmd 195) 0 65535)
@@ -123,6 +138,7 @@
   (str "Gate open! Launch preparations complete!")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Okay, Pepe... LET'S GO!")
   (proc 16)
   (text-color 10)

@@ -92,6 +92,7 @@
 ; 	Text continues
 
   (proc 10)
+      ; Black Nurse:
                (str "Splendid! And if I were to get my" 'br)
   (str "hands on that treasure...")
   (sound '|| 0)
@@ -99,46 +100,56 @@
   (sound '|| 1)
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "I could make up for all my..." 'br)
   (str "misfortunes ever since that blasted Dengeki Nurse" 'br)
   (str "showed up.")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "The end-of-year bonus evaluations are" 'br)
   (str "coming up, too...")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "It's time to make a move!")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Yes, that's it! Once I come up with a" 'br)
   (str "plot, all that'll be left to do is act on it!")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "But first, I need to find someone who" 'br)
   (str "carries the royal blood of Elektros.")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Mirror mirror, on the wall! Who has" 'br)
   (str "the most Elektros blood of all?")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "I'm not a magic mirror, idiot! You're" 'br)
   (str "talking to a two-way video communication device!")
   ((cmd 195) 0 4)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "You damn mirror, don't get fresh with" 'br)
   (str "me! Do what you're told and answer my plea!")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Oh god, whatever. Fine, it'll take me some")
   (str "time to parse all the data here...")
   ((cmd 195) 0 5)
   (proc 16)
   ((cmd 196) 0 0)
   (proc 10)
+      ; Black Nurse:
                (str "Get a move on, then!")
   (proc 16)
   (set-reg 891 #f)

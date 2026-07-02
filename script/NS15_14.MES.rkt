@@ -7,7 +7,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 5)  (str "Mitsuko: ")))
-  (define-proc 11 (<> (text-color 11) (str "Nursia: ")))
+; (define-proc 11 (<> (text-color 11) (str "Nursia: "))) <--- only used once
 
 ; 	Character portraits:
 
@@ -44,12 +44,12 @@
   (text-reset 15)
   ((cmd 204) 78 81)
   ((cmd 209) 1 2)
-  (proc 9)	; Shouting
+  (proc 9) ; Portrait (Shouting)
   (proc 1)
       ; Kirara:
           (str "Mother!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Kirara portrait
   (proc 10)
            (str "Kirara! You shouldn't have come...")
   (proc 15)
@@ -57,13 +57,13 @@
       ; Black Nurse:
                (str "Ho ho ho! What a touching reunion!")
   (proc 15)
-  (proc 14)
+  (proc 14) ; Clear Black Nurse portrait
   (proc 2)
       ; Tanchi:
-  (str "Nursia!")
+          (str "Nursia!")
   (proc 15)
-  (proc 11)
-          (str "Doctor Tanchi...")
+  (text-color 11)
+  (str "Nursia: Doctor Tanchi...")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
@@ -82,27 +82,27 @@
      (/
       (if (</>
            (// (? (= 80 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 79 #t) (= 80 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 79 #t) (= 80 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 80 #t)
            (// (? (= 78 #t) (= 79 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 79 #t))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 78 #t) (= 79 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 78 #t) (= 79 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 79 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 80 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 80 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns15_15.mes")
            (// (? (= 78 #t) (= 80 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 81 #t) (= 78 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
+           (// (? (= 81 #t) (= 78 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 78 #t)
            (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
 ; Action
      (/
       (if (</>
            (// (? (= 78 #t))           (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 3) (set-var O 0) (seg-call))))) ; (set-reg 81 #t)
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save
@@ -185,7 +185,7 @@
                 (str "Ho ho ho, I'll drain all of that" 'br)
    (str "meddlesome plasma power from your body!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Black Nurse portrait
    (proc 1)
        ; Kirara:
            (str "Ahhhhhh.....")
@@ -211,7 +211,7 @@
    (str "queen! We were just having a nice little" 'br)
    (str "conversation!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Black Nurse portrait
    (proc 19))
  (seg (? (= T 2) (= O 1))
    (proc 18)
@@ -220,32 +220,32 @@
            (str "Kirara, your mom's in big trouble! She" 'br)
    (str "needs treatment, stat!")
    (proc 15)
-   (proc 9)	; Shouting
+   (proc 9) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Unforgivable... I will never forgive you," 'br)
    (str "Black Nurse!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)
        ; Black Nurse:
                 (str "Oh, heavens, and what will you do" 'br)
    (str "about that?")
    (proc 15)
-   (proc 14)
-   (proc 9)	; Shouting
+   (proc 14) ; Clear Black Nurse portrait
+   (proc 9) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "I'll beat your ass! I'll show you the" 'br)
    (str "power of Dengeki Nurse!")
    (proc 15)
-   (proc 6)
-   (proc 9)	; Shouting
+   (proc 6) ; Clear Kirara portrait
+   (proc 9) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "CHARGE ON!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)
        ; Black Nurse:
                 (str "Hmph! Take this, you traitor!" 'br)
@@ -254,7 +254,7 @@
 
 ; 	She pulls out the Eleguard Special!
 
-   (proc 14)
+   (proc 14) ; Clear Black Nurse portrait
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (sound '|| 0)
@@ -313,7 +313,7 @@
    (str "like this is the final curtain! If you can't" 'br)
    (str "transform, you're just an ordinary nurse!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Black Nurse portrait
    (proc 19)
    (set-reg 78 #t))
  (seg (? (= T 2) (= O 2))
@@ -336,6 +336,7 @@
    (proc 15)
    (sound '|| 0)
    (proc 10)
+       ; Mitsuko:
             (str "Tanchi... You can't...")
    (proc 15)
    (proc 2)
@@ -350,6 +351,7 @@
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
 
    (proc 10)
+       ; Mitsuko:
             (str "Kirara... Take my hand...")
    (proc 15)
    (proc 1)
@@ -357,6 +359,7 @@
            (str "Mother...!")
    (proc 15)
    (proc 10)
+       ; Mitsuko:
             (str "Come on... Hold on tight...")
    (proc 15)
    (proc 1)
@@ -364,6 +367,7 @@
            (str "Okay...")
    (proc 15)
    (proc 10)
+       ; Mitsuko:
             (str "Now take my electric power...!")
    (proc 15)
    (sound '|| 0)
@@ -431,6 +435,7 @@
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 1)
    (proc 10)
+       ; Mitsuko:
             (str "Goodbye, Kirara... Become...a good and" 'br)
    (str "kind girl...")
    (proc 15)
@@ -446,19 +451,17 @@
        ; Black Nurse:
                 (str "Tsk! Melodramatic fools!")
    (proc 15)
-   (proc 14)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 14) ; Clear Black Nurse portrait
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Mother, I'm sorry... I don't think I can" 'br)
    (str "ever become a Florence Nightingale...")
    (proc 15)
+   (proc 6) ; Clear Kirara portrait
 
 ; 	Quick! Transform!
 
-   (proc 6)
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
    ((cmd 209) 0 2)
@@ -478,31 +481,31 @@
 
 ; 	Text continues.
 
-   (proc 9)	; Shouting
+   (proc 9) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "I'll avenge you, Mom! Black Nurse, I'll" 'br)
    (str "never forgive you!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)
        ; Black Nurse:
                 (str "Hmph! A family of total idiots!")
    (proc 15)
-   (proc 14)
-   (proc 9)	; Shouting
+   (proc 14) ; Clear Black Nurse portrait
+   (proc 9) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "You shut it! Take this...my mother's final")
    (str "DENGEKI SHOCK!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)
        ; Black Nurse:
                 (str "Pfwah! Like I'd waste my time" 'br)
    (str "fighting you! Pepe, FINISH HER!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Black Nurse portrait
    (text-color 8)
    (str "Pepe: ") (text "ＰＦＷＯＯＯＯＯＯＯＯＯＯＯＯＯＯ！")
    (proc 15)

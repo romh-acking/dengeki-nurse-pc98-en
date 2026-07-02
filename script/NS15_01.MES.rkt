@@ -60,22 +60,22 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 13 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 13 #t))           (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 15 #t)
            (// (? (= 12 #t) (= 13 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 11 #t) (= 12 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 11 #t) (= 12 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 12 #t)
+           (// (? (= 10 #t) (= 11 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 14 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
 ; Talk
      (/
       (if (</>
-           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 15 #t))           (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns15_02.mes")
            (// (? (= 13 #t) (= 15 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 12 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 12 #t) (= 13 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 13 #t)
            (// (? (= 11 #t) (= 12 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 14 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 14 #t) (= 11 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 11 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 10 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -171,34 +171,34 @@
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 0)	; Happy
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "F1 was a blast, wasn't it? I wanna go" 'br)
    (str "again!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Next year, I suppose.")
    (proc 15)
-   (proc 7)	; Shocked
+   (proc 7) ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "Wha? That's basically an eternity!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "F1 travels all around the world, you know.")
    (proc 15)
-   (proc 9)	; Confused
+   (proc 9) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "I wanna see F1 everywhere and anywhere!" 'br)
    (str "Come on, take me to see it somewhere else!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 10 #t))
  (seg (? (= T 2) (= O 1))
@@ -208,59 +208,58 @@
            (str "Well, maybe we could do that if you marry" 'br)
    (str "me.")
    (proc 15)
-   (proc 7)	; Shocked
+   (proc 7) ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "Marry you? For real?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Hey hey, don't take that seriously.")
    (proc 15)
-   (proc 9)	; Confused
+   (proc 9) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "But all those F1 drivers... They're all so")
    (str "cool...")
    (proc 15)
-   (proc 6)
-   (proc 0)	; Happy
+   (proc 6) ; Clear Portrait
+   (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I want to meet all of them...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "......")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Ho ho ho! The two of you are a fresh" 'br)
    (str "couple indeed!")
    (proc 15)
    (proc 14)
-   (proc 10)	; Croco
-   (str "Waniiii!")
+   (proc 10)
+       ; Croco:
+          (str "Waniiii!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 11 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 9)	; Confused
+   (proc 9) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Oh, if only SOMEBODY would take me...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Who could that phone call be from? A" 'br)
    (str "lady, perchance?")
@@ -277,34 +276,33 @@
    (str "Announcement: Repeating the page to Dr. Tanchi," 'br)
    (str "you have a call. From a woman.")
    (proc 15)
-   (proc 11)	; Aloof
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str ".........Stop messing around and take that")
    (str "call already!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Why are YOU getting mad at me?")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Ha ha ha, hopeless...this new item is" 'br)
    (str "hopeless!")
    (proc 15)
    (proc 14)
-   (proc 10)	; Croco
-   (str "Waninini.....")
+   (proc 10)
+       ; Croco:
+          (str "Waninini.....")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 13 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Hurry up then, it's rude to keep them" 'br)
    (str "waiting... Get moving already!")
@@ -329,20 +327,19 @@
        ; Tanchi:
            (str "Good grief.")
    (proc 15)
-   (proc 11)	; Aloof
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "You cheater!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "What are you talking about?") (text "“") (str "Cheating") (text "”" 'br)
    (str "only applies if you're dating or married in the" 'br)
    (str "first place!")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Enough talk! Hurry up and get the phone")
    (str "already!")

@@ -47,7 +47,7 @@
    (text-color 4)
    (text-frame 3 324 52 379)
    (text-reset 15)
-; FMT:
+; FMT
 ;  (branch-reg 940 (</> (/ (nop@)) (/ (set-reg 777 #t) (set-reg 940 #f)))) (branch-reg 941 (</> (/ (nop@)) (/ (set-reg 778 #t) (set-reg 941 #f)))) (branch-reg 942 (</> (/ (nop@)) (/ (set-reg 779 #t) (set-reg 942 #f))))
    (branch-var S
     (</>

@@ -357,7 +357,7 @@
    (proc 6) ; Clear left portrait
    (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
-   (str "Hahaha, well, Tanchi and Moguri are" 'br)
+              (str "Hahaha, well, Tanchi and Moguri are" 'br)
    (str "slightly acquainted.")
    (proc 15)
    (proc 14) ; Clear right portrait
@@ -367,7 +367,7 @@
    (proc 15)
    (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
-   (str "There's no shame in hiding it, is" 'br)
+              (str "There's no shame in hiding it, is" 'br)
    (str "there?")
    (proc 15)
    (proc 14) ; Clear right portrait

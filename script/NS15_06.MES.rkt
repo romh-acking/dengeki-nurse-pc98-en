@@ -63,37 +63,37 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 27 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))
-           (// (? (= 26 #t) (= 27 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 27 #t))                               (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 39 #t)
+           (// (? (= 26 #t) (= 27 #f))                     (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 33 #t)
            (// (? (= 25 #t) (= 26 #f))                     (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 24 #t) (= 25 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 24 #t) (= 25 #f))                     (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 36 #t)
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 28 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 27 #t))                               (nop@) (set-var T 1) (set-var O 6) (seg-call))
-           (// (? (= 33 #t) (= 27 #f))                     (nop@) (set-var T 1) (set-var O 5) (seg-call))
+           (// (? (= 33 #t) (= 27 #f))                     (nop@) (set-var T 1) (set-var O 5) (seg-call))    ; (set-reg 37 #t)
            (// (? (= 25 #t) (= 33 #f))                     (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 31 #t) (= 32 #t) (= 25 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 24 #t))                               (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 28 #t) (= 29 #t) (= 30 #t) (= 24 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 31 #t) (= 32 #t) (= 25 #f))           (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 25 #t)
+           (// (? (= 24 #t))                               (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 31 #t)
+           (// (? (= 28 #t) (= 29 #t) (= 30 #t) (= 24 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 24 #t)
+           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 29 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 27 #t))                               (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 27 #t))                               (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 40 #t)
            (// (? (= 26 #t) (= 27 #f))                     (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 25 #t) (= 26 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 35 #t) (= 36 #t) (= 25 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 24 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 34 #t) (= 24 #f))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 25 #t) (= 26 #f))                     (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 26 #t)
+           (// (? (= 35 #t) (= 36 #t) (= 25 #f))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 32 #t)
+           (// (? (= 24 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 35 #t)
+           (// (? (= 34 #t) (= 24 #f))                     (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 30 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 34 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 38 #t) (= 39 #t) (= 40 #t))           (nop@) (set-var T 3) (set-var O 4) (seg-call))
-           (// (? (= 27 #t))                               (nop@) (set-var T 3) (set-var O 3) (seg-call))
-           (// (? (= 37 #t) (= 27 #f))                     (nop@) (set-var T 3) (set-var O 2) (seg-call))
+           (// (? (= 38 #t) (= 39 #t) (= 40 #t))           (nop@) (set-var T 3) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns15_07.mes")
+           (// (? (= 27 #t))                               (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (set-reg 38 #t)
+           (// (? (= 37 #t) (= 27 #f))                     (nop@) (set-var T 3) (set-var O 2) (seg-call))    ; (set-reg 27 #t)
            (// (? (= 25 #t) (= 37 #f))                     (nop@) (set-var T 3) (set-var O 1) (seg-call))
            (//                                             (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
@@ -184,11 +184,14 @@
    (set-reg 29 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
+
    (exec-mem 2816 "GET 1 5 23 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 2816 "GET 2 0 96 10 96")
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 5 23 15 120,PUT 2 5 23,FREE 2")
+; ^ Portrait (Aloof)
+
    (text-color 7)
    (str "I glance over to see Kirara standing there. When" 'br)
    (str "did she arrive?")
@@ -227,7 +230,7 @@
    (str "After dispensing the niceties, Kirara left the" 'br)
    (str "room.")
    (proc 15)
-   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1")
+   (exec-mem 2816 "VIEW 5 23 15 120,PUT 1 5 23,FREE 1") ; Clear portrait
    (sound '|| 0)
    (sound '|| "uso¥Nurse15.uso")
    (sound '|| 3)
@@ -246,6 +249,9 @@
    (text-color 7)
    (str "I look out the window. Another beautiful day...")
    (proc 15)
+
+; 	Black Nurse crashes in through the window!
+
    (sound '|| 0)
    (sound '|se | 20)
    (exec-mem 2816 "GET 9 16 93 40 237")
@@ -258,6 +264,9 @@
        ; Tanchi:
            (str "What the what!? Who the hell are you!?")
    (proc 15)
+
+; 	Cut to Black Nurse standing in the room...
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse07.uso")
    (sound '|| 1)
@@ -323,6 +332,7 @@
    (str "show me around Germany again...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "This time, I want you to show me around" 'br)
    (str "Japan...")
    (proc 15)
@@ -332,6 +342,7 @@
    (str "to go.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Really? You're the best...")
    (proc 15)
    (proc 19)
@@ -344,6 +355,7 @@
    (str "first.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "That's right...")
    (proc 15)
    (proc 19)
@@ -356,6 +368,7 @@
    (str "of prickly...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "I think I know why...")
    (proc 15)
    (proc 19)
@@ -367,6 +380,7 @@
            (str "Sorry, she's not usually like that...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "She likes you a lot, Doctor Tanchi.")
    (proc 15)
    (proc 2)
@@ -375,6 +389,7 @@
    (str "kid!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Yeah, but I'm fourteen years old. I know" 'br)
    (str "what it's like to fall in love!")
    (proc 15)
@@ -394,6 +409,7 @@
    (str "girl!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "!!!!!!")
    (proc 15)
    (proc 7)
@@ -402,6 +418,7 @@
    (str "got nothing to fear. Get over here.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "No way!!!")
    (proc 15)
    (proc 7)
@@ -473,9 +490,11 @@
    (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (proc 10)
+       ; Nursia:
            (str "Kyaaaaaa!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Help me, Doctor Tanchi!")
    (proc 15)
    (proc 19)
@@ -512,6 +531,7 @@
    (str "spanking!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Help!!!")
    (proc 15)
    (proc 2)
@@ -535,6 +555,7 @@
            (str "WHAT THE HELL!?")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Doctor Tanchi!!!")
    (proc 15)
    (proc 2)

@@ -78,14 +78,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (nop@)
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi!!! A panda!!!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yes, that's definitely a panda.")
@@ -149,15 +147,13 @@
                     (str "Looks like we're out of coins...")
             (proc 15)
             (proc 14)
-            (proc 3)
-            (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-            (proc 4)
+            (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
             (proc 0)
                 ; Dengeki Nurse:
                            (str "Maybe we could go back and get" 'br)
             (str "more?")
             (proc 15)
-            (proc 6)
+            (proc 6) ; Clear Portrait
             (exec-mem 18944 65535 528 33))
 
 ; 		Coin inserted

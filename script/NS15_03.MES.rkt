@@ -6,7 +6,7 @@
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-  (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) (text-color 11) (str "Croco: ")))
+; (define-proc 10 (<> (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) (text-color 11) (str "Croco: "))) <--- Only used once
 
 ; 	Character portraits:
 
@@ -57,19 +57,19 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 17 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 16 #t) (= 17 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 17 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 20 #t)
+           (// (? (= 16 #t) (= 17 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 18 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
 ; Talk
      (/
       (if (</>
-           (// (? (= 19 #t) (= 20 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 17 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 18 #t) (= 17 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 19 #t) (= 20 #t)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns15_04.mes")
+           (// (? (= 17 #t))           (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 19 #t)
+           (// (? (= 18 #t) (= 17 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 17 #t)
            (// (? (= 16 #t) (= 18 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 16 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -136,68 +136,62 @@
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "What was the phone call about?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Well... A patient is transferring in from" 'br)
    (str "Germany...")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "That's a bit sudden.")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Well, apparently it's an incurable" 'br)
    (str "disease...")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Why our hospital in particular, though?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "When I was doing my physician's training" 'br)
    (str "in Germany, I, er, met a girl while I was there...")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "So when is she arriving?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Well, since she just called... Maybe about")
    (str "thirty minutes?")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Thirty minutes!? That's fast!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 19)
    (set-reg 16 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "To get here from Germany in a half-" 'br)
    (str "hour... She must be in the care of International" 'br)
    (str "Rescue!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
@@ -206,27 +200,26 @@
            (str "Well, how do I put it... She's something" 'br)
    (str "of a VIP.")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Say again??")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Erm, listen, do you know the legend of the")
    (str "Elektros?")
    (proc 15)
-   (proc 10)
-   (str "I know it, waniiiii!")
+   (proc 3) (exec-mem 2816 "GET 2 0 192 10 96") (proc 4) ; Croco portrait
+   (text-color 11)
+   (str "Croco: I know it, waniiiii!")
    (proc 15)
-   (proc 6)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 6) ; Clear left portrait
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Oh, you mean the lost kingdom of gold!")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "So yeah, Nursia...her name is Nursia...")
@@ -236,25 +229,24 @@
            (str "She's the last surviving descendant of the")
    (str "Elektros royal family.")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Is it okay for her to be here!? Isn't" 'br)
    (str "every criminal organization on the planet trying" 'br)
    (str "to get their hands on her?")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear right portrait
    (proc 2)
        ; Tanchi:
            (str "Well, yes, kind of. But Kirara's here, so" 'br)
    (str "that probably acts as a counter...")
    (proc 15)
-   (proc 11)	; Aloof
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "Hey, don't you go dragging me into this!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 19)
    (set-reg 17 #t))
  (seg (? (= T 2) (= O 3))
@@ -263,12 +255,12 @@
        ; Tanchi:
            (str "Kirara, why're you so cranky?")
    (proc 15)
-   (proc 11)	; Aloof
+   (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "I'm NOT cranky!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (proc 19)
    (set-reg 19 #t))
  (seg (? (= T 2) (= O 4))
@@ -277,14 +269,12 @@
        ; Tanchi:
            (str "Spill the beans, Kirara, what's wrong?")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "I told you, nothing's wrong whatsoever!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear left portrait
    (text-color 1)
    (str "Bing Bong Bing Pwoong...")
    (proc 15)
@@ -297,8 +287,7 @@
        ; Tanchi:
            (str "Look like she's arrived.")
    (proc 15)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Let's all go meet her!")
    (proc 15)
@@ -314,13 +303,13 @@
    (text-color 7)
    (str "Kirara looks to be in a foul mood. If I touch her" 'br)
    (str "butt right now, she might destroy me with a Plasma")
-   (str "Flash.")
+   (str "Flash!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (text-color 7)
-   (str "I just got back.  Better scarf down my lunch.")
+   (str "I just got back, better scarf down my lunch...")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

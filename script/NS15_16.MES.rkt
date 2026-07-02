@@ -29,7 +29,7 @@
   (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
 ; (define-proc 11 (<> (text-color 11) (str "Momoko: ")))
 
-; 	These appear to be... I dunno:
+; 	These appear to be... I dunno, but nice of them to define it for me:
 
   (define-proc 12 (<> (exec-mem 19456 2 8 4 103 75 18 49 18 49 0 20)))
   (define-proc 13 (<> (exec-mem 19456 1 48 36 48 36 8 4 103 75 8 20)))
@@ -48,7 +48,7 @@
   (text-reset 15)
   (image-file "b:¥gpc¥Ns1_550.gpc") (image-mem 1 3)
 
-; 	Different door graphics loaded based on the current floor
+; 	Different door overlays loaded based on the current floor (Barriers, big door)
 
   (if (</>
        (//
@@ -119,7 +119,7 @@
                 (str "The castle has six floors, and one of them")
         (str "has a control room.")
         (proc 15)
-        (proc 14)
+        (proc 14) ; Clear Nursia portrait
         (proc 2)
             ; Tanchi:
                 (str "Control room? What does any of this" 'br)
@@ -130,13 +130,13 @@
                 (str "Well, you can use the warp device in each" 'br)
         (str "room to move between the floors.")
         (proc 15)
-        (proc 14)
+        (proc 14) ; Clear Nursia portrait
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
                 (str "If you don't warp correctly, you won't be" 'br)
         (str "able to reach the control room.")
         (proc 15)
-        (proc 14)
+        (proc 14) ; Clear Nursia portrait
         (proc 2)
             ; Tanchi:
                 (str "So...do you know how to warp correctly?")
@@ -146,7 +146,8 @@
                 (str "It was written in the ancient Elektros" 'br)
         (str "scripts, so... I forgot.")
         (proc 15)
-        (proc 14))
+        (proc 14) ; Clear Nursia portrait
+         )
 
 ; 		Entering 2F for first time
 
@@ -173,7 +174,7 @@
                        (str "Please be a good girl and step" 'br)
         (str "aside!")
         (proc 15)
-        (proc 6)
+        (proc 6) ; Clear Kirara portrait
         (text-color 11)
         (str "Momoko: Shut up! You wanna pass, beat me first!")
         (proc 15)
@@ -186,7 +187,7 @@
         (str "You'd be a lot happier living like a normal high" 'br)
         (str "school girl, you know...")
         (proc 15)
-        (proc 6)
+        (proc 6) ; Clear Kirara portrait
         (text-color 11)
         (str "Momoko: Don't you judge me! I'm beating the crap" 'br)
         (str "out of you!")
@@ -222,7 +223,8 @@
             ; Dengeki Nurse:
                        (str "Okay, so what do we do now?")
         (proc 15)
-        (proc 6))))
+        (proc 6) ; Clear Kirara portrait
+        )))
 
   (if (</> (// (? (= 666 #t)) (nop@) (set-reg 666 #f)) (// (proc 13))))
   (proc 19)
@@ -237,7 +239,6 @@
    (proc 19)
    (branch-var Z
     (</>
-
 ; The typical
      (/ (nop@) (set-var T 0) (set-var O 0) (seg-call)) ; Think
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call)) ; Look
@@ -245,14 +246,12 @@
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call)) ; Action
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call)) ; Move
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call)) ; Save
-
 ; Room selection
      (/ (nop@) (set-var T 6)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 7)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 8)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 9)  (set-var O 0) (seg-call))
      (/ (nop@) (set-var T 10) (set-var O 0) (seg-call))
-
 ; Unused
      (/ (nop@))
      (/ (nop@))
@@ -299,15 +298,14 @@
           ; Tanchi:
               (str "Kirara, are you into dungeons?")
       (proc 15)
-      (proc 3)
-      (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-      (proc 4)
+      (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
       (proc 0)
           ; Dengeki Nurse:
                      (str "I hate dungeons in games, but real" 'br)
       (str "ones get me kinda excited!")
       (proc 15)
-      (proc 6))
+      (proc 6) ; Clear Kirara portrait
+      )
      (/
       (proc 2)
           ; Tanchi:
@@ -319,7 +317,8 @@
               (str "I'm sorry... That's the one thing I just" 'br)
       (str "don't know about.")
       (proc 15)
-      (proc 14))
+      (proc 14) ; Clear Nursia portrait
+         )
      (/
       (proc 2)
           ; Tanchi:
@@ -330,7 +329,8 @@
               (str "I'm feeling a little better. Maybe it's" 'br)
       (str "the fresh Elektros air?")
       (proc 15)
-      (proc 14))))
+      (proc 14) ; Clear Nursia portrait
+         )))
    (proc 19))
 
  (seg (? (= T 3) (= O 0))												; Action
@@ -338,14 +338,12 @@
    (branch-random
     (</>
      (/
-      (proc 3)
-      (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-      (proc 4)
+      (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
       (proc 0)
           ; Dengeki Nurse:
                      (str "Hey! Don't touch my butt!")
       (proc 15)
-      (proc 6)
+      (proc 6) ; Clear Kirara portrait
       (proc 2)
           ; Tanchi:
               (str "Oh, it's just... It's been a while...")
@@ -356,22 +354,22 @@
               (str "Tanchi... If you dance in a dungeon, it" 'br)
       (str "brings out the ghosts.")
       (proc 15)
-      (proc 14))
+      (proc 14) ; Clear Nursia portrait
+         )
      (/
       (proc 9) (proc 11) (proc 10)
           ; Nursia:
               (str "Doctor Tanchi...  That hand better not be" 'br)
       (str "doing what I think it is.")
       (proc 15)
-      (proc 14)
-      (proc 3)
-      (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-      (proc 4)
+      (proc 14) ; Clear Nursia portrait
+      (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
       (proc 0)
           ; Dengeki Nurse:
                      (str "TANCHI!")
       (proc 15)
-      (proc 6))))
+      (proc 6) ; Clear Kirara portrait
+      )))
    (proc 19))
 
  (seg (? (= T 4) (= O 0))												; Move
@@ -514,7 +512,8 @@
          (str "Elektros. Without an Elektros Crest, you can't go" 'br)
          (str "inside...")
          (proc 15)
-         (proc 14))
+         (proc 14) ; Clear Nursia portrait
+         )
 
 ; 		With Crest
         (/
@@ -622,7 +621,8 @@
               (str "This room has a psycho barrier. We can't" 'br)
       (str "enter without its release controller.")
       (proc 15)
-      (proc 14))
+      (proc 14) ; Clear Nursia portrait
+         )
 
 	; with release controller
      (/
@@ -655,7 +655,8 @@
           ; Nursia:
               (str "Doctor Tanchi, please be careful...")
       (proc 15)
-      (proc 14))
+      (proc 14) ; Clear Nursia portrait
+         )
      (/
       (proc 3)
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
@@ -664,7 +665,8 @@
           ; Dengeki Nurse:
                      (str "Wow, this is getting me fired up!")
       (proc 15)
-      (proc 6))
+      (proc 6) ; Clear Kirara portrait
+      )
      (/
       (proc 3)
       (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
@@ -673,4 +675,5 @@
           ; Dengeki Nurse:
                      (str "Let's go inside already!")
       (proc 15)
-      (proc 6))))))
+      (proc 6) ; Clear Kirara portrait
+      )))))

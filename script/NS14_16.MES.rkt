@@ -10,7 +10,7 @@
   (load-mem "cmd¥acte.tcm" 2816)
   (load-mem "cmd¥cappear.tcm" 28672)
   (define-proc 10 (<> (text-color 1) (str "Announcer: ")))
-  (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
+; (define-proc 11 (<> (text-color 3) (str "Nakajima: "))) <--- only used once
   (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
   (define-proc 19 (<> (exec-mem 2816 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; "Select a command" process moved back to original position in memory after being shifted in previous script
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
@@ -42,86 +42,104 @@
   (exec-mem 17920 0 1)
   (exec-mem 6656 8)
   (proc 10)
+      ; Announcer:
              (str "Moguri Suzuki has taken a turn for the" 'br)
-  (str "better! He's charging with extreme Mogression!")
+  (str "better! He's charging with extreme Mo-gression!")
   (proc 15)
   (proc 10)
+      ; Announcer:
              (str "He's made up a 10-lap deficit and is" 'br)
   (str "now neck and neck with Chumacher!")
   (proc 15)
   (proc 10)
+      ; Announcer:
              (str "Here it is, the final straight! Will he")
   (str "pass... HE PASSES!!!")
   (proc 15)
   (proc 10)
+      ; Announcer:
              (str "What acceleration! That engine is" 'br)
   (str "beyond belief!")
   (proc 15)
   (proc 10)
+      ; Announcer:
              (str "And there's the checkered flag! Moguri" 'br)
   (str "Suzuki has won the race!!!")
   (proc 15)
-  (proc 11)
-            (str "He did it!!! He did it!!!")
+  (text-color 3)
+  (str "Nakajima: He did it!!! He did it!!!")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
   (proc 0)
       ; Dengeki Nurse:
                  (str "Incredible!!!")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
+
   (exec-mem 2816 "VIEW 12 93 44 237,PUT 7 12 93,FREE 7")
   (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
+; ^ Tanchi goes in for smoochies, but...
+
   (proc 2)
       ; Tanchi:
           (str "H-He did it! K-Kirara... our promise...")
   (proc 15)
-  (proc 3)
-  (exec-mem 2816 "GET 2 70 0 10 96") ; Flushed
-  (proc 4)
+  (proc 3) (exec-mem 2816 "GET 2 70 0 10 96") (proc 4) ; Portrait (Flushed)
   (proc 0)
       ; Dengeki Nurse:
                  (str "Tanchi... Your face...")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
+
   (exec-mem 2816 "GET 1 40 23 10 96")
   (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 10 192 10 96") ; Dr. Akiba
+  (exec-mem 2816 "GET 2 10 192 10 96")
   (exec-mem 2816 "ACCESS 0")
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+; ^ Dr. Akiba portrait
+
   (proc 5)
       ; Dr. Akiba:
             (str "Oops, looks like I need to call Brazil" 'br)
   (str "again.")
   (proc 15)
+
   (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_450.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+; ^ Cut to the podium
+
   (proc 10)
+      ; Announcer:
              (str "Moguri Suzuki looks absolutely" 'br)
   (str "delighted! He has become the champion right here" 'br)
   (str "in Japan!")
   (proc 15)
   (proc 10)
+      ; Announcer:
              (str "Imamiya-san, that was incredible!")
   (proc 15)
   (proc 12)
+      ; Imamiya:
            (str "And how!")
   (proc 15)
   (proc 12)
+      ; Imamiya:
            (str "Multiple collisions, smoke and fire, not" 'br)
   (str "to mention the dramatic from-behind victory!")
   (proc 15)
   (proc 12)
+      ; Imamiya:
            (str "This is truly a race that will go down in")
   (str "F1 legend!")
   (proc 15)
+
   (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
   (exec-mem 10752 "COPY> b:¥gpc¥ns1_451.gpc,GPC") (image-mem 1 3)
   (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+; ^ Tanchi chases Kirara down the stage!
+
   (proc 2)
       ; Tanchi:
           (str "Kirara, the kiss! You promised!")

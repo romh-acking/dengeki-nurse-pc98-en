@@ -11,7 +11,7 @@
   (load-mem "cmd¥cappear.tcm" 7424)
   (load-mem "cmd¥palch.tcm" 28672)
   (define-proc 10 (<> (text-color 5) (str "Chodendo Nurse: ")))
-  (define-proc 11 (<> (text-color 5) (str "Mr. Malestre: ")))
+  (define-proc 11 (<> (text-color 5) (str "Mr. Blister: ")))
   (define-proc 19 (<> (exec-mem 1280 "VIEW 5 320 14 378,PUT 20 5 320") (proc 17))) ; "Select a command" process shifted around in memory for this script
 
 ; 	Because the memory location of the portrait display code is moved in this script, the processes also have to be redefined:
@@ -60,7 +60,8 @@
   ((cmd 209) 1 2)
   ((cmd 204) 171 180)
   (proc 11)
-                (str "I've been waiting for you. But what" 'br)
+      ; Mr. Blister:
+               (str "I've been waiting for you. But what" 'br)
    (str "a pity, indeed...")
   (proc 15)
   (proc 2)
@@ -68,7 +69,8 @@
           (str "A pity? How so?")
   (proc 15)
   (proc 11)
-                (str "Moguri is currently ten laps" 'br)
+      ; Mr. Blister:
+               (str "Moguri is currently ten laps" 'br)
    (str "behind... At this rate, his victory seems quite" 'br)
    (str "difficult.")
   (proc 15)
@@ -87,38 +89,38 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 173 #t) (= 174 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 172 #t))            (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 171 #t) (= 172 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 173 #t) (= 174 #t)) (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 180 #t)
+           (// (? (= 172 #t))            (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 173 #t)
+           (// (? (= 171 #t) (= 172 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 177 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 172 #t))            (nop@) (set-var T 1) (set-var O 5) (seg-call))
-           (// (? (= 178 #t) (= 172 #f)) (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 176 #t) (= 177 #t)) (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 171 #t))            (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 175 #t) (= 171 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 172 #t))            (nop@) (set-var T 1) (set-var O 5) (seg-call))    ; 
+           (// (? (= 178 #t) (= 172 #f)) (nop@) (set-var T 1) (set-var O 4) (seg-call))    ; (set-reg 172 #t)
+           (// (? (= 176 #t) (= 177 #t)) (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 180 #t)
+           (// (? (= 171 #t))            (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 176 #t)
+           (// (? (= 175 #t) (= 171 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 179 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
            (// (? (= 172 #t))            (nop@) (set-var T 2) (set-var O 3) (seg-call))
            (// (? (= 171 #t) (= 172 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 179 #t) (= 171 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 179 #t) (= 171 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 171 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 175 #t)
 ; Action
      (/
       (if (</>
-           (// (? (= 180 #t))            (nop@) (set-var T 3) (set-var O 3) (seg-call))
-           (// (? (= 172 #t) (= 180 #f)) (nop@) (set-var T 3) (set-var O 2) (seg-call))
+           (// (? (= 180 #t))            (nop@) (set-var T 3) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns14_16.mes")
+           (// (? (= 172 #t) (= 180 #f)) (nop@) (set-var T 3) (set-var O 2) (seg-call))    ; (set-reg 174 #t)
            (// (? (= 171 #t) (= 172 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
            (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/
       (if (</>
-           (// (? (= 171 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
+           (// (? (= 171 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; 
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call))))) ; 
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
 ; Unused
@@ -143,7 +145,7 @@
  (seg (? (= T 0) (= O 1))
    (proc 18)
    (text-color 7)
-   (str "W-what!? The Superconducting Nurse? The Magnetic" 'br)
+   (str "W-What!? The Superconducting Nurse? The Magnetic" 'br)
    (str "Lunatic Princess?")
    (proc 15)
    (text-color 7)
@@ -190,7 +192,7 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "From inside the Official Room, we had an overview" 'br)
+   (str "From inside the official Room, we had an overview" 'br)
    (str "of the entire course below.")
    (proc 15)
    (proc 19))
@@ -273,7 +275,7 @@
    (text "ＯＮ！")
    (exec-mem 17920 2 0)
    (exec-mem 1280 "SHOW 0,ACCESS 1")
-   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC")   (image-mem 1 3)
+   (exec-mem 10752 "COPY> gpc¥aflame01.gpc,GPC") (image-mem 1 3)
    (proc 5) (image-mem 1 0)
    (proc 7) (image-mem 1 3)
    (exec-mem 1280 "ACCESS 0")
@@ -289,11 +291,10 @@
 ; 	Text continues
 
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Heh heh heh...")
    (proc 15)
-   (proc 12)
-   (exec-mem 1280 "GET 2 70 0 10 96")
-   (proc 13)
+   (proc 12) (exec-mem 1280 "GET 2 70 0 10 96") (proc 13) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
            (str "Wh-What!? The plasma waves aren't" 'br)
@@ -301,6 +302,7 @@
    (proc 15)
    (proc 14)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "This room is magnetically" 'br)
    (str "shielded! Even the slightest bit of static" 'br)
    (str "electricity won't come through!")
@@ -325,7 +327,8 @@
            (str "What a real pity...")
    (proc 15)
    (proc 11)
-                 (str "Damnation! Our plans have gone off" 'br)
+       ; Mr. Blister:
+                (str "Damnation! Our plans have gone off" 'br)
    (str "track...")
    (proc 15)
    (proc 19)
@@ -334,12 +337,14 @@
    (sound '|| 2)
    (proc 18)
    (proc 11)
-                 (str "We were supposed to block Moguri's" 'br)
+       ; Mr. Blister:
+                (str "We were supposed to block Moguri's" 'br)
    (str "victory and make Senna the champion, but now" 'br)
    (str "Senna's done for...")
    (proc 15)
    (proc 11)
-                 (str "So only 50 percent of the operation" 'br)
+       ; Mr. Blister:
+                (str "So only 50 percent of the operation" 'br)
    (str "has truly succeeded!")
    (proc 15)
    (proc 2)
@@ -347,7 +352,8 @@
            (str "!?!?!?!!")
    (proc 15)
    (proc 11)
-                 (str "At this point, we must carry out" 'br)
+       ; Mr. Blister:
+                (str "At this point, we must carry out" 'br)
    (str "your extermination with extreme prejudice!")
    (proc 15)
    (exec-mem 1280 "VIEW 16 93 40 237,PUT 6 16 93,FREE 6")
@@ -384,6 +390,7 @@
    (exec-mem 7424 21 40 44 303)
    (text-frame 3 324 52 379)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "The Magnetic Lunatic Princess; The")
    (str "Superconducting Chodendo Nurse!")
    (sound '|| 0)
@@ -399,6 +406,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "I'll take care of the both of you" 'br)
    (str "in one fell swoop, get ready!")
    (proc 15)
@@ -406,18 +414,18 @@
  (seg (? (= T 2) (= O 3))
    (proc 18)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "If you can't transform, you're" 'br)
    (str "just a worthless little girl!")
    (proc 15)
-   (proc 12)
-   (exec-mem 1280 "GET 2 30 0 10 96")
-   (proc 13)
+   (proc 12) (exec-mem 1280 "GET 2 30 0 10 96") (proc 13) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "...!!")
    (proc 15)
    (proc 14)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Now then, should I start my" 'br)
    (str "incision across that cute little chest of yours?")
    (proc 15)
@@ -444,6 +452,7 @@
    (str "It's no good... I haven't got any stamina left...")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "What are you doing, dancing around")
    (str "like that?")
    (proc 15)
@@ -458,6 +467,7 @@
            (str "Dammit! The door won't open!")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "You seriously think I'd be so" 'br)
    (str "stupid to leave the door unlocked?")
    (proc 15)
@@ -469,12 +479,18 @@
        ; Tanchi:
            (str "HWAAAAH! Take this!!!")
    (proc 15)
+
+; 	Crash! The tanuki goes out the window!
+
    (exec-mem 28672 13 15 5 6)
    (exec-mem 28672 14 5 4 4)
    (exec-mem 1280 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
    (sound '|| 0)
    (sound '|se | 20)
    (exec-mem 5376 1 0 1 6 0)
+
+; 	Text continues.
+
    (text-color 1)
    (str "Woooooosh!")
    (proc 15)
@@ -482,13 +498,14 @@
        ; Tanchi:
            (str "Kirara! Transform!")
    (proc 15)
-   (proc 12)
-   (exec-mem 1280 "GET 2 0 0 10 96")
-   (proc 13)
+   (proc 12) (exec-mem 1280 "GET 2 0 0 10 96") (proc 13) ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Roger!")
    (proc 15)
+
+; 	Kirara, transform!
+
    (exec-mem 10752 "EXIT")
    (exec-mem 1280 "EXIT")
    ((cmd 209) 0 2)
@@ -501,6 +518,9 @@
    (image-file "b:¥gpc¥ns1_448.gpc") (image-mem 1 3)
    (text-frame 3 324 52 379)
    ((cmd 209) 1 2)
+
+; 	Back to business...
+
    (proc 0)
        ; Dengeki Nurse:
                   (str "Thank you, Tanchi! Wait, Tanchi..." 'br)
@@ -516,6 +536,7 @@
                   (str "You! What did you do to Tanchi?")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Hmph... I didn't do anything!")
    (proc 15)
    (proc 0)
@@ -523,6 +544,7 @@
                   (str "Then why is he suffering like this?")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Hah! Knowing your dumb boyfriend," 'br)
    (str "he probably ate something lying on the ground!")
    (proc 15)
@@ -536,6 +558,7 @@
            (str ".........")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Heh heh heh... A gluttonous" 'br)
    (str "boyfriend suits you perfectly!")
    (proc 15)
@@ -545,6 +568,7 @@
    (str "around the word") (text "“") (str "boyfriend!") (text "”")
    (proc 15)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Oh, and isn't he? I thought you" 'br)
    (str "were in a steamy doctor-nurse relationship!")
    (proc 15)
@@ -554,18 +578,18 @@
    (str "I'm going to show you the power of a million" 'br)
    (str "volts!")
    (proc 15)
-   (set-var U 13)
-   (sound '|| 2)
-   (mes-load? "mes¥action1.mes")
-   (text-frame 3 324 52 379) (text-reset 15)
-   (text-frame 4 16 51 303)  (text-reset 15)
-   (set-reg 990 #f)
 
 ; 	Rewriting default processes
 
    (define-proc 5 (<> (text-color 8) (str "Dr. Akiba: ")))
    (define-proc 7 (<> (text-color 1) (str "Black Nurse: ")))
 
+   (set-var U 13)
+   (sound '|| 2)
+   (mes-load? "mes¥action1.mes")
+   (text-frame 3 324 52 379) (text-reset 15)
+   (text-frame 4 16 51 303)  (text-reset 15)
+   (set-reg 990 #f)
    (mes-jump "b:¥mes¥ns14_16.mes"))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -576,6 +600,7 @@
  (seg (? (= T 4) (= O 1))
    (proc 18)
    (proc 10)
+       ; Chodendo Nurse:
                    (str "Heh heh heh... You're never" 'br)
    (str "leaving this room!")
    (proc 15)

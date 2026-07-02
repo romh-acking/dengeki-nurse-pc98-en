@@ -51,23 +51,23 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 70 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))
+           (// (? (= 70 #t))           (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 71 #t)
            (// (? (= 69 #t) (= 70 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
            (// (? (= 68 #t) (= 69 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 69 #t))           (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 68 #t) (= 69 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 69 #t))           (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 72 #t)
+           (// (? (= 68 #t) (= 69 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 69 #t)
            (//                         (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 71 #t) (= 72 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 69 #t))           (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 71 #t) (= 72 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns15_13.mes")
+           (// (? (= 69 #t))           (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 70 #t)
            (// (? (= 68 #t) (= 69 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 68 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -161,7 +161,7 @@
        ; Kirara:
            (str "Mom...!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 69 #t))
  (seg (? (= T 1) (= O 2))
@@ -175,7 +175,7 @@
    (str "The letter was written with beautiful handwriting" 'br)
    (str "on blue stationery.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 72 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -198,7 +198,7 @@
    (proc 18)
    (proc 5)
        ; Dr. Akiba:
-              (str "Give this a read.")
+              (str "Give that letter a read.")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 2))
@@ -230,7 +230,7 @@
        ; Kirara:
            (str "I'm going!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "You are?")
@@ -240,7 +240,7 @@
        ; Kirara:
            (str "I'm going to finish Black Nurse!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Then I'm going too!")
@@ -250,7 +250,7 @@
        ; Kirara:
            (str "But this isn't your fight!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I'm responsible for Nursia's kidnapping!" 'br)
@@ -269,7 +269,7 @@
            (str "Tanchi...")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")

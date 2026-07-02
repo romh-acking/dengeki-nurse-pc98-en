@@ -75,13 +75,12 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (nop@)
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
    (proc 1) ; Interesting, is this a mistake?
+       ; Kirara:
            (str "Tanchi! Hurry up and warp already!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (nop@)
@@ -94,14 +93,12 @@
            (str "It feels slightly different from Kirara's" 'br)
    (str "butt.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Of course it does!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (nop@)

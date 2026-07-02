@@ -60,19 +60,19 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 82 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//               (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 82 #t)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 85 #t)
+           (//               (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 83 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 82 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
+           (// (? (= 82 #t)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 86 #t)
            (//               (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 85 #t) (= 86 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 83 #t) (= 84 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 85 #t) (= 86 #t)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (mes-jump "b:¥mes¥ns15_16.mes")
+           (// (? (= 83 #t) (= 84 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 82 #t)
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 84 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -138,6 +138,7 @@
            (str "Nursia! Are you okay?")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Doctor Tanchi...")
    (proc 15)
    (proc 19)
@@ -154,6 +155,7 @@
    (str "back to the hospital!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "No... You've got to go after Black" 'br)
    (str "Nurse...")
    (proc 15)
@@ -173,6 +175,7 @@
    (str "to!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Inside the castle there's a...certain" 'br)
    (str "device. If we don't return the ring, something" 'br)
    (str "terrible will happen!")
@@ -182,6 +185,7 @@
            (str "A device?")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "It'll be a disaster! Please! Trust me!")
    (proc 15)
    (proc 0)
@@ -200,6 +204,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 10)
+       ; Nursia:
            (str "Doctor Tanchi... Please don't hold me so" 'br)
    (str "tightly...")
    (proc 15)
@@ -211,6 +216,7 @@
            (str "Kirara! Prepare the Jet Hang Glider!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "W-Wait...")
    (proc 15)
    (proc 19))

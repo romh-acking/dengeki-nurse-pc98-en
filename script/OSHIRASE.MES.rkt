@@ -113,14 +113,10 @@
 ; 		Supplementary Info
 
        (//
-; PC-98:
-        (? (= 201 #t))
-        (nop@)
-        (set-reg 201 #f)
-; FMT:
-;       (? (= 200 #t))
-;       (nop@)
-;       (set-reg 200 #f)
+; PC-98
+        (? (= 201 #t)) (nop@) (set-reg 201 #f)
+; FMT
+;       (? (= 200 #t)) (nop@) (set-reg 200 #f)
 
         (text 'br)
         (text "　●") (str " How to enjoy the ") (text "ＳＡＤ") (str " System" 'br)
@@ -184,14 +180,10 @@
 ; 		Join our BBS
 
        (//
-; PC-98:
-        (? (= 202 #t))
-        (nop@)
-        (set-reg 202 #f)
-; FMT:
-;       (? (= 201 #t))
-;       (nop@)
-;       (set-reg 201 #f)
+; PC-98
+        (? (= 202 #t)) (nop@) (set-reg 202 #f)
+; FMT
+;       (? (= 201 #t)) (nop@) (set-reg 201 #f)
 
         (text 'br)
         (text "　　") (str "We at Cocktail Soft and Fairytale have recently launched a computer-based" 'br)

@@ -69,22 +69,23 @@
    (proc 19)
    (branch-var Z
     (</>
+; Think
      (/
       (if (</>
-           (// (? (= 94 #t))                               (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 94 #t))                               (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 99 #t)
+           (//                                             (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 95 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 94 #t))                               (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 94 #t))                               (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 100 #t)
+           (//                                             (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 96 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 98 #t) (= 99 #t) (= 100 #t))          (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 94 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 95 #t) (= 96 #t) (= 97 #t) (= 94 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 98 #t) (= 99 #t) (= 100 #t))          (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns15_19.mes")
+           (// (? (= 94 #t))                               (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 98 #t)
+           (// (? (= 95 #t) (= 96 #t) (= 97 #t) (= 94 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 94 #t)
+           (//                                             (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 97 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -147,7 +148,7 @@
    (proc 15)
    (proc 7)
        ; Black Nurse:
-               (str "Hmph, I have no idea! And even if I" 'br)
+                (str "Hmph, I have no idea! And even if I" 'br)
    (str "did I wouldn't tell you!")
    (proc 15)
    (proc 19)
@@ -160,11 +161,11 @@
    (proc 15)
    (proc 7)
        ; Black Nurse:
-               (str "I want to know how to USE it!")
+                (str "I want to know how to USE it!")
    (proc 15)
    (proc 7)
        ; Black Nurse:
-               (str "It fits straight into the panel, but" 'br)
+                (str "It fits straight into the panel, but" 'br)
    (str "it isn't doing a darn thing!")
    (proc 15)
    (proc 2)
@@ -174,16 +175,16 @@
    (proc 15)
    (proc 7)
        ; Black Nurse:
-               (str "Shut up, you!")
+                (str "Shut up, you!")
    (proc 15)
-   (exec-mem 2816 "VIEW 26 145 49 288,PUT 10 26 145,FREE 10")
+   (exec-mem 2816 "VIEW 26 145 49 288,PUT 10 26 145,FREE 10") ; Black Nurse grabs Tanchi!
    (proc 2)
        ; Tanchi:
            (str "Dammit! Leggo of me!")
    (proc 15)
    (proc 7)
        ; Black Nurse:
-               (str "Tell me how the ring works, or this" 'br)
+                (str "Tell me how the ring works, or this" 'br)
    (str "idiot dies!")
    (proc 15)
    (proc 13)	; Shouting
@@ -195,7 +196,7 @@
    (proc 11)
    (proc 7)
        ; Black Nurse:
-               (str "What about Nursia? That little nose-" 'br)
+                (str "What about Nursia? That little nose-" 'br)
    (str "picking brat probably has an idea, doesn't she?")
    (proc 15)
    (proc 12)	; Sad
@@ -206,7 +207,7 @@
    (proc 11)
    (proc 7)
        ; Black Nurse:
-               (str "Go and bring the brat! Otherwise," 'br)
+                (str "Go and bring the brat! Otherwise," 'br)
    (str "this fool meets his maker!")
    (proc 15)
    (proc 19)
@@ -240,13 +241,17 @@
    (proc 11)
    (proc 7)
        ; Black Nurse:
-               (str "This love story sucks! Just go get" 'br)
+                (str "This love story sucks! Just go get" 'br)
    (str "Nursia already!")
    (proc 15)
    (sound '|| 0)
    (proc 10)
+       ; Nursia:
            (str "There is no need for that!")
    (proc 15)
+
+; 	A Transylvanian appears! Wait...
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse15.uso")
    (sound '|| 1)
@@ -266,6 +271,9 @@
        ; Tanchi:
            (str "Nursia! Is that you?")
    (proc 15)
+
+; 	...Sorry, it's Nursia in a spacesuit.
+
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
    (exec-mem 28672 4 16 51 303 1 4 16 18)
@@ -277,41 +285,49 @@
    (exec-mem 2816 "ACCESS 0")
    (text-frame 3 324 52 379)
    (text-reset 15)
+
+; 	You get what I mean. Text continues...
+
    (proc 10)
+       ; Nursia:
            (str "I am Nursia XIV, Princess of Elektros!")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "I've been waiting for this...")
+                (str "I've been waiting for this...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "Black Nurse, please let go of Doctor" 'br)
    (str "Tanchi and give us the ring back.")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Pfyeah, whatever!")
+                (str "Pfyeah, whatever!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "The ring has no use to you.")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "You think you can keep all the" 'br)
+                (str "You think you can keep all the" 'br)
    (str "treasure for yourself? As if!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "Humans... What sad, foolish creatures...")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Oh wow, now the kid is hallucinating!")
+                (str "Oh wow, now the kid is hallucinating!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "No... I was just asleep up until a moment" 'br)
    (str "ago. My memories were in a state of hibernation...")
    (proc 15)
@@ -320,69 +336,83 @@
            (str "Nursia... What ARE you?")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "I came here from the planet Elektros, far" 'br)
    (str "across the galaxy.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Long, long ago, Earth appeared to us as a" 'br)
    (str "sad, pitiable planet.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Conflict, hatred, plunder... All in a" 'br)
    (str "never-ending cycle.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Why would those who shared the same planet")
    (str "do ill against each other and draw blood?")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "It was incomprehensible to us...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "We came to earth in order to teach humans" 'br)
    (str "about love.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "And yet, it fell on the deaf ears of the" 'br)
    (str "sad, foolish Earthlings.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "So we decided to wait... Wait for the" 'br)
    (str "maturation of humanity.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "But... We gave up on them.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Even after 2000 years, humans have not" 'br)
    (str "changed...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Now then, return the ring.")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "It is an activation device to awaken the" 'br)
    (str "Elektros people beneath from their hibernation.")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "What is this sci-fi mumbo jumbo? No" 'br)
+                (str "What is this sci-fi mumbo jumbo? No" 'br)
    (str "kid is stupid enough to believe that junk!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "Then it cannot be helped. If you refuse to")
    (str "see the truth...")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "...This atomic disintegration laser must" 'br)
    (str "pierce your cold heart.")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Oh, um, okay, hold on. Here you go.")
+                (str "Oh, um, okay, hold on. Here you go.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (text-color 7)
    (str "Black Nurse removes the whip from my neck.")
    (proc 15)
@@ -391,13 +421,17 @@
            (str "Phewwww! I'm saved!")
    (proc 15)
    (proc 10)
+       ; Nursia:
            (str "Now, the ring next.")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Don't mess with me, you little turd!")
+                (str "Don't mess with me, you little turd!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
+; 	Black Nurse gives her whip a good crack!
+
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (exec-mem 6656 0 2 1 2 0)
    (sound '|| 0)
@@ -405,28 +439,35 @@
    (text-color 1)
    (text "ＣＲＡＣＫ！！！")
    (proc 15)
+
    (exec-mem 6656 0 2 0 2 0)
    (text-color 1)
    (text "ＣＲＡＳＨ！！！")
    (proc 15)
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse10.uso")
    (sound '|| 1)
+
+; 	Text continues!
+
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Oh my, what a flimsy toy!")
+                (str "Oh my, what a flimsy toy!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "............")
    (proc 15)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "You little crap-muffin! How dare you" 'br)
+                (str "You little crap-muffin! How dare you" 'br)
    (str "scare me like that!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Nursia:
            (str "!!!!!!!!!")
    (proc 15)
    (proc 13)	; Shouting
@@ -438,15 +479,21 @@
    (proc 11)
    (proc 14) (proc 7)
        ; Black Nurse:
-               (str "Hah! I'll start by ripping you apart!")
+                (str "Hah! I'll start by ripping you apart!")
    (str "The traitor, Dengeki Nurse!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 13)	; Shouting
    (proc 0)
        ; Dengeki Nurse:
                   (str "This is for my mother!")
    (proc 15)
+
+; Reinstating default process
+   (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
+
+; 	Final battle, let's go!
+
    (exec-mem 10752 "EXIT")
    (exec-mem 2816 "EXIT")
    (set-var U 15)
@@ -455,23 +502,19 @@
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (set-reg 990 #f)
-
-; Reinstating default process
-   (define-proc 1 (<> (text-color 4) (str "Kirara: ")))
-
    (mes-jump "b:¥mes¥ns15_19.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (proc 7)
        ; Black Nurse:
-               (str "Don't try anything stupid, you dork!")
+                (str "Don't try anything stupid, you dork!")
    (proc 15)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
    (proc 7)
        ; Black Nurse:
-               (str "Don't even think about running away!")
+                (str "Don't even think about running away!")
    (proc 15)
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save

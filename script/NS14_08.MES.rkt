@@ -10,7 +10,8 @@
   (load-mem "cmd¥scrh.tcm" 19456)
   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 11 (<> (text-color 5) (str "Kawai: ")))
-  (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
+; (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))     <--- only used once
+  (define-proc 12 (<> (text-color 1) (str "Announcer: "))) ; <--- used thrice
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "GET 20 71 320 8 64")
@@ -40,14 +41,16 @@
   (text #:col 1 'br)
   (text '|34368| "　　　−") (str "The Next Day: F1 Japan GP Finals") (text "−")
   (proc 15)
-  (text-color 1)
-  (str "Announcer: Let's go to Kawai on the starting grid!")
+  (proc 12)
+      ; Announcer:
+             (str "Let's go to Kawai on the starting grid!")
   (proc 15)
   (proc 11)
           (str "Yes, this is Kawai.")
   (proc 15)
-  (text-color 1)
-  (str "Announcer: How is driver Moguri feeling?")
+  (proc 12)
+      ; Announcer:
+             (str "How is driver Moguri feeling?")
   (proc 15)
   (proc 11)
           (str "Mr. Moguri, how are you doing? Do you have" 'br)
@@ -71,29 +74,29 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 108 #t))                                  (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (// (? (= 108 #t))                                  (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 116 #t)
+           (// (? (= 107 #t) (= 108 #f))                       (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 114 #t)
+           (//                                                 (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 111 #t)
 ; Look
      (/
       (if (</>
-           (// (? (= 107 #t))                                  (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 109 #t) (= 107 #f))                       (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 107 #t))                                  (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 115 #t)
+           (// (? (= 109 #t) (= 107 #f))                       (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 107 #t)
+           (//                                                 (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 112 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 116 #t))                                  (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 113 #t) (= 114 #t) (= 115 #t) (= 116 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 107 #t))                                  (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 116 #t))                                  (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (mes-jump "b:¥mes¥ns14_09.mes")
+           (// (? (= 113 #t) (= 114 #t) (= 115 #t) (= 116 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 108 #t)
+           (// (? (= 107 #t))                                  (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 113 #t)
            (// (? (= 109 #t) (= 107 #f))                       (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 110 #t) (= 111 #t) (= 112 #t) (= 109 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 110 #t) (= 111 #t) (= 112 #t) (= 109 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 109 #t)
+           (//                                                 (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 110 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 300 #t) (= 107 #t))                       (nop@) (set-var T 3) (set-var O 1) (seg-call))
-           (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
+           (//                                                 (nop@) (set-var T 3) (set-var O 0) (seg-call))))) ; (set-reg 300 #t)
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
 ; Save
@@ -160,6 +163,9 @@
    (set-reg 112 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
+
+; 	A race queen appears...
+
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_419.gpc,GPC") (image-mem 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_422.gpc,GPC") (image-mem 1 0)
@@ -169,6 +175,9 @@
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_423.gpc,GPC") (image-mem 0 0)
    (exec-mem 2816 "ACCESS 0")
    (text-frame 3 324 52 379)
+
+; 	Text continues.
+
    (text-color 7)
    (str "Ahh... Everything in front of me is darkness..." 'br)
    (str "Huh? What's this?")
@@ -272,6 +281,7 @@
    (str "jumping in and racing in F1 is...")
    (proc 15)
    (proc 11)
+       ; Kawai:
           (str "Moguri-san, what are you talking about?")
    (proc 15)
    (proc 19)
@@ -283,6 +293,7 @@
            (str "This is all insane...totally insane!")
    (proc 15)
    (proc 11)
+       ; Kawai:
           (str "Moguri-san!")
    (proc 15)
    (proc 2)
@@ -291,18 +302,21 @@
    (str "black...")
    (proc 15)
    (proc 11)
+       ; Kawai:
           (str "Driver Moguri appears to be especially" 'br)
    (str "nervous.")
    (proc 15)
-   (text-color 1)
-   (str "Announcer: I see... That is concerning, isn't it," 'br)
+   (proc 12)
+       ; Announcer:
+              (str "I see... That is concerning, isn't it," 'br)
    (str "Imamiya-san?")
    (proc 15)
-   (proc 12)
-            (str "He did take Provisional Pole position on" 'br)
+   (text-color 3)
+   (str "Imamiya: He did take Provisional Pole position on" 'br)
    (str "day one, but yesterday's time was pretty bad.")
    (proc 15)
    (proc 11)
+       ; Kawai:
           (str "Well then, Moguri-san, do your best!")
    (proc 15)
    (proc 2)
@@ -310,6 +324,7 @@
            (str "......")
    (proc 15)
    (proc 11)
+       ; Kawai:
           (str "Next, we'll be turning towards the other" 'br)
    (str "driver from Japan, Hikyo Katayama.")
    (proc 15)
@@ -327,6 +342,7 @@
            (str "Aaaaghhhhhhh!")
    (proc 15)
    (proc 10)
+       ; Nakajima:
              (str "What's wrong, Tanchi?")
    (proc 15)
    (text-color 7)
@@ -436,9 +452,9 @@
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
 
-   (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
-   (define-proc 11 (<> (text-color 5) (str "Kawai: ")))
-   (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
+;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
+;  (define-proc 11 (<> (text-color 5) (str "Kawai: ")))
+;  (define-proc 12 (<> (text-color 3) (str "Imamiya: ")))
    (proc 19)
    (set-var B 4)
    (set-var C 4)))

@@ -7,7 +7,16 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
-  (define-proc 11 (<> (text-color 10) (str "Tanchi: ")))
+  (define-proc 11 (<> (text-color 10) (str "Tanchi: "))) ; His name's colour is in a different slot for the second part of this script
+
+; 	Right portrait display (Kirara's placed there in this script for some reason):
+
+  (define-proc 12 (<> (exec-mem 2816 "GET 1 40 23 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1")))
+  (define-proc 13 (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")))
+  (define-proc 14 (<> (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")))
+
+; 	Setup continues...
+
   (exec-mem 2816 "INIT,SHOW 0,ACCESS 1")
   (image-file "gpc¥face_w00.gpc") (image-mem 0 0)
   (exec-mem 2816 "ACCESS 0")
@@ -32,9 +41,11 @@
   (exec-mem 6656 8)
   (load-mem "cmd¥cappear.tcm" 14592)
   (proc 10)
+      ; Nursia:
           (str "Thank you...for saving me.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "Dr. Tanchi, Kirara... I fare thee well. We")
   (str "must return to Planet Elektros...")
   (proc 15)
@@ -45,34 +56,36 @@
   (str "people take us to be?")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "I am not sure... After watching that" 'br)
   (str "battle I could not say.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "We of Elektros know nothing of conflict," 'br)
   (str "and could never understand such things...")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "But perhaps... For the sake of love, one" 'br)
   (str "must sometimes have to fight...")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "That being said, I think Earth is the most")
   (str "beautiful planet in the vast universe.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "And the ones who must protect that are you")
   (str "humans.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "Perhaps you would not be so foolish as to" 'br)
   (str "destroy your own planet...")
   (proc 15)
-  (exec-mem 2816 "GET 1 40 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+  (proc 12) (exec-mem 2816 "GET 2 20 0 10 96") (proc 13) ; Portrait (Sad)
   (proc 1)
       ; Kirara:
           (str "Maybe fighting really is meaningless...")
@@ -82,11 +95,13 @@
           (str "I defeated Black Nurse, but that won't" 'br)
   (str "bring back my mother...")
   (proc 15)
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+  (proc 14) ; Clear portrait
   (proc 10)
+      ; Nursia:
           (str "I feel sorry for her.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "With your permission... Might I take her" 'br)
   (str "to the planet of Elektros?")
   (proc 15)
@@ -95,38 +110,34 @@
           (str "W-What do you mean?")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "It will take time. But with Elektros" 'br)
   (str "science, perhaps we might revive her.")
   (proc 15)
-  (exec-mem 2816 "GET 1 40 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 0 0 10 96") ; Smiling
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+  (proc 12) (exec-mem 2816 "GET 2 0 0 10 96") (proc 13) ; Portrait (Smiling)
   (proc 1)
       ; Kirara:
           (str "Please! I'll wait for as long as it takes!")
   (proc 15)
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+  (proc 14) ; Clear portrait
   (proc 10)
+      ; Nursia:
           (str "That is an impossibility... Elektros is" 'br)
   (str "2,000 light years from earth.")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "Though it would be but an instant to us," 'br)
   (str "her earliest return would be in 4,000 years...")
   (proc 15)
-  (exec-mem 2816 "GET 1 40 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+  (proc 12) (exec-mem 2816 "GET 2 20 0 10 96") (proc 13) ; Portrait (Sad)
   (proc 1)
       ; Kirara:
           (str "Then... Then take me with you...")
   (proc 15)
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+  (proc 14) ; Clear portrait
   (proc 10)
+      ; Nursia:
           (str "You cannot go. There is someone here on" 'br)
   (str "Earth who is important to you, is there not?")
   (proc 15)
@@ -135,28 +146,29 @@
           (str ".........")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "The castle will soon be rubble. You must" 'br)
   (str "leave immediately.")
   (proc 15)
-  (exec-mem 2816 "GET 1 40 23 10 96")
-  (exec-mem 2816 "SHOW 0,ACCESS 1")
-  (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-  (exec-mem 2816 "ACCESS 0")
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 2 40 23,FREE 2")
+  (proc 12) (exec-mem 2816 "GET 2 20 0 10 96") (proc 13) ; Portrait (Sad)
   (proc 1)
       ; Kirara:
           (str "Goodbye, Nursia... Please... Take care of" 'br)
   (str "my mother.")
   (proc 15)
-  (exec-mem 2816 "VIEW 40 23 50 120,PUT 1 40 23,FREE 1")
+  (proc 14) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Farewell, Nursia...")
   (proc 15)
   (proc 10)
+      ; Nursia:
           (str "Dr. Tanchi, Kirara... I will never forget" 'br)
   (str "you two.")
   (proc 15)
+
+; 	The castle becomes a spaceship, and flies away.
+
   ((cmd 209) 0 3)
   (text-frame 0 0 79 399)
   (text-reset 1)
@@ -179,7 +191,11 @@
   (sound '|| 3)
   (text-frame 16 324 66 379)
   (text-reset 1)
+
+; 	Final scene, let's go
+
   (proc 11)
+      ; Tanchi:
           (str "She's gone.")
   (proc 16)
   (proc 1)
@@ -187,6 +203,7 @@
           (str "Yeah...")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "Are you...lonely?")
   (proc 16)
   (proc 1)
@@ -204,6 +221,7 @@
   (str "legacy!")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "Are you really okay...?")
   (proc 16)
   (proc 1)
@@ -220,6 +238,7 @@
           (str "And so will you, Tanchi!")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "Kirara...")
   (proc 16)
   (proc 1)
@@ -227,6 +246,7 @@
           (str "Yes...?")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "I love you...")
   (proc 16)
   (proc 1)
@@ -235,6 +255,7 @@
   (str "I couldn't hear you.")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "N-No, it's nothing...")
   (proc 16)
   (proc 1)
@@ -242,6 +263,7 @@
           (str "C'mon! Tell me!")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "I said, it's nothing...")
   (proc 16)
   (proc 1)
@@ -249,6 +271,7 @@
           (str "Hey... Tanchi?")
   (proc 16)
   (proc 11)
+      ; Tanchi:
           (str "...Yeah?")
   (proc 16)
   (proc 1)

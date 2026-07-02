@@ -30,9 +30,7 @@
            (image-file "b:¥gpc¥Ns1_562.gpc") (image-mem 1 3)
            (image-file "b:¥gpc¥Ns1_565.gpc") (image-mem 1 3)
            (proc 13)
-           (proc 3)
-           (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
            (text-frame 3 324 52 379)
            (text-reset 15)
            (sound '|| 0)
@@ -40,12 +38,13 @@
                ; Dengeki Nurse:
                           (str "What is this...?")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (proc 2)
                ; Tanchi:
                    (str "Some sort of a huge hole?")
            (proc 15)
            (proc 10)
+               ; Nursia:
                    (str "Eeeeeek!")
            (proc 15)
            (proc 2)
@@ -60,14 +59,12 @@
                ; Tanchi:
                    (str "Kirara... What do we do?")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
                ; Dengeki Nurse:
                           (str "We chase after her!")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (set-reg 500 #t))
           (/ (nop@))))
         (text-color 7)
@@ -97,40 +94,34 @@
            (text-color 5)
            (str "Asuka: We meet again, Dengeki Nurse!")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
                ; Dengeki Nurse:
                           (str "Hey, that's my line!")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (text-color 5)
            (str "Asuka: Heh heh! This time, I'll make sure you" 'br)
            (str "don't deliver any more lines...EVER!")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
                ; Dengeki Nurse:
                           (str "Still carrying around that little" 'br)
            (str "kid's yo-yo, are you?")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (text-color 5)
            (str "Asuka: I'll show you the pain of a tear-soaked yo-")
            (str "yo!")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
                ; Dengeki Nurse:
                           (str "Oh, please! Let's just get on with" 'br)
            (str "it!")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (exec-mem 2816 "EXIT")
            (set-var R 0)
            (set-var U 5)
@@ -170,7 +161,7 @@
                              (str "What is this? Some sort of TV" 'br)
               (str "remote?")
               (proc 15)
-              (proc 6)
+              (proc 6) ; Clear Kirara portrait
               (proc 2)
                   ; Tanchi:
                       (str "No... Maybe for a VCR?")
@@ -180,7 +171,7 @@
                       (str "Oh, that's the controller that disables" 'br)
               (str "the Psycho Barrier!")
               (proc 15)
-              (proc 14)
+              (proc 14) ; Clear Nursia portrait
               (text-color 7)
               (str "I pick up the controller.")
               (proc 15)
@@ -234,15 +225,13 @@
            (str "with my guillotine and float it down the river" 'br)
            (str "Seine!!!")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 60 0 10 96") ; Shouting
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
                ; Dengeki Nurse:
                           (str "You shut your mouth! All you can" 'br)
            (str "ever do is guillotine, guillotine, guillotine!")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (text-color 5)
            (str "Guillotine Nurse: Hohoho, of course it is, idiot!!")
            (proc 15)
@@ -285,7 +274,7 @@
                   ; Nursia:
                       (str "It's the Elektros Crest!")
               (proc 15)
-              (proc 14)
+              (proc 14) ; Clear Nursia portrait
               (proc 2)
                   ; Tanchi:
                       (str "Okay, sounds good! Grabbing it!")
@@ -339,28 +328,24 @@
            (str "sweetcheeks... In the name of the stars, I will" 'br)
            (str "punish you!")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
            (proc 0)
                ; Dengeki Nurse:
                           (str "Hahahahhah!")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (text-color 11)
            (str "Ayako: Hi, what's so funny? Been nibbling some" 'br)
            (str "magic mushrooms?")
            (proc 15)
-           (proc 3)
-           (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-           (proc 4)
+           (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
            (proc 0)
                ; Dengeki Nurse:
                           (str "That silly pose! You seriously" 'br)
            (str "think you can beat me, putting that kind of foot" 'br)
            (str "forward?")
            (proc 15)
-           (proc 6)
+           (proc 6) ; Clear Kirara portrait
            (text-color 11)
            (str "Ayako: Moon, moon, moon! Moon Prism Power, Make" 'br)
            (str "Up!")
@@ -401,7 +386,7 @@
                   ; Nursia:
                       (str "Looks like a key...")
               (proc 15)
-              (proc 14)
+              (proc 14) ; Clear Nursia portrait
               (proc 0)
                   ; Dengeki Nurse:
                              (str "I've seen a key like this before...")
@@ -486,39 +471,37 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (nop@)
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
+   (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 4)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Looks like there's nothing here.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (nop@)
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 4)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Stop touching my butt!!!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
            (str "But, but come on... It's not like it's" 'br)
    (str "going to wear out or anything...")
    (proc 15)
    (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 4)
    (proc 0)
        ; Dengeki Nurse:
                   (str "But it totally will!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Kirara portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (nop@)
@@ -561,5 +544,5 @@
            (str "Sorry, but we'll have to head out to the" 'br)
    (str "hallway to save...")
    (proc 15)
-   (proc 14)
+   (proc 14) ; Clear Nursia portrait
    (proc 19)))

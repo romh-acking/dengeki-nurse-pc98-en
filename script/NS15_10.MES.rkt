@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Shocking news in hand, Tanchi goes to see Dr. Akiba.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -28,24 +28,22 @@
   (text-reset 15)
   ((cmd 204) 55 59)
   ((cmd 209) 1 2)
-  (proc 10)	; Dr. Akiba
-  (proc 5)
+  (proc 10) (proc 5)
       ; Dr. Akiba:
              (str "Oh, good timing, Tanchi. I just located")
   (str "Kirara.")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 2)
       ; Tanchi:
           (str "No way! Tell me where she is!")
   (proc 15)
-  (proc 10)	; Dr. Akiba
-  (proc 5)
+  (proc 10) (proc 5)
       ; Dr. Akiba:
              (str "What's gotten into you, with all the" 'br)
   (str "frantic gesticulation?")
   (proc 15)
-  (proc 6)
+  (proc 6) ; Clear Portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -62,19 +60,19 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 58 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 55 #t) (= 58 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 58 #t))           (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 59 #t)
+           (// (? (= 55 #t) (= 58 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 57 #t)
            (//                         (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
 ; Talk
      (/
       (if (</>
-           (// (? (= 59 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 59 #t))           (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns15_11.mes")
            (// (? (= 58 #t) (= 59 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 57 #t) (= 58 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
+           (// (? (= 57 #t) (= 58 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 58 #t)
            (// (? (= 55 #t) (= 57 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (//                         (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 55 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -133,29 +131,26 @@
        ; Tanchi:
            (str "Doc! I've got massive news!")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "Mmm? What is it now?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Well, it's like this, and like that, and" 'br)
    (str "blah blah blah...")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "I see... Just as I suspected.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Suspected WHAT?")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "Ever since she arrived at the hospital,")
    (str "I knew I recognized that face...")
@@ -163,18 +158,17 @@
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 3)
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "Not only that, she brought my favorite" 'br)
    (str "okonomiyaki...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
@@ -182,13 +176,12 @@
        ; Tanchi:
            (str "W-Why didn't you say anything?")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "Well, she chose to keep it a secret. I" 'br)
    (str "supposed that she had her reasons...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, come on!")
@@ -198,24 +191,22 @@
            (str "Do you have any idea how long Kirara has" 'br)
    (str "been searching for her mom?")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "There are many things Kirara still has" 'br)
    (str "to accomplish.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 58 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "And like it or not, fighting is one of" 'br)
    (str "those things...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
@@ -224,34 +215,31 @@
            (str "So to hell with Kirara's feelings, is that")
    (str "it?")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str ".........")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Tell me where she is!")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str "She's at the pachinko parlor by the" 'br)
    (str "station, UN International Hall.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "I'm gonna go get her! Please call Mitsuko!")
    (proc 15)
-   (proc 10)	; Dr. Akiba
-   (proc 5)
+   (proc 10) (proc 5)
        ; Dr. Akiba:
               (str ".........")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")

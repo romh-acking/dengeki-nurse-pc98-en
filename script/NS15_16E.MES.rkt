@@ -48,15 +48,13 @@
             ; Tanchi:
                 (str "What the heck is going on here?")
         (proc 15)
-        (proc 3)
-        (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-        (proc 4)
+        (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
         (proc 0)
             ; Dengeki Nurse:
                        (str "Could this be the Elektros" 'br)
         (str "treasure?")
         (proc 15)
-        (proc 6)
+        (proc 6) ; Clear Portrait
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
                 (str "...")
@@ -67,7 +65,7 @@
 ; 		Subsequent visits without having taken coins
 
        (//
-;       (? (= 705 #t) (= 806 #f) (= D 0)) <- No need for a coin check here, on the suggestion of ValleyBell
+;       (? (= 705 #t) (= 806 #f) (= D 0)) <--- No need for a coin check here, on the suggestion of ValleyBell
         (? (= 705 #t) (= 806 #f))
         (nop@)
         (image-file "b:¥gpc¥Ns1_571.gpc") (image-mem 1 3)
@@ -139,14 +137,12 @@
                 (str "There are coins floating here again! I" 'br)
         (str "thought I took them all...")
         (proc 15)
-        (proc 3)
-        (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-        (proc 4)
+        (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
         (proc 0)
             ; Dengeki Nurse:
                        (str "Puzzling... Is this Elektros magic?")
         (proc 15)
-        (proc 6)
+        (proc 6) ; Clear Portrait
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
                 (str "...")
@@ -169,9 +165,7 @@
             ; Tanchi:
                 (str "The coins are gone!")
         (proc 15)
-        (proc 3)
-        (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-        (proc 4)
+        (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
         (proc 0)
             ; Dengeki Nurse:
                        (str "Didn't you just grab them, Tanchi?")
@@ -237,7 +231,7 @@
                         (str "The coins shining in the sky are so")
          (str "pretty!")
          (proc 15)
-         (proc 6)
+         (proc 6) ; Clear Portrait
          (proc 2)
              ; Tanchi:
                  (str "Hey... Do you not understand how things" 'br)
@@ -245,7 +239,7 @@
         (//
                         (str "It's nice and cool inside here!")
          (proc 15)
-         (proc 6)
+         (proc 6) ; Clear Portrait
          (proc 2)
              ; Tanchi:
                  (str "You really have no sense of trepidation," 'br)
@@ -326,9 +320,7 @@
       (text-color 7)
       (str "What a pity... All the coins are gone...")
       (proc 15)
-      (proc 3)
-      (exec-mem 2816 "GET 2 10 0 10 96") ; Happy
-      (proc 4)
+      (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4) ; Portrait (Happy)
       (proc 0)
           ; Dengeki Nurse:
       (str "Let's get moving already!")

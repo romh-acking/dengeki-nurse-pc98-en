@@ -37,48 +37,49 @@
   (text "　　　　" '|34368| "−") (str "Dentendo Hospital Courtyard") (str "−")
   (proc 15)
   (proc 10)
-             (str "Nice to meet you. I'm Sakurako Yukikoji,")
+      ; Yukikoji:
+            (str "Nice to meet you. I'm Sakurako Yukikoji,")
   (str "Miss Nursia's attending nurse.")
   (proc 15)
-  (proc 12) (proc 13)	; Dr. Akiba
-  (proc 5)
+  (proc 12) (proc 13) (proc 5)
       ; Dr. Akiba:
-              (str "The pleasure is all mine. I'm Director" 'br)
+             (str "The pleasure is all mine. I'm Director" 'br)
   (str "Akihabara.")
   (proc 15)
   (proc 14)
   (proc 10)
-             (str "I'm sorry for asking so much of you.")
+      ; Yukikoji:
+            (str "I'm sorry for asking so much of you.")
   (proc 15)
-  (proc 12) (proc 13)	; Dr. Akiba
-  (proc 5)
+  (proc 12) (proc 13) (proc 5)
       ; Dr. Akiba:
-              (str "Oh, it's nothing, really. Dr. Tanchi" 'br)
+             (str "Oh, it's nothing, really. Dr. Tanchi" 'br)
   (str "here has cured countless incurable diseases.")
   (proc 15)
   (proc 14)
   (proc 10)
-             (str "That's certainly reassuring.")
+      ; Yukikoji:
+            (str "That's certainly reassuring.")
   (proc 15)
-  (proc 12) (proc 13)	; Dr. Akiba
-  (proc 5)
+  (proc 12) (proc 13) (proc 5)
       ; Dr. Akiba:
-              (str "Just leave everything to us.")
+             (str "Just leave everything to us.")
   (proc 15)
   (proc 14)
   (proc 10)
-             (str "Thank you. I know it isn't much, but" 'br)
+      ; Yukikoji:
+            (str "Thank you. I know it isn't much, but" 'br)
   (str "please, if you can accept this...")
   (proc 15)
-  (proc 12) (proc 13)	; Dr. Akiba
-  (proc 5)
+  (proc 12) (proc 13) (proc 5)
       ; Dr. Akiba:
-              (str "Oh, Osaka okonomiyaki!!! How'd you know")
+             (str "Oh, Osaka okonomiyaki!!! How'd you know")
   (str "this was my favorite!?")
   (proc 15)
   (proc 14)
   (proc 10)
-             (str "Ho ho ho... Just a coincidence!")
+      ; Yukikoji:
+            (str "Ho ho ho... Just a coincidence!")
   (proc 15)
   (proc 19)
   (exec-mem 18944 65535 528 33)
@@ -94,14 +95,14 @@
    (branch-var Z
     (</>
 ; Think
-     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 0) (set-var O 0) (seg-call)) ; (set-reg 22 #t)
 ; Look
-     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call))
+     (/ (nop@) (set-var T 1) (set-var O 0) (seg-call)) ; (set-reg 23 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 21 #t) (= 22 #t) (= 23 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 21 #t) (= 22 #t) (= 23 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns15_06.mes")
+           (//                                   (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 21 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
@@ -144,6 +145,7 @@
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
    (proc 11)
+       ; Nursia:
            (str "Doctor Tanchi...")
    (proc 15)
    (proc 2)
@@ -152,6 +154,7 @@
    (str "I'll make you all better, I promise.")
    (proc 15)
    (proc 11)
+       ; Nursia:
            (str "With those words coming from you, Dr." 'br)
    (str "Tanchi...")
    (proc 15)
@@ -159,10 +162,9 @@
    (set-reg 21 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
-               (str "Tanchi and Kirara, I'll be counting on" 'br)
+              (str "Tanchi and Kirara, I'll be counting on" 'br)
    (str "you.")
    (proc 15)
    (proc 14)
@@ -170,14 +172,12 @@
        ; Tanchi:
            (str "I'll make her all better.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 0 96 10 96") ; Aloof
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 0 96 10 96") (proc 4) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
            (str "Me too!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
@@ -187,19 +187,17 @@
    (mes-jump "b:¥mes¥ns15_06.mes"))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
-               (str "Hey! Don't steal my okonomiyaki!")
+              (str "Hey! Don't steal my okonomiyaki!")
    (proc 15)
    (proc 14)
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (proc 12) (proc 13)	; Dr. Akiba
-   (proc 5)
+   (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
-               (str "You can go to the bathroom later!")
+              (str "You can go to the bathroom later!")
    (proc 15)
    (proc 14)
    (proc 19))

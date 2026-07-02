@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; That's one fellow racer done and dusted! (That's how F1 works, right? Like Road Rash?)
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -77,16 +77,16 @@
      (/
       (if (</>
            (// (? (= 142 #t))            (nop@) (set-var T 0) (set-var O 6) (seg-call))
-           (// (? (= 141 #t) (= 142 #f)) (nop@) (set-var T 0) (set-var O 5) (seg-call))
-           (// (? (= 140 #t) (= 141 #f)) (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 141 #t) (= 142 #f)) (nop@) (set-var T 0) (set-var O 5) (seg-call))    ; (set-reg 145 #t)
+           (// (? (= 140 #t) (= 141 #f)) (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 144 #t)
            (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))
-           (// (? (= 137 #t) (= 138 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
+           (// (? (= 137 #t) (= 138 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 143 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
-           (// (? (= 142 #t))            (nop@) (set-var T 1) (set-var O 4) (seg-call))
+           (// (? (= 142 #t))            (nop@) (set-var T 1) (set-var O 4) (seg-call))    ; (mes-jump "b:¥mes¥ns14_13.mes")
            (// (? (= 141 #t) (= 142 #f)) (nop@) (set-var T 1) (set-var O 3) (seg-call))
            (// (? (= 140 #t) (= 141 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))
@@ -95,19 +95,19 @@
      (/
       (if (</>
            (// (? (= 142 #t))            (nop@) (set-var T 2) (set-var O 8) (seg-call))
-           (// (? (= 145 #t) (= 142 #f)) (nop@) (set-var T 2) (set-var O 7) (seg-call))
+           (// (? (= 145 #t) (= 142 #f)) (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (set-reg 142 #t)
            (// (? (= 141 #t) (= 145 #f)) (nop@) (set-var T 2) (set-var O 6) (seg-call))
-           (// (? (= 144 #t) (= 141 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))
+           (// (? (= 144 #t) (= 141 #f)) (nop@) (set-var T 2) (set-var O 5) (seg-call))    ; (set-reg 141 #t)
            (// (? (= 140 #t) (= 144 #f)) (nop@) (set-var T 2) (set-var O 4) (seg-call))
-           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))
+           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (set-reg 140 #t)
            (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 143 #t) (= 138 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 143 #t) (= 138 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
+           (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 146 #t)
 ; Action
      (/
       (if (</>
            (// (? (= 137 #t))            (nop@) (set-var T 3) (set-var O 2) (seg-call))
-           (// (? (= 146 #t) (= 137 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))
+           (// (? (= 146 #t) (= 137 #f)) (nop@) (set-var T 3) (set-var O 1) (seg-call))    ; (set-reg 137 #t)
            (//                           (nop@) (set-var T 3) (set-var O 0) (seg-call)))))
 ; Move
      (/ (nop@) (set-var T 4) (set-var O 0) (seg-call))
@@ -160,20 +160,26 @@
    (str "That's right... Working at the hospital with" 'br)
    (str "Kirara sounds far better... Urrrgh!")
    (proc 15)
+
+; 	Hello, Kirara!
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_433.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues
+
    (proc 2)
        ; Tanchi:
            (str "Kirara! You're okay!")
    (proc 15)
-   (proc 13)
+   (proc 13) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Of course I'm okay! Like I'd ever" 'br)
    (str "lose to a dolt like that!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "That's Dengeki Nurse for you.")
@@ -265,12 +271,19 @@
    (str "announcer is most likely crying over Senna's" 'br)
    (str "retirement...")
    (proc 15)
+
+; 	And who should show up on Tanchi's car but...!
+
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 7 30)
    (exec-mem 19456 1 8 39 102 39 8 39 102 74 7 1)
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_437.gpc,GPC")
    (image-mem 0 0)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
+
+; 	Text continues
+
    (proc 11)
+       ; Nurse THE SENNA:
                     (str "Hey hey HEY! How dare you do that")
    (str "to me!")
    (proc 15)
@@ -284,6 +297,7 @@
                   (str "What a pain in the butt!")
    (proc 15)
    (proc 11)
+       ; Nurse THE SENNA:
                     (str "Look who's talking! Don't try" 'br)
    (str "acting tough with that tiny chest of yours!")
    (proc 15)
@@ -293,6 +307,7 @@
    (str "bring up the one thing I'm most sensitive about!")
    (proc 15)
    (proc 11)
+       ; Nurse THE SENNA:
                     (str "Heh heh heh! I'll say it as many" 'br)
    (str "times as I want! Flatty! Flatty! Flaaaaaaaaaatty!")
    (proc 15)
@@ -303,6 +318,7 @@
    (str "volt nurse!")
    (proc 15)
    (proc 11)
+       ; Nurse THE SENNA:
                     (str "That's my line! I'm going to" 'br)
    (str "annihilate you with my patented Sonic Vomit" 'br)
    (str "Attack!")
@@ -312,6 +328,9 @@
            (str "Whoa whoa whoa! You two shouldn't be" 'br)
    (str "fighting in a place like this!")
    (proc 15)
+
+; 	Battle time
+
    (exec-mem 2816 "EXIT")
    (exec-mem 10752 "EXIT")
    (set-var U 11)
@@ -330,6 +349,7 @@
    (str "don't sweat it!")
    (proc 15)
    (proc 12)
+       ; Nakajima:
              (str "Tanchi, don't panic! Just work your way" 'br)
    (str "up the order!")
    (proc 15)
@@ -342,9 +362,11 @@
            (str "Hello? Hello?")
    (proc 15)
    (proc 10)
+       ; Moguri:
            (str "What's wrong? Did something bad happen?")
    (proc 15)
    (proc 10)
+       ; Moguri:
            (str "AH!!!")
    (proc 15)
    (proc 2)
@@ -352,9 +374,11 @@
            (str "Seriously, what's wrong with you?")
    (proc 15)
    (proc 10)
+       ; Moguri:
            (str "......")
    (proc 15)
    (proc 10)
+       ; Moguri:
            (str "It's here! It's here! The vaccine just" 'br)
    (str "arrived! My poops and fever are history, and the" 'br)
    (str "spots on my face are gone!")
@@ -365,6 +389,7 @@
    (str "day.")
    (proc 15)
    (proc 10)
+       ; Moguri:
            (str "Pit in as soon as you can! Leave the rest" 'br)
    (str "of the race to me!")
    (proc 15)
@@ -378,6 +403,7 @@
  (seg (? (= T 2) (= O 2))
    (proc 18)
    (proc 10)
+       ; Moguri:
            (str "Come back without losing more positions if")
    (str "you can!")
    (proc 15)
@@ -406,6 +432,9 @@
        ; Dengeki Nurse:
                   (str "I'll finish her in one shot!")
    (proc 15)
+
+; 	Dengeki Nurse makes her shot!
+
    (text-color 1)
    (text-color 1)
    (sound '|| 0)
@@ -413,6 +442,7 @@
    (str "Fwooooosh!")
    ((cmd 195) 0 1)
    (proc 15)
+
    ((cmd 196) 0 0)
    (exec-mem 2816 "VIEW 5 152 37 337,PUT 10 5 152,FREE 10")
    (exec-mem 6656 1 0 1 6 0)
@@ -421,9 +451,13 @@
    (text-color 1)
    (str "KABOOOOOOM!")
    (proc 15)
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
+
+; 	Text continues.
+
    (proc 2)
        ; Tanchi:
            (str "Kirara, that was the wrong car.")
@@ -452,18 +486,22 @@
            (str "Kirara, maybe you need to dial it back a" 'br)
    (str "little.")
    (proc 15)
-   (proc 13)
+   (proc 13) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "I'll get it this time for sure!")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
+
+; 	Dengeki Nurse tries again...
+
    (text-color 1)
    (sound '|| 0)
    (sound '|se | 20)
    (str "Fwooooosh!")
    ((cmd 195) 0 1)
    (proc 15)
+
    ((cmd 196) 0 0)
    (exec-mem 2816 "VIEW 27 144 59 329,PUT 6 27 144,FREE 6")
    (exec-mem 6656 1 0 1 4 0)
@@ -472,9 +510,13 @@
    (text-color 1)
    (str "KABOOOOOOM!")
    (proc 15)
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
+
+; 	Text continues
+
    (proc 2)
        ; Tanchi:
            (str "I don't know how to bring this up, but you")
@@ -514,12 +556,16 @@
        ; Dengeki Nurse:
                   (str "It's fine, I'll get her next time!")
    (proc 15)
+
+; 	Dengeki Nurse takes one more shot...
+
    (text-color 1)
    (sound '|| 0)
    (sound '|se | 20)
    (str "Fwooooosh!")
    ((cmd 195) 0 1)
    (proc 15)
+
    ((cmd 196) 0 0)
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
    (exec-mem 6656 1 0 1 8 0)
@@ -528,9 +574,13 @@
    (text-color 1)
    (str "KRAKABOOOOOOOM!")
    (proc 15)
+
    (sound '|| 0)
    (sound '|| "uso¥Nurse13.uso")
    (sound '|| 3)
+
+; 	Text continues...
+
    (proc 2)
        ; Tanchi:
            (str "Wow! And on your first try!")
@@ -569,7 +619,7 @@
    (text-color 7)
    (str "I turn the wheel into the corner.")
    (proc 15)
-   (exec-mem 6656 1 0 1 4 0)
+   (exec-mem 6656 1 0 1 4 0) ; Screen shakes
    (text-color 1)
    (str "WUBWUBWUBWUBWUB!")
    (proc 15)

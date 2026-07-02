@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Tanchi and Kirara convene at the parking lot.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -11,7 +11,7 @@
 
 ; 	Character portraits:
 
-  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
+  (define-proc 11 (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Portrait (Happy)
   (define-proc 12 (<> (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4))) ; Confused
 
 ; 	Setup continues...
@@ -71,39 +71,39 @@
 ; Think
      (/
       (if (</>
-           (// (? (= 161 #t))                       (nop@) (set-var T 0) (set-var O 5) (seg-call))
-           (// (? (= 160 #t) (= 161 #f))            (nop@) (set-var T 0) (set-var O 4) (seg-call))
+           (// (? (= 161 #t))                       (nop@) (set-var T 0) (set-var O 5) (seg-call))    ; (set-reg 170 #t)
+           (// (? (= 160 #t) (= 161 #f))            (nop@) (set-var T 0) (set-var O 4) (seg-call))    ; (set-reg 168 #t)
            (// (? (= 159 #t) (= 160 #f))            (nop@) (set-var T 0) (set-var O 3) (seg-call))
-           (// (? (= 158 #t) (= 159 #f))            (nop@) (set-var T 0) (set-var O 2) (seg-call))
+           (// (? (= 158 #t) (= 159 #f))            (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 163 #t)
            (// (? (= 157 #t) (= 158 #f))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
-           (//                                      (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
+           (//                                      (nop@) (set-var T 0) (set-var O 0) (seg-call))))) ; (set-reg 165 #t)
 ; Look
      (/
       (if (</>
            (// (? (= 161 #t))                       (nop@) (set-var T 1) (set-var O 6) (seg-call))
            (// (? (= 160 #t) (= 161 #f))            (nop@) (set-var T 1) (set-var O 5) (seg-call))
            (// (? (= 159 #t) (= 160 #f))            (nop@) (set-var T 1) (set-var O 4) (seg-call))
-           (// (? (= 163 #t) (= 159 #f))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 157 #t) (= 163 #f))            (nop@) (set-var T 1) (set-var O 2) (seg-call))
-           (// (? (= 162 #t) (= 157 #f))            (nop@) (set-var T 1) (set-var O 1) (seg-call))
-           (//                                      (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
+           (// (? (= 163 #t) (= 159 #f))            (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 159 #t)
+           (// (? (= 157 #t) (= 163 #f))            (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 158 #t)
+           (// (? (= 162 #t) (= 157 #f))            (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 167 #t)
+           (//                                      (nop@) (set-var T 1) (set-var O 0) (seg-call))))) ; (set-reg 166 #t)
 ; Talk
      (/
       (if (</>
-           (// (? (= 161 #t))                       (nop@) (set-var T 2) (set-var O 7) (seg-call))
-           (// (? (= 168 #t) (= 161 #f))            (nop@) (set-var T 2) (set-var O 6) (seg-call))
+           (// (? (= 161 #t))                       (nop@) (set-var T 2) (set-var O 7) (seg-call))    ; (set-reg 169 #t)
+           (// (? (= 168 #t) (= 161 #f))            (nop@) (set-var T 2) (set-var O 6) (seg-call))    ; (set-reg 161 #t)
            (// (? (= 160 #t) (= 168 #f))            (nop@) (set-var T 2) (set-var O 5) (seg-call))
-           (// (? (= 159 #t) (= 160 #f))            (nop@) (set-var T 2) (set-var O 4) (seg-call))
+           (// (? (= 159 #t) (= 160 #f))            (nop@) (set-var T 2) (set-var O 4) (seg-call))    ; (set-reg 160 #t)
            (// (? (= 157 #t) (= 159 #f))            (nop@) (set-var T 2) (set-var O 3) (seg-call))
-           (// (? (= 167 #t) (= 157 #f))            (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 164 #t) (= 165 #t) (= 166 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))
-           (//                                      (nop@) (set-var T 2) (set-var O 0) (seg-call)))))
+           (// (? (= 167 #t) (= 157 #f))            (nop@) (set-var T 2) (set-var O 2) (seg-call))    ; (set-reg 157 #t)
+           (// (? (= 164 #t) (= 165 #t) (= 166 #t)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 162 #t)
+           (//                                      (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 164 #t)
 ; Action
      (/ (nop@) (set-var T 3) (set-var O 0) (seg-call))
 ; Move
      (/
       (if (</>
-           (// (? (= 169 #t) (= 170 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (// (? (= 169 #t) (= 170 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; (mes-jump "b:¥mes¥ns14_15.mes")
            (//                                      (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
@@ -181,26 +181,27 @@
    (set-reg 166 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (text-color 7)
    (str "Kirara's got a bright smile.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
 
    (exec-mem 2816 "GET 1 25 198 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
    (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
    (exec-mem 2816 "ACCESS 0")
    (exec-mem 2816 "VIEW 25 198 35 295,PUT 2 25 198,FREE 2")
-
-; 	^ The display code for this face portrait is custom, as it is meant to be positioned above where the upwards arrow appears in the text.
+; ^ The display code for this face portrait is custom, as it is meant to be positioned above where the upwards arrow appears in the text.
+;   You can compare the values of this to the default portrait display code to figure out how to change the coordinates.
 
    (text-color 7)
    (str "Normally she'd make this (") (text "↑") (str ") face and say") (text "“") (str "Don't" 'br)
    (str "be ridiculous!") (text "”") (str "or something...")
    (proc 15)
 
-   (exec-mem 2816 "VIEW 25 198 35 295,PUT 1 25 198,FREE 1") ; Remember to change this if you change the coordinates for the portrait above
+   (exec-mem 2816 "VIEW 25 198 35 295,PUT 1 25 198,FREE 1")
+; ^ Remember to change this if you change the coordinates for the portrait above
 
    (text-color 7)
    (str "Wait... Could this be... Maybe... Maybe this is" 'br)
@@ -222,14 +223,17 @@
    (text-color 7)
    (str "Oh! Someone's getting out of the Testarossa.")
    (proc 15)
+
    (exec-mem 2816 "VIEW 12 89 32 303,OVER 1,PUT 6 12 89,FREE 6")
-   (proc 11) ; Happy
+; ^ It's the mystery lady
+
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Oh, thanks for helping out before. I" 'br)
    (str "really needed the assist.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Huh? You two know each other?")
@@ -261,13 +265,13 @@
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What's wrong? Why'd you come all the way" 'br)
    (str "out here?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 164 #t))
  (seg (? (= T 2) (= O 1))
@@ -276,12 +280,12 @@
        ; Tanchi:
            (str "Kirara...")
    (proc 15)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "What? What's with that serious face?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "About my promise from before... What" 'br)
@@ -292,7 +296,7 @@
        ; Kirara:
            (str "What should I do?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 162 #t))
  (seg (? (= T 2) (= O 2))
@@ -308,27 +312,27 @@
            (str "Yeah... You put in the hard work," 'br)
    (str "Tanchi...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "S-So you'll acknowledge that, at least...?")
    (proc 15)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "If Moguri wins.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 19)
    (set-reg 157 #t))
  (seg (? (= T 2) (= O 3))
    (proc 18)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I hope Moguri wins.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Yes! Exactly!")
@@ -337,6 +341,7 @@
  (seg (? (= T 2) (= O 4))
    (proc 18)
    (proc 10)
+       ; Mystery Lady:
                  (str "Er, I'd like to give this to you.")
    (proc 15)
    (proc 2)
@@ -344,22 +349,22 @@
            (str "Huh? You're giving this to me?")
    (proc 15)
    (proc 10)
+       ; Mystery Lady:
                  (str "No, not you. To the young lady over" 'br)
    (str "there.")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 40 0 10 96") ; Shocked
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 40 0 10 96") (proc 4) ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "To me?")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "So what are you giving here?")
    (proc 15)
    (proc 10)
+       ; Mystery Lady:
                  (str "This tanuki statue.")
    (proc 15)
    (proc 19)
@@ -367,6 +372,7 @@
  (seg (? (= T 2) (= O 5))
    (proc 18)
    (proc 10)
+       ; Mystery Lady:
                  (str "Would you please accept it?")
    (proc 15)
    (proc 19))
@@ -377,36 +383,40 @@
            (str "Um. Um. Why are you giving that to her?")
    (proc 15)
    (proc 10)
+       ; Mystery Lady:
                  (str "If my daughter were still alive," 'br)
    (str "she'd be about the same age as this young woman...")
    (proc 15)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I see...")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "B-But... Why a tanuki, of all things?")
    (proc 15)
    (proc 10)
+       ; Mystery Lady:
                  (str "I thought it could come in handy, in")
    (str "some way... Will you take it?")
    (proc 15)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Certainly... I'll gladly take it.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 10)
+       ; Mystery Lady:
                  (str "Thank you. Well then, I must be off.")
    (proc 15)
+
    (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 10752 "COPY> b:¥gpc¥ns1_438.gpc,GPC")  (image-mem 0 0) (exec-mem 2816 "ACCESS 0") (exec-mem 6656 5 48 48 303)
    (exec-mem 2816 "SHOW 0,ACCESS 1") (exec-mem 10752 "COPY> b:¥gpc¥face_w00.gpc,GPC") (image-mem 0 0) (exec-mem 2816 "ACCESS 0")
+; ^ The lady disappears and the car drives off.
+
    (proc 19)
    (set-reg 161 #t))
  (seg (? (= T 2) (= O 7))
@@ -417,12 +427,12 @@
    (str "this statue, but I've gotta be the guy to carry" 'br)
    (str "it?")
    (proc 15)
-   (proc 11) ; Happy
+   (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Well, it's too heavy for me.")
    (proc 15)
-   (proc 6)
+   (proc 6) ; Clear Portrait
    (proc 2)
        ; Tanchi:
            (str "Ugh... I haven't got any stamina left...")

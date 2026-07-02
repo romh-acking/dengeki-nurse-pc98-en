@@ -24,79 +24,103 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   ((cmd 209) 1 2)
+
+; 	Text begins here...
+
   (proc 11)
+      ; Monitor:
            (str "Come in, Black Nurse! I've found someone" 'br)
   (str "with Elektros blood!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Took you long enough!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Cut me some slack! There's only one person")
   (str "with it on the planet!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Fine, fine, just tell me who already!")
   ((cmd 195) 0 65535)
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Ho ho ho! Feast your eyes upon the" 'br)
   (str "monitor!")
   ((cmd 195) 0 65535)
   (proc 16)
+
   ((cmd 197) 0 16)
   (exec-mem 1280 13 12 15 13)
   (exec-mem 1280 14 4 15 10)
   (exec-mem 6656 28 20 52 152)
+; ^ screen changes
+
   (proc 10)
+      ; Black Nurse:
                (str "What, a little girl? This should be" 'br)
   (str "easy!")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Anything but! She's under full protection.")
   (str "There's no way to even get close.")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "The word") (text "“") (str "impossible") (text "”") (str "is not in my" 'br)
   (str "dictionary...")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Then throw it away, it's missing a word!")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Impossibility is not a factor for" 'br)
   (str "Black Nurse!")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "All right then, I'll send you the data." 'br)
   (str "Give it a once over and think it through.")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Let's see here... Hmmm. Hmm, yes." 'br)
   (str "I see...... Hmph....")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Well? Your thoughts?")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Grrrrrrrrrrrrr.")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "Why so irritated, hmm?")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "The hell IS this? It's going to be a" 'br)
   (str "pain in the rump to get even NEAR this brat!")
   (proc 16)
   (proc 11)
+      ; Monitor:
            (str "That's why I'm telling you to take the" 'br)
   (str "loss. If Napoleon had to bail in the Russian winter")
   (str "then it's hopeless for you...")
   (proc 16)
   (proc 10)
+      ; Black Nurse:
                (str "Shut it!!!")
   (proc 16)
   ((cmd 209) 0 2)
