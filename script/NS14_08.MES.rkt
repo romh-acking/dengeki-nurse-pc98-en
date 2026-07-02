@@ -199,6 +199,9 @@
        ; Tanchi:
            (str "Huh?" 'br)
    (text-color 4)
+
+; 	It's Kirara!
+
    (exec-mem 34128 0 6 "■" 66 376)
    (exec-mem 10752 "EXIT")
 ; PC-98
@@ -207,6 +210,9 @@
 ;  (exec-mem 19456 4 16 51 303 1 1 4 72)
    (text-frame 3 324 52 379)
    (text-reset 15)
+
+; 	Text continues.
+
    (proc 2)
        ; Tanchi:
            (str "Oh, it's just you, Kirara.")

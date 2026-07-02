@@ -598,8 +598,8 @@
    (proc 6) ; Clear Portrait
    (proc 12)
        ; Mr. Blister:
-                (str "According to our connections, you" 'br)
-   (str "two are likely most suitable to deal with them...")
+                (str "According to our connections, you two")
+   (str "are likely most suitable to deal with them...")
    (proc 15)
    (proc 2)
        ; Tanchi:

@@ -76,7 +76,8 @@
   (proc 10)
       ; Nakajima:
             (str "Senna and Mansell are right behind you." 'br)
-  (str "They'll a move at the first corner, so stay sharp!")
+  (str "They'll make a move at the first corner, so stay" 'br)
+  (str "sharp!")
   (proc 15)
   (proc 2)
       ; Tanchi:

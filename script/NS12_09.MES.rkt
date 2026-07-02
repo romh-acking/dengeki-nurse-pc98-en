@@ -10,7 +10,7 @@
 ; 	Similar situation to NS12_03, putting unique portrait code in these procs
 
   (define-proc 10 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 11 (<> (proc 10) (exec-mem 2816 "PUT 4 5 23"))) ; 
+  (define-proc 11 (<> (proc 10) (exec-mem 2816 "PUT 4 5 23"))) ; Sad
   (define-proc 12 (<> (proc 10) (exec-mem 2816 "PUT 6 5 23"))) ; Angry
 
 ; 	Setup continues...

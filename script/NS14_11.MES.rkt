@@ -8,7 +8,7 @@
  (seg*
   (load-mem "cmd¥cappear.tcm" 6656)
 ; (define-proc 10 (<> (text-color 1)  (str "Announcer: "))) <--- Sacrificing this so that the nurse portraits can do some space-saving
-  (define-proc 11 (<> (text-color 8)  (proc 2) (exec-mem 2816 "GET 2 40 192 10 96") (proc 5) (str "Nurse THE MANSELL: ")))
+  (define-proc 11 (<> (text-color 8)  (proc 1) (exec-mem 2816 "GET 2 40 192 10 96") (proc 5) (str "Nurse THE MANSELL: ")))
   (define-proc 12 (<> (text-color 11) (proc 7) (exec-mem 2816 "GET 2 30 192 10 96") (proc 9) (str "Nurse THE SENNA: ")))
 
 ; 	Kirara portraits:
@@ -18,7 +18,7 @@
 ; 	Nurse portraits:
 ; 	(Yes, it's so bad that I am borrowing an actively-used process to save a bit of space on this)
 
-  (define-proc 2  (<> (exec-mem 2816 "GET 1 5 198 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1"))) ; Display Mansell pt. 1
+  (define-proc 1  (<> (exec-mem 2816 "GET 1 5 198 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1"))) ; Display Mansell pt. 1
   (define-proc 5  (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 5 198 15 294,PUT 2 5 198,FREE 2"))) ; Display Mansell pt. 2
   (define-proc 7  (<> (exec-mem 2816 "GET 1 40 198 10 96") (exec-mem 2816 "SHOW 0,ACCESS 1"))) ; Display Senna pt. 1
   (define-proc 9  (<> (exec-mem 2816 "ACCESS 0") (exec-mem 2816 "VIEW 40 198 50 294,PUT 2 40 198,FREE 2"))) ; Display Senna pt. 2
