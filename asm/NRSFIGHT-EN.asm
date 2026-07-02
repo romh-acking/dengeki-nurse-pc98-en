@@ -1,18 +1,17 @@
+; Dengeki Nurse Battle Program (NRSFIGHT.CMD) - English Translation
+; Patch developed by Valley Bell, finished on 2026-04-30
+; Translation by Geometrizer, edited by trentsignia
+;
 ; Assembling using NASM:
 ;	nasm -f bin -o NRSFIGHT-EN.CMD -l NRSFIGHT-EN.LST "NRSFIGHT-EN.asm"
 ;	This requires NRSFIGHT.CMD (35 088 bytes) to be in the same folder.
 
-;TODO: test "Pepe" battle for proper word breaking
 	use16
 	cpu	186
 CODE_BASE_OFS EQU 0400h
 DATA_BASE_OFS EQU 50D0h	; 0400h+4CD0h
 
 	org	-DATA_BASE_OFS
-
-	; patch relocation table in modified functions
-	;incbin "VG.EXE", $, 0FB6h-($-$$)
-	;dw	RelocDummy, 000h	; originally: LoadText_DS: seg018:j_DrawTextChar (0525h:0B06h)
 
 	; LoadD1CVC (1965h)
 	incbin "NRSFIGHT.CMD", $, 1972h - ($-$$-CODE_BASE_OFS)
@@ -223,7 +222,7 @@ dtc_draw_shiftjis:
 	xchg	dh, dl
 	call	DrawTextChar
 	
-	mov	dx, word [3CF4h]	; get character size + width as determined by BIOS call
+	mov	dx, word [3CF4h]	; get character height + width as determined by BIOS call
 	xor	ah, ah
 	mov	al, dl
 	add	si, ax		; increase text data pointer using character size
@@ -1481,8 +1480,8 @@ txtEnm0E_7:
 	DB	"Fool! As if that would work on ME!", 0
 
 
-txtEnm00_7:	; "メッセージ未作成" <- "Message not yet created", this is unused
-	DB	83h, 81h, 83h, 62h, 83h, 5Ah, 81h, 5Bh, 83h, 57h, 96h, 0A2h, 8Dh, 0ECh, 90h, 0ACh, 0
+txtEnm00_7:	; "メッセージ未作成" [unused]
+	DB	"Message not yet created", 0
 
 
 %assign data_space DATA_BASE_OFS+36B6h-($-$$)

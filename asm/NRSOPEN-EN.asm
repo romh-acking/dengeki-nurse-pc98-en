@@ -1,9 +1,10 @@
 ; Dengeki Nurse Opening (NRSOPEN.TCM) - English Translation
-; Patches to support additional English subtitles by Valley Bell
-; Developed on 2026-02-28
+; Patch to support additional English subtitles by Valley Bell, developed on 2026-02-28
+; Translation by trentsignia
 ;
 ; Assembling using NASM:
 ;	nasm -f bin -o "NRSOPEN-EN.TCM" -l "NRSOPEN-EN.lst" "NRSOPEN-EN.asm"
+;	This requires NRSOPEN.TCM (9 737 bytes) to be in the same folder.
 
 	use16
 	cpu	186
@@ -2502,6 +2503,7 @@ StaffTextPtrs:	; 1A98h
 
 staffptrs_00:
 	DW	role00_jp, role00_en, name00_jp, name00_en, 0
+
 role00_jp:	; "企画・監修"
 	DB	8, 6	; x, y
 	DB	8Ah, 0E9h, 89h, 0E6h, 81h, 45h, 8Ah, 0C4h, 8Fh, 43h, 0
