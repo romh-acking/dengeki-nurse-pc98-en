@@ -7,6 +7,8 @@ set asmFolder=%projectFolder%\asm
 ::Tools
 set toolsFolder=%projectFolder%\tools
 set juiceFolder=%toolsFolder%\juice
+:: add tool folders to PATH so that we don't need to specify full paths later
+@set PATH=%toolsFolder%;%juiceFolder%;%PATH%
 
 ::Roms Original
 set hardDrive=%projectFolder%\roms\Dengeki Nurse.hdi
@@ -25,29 +27,25 @@ rmdir /q /s "%filesHdi%"
 
 mkdir "%filesHdi%"
 
-"%toolsFolder%/NDC.exe" G "%hardDrive%" 0 "%filesHdi%"
+ndc G "%hardDrive%" 0 "%filesHdi%"
 @pause
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: ASM
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-"%toolsFolder%/nasm.exe" -f bin -o "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" -l "NRSOPEN-EN.lst" "%asmFolder%/NRSOPEN-EN.asm"
-del "NRSOPEN-EN.lst"
-"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\CMD\NRSOPEN.TCM" "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" > NUL
-@if errorlevel 1 echo "Error patching HDI file!"
+cd "%asmFolder%"
+nasm -f bin -o "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" "NRSOPEN-EN.asm"
+ndc U "%hardDriveNew%" 0 "NURSE\CMD\NRSOPEN.TCM" "%filesHdi%\NURSE\CMD\NRSOPEN.TCM" > NUL
+@if errorlevel 1 echo "Error copying NRSOPEN.TCM to HDI!"
 
+copy "%filesHdi%\NURSE\NRSFIGHT.CMD" "%asmFolder%\"
+nasm -f bin -o "%filesHdi%\NURSE\NRSFIGHT.CMD" "NRSFIGHT-EN.asm"
+ndc U "%hardDriveNew%" 0 "NURSE\NRSFIGHT.CMD" "%filesHdi%\NURSE\NRSFIGHT.CMD" > NUL
+@if errorlevel 1 echo "Error copying NRSFIGHT.CMD to HDI!"
 
-copy "%asmFolder%\NRSFIGHT-EN.asm" "%filesHdi%\NURSE\NRSFIGHT-EN.asm"
-cd "%filesHdi%\NURSE"
-"%toolsFolder%/nasm.exe" -f bin -o "%filesHdi%\NURSE\NRSFIGHT-EN.CMD" "%filesHdi%\NURSE\NRSFIGHT-EN.asm"
-del "NRSFIGHT.CMD"
-move "NRSFIGHT-EN.CMD" "NRSFIGHT.CMD"
-"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\NRSFIGHT.CMD" "%filesHdi%\NURSE\NRSFIGHT.CMD" > NUL
-@if errorlevel 1 echo "Error patching HDI file!"
-@pause
-
-"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\DAT\NRSENEMY.DAT" "%asmFolder%\NRSENEMY.DAT" > NUL
+ndc U "%hardDriveNew%" 0 "NURSE\DAT\NRSENEMY.DAT" "%asmFolder%\NRSENEMY.DAT" > NUL
+@if errorlevel 1 echo "Error copying NRSENEMY.DAT to HDI!"
 @pause
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -58,7 +56,7 @@ del "*.MES"
 del "*.mes"
 del "*.MES.rkt"
 del "*.mes.rkt"
-for /R "%scriptHdi%" %%f in (*.MES.rkt) do copy "%%f"  "%filesHdi%/NURSE/MES"
+for /R "%scriptHdi%" %%f in (*.MES.rkt) do copy "%%f" "%filesHdi%/NURSE/MES"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Compile script
@@ -68,7 +66,7 @@ for /R "%scriptHdi%" %%f in (*.MES.rkt) do copy "%%f"  "%filesHdi%/NURSE/MES"
 :: Disk 1
 ::::::::::::::::::::::::::
 cd "%filesHdi%/NURSE/MES"
-"%juiceFolder%/juice.exe" -cf --engine adv *.MES.rkt
+juice -cf --engine adv *.MES.rkt
 ren *.MES.rkt.mes ????????????????????.MES
 @pause
 
@@ -77,9 +75,6 @@ ren *.MES.rkt.mes ????????????????????.MES
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 cd "%filesHdi%/NURSE/MES"
-
-for /r %%i in (*.MES) do (
-	"%toolsFolder%/NDC.exe" U "%hardDriveNew%" 0 "NURSE\MES\%%~nxi" "%filesHdi%\NURSE\MES\%%~nxi"
-)
+for /r %%i in (*.MES) do ndc U "%hardDriveNew%" 0 "NURSE\MES\%%~nxi" "%filesHdi%\NURSE\MES\%%~nxi"
 
 @pause
