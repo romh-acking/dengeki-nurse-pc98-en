@@ -56,8 +56,7 @@
   (str "Schoolgirl B: Oh, doctor... I don't feel so" 'br)
   (str "good...")
   (proc 15)
-  (proc 9)
-  (exec-mem 2816 "PUT 10 5 23")
+  (proc 9) (exec-mem 2816 "PUT 10 5 23") ; Portrait (Shocked)
   (proc 1)
       ; Kirara:
           (str "Kyaaa! Stop it!")
@@ -449,7 +448,7 @@
        ; Schoolgirl A:
                  (str "Ahhhhh! So gooood!")
    (proc 15)
-   (proc 9) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
+   (proc 9) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "What are you doing!?")

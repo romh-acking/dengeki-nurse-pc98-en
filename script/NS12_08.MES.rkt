@@ -12,7 +12,7 @@
 ; 	Similar situation to NS12_03, putting unique portrait code in these procs
 
   (define-proc 11 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 12 (<> (exec-mem 2816 "PUT 4 5 23"))) ; 
+  (define-proc 12 (<> (proc 11) (exec-mem 2816 "PUT 4 5 23"))) ; Confused
 
 ; 	Setup continues...
 
@@ -137,7 +137,7 @@
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
-   (proc 11) (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "This is all really confusing... I don't" 'br)
@@ -153,7 +153,7 @@
    (set-reg 58 #t))
  (seg (? (= T 2) (= O 1))
    (proc 18)
-   (proc 11) (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Well, everyone else is!")
@@ -172,7 +172,7 @@
        ; Tanchi:
            (str "Maybe they're afraid of the giant fan...?")
    (proc 15)
-   (proc 11) (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "It looks normal to me.")
@@ -212,7 +212,7 @@
        ; Akiko:
           (str "Take these two to the Reflection Cell!")
    (proc 15)
-   (proc 11) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
+   (proc 11) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Noooo! Lemme go!")
@@ -234,7 +234,7 @@
    (text-color 1)
    (str "Rub rub rub...")
    (proc 15)
-   (proc 11) (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "What are you doing?")

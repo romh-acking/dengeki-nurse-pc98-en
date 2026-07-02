@@ -96,7 +96,7 @@
 ; Look
      (/
       (if (</>
-           (// (? (= 172 #t))            (nop@) (set-var T 1) (set-var O 5) (seg-call))    ; 
+           (// (? (= 172 #t))            (nop@) (set-var T 1) (set-var O 5) (seg-call))
            (// (? (= 178 #t) (= 172 #f)) (nop@) (set-var T 1) (set-var O 4) (seg-call))    ; (set-reg 172 #t)
            (// (? (= 176 #t) (= 177 #t)) (nop@) (set-var T 1) (set-var O 3) (seg-call))    ; (set-reg 180 #t)
            (// (? (= 171 #t))            (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 176 #t)
@@ -119,8 +119,8 @@
 ; Move
      (/
       (if (</>
-           (// (? (= 171 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))    ; 
-           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call))))) ; 
+           (// (? (= 171 #t))            (nop@) (set-var T 4) (set-var O 1) (seg-call))
+           (//                           (nop@) (set-var T 4) (set-var O 0) (seg-call)))))
 ; Save
      (/ (nop@) (set-var T 5) (set-var O 0) (seg-call))
 ; Unused

@@ -46,9 +46,11 @@
 
   (text-frame 13 50 71 361)
   (proc 10)
+      ; Minami:
   (str "Hi everyone, it's me, Minami!!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Good evening, Mao here!")
   (proc 15)
   (text-color 11) ; The original script uses color 4, but I think pink works better for the two speaking together
@@ -57,77 +59,97 @@
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Hey, doesn't this music sound kinda somber?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Now that you mention it, it does...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Feels like we're some sort of washed-up comedy duo.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Is this foreshadowing how Dengeki Nurse will flop and" 'br)
   (str "we'll fall into obscurity?")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Hmm... A conspiracy!!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Well, let's not worry about that and start our little talk.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Right, then! What did you think when you first saw the" 'br)
   (str "project proposal for Dengeki Nurse?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Ah, I thought") (text "“") (str "Finally, we get to make something like" 'br)
   (str "this!") (text "”")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Right, right! But not a lot of people could grasp what we" 'br)
   (str "were going for at first.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "To be honest, I'd secretly been wanting to do something" 'br)
   (str "like this for a while.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "I see. Well, I'm glad we could team up in the end.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "The moment I heard the title, I started thinking about a" 'br)
   (str "transforming-heroine story.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "And now that it's out, how do you feel?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "I think it turned out great... Though I'd be lying if I" 'br)
   (str "said there weren't any problems...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Right, it seems like it's a game for everyone, but there" 'br)
   (str "are definitely parts that aren't...")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "There are always gonna be people who can't accept that" 'br)
   (str "particular vibe.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Well, that's fine, no point worrying about it. So what was" 'br)
   (str "the hardest part of working on the game?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Creating nearly 500 pieces of original artwork...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "They...they made you draw THAT many!?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "40 for the transformation screens, 100 for the battles, 20" 'br)
   (str "for the opening, about 50 for each episode, and then...")
   (proc 16)
@@ -138,163 +160,205 @@
   (str "you got all that experience, right?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "If Dengeki Nurse gets trashed in reviews after all this, I" 'br)
   (str "won't be able to cry properly...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "You really shouldn't have to worry about that kinda thing.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "But people are already saying that it's a Battle Sk**" 'br)
   (str "ripoff, that a game that's over in 30 minutes is" 'br)
   (str "unacceptable, and other mean things...")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Mao-chan, you get way too nervous about that kind of stuff.")
   (str "People are always gonna complain, so just let them.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Is that REALLY how it works?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Of course, of course! Imitation is the start of creation!" 'br)
   (str "Take something good, use it as reference, and improve on" 'br)
   (str "it!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "That's the Japanese way!")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "If you imitate something and can't surpass the original," 'br)
   (str "you'll just get torn to shreds...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Mm, yeah, there are tons of games like that... All those" 'br)
   (str "**agon Quest and Y*-likes...")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Well, that's true enough.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Anyway, let people say whatever they want! Games are" 'br)
   (str "supposed to be fun, right?")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "You know, this whole topic is starting to sound like a big" 'br)
   (str "excuse.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Yeah, let's quit while we're ahead. Everyone, did you find" 'br)
   (str "the key to Kirara's room?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "No, I sure didn't.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Of course not! At the time of this talk, the dungeon is" 'br)
   (str "still bugged!")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "Ahh! Spoiler! You mentioned the dungeon!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Yes, well, moving on.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Minami-san, what part of Dengeki Nurse do you like the" 'br)
   (str "most?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Let me think... Probably the half-assed battle system I" 'br)
   (str "tossed together.")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "I think it wound up being surprisingly fun.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Mao-chan, what about you? What parts do you like?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Speaking as the Doctor of Drawing, I like the flashy retro" 'br)
   (str "palette. It goes against the recent trends.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "You think it's retro?")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "These days, everyone seems to use muted mid-tone colors.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "That's good too, it's pretty, but I like to think Dengeki" 'br)
   (str "Nurse has its own charm.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Well, from the start we wanted something anime-style.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Yeah, and I like how the window graphics pop up, that's" 'br)
   (str "really manga and anime-like.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Especially the part where she fires the bazooka!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Yeah yeah yeah!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Okay, what about the opposite... Is there anything you" 'br)
   (str "didn't like, or things you regret?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Let me think. Probably all the things we couldn't do" 'br)
   (str "because of hardware limitations.")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "Especially the transformation sequence. There was still" 'br)
   (str "stuff I wanted to do that the hardware couldn't handle.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Even so, the programemrs worked like crazy and actually" 'br)
   (str "listened to our ridiculous demands.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "That's true. For me, it was my first time doing animation" 'br)
   (str "work, so you can really see me struggling.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Hmm... My biggest regret is just how bad my own drawings" 'br)
   (str "are!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Yes, yes, reflect on your mistakes.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "What!? Those aren't comforting words at all!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "My regret is all the ideas we couldn't implement because of")
   (str "memory limits and deadlines...")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Like trailers.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Exactly! Let's show the preview right here!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "In text...?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Better than not doing it at all! All right, the") (text "“") (str "Dengeki" 'br)
   (str "Nurse 2") (text "”") (str "trailer, let's roll it!")
   (proc 16)
@@ -391,251 +455,315 @@
 ; (sound '|| "nurse08.fmt")
   (sound '|| 1)
   (proc 11)
+      ; Mao:
   (str "Clap clap clap clap clap clap!!!" 'br)
   (str "(Applause for the previous line)")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Huh? The music suddenly perked up?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Does this mean a bright future is on the horizon?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "So if we did make a sequel, what would you want to do?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Hmmmmmm. I'd want to make a rival for Dengeki Nurse.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Yeah, that would be good, maybe a romantic rival fighting" 'br)
   (str "over Tanchi.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "How about fully-animated battle scenes?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "That's impossible!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Either way, I'd like to expand the animation aspect.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Right. This time it wasn't about doing as much animation as")
   (str "we could, but more like experimenting on whether we could" 'br)
   (str "do it in the first place.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "But if we did make a 2, it'd have to be an action game!" 'br)
   (str "Like V*lis! Hahahahaaaa!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "That might be a bit excessive.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Well, Minami-san, you are bad at action games!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Oh, can it! You're one to talk, you kept getting your ass" 'br)
   (str "kicked in Dengeki Combat!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "It's fine! I learned a secret technique so I can win now." 'br)
   (text "ＵＵＤＤＬＲＬＲ") (str " ...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Noooo! That's privileged top-secret company information!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Anyway, I hope people laugh at the cool backgrounds during" 'br)
   (str "battles.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Those backgrounds made the graphics hard to compress, you" 'br)
   (str "know!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Ahhh...yes...sorry about that...")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "We aimed for fast on-memory battles, but the loading took" 'br)
   (str "too long.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Still, the fact that we got the battles to run with that" 'br)
   (str "many images loaded in RAM is pretty impressive.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "We owe a lot to our programmer Kuni-chan, who even synced" 'br)
   (str "the lyrics for us.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "That's right, did everyone listen to the included CD? It's" 'br)
   (str "pretty great, isn't it?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "The music team worked really hard. I heard the recording" 'br)
   (str "was tough.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "For real?")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Well, imagine telling people who usually play prog rock or" 'br)
   (str "jazz,") (text "“") (str "OK, do an anime theme song!") (text "”")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Mm, that is asking a lot.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "And evidently someone brought a double-neck guitar to the" 'br)
   (str "recording session.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Would you typically use that for a Ventures-style sound? I" 'br)
   (str "wish they had gone with a Mosrite...")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "I don't really get it, but...sounds like a real struggle.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Like your struggle with the box art.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Yeah, my first draft got rejected." 'br)
   (str "(Stupid producer!)")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "But to be fair, it's not like I typically draw color" 'br)
   (str "illustrations anyway." 'br)
   (str "(Excuses! Excuses! Excuses!)")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Well, I think it turned out well. And ") (text "ＣＨＩＫＡ") (str "-chan's" 'br)
   (str "vocals were super cute.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Changing the subject, but... I heard there's a secret trick")
   (str "to the game?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Ah... Well, it's so stupid I wouldn't get too worked up" 'br)
   (str "over it.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "But now I gotta know! Tell me, tell me!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "No, and spoil the player's fun?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Ahh... Drawing 500 pieces of artwork really tired me out!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Grrrr. Okay, then! I'll give you one hint.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Go on...")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Somewhere in Episode 2, if you click a certain spot, a" 'br)
   (str "slightly dirty message pops up. That's it.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "But isn't the place you have to click...kind of weird?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Oho! So you DO know about it!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Haha... The location bothered me, so I wanted to ask you" 'br)
   (str "about it.")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "I know nothing! Naka-chan (programmer Nakatani) made the" 'br)
   (str "call!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "So maybe HE thought that was the right spot?")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "So what do you think? That's not the ACTUAL position," 'br)
   (str "right?")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "I don't know! (Blushing) You're the one who knows about" 'br)
   (str "that stuff!")
   (proc 16)
 
   (proc 11)
+      ; Mao:
   (str "No, I don't have enough experience.")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Anyway, I don't know anything about that! I'm calling this" 'br)
   (str "interview over!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "All right, then one last message to all the users.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Please send us your impressions! And photos, if you" 'br)
   (str "cosplay! Send your doujinshi, too (even if it's R-rated)!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Please buy Kera Kera Boshi!" 'br)
   (str "(Scheduled for release October 30, 1992)")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "And to all my personal acquaintances, thank you for all" 'br)
   (str "your advice.")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Hearing everyone say") (text "“") (str "I'm looking forward to it") (text "”") (str "really" 'br)
   (str "kept me going!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Thanks to you, we managed to finish it! So make sure you" 'br)
   (str "all buy two copies!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "Yuriko-chan, Shiori-chan, Yuu-chan! Sorry I couldn't hang" 'br)
   (str "out during summer vacation!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "Once Dengeki Nurse wraps I should have a bit more free" 'br)
   (str "time, so let's go hang out at Disneyland!")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "And to all the staff, thank you so much! You understood" 'br)
   (str "everything from") (text "“") (str "poyooooon") (text "”") (str "to") (text "“") (str "dokaaaan!") (text "”")
   (proc 15)
   (proc 11)
+      ; Mao:
   (str "Seriously, though, truly great work, everyone! But... If" 'br)
   (str "possible, let's die again making number 2!")
   (proc 16)
 
   (proc 10)
+      ; Minami:
   (str "I'm truly grateful to all the staff. I think this game was" 'br)
   (str "made through everyone's combined effort!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "I know I made a bunch of selfish requests, but I hope we" 'br)
   (str "can keep working together!")
   (proc 15)
   (proc 10)
+      ; Minami:
   (str "And to everyone who bought and played the game...")
   (proc 15)
   (text-color 11)

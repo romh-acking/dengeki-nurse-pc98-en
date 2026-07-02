@@ -9,7 +9,7 @@
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
   (define-proc 10 (<> (text-color 11) (str "Momoko: ")))
-  (define-proc 11 (<> (text-color 5)  (str "Old Lady: ")))
+  (define-proc 11 (<> (text-color 5)  (str "Cleaning Lady: ")))
 
 ; 	Character portraits:
 
@@ -480,8 +480,8 @@
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
 
-   (define-proc 10 (<> (text-color 11) (str "Momoko: ")))
-   (define-proc 11 (<> (text-color 5)  (str "Old Lady: ")))
+;  (define-proc 10 (<> (text-color 11) (str "Momoko: ")))
+;  (define-proc 11 (<> (text-color 5)  (str "Cleaning Lady: ")))
    (proc 19)
    (set-var B 2)
    (set-var C 2)))

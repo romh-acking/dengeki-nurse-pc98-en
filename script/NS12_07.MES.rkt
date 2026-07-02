@@ -14,8 +14,8 @@
 
   (define-proc 9  (<> (proc 3) (exec-mem 2816 "GET 2 10 0 10 96") (proc 4))) ; Happy
   (define-proc 12 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
-  (define-proc 13 (<> (exec-mem 2816 "PUT 6 5 23")))  ; 
-  (define-proc 14 (<> (exec-mem 2816 "PUT 14 5 23"))) ; 
+  (define-proc 13 (<> (proc 12) (exec-mem 2816 "PUT 6 5 23")))  ; Angry
+  (define-proc 14 (<> (proc 12) (exec-mem 2816 "PUT 14 5 23"))) ; Shouting
 
 ; 	Setup continues...
 
@@ -74,7 +74,7 @@
           (str "We need your help to save Cybernetic" 'br)
    (str "Girls' School!")
   (proc 15)
-  (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait ()
+  (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait (Confused)
   (proc 1)
       ; Kirara:
           (str "Save") (text "−") (str "?")
@@ -219,7 +219,7 @@
    (set-reg 53 #t))
  (seg (? (= T 1) (= O 2))
    (proc 18)
-   (proc 12) (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Angry)
    (text-color 7)
    (str "Kirara's fuming, veins popping out and everything.")
    (str "Why'd she get mad so easily?")
@@ -243,7 +243,7 @@
    (str "to call the Board of Education or, you know, a" 'br)
    (str "human rights group?")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 12 5 23") ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "This really is awful, though.")
@@ -272,7 +272,7 @@
        ; Tanchi:
            (str "Akiko!?")
    (proc 15)
-   (proc 12) (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "That stuck-up lady from earlier!")
@@ -346,7 +346,7 @@
        ; Mohiko:
            (str "Don't say that! We're begging you!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "This could be fun! Let's give it a shot!")
@@ -357,7 +357,7 @@
            (str "Well, I might help, if you agree to go on" 'br)
    (str "a date with me...")
    (proc 15)
-   (proc 12) (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Tanchi!")
@@ -376,7 +376,7 @@
            (str "I'd...go to an amusement park... I want to")
    (str "ride the horses on the merry-go-round...")
    (proc 15)
-   (proc 12) (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "No dates required! I'll take down the" 'br)
@@ -391,7 +391,7 @@
        ; Tanchi:
            (str "Oh come on, Kirara!")
    (proc 15)
-   (proc 12) (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "I'll take care of things if you don't! You")
@@ -402,7 +402,7 @@
    (set-reg 50 #t))
  (seg (? (= T 2) (= O 6))
    (proc 18)
-   (proc 12) (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Just go back to the hospital by yourself!")
@@ -419,7 +419,7 @@
        ; Mohiko:
            (str "Yay, it's happening!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "...So, what exactly are we supposed to do?")
@@ -442,7 +442,7 @@
            (str "Okay, okay... So for now, we've got to" 'br)
    (str "look into that teacher Akiko.")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Let's start digging up dirt!")
@@ -463,7 +463,7 @@
        ; Tanchi:
            (str "......")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 4 5 23") ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "Good thinking!")
@@ -473,7 +473,7 @@
        ; Tanchi:
            (str "Am I supposed to wear this too...?")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "This fits me perfectly!")
@@ -509,7 +509,7 @@
        ; Tanchi:
            (str "Byobyobyooooing!")
    (proc 15)
-   (proc 12) (exec-mem 2816 "PUT 8 5 23") ; Portrait ()
+   (proc 12) (exec-mem 2816 "PUT 8 5 23") ; Portrait (Shocked)
    (proc 1)
        ; Kirara:
            (str "Gorgeousss!")
@@ -602,7 +602,7 @@
       (str "scream!")
       (proc 15))
      (/
-      (proc 12) (proc 13) ; Portrait ()
+      (proc 13) ; Portrait (Angry)
       (proc 1)
           ; Kirara:
               (str "HEYYY!! Cut that out or I'll blast you" 'br)
@@ -624,7 +624,7 @@
        ; Tanchi:
            (str "Fine! I'm going home, then!")
    (proc 15)
-   (proc 12) (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Hold it, buster! Don't try to split!")
@@ -634,7 +634,7 @@
        ; Tanchi:
            (str "You're the one who told me to go, Kirara!")
    (proc 15)
-   (proc 12) (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "If you don't help, you can get a kiss from")

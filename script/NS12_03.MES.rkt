@@ -164,7 +164,7 @@
    (proc 9) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Angry)
    (proc 1)
        ; Kirara:
-           (str "This is unforgivable! I have to give them")
+           (str "This is unforgivable! I have to give them" 'br)
    (str "a piece of my mind!")
    (proc 15)
    (proc 6) ; Clear Portrait

@@ -11,7 +11,7 @@
 
   (define-proc 10 (<> (exec-mem 2816 "GET 1 5 23 10 96,VIEW 5 23 15 120"))) ; Display code
   (define-proc 11 (<> (proc 10) (exec-mem 2816 "PUT 4 5 23"))) ; 
-  (define-proc 12 (<> (proc 10) (exec-mem 2816 "PUT 6 5 23"))) ; 
+  (define-proc 12 (<> (proc 10) (exec-mem 2816 "PUT 6 5 23"))) ; Angry
 
 ; 	Setup continues...
 
@@ -171,7 +171,7 @@
    (str "Again, I can't help but notice Kirara in that" 'br)
    (str "sailor uniform.")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "You're supposed to be looking around the" 'br)
@@ -187,7 +187,7 @@
    (set-reg 69 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (text-color 7)
    (str "What's the matter? Kirara looks downcast... I" 'br)
    (str "wonder if she hates being alone with me that much.")
@@ -252,7 +252,7 @@
            (str "Hmm... The two of us alone, locked in a" 'br)
    (str "small room.")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "What are you thinking?")
@@ -267,7 +267,7 @@
            (str "Well, I guess this was our predestined" 'br)
    (str "fates.")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "What's wrong with your head!? We're locked")
@@ -279,7 +279,7 @@
            (str "If you transform into Dengeki Nurse, we" 'br)
    (str "can make tracks! A million volts, and BOOM!")
    (proc 15)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "...")
@@ -294,7 +294,7 @@
            (str "Or, you know, we could just enjoy the time")
    (str "we've got together...")
    (proc 15)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "...")
@@ -307,7 +307,7 @@
        ; Tanchi:
            (str "What's wrong? You're looking glum.")
    (proc 15)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "When I changed out of my nurse uniform" 'br)
@@ -326,7 +326,7 @@
    (set-reg 61 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Even worse, I'm missing my favorite TV" 'br)
@@ -337,7 +337,7 @@
        ; Tanchi:
            (str "You didn't set the timer on your VCR?")
    (proc 15)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I didn't...")
@@ -349,7 +349,7 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Don't touch my butt!")
@@ -365,7 +365,7 @@
    (proc 19))
  (seg (? (= T 3) (= O 1))
    (proc 18)
-   (proc 10) (exec-mem 2816 "PUT 10 5 23") ; Portrait ()
+   (proc 10) (exec-mem 2816 "PUT 10 5 23") ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Knock it off!!")
@@ -402,7 +402,7 @@
    (text-color 1)
    (str "Clank clank clank...")
    (proc 15)
-   (proc 10) (exec-mem 2816 "PUT 8 5 23") ; Portrait ()
+   (proc 10) (exec-mem 2816 "PUT 8 5 23") ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "What are you doing?")
@@ -426,7 +426,7 @@
            (str "Whoa, it came off! Come on, let's make our")
    (str "escape!")
    (proc 15)
-   (proc 10) (exec-mem 2816 "PUT 2 5 23") ; Portrait ()
+   (proc 10) (exec-mem 2816 "PUT 2 5 23") ; Portrait (Smiling)
    (proc 1)
        ; Kirara:
            (str "Wow, good job, Tanchi! Thanks!")
@@ -444,7 +444,7 @@
    (text-color 7)
    (str "I move closer to Kirara.")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Hey! Stay away!")
@@ -454,7 +454,7 @@
        ; Tanchi:
            (str "Woah, what's wrong?")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "I don't like guys in sailor uniforms!")
@@ -470,7 +470,7 @@
    (text-color 7)
    (str "I move close to Kirara again.")
    (proc 15)
-   (proc 11) ; Portrait ()
+   (proc 12) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Hey, stop it...")

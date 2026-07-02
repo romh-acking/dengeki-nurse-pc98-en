@@ -375,9 +375,7 @@
    (set-reg 85 #t))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 30 0 10 96") ; Angry
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 1)
        ; Kirara:
            (str "Don't you dare dance, sing or touch my" 'br)
@@ -391,9 +389,7 @@
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (proc 3)
-   (exec-mem 2816 "GET 2 20 0 10 96") ; Sad
-   (proc 4)
+   (proc 3) (exec-mem 2816 "GET 2 20 0 10 96") (proc 4) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Sniff, sniff... Are you leaving me behind?")
