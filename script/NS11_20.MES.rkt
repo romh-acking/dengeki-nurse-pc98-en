@@ -110,15 +110,15 @@
      (/
       (if (</>
            (// (? (= 140 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 143 #t)
-           (// (? (= 139 #t) (= 142 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 142 #t)
+           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 142 #t)
            (// (? (= 138 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 140 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
-           (// (? (= 141 #t) (= 138 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
+           (// (? (= 138 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
+           (// (? (= 141 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
@@ -288,7 +288,7 @@
    (proc 2)
        ; Tanchi:
            (str "If you lost your breasts, you wouldn't be" 'br)
-   (str "able to do all the fun stuff with them!")
+   (str "able to do all that fun stuff you do with them!")
    (proc 15)
    (proc 11)
        ; Guillotine Nurse:

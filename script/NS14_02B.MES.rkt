@@ -519,7 +519,7 @@
    (proc 10)
        ; Nakajima:
              (str "Oh, that's right. Sure, we can even get" 'br)
-   (str "a photo of the occaison.")
+   (str "a photo of the occasion.")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)

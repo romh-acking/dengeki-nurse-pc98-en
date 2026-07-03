@@ -186,7 +186,7 @@
   (proc 16)
   (proc 10)
       ; Johnny:
-          (str "Pine is punishnent following way, way, WAY" 'br)
+          (str "Pine is punishment following way, way, WAY" 'br)
   (str "more embarrassing things.")
   (proc 16)
   (proc 11)

@@ -253,11 +253,17 @@
             (str "It's summer. What's wrong with a one-" 'br)
    (str "night stand?")
    (proc 15)
+
+; 	Cut back to Kirara
+
    ((cmd 209) 0 5)
    (delay 80 0)
    (exec-mem 19456 2 8 4 103 75 8 40 103 40 0 30)
    ((cmd 209) 1 5)
    (sound '|| 2)
+
+; 	Text continues
+
    (proc 2)
        ; Tanchi:
            (str "Kirara...")
@@ -288,6 +294,9 @@
        ; Kirara:
            (str "Aaahhnnn! N-No! Get your hands off me!")
    (proc 15)
+
+; 	That's not Tanchi!
+
    (exec-mem 10752 "COPY> b:¥gpc¥ns1_318.gpc,GPC") (image-mem 1 3)
    (exec-mem 19456 1 8 40 103 40 8 4 103 75 8 30)
    (sound '|| 0)
@@ -295,6 +304,9 @@
    (sound '|se | 26)
 ; FMT
 ;  (sound '|se | 5)
+
+; 	Text continues
+
    (proc 1)
        ; Kirara:
            (str "E-Eeeeek! It...it's you!!!")
@@ -332,7 +344,7 @@
    (proc 15)
    (proc 1)
        ; Kirara:
-           (str "Ah... Ah...  Noooooooooo!")
+           (str "Ah... Ah... Noooooooooo!")
    (proc 15)
    ((cmd 209) 0 5)
    (delay 80 0)
@@ -379,9 +391,12 @@
        ; Tanchi:
            (str "Ha...haha...hahahaha...")
    (proc 15)
+
    (sound '|| 0)
    (exec-mem 2816 "GET 7 8 25 44 227")
    (exec-mem 2816 "VIEW 8 25 51 251,OVER 1,PUT 8 8 25,FREE 8")
+; ^ Kirara appears
+
    (proc 1)
        ; Kirara:
            (str "Tanchi! Help meeeeee!")
@@ -409,7 +424,7 @@
            (str "Wait just a minute, this is all just a" 'br)
    (str "misunderstanding! A really big one!")
    (proc 15)
-   (exec-mem 2816 "VIEW 8 25 51 251,PUT 7 8 25,FREE 7")
+   (exec-mem 2816 "VIEW 8 25 51 251,PUT 7 8 25,FREE 7") ; Kirara leaves
    (proc 11)
        ; Magenta:
             (str "Now that the third wheel's gone, let's" 'br)

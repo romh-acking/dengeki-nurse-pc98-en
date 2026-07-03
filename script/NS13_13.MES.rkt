@@ -415,8 +415,8 @@
    (sound '|se | 20)
    (proc 0)
        ; Dengeki Nurse:
-                  (str "Now's my chance! Eat this!" 'br)
-   (str "PLASMA FLAAAASH!")
+                  (str "Now's my chance! Eat this! PLASMA" 'br)
+   (str "FLAAAASH!")
    (proc 15)
    (proc 6) ; Clear left portrait
    (proc 10)

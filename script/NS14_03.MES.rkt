@@ -156,10 +156,7 @@
    (str "Okay, okay, focus is perfect. Kirara is looking" 'br)
    (str "cute, this should be a fine photo.")
    (proc 15)
-
-   (exec-mem 2816 "VIEW 4 16 52 275,OVER 1,PUT 12 4 16,FREE 12")
-; ^ Sena and Manko appear
-
+   (exec-mem 2816 "VIEW 4 16 52 275,OVER 1,PUT 12 4 16,FREE 12") ; Sena and Manko appear
    (proc 11)
        ; Sena:
          (str "Could you take one with us in it too?")

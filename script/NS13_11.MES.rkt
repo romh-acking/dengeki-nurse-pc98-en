@@ -214,8 +214,8 @@
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "You know what? If she's gonna insist, then")
-   (str "I'll look at her all I can!")
+           (str "You know what? If you're gonna insist," 'br)
+   (str "then I'll look at you all I can!")
    (proc 15)
    (proc 7) ; Hide Kirara close-up
    (proc 19)
@@ -568,7 +568,7 @@
    (proc 18)
    (proc 11)
        ; Magenta:
-            (str "By looking at her, you ding-dong!")
+            (str "Look at her, you ding-dong!")
    (proc 15)
    (proc 6) ; Clear Portrait
    (proc 19))

@@ -193,7 +193,7 @@
    (proc 11) ; Kirara portrait (Angry)
    (proc 1)
        ; Kirara:
-           (str "Doctor Akiba!")
+           (str "Doctor Akihabara!")
    (proc 15)
    (proc 6) ; Clear left portrait
    (proc 12) (proc 13) (proc 5)
@@ -331,7 +331,7 @@
    (str "eating.")
    (proc 15)
    (text-color 7)
-   (str "Big mistake, medically speaking post-meal exercise")
+   (str "Big mistake! Medically speaking post-meal exercise")
    (str "is bad for the body!")
    (proc 15)
    (proc 19))

@@ -142,7 +142,7 @@
            (str "Hmm, she's wearing a kimono...in summer?" 'br)
    (str "Something is UP with this woman.")
    (proc 15)
-   (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Maybe she gets cold easily?")
@@ -157,7 +157,7 @@
            (str "And those daring glasses... I'm sensing" 'br)
    (str "something demonic from her.")
    (proc 15)
-   (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Really? It could just be her style,")
@@ -191,7 +191,7 @@
    (str "Voice: This is Asuka of the Special Discipline" 'br)
    (str "Committee!")
    (proc 15)
-   (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Shocked)
    (sound '|| 0)
 ; PC-98
    (sound '|se | 26)
@@ -199,10 +199,10 @@
 ;  (sound '|se | 5)
    (proc 2)
        ; Tanchi:
-   (text "！！！！！！！！！！！！！！！！！！！！！")
-   (proc 0)
-       ; Dengeki Nurse:
-   (text '|34368| "！！！！！！！！！！！！！！！！！")
+          (text "！！！！！！！！！！！！！！！！！！！！！")
+   (text-color 4)
+   (str "Dengeki Nurse:")
+                (text "！！！！！！！！！！！！！！！！！！")
    (proc 15)
    (proc 6) ; Clear Portrait
    (proc 10)
@@ -289,7 +289,7 @@
            (str "Whew, it looks like she hasn't had a" 'br)
    (str "Procedure performed on her yet. What do we do?")
    (proc 15)
-   (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "If we told her, she might not" 'br)
@@ -311,7 +311,7 @@
    (set-reg 98 #t))
  (seg (? (= T 2) (= O 2))
    (proc 18)
-   (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi, what exactly is Uranium?")
@@ -323,7 +323,7 @@
    (str "source of radium. It's the one with the ") (text "Ｕ") (str " symbol,")
    (str "and the atomic number is 92.")
    (proc 15)
-   (proc 14) ; Portrait ()
+   (proc 14) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "...???")
@@ -351,7 +351,7 @@
    (text-color 1)
    (str "Rustle rustle rustle...")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Tanchi!")
@@ -368,7 +368,7 @@
    (text-color 1)
    (str "Rub rub rub rub...")
    (proc 15)
-   (proc 12) ; Portrait ()
+   (proc 12) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
                   (str "......")
@@ -377,7 +377,7 @@
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
-   (proc 13) ; Portrait ()
+   (proc 13) ; Portrait (Shocked)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Where do you think you're going?")
@@ -387,8 +387,7 @@
        ; Tanchi:
            (str "I was thinking we should get ice cream...")
    (proc 15)
-   (proc 9)
-   (exec-mem 2816 "PUT 4 5 23") ; Happy
+   (proc 9) (exec-mem 2816 "PUT 4 5 23") ; Happy
    (proc 0)
        ; Dengeki Nurse:
                   (str "Good idea! Let's go later, though.")

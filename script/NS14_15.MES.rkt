@@ -192,7 +192,7 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "From inside the official Room, we had an overview" 'br)
+   (str "From inside the official Room, we have an overview")
    (str "of the entire course below.")
    (proc 15)
    (proc 19))
@@ -304,8 +304,8 @@
    (proc 10)
        ; Chodendo Nurse:
                    (str "This room is magnetically" 'br)
-   (str "shielded! Even the slightest bit of static" 'br)
-   (str "electricity won't come through!")
+   (str "shielded! Not even the slightest bit of static" 'br)
+   (str "electricity will come through!")
    (proc 15)
    (proc 19)
    (set-reg 172 #t))
@@ -433,7 +433,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
-   (str "My stomach had been hurting for a while...")
+   (str "My stomach has been hurting for a while...")
    (proc 15)
    (text-color 7)
    (str "Poke, poke, poke, I palpate my own abdomen.")

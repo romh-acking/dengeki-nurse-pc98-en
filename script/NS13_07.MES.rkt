@@ -133,7 +133,7 @@
    (str "And besides...")
    (proc 15)
    (text-color 7)
-   (str "Her apperance is distracting, to say the least!")
+   (str "Her appearance is distracting, to say the least!")
    (proc 15)
    (proc 19)
    (set-reg 50 #t))

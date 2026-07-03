@@ -131,7 +131,7 @@
   (proc 16)
   (proc 11)
       ; Black Nurse:
-               (str "Big noses?")
+               (str "A big nose?")
   (proc 16)
   (proc 10)
       ; Chodendo Nurse:
@@ -182,7 +182,7 @@
   (proc 16)
   (proc 10)
       ; Chodendo Nurse:
-                  (str "Unfortunate...")
+                  (str "Unfortunate.")
   (proc 16)
   (proc 11)
       ; Black Nurse:

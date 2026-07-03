@@ -449,7 +449,7 @@
    (sound '|| 0)
    (sound '|se | 24)
    (text-color 1)
-   (str "KABOOOOOOM!")
+   (text "ＫＡＢＯＯＯＯＯＯＭ！")
    (proc 15)
 
    (sound '|| 0)
@@ -508,7 +508,7 @@
    (sound '|| 0)
    (sound '|se | 24)
    (text-color 1)
-   (str "KABOOOOOOM!")
+   (text "ＫＡＢＯＯＯＯＯＯＭ！")
    (proc 15)
 
    (sound '|| 0)
@@ -572,7 +572,7 @@
    (sound '|| 0)
    (sound '|se | 24)
    (text-color 1)
-   (str "KRAKABOOOOOOOM!")
+   (text "ＫＲＡＫＡＢＯＯＯＯＯＯＯＭ！")
    (proc 15)
 
    (sound '|| 0)
