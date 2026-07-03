@@ -151,14 +151,12 @@
               (exec-mem 1280 14 7 6 6)
               (exec-mem 6656 8)
               (load-mem "cmd¥cappear.tcm" 6656)
-              (proc 3)
-              (exec-mem 2816 "GET 2 50 0 10 96") ; Confused
-              (proc 4)
+              (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
               (text-frame 3 324 52 379)
               (text-reset 15)
               (proc 0)
                   ; Dengeki Nurse:
-                             (str "What is this? Some sort of TV" 'br)
+                             (str "What is this, some sort of TV" 'br)
               (str "remote?")
               (proc 15)
               (proc 6) ; Clear Kirara portrait
@@ -222,8 +220,8 @@
            (proc 15)
            (text-color 5)
            (str "Guillotine Nurse: This time, I'll get your head" 'br)
-           (str "with my guillotine and float it down the river" 'br)
-           (str "Seine!!!")
+           (str "with my guillotine and float it down the Seine" 'br)
+           (str "River!!!")
            (proc 15)
            (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
            (proc 0)
@@ -472,7 +470,6 @@
    (nop@)
    (proc 18)
    (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
-   (proc 4)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Looks like there's nothing here.")
@@ -483,7 +480,6 @@
    (nop@)
    (proc 18)
    (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
-   (proc 4)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Stop touching my butt!!!")
@@ -491,15 +487,14 @@
    (proc 6) ; Clear Kirara portrait
    (proc 2)
        ; Tanchi:
-           (str "But, but come on... It's not like it's" 'br)
+           (str "But, but, come on... It's not like it's" 'br)
    (str "going to wear out or anything...")
    (proc 15)
    (proc 3)
    (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
-   (proc 4)
    (proc 0)
        ; Dengeki Nurse:
-                  (str "But it totally will!")
+                  (str "Yes, it will!")
    (proc 15)
    (proc 6) ; Clear Kirara portrait
    (proc 19))

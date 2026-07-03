@@ -152,8 +152,8 @@
    (text "　") (str "who treated friend and foe with compassion.") (text "”")
    (proc 15)
    (text-color 5)
-   (text "“") (str "Your battle has come to its conclusion. As" 'br)
-   (text "　") (str "your mother, I will end it for you.") (text "”")
+   (text "“") (str "Your battle has come to its conclusion. As your" 'br)
+   (text "　") (str "mother, I will end it for you.") (text "”" 'br)
    (text "　−") (str "Mom")
    (proc 15)
    (proc 10)	; Sad

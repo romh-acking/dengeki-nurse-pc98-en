@@ -39,7 +39,7 @@
   ((cmd 196) 0 0)
   (proc 10)
       ; Black Nurse:
-               (str "I don't care about stupid Dengeki" 'br)
+               (str "I don't care about that stupid Dengeki")
   (str "Nurse right now! Figure out a way to kidnap that" 'br)
   (str "Elektros brat!")
   ((cmd 195) 0 65535)

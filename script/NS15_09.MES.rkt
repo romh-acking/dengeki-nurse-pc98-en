@@ -304,7 +304,7 @@
    (proc 12)
        ; Mitsuko:
             (str "I used poor, innocent Nursia as bait, so" 'br)
-   (str "the Black Cross would make a move...")
+   (str "that the Black Cross would make a move...")
    (proc 15)
    (proc 2)
        ; Tanchi:

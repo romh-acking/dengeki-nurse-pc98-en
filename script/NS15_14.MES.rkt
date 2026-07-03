@@ -51,7 +51,7 @@
   (proc 15)
   (proc 6) ; Clear Kirara portrait
   (proc 10)
-           (str "Kirara! You shouldn't have come...")
+           (str "Kirara...you shouldn't have come...")
   (proc 15)
   (proc 12) (proc 13) (proc 7)
       ; Black Nurse:
@@ -409,7 +409,7 @@
      (exec-mem 1280 13 1 1 1)    (delay 1)))
    (exec-mem 1280 13 0 0 0)
    (text-color 1)
-   (str "ZZZOZOOOOORP!!! ZAZAZAZAZAZARRRRCHHHHHH!")
+   (text "ＺＺＺＯＺＯＯＯＯＯＲＰ！！！" 'br "ＺＡＺＡＺＡＺＡＺＡＺＡＲＲＲＲＣＨＨＨＨＨＨ！")
    (proc 15)
 
 ; 	And the Eleguard Special loses its hold!
@@ -529,7 +529,7 @@
    (str "given treatment immediately, she'll be in danger!")
    (proc 15)
    (text-color 7)
-   (str "But there's nothing here...")
+   (str "But there's nothing to treat her with here...")
    (proc 15)
    (proc 19)
    (set-reg 81 #t))

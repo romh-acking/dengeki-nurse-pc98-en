@@ -155,7 +155,7 @@
    (proc 15)
    (proc 11)
        ; Nursia:
-           (str "With those words coming from you, Dr." 'br)
+           (str "With those words coming from you, Doctor" 'br)
    (str "Tanchi...")
    (proc 15)
    (proc 19)
@@ -165,7 +165,7 @@
    (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:
               (str "Tanchi and Kirara, I'll be counting on" 'br)
-   (str "you.")
+   (str "you two.")
    (proc 15)
    (proc 14)
    (proc 2)

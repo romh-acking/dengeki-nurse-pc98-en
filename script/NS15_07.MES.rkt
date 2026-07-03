@@ -92,8 +92,8 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "The ring that slipped from Nursia's finger in my" 'br)
-   (str "hand... It's still slightly warm...")
+   (str "The ring that slipped from Nursia's finger is in" 'br)
+   (str "my hand... It's still slightly warm...")
    (proc 15)
    (proc 19)
    (set-reg 41 #t))

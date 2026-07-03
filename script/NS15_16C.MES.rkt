@@ -23,8 +23,9 @@
   (text-frame 3 324 52 379)
   (text-reset 15)
   (proc 10)
-          (str "Doctor Tanchi, there's a warp device here" 'br)
-  (str "too...")
+      ; Nursia:
+          (str "Doctor Tanchi, this also happens to be a" 'br)
+  (str "warp device...")
   (proc 15)
   (proc 14)
   (proc 19)

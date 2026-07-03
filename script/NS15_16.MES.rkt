@@ -116,8 +116,8 @@
 
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
-                (str "The castle has six floors, and one of them")
-        (str "has a control room.")
+                (str "So, this castle has six floors, and one of")
+        (str "them has a control room...")
         (proc 15)
         (proc 14) ; Clear Nursia portrait
         (proc 2)
@@ -127,8 +127,8 @@
         (proc 15)
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
-                (str "Well, you can use the warp device in each" 'br)
-        (str "room to move between the floors.")
+                (str "Well, you can use the warp device in one" 'br)
+        (str "of these rooms to move between the floors.")
         (proc 15)
         (proc 14) ; Clear Nursia portrait
         (proc 9) (proc 11) (proc 10)
@@ -359,7 +359,7 @@
      (/
       (proc 9) (proc 11) (proc 10)
           ; Nursia:
-              (str "Doctor Tanchi...  That hand better not be" 'br)
+              (str "Doctor Tanchi... That hand better not be" 'br)
       (str "doing what I think it is.")
       (proc 15)
       (proc 14) ; Clear Nursia portrait

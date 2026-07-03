@@ -119,7 +119,7 @@
    (str "Geez...")
    (proc 15)
    (text-color 7)
-   (str "I'll never understand woman, I'll tell you that!")
+   (str "I'll never understand women, I'll tell you that!")
    (proc 15)
    (proc 19)
    (set-reg 20 #t))

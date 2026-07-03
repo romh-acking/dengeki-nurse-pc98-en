@@ -81,7 +81,7 @@
    (text-color 7)
    (str "Why would Kirara be playing pachinko? Anyway, I" 'br)
    (str "need to bring her back to the hospital. That news" 'br)
-   (str "about her mom is gonna knock her flat.")
+   (str "about her mom is gonna knock her flat!")
    (proc 15)
    (proc 19)
    (set-reg 62 #t))
