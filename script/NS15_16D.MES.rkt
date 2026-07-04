@@ -25,7 +25,7 @@
      (proc 15)
      (proc 2)
          ; Tanchi:
-             (str "H-How the hell are you-? I thought we" 'br)
+             (str "H-How the hell are you") (text "−") (str "? I thought we" 'br)
      (str "defeated you!")
      (proc 15)
      (text-color 8)

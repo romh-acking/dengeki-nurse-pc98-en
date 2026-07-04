@@ -389,7 +389,7 @@
   (text-frame 16 324 66 379)
   (text-reset 1)
   (text-color 15)
-  (str "Black Nurse: P-please forgive me... Jigoku Nurse...")
+  (str "Black Nurse: P-Please forgive me... Jigoku Nurse...")
   (proc 16)
   (text-color 11)
   (str "Jigoku Nurse: Silence! How dare you come crawling" 'br)
@@ -403,7 +403,7 @@
   (str "employment terms, don't you!?")
   (proc 16)
   (text-color 15)
-  (str "Black Nurse: P-please! Give me one more chance!" 'br)
+  (str "Black Nurse: P-Please! Give me one more chance!" 'br)
   (str "Just one!")
   (proc 16)
   (text-color 11)
@@ -441,7 +441,7 @@
   (proc 16)
 
   (text 'br)
-  (str "Depending on the passionate fan mail that touches our" 'br)
+  (str "Depending on the passionate fan mail that will touch our" 'br)
   (str "president's heart...")
   (proc 15)
   (str "But...")
@@ -492,7 +492,7 @@
   (proc 15)
   (proc 11)
       ; Mao:
-  (str "Either way, I'd like to expand the animation aspect.")
+  (str "Either way, I'd like to expand on the animation aspect.")
   (proc 16)
 
   (proc 10)
@@ -532,7 +532,7 @@
   (proc 11)
       ; Mao:
   (str "Anyway, I hope people laugh at the cool backgrounds during" 'br)
-  (str "battles.")
+  (str "the battles.")
   (proc 16)
 
   (proc 10)
@@ -744,7 +744,7 @@
   (proc 11)
       ; Mao:
   (str "And to all the staff, thank you so much! You understood" 'br)
-  (str "everything from") (text "“") (str "poyooooon") (text "”") (str "to") (text "“") (str "dokaaaan!") (text "”")
+  (str "everything from") (text "“") (str "Poyooooon") (text "”") (str "to") (text "“") (str "Dokkaaaan!") (text "”")
   (proc 15)
   (proc 11)
       ; Mao:

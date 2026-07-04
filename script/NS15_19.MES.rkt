@@ -212,7 +212,7 @@
   (proc 16)
   (proc 1)
       ; Kirara:
-          (str "I'm fine! Starting tomorrow, I'll be back" 'br)
+          (str "I'm fine! Starting tomorrow I'll be back at")
   (str "at work, working hard!")
   (proc 16)
   (proc 1)
@@ -230,7 +230,7 @@
   (proc 16)
   (proc 1)
       ; Kirara:
-          (str "Back at the hospital, Doctor Akihabara and")
+          (str "Back at the hospital, Doctor Akihabara and" 'br)
   (str "Croco will be there...")
   (proc 16)
   (proc 1)

@@ -235,7 +235,7 @@
          (proc 2)
              ; Tanchi:
                  (str "Hey... Do you not understand how things" 'br)
-         (str "work?"))
+         (str "are supposed to work?"))
         (//
                         (str "It's nice and cool inside here!")
          (proc 15)

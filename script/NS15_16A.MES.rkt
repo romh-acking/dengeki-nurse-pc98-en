@@ -490,7 +490,6 @@
            (str "But, but, come on... It's not like it's" 'br)
    (str "going to wear out or anything...")
    (proc 15)
-   (proc 3)
    (proc 3) (exec-mem 2816 "GET 2 30 0 10 96") (proc 4) ; Portrait (Angry)
    (proc 0)
        ; Dengeki Nurse:
