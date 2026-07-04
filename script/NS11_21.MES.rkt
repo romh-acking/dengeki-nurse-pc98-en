@@ -59,7 +59,7 @@
       ; Kirara:
           (str "I'm Kirara Inazuma, pleased to meet you.")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Ahhh, yeah... The pleasure is all mine...")
@@ -84,7 +84,7 @@
           (str "Something must have spooked him... Hee" 'br)
    (str "hee!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (text-color 7)
   (str "Good grief... What's gonna happen next? But it's" 'br)
    (str "okay, at least Kirara is cute!")

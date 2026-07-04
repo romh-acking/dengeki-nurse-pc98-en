@@ -80,7 +80,7 @@
        ; Kirara:
            (str "Tanchi! Hurry up and warp already!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (nop@)
@@ -98,7 +98,7 @@
        ; Dengeki Nurse:
                   (str "Of course it does!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (nop@)

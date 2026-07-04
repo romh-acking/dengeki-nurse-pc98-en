@@ -241,7 +241,7 @@
        ; Kirara:
            (str "Hands off!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -254,7 +254,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 3)
    (set-var C 3)))

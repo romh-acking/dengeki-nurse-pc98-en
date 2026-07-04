@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Kirara and Tanchi touch down at the grounds of the Elektros castle. Things aren't looking good!
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -551,7 +551,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5)  (str "Mitsuko: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Nursia: ")))
    (proc 19)

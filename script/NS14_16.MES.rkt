@@ -74,7 +74,7 @@
       ; Dengeki Nurse:
                  (str "Incredible!!!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
 
   (exec-mem 2816 "VIEW 12 93 44 237,PUT 7 12 93,FREE 7")
   (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
@@ -89,7 +89,7 @@
       ; Dengeki Nurse:
                  (str "Tanchi... Your face...")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
 
   (exec-mem 2816 "GET 1 40 23 10 96")
   (exec-mem 2816 "SHOW 0,ACCESS 1")

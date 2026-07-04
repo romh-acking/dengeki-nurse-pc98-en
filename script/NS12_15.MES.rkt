@@ -236,7 +236,7 @@
        ; Dengeki Nurse:
                   (str "AN ATOMIC BOMB!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Akiko:
           (str "......")
@@ -300,7 +300,7 @@
        ; Dengeki Nurse:
                   (str "That's kind of sad...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 107 #t))
  (seg (? (= T 2) (= O 4))
@@ -422,7 +422,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
    (proc 19)
    (set-var B 2)

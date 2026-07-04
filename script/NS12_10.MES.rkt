@@ -123,7 +123,7 @@
        ; Kirara:
            (str "What did you just say!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I mean, in the passage...")
@@ -141,7 +141,7 @@
        ; Kirara:
            (str "No way! Gross!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, it's right there on the wall...")
@@ -151,7 +151,7 @@
        ; Kirara:
            (str "Tanchi!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 76 #t))
  (seg (? (= T 1) (= O 2))
@@ -165,7 +165,7 @@
        ; Kirara:
            (str "Wh-What now...?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "There's an air vent over here! Try looking")
@@ -176,7 +176,7 @@
        ; Kirara:
            (str "Fine...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Why are you so mad all the time?")
@@ -186,7 +186,7 @@
        ; Kirara:
            (str "Sorry, you just get me worked up...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 80 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -215,7 +215,7 @@
            (str "Fine, whatever! How can you be so carefree")
   (str "in an emergency like this!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 74 #t))
  (seg (? (= T 2) (= O 2))
@@ -230,7 +230,7 @@
        ; Kirara:
            (str "Ah!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What is it? What do you see?")
@@ -256,7 +256,7 @@
        ; Kirara:
            (str "Don't breathe on me!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I wasn't doing it on purpose! Jeez! Am I" 'br)
@@ -274,7 +274,7 @@
        ; Kirara:
            (str "Heyyyy... No... Don't do that!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Heh heh heh heh...")
@@ -288,14 +288,13 @@
            (str "Stop wiggling around, this place is" 'br)
    (str "cramped enough!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 2)
    (set-var C 2))
@@ -306,7 +305,7 @@
        ; Kirara:
            (str "Ah! Don't touch me there!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 8) (= O 0))												; Cooch (300, 140)
    (proc 18)
@@ -316,5 +315,5 @@
            (str "Ahhh... S-Stop it... Stop, it's making me" 'br)
    (str "feel...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)))

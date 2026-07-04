@@ -161,7 +161,7 @@
        ; Kirara:
            (str "Mom...!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 69 #t))
  (seg (? (= T 1) (= O 2))
@@ -175,7 +175,7 @@
    (str "The letter was written with beautiful handwriting" 'br)
    (str "on blue stationery.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 72 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -230,7 +230,7 @@
        ; Kirara:
            (str "I'm going!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You are?")
@@ -240,7 +240,7 @@
        ; Kirara:
            (str "I'm going to finish Black Nurse!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Then I'm going too!")
@@ -250,7 +250,7 @@
        ; Kirara:
            (str "But this isn't your fight!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I'm responsible for Nursia's kidnapping!" 'br)
@@ -269,7 +269,7 @@
            (str "Tanchi...")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
@@ -293,7 +293,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

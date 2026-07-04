@@ -264,7 +264,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
 ;  (define-proc 11 (<> (text-color 5) (str "Cleaning Lady: ")))
    (proc 19)

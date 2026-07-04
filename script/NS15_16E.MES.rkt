@@ -54,7 +54,7 @@
                        (str "Could this be the Elektros" 'br)
         (str "treasure?")
         (proc 15)
-        (proc 6) ; Clear Portrait
+        (proc 6) ; Clear portrait
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
                 (str "...")
@@ -142,7 +142,7 @@
             ; Dengeki Nurse:
                        (str "Puzzling... Is this Elektros magic?")
         (proc 15)
-        (proc 6) ; Clear Portrait
+        (proc 6) ; Clear portrait
         (proc 9) (proc 11) (proc 10)
             ; Nursia:
                 (str "...")
@@ -231,7 +231,7 @@
                         (str "The coins shining in the sky are so")
          (str "pretty!")
          (proc 15)
-         (proc 6) ; Clear Portrait
+         (proc 6) ; Clear portrait
          (proc 2)
              ; Tanchi:
                  (str "Hey... Do you not understand how things" 'br)
@@ -239,7 +239,7 @@
         (//
                         (str "It's nice and cool inside here!")
          (proc 15)
-         (proc 6) ; Clear Portrait
+         (proc 6) ; Clear portrait
          (proc 2)
              ; Tanchi:
                  (str "You really have no sense of trepidation," 'br)

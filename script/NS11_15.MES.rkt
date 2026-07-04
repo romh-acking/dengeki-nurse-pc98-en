@@ -113,7 +113,7 @@
        ; Dengeki Nurse:
                   (str "That woman's here to kill you!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Minister:
              (str "Nonsense! A cute little thing like" 'br)
@@ -129,7 +129,7 @@
                   (str "I bet she told you to freshen your" 'br)
    (str "breath with a mint, didn't she?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, dude...")
@@ -143,7 +143,7 @@
        ; Dengeki Nurse:
                   (str "Are you feeling drowsy?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Minister:
              (str "...")
@@ -155,7 +155,7 @@
    (str "with Trans-Bio solution, then you'll drop dead" 'br)
    (str "from heart failure!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Minister:
              (str "Oh, oh no...")
@@ -171,7 +171,7 @@
                   (str "How long can you play dumb, Goofus" 'br)
    (str "Nurse Ayako?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 12)
        ; Ayako:
           (str "Oh daddy, won't you give me a moment to" 'br)
@@ -186,7 +186,7 @@
 ; 	Next battle begins...
 
    (sound '|| 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 2816 "EXIT")
    (set-var U 2)
 ; FMT
@@ -208,7 +208,7 @@
        ; Dengeki Nurse:
                   (str "What do you think you're doing!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -222,7 +222,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3)  (str "Minister: ")))
 ;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))
 ;  (define-proc 13 (<> (text-color 8)  (str "Tomoyo: ")))

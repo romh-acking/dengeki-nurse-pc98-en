@@ -296,7 +296,7 @@
        ; Black Nurse:
                 (str "I've been waiting for this...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "Black Nurse, please let go of Doctor" 'br)
@@ -306,7 +306,7 @@
        ; Black Nurse:
                 (str "Pfyeah, whatever!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "The ring has no use to you.")
@@ -316,7 +316,7 @@
                 (str "You think you can keep all the" 'br)
    (str "treasure for yourself? As if!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "Humans... What sad, foolish creatures...")
@@ -325,7 +325,7 @@
        ; Black Nurse:
                 (str "Oh wow, now the kid is hallucinating!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "No... I was just asleep up until a moment" 'br)
@@ -397,7 +397,7 @@
                 (str "What is this sci-fi mumbo jumbo? No" 'br)
    (str "kid is stupid enough to believe that junk!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "Then it cannot be helped. If you refuse to")
@@ -412,7 +412,7 @@
        ; Black Nurse:
                 (str "Oh, um, okay, hold on. Here you go.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-color 7)
    (str "Black Nurse removes the whip from my neck.")
    (proc 15)
@@ -428,7 +428,7 @@
        ; Black Nurse:
                 (str "Don't mess with me, you little turd!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
 ; 	Black Nurse gives her whip a good crack!
 
@@ -455,7 +455,7 @@
        ; Black Nurse:
                 (str "Oh my, what a flimsy toy!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "............")
@@ -465,7 +465,7 @@
                 (str "You little crap-muffin! How dare you" 'br)
    (str "scare me like that!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nursia:
            (str "!!!!!!!!!")
@@ -482,7 +482,7 @@
                 (str "Hah! I'll start by ripping you apart!")
    (str "The traitor, Dengeki Nurse!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13)	; Shouting
    (proc 0)
        ; Dengeki Nurse:
@@ -522,7 +522,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
    (proc 19)
    (set-var B 5)

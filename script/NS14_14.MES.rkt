@@ -185,7 +185,7 @@
    (text-color 7)
    (str "Kirara's got a bright smile.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
    (exec-mem 2816 "GET 1 25 198 10 96")
    (exec-mem 2816 "SHOW 0,ACCESS 1")
@@ -233,7 +233,7 @@
            (str "Oh, thanks for helping out before. I" 'br)
    (str "really needed the assist.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Huh? You two know each other?")
@@ -271,7 +271,7 @@
            (str "What's wrong? Why'd you come all the way" 'br)
    (str "out here?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 164 #t))
  (seg (? (= T 2) (= O 1))
@@ -285,7 +285,7 @@
        ; Kirara:
            (str "What? What's with that serious face?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "About my promise from before... What" 'br)
@@ -296,7 +296,7 @@
        ; Kirara:
            (str "What should I do?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 162 #t))
  (seg (? (= T 2) (= O 2))
@@ -312,7 +312,7 @@
            (str "Yeah... You put in the hard work," 'br)
    (str "Tanchi...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "S-So you'll acknowledge that, at least...?")
@@ -322,7 +322,7 @@
        ; Kirara:
            (str "If Moguri wins.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 157 #t))
  (seg (? (= T 2) (= O 3))
@@ -332,7 +332,7 @@
        ; Kirara:
            (str "I hope Moguri wins.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yes! Exactly!")
@@ -358,7 +358,7 @@
        ; Kirara:
            (str "To me?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "So what are you giving here?")
@@ -392,7 +392,7 @@
        ; Kirara:
            (str "I see...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "B-But... Why a tanuki, of all things?")
@@ -407,7 +407,7 @@
        ; Kirara:
            (str "Certainly... I'll gladly take it.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Mystery Lady:
                  (str "Thank you. Well then, I must be off.")
@@ -432,7 +432,7 @@
        ; Kirara:
            (str "Well, it's too heavy for me.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Ugh... I haven't got any stamina left...")
@@ -472,7 +472,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5) (str "Mystery Lady: ")))
    (proc 19)
    (set-var B 4)

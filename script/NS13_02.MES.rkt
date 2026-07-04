@@ -164,7 +164,7 @@
    (proc 15)
 
 ; Tanchi fantasises again...
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 14)
    (proc 13)
    (image-mem 1 3)
@@ -185,7 +185,7 @@
    (proc 15)
 
 ; Okay, get that out of here
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (proc 14)
    (proc 13)
@@ -253,7 +253,7 @@
            (str "Hurry up and change so we can hit the" 'br)
    (str "beach!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Right, right, on it.")
@@ -267,7 +267,7 @@
        ; Kirara:
            (str "Tanchi, what are you doing?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Um... Warmup exercises, obviously.")
@@ -278,7 +278,7 @@
            (str "Shouldn't you change into your swimsuit" 'br)
    (str "first?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -312,7 +312,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
    (proc 19)
    (set-var B 3)

@@ -179,7 +179,7 @@
                   (str "Of course I'm okay! Like I'd ever" 'br)
    (str "lose to a dolt like that!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "That's Dengeki Nurse for you.")
@@ -491,7 +491,7 @@
        ; Dengeki Nurse:
                   (str "I'll get it this time for sure!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
 ; 	Dengeki Nurse tries again...
 
@@ -648,7 +648,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 1)  (str "Moguri: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Nurse THE SENNA: ")))
 ;  (define-proc 12 (<> (text-color 3)  (str "Nakajima: ")))

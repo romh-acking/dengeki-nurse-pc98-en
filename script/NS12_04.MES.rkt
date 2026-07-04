@@ -148,7 +148,7 @@
            (str "Why do you have that big grin on your" 'br)
    (str "face?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Uh, it's nothing...")
@@ -175,7 +175,7 @@
        ; Kirara:
            (str "Why are you staring at me like that?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 34 #t))
  (seg (? (= T 2) (= O 0))												; Talk
@@ -190,7 +190,7 @@
        ; Kirara:
            (str "Hey hey, are you actually enjoying this?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Shh, just record the data.")
@@ -209,7 +209,7 @@
        ; Kirara:
            (str "There's nowhere to write that down here.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Just jot it in the margins.")
@@ -227,7 +227,7 @@
        ; Kirara:
            (str "Huh? Me?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You can't manage someone's health without" 'br)
@@ -239,7 +239,7 @@
        ; Kirara:
            (str "This sounds kind of...embarrassing.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "That's fine, it'll just be the two of" 'br)
@@ -251,7 +251,7 @@
            (str "......")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
@@ -285,7 +285,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Schoolgirl: ")))
    (proc 19)
    (set-var B 2)

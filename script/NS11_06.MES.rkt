@@ -256,7 +256,7 @@
    (str "surprise, finding out she's just a pawn of her" 'br)
    (str "parents' killers...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 1) (= O 6))												; 
    (proc 18)
@@ -265,7 +265,7 @@
    (str "She still has that sad expression... Maybe I can" 'br)
    (str "cheer her up a little?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
@@ -340,7 +340,7 @@
           (str "!!! But how... How do you know my name!?")
    (proc 15)
    (text-color 7)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (str "She's adopting a grim expression and steeling" 'br)
    (str "herself.")
    (proc 15)
@@ -353,7 +353,7 @@
        ; Nurse:
           (str "Who are you people!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 5))												; (After Kirara reveals she is part of Black Cross)
    (proc 18)
@@ -367,7 +367,7 @@
            (str "I'm sorry... I was here to perform a" 'br)
    (str "Procedure on the minister...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "A... Procedure?")
@@ -383,7 +383,7 @@
            (str "It was supposed to be my first Procedure," 'br)
    (str "but... I can't do it...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You mustn't, Kirara.")
@@ -398,7 +398,7 @@
            (str "I can't go back...to the Society... I want")
    (str "to look for my mother here in Japan, but...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What's the matter?")
@@ -409,7 +409,7 @@
            (str "The Black Cross does not forgive traitors.")
    (str "...I'll be the target of their next Procedure...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I...I won't allow that to happen!!! To go" 'br)
@@ -431,7 +431,7 @@
            (str "Thank you both, but... I'd be troubling" 'br)
    (str "the both of you...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "It's no problem at all. No matter how" 'br)
@@ -448,7 +448,7 @@
        ; Kirara:
            (str "Is that really okay...?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yes! It's been decided.")
@@ -463,7 +463,7 @@
            (str "I'm not sure how this will go, but..." 'br)
    (str "We'll give it our all then.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -487,7 +487,7 @@
    (text-color 7)
    (str "I hold up my half of the pendant.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
    (exec-mem 2816 "GET 3 34 162 50 297")
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 4 34 162,FREE 4")
@@ -503,7 +503,7 @@
            (str "This is...")
    (proc 15)
    (text-color 7)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (str "I placed it together with Kirara's pendant.")
    (proc 15)
    (proc 14) ; Portrait (Flushed)
@@ -521,7 +521,7 @@
    (text-color 4)
    (str "Kirara:") (text "“") (str "LOVE TARO AND MITSUKO...") (text "”")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Your father and mother, Kirara.")
@@ -531,7 +531,7 @@
        ; Kirara:
            (str "...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 2816 "VIEW 34 162 50 297,PUT 3 34 162,FREE 3")
    (proc 5)
        ; Dr. Akiba:
@@ -546,7 +546,7 @@
        ; Kirara:
            (str "I... I'm a Black Cross Society commando...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What!?")
@@ -558,7 +558,7 @@
    (str "remember, and was trained to be a Nurse" 'br)
    (str "Commando...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Truly, the most ironic of fates...")
@@ -640,7 +640,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 4) (str "Nurse: ")))
    (proc 19)
    (set-var B 1)

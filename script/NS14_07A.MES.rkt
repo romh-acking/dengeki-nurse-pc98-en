@@ -52,7 +52,7 @@
       ; Kirara:
           (str "Good morniiiiiing!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 10)
             (str "......")
   (proc 15)
@@ -199,7 +199,7 @@
    (str "anything, she'd just electrify the food... Still," 'br)
    (str "though... I really wanna try Kirara's cooking.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 85 #t))
  (seg (? (= T 1) (= O 2))
@@ -309,7 +309,7 @@
            (str "I have some stomach medicines that could" 'br)
    (str "help out!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -324,7 +324,7 @@
            (str "Hey, hey, those two not being here is a" 'br)
    (str "problem, right?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Don't change the subject!!!")
@@ -345,7 +345,7 @@
            (str "So that's the case... Sponsors are that" 'br)
    (str "important in the world of F1.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh? You've been reading up on things?")
@@ -357,7 +357,7 @@
    (str "yesterday, and even memorized all the drivers'" 'br)
    (str "faces!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "I've got it!")
@@ -388,7 +388,7 @@
        ; Kirara:
            (str "Whaaaaa? ME?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "That's a fabulous idea!! She's cute as" 'br)
@@ -409,7 +409,7 @@
        ; Kirara:
            (str "Hey... Tanchi, what should I do here...?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 7))
    (proc 18)
@@ -431,7 +431,7 @@
        ; Kirara:
            (str "Hmm... I could give it a try...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "Good enough, it's decided! This helps us")
@@ -469,7 +469,7 @@
            (str "Ha ha ha... This is making me kind of" 'br)
    (str "nervous...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 9))
    (proc 18)
@@ -491,14 +491,14 @@
            (str "Is something wrong with the car? The" 'br)
    (str "engine? The gearbox?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13) ; Portrait (Confused)
    (proc 1)
        ; Kirara:
            (str "Or maybe the downforce isn't set" 'br)
    (str "correctly?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, stop throwing around random terms you")
@@ -513,7 +513,7 @@
        ; Kirara:
            (str "What's wrong with Moguri?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 11))
    (proc 18)
@@ -538,7 +538,7 @@
        ; Kirara:
            (str "Amazing! You can talk through all of that?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What, you didn't know? All that studying" 'br)
@@ -576,7 +576,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
    (proc 19)

@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Whew, that's the Silliness Squad dispensed with. Time for a little break...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -169,7 +169,7 @@
        ; Kirara:
            (str "Her hobby is chopping up anything she can.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 121 #t))
  (seg (? (= T 2) (= O 1))
@@ -263,7 +263,7 @@
        ; Kirara:
            (str "Cut that out! You two...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Well, at her own request, she's only" 'br)
@@ -292,7 +292,7 @@
        ; Kirara:
            (str "What's up with the weird dance?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -305,7 +305,7 @@
        ; Kirara:
            (str "What? Where are we going at this hour?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (branch-random
     (</>
      (/
@@ -339,7 +339,7 @@
           ; Kirara:
               (str "As if! You're not dragging me there!"))))
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
@@ -364,7 +364,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

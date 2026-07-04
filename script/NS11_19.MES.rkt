@@ -48,7 +48,7 @@
           (str "Thanks for showing me the way. If you" 'br)
   (str "want, you can wait here.")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Wha!? No, I'm going!")
@@ -136,7 +136,7 @@
        ; Kirara:
            (str "Don't you have a spare key?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "If it's locked from the inside, we can't" 'br)
@@ -248,7 +248,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

@@ -40,7 +40,7 @@
       ; Kirara:
           (str "Can't be helped, it's a one-seater!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -148,7 +148,7 @@
            (str "Ah! That's...")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
@@ -166,7 +166,7 @@
        ; Kirara:
            (str "We should almost be there...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 73 #t))
  (seg (? (= T 2) (= O 1))
@@ -180,7 +180,7 @@
        ; Kirara:
            (str "I don't have a problem with heights.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "No, I mean fighting Black Nurse!")
@@ -191,7 +191,7 @@
            (str "She's the head of the Black Cross Society,")
    (str "so I might not be able to beat her...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 1)
        ; Kirara:
            (str "But... But...")
@@ -206,7 +206,7 @@
            (str "Because you came with me, Tanchi... I'm" 'br)
    (str "not scared.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Kirara...")
@@ -221,7 +221,7 @@
            (str "If I'm with you, I bet we can even beat" 'br)
    (str "Black Nurse.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -234,7 +234,7 @@
        ; Kirara:
            (str "......")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "S-Sorry... That came out kind of weird.")
@@ -244,7 +244,7 @@
        ; Kirara:
            (str "No... Thank you for worrying about her.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 75 #t))
  (seg (? (= T 2) (= O 4))
@@ -254,7 +254,7 @@
        ; Kirara:
            (str "It's fine, I'm sure my mother is okay!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -264,7 +264,7 @@
            (str "Hey, stop wiggling around! What if we" 'br)
    (str "fall?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -278,7 +278,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

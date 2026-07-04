@@ -48,7 +48,7 @@
                  (str "All good here! It's super dark," 'br)
   (str "though.")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -124,7 +124,7 @@
        ; Dengeki Nurse:
                   (str "Huh? Oh, okay...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 87 #t))
  (seg (? (= T 2) (= O 1))
@@ -138,7 +138,7 @@
        ; Dengeki Nurse:
                   (str "I'm worried...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -153,7 +153,7 @@
           ; Dengeki Nurse:
                      (str "Hey! Watch those hands!")
       (proc 15)
-      (proc 6) ; Clear Portrait
+      (proc 6) ; Clear portrait
       (proc 2)
           ; Tanchi:
               (str "Sorry... It wasn't on purpose, I swear..."))
@@ -169,7 +169,7 @@
           ; Dengeki Nurse:
                      (str "Ow! What are you doing!?")
       (proc 15)
-      (proc 6) ; Clear Portrait
+      (proc 6) ; Clear portrait
       (proc 2)
           ; Tanchi:
               (str "Ha...hahahaha..."))
@@ -179,7 +179,7 @@
           ; Dengeki Nurse:
                      (str "Eeeeek! That tickles!")
       (proc 15)
-      (proc 6) ; Clear Portrait
+      (proc 6) ; Clear portrait
       (proc 2)
           ; Tanchi:
               (str "Whuh? That's weird..."))))
@@ -231,7 +231,7 @@
                   (str "How far is this gonna go," 'br)
    (str "seriously?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 91 #t))
  (seg (? (= T 4) (= O 2))
@@ -245,7 +245,7 @@
                   (str "I'm getting an icky feeling about" 'br)
    (str "this...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 92 #t))
  (seg (? (= T 4) (= O 3))
@@ -258,7 +258,7 @@
        ; Dengeki Nurse:
                   (str "Ahhhhhhhhhhh!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What's wrong?")
@@ -268,7 +268,7 @@
        ; Dengeki Nurse:
                   (str "Oh, nothing.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str ".........")
@@ -293,7 +293,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

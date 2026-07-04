@@ -75,7 +75,7 @@
       ; Kirara:
           (str "What happened to you?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
 ; FMT
 ; (exec-mem 18944 65535 528 23)
@@ -182,7 +182,7 @@
        ; Dr. Akiba:
               (str "A clear-cut case of Papipapi Disease.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 94 #t))
  (seg (? (= T 0) (= O 3))
@@ -325,7 +325,7 @@
            (str "The polka dots are kind of cute, in their" 'br)
    (str "own way.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
@@ -339,7 +339,7 @@
    (str "interior, and is a microbial infection that causes")
    (str "diarrhea and fever for three days straight.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "But how would he have been exposed to" 'br)
@@ -349,7 +349,7 @@
        ; Dr. Akiba:
               (str "Maybe he ate something bad?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "Can't you do anything!? The finals are" 'br)
@@ -359,7 +359,7 @@
        ; Dr. Akiba:
               (str "It will be difficult...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "But my face! Can't you at least get rid of")
@@ -370,13 +370,13 @@
               (str "Not without the vaccine that we'd need" 'br)
    (str "delivered from Brazil...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Even if we request it now, it wouldn't" 'br)
    (str "be in time for tomorrow's starting grid...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "Noooo.... No way!")
@@ -395,7 +395,7 @@
               (str "This isn't some common thing like" 'br)
    (str "appendicitis!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
@@ -420,7 +420,7 @@
        ; Kirara:
            (str "What about covering them with some makeup?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "W-What?! You want the hottest playboy to" 'br)
@@ -436,7 +436,7 @@
               (str "There's not much we can do. And by" 'br)
    (str "tomorrow, the diarrhea and fever will...escalate.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 96 #t))
  (seg (? (= T 2) (= O 5))
@@ -447,7 +447,7 @@
            (str "Yeah, but if you race looking like that," 'br)
    (str "all the kids will love you, though...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 6))
    (proc 18)
@@ -461,7 +461,7 @@
            (str "What a pity... You could've become the" 'br)
    (str "first Japanese champion...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "Hmph! This is just a race...")
@@ -510,7 +510,7 @@
            (str "But... Isn't it impossible to just drop" 'br)
    (str "into F1 and start doing it?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "I don't know, is it?")
@@ -521,7 +521,7 @@
            (str "There's this book I've been reading that I")
    (str "could lend you.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
 ; 	Mr. Blister appears
 
@@ -595,7 +595,7 @@
        ; Kirara:
            (str "The Black Cross!!!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 12)
        ; Mr. Blister:
                 (str "According to our connections, you two")
@@ -614,7 +614,7 @@
        ; Kirara:
            (str "Tanchi! You've gotta do this!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 105 #t))
  (seg (? (= T 2) (= O 12))
@@ -643,7 +643,7 @@
        ; Kirara:
            (str "Wow, Tanchi, you're totally awesome!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, the time for a victory lap is later!" 'br)
@@ -681,7 +681,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
 ;  (define-proc 12 (<> (text-color 5) (str "Mr. Blister: ")))

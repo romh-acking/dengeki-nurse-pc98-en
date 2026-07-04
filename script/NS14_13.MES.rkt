@@ -2,11 +2,11 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Tanchi safely pits in the clobbered F1 car, putting a prompt end to his unwanted racing career.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
-; (define-proc 10 (<> (text-color 1) (str "Moguri: "))) ; <- Unused
+; (define-proc 10 (<> (text-color 1) (str "Moguri: "))) ; <--- Unused
   (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
   (define-proc 13 (<> (text-color 5) (str "Mr. Blister: ")))
 
@@ -227,7 +227,7 @@
        ; Kirara:
            (str "Don't sweat it! He's totally gonna win!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "It's not THAT easy...")
@@ -238,7 +238,7 @@
    (str "but we managed to figure out the source of the" 'br)
    (str "outbreak...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 147 #t))
  (seg (? (= T 2) (= O 2))
@@ -252,7 +252,7 @@
        ; Dr. Akiba:
               (str "Oh, it's nothing... Nothing at all...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "??????")
@@ -303,7 +303,7 @@
        ; Kirara:
            (str "R-Really?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 154 #t))
  (seg (? (= T 2) (= O 4))
@@ -340,7 +340,7 @@
               (str "Tanchi... I think you might want to" 'br)
    (str "reconsider.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What are you talking about? Nothing this" 'br)
@@ -367,7 +367,7 @@
        ; Kirara:
            (str "Hey! Don't touch my butt!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 1))
    (proc 18)
@@ -392,7 +392,7 @@
        ; Dr. Akiba:
               (str "......")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 148 #t))
  (seg (? (= T 3) (= O 2))
@@ -406,7 +406,7 @@
            (str "How many times do I have to tell you," 'br)
    (str "don't touch my butt!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -421,7 +421,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 1) (str "Moguri: ")))
 ;  (define-proc 11 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 13 (<> (text-color 5) (str "Mr. Blister: ")))

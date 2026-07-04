@@ -198,7 +198,7 @@
        ; Kirara:
            (str "WHAT?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Come on, we gotta go! She's at the" 'br)
@@ -210,7 +210,7 @@
            (str "O-Okay...")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
@@ -234,7 +234,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

@@ -52,7 +52,7 @@
       ; Kirara:
           (str "The Thunder Tribe!?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "W-We aren't old enough to have been mixed" 'br)
@@ -269,7 +269,7 @@
    (str "Did you shave your eyebrows real thin, bleach your")
    (str "hair and add streaks?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, that's enough! That was a long time" 'br)
@@ -295,7 +295,7 @@
            (str "I guess you can't judge a book by its" 'br)
    (str "cover.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "Moguri, it's about time you got out on" 'br)
@@ -328,7 +328,7 @@
        ; Kirara:
            (str "Where did Moguri go?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "He's gonna start his run.")
@@ -339,7 +339,7 @@
            (str "Oh, he went jogging, then? Being a racer" 'br)
    (str "must be tough.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "......")
@@ -352,7 +352,7 @@
        ; Kirara:
            (str "That's so cool!!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Are you a believer, then?")
@@ -362,7 +362,7 @@
        ; Kirara:
            (str "Yeah, F1 is incredible!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "Good, good. He's making good time.")
@@ -384,7 +384,7 @@
        ; Kirara:
            (str "This is so awesome! I wanna ride too!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What are you talking about? You can't just")
@@ -399,7 +399,7 @@
        ; Kirara:
            (str "For real!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "Haha. No.")
@@ -422,7 +422,7 @@
        ; Kirara:
            (str "Vrmmmm.... Vrmmm vrmmm vrmmmmmmm.....")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What are you getting so excited about?")
@@ -436,7 +436,7 @@
            (str "So what's a professional pole? And who are")
    (str "Senna and Mansell?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Urrgh... Explaining all this will take" 'br)
@@ -449,7 +449,7 @@
            (str "Geez, you're mean! Fine, I'll just ask" 'br)
    (str "Moguri about it.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "Oh, I can tell you all about it if you" 'br)
@@ -461,7 +461,7 @@
        ; Kirara:
            (str "Wow, what a champ!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 38 #t))
  (seg (? (= T 2) (= O 7))
@@ -488,7 +488,7 @@
        ; Kirara:
            (str "Whaaat? He's not my boyfriend!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "I've got a meeting to prep for tomorrow," 'br)
@@ -499,7 +499,7 @@
        ; Kirara:
            (str "Okay...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Okay, let's haul out of here before we get")
@@ -511,7 +511,7 @@
            (str "W-Wait a second... Didn't he say I could" 'br)
    (str "sit in the cockpit?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, you're still going on about that?")
@@ -563,7 +563,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
    (proc 19)

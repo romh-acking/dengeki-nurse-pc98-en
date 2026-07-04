@@ -38,7 +38,7 @@
                     (str "It's fine! We beat her once, we" 'br)
      (str "sure can do it again!")
      (proc 15)
-     (proc 6) ; Clear Portrait
+     (proc 6) ; Clear portrait
      (text-color 8)
      (str "Tomoyo: Heh heh heh! This time, I won't hold back!")
      (proc 15)
@@ -143,7 +143,7 @@
        ; Dengeki Nurse:
                   (str "Dokkaaaaaaannn!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Dokkannnnnn!")

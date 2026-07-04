@@ -123,7 +123,7 @@
        ; Kirara:
            (str "It could be an English-style one...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 19 #t))
  (seg (? (= T 1) (= O 1))
@@ -163,7 +163,7 @@
        ; Kirara:
            (str "I'm excited too! Let's go already!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 18 #t))
  (seg (? (= T 2) (= O 1))
@@ -174,7 +174,7 @@
            (str "Hey, Tanchi... What are they doing over" 'br)
    (str "there?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 17 #t))
  (seg (? (= T 2) (= O 2))
@@ -192,7 +192,7 @@
    (str "strict, but it looks like normal schools are" 'br)
    (str "equally so...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Well, this place IS prestigious.")
@@ -211,7 +211,7 @@
        ; Kirara:
            (str "...They're inspecting panties too!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeeeah... It's fine to watch, but... This" 'br)
@@ -222,7 +222,7 @@
        ; Kirara:
            (str "This can't be right!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Girl 1:
            (str "No way! Please forgive me!")
@@ -245,7 +245,7 @@
            (str "This is awful! I'm going to give them a" 'br)
    (str "piece of my mind!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Wait, Kirara! This isn't our business...")
@@ -273,7 +273,7 @@
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Warm-up exercises for the physical exams!")
@@ -290,7 +290,7 @@
        ; Kirara:
            (str "What are you doing!?!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -304,7 +304,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5) (str "Discipliner: ")))
 ;  (define-proc 11 (<> (text-color 3) (str "Girl 1: ")))
 ;  (define-proc 12 (<> (text-color 1) (str "Girl 2: ")))

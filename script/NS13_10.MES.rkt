@@ -140,7 +140,7 @@
       ; Kirara:
           (str "No! Stay away from me!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 23)
 ; FMT
@@ -314,7 +314,7 @@
        ; Kirara:
            (str "Stay back! Tanchi, you're filthy!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 77 #t))
  (seg (? (= T 2) (= O 1))
@@ -329,7 +329,7 @@
        ; Kirara:
            (str "I don't wanna hear your excuses!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (sound '|| 2)
    (proc 10)
        ; Johnny:
@@ -392,7 +392,7 @@
            (str "Uh... Uh, Johnny... That really is enough,")
    (str "you can sheathe that blade...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "Kirara, I'm not holding back! This issue" 'br)
@@ -452,7 +452,7 @@
        ; Kirara:
            (str "?????")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13)
        ; Janet:
           (str "It was hard to track it down in the ocean," 'br)
@@ -488,7 +488,7 @@
        ; Kirara:
            (str "Seriously, just who are you people?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "Magenta! Columbia! Janet! Assume Crane" 'br)
@@ -531,7 +531,7 @@
        ; Johnny:
            (str "Wahahaha! I see a look of surprise!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 9))
    (proc 18)
@@ -544,13 +544,13 @@
    (str "order of the Black Cross, we will punish Dengeki" 'br)
    (str "Nurse!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 3) (exec-mem 2816 "GET 2 60 0 10 96") (proc 4) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "The order of WHAT!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "The Black Cross!!!")
@@ -565,7 +565,7 @@
        ; Columbia:
              (str "There isn't any footage to use.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 14)	; Johnny
    (proc 10)
        ; Johnny:
@@ -573,7 +573,7 @@
    (str "Nurse groping Columbia, going") (text "“") (str "aaaaahhhhhh") (text "”") (str "and" 'br)
    (str "everything?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Kirara... Did you...")
@@ -584,7 +584,7 @@
            (str "No! That's a lie...a big fat lie! Tanchi," 'br)
    (str "you've got to believe me...!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah... Yeah, I'll believe you.")
@@ -594,7 +594,7 @@
    (str "You two head back to the mansion, and we'll do a" 'br)
    (str "reshoot.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What is wrong with you!? You think we're" 'br)
@@ -605,7 +605,7 @@
    (str "Course request. We gotta deliver video proof to" 'br)
    (str "the client.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Magenta:
             (str "You'd better do it again, or else.")
@@ -654,7 +654,7 @@
            (str "Mmm...Very well, then! Janet! Rough 'em up")
    (str "a little bit!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5) (exec-mem 2816 "GET 2 50 192 10 96") (proc 7) (proc 13)
        ; Janet:
           (str "Wha!? Why me? How come I'm always drawing" 'br)
@@ -666,7 +666,7 @@
              (str "Stop bellyaching, you low-level" 'br)
    (str "underling!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Magenta:
             (str "Yeah, it's part of your training, or" 'br)
@@ -679,7 +679,7 @@
            (str "Bushido means you gotta endure hardship!" 'br)
    (str "Ganbatte, Janet! Go fight!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "I don't care who you send against" 'br)
@@ -818,7 +818,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8)  (str "Johnny: ")))
 ;  (define-proc 11 (<> (text-color 3)  (str "Magenta: ")))
 ;  (define-proc 12 (<> (text-color 5)  (str "Columbia: ")))

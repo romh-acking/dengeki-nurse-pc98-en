@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; That's one elephant down, now time to tackle the one inside the room. Er, castle.
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -223,7 +223,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Nursia: ")))
    (proc 19)
    (set-var B 5)

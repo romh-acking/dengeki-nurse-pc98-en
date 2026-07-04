@@ -167,7 +167,7 @@
        ; Kirara:
            (str "But it was so much fun, though!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Why, you...")
@@ -181,7 +181,7 @@
        ; Kirara:
            (str "I wanna ride again!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -215,7 +215,7 @@
            (str "Speaking of talent... What happened to" 'br)
    (str "Sena and Manko?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "They probably went home early.")
@@ -234,7 +234,7 @@
        ; Kirara:
            (str "Okaaaaaay!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "......")
@@ -264,7 +264,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Moguri: ")))
    (proc 19)

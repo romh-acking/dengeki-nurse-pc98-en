@@ -176,7 +176,7 @@
        ; Kirara:
            (str "Ah, I'm...not legal yet...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "Hahaha! It's so rare to find a proper" 'br)
@@ -188,7 +188,7 @@
        ; Kirara:
            (str "A Yamato Nadeshiko...???")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 1))
@@ -280,7 +280,7 @@
        ; Kirara:
            (str "Tanchii!!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "Hahahaha! It seems that Kirara is jealous!")
@@ -290,7 +290,7 @@
        ; Kirara:
            (str "Wha-wha-wha.... I'm nothing of the sort!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "I'm sure you are, ma'am! Now let's get you")
@@ -378,7 +378,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8) (str "Johnny: ")))
 ;  (define-proc 11 (<> (text-color 3) (str "Magenta: ")))
 ;  (define-proc 12 (<> (text-color 5) (str "Columbia: ")))

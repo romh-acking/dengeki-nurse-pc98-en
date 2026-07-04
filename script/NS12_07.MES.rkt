@@ -79,7 +79,7 @@
       ; Kirara:
           (str "Save") (text "−") (str "?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -228,7 +228,7 @@
    (str "I only touched her butt a little bit... Geez," 'br)
    (str "something really went wrong with her upbringing...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk
    (proc 18)
@@ -248,7 +248,7 @@
        ; Kirara:
            (str "This really is awful, though.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Yunako:
            (str "That wouldn't work! The principal and" 'br)
@@ -277,7 +277,7 @@
        ; Kirara:
            (str "That stuck-up lady from earlier!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Yunako:
            (str "Ever since Ms. Akiko took over student" 'br)
@@ -351,7 +351,7 @@
        ; Kirara:
            (str "This could be fun! Let's give it a shot!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Well, I might help, if you agree to go on" 'br)
@@ -362,7 +362,7 @@
        ; Kirara:
            (str "Tanchi!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Mohiko:
            (str "A date...?")
@@ -382,7 +382,7 @@
            (str "No dates required! I'll take down the" 'br)
    (str "Morals Committee and Akiko all by myself!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Yunako:
            (str "For real?")
@@ -397,7 +397,7 @@
            (str "I'll take care of things if you don't! You")
    (str "can just go back to the hospital!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 50 #t))
  (seg (? (= T 2) (= O 6))
@@ -407,7 +407,7 @@
        ; Kirara:
            (str "Just go back to the hospital by yourself!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 7))
    (proc 18)
@@ -424,7 +424,7 @@
        ; Kirara:
            (str "...So, what exactly are we supposed to do?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Yunako:
            (str "Uh, I don't know.")
@@ -447,7 +447,7 @@
        ; Kirara:
            (str "Let's start digging up dirt!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hold up, walking around the school dressed")
@@ -468,7 +468,7 @@
        ; Kirara:
            (str "Good thinking!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Am I supposed to wear this too...?")
@@ -478,7 +478,7 @@
        ; Kirara:
            (str "This fits me perfectly!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Uh, even if I wear a sailor uniform," 'br)
@@ -520,7 +520,7 @@
 ; FMT
 ;  (sound '|| "Nurse09.fmt")
    (sound '|| 3)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Mohiko:
            (str "Here, use this wig!")
@@ -556,7 +556,7 @@
        ; Kirara:
            (str "Shall we get changed, then?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "But where?")
@@ -566,7 +566,7 @@
        ; Kirara:
            (str "What about that toilet over there?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Arrrgh... How did it come to this...")
@@ -577,7 +577,7 @@
            (str "Stop grumbling and get changed already," 'br)
    (str "come on!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
@@ -629,7 +629,7 @@
        ; Kirara:
            (str "Hold it, buster! Don't try to split!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You're the one who told me to go, Kirara!")
@@ -640,7 +640,7 @@
            (str "If you don't help, you can get a kiss from")
    (str "my electric fist!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 54 #t))
  (seg (? (= T 5) (= O 0))												; Save
@@ -648,7 +648,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3) (str "Yunako: ")))
 ;  (define-proc 11 (<> (text-color 1) (str "Mohiko: ")))
    (proc 19)

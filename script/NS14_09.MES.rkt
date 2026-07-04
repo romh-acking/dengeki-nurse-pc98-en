@@ -107,7 +107,7 @@
           (str "That's because there's nothing going" 'br)
   (str "through his brain!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 10)
       ; Nakajima:
             (str "??????")
@@ -127,7 +127,7 @@
       ; Kirara:
           (str "Oh! I'm a nurse, how can I help you?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 11)
       ; Mystery Lady:
                 (str "That's a very unique nurse uniform.")
@@ -137,7 +137,7 @@
       ; Kirara:
           (str "Oh, um, it's a long story...")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 11)
       ; Mystery Lady:
                 (str "I found these people collapsed in" 'br)
@@ -159,7 +159,7 @@
       ; Kirara:
           (str "This is your definition of collapsed??")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 11)
       ; Mystery Lady:
                 (str "Well then, I'll leave them in your" 'br)
@@ -183,7 +183,7 @@
       ; Kirara:
           (str "!!!!!!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 10)
       ; Nakajima:
             (str "Hey, Kirara! Where are you going!?")

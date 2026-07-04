@@ -47,13 +47,13 @@
       ; Kirara:
           (str "Haaaahahha!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 14) ; Croco portrait
   (proc 10)
       ; Croco:
          (str "Waniiiiii!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (text-color 7)
   (str "Those two look like they're having fun, but grey" 'br)
   (str "clouds are starting to gather...")
@@ -227,13 +227,13 @@
        ; Kirara:
            (str "Whaa!? No way, I don't want to!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 14) ; Croco portrait
    (proc 10)
        ; Croco:
           (str "Waniwaniwaniwani!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Stop acting like little kids! Something" 'br)
@@ -245,7 +245,7 @@
            (str "But there's such beautiful weather over" 'br)
    (str "there!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "There are big grey clouds over our boat!")
@@ -256,7 +256,7 @@
            (str "Isn't that weird? How come they're over us")
    (str "and nowhere else?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Now that you mention it, that is" 'br)
@@ -275,7 +275,7 @@
        ; Kirara:
            (str "See! See! I told you!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -295,7 +295,7 @@
            (str "But it's not deserted if we're there," 'br)
    (str "right?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Shut up! That's just semantics!")
@@ -313,7 +313,7 @@
        ; Kirara:
            (str "No no no!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -328,7 +328,7 @@
        ; Kirara:
            (str "Oooogh!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What's wrong?")
@@ -338,7 +338,7 @@
        ; Kirara:
            (str "Water went up my schnozz!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -352,7 +352,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
    (proc 19)
    (set-var B 3)

@@ -42,7 +42,7 @@
           (str "We changed clothes in this bathroom," 'br)
    (str "didn't we?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Yeah, but all the bathrooms look the same,")
@@ -72,7 +72,7 @@
           (str "Of course! Like we'd stick around in a" 'br)
    (str "place like that!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 10)
           (str "The cheek! I'll make you regret that!")
   (proc 15)
@@ -223,7 +223,7 @@
            (str "This isn't good. She's not that tough, but")
    (str "not someone we could beat barehanded...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 89 #t))
  (seg (? (= T 2) (= O 1))
@@ -238,7 +238,7 @@
        ; Kirara:
            (str "Don't, you're making a terrible mistake!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "Bring it on, either one of you!")
@@ -266,7 +266,7 @@
            (str "The Reflection Cell's days are numbered" 'br)
    (str "since Akiko's fate's already been decided!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "W-What are you on about...?")
@@ -277,7 +277,7 @@
            (str "Don't play dumb with me, you're Momoko of" 'br)
    (str "the Sailor Nurse Squad!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "Eek! Who the heck are you!?")
@@ -294,7 +294,7 @@
 ; FMT
 ;  (sound '|| 2)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 2816 "EXIT")
 ; FMT
 ;  (set-var K 2) (sound '|| 0)
@@ -331,7 +331,7 @@
                   (str "Now's your chance to apologize to" 'br)
    (str "me!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "That's right! This lady's totally crazy!" 'br)
@@ -342,7 +342,7 @@
        ; Dengeki Nurse:
                   (str "You can shut your smug trap!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Ahh! Yes, ma'am...")
@@ -398,7 +398,7 @@
                   (str "Now where's Akiko? And where's your")
    (str "captain Asuka?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "If I told the likes of you, I'd face the" 'br)
@@ -410,7 +410,7 @@
                   (str "Girl, if you don't spill you're" 'br)
    (str "gonna face MINE!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hmm, I wonder if I could punish her too...")
@@ -425,7 +425,7 @@
        ; Dengeki Nurse:
                   (str "Good enough! Let's move!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hold on, I still wanna punish Momoko!")
@@ -453,7 +453,7 @@
        ; Kirara:
            (str "What are you doing???")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Uh, I was just thinking I'd beat her with" 'br)
@@ -464,7 +464,7 @@
        ; Kirara:
            (str "...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -479,7 +479,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Momoko: ")))
 ;  (define-proc 11 (<> (text-color 5)  (str "Cleaning Lady: ")))
    (proc 19)

@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Dengeki Nurse and Nurse THE MANSELL/SENNA have a stare-off in the rubble...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -499,7 +499,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 1)  (str "Announcer: ")))
 ;  (define-proc 11 (<> (text-color 8)  (str "Nurse THE MANSELL: ")))
 ;  (define-proc 12 (<> (text-color 11) (str "Nurse THE SENNA: ")))

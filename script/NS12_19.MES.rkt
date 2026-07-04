@@ -45,7 +45,7 @@
       ; Kirara:
           (str "Ha hah, without a hitch!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 5)
       ; Dr. Akiba:
              (str "Oho! Music to my ears. By the by," 'br)

@@ -143,7 +143,7 @@
            (str "This is all really confusing... I don't" 'br)
    (str "get any of this...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, you're actually taking this lecture" 'br)
@@ -158,7 +158,7 @@
        ; Kirara:
            (str "Well, everyone else is!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Everyone else is terrified, more likely." 'br)
@@ -177,7 +177,7 @@
        ; Kirara:
            (str "It looks normal to me.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You never know, it could be made of Super-")
@@ -217,7 +217,7 @@
        ; Kirara:
            (str "Noooo! Lemme go!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Kirara, let's see how this plays out so we")
@@ -239,7 +239,7 @@
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, um, nothing... My legs poking out from")
@@ -266,7 +266,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
    (proc 19)
    (set-var B 2)

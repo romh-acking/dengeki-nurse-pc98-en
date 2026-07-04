@@ -177,7 +177,7 @@
        ; Kirara:
            (str "Me too!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
@@ -206,7 +206,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5) (str "Yukikoji: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Nursia: ")))
    (proc 19)

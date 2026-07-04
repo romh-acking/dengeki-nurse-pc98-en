@@ -52,7 +52,7 @@
       ; Kirara:
           (str "Who's this guy supposed to be?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Geez, Kirara! Don't be so rude!")
@@ -66,7 +66,7 @@
       ; Kirara:
           (str "It's nice to meet you, Mr. Nattojima!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Kirara!!! That's not how you read his" 'br)
@@ -268,7 +268,7 @@
        ; Kirara:
            (str "Yes! I'm totally fired up!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "Hah, is this your first time at a" 'br)
@@ -280,7 +280,7 @@
            (str "Yes! All the drivers look so cool. It" 'br)
    (str "feels like a workplace for guys!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Nakajima:
              (str "For real? I feel like it's lacking in" 'br)
@@ -355,7 +355,7 @@
            (str "Tanchi! You're literally drooling right" 'br)
    (str "now!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 12)
        ; Manko:
           (str "Director, where's Moguri?")
@@ -394,7 +394,7 @@
        ; Kirara:
            (str "Is that Moguri Suzuki there?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, Japan's genius driver!")
@@ -404,7 +404,7 @@
        ; Kirara:
            (str "Wow, those are some big ears.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "It's not just his ears that are big. He's" 'br)
@@ -415,7 +415,7 @@
        ; Kirara:
            (str "??????")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 20 #t))
  (seg (? (= T 2) (= O 7))
@@ -425,7 +425,7 @@
        ; Kirara:
            (str "Suzuki-san is so cool...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 8))
    (proc 18)
@@ -451,7 +451,7 @@
        ; Kirara:
            (str "How do you know Suzuki-san?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Er... we're old acquaintances.")
@@ -461,7 +461,7 @@
        ; Kirara:
            (str "Huuuuuh? Just old acquaintances?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
            (str "Heh heh... Back in the day, Tanchi and I" 'br)
@@ -472,7 +472,7 @@
        ; Kirara:
            (str "Town painting!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 8 16 93,FREE 8")
 ; ^ Dr. Akiba and Croco pop up. Surprise!
@@ -512,7 +512,7 @@
        ; Kirara:
            (str "What are you doing?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I'm using my telepathy to communicate with")
@@ -523,7 +523,7 @@
        ; Kirara:
            (str "......")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 23 #t))
  (seg (? (= T 3) (= O 2))
@@ -545,7 +545,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 3)  (str "Nakajima: ")))
 ;  (define-proc 11 (<> (text-color 1)  (str "Moguri: ")))
 ;  (define-proc 12 (<> (text-color 8)  (str "Manko: ")))

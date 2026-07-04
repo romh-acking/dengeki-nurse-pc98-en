@@ -62,7 +62,7 @@
       ; Kirara:
           (str "What the!? Let go!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Hold on! We should see how things pan out.")
@@ -148,7 +148,7 @@
            (str "Hey, Tanchi! Aren't you gonna do something")
    (str "about this?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Not yet.")
@@ -167,7 +167,7 @@
            (str "This is unforgivable! I have to give them" 'br)
    (str "a piece of my mind!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "W-Wait! Kirara! Just when things were" 'br)
@@ -178,7 +178,7 @@
        ; Kirara:
            (str "Hey, you two stop messing around!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "Hmph, what do you want?")
@@ -340,7 +340,7 @@
            (str "Those two are acting like monsters! Why" 'br)
    (str "can't we stop them!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I never said we couldn't, just that we" 'br)
@@ -364,7 +364,7 @@
            (str "As a nurse, I cannot approve of removing" 'br)
    (str "panties in such an unhygienic environment!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Momoko:
            (str "Well, you sure look the sort to only sleep")
@@ -375,7 +375,7 @@
        ; Kirara:
            (str "Wha!? How dare you! Tanchi, say something!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "...")
@@ -389,7 +389,7 @@
        ; Kirara:
            (str "Come on, Tanchi! Help me out here!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "......")
@@ -433,7 +433,7 @@
            (str "I don't care about your precious rules!" 'br)
    (str "This is where I draw the line!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Um yes, I, agree... Actually, does the" 'br)
@@ -486,7 +486,7 @@
        ; Kirara:
            (str "If you're serious, then bring it on!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 26 #t))
  (seg (? (= T 2) (= O 4))
@@ -500,7 +500,7 @@
        ; Kirara:
            (str "You shut up! I'm only 19!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
@@ -514,7 +514,7 @@
            (str "Don't try to stop me!")
    (proc 15)
    (sound '|| 0)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
    (exec-mem 2816 "GET 5 5 23 28 166")
    (exec-mem 2816 "VIEW 5 23 28 166,PUT 4 5 23,FREE 4")
@@ -586,7 +586,7 @@
            (str "Aww... I really wanted to take those cocky")
    (str "girls down...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, you shouldn't be using your Dengeki" 'br)
@@ -623,7 +623,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Momoko: ")))
 ;  (define-proc 11 (<> (text-color 5)  (str "Asuka: ")))
 ;  (define-proc 12 (<> (text-color 3)  (str "Yunako: ")))

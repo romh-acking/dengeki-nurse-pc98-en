@@ -62,7 +62,7 @@
       ; Kirara:
           (str "It's Allizdog!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -201,7 +201,7 @@
        ; Kirara:
            (str "Uh... This is a vinyl toy, isn't it?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Why? How!? When!? How did the Minister" 'br)
@@ -213,7 +213,7 @@
            (str "That's not the Minister, he's been" 'br)
    (str "abducted!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Gracious sakes...")
@@ -224,7 +224,7 @@
            (str "Ayako must have made us hallucinate all" 'br)
    (str "that.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 1)
        ; Kirara:
            (str "By the time we got to the annex, the" 'br)
@@ -241,7 +241,7 @@
            (str "Where is your head at, you perv!? We need" 'br)
    (str "to get to the operating room, and fast!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "The Minister's in the operating room...?")
@@ -252,7 +252,7 @@
            (str "Guillotine Nurse is totally obsessed with" 'br)
    (str "surgery!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What!? But...what do you want me to do?")
@@ -262,7 +262,7 @@
        ; Kirara:
            (str "Take me to the operating room!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "We went there to do surgery on Doc" 'br)
@@ -273,7 +273,7 @@
        ; Kirara:
            (str "Yeah, but I forgot where it is!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 128 #t))
  (seg (? (= T 2) (= O 3))
@@ -283,7 +283,7 @@
        ; Kirara:
            (str "No time to waste! To the operating room!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -306,7 +306,7 @@
        ; Kirara:
            (str "Why are you grabbing my arm like that!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -331,7 +331,7 @@
            (str "Stop running away! Show some fortitude! Be")
    (str "a man for once!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 2))
    (proc 18)
@@ -344,7 +344,7 @@
        ; Kirara:
            (str "Yeah! I'm counting on you!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 5)
        ; Dr. Akiba:
               (str "Kirara, don't forget this...")
@@ -379,7 +379,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 1)
    (set-var C 1)))

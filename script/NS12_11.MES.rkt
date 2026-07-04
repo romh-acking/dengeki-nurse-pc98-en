@@ -381,7 +381,7 @@
            (str "Don't you dare dance, sing or touch my" 'br)
    (str "butt! I can't stand it!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I won't!!")
@@ -394,7 +394,7 @@
        ; Kirara:
            (str "Sniff, sniff... Are you leaving me behind?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Don't be stupid, there's nowhere for me to")
@@ -406,7 +406,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5)  (str "Asuka: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Momoko: ")))
    (proc 19)

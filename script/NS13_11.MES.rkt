@@ -62,7 +62,7 @@
   (proc 10)
           (str "Rise and shine, you two!")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "Nnnnnn! Oh god! What fresh hell is this!?")
@@ -203,7 +203,7 @@
             (str "Hee hee hee! Come on, get more aroused" 'br)
    (str "and make her happy!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 1)
        ; Kirara:
            (str "Please... Will you...")
@@ -344,7 +344,7 @@
        ; Johnny:
            (str "Waagh! What's going on!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 17920 1 1)
    (sound '|| 0)
 ; PC-98
@@ -377,7 +377,7 @@
        ; Johnny:
            (str "Damn you and your repulsive trickery!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "Now hand over the video!")
@@ -387,7 +387,7 @@
            (str "You really think I'd hand it over if you" 'br)
    (str "asked?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "If you do, I'll let it all slide...")
@@ -398,7 +398,7 @@
            (str "No chance, babe! This video's headed" 'br)
    (str "straight to the black market!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, don't you mess around like that! I'm" 'br)
@@ -414,7 +414,7 @@
            (str "Columbia! I'll leave the punishment to" 'br)
    (str "you! Magenta and I will deliver the video!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
        ; Columbia:
@@ -427,7 +427,7 @@
            (str "Well said, Columbia! Atta girl, I'll be on")
    (str "my way then!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 0)
        ; Dengeki Nurse:
                   (str "Hey, wait!!")
@@ -462,7 +462,7 @@
        ; Johnny:
            (str "Ha ha! You'll find out soon enough!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 93 #t))
  (seg (? (= T 2) (= O 1))
@@ -476,13 +476,13 @@
            (str "Ha ha ha! The sexy show's about to start!" 'br)
    (str "Magenta! Columbia! You two ready to rock?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11)
        ; Magenta:
             (str "Yeeesss, Master, this time the battery is")
    (str "good to go!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
        ; Columbia:
@@ -494,7 +494,7 @@
            (str "Aw yeah, aw yeah! Then let's have that" 'br)
    (str "vibration start!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 13) (proc 14) ; Columbia portrait
    (proc 12)
        ; Columbia:
@@ -523,7 +523,7 @@
        ; Johnny:
            (str "Hohoho! This is a linked vibrator system!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 86 #t))
  (seg (? (= T 2) (= O 2))
@@ -537,7 +537,7 @@
            (str "Oh, it's no trick, baby! It's all" 'br)
    (str "original! Wahahhahahha!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -551,12 +551,12 @@
             (str "When you get aroused, her vibrator is the")
    (str "one that's gonna go crazy!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Johnny:
            (str "Hahaha, let's watch the fun!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "You're messing with me! What would ever" 'br)
@@ -570,7 +570,7 @@
        ; Magenta:
             (str "Look at her, you ding-dong!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 5))
    (proc 18)
@@ -584,7 +584,7 @@
    (str "not? And even better, this is gonna get broadcast" 'br)
    (str "worldwide!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 89 #t))
  (seg (? (= T 2) (= O 6))
@@ -599,7 +599,7 @@
             (str "We saw that coming, so I glued your" 'br)
    (str "eyelids open. You can't close them.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What treachery! And you call yourself a" 'br)
@@ -609,7 +609,7 @@
        ; Johnny:
            (str "I'm a Cali kid at heart, baby!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 6656 0 1 1 3 0)
    (proc 1)
        ; Kirara:
@@ -634,7 +634,7 @@
        ; Magenta:
             (str "You're not going anywhere!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -647,7 +647,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8) (str "Johnny: ")))
 ;  (define-proc 11 (<> (text-color 3) (str "Magenta: ")))
 ;  (define-proc 12 (<> (text-color 5) (str "Columbia: ")))

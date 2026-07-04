@@ -218,7 +218,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 4) (str "Nurse: ")))
    (proc 19)
    (set-var B 1)

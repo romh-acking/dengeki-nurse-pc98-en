@@ -213,7 +213,7 @@
   (proc 1)
       ; Kirara:
           (str "I'm fine! Starting tomorrow I'll be back at")
-  (str "at work, working hard!")
+  (str "work, working hard!")
   (proc 16)
   (proc 1)
       ; Kirara:

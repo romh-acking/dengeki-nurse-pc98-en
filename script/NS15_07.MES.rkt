@@ -108,7 +108,7 @@
        ; Kirara:
            (str "What happened?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-color 7)
    (str "The door opens and Kirara walks in.")
    (proc 15)
@@ -122,7 +122,7 @@
            (str "Why are you yelling at me? I've got things")
    (str "to do too!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Nursia was kidnapped by Black Nurse!")
@@ -132,7 +132,7 @@
        ; Kirara:
            (str "Black Nurse!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "If you actually showed up on time, this" 'br)
@@ -143,7 +143,7 @@
        ; Kirara:
            (str "Even if you say that...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11) ; Portrait (Aloof)
    (proc 1)
        ; Kirara:
@@ -155,7 +155,7 @@
 
    (sound '|| 0)
    (sound '|se | 20)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (exec-mem 2816 "GET 9 16 93 40 237")
    (exec-mem 2816 "VIEW 16 93 40 237,PUT 10 16 93,FREE 10")
    (text-color 1)
@@ -255,7 +255,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

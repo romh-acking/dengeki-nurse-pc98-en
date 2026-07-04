@@ -370,7 +370,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5)  (str "Yukikoji: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Croco: "))) ; what is blud doing here she is unused
 ;  (define-proc 12 (<> (text-color 5)  (str "Mitsuko: ")))

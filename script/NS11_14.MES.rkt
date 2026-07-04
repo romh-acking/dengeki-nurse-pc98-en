@@ -139,7 +139,7 @@
                   (str "Um, yes? My eyes ARE up here, but" 'br)
    (str "you're making it worse...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "As a man... I cannot permit you to go in" 'br)
@@ -151,7 +151,7 @@
                   (str "Eh... Fair enough... But you might" 'br)
    (str "regret saying that later.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Of course I won't!")
@@ -165,14 +165,14 @@
        ; Tanchi:
            (str "Leftmost room on the second floor.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 3) (exec-mem 2816 "GET 2 50 0 10 96") (proc 4) ; Portrait (Confused)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Up there? Well, we can't climb..." 'br)
    (str "Well, why don't you grab hold of me?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Does this mean you have a plan?")
@@ -183,14 +183,14 @@
                   (str "Don't let go of my hand, no matter" 'br)
    (str "what.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 11) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "Dengeki Juuuuuuuuuuuuuump!")
    (proc 15)
    (text-color 7)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
 
 ; 	Cut to Dengeki Nurse and Tanchi jumping through the window...
 
@@ -238,7 +238,7 @@
        ; Dengeki Nurse:
                   (str "Don't you have the key?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, but I...uhh...kind of dropped it.")
@@ -252,7 +252,7 @@
                   (str "We'll do without. Where's the" 'br)
    (str "minister's room?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Wait, what are you planning?")
@@ -262,7 +262,7 @@
        ; Dengeki Nurse:
                   (str "I'm going in through the window.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "That's nuts! It's on the second floor!")
@@ -273,7 +273,7 @@
                   (str "I was a Nurse Commando, I've got" 'br)
    (str "plenty of training under my lab coat.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 117 #t))
  (seg (? (= T 2) (= O 2))
@@ -284,7 +284,7 @@
                   (str "Which room on the second floor?" 'br)
    (str "Tell me!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -297,7 +297,7 @@
        ; Dengeki Nurse:
                   (str "As if, you'll just get in the way!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "It's not just Guillotine Nurse in our way!")
@@ -307,7 +307,7 @@
        ; Dengeki Nurse:
                   (str "Ayako, right? Goofy Nurse Ayako.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yeah, yeah! That's her name!")
@@ -318,7 +318,7 @@
                   (str "Ayako and Tomoyo are basically" 'br)
    (str "joined at the hip. They make a powerful team.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "For real? They seem like a pair of idiots" 'br)
@@ -336,7 +336,7 @@
                   (str "Ayako can make her foes" 'br)
    (str "hallucinate, for one.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hmmmm.")
@@ -350,7 +350,7 @@
        ; Dengeki Nurse:
                   (str "We can't waste time! Into the room!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -373,7 +373,7 @@
                   (str "Hey, you! Why are you grabbing my" 'br)
    (str "butt in an emergency situation?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "My hand just...moves on its own.") ; Ed: bro
@@ -397,7 +397,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5)  (str "Lady: ")))
 ;  (define-proc 11 (<> (text-color 5)  (str "Guillotine Nurse: ")))
 ;  (define-proc 12 (<> (text-color 11) (str "Ayako: ")))

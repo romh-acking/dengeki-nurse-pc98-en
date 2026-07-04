@@ -460,7 +460,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (define-proc 11 (<> (text-color 3) (str "Magenta: ")))
    (define-proc 12 (<> (text-color 5) (str "Columbia: ")))
    (proc 19)

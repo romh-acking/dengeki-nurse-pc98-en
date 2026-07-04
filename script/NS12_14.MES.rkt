@@ -147,7 +147,7 @@
        ; Dengeki Nurse:
                   (str "Maybe she gets cold easily?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 96 #t))
  (seg (? (= T 1) (= O 1))
@@ -163,7 +163,7 @@
                   (str "Really? It could just be her style,")
    (str "though...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 101 #t))
  (seg (? (= T 1) (= O 2))
@@ -204,7 +204,7 @@
    (str "Dengeki Nurse:")
                 (text "！！！！！！！！！！！！！！！！！！")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Akiko:
           (str "I'm in the middle of something, come back" 'br)
@@ -295,7 +295,7 @@
                   (str "If we told her, she might not" 'br)
    (str "believe us... Should we wait for Asuka to show up?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 97 #t))
  (seg (? (= T 2) (= O 1))
@@ -306,7 +306,7 @@
                   (str "Shh, stop talking! She's saying" 'br)
    (str "something!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 98 #t))
  (seg (? (= T 2) (= O 2))
@@ -316,7 +316,7 @@
        ; Dengeki Nurse:
                   (str "Tanchi, what exactly is Uranium?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, it's a radioactive element that's the" 'br)
@@ -328,7 +328,7 @@
        ; Dengeki Nurse:
                   (str "...???")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 100 #t))
  (seg (? (= T 2) (= O 3))
@@ -343,7 +343,7 @@
        ; Dengeki Nurse:
                   (str "Of course!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 103 #t))
  (seg (? (= T 3) (= O 0))												; Action
@@ -356,7 +356,7 @@
        ; Dengeki Nurse:
                   (str "Tanchi!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Stay quiet, or we'll be heard! Shhhhh!!")
@@ -373,7 +373,7 @@
        ; Dengeki Nurse:
                   (str "......")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -382,7 +382,7 @@
        ; Dengeki Nurse:
                   (str "Where do you think you're going?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I was thinking we should get ice cream...")
@@ -392,7 +392,7 @@
        ; Dengeki Nurse:
                   (str "Good idea! Let's go later, though.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 1))
    (proc 18)
@@ -499,7 +499,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8) (str "Akiko: ")))
 ;  (define-proc 11 (<> (text-color 5) (str "Asuka: ")))
    (proc 19)

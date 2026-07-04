@@ -157,7 +157,7 @@
        ; Dengeki Nurse:
                   (str "What is??")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Surfer Lady:
                 (str "Once every 19 years, the perfect wave")
@@ -186,7 +186,7 @@
                   (str "If that video gets out, I'll never" 'br)
    (str "be able to get married!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Don't worry, I'll take you regardless!")
@@ -196,7 +196,7 @@
        ; Dengeki Nurse:
                   (str "E-Eh??")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, ha ha, nothing...")
@@ -215,7 +215,7 @@
                   (str "I'm not seeing them... Where" 'br)
    (str "indeed?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 101 #t))
  (seg (? (= T 2) (= O 2))
@@ -247,7 +247,7 @@
        ; Dengeki Nurse:
                   (str "What do we do!?" 'br)
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 100 #t))
  (seg (? (= T 2) (= O 3))
@@ -257,7 +257,7 @@
        ; Dengeki Nurse:
                   (str "Tanchi, what should we do...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hmm...")
@@ -280,7 +280,7 @@
        ; Dengeki Nurse:
                   (str "Ehh, for real!?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 10)
        ; Surfer Lady:
                 (str "Yeah, go all-out... You can even use" 'br)
@@ -342,7 +342,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 5) (str "Surfer Lady: ")))
    (proc 19)
    (set-var B 3)

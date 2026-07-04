@@ -84,7 +84,7 @@
        ; Dengeki Nurse:
                   (str "Tanchi!!! A panda!!!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Yes, that's definitely a panda.")
@@ -154,7 +154,7 @@
                            (str "Maybe we could go back and get" 'br)
             (str "more?")
             (proc 15)
-            (proc 6) ; Clear Portrait
+            (proc 6) ; Clear portrait
             (exec-mem 18944 65535 528 33))
 
 ; 		Coin inserted

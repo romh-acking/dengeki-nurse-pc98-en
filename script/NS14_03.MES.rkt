@@ -2,7 +2,7 @@
 ; Translated by Geometrizer
 ; Edited and commented by trentsignia
 ; --Description:--
-; 
+; Kirara plops herself in the seat of an F1 car! Surely nothing will go wrong...
 (mes
  (meta (engine 'ADV) (charset "pc98"))
  (seg*
@@ -199,7 +199,7 @@
        ; Kirara:
            (str "Like this...?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "No, that's an angry face.")
@@ -212,7 +212,7 @@
        ; Kirara:
            (str "Hurry up and take it already!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hold on, I gotta set the focus...")
@@ -222,7 +222,7 @@
        ; Kirara:
            (str "What's focus?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Just stay quiet and count to ten!")
@@ -241,7 +241,7 @@
        ; Kirara:
            (str "Do whatever you like, Tanchi.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 40 #t))
  (seg (? (= T 2) (= O 3))
@@ -297,7 +297,7 @@
        ; Kirara:
            (str "Hurry up and take the picture already!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -387,7 +387,7 @@
        ; Kirara:
            (str "Eeeeeek! It started moving by itself!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Wha-aaaaaaaaaaaaaaa!?")
@@ -407,14 +407,13 @@
            (str "Tanchi! Where are you going? Hurry up and" 'br)
    (str "take the picture!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 5) (= O 0))												; Save
    (proc 18)
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 8)  (str "Manko: ")))
 ;  (define-proc 11 (<> (text-color 11) (str "Sena: ")))
    (proc 19)

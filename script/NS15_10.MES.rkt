@@ -33,7 +33,7 @@
              (str "Oh, good timing, Tanchi. I just located")
   (str "Kirara.")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 2)
       ; Tanchi:
           (str "No way! Tell me where she is!")
@@ -43,7 +43,7 @@
              (str "What's gotten into you, with all the" 'br)
   (str "frantic gesticulation?")
   (proc 15)
-  (proc 6) ; Clear Portrait
+  (proc 6) ; Clear portrait
   (proc 19)
   (exec-mem 18944 65535 528 33)
   
@@ -135,7 +135,7 @@
        ; Dr. Akiba:
               (str "Mmm? What is it now?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Well, it's like this, and like that, and" 'br)
@@ -145,7 +145,7 @@
        ; Dr. Akiba:
               (str "I see... Just as I suspected.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Suspected WHAT?")
@@ -158,7 +158,7 @@
    (sound '|| "uso¥Nurse11.uso")
    (sound '|| 3)
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 55 #t))
  (seg (? (= T 2) (= O 1))
@@ -168,7 +168,7 @@
               (str "Not only that, she brought my favorite" 'br)
    (str "okonomiyaki...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 2))
    (proc 18)
@@ -181,7 +181,7 @@
               (str "Well, she chose to keep it a secret. I" 'br)
    (str "supposed that she had her reasons...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Oh, come on!")
@@ -196,7 +196,7 @@
               (str "There are many things Kirara still has" 'br)
    (str "to accomplish.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 58 #t))
  (seg (? (= T 2) (= O 3))
@@ -206,7 +206,7 @@
               (str "And like it or not, fighting is one of" 'br)
    (str "those things...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 4))
    (proc 18)
@@ -219,7 +219,7 @@
        ; Dr. Akiba:
               (str ".........")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Tell me where she is!")
@@ -229,7 +229,7 @@
               (str "She's at the pachinko parlor by the" 'br)
    (str "station, UN International Hall.")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "I'm gonna go get her! Please call Mitsuko!")
@@ -239,7 +239,7 @@
               (str ".........")
    (proc 15)
    ((cmd 209) 0 2)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (text-frame 3 324 52 379) (text-reset 15)
    (text-frame 4 16 51 303)  (text-reset 15)
    (exec-mem 2816 "EXIT")
@@ -264,7 +264,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 5)
    (set-var C 5)))

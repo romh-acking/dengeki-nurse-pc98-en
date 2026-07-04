@@ -177,7 +177,7 @@
            (str "F1 was a blast, wasn't it? I wanna go" 'br)
    (str "again!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Next year, I suppose.")
@@ -187,7 +187,7 @@
        ; Kirara:
            (str "Wha? That's basically an eternity!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "F1 travels all around the world, you know.")
@@ -198,7 +198,7 @@
            (str "I wanna see F1 everywhere and anywhere!" 'br)
    (str "Come on, take me to see it somewhere else!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 10 #t))
  (seg (? (= T 2) (= O 1))
@@ -213,7 +213,7 @@
        ; Kirara:
            (str "Marry you? For real?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey hey, don't take that seriously.")
@@ -224,13 +224,13 @@
            (str "But all those F1 drivers... They're all so")
    (str "cool...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 0) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
            (str "I want to meet all of them...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "......")
@@ -245,7 +245,7 @@
        ; Croco:
           (str "Waniiii!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 11 #t))
  (seg (? (= T 2) (= O 2))
@@ -255,7 +255,7 @@
        ; Kirara:
            (str "Oh, if only SOMEBODY would take me...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -282,7 +282,7 @@
            (str ".........Stop messing around and take that")
    (str "call already!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Why are YOU getting mad at me?")
@@ -297,7 +297,7 @@
        ; Croco:
           (str "Waninini.....")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 13 #t))
  (seg (? (= T 2) (= O 4))
@@ -332,7 +332,7 @@
        ; Kirara:
            (str "You cheater!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "What are you talking about?") (text "“") (str "Cheating") (text "”" 'br)
@@ -393,7 +393,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
 ;  (define-proc 10 (<> (text-color 11) (str "Croco: ")))
    (proc 19)
    (set-var B 5)

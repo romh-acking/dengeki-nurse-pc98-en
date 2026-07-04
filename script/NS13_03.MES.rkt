@@ -211,7 +211,7 @@
        ; Kirara:
            (str "But why? Aren't crabs cute?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 23 #t))
  (seg (? (= T 2) (= O 1))
@@ -221,7 +221,7 @@
        ; Kirara:
            (str "What's with the crab hate?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "When I was a kid, a crab got into my swim" 'br)
@@ -232,7 +232,7 @@
        ; Kirara:
            (str "Wow, what a dark past!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Hey, shut up!")
@@ -243,7 +243,7 @@
            (str "I want to show it to Doctor Akihabara and" 'br)
    (str "Croco!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 24 #t))
  (seg (? (= T 2) (= O 2))
@@ -254,7 +254,7 @@
            (str "Speaking of which... Where did those two" 'br)
    (str "get to?")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 2) (= O 3))
    (proc 18)
@@ -268,7 +268,7 @@
        ; Kirara:
            (str "Oh boy, a boat! I can't wait! Count me in!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 25 #t))
  (seg (? (= T 2) (= O 4))
@@ -284,7 +284,7 @@
            (str "Y-Yeah... I was busy, so I didn't have" 'br)
    (str "time to go buy one...")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
            (str "Well, it'll probably be just fine once" 'br)
@@ -296,7 +296,7 @@
            (str "Hey, put a sock in it! I'm pretty self-" 'br)
    (str "conscious about my chest size, you know!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19)
    (set-reg 26 #t))
  (seg (? (= T 2) (= O 5))
@@ -307,7 +307,7 @@
            (str "I hope Doctor Akihabara and Croco arrive" 'br)
    (str "soon!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
@@ -321,7 +321,7 @@
        ; Kirara:
            (str "Ahhh! You've done it now!")
    (proc 15)
-   (proc 6) ; Clear Portrait
+   (proc 6) ; Clear portrait
    (proc 19))
  (seg (? (= T 4) (= O 0))												; Move
    (proc 18)
@@ -340,7 +340,6 @@
    (mes-load? "mes¥save.mes")
 ; FMT
 ;  (branch-reg 750 (</> (/ (nop@)) (/ ((cmd 212)))))
-
    (proc 19)
    (set-var B 3)
    (set-var C 3)))
