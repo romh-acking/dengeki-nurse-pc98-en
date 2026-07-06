@@ -111,21 +111,21 @@
       (if (</>
            (// (? (= 140 #t))            (nop@) (set-var T 0) (set-var O 3) (seg-call))    ; (set-reg 143 #t)
            (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 0) (set-var O 2) (seg-call))    ; (set-reg 142 #t)
-           (// (? (= 138 #t))            (nop@) (set-var T 0) (set-var O 1) (seg-call))
+           (// (? (= 138 #t) (= 139 #f)) (nop@) (set-var T 0) (set-var O 1) (seg-call))    ; (set-reg 139 #t)
            (//                           (nop@) (set-var T 0) (set-var O 0) (seg-call)))))
 ; Look
      (/
       (if (</>
            (// (? (= 140 #t))            (nop@) (set-var T 1) (set-var O 3) (seg-call))
-           (// (? (= 138 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))    ; (set-reg 139 #t)
+           (// (? (= 139 #t) (= 140 #f)) (nop@) (set-var T 1) (set-var O 2) (seg-call))
            (// (? (= 141 #t) (= 139 #f)) (nop@) (set-var T 1) (set-var O 1) (seg-call))    ; (set-reg 138 #t)
            (//                           (nop@) (set-var T 1) (set-var O 0) (seg-call)))))
 ; Talk
      (/
       (if (</>
-           (// (? (= 143 #t) (= 142 #t)) (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns11_21.mes")
+           (// (? (= 143 #t))            (nop@) (set-var T 2) (set-var O 3) (seg-call))    ; (mes-jump "b:¥mes¥ns11_21.mes")
            (// (? (= 140 #t) (= 143 #f)) (nop@) (set-var T 2) (set-var O 2) (seg-call))
-           (// (? (= 142 #t))            (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 140 #t)
+           (// (? (= 142 #t) (= 140 #f)) (nop@) (set-var T 2) (set-var O 1) (seg-call))    ; (set-reg 140 #t)
            (//                           (nop@) (set-var T 2) (set-var O 0) (seg-call))))) ; (set-reg 141 #t)
 
 ;	The rest are fine.
@@ -162,7 +162,8 @@
    (text-color 7)
    (str "Hmmmm, nothing...")
    (proc 15)
-   (proc 19))
+   (proc 19)
+   (set-reg 139 #t))
  (seg (? (= T 0) (= O 2))
    (proc 18)
    (text-color 7)
@@ -218,8 +219,7 @@
    (text-color 7)
    (str "No! This isn't the time to be ogling her!")
    (proc 15)
-   (proc 19)
-   (set-reg 139 #t))
+   (proc 19))
  (seg (? (= T 1) (= O 3))
    (proc 18)
    (text-color 7)
