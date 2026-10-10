@@ -164,9 +164,9 @@
  (seg (? (= T 1) (= O 0))												; Look
    (proc 18)
    (text-color 7)
-   (str "This is Akiko's room in the Cybernetic High School")
-   (str "staff dorm. Right now it's just me, Kirara, and" 'br)
-   (str "Akiko inside.")
+   (str "This is Akiko's room in the Cybernetic Girls'" 'br)
+   (str "School staff dorm. Right now it's just me, Kirara,")
+   (str "and Akiko inside.")
    (proc 15)
    (proc 19))
  (seg (? (= T 1) (= O 1))

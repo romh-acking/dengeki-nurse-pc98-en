@@ -319,9 +319,9 @@
    (proc 6) ; Clear portrait
    (proc 2)
        ; Tanchi:
-           (str "Oh, it's a radioactive element that's the" 'br)
-   (str "source of radium. It's the one with the ") (text "Ｕ") (str " symbol,")
-   (str "and the atomic number is 92.")
+           (str "Oh, it's a radioactive element that's a source of" 'br)
+   (str "radiation. It's the one with the ") (text "Ｕ") (str " symbol, and" 'br)
+   (str "the atomic number is 92.")
    (proc 15)
    (proc 14) ; Portrait (Confused)
    (proc 0)

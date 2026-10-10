@@ -232,7 +232,7 @@
    (proc 11)
        ; Guillotine Nurse:
                      (str "Heh! If you behave, I'll let you")
-   (str "do a surgical obvservation on my fine Procedure!")
+   (str "do a surgical observation on my fine Procedure!")
    (proc 15)
    (proc 0)
        ; Dengeki Nurse:

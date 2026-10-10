@@ -187,7 +187,7 @@
    (set-reg 69 #t))
  (seg (? (= T 1) (= O 1))
    (proc 18)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (text-color 7)
    (str "What's the matter? Kirara looks downcast... I" 'br)
    (str "wonder if she hates being alone with me that much.")
@@ -279,7 +279,7 @@
            (str "If you transform into Dengeki Nurse, we" 'br)
    (str "can make tracks! A million volts, and BOOM!")
    (proc 15)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "...")
@@ -294,7 +294,7 @@
            (str "Or, you know, we could just enjoy the time")
    (str "we've got together...")
    (proc 15)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "...")
@@ -307,7 +307,7 @@
        ; Tanchi:
            (str "What's wrong? You're looking glum.")
    (proc 15)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "When I changed out of my nurse uniform" 'br)
@@ -326,7 +326,7 @@
    (set-reg 61 #t))
  (seg (? (= T 2) (= O 4))
    (proc 18)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Even worse, I'm missing my favorite TV" 'br)
@@ -337,7 +337,7 @@
        ; Tanchi:
            (str "You didn't set the timer on your VCR?")
    (proc 15)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "I didn't...")
@@ -470,7 +470,7 @@
    (text-color 7)
    (str "I move close to Kirara again.")
    (proc 15)
-   (proc 12) ; Portrait (Sad)
+   (proc 11) ; Portrait (Sad)
    (proc 1)
        ; Kirara:
            (str "Hey, stop it...")

@@ -158,7 +158,7 @@
  (seg (? (= T 0) (= O 3))
    (proc 18)
    (text-color 7)
-   (str "Uh, naughty places, huh...? The movie theatre," 'br)
+   (str "Uh, naughty places, huh...? The movie theater," 'br)
    (str "shoe store, toy store... It could be anywhere!")
    (proc 15)
    (proc 19))

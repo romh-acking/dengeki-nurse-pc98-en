@@ -100,7 +100,7 @@
    (str "I check my watch.")
    (proc 15)
    (text-color 7)
-   (str "Gah! 9 AM!")
+   (str "Gah! 9 AM! The hospital's already open!")
    (proc 15)
    (proc 19))
  (seg (? (= T 2) (= O 0))												; Talk

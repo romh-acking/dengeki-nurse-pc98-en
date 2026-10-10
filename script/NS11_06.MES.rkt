@@ -165,7 +165,7 @@
  (seg (? (= T 0) (= O 5))												; (After Dr. Akiba and Tanchi resolve to protect Kirara)
    (proc 18)
    (text-color 7)
-   (str "All right... I, Denpa Tanchi, will protect Kirara" 'br)
+   (str "All right... I, Tanchi Denpa, will protect Kirara" 'br)
    (str "from the Black Cross! Or something...")
    (proc 15)
    (proc 19)

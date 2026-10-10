@@ -160,7 +160,7 @@
    (proc 15)
    (proc 10)
        ; Nurse:
-          (str "But..uh...well, I...")
+          (str "But...uh...well, I...")
    (proc 15)
    (proc 19)
    (set-reg 46 #t))

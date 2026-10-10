@@ -72,7 +72,7 @@
   (str "Prez  :") (text "“") (str "There's no way something like this would ever sell!") (text "”")
   (str "Minami:") (text "“") (str "Ahah, well, nurses are popular, you know...") (text "”" 'br)
   (text 'br)
-  (str "In the end, it looked like I had to resubmit it... (Cries)")
+  (str "In the end, it looked like I had to resubmit it... Sniff...")
   (proc 16)
 
   (text "　　　　　　　　　　") (str "November: At the office" 'br)
@@ -254,7 +254,7 @@
 
   (text "　　　") (str " Another tip for the LOGiN editor-in-chief:" 'br)
   (text 'br)
-  (text "　") (str "Our sales team recieved LOGiN T-shirts") (text "“") (str "for the staff that" 'br)
+  (text "　") (str "Our sales team received LOGiN T-shirts") (text "“") (str "for the staff that" 'br)
   (str "was pulling all-nighters,") (text "”") (str "but they divided them amongst" 'br)
   (str "themselves and not a single one reached the development team!" 'br)
   (text 'br)

@@ -579,8 +579,8 @@
    (proc 15)
    (proc 5)
        ; Dr. Akiba:
-              (str "I thought Taro might have had something")
-   (str "amongst his belongings that might have helped...")
+              (str "I suspect Taro might have had something")
+   (str "amongst his belongings that could help...")
    (proc 15)
    (proc 19)
    (set-reg 26 #t))
