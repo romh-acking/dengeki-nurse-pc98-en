@@ -317,7 +317,7 @@
   (proc 15)
   (proc 10)
       ; Minami:
-  (str "Even so, the programemrs worked like crazy and actually" 'br)
+  (str "Even so, the programmers worked like crazy and actually" 'br)
   (str "listened to our ridiculous demands.")
   (proc 15)
   (proc 11)

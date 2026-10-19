@@ -173,7 +173,7 @@
    (str "inflatable raft!")
    (proc 15)
    (text-color 7)
-   (str "And they're doing it by mouth.. Their faces are" 'br)
+   (str "And they're doing it by mouth... Their faces are" 'br)
    (str "red... Those poor guys...")
    (proc 15)
    (proc 19)

@@ -101,7 +101,7 @@
  (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
-   (str "Anyway, we have to find Nursia!")
+   (str "We have to find Nursia!")
    (proc 15)
    (proc 19)
    (set-reg 88 #t))

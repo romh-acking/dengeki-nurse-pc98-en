@@ -116,7 +116,7 @@
        ; Tanchi:
            (str "You took your time getting here!")
    (proc 15)
-   (proc 11) ; Portrait (Shouting)
+   (proc 10) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Why are you yelling at me? I've got things")
@@ -127,7 +127,7 @@
        ; Tanchi:
            (str "Nursia was kidnapped by Black Nurse!")
    (proc 15)
-   (proc 11) ; Portrait (Shouting)
+   (proc 10) ; Portrait (Shouting)
    (proc 1)
        ; Kirara:
            (str "Black Nurse!?")

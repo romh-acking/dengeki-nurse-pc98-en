@@ -285,7 +285,7 @@
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "Look like she's arrived.")
+           (str "Looks like she's arrived.")
    (proc 15)
    (proc 12) (proc 13) (proc 5)
        ; Dr. Akiba:

@@ -338,7 +338,7 @@
    (proc 15)
    (proc 2)
        ; Tanchi:
-           (str "Y-yes... Of course...")
+           (str "Y-Yes... Of course...")
    (proc 15)
    ((cmd 209) 0 2)
    (text-frame 3 324 52 379) (text-reset 15)

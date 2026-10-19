@@ -554,7 +554,7 @@
    (proc 15)
    (proc 0)
        ; Dengeki Nurse:
-                  (str "It's fine, I'll get her next time!")
+                  (str "It's fine, I'll get her this time!")
    (proc 15)
 
 ; 	Dengeki Nurse takes one more shot...
@@ -600,7 +600,7 @@
    (proc 18)
    (proc 2)
        ; Tanchi:
-           (str "Whew...somehow we made it...")
+           (str "Whew...somehow we did it...")
    (proc 15)
    (proc 0)
        ; Dengeki Nurse:

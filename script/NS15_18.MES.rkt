@@ -49,7 +49,7 @@
      ; Black Nurse:
               (str "Ho ho ho! I've been waiting for you!")
   (proc 15)
-  (proc 13)	; Shouting
+  (proc 13) ; Portrait (Shouting)
   (proc 0)
       ; Dengeki Nurse:
                  (str "Hey, that's my line! Give us back" 'br)
@@ -108,8 +108,8 @@
    (proc 18)
    (text-color 7)
    (str "We've gotta get the ring back, but she's not gonna")
-   (str "respond to being asked politely. So in the end," 'br)
-   (str "we're gonna have to beat it out of her!")
+   (str "respond to being asked politely...so I guess we're")
+   (str "gonna have to beat it out of her!")
    (proc 15)
    (proc 19)
    (set-reg 95 #t))
@@ -187,7 +187,7 @@
                 (str "Tell me how the ring works, or this" 'br)
    (str "idiot dies!")
    (proc 15)
-   (proc 13)	; Shouting
+   (proc 13) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "That's not going to help me know" 'br)
@@ -470,11 +470,11 @@
        ; Nursia:
            (str "!!!!!!!!!")
    (proc 15)
-   (proc 13)	; Shouting
-   (proc 2)
-       ; Tanchi:
-           (str "Wait, wait, wait! You can't just forget" 'br)
-   (str "about me!")
+   (proc 13) ; Portrait (Shouting)
+   (proc 0) ; <- For some reason the original script pairs Kirara's portrait with Tanchi's speaker tag, I just changed it to Dengeki Nurse to keep it consistent
+       ; Dengeki Nurse:
+                  (str "Wait, wait, wait! You can't just" 'br)
+   (str "forget about us!")
    (proc 15)
    (proc 11)
    (proc 14) (proc 7)
@@ -483,7 +483,7 @@
    (str "The traitor, Dengeki Nurse!")
    (proc 15)
    (proc 6) ; Clear portrait
-   (proc 13)	; Shouting
+   (proc 13) ; Portrait (Shouting)
    (proc 0)
        ; Dengeki Nurse:
                   (str "This is for my mother!")
