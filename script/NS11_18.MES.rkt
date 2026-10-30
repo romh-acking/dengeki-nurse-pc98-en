@@ -72,7 +72,7 @@
   (proc 16)
   (proc 10)
       ; Minister:
-            (str "Aaaahhh.... Aieeeeeee!!!")
+            (str "Aaaahhh... Aieeeeeee!!!")
   (proc 16)
   ((cmd 209) 0 2)
   (text-frame 3 324 52 379) (text-reset 15)

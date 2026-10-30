@@ -379,7 +379,7 @@
    (proc 6) ; Clear portrait
    (proc 11)
        ; Moguri:
-           (str "Noooo.... No way!")
+           (str "Noooo... No way!")
    (proc 15)
    (proc 19)
    (set-reg 95 #t))
@@ -413,7 +413,7 @@
    (proc 11)
        ; Moguri:
            (str "They call me the pretty boy of the F1" 'br)
-   (str "world! There's no way I can") (text "−") (str " Urghh, my guts....")
+   (str "world! There's no way I can") (text "−") (str " Urghh, my guts...")
    (proc 15)
    (proc 0) ; Portrait (Happy)
    (proc 1)

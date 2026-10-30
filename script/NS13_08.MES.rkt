@@ -288,7 +288,7 @@
    (proc 13) ; Portrait (Flushed)
    (proc 1)
        ; Kirara:
-           (str "Wha-wha-wha.... I'm nothing of the sort!")
+           (str "Wha-wha-wha... I'm nothing of the sort!")
    (proc 15)
    (proc 6) ; Clear portrait
    (proc 10)

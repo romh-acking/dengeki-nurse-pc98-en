@@ -94,7 +94,7 @@
   (proc 10)
       ; Black Nurse:
                (str "Let's see here... Hmmm. Hmm, yes." 'br)
-  (str "I see...... Hmph....")
+  (str "I see...... Hmph...")
   (proc 16)
   (proc 11)
       ; Monitor:

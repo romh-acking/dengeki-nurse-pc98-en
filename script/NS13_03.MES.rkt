@@ -311,7 +311,8 @@
    (proc 19))
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
-   (text-color 1) (str "Splash!!")
+   (text-color 1)
+   (str "Splash!!")
    (proc 15)
    (text-color 7)
    (str "I splashed water at Kirara.")

@@ -420,7 +420,7 @@
    (proc 12)	; Happy
    (proc 1)
        ; Kirara:
-           (str "Vrmmmm.... Vrmmm vrmmm vrmmmmmmm.....")
+           (str "Vrmmmm... Vrmmm vrmmm vrmmmmmmm......")
    (proc 15)
    (proc 6) ; Clear portrait
    (proc 2)

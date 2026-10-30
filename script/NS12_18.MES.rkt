@@ -341,7 +341,7 @@
    (proc 15)
    (proc 11)
        ; Akiko:
-          (str "Ohhh....")
+          (str "Ohhh...")
    (proc 15)
 
 ; 	Dengeki Nurse takes the opportunity to give Golgo 31 a good...

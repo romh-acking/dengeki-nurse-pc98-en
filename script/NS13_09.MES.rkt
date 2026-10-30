@@ -154,7 +154,7 @@
  (seg (? (= T 0) (= O 0))												; Think
    (proc 18)
    (text-color 7)
-   (str "Wha-wha-wha-whawhawha....")
+   (str "Wha-wha-wha-whawhawha...")
    (proc 15)
    (proc 19))
  (seg (? (= T 0) (= O 1))
@@ -184,7 +184,7 @@
  (seg (? (= T 0) (= O 4))
    (proc 18)
    (text-color 7)
-   (str "Ha...hahaha...hahahaha.... I just have to laugh it")
+   (str "Ha...hahaha...hahahaha... I just have to laugh it" 'br)
    (str "all off...")
    (proc 15)
    (proc 19)
@@ -241,7 +241,7 @@
    (proc 15)
    (proc 11)
        ; Magenta:
-            (str "Hmm.. Everyone else is asleep. Along with")
+            (str "Hmm...everyone else is asleep, along with")
    (str "your girlfriend.")
    (proc 15)
    (proc 2)

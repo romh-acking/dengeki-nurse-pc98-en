@@ -520,7 +520,7 @@
          (str "I insert the Elektros Crest into the door!")
          (proc 15)
          (text-color 1)
-         (str "WRRRRRRRRRT....")
+         (str "WRRRRRRRRRT...")
          (proc 15)
          (text-color 7)
          (str "We enter the room.")

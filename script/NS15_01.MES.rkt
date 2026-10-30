@@ -295,7 +295,7 @@
    (proc 14)
    (proc 10)
        ; Croco:
-          (str "Waninini.....")
+          (str "Waninini......")
    (proc 15)
    (proc 6) ; Clear portrait
    (proc 19)

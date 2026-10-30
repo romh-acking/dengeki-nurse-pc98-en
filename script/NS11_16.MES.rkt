@@ -285,7 +285,7 @@
  (seg (? (= T 3) (= O 0))												; Action
    (proc 18)
    (text-color 7)
-   (str "Doop-dee-doop-dee-doop-dee-doooo....")
+   (str "Doop-dee-doop-dee-doop-dee-doooo...")
    (proc 15)
    (proc 10) ; Portrait (Happy)
    (proc 1)

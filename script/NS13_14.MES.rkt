@@ -46,7 +46,7 @@
   (proc 15)
   (proc 1)
       ; Kirara:
-          (str "Nope, not accepting that an answer! If" 'br)
+          (str "Nope, not accepting that as an answer! If" 'br)
   (str "that video got out, I'd never be able to get" 'br)
   (str "married!")
   (proc 15)

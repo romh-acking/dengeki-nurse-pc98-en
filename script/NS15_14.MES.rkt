@@ -188,7 +188,7 @@
    (proc 14) ; Clear Black Nurse portrait
    (proc 1)
        ; Kirara:
-           (str "Ahhhhhh.....")
+           (str "Ahhhhhh......")
    (proc 15)
    (proc 19)
    (set-reg 79 #t))
