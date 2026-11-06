@@ -268,7 +268,7 @@
    (proc 11) ; Portrait (Happy)
    (proc 1)
        ; Kirara:
-           (str "What's wrong? Why'd you come all the way" 'br)
+           (str "What's wrong? Why'd we come all the way" 'br)
    (str "out here?")
    (proc 15)
    (proc 6) ; Clear portrait
