@@ -483,9 +483,9 @@
 
    (proc 9) ; Portrait (Shouting)
    (proc 1)
-       ; Kirara:
-           (str "I'll avenge you, Mom! Black Nurse, I'll" 'br)
-   (str "never forgive you!")
+       ; Dengeki Nurse:
+                  (str "I'll avenge you, Mom! Black Nurse," 'br)
+   (str "I'll never forgive you!")
    (proc 15)
    (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)
@@ -495,9 +495,9 @@
    (proc 14) ; Clear Black Nurse portrait
    (proc 9) ; Portrait (Shouting)
    (proc 1)
-       ; Kirara:
-           (str "You shut it! Take this...my mother's final")
-   (str "DENGEKI SHOCK!")
+       ; Dengeki Nurse:
+                  (str "You shut it! Take this, my mother's")
+   (str "final DENGEKI SHOCK!")
    (proc 15)
    (proc 6) ; Clear Kirara portrait
    (proc 12) (proc 13) (proc 7)

@@ -108,7 +108,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (text-color 1)
-   (str "What should we do?")
+   (str "What will you do?")
    (set-var T 0)
    ((cmd 211) 1 2)
    (menu1 10 348 24 348

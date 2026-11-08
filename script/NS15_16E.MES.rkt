@@ -272,7 +272,7 @@
       (text-frame 3 324 52 379)
       (text-reset 15)
       (text-color 1)
-      (str "Should we take the coins?")
+      (str "Will you take the coins?")
       (set-var T 0)
       ((cmd 211) 1 2)
       (menu1 10 348 28 348
@@ -333,7 +333,7 @@
    (text-frame 3 324 52 379)
    (text-reset 15)
    (text-color 1)
-   (str "Should we leave?")
+   (str "Will you leave?")
    (set-var T 0)
    ((cmd 211) 1 2)
    (menu1 10 348 24 348
